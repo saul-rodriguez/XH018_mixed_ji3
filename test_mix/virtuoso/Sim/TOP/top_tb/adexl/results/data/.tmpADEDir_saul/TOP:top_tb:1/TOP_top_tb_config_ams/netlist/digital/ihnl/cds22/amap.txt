@@ -1,0 +1,2 @@
+netMap,*inv_hv,*gnd!,*cds_globals.\gnd! 
+cellMap,*inv_hv,*inv_hv,*INV_HV,*schematic

@@ -1,0 +1,9 @@
+cellMap,*ioh_d2pk,*ioh_d2pk,*HV_CELLS,*schematic
+netMap,*ioh_d2pk,*gnd!,*0
+instMap,*ioh_d2pk,*I1,*I1
+instMaster,*ioh_d2pk,*I1,*HV_CELLS_ioh_pmbsabhv_2000_schematic,*ioh_pmbsabhv_2000
+instMap,*ioh_d2pk,*I5,*I5
+instMaster,*ioh_d2pk,*I5,*HV_CELLS_ioh_pe3isabhv_2800gcr_schematic,*ioh_pe3isabhv_2800gcr
+portMap,*ioh_d2pk,*A_l,*A_l
+portMap,*ioh_d2pk,*K_h,*K_h
+portMap,*ioh_d2pk,*Sub,*Sub

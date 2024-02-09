@@ -1,0 +1,87 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : counter_lvs.sum
+ERC Summary File         : counter.sum
+LVS Comparison Report    : counter_lvs.sum.cls
+LVS Softchk Report       : counter.softchk
+Layout Name              : /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.gds ("counter")
+User Name                : saul
+Creation Time            : Sat Feb  3 16:49:03 2024
+Current directory        : /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter
+PVS Version              : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_SOFTCHK nwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK dnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hvnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK ndftrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hnw -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK catdiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK anodiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pwitrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pdf -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK bulk -TYPE CONTACT   Total Result        0 (       0)
+
+Clean cell list (added by extraction report parser )
+ for cell "AN21JI3VX1"
+ for cell "AN22JI3VX1"
+ for cell "BUJI3VX0"
+ for cell "BUJI3VX1"
+ for cell "BUJI3VX16"
+ for cell "BUJI3VX2"
+ for cell "DECAP10JI3V"
+ for cell "DECAP15JI3V"
+ for cell "DECAP25JI3V"
+ for cell "DECAP5JI3V"
+ for cell "DECAP7JI3V"
+ for cell "DFRQJI3VX1"
+ for cell "DFRQJI3VX2"
+ for cell "DFRQJI3VX4"
+ for cell "DLY1JI3VX1"
+ for cell "DLY2JI3VX1"
+ for cell "EN2JI3VX0"
+ for cell "FEED10JI3V"
+ for cell "FEED1JI3V"
+ for cell "FEED2JI3V"
+ for cell "FEED3JI3V"
+ for cell "FEED5JI3V"
+ for cell "FEED7JI3V"
+ for cell "INJI3VX0"
+ for cell "NA2JI3VX0"
+ for cell "NO2JI3VX0"
+ for cell "ON211JI3VX1"
+ for cell "VIA1_CH1_so"
+ for cell "VIA1_CH1_so_hd2"
+ for cell "VIA1_CH2_so"
+ for cell "VIA1_CH2_so2"
+ for cell "VIA1_CV1_hd"
+ for cell "VIA1_CV1_so"
+ for cell "VIA1_CV2_hd"
+ for cell "VIA1_CV2_so"
+ for cell "VIA1_CV2w_beo"
+ for cell "VIA1_C_CDNS_706996938920"
+ for cell "VIA1_C_CDNS_706996938921"
+ for cell "VIA1_C_CDNS_706996938922"
+ for cell "VIA1_C_CDNS_706996938923"
+ for cell "VIA1_Y_so"
+ for cell "VIA1_o"
+ for cell "VIA2_CH1_so"
+ for cell "VIA2_CH2_so"
+ for cell "VIA2_CV1_so"
+ for cell "VIA2_CV2_so"
+ for cell "VIA3_CH1_so"
+ for cell "VIA3_CH2_so"
+ for cell "VIA3_CV1_so"
+ for cell "counter"

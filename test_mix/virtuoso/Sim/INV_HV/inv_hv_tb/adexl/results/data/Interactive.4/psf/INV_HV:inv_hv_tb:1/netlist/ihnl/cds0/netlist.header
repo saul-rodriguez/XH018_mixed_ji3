@@ -1,0 +1,5 @@
+
+// Library name: INV_HV
+// Cell name: inv_hv
+// View name: schematic
+subckt inv_hv GNDHV IN OUT VDDHV VSUB

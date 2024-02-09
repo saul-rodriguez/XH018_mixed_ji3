@@ -1,0 +1,15 @@
+// Library - INV_HV, Cell - inv_hv, View - schematic
+// LAST TIME SAVED: Feb  5 02:38:24 2024
+// NETLIST TIME: Feb  7 11:24:19 2024
+`timescale 1ns / 1ps 
+
+`worklib INV_HV
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="INV_HV", dfII_cell="inv_hv", dfII_view="schematic", worklib_name="INV_HV", view_name="schematic", last_save_time="Feb  5 02:38:24 2024" *)
+
+module inv_hv (GNDHV, IN, OUT, VDDHV, VSUB);
+
+inout  GNDHV, IN, OUT, VDDHV, VSUB;
+

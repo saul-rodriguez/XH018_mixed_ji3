@@ -1,0 +1,9 @@
+
+ioh_iscrd2_4x100 I10 ( .Gp(Trig_0), .Sub(GNDO), .A(PAD), .Gn(PAD), 
+    .K(IGND));
+
+ioh_dhpw_2x100_stack3 I9 ( .A_l(IGND), .Sub(GNDO), .K_h(PAD));
+
+ioh_c5pk I11 ( .Sub(GNDO), .K_h(PAD), .A_l(Trig_0));
+
+endmodule

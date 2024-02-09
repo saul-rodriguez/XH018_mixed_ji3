@@ -1,0 +1,782 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  COUNTER_JI3
+* Top Cell Name: counter
+* View Name:     schematic
+* Netlisted on:  Feb  3 16:48:59 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.LDD
+*.SCALE METER
+.PARAM
+
+*.GLOBAL gnd3i!
++        vdd3i!
+
+*.PIN gnd3i!
+*+    vdd3i!
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    nand2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2ji3v a b out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMP1 out a inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 out b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMN1 out a net25 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN2 net25 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    NA2JI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT NA2JI3VX0 A B Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xnand2_1 A B Q inh_ground_gnd3i inh_power_vdd3i / nand2ji3v GT_PDL=350.00n 
++ GT_PDW=560.0n GT_PUL=300.00n GT_PUW=700.00n
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    invrji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT invrji3v in out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO in:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMP1 out in inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMN1 out in inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    INJI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT INJI3VX0 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=940.00n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DLY2JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DLY2JI3VX1 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM5 net080 net039 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM2 net039 net47 net084 inh_power_vdd3i PE3I W=420.0n L=740.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM6 net35 net039 net080 inh_power_vdd3i PE3I W=420.0n L=1u M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM1 net084 net47 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=740.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_2 net35 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=890.00n GT_PUL=300.00n GT_PUW=1.41u
+Xinvr_1 A net47 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=700.00n
+MM4 net31 net47 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=800n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM8 net035 net039 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM7 net35 net039 net035 inh_ground_gnd3i NE3I W=420.0n L=1u M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM3 net039 net47 net31 inh_ground_gnd3i NE3I W=420.0n L=800n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX2
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX2 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=600.00n GT_PUL=300.00n GT_PUW=1.1u
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=1.2u GT_PUL=300.00n GT_PUW=2.92u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP5JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP5JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM0 net5 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=830.0n L=1.48u M=1.0 
++ AD=3.984e-13 AS=3.984e-13 PD=2.62e-06 PS=2.62e-06 NRD=0.325301 NRS=0.325301
+MM1 net4 net5 inh_power_vdd3i inh_power_vdd3i PE3I W=1.36u L=1.46u M=1.0 
++ AD=6.528e-13 AS=6.528e-13 PD=3.68e-06 PS=3.68e-06 NRD=0.198529 NRS=0.198529
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP7JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP7JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n 
++ L=1.75u M=1.0 AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 
++ NRS=0.306818
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=1.71u 
++ M=1.0 AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 
++ NRS=0.205323
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP10JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP10JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=1.76u 
++ L=1.445u M=1.0 AD=8.448e-13 AS=8.448e-13 PD=4.48e-06 PS=4.48e-06 
++ NRD=0.153409 NRS=0.153409
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=2.63u L=1.425u 
++ M=1.0 AD=1.2624e-12 AS=1.2624e-12 PD=6.22e-06 PS=6.22e-06 NRD=0.102662 
++ NRS=0.102662
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP15JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP15JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=2.64u 
++ L=1.71u M=1.0 AD=1.2672e-12 AS=1.2672e-12 PD=6.24e-06 PS=6.24e-06 
++ NRD=0.102273 NRS=0.102273
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=3.945u L=1.7u 
++ M=1.0 AD=1.8936e-12 AS=1.8936e-12 PD=8.85e-06 PS=8.85e-06 NRD=0.0684411 
++ NRS=0.0684411
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP25JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP25JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=4.4u 
++ L=1.94u M=1.0 AD=2.112e-12 AS=2.112e-12 PD=9.76e-06 PS=9.76e-06 
++ NRD=0.0613636 NRS=0.0613636
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=6.575u L=1.93u 
++ M=1.0 AD=3.156e-12 AS=3.156e-12 PD=1.411e-05 PS=1.411e-05 NRD=0.0410646 
++ NRS=0.0410646
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX1 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=900.0n
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=660.0n GT_PUL=300.00n GT_PUW=1.46u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DFRQJI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DFRQJI3VX1 C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM24 MQIB CI net162 inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 AD=5.28e-13 
++ AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM56 MQI MQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM30 net170 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 
++ AD=5.52e-13 AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM23 net162 D inh_power_vdd3i inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 
++ AD=5.28e-13 AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM59 net142 SQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM36 net166 net142 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM35 SQIB CI net166 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM34 MQIB CIB net174 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM33 SQIB CIB net170 inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 AD=5.52e-13 
++ AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM28 net174 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_3 SQIB Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=890.00n GT_PUL=300.00n GT_PUW=1.41u
+Xinvr_2 CIB CI inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+Xinvr_1 C CIB inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+MM18 MQIB CIB net124 inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 AD=3.36e-13 
++ AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM17 MQI MQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM15 net124 D inh_ground_gnd3i inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 
++ AD=3.36e-13 AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM46 SQIB CI net132 inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 AD=3.456e-13 
++ AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM19 MQIB CI net120 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM51 SQIB CIB net140 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM50 net140 net142 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM49 net142 SQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM47 net132 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM61 net120 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    nor2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nor2ji3v a b out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMP1 out a net32 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 net32 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMN1 out b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN2 out a inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    NO2JI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT NO2JI3VX0 A B Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xnor2_1 A B Q inh_ground_gnd3i inh_power_vdd3i / nor2ji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=850.00n
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    o2na2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT o2na2ji3v a b c out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN2 net7 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN1 net7 a inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 out c net7 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMP1 out a net17 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c inh_power_vdd3i inh_power_vdd3i PE3I W=0.7*GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(0.7*GT_PUW) AS=4.8e-07*(0.7*GT_PUW) PD=2*(4.8e-07+(0.7*GT_PUW)) 
++ PS=2.0*(4.8e-07+(0.7*GT_PUW)) NRD=2.7e-07/(0.7*GT_PUW) 
++ NRS=2.7e-07/(0.7*GT_PUW)
+MMP2 net17 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    EN2JI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT EN2JI3VX0 A B Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xnand2_1 A B net4 inh_ground_gnd3i inh_power_vdd3i / nand2ji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=900.00n
+Xo2na2_1 B A net4 Q inh_ground_gnd3i inh_power_vdd3i / o2na2ji3v 
++ GT_PUL=300.00n GT_PUW=1.3u GT_PDL=350.00n GT_PDW=420.00n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DFRQJI3VX2
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DFRQJI3VX2 C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM24 MQIB CI net162 inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 AD=5.28e-13 
++ AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM56 MQI MQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM30 net170 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 
++ AD=5.52e-13 AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM23 net162 D inh_power_vdd3i inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 
++ AD=5.28e-13 AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM59 net142 SQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM36 net166 net142 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM35 SQIB CI net166 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM34 MQIB CIB net174 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM33 SQIB CIB net170 inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 AD=5.52e-13 
++ AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM28 net174 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_3 SQIB Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=1.78u GT_PUL=300.00n GT_PUW=2.82u
+Xinvr_2 CIB CI inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+Xinvr_1 C CIB inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+MM18 MQIB CIB net124 inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 AD=3.36e-13 
++ AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM17 MQI MQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM15 net124 D inh_ground_gnd3i inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 
++ AD=3.36e-13 AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM46 SQIB CI net132 inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 AD=3.456e-13 
++ AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM19 MQIB CI net120 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM51 SQIB CIB net140 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM50 net140 net142 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM49 net142 SQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM47 net132 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM61 net120 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    a22no2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT a22no2ji3v a b c d out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I d:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN1 out a net21 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN2 net21 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 out c net22 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN4 net22 d inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMP1 net11 a inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 net11 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP4 out d net11 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c net11 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    AN22JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT AN22JI3VX1 A B C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xa22no2_1 A B C D Q inh_ground_gnd3i inh_power_vdd3i / a22no2ji3v 
++ GT_PUL=300.000n GT_PUW=1.47u GT_PDL=350.00n GT_PDW=890.00n
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    a2no2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT a2no2ji3v a b c out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN2 net41 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN1 out a net41 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 out c inh_ground_gnd3i inh_ground_gnd3i NE3I W=0.75*GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(0.75*GT_PDW) AS=4.8e-07*(0.75*GT_PDW) 
++ PD=2*(4.8e-07+(0.75*GT_PDW)) PS=2.0*(4.8e-07+(0.75*GT_PDW)) 
++ NRD=2.7e-07/(0.75*GT_PDW) NRS=2.7e-07/(0.75*GT_PDW)
+MMP1 net54 a inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 net54 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c net54 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    AN21JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT AN21JI3VX1 A B C Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I C:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xa2no2_1 A B C Q inh_ground_gnd3i inh_power_vdd3i / a2no2ji3v GT_PUL=300.00n 
++ GT_PUW=1.41u GT_PDL=350.00n GT_PDW=890.00n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DLY1JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DLY1JI3VX1 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM3 net35 net31 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=750.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM1 net31 net47 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_2 net35 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=890.00n GT_PUL=300.00n GT_PUW=1.41u
+Xinvr_1 A net47 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=670.00n
+MM2 net31 net47 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=800n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM4 net35 net31 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    o2na3ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT o2na3ji3v a b c d out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I d:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN2 out b net10 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN1 out a net10 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 net10 c net25 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN4 net25 d inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMP4 out d inh_power_vdd3i inh_power_vdd3i PE3I W=0.7*GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(0.7*GT_PUW) AS=4.8e-07*(0.7*GT_PUW) PD=2*(4.8e-07+(0.7*GT_PUW)) 
++ PS=2.0*(4.8e-07+(0.7*GT_PUW)) NRD=2.7e-07/(0.7*GT_PUW) 
++ NRS=2.7e-07/(0.7*GT_PUW)
+MMP2 net24 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP1 out a net24 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c inh_power_vdd3i inh_power_vdd3i PE3I W=0.7*GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(0.7*GT_PUW) AS=4.8e-07*(0.7*GT_PUW) PD=2*(4.8e-07+(0.7*GT_PUW)) 
++ PS=2.0*(4.8e-07+(0.7*GT_PUW)) NRD=2.7e-07/(0.7*GT_PUW) 
++ NRS=2.7e-07/(0.7*GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    ON211JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT ON211JI3VX1 A B C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xo2na3_1 A B C D Q inh_ground_gnd3i inh_power_vdd3i / o2na3ji3v GT_PUL=300.00n 
++ GT_PUW=1.38u GT_PDL=350.00n GT_PDW=900.0n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX16
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX16 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=4.45u GT_PUL=300.00n GT_PUW=8.82u
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=9.78u GT_PUL=300.00n GT_PUW=23.52u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX0 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=900.0n
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=1.12u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DFRQJI3VX4
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DFRQJI3VX4 C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM24 MQIB CI net162 inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 AD=5.28e-13 
++ AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM56 MQI MQIB inh_power_vdd3i inh_power_vdd3i PE3I W=1.11u L=300n M=1.0 
++ AD=5.328e-13 AS=5.328e-13 PD=3.18e-06 PS=3.18e-06 NRD=0.243243 NRS=0.243243
+MM30 net170 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 
++ AD=5.52e-13 AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM23 net162 D inh_power_vdd3i inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 
++ AD=5.28e-13 AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM59 net142 SQIB inh_power_vdd3i inh_power_vdd3i PE3I W=1.41u L=300n M=1.0 
++ AD=6.768e-13 AS=6.768e-13 PD=3.78e-06 PS=3.78e-06 NRD=0.191489 NRS=0.191489
+MM36 net166 net142 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM35 SQIB CI net166 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM34 MQIB CIB net174 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM33 SQIB CIB net170 inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 AD=5.52e-13 
++ AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM28 net174 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_3 SQIB Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=3.56u GT_PUL=300.00n GT_PUW=5.64u
+Xinvr_2 CIB CI inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+Xinvr_1 C CIB inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+MM18 MQIB CIB net124 inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 AD=3.36e-13 
++ AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM17 MQI MQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=760.0n L=350.0n M=1.0 
++ AD=3.648e-13 AS=3.648e-13 PD=2.48e-06 PS=2.48e-06 NRD=0.355263 NRS=0.355263
+MM15 net124 D inh_ground_gnd3i inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 
++ AD=3.36e-13 AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM46 SQIB CI net132 inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 AD=3.456e-13 
++ AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM19 MQIB CI net120 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM51 SQIB CIB net140 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM50 net140 net142 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM49 net142 SQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=660.0n L=350.0n 
++ M=1.0 AD=3.168e-13 AS=3.168e-13 PD=2.28e-06 PS=2.28e-06 NRD=0.409091 
++ NRS=0.409091
+MM47 net132 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM61 net120 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: COUNTER_JI3
+* Cell Name:    counter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT counter clk enable out<7> out<6> out<5> out<4> out<3> out<2> out<1> 
++ out<0> reset
+*.PININFO clk:I enable:I reset:I out<7>:O out<6>:O out<5>:O out<4>:O out<3>:O 
+*.PININFO out<2>:O out<1>:O out<0>:O
+Xg225__6417 out<2> n_6 n_1 gnd3i! vdd3i! / NA2JI3VX0
+Xg222__2346 out<1> n_6 n_5 gnd3i! vdd3i! / NA2JI3VX0
+Xg224__5477 out<6> n_6 n_0 gnd3i! vdd3i! / NA2JI3VX0
+Xg226__7410 out<5> n_6 n_2 gnd3i! vdd3i! / NA2JI3VX0
+Xg221__2883 out<3> n_6 n_7 gnd3i! vdd3i! / NA2JI3VX0
+Xg223__1666 out<4> n_6 n_3 gnd3i! vdd3i! / NA2JI3VX0
+Xg217__9315 n_12 out<2> n_15 gnd3i! vdd3i! / NA2JI3VX0
+Xg227__2398 FE_OFN0_out_0 out<1> n_10 gnd3i! vdd3i! / NA2JI3VX0
+Xg197__1617 n_29 out<6> n_32 gnd3i! vdd3i! / NA2JI3VX0
+Xg202__5122 n_25 out<5> n_28 gnd3i! vdd3i! / NA2JI3VX0
+Xg212__7482 n_17 out<3> n_20 gnd3i! vdd3i! / NA2JI3VX0
+Xg207__6131 n_21 out<4> n_24 gnd3i! vdd3i! / NA2JI3VX0
+Xg218 n_10 n_12 gnd3i! vdd3i! / INJI3VX0
+Xg213 n_15 n_17 gnd3i! vdd3i! / INJI3VX0
+Xg232 FE_PHN2_enable n_6 gnd3i! vdd3i! / INJI3VX0
+Xg198 n_28 n_29 gnd3i! vdd3i! / INJI3VX0
+Xg203 n_24 n_25 gnd3i! vdd3i! / INJI3VX0
+Xg208 n_20 n_21 gnd3i! vdd3i! / INJI3VX0
+XFE_PHC5_n_22 n_22 FE_PHN5_n_22 gnd3i! vdd3i! / DLY2JI3VX1
+XFE_PHC4_n_18 n_18 FE_PHN4_n_18 gnd3i! vdd3i! / DLY2JI3VX1
+XFE_PHC3_n_14 n_14 FE_PHN3_n_14 gnd3i! vdd3i! / DLY2JI3VX1
+XFE_PHC2_enable enable FE_PHN2_enable gnd3i! vdd3i! / DLY2JI3VX1
+XFE_PHC1_reset reset FE_PHN1_reset gnd3i! vdd3i! / DLY2JI3VX1
+XFE_PHC10_n_38 n_38 FE_PHN10_n_38 gnd3i! vdd3i! / BUJI3VX2
+XFE_OFC0_out_0 FE_OFN0_out_0 out<0> gnd3i! vdd3i! / BUJI3VX2
+XFILLCAP_T_1_6 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_8 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_10 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_12 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_17 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_21 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_24 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_30 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_34 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_35 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_38 gnd3i! vdd3i! / DECAP5JI3V
+XFILLCAP_T_1_3 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_13 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_14 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_15 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_16 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_18 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_19 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_20 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_22 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_25 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_26 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_27 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_28 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_29 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_31 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_32 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_33 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_37 gnd3i! vdd3i! / DECAP7JI3V
+XFILLCAP_T_1_2 gnd3i! vdd3i! / DECAP10JI3V
+XFILLCAP_T_1_4 gnd3i! vdd3i! / DECAP10JI3V
+XFILLCAP_T_1_9 gnd3i! vdd3i! / DECAP10JI3V
+XFILLCAP_T_1_23 gnd3i! vdd3i! / DECAP10JI3V
+XFILLCAP_T_1_36 gnd3i! vdd3i! / DECAP10JI3V
+XFILLCAP_T_1_5 gnd3i! vdd3i! / DECAP15JI3V
+XFILLCAP_T_1_7 gnd3i! vdd3i! / DECAP15JI3V
+XFILLCAP_T_1_11 gnd3i! vdd3i! / DECAP15JI3V
+XFILLCAP_T_1_1 gnd3i! vdd3i! / DECAP25JI3V
+XCTS_cdb_buf_00009 CTS_2 CTS_1 gnd3i! vdd3i! / BUJI3VX1
+XCTS_cdb_buf_00010 clk CTS_2 gnd3i! vdd3i! / BUJI3VX1
+Xout_reg[0] CTS_1 FE_PHN3_n_14 FE_OFN0_out_0 gnd3i! vdd3i! / DFRQJI3VX1
+Xg187__2398 FE_PHN1_reset n_36 n_38 gnd3i! vdd3i! / NO2JI3VX0
+Xg219__4733 FE_PHN1_reset n_9 n_14 gnd3i! vdd3i! / NO2JI3VX0
+Xg191__5526 out<7> n_32 n_33 gnd3i! vdd3i! / EN2JI3VX0
+Xg220__9945 FE_PHN2_enable FE_OFN0_out_0 n_9 gnd3i! vdd3i! / EN2JI3VX0
+Xout_reg[2] CTS_1 FE_PHN5_n_22 out<2> gnd3i! vdd3i! / DFRQJI3VX2
+Xout_reg[6] CTS_1 FE_PHN9_n_37 out<6> gnd3i! vdd3i! / DFRQJI3VX2
+Xout_reg[5] CTS_1 FE_PHN8_n_34 out<5> gnd3i! vdd3i! / DFRQJI3VX2
+Xout_reg[3] CTS_1 FE_PHN6_n_26 out<3> gnd3i! vdd3i! / DFRQJI3VX2
+Xout_reg[4] CTS_1 FE_PHN7_n_30 out<4> gnd3i! vdd3i! / DFRQJI3VX2
+Xout_reg[7] CTS_1 FE_PHN10_n_38 out<7> gnd3i! vdd3i! / DFRQJI3VX2
+Xg189__6260 n_33 FE_PHN2_enable out<7> n_6 n_36 gnd3i! vdd3i! / AN22JI3VX1
+Xg209__7098 n_19 n_1 FE_PHN1_reset n_22 gnd3i! vdd3i! / AN21JI3VX1
+Xg214__5115 n_13 n_5 FE_PHN1_reset n_18 gnd3i! vdd3i! / AN21JI3VX1
+Xg190__5107 n_35 n_0 FE_PHN1_reset n_37 gnd3i! vdd3i! / AN21JI3VX1
+Xg194__8428 n_31 n_2 FE_PHN1_reset n_34 gnd3i! vdd3i! / AN21JI3VX1
+Xg204__1705 n_23 n_7 FE_PHN1_reset n_26 gnd3i! vdd3i! / AN21JI3VX1
+Xg199__3680 n_27 n_3 FE_PHN1_reset n_30 gnd3i! vdd3i! / AN21JI3VX1
+XFE_PHC6_n_26 n_26 FE_PHN6_n_26 gnd3i! vdd3i! / DLY1JI3VX1
+XFE_PHC7_n_30 n_30 FE_PHN7_n_30 gnd3i! vdd3i! / DLY1JI3VX1
+Xg211__1881 n_12 out<2> n_15 FE_PHN2_enable n_19 gnd3i! vdd3i! / ON211JI3VX1
+Xg216__6161 out<0> out<1> n_10 FE_PHN2_enable n_13 gnd3i! vdd3i! / ON211JI3VX1
+Xg193__4319 n_29 out<6> n_32 FE_PHN2_enable n_35 gnd3i! vdd3i! / ON211JI3VX1
+Xg196__6783 n_25 out<5> n_28 FE_PHN2_enable n_31 gnd3i! vdd3i! / ON211JI3VX1
+Xg206__8246 n_17 out<3> n_20 FE_PHN2_enable n_23 gnd3i! vdd3i! / ON211JI3VX1
+Xg201__2802 n_21 out<4> n_24 FE_PHN2_enable n_27 gnd3i! vdd3i! / ON211JI3VX1
+XFE_PHC8_n_34 n_34 FE_PHN8_n_34 gnd3i! vdd3i! / BUJI3VX16
+XFE_PHC9_n_37 n_37 FE_PHN9_n_37 gnd3i! vdd3i! / BUJI3VX0
+Xout_reg[1] CTS_1 FE_PHN4_n_18 out<1> gnd3i! vdd3i! / DFRQJI3VX4
+.ENDS
+

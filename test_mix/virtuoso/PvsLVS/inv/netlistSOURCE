@@ -1,0 +1,9 @@
+** Schematic Netlist, pvs precompare
+** 
+
+.subckt inv IN OUT VD VS 
+MMM0 OUT IN VS VS NE3 W=2e-06 L=3.5e-07 m=1 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 PS=4.96e-06 
+MMM1 OUT IN VD VD PE3 W=2e-06 L=3e-07 m=1 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 PS=4.96e-06 
+.ends
+
+

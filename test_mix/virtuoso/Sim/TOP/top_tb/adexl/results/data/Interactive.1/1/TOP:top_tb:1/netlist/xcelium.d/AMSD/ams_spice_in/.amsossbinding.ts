@@ -1,0 +1,1 @@
+1707311983 ./xcelium.d/AMSD/ams_spice_in/amsossbinding.list

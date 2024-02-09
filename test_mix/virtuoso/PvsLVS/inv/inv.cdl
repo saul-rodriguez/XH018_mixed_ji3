@@ -1,0 +1,36 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  INV_LP
+* Top Cell Name: inv
+* View Name:     schematic
+* Netlisted on:  Feb  4 10:15:40 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.LDD
+*.SCALE METER
+.PARAM
+
+
+
+************************************************************************
+* Library Name: INV_LP
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv IN OUT VD VS
+*.PININFO IN:B OUT:B VD:B VS:B
+MM0 OUT IN VS VS NE3 W=2u L=350.0n M=1.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM1 OUT IN VD VD PE3 W=2u L=300n M=1.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+.ENDS
+

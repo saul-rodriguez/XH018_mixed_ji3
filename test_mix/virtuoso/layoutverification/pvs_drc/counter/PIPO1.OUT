@@ -1,0 +1,121 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.06s.
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 10/11/2023 09:46 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.34 
+Started at: 03-Feb-2024  16:49:46
+User Name : saul
+Host Name : phoenix
+Directory : /home/saul/projects/mytests/test_mix/virtuoso
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/saul/projects/mytests/test_mix/virtuoso/layoutverification/pvs_drc/counter/counter.gds' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /home/saul/projects/mytests/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
+INFO (XSTRM-217): Reading the object map file, /home/saul/projects/mytests/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 COUNTER_JI3
+strmFile                                /home/saul/projects/mytests/test_mix/virtuoso/layoutverification/pvs_drc/counter/counter.gds
+topCell                                 counter
+view                                    layout
+runDir                                  /home/saul/projects/mytests/test_mix/virtuoso/layoutverification/pvs_drc/counter
+logFile                                 /home/saul/projects/mytests/test_mix/virtuoso/layoutverification/pvs_drc/counter/PIPO1.LOG
+techLib                                 TECH_XH018
+hierDepth                               32
+maxVertices                             2048
+layerMap                                /home/saul/projects/mytests/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
+objectMap                                /home/saul/projects/mytests/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map
+userSkillFile                           /home/saul/projects/mytests/test_mix/virtuoso/layoutverification/pvs_drc/counter/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+convertPin                              geometryAndText
+
+INFO (XSTRM-223): 1. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_706996986910.
+INFO (XSTRM-223): 2. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_706996986911.
+INFO (XSTRM-223): 3. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_706996986912.
+INFO (XSTRM-223): 4. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_706996986913.
+INFO (XSTRM-223): 5. Translating customVia TECH_XH018/VIA1_CH1_so/via as STRUCTURE VIA1_CH1_so.
+INFO (XSTRM-223): 6. Translating customVia TECH_XH018/VIA1_CV1_so/via as STRUCTURE VIA1_CV1_so.
+INFO (XSTRM-223): 7. Translating customVia TECH_XH018/VIA2_CH1_so/via as STRUCTURE VIA2_CH1_so.
+INFO (XSTRM-223): 8. Translating customVia TECH_XH018/VIA2_CH2_so/via as STRUCTURE VIA2_CH2_so.
+INFO (XSTRM-223): 9. Translating customVia TECH_XH018/VIA1_CV2_so/via as STRUCTURE VIA1_CV2_so.
+INFO (XSTRM-223): 10. Translating customVia TECH_XH018/VIA2_CV1_so/via as STRUCTURE VIA2_CV1_so.
+INFO (XSTRM-223): 11. Translating customVia TECH_XH018/VIA1_Y_so/via as STRUCTURE VIA1_Y_so.
+INFO (XSTRM-223): 12. Translating customVia TECH_XH018/VIA1_CH1_so_hd2/via as STRUCTURE VIA1_CH1_so_hd2.
+INFO (XSTRM-223): 13. Translating customVia TECH_XH018/VIA2_CV2_so/via as STRUCTURE VIA2_CV2_so.
+INFO (XSTRM-223): 14. Translating customVia TECH_XH018/VIA1_CV1_hd/via as STRUCTURE VIA1_CV1_hd.
+INFO (XSTRM-223): 15. Translating customVia TECH_XH018/VIA1_CV2_hd/via as STRUCTURE VIA1_CV2_hd.
+INFO (XSTRM-223): 16. Translating customVia TECH_XH018/VIA1_CH2_so/via as STRUCTURE VIA1_CH2_so.
+INFO (XSTRM-223): 17. Translating customVia TECH_XH018/VIA1_o/via as STRUCTURE VIA1_o.
+INFO (XSTRM-223): 18. Translating customVia TECH_XH018/VIA1_CH2_so_hd2/via as STRUCTURE VIA1_CH2_so_hd2.
+INFO (XSTRM-223): 19. Translating customVia TECH_XH018/VIA3_CH2_so/via as STRUCTURE VIA3_CH2_so.
+INFO (XSTRM-223): 20. Translating customVia TECH_XH018/VIA3_CH1_so/via as STRUCTURE VIA3_CH1_so.
+INFO (XSTRM-223): 21. Translating customVia TECH_XH018/VIA1_CH1_so2/via as STRUCTURE VIA1_CH1_so2.
+INFO (XSTRM-223): 22. Translating customVia TECH_XH018/VIA1_CH2_so2/via as STRUCTURE VIA1_CH2_so2.
+INFO (XSTRM-223): 23. Translating customVia TECH_XH018/VIA3_CV2_so/via as STRUCTURE VIA3_CV2_so.
+INFO (XSTRM-223): 24. Translating customVia TECH_XH018/VIA1_CV2w_beo/via as STRUCTURE VIA1_CV2w_beo.
+INFO (XSTRM-223): 25. Translating customVia TECH_XH018/VIA2_CV1w_beo/via as STRUCTURE VIA2_CV1w_beo.
+INFO (XSTRM-223): 26. Translating customVia TECH_XH018/VIA3_CV1_so/via as STRUCTURE VIA3_CV1_so.
+INFO (XSTRM-223): 27. Translating customVia TECH_XH018/VIA1_X_so/via as STRUCTURE VIA1_X_so.
+INFO (XSTRM-223): 28. Translating customVia TECH_XH018/VIA1_CH1_eo/via as STRUCTURE VIA1_CH1_eo.
+INFO (XSTRM-223): 29. Translating cellView D_CELLS_JI3V/BUJI3VX2/layout as STRUCTURE BUJI3VX2.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET1:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 30. Translating cellView D_CELLS_JI3V/BUJI3VX0/layout as STRUCTURE BUJI3VX0.
+INFO (XSTRM-223): 31. Translating cellView D_CELLS_JI3V/BUJI3VX16/layout as STRUCTURE BUJI3VX16.
+INFO (XSTRM-223): 32. Translating cellView D_CELLS_JI3V/DLY1JI3VX1/layout as STRUCTURE DLY1JI3VX1.
+INFO (XSTRM-223): 33. Translating cellView D_CELLS_JI3V/DLY2JI3VX1/layout as STRUCTURE DLY2JI3VX1.
+INFO (XSTRM-223): 34. Translating cellView D_CELLS_JI3V/BUJI3VX1/layout as STRUCTURE BUJI3VX1.
+INFO (XSTRM-223): 35. Translating cellView D_CELLS_JI3V/DFRQJI3VX2/layout as STRUCTURE DFRQJI3VX2.
+INFO (XSTRM-223): 36. Translating cellView D_CELLS_JI3V/NO2JI3VX0/layout as STRUCTURE NO2JI3VX0.
+INFO (XSTRM-223): 37. Translating cellView D_CELLS_JI3V/AN21JI3VX1/layout as STRUCTURE AN21JI3VX1.
+INFO (XSTRM-223): 38. Translating cellView D_CELLS_JI3V/AN22JI3VX1/layout as STRUCTURE AN22JI3VX1.
+INFO (XSTRM-223): 39. Translating cellView D_CELLS_JI3V/ON211JI3VX1/layout as STRUCTURE ON211JI3VX1.
+INFO (XSTRM-223): 40. Translating cellView D_CELLS_JI3V/EN2JI3VX0/layout as STRUCTURE EN2JI3VX0.
+INFO (XSTRM-223): 41. Translating cellView D_CELLS_JI3V/NA2JI3VX0/layout as STRUCTURE NA2JI3VX0.
+INFO (XSTRM-223): 42. Translating cellView D_CELLS_JI3V/INJI3VX0/layout as STRUCTURE INJI3VX0.
+INFO (XSTRM-223): 43. Translating cellView D_CELLS_JI3V/DFRQJI3VX4/layout as STRUCTURE DFRQJI3VX4.
+INFO (XSTRM-223): 44. Translating cellView D_CELLS_JI3V/DFRQJI3VX1/layout as STRUCTURE DFRQJI3VX1.
+INFO (XSTRM-223): 45. Translating cellView D_CELLS_JI3V/DECAP25JI3V/layout as STRUCTURE DECAP25JI3V.
+INFO (XSTRM-223): 46. Translating cellView D_CELLS_JI3V/DECAP10JI3V/layout as STRUCTURE DECAP10JI3V.
+INFO (XSTRM-223): 47. Translating cellView D_CELLS_JI3V/DECAP7JI3V/layout as STRUCTURE DECAP7JI3V.
+INFO (XSTRM-223): 48. Translating cellView D_CELLS_JI3V/DECAP15JI3V/layout as STRUCTURE DECAP15JI3V.
+INFO (XSTRM-223): 49. Translating cellView D_CELLS_JI3V/DECAP5JI3V/layout as STRUCTURE DECAP5JI3V.
+INFO (XSTRM-223): 50. Translating cellView D_CELLS_JI3V/FEED2JI3V/layout as STRUCTURE FEED2JI3V.
+INFO (XSTRM-223): 51. Translating cellView D_CELLS_JI3V/FEED3JI3V/layout as STRUCTURE FEED3JI3V.
+INFO (XSTRM-223): 52. Translating cellView D_CELLS_JI3V/FEED5JI3V/layout as STRUCTURE FEED5JI3V.
+INFO (XSTRM-223): 53. Translating cellView D_CELLS_JI3V/FEED1JI3V/layout as STRUCTURE FEED1JI3V.
+INFO (XSTRM-223): 54. Translating cellView D_CELLS_JI3V/FEED7JI3V/layout as STRUCTURE FEED7JI3V.
+INFO (XSTRM-223): 55. Translating cellView D_CELLS_JI3V/FEED10JI3V/layout as STRUCTURE FEED10JI3V.
+INFO (XSTRM-223): 56. Translating cellView COUNTER_JI3/counter/layout as STRUCTURE counter.
+
+Summary of Objects Translated:
+	Scalar Instances:                       140
+	Array Instances:                        0
+	Polygons:                               269
+	Paths:                                  7
+	Rectangles:                             1954
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             56
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           45
+	Custom Vias:                            248
+	CdsGen Vias:                            0
+	Pathsegs:                               436
+	Text:                                   165
+	TextDisplay:                            0
+	Cells:                                  56
+
+Elapsed Time: 0.7s   User Time: 0.1s   CPU Time: 0.1s   Peak VM: 7808KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '2' warning(s) found.

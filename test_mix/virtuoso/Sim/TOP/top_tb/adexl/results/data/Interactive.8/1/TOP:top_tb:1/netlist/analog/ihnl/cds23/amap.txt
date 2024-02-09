@@ -1,0 +1,11 @@
+cellMap,*inv_hv,*inv_hv,*INV_HV,*schematic
+netMap,*inv_hv,*gnd!,*0
+instMap,*inv_hv,*M0,*M0
+instMaster,*inv_hv,*M0,*PRIMLIB_nedia_spectre,*nedia
+instMap,*inv_hv,*R0,*R0
+instMaster,*inv_hv,*R0,*PRIMLIB_rpp1k1_3_spectre,*rpp1k1_3
+portMap,*inv_hv,*GNDHV,*GNDHV
+portMap,*inv_hv,*IN,*IN
+portMap,*inv_hv,*OUT,*OUT
+portMap,*inv_hv,*VDDHV,*VDDHV
+portMap,*inv_hv,*VSUB,*VSUB

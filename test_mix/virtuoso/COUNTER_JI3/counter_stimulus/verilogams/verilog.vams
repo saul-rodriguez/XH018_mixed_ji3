@@ -1,0 +1,35 @@
+//Verilog-AMS HDL for "DIGITAL_TEST", "counter_stimulus" "verilogams"
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+`timescale 1ns / 1ps
+
+module counter_stimulus ( clk, enable, reset );
+
+  output enable;
+  output reset;
+  output clk;
+
+  reg clk, reset, enable;
+
+  initial begin
+	//$dumpfile("dump.vcd");
+	//$dumpvars(0,counter1);
+	
+	//counter_tb
+	//$sdf_annotate("/home/saul/projects/XH035_mixed/innovus_is/output/counter_slow.sdf",I0,,"sdf.log","MAXIMUM");
+	clk = 0;
+	reset = 0;
+	enable = 0;
+	#16 reset = 1;
+	#18 reset = 0;
+	#10 enable = 1;	
+	#1000 $finish;
+end
+    
+  always begin
+	#5 clk = ~clk;
+  end
+
+endmodule

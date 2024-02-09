@@ -1,0 +1,81 @@
+# This PVS File Index Registry was created automatically
+# Do not attempt to modify this file as any change may lead
+# to PVS Debug Environment malfunction.
+# 
+"Run Directory" internal none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter
+"Current Directory" internal none /home/saul/projects/mytests/test_mix/virtuoso
+"Cadence Directory" internal none /home/saul/projects/mytests/test_mix/virtuoso/.cadence/
+"Job Signature" internal none IPVS_1706996937_29751
+"PVS Job Mode" internal none lvs
+"GUI Flow" internal none virtuoso6
+"GUI Preset" internal none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/.preset.autosave
+"Technology Name" internal none "XH018_1143"
+"Technology RuleSet" internal none "default"
+"Technology Mapping File" internal none /home/saul/projects/mytests/test_mix/virtuoso/pvtech.lib
+"Technology Rule File" internal none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/.technology.rul
+"PVS Version" internal none 23.10-p043
+"Binary Name" internal none pvsgui
+"PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
+"PVS Job Time" internal none 1706996938
+"DFII version" internal none 6.1.8.0
+"Rule File" input text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/.config.rul
+"Rule File" input text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/.technology.rul
+"Layout Scale" internal none 0.001
+"Layout TechLib" internal none TECH_XH018
+"Layout Library Name" internal none COUNTER_JI3
+"Layout Cell Name" internal none counter
+"Layout View Name" internal none layout
+"Layout Layermap" internal text /home/saul/projects/mytests/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
+"Layout ObjectMap" internal text /home/saul/projects/mytests/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map
+"Layout ConvertPin" internal text geometryAndText
+"Layout HierDepth" internal none 32
+"Layout MaxVertices" internal none 2048
+"Layout Top Cell" internal none counter
+"Layout GDSII" input none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.gds
+"Intermediate GDSII File" output none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.gds
+"Intermediate GDSII File creation Errors" output none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/PIPO1.LOG
+"Intermediate OASIS File creation Errors" output none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/PIPO1.LOG
+"Layout ReplaceBusBitChar" input none nil
+"Layout NoConvertHalfWidthPath" input none nil
+"Schematic Library Name" internal none COUNTER_JI3
+"Schematic Cell Name" internal none counter
+"Schematic View Name" internal none schematic
+"Schematic Top Cell" internal none counter
+"Schematic Netlist" output text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.cdl
+"Extracted Spice File" output text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.spi
+"Do not check rules files before run" internal none ENABLED
+"Control File" input text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/pvslvsctl
+"CDL Out Stop List" internal text auCdl
+"CDL Out View List" internal text auCdl schematic cmos_sch
+"CDL Out Display Pin Information" internal none ENABLED
+"PVS Job Log" log text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/pvsuilvs.log
+"PIPO Setup File I" internal text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/pipo1.setup
+"PIPO Log I" log text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/PIPO1.LOG
+"PIPO Output I" internal text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/PIPO1.OUT
+"SI Setup File" internal text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/si.env
+"SI Log" log text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/SI.LOG
+"SI Output" log text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/SI.OUT
+"SI OSS Directory" internal none /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/
+"Simulator Mode" internal none auCdl
+"Input Layout" input none OA: COUNTER_JI3 counter layout
+"Input Schematic" input none OA: COUNTER_JI3 counter schematic
+"Output Layout Cellmap I" internal text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/lay_cellMap.txt
+"Binary Name" internal none pvsvirt
+"Comparison Report" output cls /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter_lvs.sum.cls
+"Extraction Report" output erc /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter_lvs.sum
+"LVS Report Options" internal none -none
+"SCONNECT RDB" output rdb /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.softchk
+"ERC Summary" output text /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.sum
+"Extraction Result" internal none CLEAN
+"ERC Result" internal none EMPTY
+"UI Data" internal none ENABLED
+"Lvs Replicate Devices" internal none ENABLED
+"PVS Mode Info" internal none MIOPEHPFKJHLMDABKDMIDNEHGIIFEBCC
+"Report MaxResults" internal none 1000
+"Binary Name" internal none pvs
+"Comparison Result" internal none MISMATCH
+"LVS Run Name" internal none counter_lvs.sum
+"PVS Version" internal none 23.10-p043
+"Binary Name" internal none pvsnvn
+"PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
+"PVS Job Time" internal none 1706996947

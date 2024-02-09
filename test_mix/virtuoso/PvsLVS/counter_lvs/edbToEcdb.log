@@ -1,0 +1,17 @@
+
+/pkg/cadence/installs/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : counter_lvs_6017.db
+ECDB dir        : ./
+Top Cell        : counter_lvs
+CDL netlist     : svdb/counter_lvs.net
+Layer map file  : svdb/counter_lvs.ecdbmap
+Text map file   : svdb/counter_lvs.ports
+Dependency map  : counter_lvs.lmap.perc
+Lvs file        : svdb/counter_lvs.lvsfile
+Float net file  : .counter_lvs.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : counter_lvs_6017

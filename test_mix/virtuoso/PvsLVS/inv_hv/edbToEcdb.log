@@ -1,0 +1,17 @@
+
+/pkg/cadence/installs/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : inv_hv_21215.db
+ECDB dir        : ./
+Top Cell        : inv_hv
+CDL netlist     : svdb/inv_hv.net
+Layer map file  : svdb/inv_hv.ecdbmap
+Text map file   : svdb/inv_hv.ports
+Dependency map  : inv_hv.lmap.perc
+Lvs file        : svdb/inv_hv.lvsfile
+Float net file  : .inv_hv.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : inv_hv_21215

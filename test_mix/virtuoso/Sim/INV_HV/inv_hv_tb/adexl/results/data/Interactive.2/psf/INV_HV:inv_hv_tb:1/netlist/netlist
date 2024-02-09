@@ -1,0 +1,19 @@
+
+// Library name: INV_HV
+// Cell name: inv_hv
+// View name: schematic
+subckt inv_hv GNDHV IN OUT VDDHV VSUB
+    M0 (OUT IN GNDHV VSUB) nedia w=40u l=1.25u m=(1)*(1) par1=(1)*(1) \
+        extlay=0 xf_subext=0
+    R0 (VDDHV OUT VSUB) rpp1k1_3 l=103.425u w=10u m=1 par1=1
+ends inv_hv
+// End of subcircuit definition.
+
+// Library name: INV_HV
+// Cell name: inv_hv_tb
+// View name: schematic
+I0 (0 VIN VOUT net1 0) inv_hv
+V0 (net1 0) vsource dc=40 type=dc
+V1 (VIN 0) vsource type=pulse val0=0 val1=18 period=200u delay=1u rise=1n \
+        fall=1n width=100u
+C0 (VOUT 0) capacitor c=100.0f

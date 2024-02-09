@@ -1,0 +1,888 @@
+
+// Library name: HV_CELLS
+// Cell name: ioh_dhpw_2x100
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_dhpw_2x100
+    D0 (Sub K) ddnw area=3.37852e-09 perimeter=284.4u dbv=0.0 m=1 par1=(1) \
+        xf_subext=0
+    D1 (A K) dhpw area=3.87893e-10 perimeter=207.812u dbv=0.0 m=2 par1=(2)
+ends ioh_dhpw_2x100
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_dhpw_2x100_stack3
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_dhpw_2x100_stack3
+    I0 ioh_dhpw_2x100
+    I2 ioh_dhpw_2x100
+    I1 ioh_dhpw_2x100
+ends ioh_dhpw_2x100_stack3
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsab_40_10
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsab_40_10
+    MPX (D G S B) pmb w=40.12u l=1u as=1.92576e-11 ad=1.92576e-11 \
+        ps=8.12e-05 pd=8.12e-05 nrs=0.00672981 nrd=0.00672981 m=(1)*(1) \
+        par1=(1)*(1)
+ends ioh_pmbsab_40_10
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsabhv_2000
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsabhv_2000
+    R0_1 (net20_0 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_2 (net20_1 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_3 (net20_2 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_4 (net20_3 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_5 (net20_4 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_6 (net20_5 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_7 (net20_6 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_8 (net20_7 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_9 (net20_8 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_10 (net20_9 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_11 (net20_10 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_12 (net20_11 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_13 (net20_12 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_14 (net20_13 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_15 (net20_14 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_16 (net20_15 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_17 (net20_16 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_18 (net20_17 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_19 (net20_18 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_20 (net20_19 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_21 (net20_20 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_22 (net20_21 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_23 (net20_22 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_24 (net20_23 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_25 (net20_24 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_26 (net20_25 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_27 (net20_26 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_28 (net20_27 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_29 (net20_28 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_30 (net20_29 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_31 (net20_30 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_32 (net20_31 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_33 (net20_32 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_34 (net20_33 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_35 (net20_34 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_36 (net20_35 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_37 (net20_36 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_38 (net20_37 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_39 (net20_38 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_40 (net20_39 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_41 (net20_40 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_42 (net20_41 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_43 (net20_42 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_44 (net20_43 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_45 (net20_44 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_46 (net20_45 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_47 (net20_46 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_48 (net20_47 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_49 (net20_48 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_50 (net20_49 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    D0_1 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_2 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_3 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_4 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_5 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_6 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_7 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_8 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_9 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_10 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_11 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_12 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_13 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_14 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_15 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_16 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_17 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_18 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_19 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_20 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_21 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_22 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_23 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_24 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_25 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_26 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_27 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_28 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_29 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_30 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_31 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_32 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_33 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_34 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_35 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_36 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_37 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_38 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_39 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_40 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_41 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_42 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_43 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_44 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_45 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_46 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_47 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_48 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_49 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_50 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D1 (Sub GSB) ddnw area=5.93593e-09 perimeter=334.2u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    MP_1 ioh_pmbsab_40_10
+    MP_2 ioh_pmbsab_40_10
+    MP_3 ioh_pmbsab_40_10
+    MP_4 ioh_pmbsab_40_10
+    MP_5 ioh_pmbsab_40_10
+    MP_6 ioh_pmbsab_40_10
+    MP_7 ioh_pmbsab_40_10
+    MP_8 ioh_pmbsab_40_10
+    MP_9 ioh_pmbsab_40_10
+    MP_10 ioh_pmbsab_40_10
+    MP_11 ioh_pmbsab_40_10
+    MP_12 ioh_pmbsab_40_10
+    MP_13 ioh_pmbsab_40_10
+    MP_14 ioh_pmbsab_40_10
+    MP_15 ioh_pmbsab_40_10
+    MP_16 ioh_pmbsab_40_10
+    MP_17 ioh_pmbsab_40_10
+    MP_18 ioh_pmbsab_40_10
+    MP_19 ioh_pmbsab_40_10
+    MP_20 ioh_pmbsab_40_10
+    MP_21 ioh_pmbsab_40_10
+    MP_22 ioh_pmbsab_40_10
+    MP_23 ioh_pmbsab_40_10
+    MP_24 ioh_pmbsab_40_10
+    MP_25 ioh_pmbsab_40_10
+    MP_26 ioh_pmbsab_40_10
+    MP_27 ioh_pmbsab_40_10
+    MP_28 ioh_pmbsab_40_10
+    MP_29 ioh_pmbsab_40_10
+    MP_30 ioh_pmbsab_40_10
+    MP_31 ioh_pmbsab_40_10
+    MP_32 ioh_pmbsab_40_10
+    MP_33 ioh_pmbsab_40_10
+    MP_34 ioh_pmbsab_40_10
+    MP_35 ioh_pmbsab_40_10
+    MP_36 ioh_pmbsab_40_10
+    MP_37 ioh_pmbsab_40_10
+    MP_38 ioh_pmbsab_40_10
+    MP_39 ioh_pmbsab_40_10
+    MP_40 ioh_pmbsab_40_10
+    MP_41 ioh_pmbsab_40_10
+    MP_42 ioh_pmbsab_40_10
+    MP_43 ioh_pmbsab_40_10
+    MP_44 ioh_pmbsab_40_10
+    MP_45 ioh_pmbsab_40_10
+    MP_46 ioh_pmbsab_40_10
+    MP_47 ioh_pmbsab_40_10
+    MP_48 ioh_pmbsab_40_10
+    MP_49 ioh_pmbsab_40_10
+    MP_50 ioh_pmbsab_40_10
+ends ioh_pmbsabhv_2000
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isab_40_04
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isab_40_04
+    MPX (net17 G S B) pe3i w=40u l=400n as=1.92e-11 ad=1.92e-11 \
+        ps=8.096e-05 pd=8.096e-05 nrs=0.00675 nrd=0.00675 m=(1)*(1) \
+        par1=(1)*(1)
+    R0 (net17 D B) rdp3 l=430.0n w=40u m=1 par1=1
+ends ioh_pe3isab_40_04
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isabhv_2800gcr
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isabhv_2800gcr
+    MD_1 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_2 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_3 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_4 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_5 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_6 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_7 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_8 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_9 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_10 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_11 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_12 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_13 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_14 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_15 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_16 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_17 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_18 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_19 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_20 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_21 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_22 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_23 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_24 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_25 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_26 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_27 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_28 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_29 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_30 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_31 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_32 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_33 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_34 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_35 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    D0 (Sub SB) ddnw area=5.99695e-09 perimeter=335.2u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    R0 (SB net20) rnp1 l=25.50u w=420.0n m=1 par1=1
+    MP_1 ioh_pe3isab_40_04
+    MP_2 ioh_pe3isab_40_04
+    MP_3 ioh_pe3isab_40_04
+    MP_4 ioh_pe3isab_40_04
+    MP_5 ioh_pe3isab_40_04
+    MP_6 ioh_pe3isab_40_04
+    MP_7 ioh_pe3isab_40_04
+    MP_8 ioh_pe3isab_40_04
+    MP_9 ioh_pe3isab_40_04
+    MP_10 ioh_pe3isab_40_04
+    MP_11 ioh_pe3isab_40_04
+    MP_12 ioh_pe3isab_40_04
+    MP_13 ioh_pe3isab_40_04
+    MP_14 ioh_pe3isab_40_04
+    MP_15 ioh_pe3isab_40_04
+    MP_16 ioh_pe3isab_40_04
+    MP_17 ioh_pe3isab_40_04
+    MP_18 ioh_pe3isab_40_04
+    MP_19 ioh_pe3isab_40_04
+    MP_20 ioh_pe3isab_40_04
+    MP_21 ioh_pe3isab_40_04
+    MP_22 ioh_pe3isab_40_04
+    MP_23 ioh_pe3isab_40_04
+    MP_24 ioh_pe3isab_40_04
+    MP_25 ioh_pe3isab_40_04
+    MP_26 ioh_pe3isab_40_04
+    MP_27 ioh_pe3isab_40_04
+    MP_28 ioh_pe3isab_40_04
+    MP_29 ioh_pe3isab_40_04
+    MP_30 ioh_pe3isab_40_04
+    MP_31 ioh_pe3isab_40_04
+    MP_32 ioh_pe3isab_40_04
+    MP_33 ioh_pe3isab_40_04
+    MP_34 ioh_pe3isab_40_04
+    MP_35 ioh_pe3isab_40_04
+    MP_36 ioh_pe3isab_40_04
+    MP_37 ioh_pe3isab_40_04
+    MP_38 ioh_pe3isab_40_04
+    MP_39 ioh_pe3isab_40_04
+    MP_40 ioh_pe3isab_40_04
+    MP_41 ioh_pe3isab_40_04
+    MP_42 ioh_pe3isab_40_04
+    MP_43 ioh_pe3isab_40_04
+    MP_44 ioh_pe3isab_40_04
+    MP_45 ioh_pe3isab_40_04
+    MP_46 ioh_pe3isab_40_04
+    MP_47 ioh_pe3isab_40_04
+    MP_48 ioh_pe3isab_40_04
+    MP_49 ioh_pe3isab_40_04
+    MP_50 ioh_pe3isab_40_04
+    MP_51 ioh_pe3isab_40_04
+    MP_52 ioh_pe3isab_40_04
+    MP_53 ioh_pe3isab_40_04
+    MP_54 ioh_pe3isab_40_04
+    MP_55 ioh_pe3isab_40_04
+    MP_56 ioh_pe3isab_40_04
+    MP_57 ioh_pe3isab_40_04
+    MP_58 ioh_pe3isab_40_04
+    MP_59 ioh_pe3isab_40_04
+    MP_60 ioh_pe3isab_40_04
+    MP_61 ioh_pe3isab_40_04
+    MP_62 ioh_pe3isab_40_04
+    MP_63 ioh_pe3isab_40_04
+    MP_64 ioh_pe3isab_40_04
+    MP_65 ioh_pe3isab_40_04
+    MP_66 ioh_pe3isab_40_04
+    MP_67 ioh_pe3isab_40_04
+    MP_68 ioh_pe3isab_40_04
+    MP_69 ioh_pe3isab_40_04
+    MP_70 ioh_pe3isab_40_04
+ends ioh_pe3isabhv_2800gcr
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_d5pk
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_d5pk
+    I3 ioh_pmbsabhv_2000
+    I4 ioh_pmbsabhv_2000
+    I2 ioh_pmbsabhv_2000
+    I1 ioh_pmbsabhv_2000
+    I5 ioh_pe3isabhv_2800gcr
+ends ioh_d5pk
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: HVDD4DJ5PKFs
+// View name: schematic
+// Inherited view list: schematic
+subckt HVDD4DJ5PKFs
+    I9 ioh_dhpw_2x100_stack3
+    I11 ioh_d5pk
+ends HVDD4DJ5PKFs
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_dnw3_16x60
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_dnw3_16x60
+    D0 (A Guard) dnw3 area=2.45079e-10 perimeter=462.5u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    D1 (A K) dnw3 area=7.94772e-11 perimeter=65.99u dbv=0.0 m=16 par1=(16) \
+        xf_subext=0
+ends ioh_dnw3_16x60
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_dp3_16x70
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_dp3_16x70
+    D0 (Sub K) dnw3 area=3.46921e-09 perimeter=244.1u dbv=0.0 m=1 par1=(1) \
+        xf_subext=0
+    D1 (A K) dp3 area=7.93881e-11 perimeter=75.27u dbv=0.0 m=16 par1=(16)
+ends ioh_dp3_16x70
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: EHVSSJI220FS
+// View name: schematic
+// Inherited view list: schematic
+subckt EHVSSJI220FS
+    I0 ioh_dnw3_16x60
+    I1 ioh_dp3_16x70
+ends EHVSSJI220FS
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_iscrd2_4x100
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_iscrd2_4x100
+    D1 (Gp K) dnpdd_scr area=5.36386e-10 perimeter=409.56u dbv=0.0 m=1
+    D2 (Gp Gn) dpdd_scr area=2.19633e-09 perimeter=457.16u dbv=0.0 m=1
+    D0 (A Gn) dpdnw area=1.89063e-10 perimeter=203.78u dbv=0.0 m=4 \
+        par1=(4)
+    D_Guard (Sub Gn) ddnw area=6.92224e-09 perimeter=359.17u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+ends ioh_iscrd2_4x100
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isab_15_04
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isab_15_04
+    MPX (net17 G S B) pe3i w=15.0u l=400n as=7.2e-12 ad=7.2e-12 \
+        ps=3.096e-05 pd=3.096e-05 nrs=0.018 nrd=0.018 m=(1)*(1) \
+        par1=(1)*(1)
+    R0 (net17 D B) rdp3 l=430.0n w=15.0u m=1 par1=1
+ends ioh_pe3isab_15_04
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isabhv_1050gcr
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isabhv_1050gcr
+    MD_1 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_2 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_3 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_4 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_5 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_6 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_7 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_8 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_9 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_10 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_11 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_12 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_13 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_14 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_15 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_16 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_17 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_18 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_19 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_20 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_21 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_22 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_23 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_24 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_25 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_26 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_27 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_28 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_29 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_30 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_31 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_32 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_33 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_34 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_35 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    D0 (Sub SB) ddnw area=3.10026e-09 perimeter=285.2u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    R0 (SB net20) rnp1 l=25.50u w=420.0n m=1 par1=1
+    MP_1 ioh_pe3isab_15_04
+    MP_2 ioh_pe3isab_15_04
+    MP_3 ioh_pe3isab_15_04
+    MP_4 ioh_pe3isab_15_04
+    MP_5 ioh_pe3isab_15_04
+    MP_6 ioh_pe3isab_15_04
+    MP_7 ioh_pe3isab_15_04
+    MP_8 ioh_pe3isab_15_04
+    MP_9 ioh_pe3isab_15_04
+    MP_10 ioh_pe3isab_15_04
+    MP_11 ioh_pe3isab_15_04
+    MP_12 ioh_pe3isab_15_04
+    MP_13 ioh_pe3isab_15_04
+    MP_14 ioh_pe3isab_15_04
+    MP_15 ioh_pe3isab_15_04
+    MP_16 ioh_pe3isab_15_04
+    MP_17 ioh_pe3isab_15_04
+    MP_18 ioh_pe3isab_15_04
+    MP_19 ioh_pe3isab_15_04
+    MP_20 ioh_pe3isab_15_04
+    MP_21 ioh_pe3isab_15_04
+    MP_22 ioh_pe3isab_15_04
+    MP_23 ioh_pe3isab_15_04
+    MP_24 ioh_pe3isab_15_04
+    MP_25 ioh_pe3isab_15_04
+    MP_26 ioh_pe3isab_15_04
+    MP_27 ioh_pe3isab_15_04
+    MP_28 ioh_pe3isab_15_04
+    MP_29 ioh_pe3isab_15_04
+    MP_30 ioh_pe3isab_15_04
+    MP_31 ioh_pe3isab_15_04
+    MP_32 ioh_pe3isab_15_04
+    MP_33 ioh_pe3isab_15_04
+    MP_34 ioh_pe3isab_15_04
+    MP_35 ioh_pe3isab_15_04
+    MP_36 ioh_pe3isab_15_04
+    MP_37 ioh_pe3isab_15_04
+    MP_38 ioh_pe3isab_15_04
+    MP_39 ioh_pe3isab_15_04
+    MP_40 ioh_pe3isab_15_04
+    MP_41 ioh_pe3isab_15_04
+    MP_42 ioh_pe3isab_15_04
+    MP_43 ioh_pe3isab_15_04
+    MP_44 ioh_pe3isab_15_04
+    MP_45 ioh_pe3isab_15_04
+    MP_46 ioh_pe3isab_15_04
+    MP_47 ioh_pe3isab_15_04
+    MP_48 ioh_pe3isab_15_04
+    MP_49 ioh_pe3isab_15_04
+    MP_50 ioh_pe3isab_15_04
+    MP_51 ioh_pe3isab_15_04
+    MP_52 ioh_pe3isab_15_04
+    MP_53 ioh_pe3isab_15_04
+    MP_54 ioh_pe3isab_15_04
+    MP_55 ioh_pe3isab_15_04
+    MP_56 ioh_pe3isab_15_04
+    MP_57 ioh_pe3isab_15_04
+    MP_58 ioh_pe3isab_15_04
+    MP_59 ioh_pe3isab_15_04
+    MP_60 ioh_pe3isab_15_04
+    MP_61 ioh_pe3isab_15_04
+    MP_62 ioh_pe3isab_15_04
+    MP_63 ioh_pe3isab_15_04
+    MP_64 ioh_pe3isab_15_04
+    MP_65 ioh_pe3isab_15_04
+    MP_66 ioh_pe3isab_15_04
+    MP_67 ioh_pe3isab_15_04
+    MP_68 ioh_pe3isab_15_04
+    MP_69 ioh_pe3isab_15_04
+    MP_70 ioh_pe3isab_15_04
+ends ioh_pe3isabhv_1050gcr
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsab_15_10
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsab_15_10
+    MPX (D G S B) pmb w=15.12u l=1u as=7.2576e-12 ad=7.2576e-12 \
+        ps=3.12e-05 pd=3.12e-05 nrs=0.0178571 nrd=0.0178571 m=(1)*(1) \
+        par1=(1)*(1)
+ends ioh_pmbsab_15_10
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsabhv_750
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsabhv_750
+    R0_1 (net20_0 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_2 (net20_1 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_3 (net20_2 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_4 (net20_3 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_5 (net20_4 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_6 (net20_5 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_7 (net20_6 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_8 (net20_7 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_9 (net20_8 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_10 (net20_9 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_11 (net20_10 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_12 (net20_11 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_13 (net20_12 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_14 (net20_13 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_15 (net20_14 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_16 (net20_15 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_17 (net20_16 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_18 (net20_17 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_19 (net20_18 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_20 (net20_19 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_21 (net20_20 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_22 (net20_21 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_23 (net20_22 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_24 (net20_23 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_25 (net20_24 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_26 (net20_25 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_27 (net20_26 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_28 (net20_27 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_29 (net20_28 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_30 (net20_29 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_31 (net20_30 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_32 (net20_31 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_33 (net20_32 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_34 (net20_33 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_35 (net20_34 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_36 (net20_35 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_37 (net20_36 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_38 (net20_37 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_39 (net20_38 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_40 (net20_39 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_41 (net20_40 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_42 (net20_41 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_43 (net20_42 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_44 (net20_43 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_45 (net20_44 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_46 (net20_45 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_47 (net20_46 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_48 (net20_47 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_49 (net20_48 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_50 (net20_49 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    D0_1 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_2 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_3 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_4 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_5 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_6 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_7 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_8 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_9 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_10 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_11 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_12 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_13 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_14 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_15 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_16 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_17 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_18 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_19 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_20 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_21 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_22 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_23 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_24 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_25 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_26 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_27 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_28 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_29 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_30 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_31 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_32 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_33 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_34 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_35 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_36 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_37 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_38 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_39 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_40 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_41 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_42 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_43 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_44 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_45 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_46 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_47 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_48 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_49 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_50 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D1 (Sub GSB) ddnw area=3.03711e-09 perimeter=284u dbv=0.0 m=1 par1=(1) \
+        xf_subext=0
+    MP_1 ioh_pmbsab_15_10
+    MP_2 ioh_pmbsab_15_10
+    MP_3 ioh_pmbsab_15_10
+    MP_4 ioh_pmbsab_15_10
+    MP_5 ioh_pmbsab_15_10
+    MP_6 ioh_pmbsab_15_10
+    MP_7 ioh_pmbsab_15_10
+    MP_8 ioh_pmbsab_15_10
+    MP_9 ioh_pmbsab_15_10
+    MP_10 ioh_pmbsab_15_10
+    MP_11 ioh_pmbsab_15_10
+    MP_12 ioh_pmbsab_15_10
+    MP_13 ioh_pmbsab_15_10
+    MP_14 ioh_pmbsab_15_10
+    MP_15 ioh_pmbsab_15_10
+    MP_16 ioh_pmbsab_15_10
+    MP_17 ioh_pmbsab_15_10
+    MP_18 ioh_pmbsab_15_10
+    MP_19 ioh_pmbsab_15_10
+    MP_20 ioh_pmbsab_15_10
+    MP_21 ioh_pmbsab_15_10
+    MP_22 ioh_pmbsab_15_10
+    MP_23 ioh_pmbsab_15_10
+    MP_24 ioh_pmbsab_15_10
+    MP_25 ioh_pmbsab_15_10
+    MP_26 ioh_pmbsab_15_10
+    MP_27 ioh_pmbsab_15_10
+    MP_28 ioh_pmbsab_15_10
+    MP_29 ioh_pmbsab_15_10
+    MP_30 ioh_pmbsab_15_10
+    MP_31 ioh_pmbsab_15_10
+    MP_32 ioh_pmbsab_15_10
+    MP_33 ioh_pmbsab_15_10
+    MP_34 ioh_pmbsab_15_10
+    MP_35 ioh_pmbsab_15_10
+    MP_36 ioh_pmbsab_15_10
+    MP_37 ioh_pmbsab_15_10
+    MP_38 ioh_pmbsab_15_10
+    MP_39 ioh_pmbsab_15_10
+    MP_40 ioh_pmbsab_15_10
+    MP_41 ioh_pmbsab_15_10
+    MP_42 ioh_pmbsab_15_10
+    MP_43 ioh_pmbsab_15_10
+    MP_44 ioh_pmbsab_15_10
+    MP_45 ioh_pmbsab_15_10
+    MP_46 ioh_pmbsab_15_10
+    MP_47 ioh_pmbsab_15_10
+    MP_48 ioh_pmbsab_15_10
+    MP_49 ioh_pmbsab_15_10
+    MP_50 ioh_pmbsab_15_10
+ends ioh_pmbsabhv_750
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_c5pk
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_c5pk
+    I5 ioh_pe3isabhv_1050gcr
+    I3 ioh_pmbsabhv_750
+    I4 ioh_pmbsabhv_750
+    I2 ioh_pmbsabhv_750
+    I1 ioh_pmbsabhv_750
+ends ioh_c5pk
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: HVD4SJD1R5PKFs
+// View name: schematic
+// Inherited view list: schematic
+subckt HVD4SJD1R5PKFs
+    I10 ioh_iscrd2_4x100
+    I9 ioh_dhpw_2x100_stack3
+    I11 ioh_c5pk
+    R4 (IGND Trig_0) rpp1s l=16.0u w=100.0000u m=1 par1=1
+ends HVD4SJD1R5PKFs
+// End of subcircuit definition.
+
+// Library name: IORING
+// Cell name: ioring
+// View name: schematic
+// Inherited view list: schematic
+subckt ioring
+    I24 HVDD4DJ5PKFs
+    I29 EHVSSJI220FS
+    I33 HVD4SJD1R5PKFs
+ends ioring
+// End of subcircuit definition.
+
+// Library name: INV_LP
+// Cell name: inv
+// View name: schematic
+// Inherited view list: schematic
+subckt inv
+    M0 (OUT IN VS VS) ne3 w=2u l=350.0n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1) xf_subext=0
+    M1 (OUT IN VD VD) pe3 w=2u l=300n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+ends inv
+// End of subcircuit definition.
+
+// Library name: INV_HV
+// Cell name: inv_hv
+// View name: schematic
+// Inherited view list: schematic
+subckt inv_hv
+    M0 (OUT IN GNDHV VSUB) nedia w=40u l=1.25u m=(1)*(1) par1=(1)*(1) \
+        extlay=0 xf_subext=0
+    R0 (VDDHV OUT VSUB) rpp1k1_3 l=103.425u w=10u m=1 par1=1
+ends inv_hv
+// End of subcircuit definition.
+
+// Library name: TOP
+// Cell name: top
+// View name: schematic
+// Inherited view list: schematic
+subckt top
+    I0 ioring
+    I1 inv
+    I2 inv_hv
+ends top
+// End of subcircuit definition.
+
+// Library name: TOP
+// Cell name: top_tb
+// View name: schematic
+// Inherited view list: schematic
+I0 top
+V9 (net16 0) vsource dc=0 type=dc
+V8 (net14 0) vsource dc=0 type=dc
+V7 (net11 0) vsource dc=0 type=dc
+V6 (net10 0) vsource dc=0 type=dc
+V5 (net6 0) vsource dc=0 type=dc
+V4 (net5 0) vsource dc=0 type=dc
+V3 (net4 0) vsource dc=0 type=dc
+V2 (net3 0) vsource dc=40 type=dc
+V1 (net2 0) vsource dc=3.3 type=dc
+V0 (net1 0) vsource dc=3.3 type=dc
+R9 (net17 net16) resistor r=0.1
+R8 (net15 net14) resistor r=0.1
+R7 (net13 net11) resistor r=0.1
+R6 (net12 net10) resistor r=0.1
+R5 (net9 net6) resistor r=0.1
+R4 (net8 net5) resistor r=0.1
+R3 (net7 net4) resistor r=0.1
+R2 (VDDHV net3) resistor r=0.1
+R1 (VDDA net2) resistor r=0.1
+R0 (VDDD net1) resistor r=0.1
+V10 (net18 0) vsource type=pulse val0=0 val1=3.3 period=10u delay=1u \
+        rise=1n fall=1n width=5u

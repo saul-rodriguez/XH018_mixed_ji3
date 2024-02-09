@@ -1,0 +1,13 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary counter
+out<7> 6 out<7> 29400 363 m3trm
+out<6> 12 out<6> 31640 363 m3trm
+out<4> 30 out<4> 36120 363 m3trm
+enable 39 enable 36120 64598 m3trm
+out<1> 18 out<1> 42840 363 m3trm
+out<2> 28 out<2> 40600 363 m3trm
+out<0> 34 out<0> 45080 363 m3trm
+out<5> 41 out<5> 33880 363 m3trm
+out<3> 47 out<3> 38360 363 m3trm
+clk 44 clk 33880 64598 m3trm
+reset 29 reset 38360 64598 m3trm

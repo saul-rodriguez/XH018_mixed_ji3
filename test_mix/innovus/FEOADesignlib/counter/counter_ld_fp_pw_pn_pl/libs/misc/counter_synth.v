@@ -1,0 +1,1 @@
+/home/saul/projects/mytests/test_mix/genus/genus_output/counter_synth.v

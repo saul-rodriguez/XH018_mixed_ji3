@@ -1,0 +1,8 @@
+    D1 (Gp K) dnpdd_scr area=5.36386e-10 perimeter=409.56u dbv=0.0 m=1
+    D2 (Gp Gn) dpdd_scr area=2.19633e-09 perimeter=457.16u dbv=0.0 m=1
+    D0 (A Gn) dpdnw area=1.89063e-10 perimeter=203.78u dbv=0.0 m=4 \
+        par1=(4)
+    D_Guard (Sub Gn) ddnw area=6.92224e-09 perimeter=359.17u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+ends ioh_iscrd2_4x100
+// End of subcircuit definition.

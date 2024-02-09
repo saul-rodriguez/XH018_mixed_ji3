@@ -1,0 +1,8 @@
+
+// Library name: INV_HV
+// Cell name: nedia_dc
+// View name: schematic
+M0 (net2 net1 0 0) nedia w=10u l=1.25u m=(1)*(1) par1=(1)*(1) extlay=0 \
+        xf_subext=0
+V1 (net2 0) vsource dc=VDS type=dc
+V0 (net1 0) vsource dc=VGS type=dc

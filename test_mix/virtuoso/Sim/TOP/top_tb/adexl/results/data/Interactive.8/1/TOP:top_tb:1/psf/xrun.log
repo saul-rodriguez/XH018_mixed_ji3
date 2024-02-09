@@ -1,0 +1,208 @@
+xrun(64): 23.09-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s002: Started on Feb 07, 2024 at 08:51:37 EST
+xrun
+	-f xrunArgs
+		-UNBUFFERED
+		-cdslib ./cds.lib
+		-errormax 50
+		-status
+		-nowarn DLNOHV
+		-nowarn DLCLAP
+		-v93
+		-incdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+		-ade
+		-timescale 1ns/1ns
+		-vtimescale 1ns/1ns
+		-discipline logic
+		-delay_mode None
+		-novitalaccl
+		-access r
+		-noparamerr
+		-amspartinfo ../psf/partition.info
+		-rnm_partinfo
+		-modelincdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+		./spiceModels.scs
+		./amsControlSpectre.scs
+		-input ./probe.tcl
+		-run
+		-exit
+		-xmsimargs "+amsrawdir ../psf"
+		-spectre_args "-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.8/sharedData/CDS/ahdl/input.ahdlSimDB"
+		-spectre_args +logstatus
+		-simcompatible_ams spectre
+		-name TOP.top_tb:config
+		-amsconnrules ConnRules_3V_full_fast
+		+define+CDS_SELECT_CRS
+		+define+CONNRULES_3V_FULL_FAST
+		-allowredefinition
+		-amsbind
+		-top TOP.top_tb:schematic
+		-top cds_globals
+		./netlist.vams
+		-f ./textInputs
+			-amscompilefile "file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter/functional/verilog.v lib:COUNTER_JI3 cell:counter view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_buf/functional/verilog.v lib:VLG_PRIMITIVES cell:check_buf view:functional"
+			-amscompilefile "file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR00DPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:APR00DPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/resistor_ams/verilogams/verilog.vams lib:VLG_PRIMITIVES cell:resistor_ams view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/PWRCUTDCPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:PWRCUTDCPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_vdd/verilogams/verilog.vams lib:VLG_PRIMITIVES cell:check_vdd view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_gnd/verilogams/verilog.vams lib:VLG_PRIMITIVES cell:check_gnd view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/GNDPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:GNDPADPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/PSUBPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:PSUBPADPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/GNDORPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:GNDORPADPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/VDDPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:VDDPADPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/VDDORPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:VDDORPADPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/ICPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:ICPC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/BT4PC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:BT4PC view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR04DPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:APR04DPC view:verilogams"
+			-makelib TOP
+			-makelib INV_HV
+			-makelib INV_LP
+			-makelib IORING
+			-makelib HV_CELLS
+			-endlib
+		./cds_globals.vams
+		-l ../psf/xrun.log
+		-spectre_args ++aps
+file: ./netlist.vams
+	module HV_CELLS.HVDD4DJ5PKFs:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dnw3_16x60:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dp3_16x70:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.EHVSSJI220FS:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_iscrd2_4x100:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isab_15_04:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isabhv_1050gcr:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsab_15_10:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsabhv_750:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_c5pk:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.HVD4SJD1R5PKFs:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dhpw_2x100:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dhpw_2x100_stack3:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsab_40_10:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsabhv_2000:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isab_40_04:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isabhv_2800gcr:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_d5pk:schematic
+		errors: 0, warnings: 0
+	module IORING.ioring:schematic
+		errors: 0, warnings: 0
+	module INV_LP.inv:schematic
+		errors: 0, warnings: 0
+	module INV_HV.inv_hv:schematic
+		errors: 0, warnings: 0
+	module TOP.top:schematic
+		errors: 0, warnings: 0
+	module TOP.top_tb:schematic
+		errors: 0, warnings: 0
+file: ./cds_globals.vams
+	module worklib.cds_globals:vams
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter/functional/verilog.v
+	module COUNTER_JI3.counter:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_buf/functional/verilog.v
+	primitive VLG_PRIMITIVES.check_buf:functional
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams
+	module COUNTER_JI3.counter_stimulus:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR00DPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.APR00DPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/resistor_ams/verilogams/verilog.vams
+	module VLG_PRIMITIVES.resistor_ams:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/PWRCUTDCPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.PWRCUTDCPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_vdd/verilogams/verilog.vams
+	module VLG_PRIMITIVES.check_vdd:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_gnd/verilogams/verilog.vams
+	module VLG_PRIMITIVES.check_gnd:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/GNDPADPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.GNDPADPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/PSUBPADPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.PSUBPADPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/GNDORPADPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.GNDORPADPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/VDDPADPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.VDDPADPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/VDDORPADPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.VDDORPADPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/ICPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.ICPC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/BT4PC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.BT4PC:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR04DPC/verilogams/verilog.vams
+	module IO_CELLS_JIC3V.APR04DPC:verilogams
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/ given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+xmvlog: Memory Usage - Current physical: 20.9M, Current virtual: 60.5M
+xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.1s, 46.7% cpu)
+AMSD Universal Connect Module UCM is enabled.
+		Caching library 'COUNTER_JI3' ....... Done
+		Caching library 'HV_CELLS' ....... Done
+		Caching library 'INV_HV' ....... Done
+		Caching library 'INV_LP' ....... Done
+		Caching library 'IORING' ....... Done
+		Caching library 'IO_CELLS_JIC3V' ....... Done
+		Caching library 'TOP' ....... Done
+		Caching library 'VLG_PRIMITIVES' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: Verilog AMS module.
+	Top level design units:
+		top_tb
+		cds_globals
+	Discipline resolution Pass...
+	Doing auto-insertion of connection elements...
+	Connect Rules applied are:
+		ConnRules_3V_full_fast
+	Building instance overlay tables: .................... Done
+	Using implicit TMP libraries; associated with library TOP
+	Generating native compiled code:
+		VLG_PRIMITIVES.check_vdd:verilogams <0x70e153df>
+			streams:   1, words:   152
+		VLG_PRIMITIVES.check_gnd:verilogams <0x6cac9861>
+			streams:   1, words:   152
+		COUNTER_JI3.counter_stimulus:verilogams <0x0c96279b>
+			streams:   2, words:  1765
+		COUNTER_JI3.counter:functional <0x382ce5c4>
+			streams:   2, words:   613
+		connectLib.L2E_2:module <0x765a2092>
+			streams:  15, words:  8739
+		connectLib.Bidir_2:module <0x5a85679d>
+			streams:  29, words: 20986
+		connectLib.E2L_2:module <0x7e9ff6a9>
+			streams:  24, words: 12794
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done

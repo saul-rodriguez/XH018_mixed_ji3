@@ -1,0 +1,19 @@
+// Library - HV_CELLS, Cell - ioh_pmbsabhv_750, View - schematic
+// LAST TIME SAVED: Feb 25 05:55:57 2015
+// NETLIST TIME: Feb  7 08:46:10 2024
+`timescale 1ns / 1ps 
+
+`worklib HV_CELLS
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="HV_CELLS", dfII_cell="ioh_pmbsabhv_750", dfII_view="schematic", worklib_name="HV_CELLS", view_name="schematic", last_save_time="Feb 25 05:55:57 2015" *)
+
+module ioh_pmbsabhv_750 (D, GSB, Sub);
+
+inout  D, GSB, Sub;
+
+// Buses in the design
+
+wire  [0:49]  net20;
+

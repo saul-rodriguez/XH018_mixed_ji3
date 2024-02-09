@@ -1,0 +1,41 @@
+// Point Netlist Generated on: Feb  5 02:04:27 2024
+// Generated for: spectre
+// Design Netlist Generated on: Feb  5 02:04:23 2024
+// Design library name: INV_HV
+// Design cell name: nedia_dc
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters temperature=27 VDS=1 VGS=18
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/config.scs" section=default
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/param.scs" section=3s
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/bip.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/cap.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/dio.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/mos.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/photo.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/res.scs" section=tm
+
+// Library name: INV_HV
+// Cell name: nedia_dc
+// View name: schematic
+M0 (net2 net1 0 0) nedia w=200.0000u l=1.25u m=(2)*(1) par1=(2)*(1) \
+        extlay=0 xf_subext=0
+V1 (net2 0) vsource dc=VDS type=dc
+V0 (net1 0) vsource dc=VGS type=dc
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
+dcOpInfo info what=oppoint where=rawfile
+dc dc param=VDS start=0 stop=40 step=0.1 oppoint=rawfile maxiters=150 \
+    maxsteps=10000 annotate=status
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save M0:1 
+saveOptions options save=allpub

@@ -1,0 +1,7 @@
+cell: "inv_hv"
+selected net: "5"
+rejected nets: "VSUB" 
+contact layer:  "ptap"
+lower layer: "bulk"
+upper layer:  "pdiff"
+command:  "sconnect pdiff bulk -by ptap"

@@ -1,0 +1,59 @@
+[02/03 12:29:50      0s] 
+[02/03 12:29:50      0s] Cadence Innovus(TM) Implementation System.
+[02/03 12:29:50      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/03 12:29:50      0s] 
+[02/03 12:29:50      0s] Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+[02/03 12:29:50      0s] Options:	
+[02/03 12:29:50      0s] Date:		Sat Feb  3 12:29:50 2024
+[02/03 12:29:50      0s] Host:		phoenix (x86_64 w/Linux 3.10.0-1160.105.1.el7.x86_64) (6cores*6cpus*11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz 16384KB)
+[02/03 12:29:50      0s] OS:		CentOS Linux 7 (Core)
+[02/03 12:29:50      0s] 
+[02/03 12:29:50      0s] License:
+[02/03 12:29:50      0s] 		[12:29:50.088473] Configured Lic search path (21.01-s002): 3000@lic08.ug.kth.se
+
+[02/03 12:29:50      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[02/03 12:29:50      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[02/03 12:30:15      9s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+[02/03 12:30:18     10s] @(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+[02/03 12:30:18     10s] @(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+[02/03 12:30:18     10s] @(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+[02/03 12:30:18     10s] @(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+[02/03 12:30:18     10s] @(#)CDS: CPE v21.18-s053
+[02/03 12:30:18     10s] @(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+[02/03 12:30:18     10s] @(#)CDS: OA 22.60-p087 Thu Feb  9 09:35:26 2023
+[02/03 12:30:18     10s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[02/03 12:30:18     10s] @(#)CDS: RCDB 11.15.0
+[02/03 12:30:18     10s] @(#)CDS: STYLUS 21.12-s019_1 (12/20/2022 05:13 PST)
+[02/03 12:30:18     10s] @(#)CDS: SystemPlanner-21.18-10439 (21.18) (2023-03-01 15:40:03+0800)
+[02/03 12:30:18     10s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_29872_phoenix_saul_bbnEeo.
+
+[02/03 12:30:18     10s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+[02/03 12:30:23     12s] 
+[02/03 12:30:23     12s] **INFO:  MMMC transition support version v31-84 
+[02/03 12:30:23     12s] 
+[02/03 12:30:23     12s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[02/03 12:30:23     12s] <CMD> suppressMessage ENCEXT-2799
+[02/03 12:30:23     12s] <CMD> getVersion
+[02/03 12:30:23     12s] [INFO] Loading PVS 23.10 fill procedures
+[02/03 12:30:24     12s] <CMD> win
+[02/03 12:33:02     22s] <CMD> setOaxMode -compressLevel 0
+[02/03 12:33:02     22s] <CMD> setOaxMode -allowBitConnection true
+[02/03 12:33:02     22s] <CMD> setOaxMode -allowTechUpdate false
+[02/03 12:33:02     22s] <CMD> setOaxMode -updateMode true
+[02/03 12:33:02     22s] <CMD> setDesignMode -process 180
+[02/03 12:33:02     22s] ##  Process: 180           (User Set)               
+[02/03 12:33:02     22s] ##     Node: (not set)                           
+[02/03 12:33:02     22s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[02/03 12:33:02     22s] Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+[02/03 12:33:02     22s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[02/03 12:33:02     22s] 	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+[02/03 12:33:02     22s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+[02/03 12:33:02     22s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+[02/03 12:33:02     22s] <CMD> setViaGenMode -symmetrical_via_only true
+[02/03 12:33:02     22s] <CMD> set_table_style -no_frame_fix_width
+[02/03 12:33:02     22s] <CMD> set_global timing_report_enable_auto_column_width true
+[02/03 12:33:02     22s] <CMD> setMultiCpuUsage -localCpu 4
+[02/03 13:51:32    457s] 

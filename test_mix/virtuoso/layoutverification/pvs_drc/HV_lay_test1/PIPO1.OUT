@@ -1,0 +1,124 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.08s.
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 10/11/2023 09:46 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.34 
+Started at: 06-Feb-2024  04:20:29
+User Name : saul
+Host Name : phoenix
+Directory : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/layoutverification/pvs_drc/HV_lay_test1/HV_lay_test1.gds' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
+INFO (XSTRM-217): Reading the object map file, /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 ALL_TESTS
+strmFile                                /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/layoutverification/pvs_drc/HV_lay_test1/HV_lay_test1.gds
+topCell                                 HV_lay_test1
+view                                    layout
+runDir                                  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/layoutverification/pvs_drc/HV_lay_test1
+logFile                                 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/layoutverification/pvs_drc/HV_lay_test1/PIPO1.LOG
+techLib                                 TECH_XH018
+hierDepth                               32
+maxVertices                             2048
+layerMap                                /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
+objectMap                                /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map
+userSkillFile                           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/layoutverification/pvs_drc/HV_lay_test1/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+convertPin                              geometryAndText
+
+INFO (XSTRM-223): 1. Translating cellView HV_CELLS/std_pad_viabtp_edge/layout as STRUCTURE std_pad_viabtp_edge.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'VIA4:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 2. Translating cellView HV_CELLS/ioh_viatpl/layout as STRUCTURE ioh_viatpl.
+INFO (XSTRM-223): 3. Translating cellView HV_CELLS/std_pad_viabtp/layout as STRUCTURE std_pad_viabtp.
+INFO (XSTRM-223): 4. Translating cellView HV_CELLS/std_pad_viatpl_edge/layout as STRUCTURE std_pad_viatpl_edge.
+INFO (XSTRM-223): 5. Translating cellView HV_CELLS/std_pad_layout_53_62/layout as STRUCTURE std_pad_layout_53_62.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET5:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 6. Translating cellView HV_CELLS/ioh_pad53_62/layout as STRUCTURE ioh_pad53_62.
+INFO (XSTRM-223): 7. Translating cellView HV_CELLS/ioh_via34tp/layout as STRUCTURE ioh_via34tp.
+INFO (XSTRM-223): 8. Translating cellView HV_CELLS/ioh_pad53_metal_01/layout as STRUCTURE ioh_pad53_metal_01.
+INFO (XSTRM-223): 9. Translating cellView HV_CELLS/ioh_via1/layout as STRUCTURE ioh_via1.
+INFO (XSTRM-223): 10. Translating cellView HV_CELLS/ioh_via2/layout as STRUCTURE ioh_via2.
+INFO (XSTRM-223): 11. Translating cellView HV_CELLS/ioh_con/layout as STRUCTURE ioh_con.
+INFO (XSTRM-223): 12. Translating cellView HV_CELLS/ioh_pad53_tap/layout as STRUCTURE ioh_pad53_tap.
+INFO (XSTRM-223): 13. Translating cellView HV_CELLS/ioh_base_pad53_igndcon/layout as STRUCTURE ioh_base_pad53_igndcon.
+INFO (XSTRM-223): 14. Translating cellView HV_CELLS/ioh_dnw3_60/layout as STRUCTURE ioh_dnw3_60.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET1:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 15. Translating cellView HV_CELLS/ioh_dnw3_16x60/layout as STRUCTURE ioh_dnw3_16x60.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET2:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 16. Translating cellView HV_CELLS/ioh_dp3_70/layout as STRUCTURE ioh_dp3_70.
+INFO (XSTRM-223): 17. Translating cellView HV_CELLS/ioh_dp3_16x70/layout as STRUCTURE ioh_dp3_16x70.
+INFO (XSTRM-223): 18. Translating cellView HV_CELLS/prot_ehvssji220/layout as STRUCTURE prot_ehvssji220.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'instance:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 19. Translating cellView HV_CELLS/ioh_base_tap_ehvss220f/layout as STRUCTURE ioh_base_tap_ehvss220f.
+INFO (XSTRM-223): 20. Translating cellView HV_CELLS/ioh_base_metal_ehvss220fs/layout as STRUCTURE ioh_base_metal_ehvss220fs.
+INFO (XSTRM-223): 21. Translating cellView HV_CELLS/ioh_base_ehvssji220fs/layout as STRUCTURE ioh_base_ehvssji220fs.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'changedLayer:tool0' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 22. Translating cellView HV_CELLS/EHVSSJI220FS/layout as STRUCTURE EHVSSJI220FS.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'METTPL:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'METTP:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET5:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET4:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET5:TEXT' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET3:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 23. Translating cellView HV_CELLS/ioh_base61_metal_fs/layout as STRUCTURE ioh_base61_metal_fs.
+INFO (XSTRM-223): 24. Translating cellView HV_CELLS/ioh_base61_tap_f/layout as STRUCTURE ioh_base61_tap_f.
+INFO (XSTRM-223): 25. Translating cellView HV_CELLS/ioh_base61_fs/layout as STRUCTURE ioh_base61_fs.
+INFO (XSTRM-223): 26. Translating cellView HV_CELLS/ioh_pad53_tap_inline/layout as STRUCTURE ioh_pad53_tap_inline.
+INFO (XSTRM-223): 27. Translating cellView HV_CELLS/ioh_basej_pad53_inline/layout as STRUCTURE ioh_basej_pad53_inline.
+INFO (XSTRM-223): 28. Translating cellView HV_CELLS/ioh_base39_metal_fs/layout as STRUCTURE ioh_base39_metal_fs.
+INFO (XSTRM-223): 29. Translating cellView HV_CELLS/ioh_base39_tap_f/layout as STRUCTURE ioh_base39_tap_f.
+INFO (XSTRM-223): 30. Translating cellView HV_CELLS/ioh_base39_fs/layout as STRUCTURE ioh_base39_fs.
+INFO (XSTRM-223): 31. Translating cellView HV_CELLS/ioh_base40_metal_fs/layout as STRUCTURE ioh_base40_metal_fs.
+INFO (XSTRM-223): 32. Translating cellView HV_CELLS/ioh_base40_tap_f/layout as STRUCTURE ioh_base40_tap_f.
+INFO (XSTRM-223): 33. Translating cellView HV_CELLS/ioh_base40_fs/layout as STRUCTURE ioh_base40_fs.
+INFO (XSTRM-223): 34. Translating cellView HV_CELLS/ioh_pmbsabhv_2x40_10/layout as STRUCTURE ioh_pmbsabhv_2x40_10.
+INFO (XSTRM-223): 35. Translating cellView HV_CELLS/ioh_pmbsabhv_2000/layout as STRUCTURE ioh_pmbsabhv_2000.
+INFO (XSTRM-223): 36. Translating cellView HV_CELLS/ioh_pe3sab_2x40_04/layout as STRUCTURE ioh_pe3sab_2x40_04.
+INFO (XSTRM-223): 37. Translating cellView HV_CELLS/ioh_rnp1_20k/layout as STRUCTURE ioh_rnp1_20k.
+INFO (XSTRM-223): 38. Translating cellView HV_CELLS/ioh_pe3isabhv_2800gcr/layout as STRUCTURE ioh_pe3isabhv_2800gcr.
+INFO (XSTRM-223): 39. Translating cellView HV_CELLS/ioh_d5pk/layout as STRUCTURE ioh_d5pk.
+INFO (XSTRM-223): 40. Translating cellView HV_CELLS/ioh_dhpw_100/layout as STRUCTURE ioh_dhpw_100.
+INFO (XSTRM-223): 41. Translating cellView HV_CELLS/ioh_dhpw_2x100/layout as STRUCTURE ioh_dhpw_2x100.
+INFO (XSTRM-223): 42. Translating cellView HV_CELLS/ioh_dhpw_2x100_stack3_lay/layout as STRUCTURE ioh_dhpw_2x100_stack3_lay.
+INFO (XSTRM-223): 43. Translating cellView HV_CELLS/prot_hvdd4dj5pk/layout as STRUCTURE prot_hvdd4dj5pk.
+INFO (XSTRM-223): 44. Translating cellView HV_CELLS/ioh_base64_metal_fs/layout as STRUCTURE ioh_base64_metal_fs.
+INFO (XSTRM-223): 45. Translating cellView HV_CELLS/ioh_base64_tap_f/layout as STRUCTURE ioh_base64_tap_f.
+INFO (XSTRM-223): 46. Translating cellView HV_CELLS/ioh_base64_fs/layout as STRUCTURE ioh_base64_fs.
+INFO (XSTRM-223): 47. Translating cellView HV_CELLS/HVDD4DJ5PKFs/layout as STRUCTURE HVDD4DJ5PKFs.
+INFO (XSTRM-223): 48. Translating cellView ALL_TESTS/HV_lay_test1/layout as STRUCTURE HV_lay_test1.
+
+Summary of Objects Translated:
+	Scalar Instances:                       50
+	Array Instances:                        467
+	Polygons:                               227
+	Paths:                                  42
+	Rectangles:                             2050
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             14
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   85
+	TextDisplay:                            10
+	Cells:                                  48
+
+Elapsed Time: 0.6s   User Time: 0.1s   CPU Time: 0.1s   Peak VM: 4720KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '13' warning(s) found.

@@ -1,0 +1,7 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary inv_hv
+IN 3 IN 57000 60865 m3trm
+VSUB 1 VSUB 45500 45320 m1trm
+GNDHV 4 GNDHV 49895 60860 m2trm
+OUT 2 OUT 105980 72915 m2trm
+VDDHV 5 VDDHV 1890 89110 m1trm

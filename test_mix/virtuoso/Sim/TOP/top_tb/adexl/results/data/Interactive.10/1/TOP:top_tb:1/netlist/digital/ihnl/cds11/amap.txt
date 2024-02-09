@@ -1,0 +1,6 @@
+instMap,*ioh_d2pk,*I1,*I1
+instMaster,*ioh_d2pk,*I1,*HV_CELLS_ioh_pmbsabhv_2000_schematic
+instMap,*ioh_d2pk,*I5,*I5
+instMaster,*ioh_d2pk,*I5,*HV_CELLS_ioh_pe3isabhv_2800gcr_schematic
+netMap,*ioh_d2pk,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_d2pk,*ioh_d2pk,*HV_CELLS,*schematic

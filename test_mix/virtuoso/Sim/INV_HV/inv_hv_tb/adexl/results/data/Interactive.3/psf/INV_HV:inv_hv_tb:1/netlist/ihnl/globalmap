@@ -1,0 +1,11 @@
+CADENCE IHNL11140
+$model
+INV_HV/inv_hv_tb/schematic inv_hv_tb
+INV_HV/inv_hv/schematic inv_hv
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+temperature temperature
+$endparam

@@ -1,0 +1,157 @@
+// Library - HV_CELLS, Cell - ioh_pe3isabhv_1050gcr, View - schematic
+// LAST TIME SAVED: Feb 25 05:55:55 2015
+// NETLIST TIME: Feb  7 08:28:25 2024
+`timescale 1ns / 1ps 
+
+`worklib HV_CELLS
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="HV_CELLS", dfII_cell="ioh_pe3isabhv_1050gcr", dfII_view="schematic", worklib_name="HV_CELLS", view_name="schematic", last_save_time="Feb 25 05:55:55 2015" *)
+
+module ioh_pe3isabhv_1050gcr (D, SB, Sub);
+
+inout  D, SB, Sub;
+
+
+ioh_pe3isab_15_04 MP_1 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_2 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_3 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_4 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_5 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_6 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_7 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_8 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_9 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_10 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_11 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_12 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_13 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_14 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_15 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_16 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_17 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_18 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_19 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_20 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_21 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_22 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_23 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_24 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_25 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_26 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_27 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_28 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_29 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_30 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_31 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_32 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_33 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_34 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_35 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_36 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_37 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_38 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_39 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_40 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_41 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_42 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_43 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_44 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_45 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_46 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_47 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_48 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_49 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_50 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_51 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_52 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_53 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_54 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_55 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_56 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_57 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_58 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_59 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_60 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_61 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_62 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_63 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_64 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_65 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_66 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_67 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_68 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_69 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+ioh_pe3isab_15_04 MP_70 ( .D(D), .B(SB), .G(net20), .S(SB));
+
+endmodule

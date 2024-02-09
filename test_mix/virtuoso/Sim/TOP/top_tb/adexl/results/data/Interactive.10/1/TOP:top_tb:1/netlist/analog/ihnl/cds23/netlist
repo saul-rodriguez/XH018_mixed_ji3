@@ -1,0 +1,5 @@
+    M0 (OUT IN GNDHV VSUB) nedia w=40u l=1.25u m=(1)*(1) par1=(1)*(1) \
+        extlay=0 xf_subext=0
+    R0 (VDDHV OUT VSUB) rpp1k1_3 l=103.425u w=10u m=1 par1=1
+ends inv_hv
+// End of subcircuit definition.

@@ -1,0 +1,36 @@
+##############################################################################################################
+#####  
+#####                                         PVS LVS COMPARISON
+#####  
+#####  Version                       :   23.10-p043
+#####  NVN Run Start                 :   Sat Feb  3 17:36:10 2024
+#####  ERC Summary File              :   counter_lvs.sum
+#####  Extraction Report File        :   counter_lvs_lvs.sum
+#####  Comparison Report File        :   counter_lvs_lvs.sum.cls
+#####  Top Cell                      :   counter_lvs  <vs>  counter_lvs
+#####  
+#####  Run Result                    :   MATCH
+#####  
+#####  Run Summary                   :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####                                :   [INFO]  Unconnected Corresponding Top Cell Pin(s) Exists
+#####  
+#####  Layout Design                 :   COUNTER_JI3 counter_lvs layout
+#####  Schematic File                :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter_lvs/counter_lvs.cdl (cdl)
+#####  Rules File                    :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter_lvs/.config.rul
+#####                                :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter_lvs/.technology.rul
+#####  Pin Swap File                 :   counter_lvs_lvs.sum.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 1s - (1s)
+#####  Extraction Exec Time          :   0h 0m 1s - (1s)
+#####  Extraction Peak Memory Usage  :   58.00MB
+#####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
+#####  NVN Exec Time                 :   0h 0m 0s - (0s)                 
+#####  NVN Peak Memory Usage         :   318.18MB
+#####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
+#####  LVS Total Exec Time           :   0h 0m 1s - (1s)                 
+#####  LVS Total Peak Memory Usage   :   318.18MB
+#####  
+##############################################################################################################
+
+

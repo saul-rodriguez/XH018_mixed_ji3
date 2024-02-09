@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Design Netlist Generated on: Feb  5 02:37:34 2024
+// Design library name: INV_HV
+// Design cell name: inv_hv_tb
+// Design view name: schematic
+simulator lang=spectre
+global 0

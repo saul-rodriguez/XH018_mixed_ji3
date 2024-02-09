@@ -1,0 +1,6 @@
+    D0 (A Guard) dnw3 area=2.45079e-10 perimeter=462.5u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    D1 (A K) dnw3 area=7.94772e-11 perimeter=65.99u dbv=0.0 m=16 par1=(16) \
+        xf_subext=0
+ends ioh_dnw3_16x60
+// End of subcircuit definition.

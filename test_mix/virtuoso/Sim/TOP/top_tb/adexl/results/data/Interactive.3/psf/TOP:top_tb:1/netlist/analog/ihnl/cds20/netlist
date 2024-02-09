@@ -1,0 +1,6 @@
+    I10 ioh_iscrd2_4x100
+    I9 ioh_dhpw_2x100_stack3
+    I11 ioh_c5pk
+    R4 (IGND Trig_0) rpp1s l=16.0u w=100.0000u m=1 par1=1
+ends HVD4SJD1R5PKFs
+// End of subcircuit definition.

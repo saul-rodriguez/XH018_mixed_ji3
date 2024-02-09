@@ -1,0 +1,31 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.08s.
+
+Running simulation in directory: "/home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/inv/".
+
+Loading hnlInit.cxt 
+Running Artist Hierarchical Netlisting ...
+** Info: PDK loadpath is "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/PDK/IC61/v9_0_4"
+Loading XfSktTools.cxt
+Loading XfMenu.cxt
+Loading XfTechXh018.cxt
+Loading XfPcellCore.cxt
+function ansiSpicePrintProperties_subcircuit redefined
+Loading XfSkillExt.cxt
+Initializing library.
+Finished Initializing Library .
+    Generic PcellKit: 'production' loaded.
+    Generic Pcell Skill Tools: 'production' loaded.
+Loading Circuit Prospector Setup (XfCircuitProspSetup.il)
+End netlisting Feb  4 10:15:40 2024
+
+Running simin
+
+Running runSim()...
+
+
+Running runsim with simulator: "auCdl"
+Begin simulation:    Feb  4 10:15:40 2024
+
+auCdl netlisting completed
+End simulation:      Feb  4 10:15:40 2024
+INFO (AUCDL-21): (Analog) CDL netlisting completed successfully.

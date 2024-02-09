@@ -1,0 +1,13 @@
+** Schematic Netlist, pvs precompare
+** 
+
+.subckt LDDN D G S B 
+.ends
+
+
+.subckt inv_hv GNDHV IN OUT VDDHV VSUB 
+XMM0 OUT IN GNDHV VSUB LDDN W=4e-05 L=1.25e-06 m=1 $[LDDN] 
+RRR0 VDDHV OUT RPP1K1_3 W=1e-05 L=0.000103425 m=1 R=9999.84 $SUB=VSUB 
+.ends
+
+

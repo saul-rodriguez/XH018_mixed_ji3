@@ -1,0 +1,40 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : inv_hv_lvs.sum
+ERC Summary File         : inv_hv.sum
+LVS Comparison Report    : inv_hv_lvs.sum.cls
+LVS Softchk Report       : inv_hv.softchk
+Layout Name              : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/inv_hv/inv_hv.gds ("inv_hv")
+User Name                : saul
+Creation Time            : Mon Feb  5 07:19:04 2024
+Current directory        : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/inv_hv
+PVS Version              : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_SOFTCHK nwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK dnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hvnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK ndftrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hnw -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK catdiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK anodiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pwitrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pdf -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK bulk -TYPE CONTACT   Total Result        0 (       0)
+
+Clean cell list (added by extraction report parser )
+ for cell "LDDN"
+ for cell "inv_hv"
+ for cell "nedia_CDNS_707135540070"

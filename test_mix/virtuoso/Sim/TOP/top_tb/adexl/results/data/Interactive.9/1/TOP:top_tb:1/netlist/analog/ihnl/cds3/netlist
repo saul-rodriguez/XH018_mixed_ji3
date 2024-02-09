@@ -1,0 +1,5 @@
+    D0 (Sub K) ddnw area=3.37852e-09 perimeter=284.4u dbv=0.0 m=1 par1=(1) \
+        xf_subext=0
+    D1 (A K) dhpw area=3.87893e-10 perimeter=207.812u dbv=0.0 m=2 par1=(2)
+ends ioh_dhpw_2x100
+// End of subcircuit definition.

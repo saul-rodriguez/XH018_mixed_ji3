@@ -1,0 +1,35 @@
+##############################################################################################################
+#####  
+#####                                         PVS LVS COMPARISON
+#####  
+#####  Version                       :   23.10-p043
+#####  NVN Run Start                 :   Sun Feb  4 10:15:45 2024
+#####  ERC Summary File              :   inv.sum
+#####  Extraction Report File        :   inv_lvs.sum
+#####  Comparison Report File        :   inv_lvs.sum.cls
+#####  Top Cell                      :   inv  <vs>  inv
+#####  
+#####  Run Result                    :   MATCH
+#####  
+#####  Run Summary                   :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####  
+#####  Layout Design                 :   INV_LP inv layout
+#####  Schematic File                :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/inv/inv.cdl (cdl)
+#####  Rules File                    :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/inv/.config.rul
+#####                                :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/inv/.technology.rul
+#####  Pin Swap File                 :   inv_lvs.sum.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 0s - (0s)
+#####  Extraction Exec Time          :   0h 0m 1s - (1s)
+#####  Extraction Peak Memory Usage  :   54.00MB
+#####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
+#####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
+#####  NVN Peak Memory Usage         :   255.43MB
+#####  LVS Total CPU Time            :   0h 0m 0s - (0s)                 
+#####  LVS Total Exec Time           :   0h 0m 2s - (2s)                 
+#####  LVS Total Peak Memory Usage   :   255.43MB
+#####  
+##############################################################################################################
+
+

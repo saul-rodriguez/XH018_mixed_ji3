@@ -1,0 +1,55 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++define+CDS_SELECT_CRS
++define+CONNRULES_3V_FULL_FAST
+-AMSINPUT
+-UNBUFFERED
+-ERRORMAX
+50
+-STATUS
+-NOWARN
+DLNOHV
+-NOWARN
+DLCLAP
+-ADE
+-AMSINPUT
+-ANALOGCONTROL
+./spiceModels.scs
+-AMSINPUT
+-ANALOGCONTROL
+./amsControlSpectre.scs
+-INPUT
+./probe.tcl
+-RUN
+-EXIT
++amsrawdir
+../psf
+-SPECTRE_ARGS
+"-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.3/sharedData/CDS/ahdl/input.ahdlSimDB"
+-SPECTRE_ARGS
++logstatus
+-SIMCOMPATIBLE_AMS
+spectre
+-SPECTRE_ARGS
+++aps
+-ANALOGCONTROL
+.amsbind.scs
+-MESSAGES
++EMGRLOG
+../psf/xrun.log
+-XLSTIME
+1707312511
+-XLKEEP
+-XLMODE
+./xcelium.d/TOP.top_tb_config.lnx8664.23.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/TOP.top_tb_config.lnx8664.23.09.d/cds.lib
+-HDLVAR
+./xcelium.d/TOP.top_tb_config.lnx8664.23.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	23.09-s002"

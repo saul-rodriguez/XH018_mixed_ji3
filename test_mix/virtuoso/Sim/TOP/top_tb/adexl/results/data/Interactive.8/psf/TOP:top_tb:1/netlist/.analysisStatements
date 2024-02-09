@@ -1,0 +1,16 @@
+dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
+dcOpInfo info what=oppoint where=rawfile
+
+tran tran stop=1u errpreset=liberal write="spectre.ic" \
+writefinal="spectre.fc" annotate=status maxiters=5 
+
+finalTimeOP info what=oppoint where=rawfile
+
+modelParameter info what=models where=rawfile 
+element info what=inst where=rawfile 
+outputParameter info what=output where=rawfile 
+
+wave_out options rawfmt=sst2
+
+save top_tb.I0.I2:VDDHV top_tb.I0.I0.I24:PAD top_tb.I0.I0.I33:PAD \
+top_tb.I0.I0.I29:VDD 

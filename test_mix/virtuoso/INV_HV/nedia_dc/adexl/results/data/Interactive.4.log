@@ -1,0 +1,15 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon Feb  5 02:02:03 2024 
+Best design point: 4
+Design specs: 
+	INV_HV:nedia_dc:1	corner	Nominal - 
+Design parameters: 
+	VDS		1
+	VGS		3
+
+Interactive.4
+Number of points completed: 19
+Number of simulation errors: 0
+Interactive.4 completed. 
+Current time: Mon Feb  5 02:02:09 2024 

@@ -1,0 +1,10 @@
+cellMap,*ioh_pe3isab_15_04,*ioh_pe3isab_15_04,*HV_CELLS,*schematic
+netMap,*ioh_pe3isab_15_04,*gnd!,*0
+instMap,*ioh_pe3isab_15_04,*MPX,*MPX
+instMaster,*ioh_pe3isab_15_04,*MPX,*PRIMLIB_pe3i_spectre,*pe3i
+instMap,*ioh_pe3isab_15_04,*R0,*R0
+instMaster,*ioh_pe3isab_15_04,*R0,*PRIMLIB_rdp3_spectre,*rdp3
+portMap,*ioh_pe3isab_15_04,*B,*B
+portMap,*ioh_pe3isab_15_04,*D,*D
+portMap,*ioh_pe3isab_15_04,*G,*G
+portMap,*ioh_pe3isab_15_04,*S,*S

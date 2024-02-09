@@ -1,0 +1,50 @@
+// Point Netlist Generated on: Feb  5 02:36:56 2024
+// Generated for: spectre
+// Design Netlist Generated on: Feb  5 02:36:56 2024
+// Design library name: INV_HV
+// Design cell name: inv_hv_tb
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters temperature=27
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/config.scs" section=default
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/param.scs" section=3s
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/bip.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/cap.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/dio.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/mos.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/photo.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/res.scs" section=tm
+
+// Library name: INV_HV
+// Cell name: inv_hv
+// View name: schematic
+subckt inv_hv GNDHV IN OUT VDDHV VSUB
+    M0 (OUT IN GNDHV VSUB) nedia w=10u l=1.25u m=(1)*(1) par1=(1)*(1) \
+        extlay=0 xf_subext=0
+    R0 (VDDHV OUT VSUB) rpp1k1_3 l=103.425u w=10u m=1 par1=1
+ends inv_hv
+// End of subcircuit definition.
+
+// Library name: INV_HV
+// Cell name: inv_hv_tb
+// View name: schematic
+I0 (0 VIN VOUT net1 0) inv_hv
+V0 (net1 0) vsource dc=40 type=dc
+V1 (VIN 0) vsource type=pulse val0=0 val1=15 period=200u delay=1u rise=1n \
+        fall=1n width=100u
+C0 (VOUT 0) capacitor c=100.0f
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=1m errpreset=liberal write="spectre.ic" \
+    writefinal="spectre.fc" annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

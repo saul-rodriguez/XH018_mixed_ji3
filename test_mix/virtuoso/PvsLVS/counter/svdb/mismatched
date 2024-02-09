@@ -1,0 +1,43 @@
+##############################################################################################################
+#####  
+#####                                         PVS LVS COMPARISON
+#####  
+#####  Version                       :   23.10-p043
+#####  NVN Run Start                 :   Sat Feb  3 16:49:07 2024
+#####  ERC Summary File              :   counter.sum
+#####  Extraction Report File        :   counter_lvs.sum
+#####  Comparison Report File        :   counter_lvs.sum.cls
+#####  Top Cell                      :   counter  <vs>  counter
+#####  
+#####                                :      @     @
+#####                                :       @   @ 
+#####                                :        @ @  
+#####  Run Result                    :     MISMATCH
+#####                                :        @ @  
+#####                                :       @   @ 
+#####                                :      @     @
+#####  
+#####  Run Summary                   :   [ERROR] Connectivity Mismatches
+#####                                :   [ERROR] Pin Mismatches
+#####                                :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####  
+#####  Layout Design                 :   COUNTER_JI3 counter layout
+#####  Schematic File                :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/counter.cdl (cdl)
+#####  Rules File                    :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/.config.rul
+#####                                :   /home/saul/projects/mytests/test_mix/virtuoso/PvsLVS/counter/.technology.rul
+#####  Pin Swap File                 :   counter_lvs.sum.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 1s - (1s)
+#####  Extraction Exec Time          :   0h 0m 1s - (1s)
+#####  Extraction Peak Memory Usage  :   58.00MB
+#####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
+#####  NVN Exec Time                 :   0h 0m 0s - (0s)                 
+#####  NVN Peak Memory Usage         :   317.38MB
+#####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
+#####  LVS Total Exec Time           :   0h 0m 1s - (1s)                 
+#####  LVS Total Peak Memory Usage   :   317.38MB
+#####  
+##############################################################################################################
+
+

@@ -1,0 +1,33 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : inv_hv                                       *
+* Netlisted  : Mon Feb  5 07:19:05 2024                     *
+* PVS Version: 23.10-p043 Mon Oct 2 18:09:08 PDT 2023      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 LDDN(nedia) nedia2_d dnwtrm(D) p1trm(G) ndiff(S) bulk(B)
+*.DEVTMPLT 1 R(rpp1k1_3) rpp1k1_s p1trm(POS) p1trm(NEG) bulk(SUB)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: LDDN                                            *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt LDDN D G S B
+.ends LDDN
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nedia_CDNS_707135540070                         *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nedia_CDNS_707135540070 1 2 3 4
+** N=4 EP=4 FDC=1
+X0 2 3 4 1 LDDN w=4e-05 l=1.25e-06 adio=9.76316e-10 pdio=0.00012535 extlay=1 $[nedia] $X=-680 $Y=-4850 $dt=0
+.ends nedia_CDNS_707135540070
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: inv_hv                                          *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt inv_hv GNDHV IN OUT VDDHV VSUB
+** N=5 EP=5 FDC=2
+X0 VSUB OUT IN GNDHV nedia_CDNS_707135540070 $T=84205 60870 0 90 $X=44815 $Y=44650
+R0 VDDHV OUT L=0.000103425 W=1e-05 $[rpp1k1_3] $SUB=VSUB $X=2460 $Y=84115 $dt=1
+.ends inv_hv

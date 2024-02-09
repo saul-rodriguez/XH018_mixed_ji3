@@ -1,0 +1,12 @@
+instMap,*ioh_d5pk,*I3,*I3
+instMaster,*ioh_d5pk,*I3,*HV_CELLS_ioh_pmbsabhv_2000_schematic
+instMap,*ioh_d5pk,*I4,*I4
+instMaster,*ioh_d5pk,*I4,*HV_CELLS_ioh_pmbsabhv_2000_schematic
+instMap,*ioh_d5pk,*I2,*I2
+instMaster,*ioh_d5pk,*I2,*HV_CELLS_ioh_pmbsabhv_2000_schematic
+instMap,*ioh_d5pk,*I1,*I1
+instMaster,*ioh_d5pk,*I1,*HV_CELLS_ioh_pmbsabhv_2000_schematic
+instMap,*ioh_d5pk,*I5,*I5
+instMaster,*ioh_d5pk,*I5,*HV_CELLS_ioh_pe3isabhv_2800gcr_schematic
+netMap,*ioh_d5pk,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_d5pk,*ioh_d5pk,*HV_CELLS,*schematic

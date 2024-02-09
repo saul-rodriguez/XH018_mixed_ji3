@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "inv_hv_tb"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/INV_HV/inv_hv_tb/adexl/results/data/Interactive.3/1/INV_HV:inv_hv_tb:1/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "INV_HV/inv_hv/schematic" "inv_hv" )
+( "INV_HV/inv_hv_tb/schematic" "inv_hv_tb" )
+ )
+( "inv_hv" "ihnl/cds0/map" )
+( "inv_hv_tb" "ihnl/cds1/map" )
+ )

@@ -1,0 +1,99 @@
+*Info*    Exporting services from client ... 
+
+*Info*    Client has finished starting ... 
+
+
+
+*Info*    Configuring the session ...
+
+	Library      = INV_HV
+	Cell         = inv_hv_tb
+	View         = schematic
+	Simulator    = spectre
+	State Path   = $AXL_SETUPDB_DIR/test_states
+	State Name   = INV_HV:inv_hv_tb:1_none_Interactive.4
+	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/INV_HV/inv_hv_tb/adexl/results/data/Interactive.4.rdb
+	Results Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/INV_HV/inv_hv_tb/adexl/results/data/Interactive.4/1/INV_HV:inv_hv_tb:1
+	Results Loc  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/INV_HV/inv_hv_tb/adexl/results/data
+	Project Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim
+	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/INV_HV/inv_hv_tb/adexl
+	File Encoding = 0
+
+
+WARNING (ADE-7017): The Spectre run mode needs to be 'batch' when EM/IR analysis is enabled. Automatically setting the run mode to 'batch'.
+
+*Info*    The auto suspension is disabled.
+
+Loading monte.cxt 
+
+
+
+
+
+*Info*    Run start for Point ID (0 1) on testbench [
+          INV_HV:inv_hv_tb:1 ].
+
+Resetting statistical vars
+
+*Info*    Setting parameter values ...
+
+Setting var temperature = "27"
+Setting temp(T) = 27
+
+*Info*    Netlist Directory =
+          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/INV_HV/inv_hv_tb/adexl/results/data/Interactive.4/1/INV_HV:inv_hv_tb:1/netlist
+
+
+*Info*    Data Directory    =
+          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/INV_HV/inv_hv_tb/adexl/results/data/Interactive.4/1/INV_HV:inv_hv_tb:1
+
+
+*Info*    Creating Netlist for Point ID (0 1)
+
+generate netlist...
+Loading hnlInit.cxt 
+Loading seCore.cxt 
+function ansCdlCompPrim redefined
+function ansCdlCompPrim redefined
+Begin Incremental Netlisting Feb  7 07:35:11 2024
+Loading json.cxt 
+End netlisting Feb  7 07:35:11 2024
+
+Netlisting Statistics:
+	Number of components:    4
+
+	Elapsed time:          0.0s
+Errors: 0	Warnings: 0
+      ...successful.
+compose simulator input file...
+      ...successful.
+
+*Info*    Running simulation on testbench [ INV_HV:inv_hv_tb:1 ] for
+          Point ID (0 1).
+
+Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/INV_HV/inv_hv_tb/adexl/results/data/Interactive.4/1/INV_HV:inv_hv_tb:1/psf.
+compose simulator input file...
+      ...successful.
+start simulator if needed...
+      ...successful.
+simulate...
+To view the simulator output, right-click on the test name, result 
+name, or any value in the "Results" tab of the Outputs section and 
+choose "Output Log" menu option.
+Loading paraplot.cxt 
+INFO (ADE-3071): Simulation completed successfully.
+reading simulation data...
+      ...successful.
+*Info*    Client has finished evaluating ... 
+
+
+*Info*    Run complete for Point ID (0 1) on testbench [
+          INV_HV:inv_hv_tb:1 ].
+
+
+
+
+
+Simulation design variables differ from those on the cellView,
+they have been saved in the file "/tmp/saved-design-variables".
+To save future changes, copy variables to cellView before exiting.

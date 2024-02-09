@@ -1,0 +1,15 @@
+// Library - HV_CELLS, Cell - ioh_iscrd2_4x100, View - schematic
+// LAST TIME SAVED: Feb 25 05:55:54 2015
+// NETLIST TIME: Feb  7 08:23:00 2024
+`timescale 1ns / 1ps 
+
+`worklib HV_CELLS
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="HV_CELLS", dfII_cell="ioh_iscrd2_4x100", dfII_view="schematic", worklib_name="HV_CELLS", view_name="schematic", last_save_time="Feb 25 05:55:54 2015" *)
+
+module ioh_iscrd2_4x100 (A, Gn, Gp, K, Sub);
+
+inout  A, Gn, Gp, K, Sub;
+

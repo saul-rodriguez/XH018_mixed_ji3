@@ -1,0 +1,32 @@
+# File Created by saul at Mon Feb  5 01:40:59 2024
+# assisted by CdsLibEditor
+# ------------------------------------------------------------------------------
+# XKIT library definition files
+#   xh018.lib:
+#     - contains X-FAB XH018 Cadence library definitions 
+# 	 and must not be changed, exept with tkit -m|--modules
+#     - tkit -m|--modules overwrites this file, any changes will be lost.
+#   cds.lib:
+#     - includes xh018.lib
+#     - can contain customer specific library definitions
+#     xkit -m|--modules does NOT change an existing cds.lib.
+# ------------------------------------------------------------------------------
+
+
+# ------------------------------------------------------------------------------
+# XH018 Cadence library definitions
+
+# X-FAB library definitions
+INCLUDE ./xh018.lib
+
+# Library Manager Combine/Display Definitions
+INCLUDE ./xh018_combine.lib
+
+# ------------------------------------------------------------------------------
+# Add user specific libraries below this line 
+DEFINE COUNTER_JI3 ./COUNTER_JI3
+DEFINE INV_LP ./INV_LP
+DEFINE INV_HV /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/INV_HV
+DEFINE IORING /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/IORING
+DEFINE ALL_TESTS /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/ALL_TESTS
+DEFINE TOP /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP

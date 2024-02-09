@@ -1,0 +1,16 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INCDIR
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+-VTIMESCALE
+1ns/1ns
+-MODELINCDIR
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+-DEFINE
+CDS_SELECT_CRS
+-DEFINE
+CONNRULES_3V_FULL_FAST
+-SNAPSHOT
+TOP.top_tb:config

@@ -1,0 +1,17 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  repList "verilogams veriloga behavioral functional module schematic spectre symbol"
+  stopList "symbol spectre"
+  hierDelim "."
+  hierPrefix "top_tb"
+  globalHierPrefix "cds_globals."
+  prefixHierarchyWithCV "YES"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+  slashCheck   "t"
+ )
+ )

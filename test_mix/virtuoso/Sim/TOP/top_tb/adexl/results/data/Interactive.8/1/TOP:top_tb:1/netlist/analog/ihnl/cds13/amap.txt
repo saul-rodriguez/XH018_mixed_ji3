@@ -1,0 +1,9 @@
+cellMap,*EHVSSJI220FS,*EHVSSJI220FS,*HV_CELLS,*schematic
+netMap,*EHVSSJI220FS,*gnd!,*0
+instMap,*EHVSSJI220FS,*I0,*I0
+instMaster,*EHVSSJI220FS,*I0,*HV_CELLS_ioh_dnw3_16x60_schematic,*ioh_dnw3_16x60
+instMap,*EHVSSJI220FS,*I1,*I1
+instMaster,*EHVSSJI220FS,*I1,*HV_CELLS_ioh_dp3_16x70_schematic,*ioh_dp3_16x70
+portMap,*EHVSSJI220FS,*GNDO,*GNDO
+portMap,*EHVSSJI220FS,*IGND,*IGND
+portMap,*EHVSSJI220FS,*VDD,*VDD

@@ -1,0 +1,28 @@
+HEADER
+"PSFversion" "1.00"
+"Run Generator" "drlRun rev. 1.0"
+"Run Time Stamp" "Feb  5 02:02:06 2024"
+"simulator" "spectre"
+"date" "Feb  5 02:02:06 2024"
+ "externalSweepVariableCount" 0
+"#maeTestName" "INV_HV:nedia_dc:1"
+"#maeHistoryName" "Interactive.4"
+"#maeCorner" "nom"
+ "#maeDesignPoint" 10
+"netlistDir" "../netlist"
+TYPE
+"runObject" STRUCT(
+"logName" ARRAY( * ) STRING *
+"parent" STRING *
+"sweepVariable" ARRAY( * ) STRING *
+) PROP( "key" "runObject" )
+VALUE
+"Run1" "runObject" (
+(
+"logFile"
+"artistLogFile"
+)
+""
+()
+)
+END

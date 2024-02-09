@@ -1,0 +1,9 @@
+** Layout Netlist, pvs precompare
+** 
+
+.subckt inv IN OUT VD VS 
+MX0/M0 OUT IN VS VS NE3 L=3.5e-07 W=2e-06 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 PS=4.96e-06 m=1 
+MX1/M0 OUT IN VD VD PE3 L=3e-07 W=2e-06 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 PS=4.96e-06 m=1 
+.ends
+
+

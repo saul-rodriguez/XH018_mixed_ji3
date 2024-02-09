@@ -1,0 +1,50 @@
+
+Spectre (R) Circuit Simulator
+Version 23.1.0.305.isr3 64bit -- 13 Nov 2023
+Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: saul   Host: phoenix   HostID: A0F02   PID: 16210
+Memory  available: 12.8062 GB  physical: 16.6560 GB
+Linux   : CentOS Linux release 7 (Core)
+CPU Type: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+All processors running at 3600.0 MHz
+        Socket: Processors
+        0:       0,  1,  2,  3,  4,  5
+        
+System load averages (1min, 5min, 15min) : 0.3 %, 2.3 %, 5.3 %
+
+
+Simulating `/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6/1/TOP:top_tb:1/netlist/.mapi/xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt' on phoenix at 8:40:28 AM, Wed Feb 7, 2024 (process id: 16210).
+Current working directory: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6/1/TOP:top_tb:1/netlist
+Environment variable:
+    SPECTRE_DEFAULTS=
+Command line:
+    /pkg/cadence/installs/SPECTRE231/tools.lnx86/bin/spectre -64  \
+        /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6/1/TOP:top_tb:1/netlist/.mapi/xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt  \
+        +dcopt=0 -va,amsspice_pre =log  \
+        /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6/1/TOP:top_tb:1/netlist/.mapi/xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt.log  \
+        +mts -token  \
+        0001AF26C83A239465DFBB2CC00A229E73C4B63DFD3B60CB2080E838B83335D47FDDF221EC3222943FC0B866DF1108B3639FFD0BA568289E7DD9F17BFD06249E239F9E28B13E7F8D79C8B33BEB613FD47FC3915DEE7A00D444FFAC00B6327F9A64D2FF23EC2A35883FC2F32AF924318F3FD49536FE72229A64D5A465B86766D4759EAC48A87C2494408AE66EB20D7F952A81B720A7667FD563C4F72CE338339E3FC8F334AE147FBA3ED48D7FD33023A471DDA401F722399575EFE67EB161238871DD9428EF30229E4FC0E37EFA3B699F3087F479B80B60FB7590A83DEEB8537F10B0DD519E5D50FB10B0A931E55428FB7ED9C4528E5D339A7CDFB374B06461CB648AA83DC30C50FB10B0CDFE6576D8B1757300007C62
+
+Licensing Information:
+[08:40:28.512433] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
+
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libphilips_I_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6/1/TOP:top_tb:1/netlist/.mapi/xcelium.d/AMSD/ams_spice_in/.amsspice_pre.ckt
+Reading link:  /pkg/cadence
+Reading file:  /home/saul/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/configs/spectre.cfg
+Time for NDB Parsing: CPU = 53.436 ms, elapsed = 93.9031 ms.
+Time accumulated: CPU = 107.908 ms, elapsed = 93.9209 ms.
+Peak resident memory used = 103 Mbytes.
+
+Licensing Information:
+Lic Summary:
+[08:40:28.188218] Cdslmd servers:3000@lic08.ug.kth.se
+[08:40:28.188234] Feature usage summary:
+

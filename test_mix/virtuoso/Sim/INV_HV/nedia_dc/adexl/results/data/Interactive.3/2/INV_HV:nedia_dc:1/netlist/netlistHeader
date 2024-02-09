@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Design Netlist Generated on: Feb  5 01:58:00 2024
+// Design library name: INV_HV
+// Design cell name: nedia_dc
+// Design view name: schematic
+simulator lang=spectre
+global 0

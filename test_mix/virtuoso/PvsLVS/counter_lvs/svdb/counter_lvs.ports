@@ -1,0 +1,5 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary counter_lvs
+gndd 3 gndd 15575 62750 m1trm
+vsub 1 vsub 3075 3090 m1trm
+vddd 2 vddd 7010 68660 m1trm

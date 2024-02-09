@@ -1,0 +1,13 @@
+** Layout Netlist, pvs precompare
+** 
+
+.subckt LDDN D G S B 
+.ends
+
+
+.subckt inv_hv GNDHV IN OUT VDDHV VSUB 
+X0/X0 OUT IN GNDHV VSUB LDDN w=4e-05 l=1.25e-06 m=1 $[LDDN] 
+RR0 VDDHV OUT RPP1K1_3 L=0.000103425 W=1e-05 m=1 $SUB=VSUB 
+.ends
+
+

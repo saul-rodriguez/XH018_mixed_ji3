@@ -1,0 +1,12 @@
+
+ioh_pe3isabhv_1050gcr I5 ( .Sub(Sub), .SB(net30), .D(A_l));
+
+ioh_pmbsabhv_750 I3 ( .Sub(Sub), .D(net23), .GSB(net26));
+
+ioh_pmbsabhv_750 I4 ( .Sub(Sub), .D(net30), .GSB(net23));
+
+ioh_pmbsabhv_750 I2 ( .Sub(Sub), .D(net26), .GSB(net20));
+
+ioh_pmbsabhv_750 I1 ( .Sub(Sub), .D(net20), .GSB(K_h));
+
+endmodule

@@ -1,0 +1,7 @@
+cell: "counter"
+selected net: "1"
+rejected nets: "63" 
+contact layer:  "dntap"
+lower layer: "dnwtrm"
+upper layer:  "ndiff"
+command:  "sconnect ndiff dnwtrm -by dntap"

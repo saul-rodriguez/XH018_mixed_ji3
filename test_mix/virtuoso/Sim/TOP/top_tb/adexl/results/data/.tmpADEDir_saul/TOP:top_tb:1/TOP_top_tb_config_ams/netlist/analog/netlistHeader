@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Design Netlist Generated on: Feb  7 11:24:19 2024
+// Design library name: TOP
+// Design cell name: top_tb
+// Design view name: config
+simulator lang=spectre binding=vlog  
+global 0
