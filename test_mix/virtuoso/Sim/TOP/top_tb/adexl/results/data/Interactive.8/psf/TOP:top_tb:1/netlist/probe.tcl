@@ -20,11 +20,6 @@ probe -create -emptyok -database ams_database {top_tb.out_h}
 probe -create -emptyok -database ams_database {top_tb.out2}
 probe -create -emptyok -database ams_database {top_tb.out1}
 probe -create -emptyok -database ams_database {top_tb.out0}
-probe -create -emptyok -database ams_database {top_tb.I0.out[2]}
 probe -create -emptyok -database ams_database {top_tb.VDDHV}
-probe -create -emptyok -database ams_database {top_tb.net7}
-probe -create -emptyok -database ams_database -flow {top_tb.I0.I2.VDDHV}
-probe -create -emptyok -database ams_database -flow {top_tb.I0.I0.I24.PAD}
-probe -create -emptyok -database ams_database -flow {top_tb.I0.I0.I33.PAD}
-probe -create -emptyok -database ams_database -flow {top_tb.I0.I0.I29.VDD}
+probe -create -emptyok -database ams_database {top_tb.in_l}
 

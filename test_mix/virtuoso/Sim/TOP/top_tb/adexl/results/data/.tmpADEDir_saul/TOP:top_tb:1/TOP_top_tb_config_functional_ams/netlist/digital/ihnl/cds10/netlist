@@ -1,0 +1,21 @@
+// Library - HV_CELLS, Cell - HVDD4DJ5PKFs, View - schematic
+// LAST TIME SAVED: Feb 25 05:55:38 2015
+// NETLIST TIME: Feb  9 05:27:07 2024
+`timescale 1ns / 1ps 
+
+`worklib HV_CELLS
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="HV_CELLS", dfII_cell="HVDD4DJ5PKFs", dfII_view="schematic", worklib_name="HV_CELLS", view_name="schematic", last_save_time="Feb 25 05:55:38 2015" *)
+
+module HVDD4DJ5PKFs (GNDO, IGND, PAD);
+
+inout  GNDO, IGND, PAD;
+
+
+ioh_dhpw_2x100_stack3 I9 ( .A_l(IGND), .Sub(GNDO), .K_h(PAD));
+
+ioh_d5pk I11 ( .Sub(GNDO), .K_h(PAD), .A_l(IGND));
+
+endmodule

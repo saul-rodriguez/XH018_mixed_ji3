@@ -1,0 +1,28 @@
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R11 (ng GNDOI VDDORI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    I157 jio_andio_pc
+ends VDDORPADPC
+// End of subcircuit definition.

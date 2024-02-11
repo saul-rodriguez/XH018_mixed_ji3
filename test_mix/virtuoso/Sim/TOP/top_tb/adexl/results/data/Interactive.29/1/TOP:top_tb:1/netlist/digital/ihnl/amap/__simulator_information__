@@ -1,0 +1,10 @@
+HEADER
+"PSFversion" "1.00"
+"__artInstanceTerminalDelimiter__" "."
+"__artHierarchyDelimiter__" "."
+"__netlister__" "AMS-UNL"
+"__lib__" "TOP"
+"__cell__" "top_tb"
+"__view__" "config"
+"__topcell__" "top_tb"
+"__outputformat__" "sst2"

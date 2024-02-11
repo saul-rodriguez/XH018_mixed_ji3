@@ -1,0 +1,23 @@
+// Library - D_CELLS_JI3V, Cell - DECAP15JI3V, View - cmos_sch
+// LAST TIME SAVED: Mar 20 08:58:51 2023
+// NETLIST TIME: Feb  9 05:33:08 2024
+`timescale 1ns / 1ps 
+
+`worklib D_CELLS_JI3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="D_CELLS_JI3V", dfII_cell="DECAP15JI3V", dfII_view="cmos_sch", worklib_name="D_CELLS_JI3V", view_name="cmos_sch", last_save_time="Mar 20 08:58:51 2023" *)
+
+module DECAP15JI3V ();
+
+wire (*
+integer inh_conn_prop_name = "power_vdd3i";
+integer inh_conn_def_value = "cds_globals.\\vdd3i! ";*)
+\vdd3i! ;
+
+wire (*
+integer inh_conn_prop_name = "ground_gnd3i";
+integer inh_conn_def_value = "cds_globals.\\gnd3i! ";*)
+\gnd3i! ;
+

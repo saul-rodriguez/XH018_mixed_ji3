@@ -1,0 +1,8 @@
+instMap,*HVDD4DJ5PKFs,*I9,*I9
+instMaster,*HVDD4DJ5PKFs,*I9,*HV_CELLS_ioh_dhpw_2x100_stack3_schematic
+instMap,*HVDD4DJ5PKFs,*I11,*I11
+instMaster,*HVDD4DJ5PKFs,*I11,*HV_CELLS_ioh_d5pk_schematic
+netMap,*HVDD4DJ5PKFs,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*HVDD4DJ5PKFs,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*HVDD4DJ5PKFs,*gnd!,*cds_globals.\gnd! 
+cellMap,*HVDD4DJ5PKFs,*HVDD4DJ5PKFs,*HV_CELLS,*schematic

@@ -1,0 +1,35 @@
+##############################################################################################################
+#####  
+#####                                         PVS LVS COMPARISON
+#####  
+#####  Version                       :   23.10-p043
+#####  NVN Run Start                 :   Sat Feb 10 19:21:01 2024
+#####  ERC Summary File              :   ioring3.sum
+#####  Extraction Report File        :   ioring3_lvs.sum
+#####  Comparison Report File        :   ioring3_lvs.sum.cls
+#####  Top Cell                      :   ioring3  <vs>  ioring3
+#####  
+#####  Run Result                    :   MATCH
+#####  
+#####  Run Summary                   :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####  
+#####  Layout Design                 :   IORING ioring3 layout
+#####  Schematic File                :   /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/ioring3.cdl (cdl)
+#####  Rules File                    :   /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/.config.rul
+#####                                :   /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/.technology.rul
+#####  Pin Swap File                 :   ioring3_lvs.sum.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 2s - (2s)
+#####  Extraction Exec Time          :   0h 0m 2s - (2s)
+#####  Extraction Peak Memory Usage  :   64.00MB
+#####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
+#####  NVN Exec Time                 :   0h 0m 0s - (0s)                 
+#####  NVN Peak Memory Usage         :   269.76MB
+#####  LVS Total CPU Time            :   0h 0m 2s - (2s)                 
+#####  LVS Total Exec Time           :   0h 0m 2s - (2s)                 
+#####  LVS Total Peak Memory Usage   :   269.76MB
+#####  
+##############################################################################################################
+
+

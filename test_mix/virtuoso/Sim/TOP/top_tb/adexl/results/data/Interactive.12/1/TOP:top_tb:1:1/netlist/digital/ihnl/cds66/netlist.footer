@@ -1,0 +1,5 @@
+
+a2no2ji3v #( .GT_PUW(1.41u), .GT_PDL(350.00n), .GT_PUL(300.00n), .GT_PDW(890.00n) 
+     ) a2no2_1 ( .out(Q), .b(B), .a(A), .c(C));
+
+endmodule

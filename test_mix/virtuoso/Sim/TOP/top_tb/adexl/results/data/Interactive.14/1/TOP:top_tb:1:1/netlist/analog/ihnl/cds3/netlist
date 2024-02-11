@@ -1,0 +1,6 @@
+    M0 (net6 G S B) pe3i w=30u l=350.0n as=1.44e-11 ad=1.44e-11 \
+        ps=6.096e-05 pd=6.096e-05 nrs=0.009 nrd=0.009 m=(1)*(1) \
+        par1=(1)*(1)
+    R1 (net6 D B) rdp3 l=2.15u w=30u m=1 par1=1
+ends jio_pe3i_pc
+// End of subcircuit definition.

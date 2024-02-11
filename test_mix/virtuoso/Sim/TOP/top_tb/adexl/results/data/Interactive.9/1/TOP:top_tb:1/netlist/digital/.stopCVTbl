@@ -12,7 +12,6 @@
 ("PRIMLIB" "rdp3" "spectre" "spectre") t
 ("PRIMLIB" "rpp1s" "spectre" "spectre") t
 ("PRIMLIB" "dhpw" "spectre" "spectre") t
-("PRIMLIB" "dnw3" "spectre" "spectre") t
 ("PRIMLIB" "ddnw" "spectre" "spectre") t
 ("PRIMLIB" "pe3i" "spectre" "spectre") t
 ("PRIMLIB" "rdp_io" "spectre" "spectre") t

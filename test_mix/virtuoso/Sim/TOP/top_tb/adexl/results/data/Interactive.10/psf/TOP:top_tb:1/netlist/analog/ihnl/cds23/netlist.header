@@ -1,6 +1,6 @@
 
-// Library name: INV_HV
-// Cell name: inv_hv
+// Library name: TOP
+// Cell name: top
 // View name: schematic
 // Inherited view list: schematic
-subckt inv_hv
+subckt top

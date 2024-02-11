@@ -1,0 +1,8 @@
+instMap,*ON211JI3VX1,*o2na3_1,*o2na3_1
+instMaster,*ON211JI3VX1,*o2na3_1,*GATES_JI3V_o2na3ji3v_schematic
+netMap,*ON211JI3VX1,*inh_power_vdd3i_vdd3i!,*\vdd3i! 
+netMap,*ON211JI3VX1,*inh_ground_gnd3i_gnd3i!,*\gnd3i! 
+netMap,*ON211JI3VX1,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*ON211JI3VX1,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*ON211JI3VX1,*gnd!,*cds_globals.\gnd! 
+cellMap,*ON211JI3VX1,*ON211JI3VX1,*D_CELLS_JI3V,*cmos_sch

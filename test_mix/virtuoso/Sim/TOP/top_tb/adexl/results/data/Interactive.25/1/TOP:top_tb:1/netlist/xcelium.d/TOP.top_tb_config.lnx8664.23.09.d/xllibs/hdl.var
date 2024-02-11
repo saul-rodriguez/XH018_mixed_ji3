@@ -1,0 +1,4 @@
+define LIB_MAP ( $LIB_MAP \
+, ../../../../../../../../../../../../../../../../../pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/verilog/v2_1_0/D_CELLS_JI3V.v => v2_1_0 \
+, ../../../../../../../../../../../../../../../../../pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/verilog/v2_1_0/VLG_PRIMITIVES.v => VLG_PRIMITIVES_1 \
+)

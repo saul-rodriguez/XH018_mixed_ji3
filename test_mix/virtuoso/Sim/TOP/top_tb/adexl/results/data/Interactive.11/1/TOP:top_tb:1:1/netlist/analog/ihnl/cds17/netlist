@@ -1,0 +1,60 @@
+    D4_1 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_2 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_3 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_4 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_5 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_6 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_7 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_8 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_9 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_10 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_11 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_12 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_13 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_14 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_1 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_2 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_3 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_4 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_5 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_6 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_7 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_8 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_9 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_10 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_11 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_12 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_13 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_14 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_15 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+ends PWRCUTDCPC
+// End of subcircuit definition.

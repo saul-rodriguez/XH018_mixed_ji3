@@ -5,6 +5,6 @@ HEADER
 "__netlister__" "AMS-UNL"
 "__lib__" "TOP"
 "__cell__" "top_tb"
-"__view__" "config"
+"__view__" "config_functional"
 "__topcell__" "top_tb"
 "__outputformat__" "sst2"

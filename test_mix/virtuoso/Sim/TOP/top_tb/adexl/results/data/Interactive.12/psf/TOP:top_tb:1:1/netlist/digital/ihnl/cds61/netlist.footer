@@ -1,0 +1,8 @@
+
+nand2ji3v #( .GT_PDL(350.00n), .GT_PUW(900.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
+     ) nand2_1 ( .a(A), .b(B), .out(net4));
+
+o2na2ji3v #( .GT_PUW(1.3u), .GT_PDL(350.00n), .GT_PUL(300.00n), .GT_PDW(420.00n) 
+     ) o2na2_1 ( .out(Q), .c(net4), .b(A), .a(B));
+
+endmodule

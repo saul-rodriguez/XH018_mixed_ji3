@@ -1,0 +1,6 @@
+instMap,*HVDD4D2PK,*I11,*I11
+instMaster,*HVDD4D2PK,*I11,*HV_CELLS_ioh_d2pk_schematic
+netMap,*HVDD4D2PK,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*HVDD4D2PK,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*HVDD4D2PK,*gnd!,*cds_globals.\gnd! 
+cellMap,*HVDD4D2PK,*HVDD4D2PK,*HV_CELLS,*schematic

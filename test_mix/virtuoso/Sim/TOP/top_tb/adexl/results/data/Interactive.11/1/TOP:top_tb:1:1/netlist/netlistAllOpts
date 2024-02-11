@@ -1,0 +1,41 @@
+(envOpts dspfFile) nil
+(envOpts allDspfFiles) nil
+(netlisterOpts useUselibForSpice) nil
+(netlisterOpts vlogSupply0Sigs) ""
+hnlVerilogTermSyncUp nil
+(envOpts useConfigForDSPFBlackbox) nil
+(netlisterOpts vlogSupply1Sigs) ""
+(netlisterOpts upgradeMsgSevError) ""
+(netlisterOpts netlistMaxWarn2331) 3
+(envOpts avbInfos) nil
+(netlisterOpts upgradeMsgSevWarn) ""
+(netlisterOpts ignorePrintNettype) nil
+(netlisterOpts termDirectionMismatch) "ignore"
+(netlisterOpts shortInstanceList) ""
+(netlisterOpts useFileUselib) t
+(envOpts dspfFilesFromModelIncludes) nil
+(envOpts avbEnable) nil
+(netlisterOpts useSpectreInfo) "spectre veriloga spice"
+(netlisterOpts iprobeGenPlace) "Spectre"
+(compilerOpts reUseHdlCompilationSetup) nil
+(netlisterOpts runNProcForSch) nil
+expandCfgTime "Feb  9 05:14:38 2024"
+configView "config_sch"
+configCell "top_tb"
+(netlisterOpts amsPortConnectionByNameOrOrder) "name"
+(netlisterOpts amsExcludeParams) ""
+(netlisterOpts enablePkgImport) nil
+(netlisterOpts unlPortDrill) ""
+mtsMode nil
+(netlisterOpts amsVerilogHonorSmForLeaf) nil
+(netlisterOpts unlAnalogOnly) ""
+(netlisterOpts netlistSrcFileAsAnalog) nil
+(netlisterOpts amsTraverseConfigForTextViews) t
+(netlisterOpts termMismatch) "ignore"
+(netlisterOpts createSpectreCktForExtracted) nil
+configLib "TOP"
+mtsModeList nil
+(netlisterOpts netlistBlackboxWithExtHdl) nil
+(netlisterOpts splitNetlistFormat) nil
+(netlisterOpts vlogGroundSigs) "gnd!"
+(envOpts compileVAAsVAMS) (nil)

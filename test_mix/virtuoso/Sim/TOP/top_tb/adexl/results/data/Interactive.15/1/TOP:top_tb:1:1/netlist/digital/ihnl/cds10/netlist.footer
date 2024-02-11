@@ -1,0 +1,6 @@
+
+jio_lviodio_pc I5 ( .PSUB(PSUB), .DNLW(DNLW), .LPWI(LPWI));
+
+jio_andio_pc I0 ( .DNW(VDN), .PWI(PWI), .PSUB(PSUB));
+
+endmodule

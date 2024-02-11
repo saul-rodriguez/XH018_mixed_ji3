@@ -1,0 +1,56 @@
+    IP1_1 jio_pe3i_pc
+    IP1_2 jio_pe3i_pc
+    IP1_3 jio_pe3i_pc
+    IP2_1 jio_pe3i_pc
+    IP2_2 jio_pe3i_pc
+    IP2_3 jio_pe3i_pc
+    IP3_1 jio_pe3i_pc
+    IP3_2 jio_pe3i_pc
+    IP3_3 jio_pe3i_pc
+    IP3_4 jio_pe3i_pc
+    IP3_5 jio_pe3i_pc
+    IP3_6 jio_pe3i_pc
+    IP3_7 jio_pe3i_pc
+    IP3_8 jio_pe3i_pc
+    IP3_9 jio_pe3i_pc
+    IP3_10 jio_pe3i_pc
+    IP3_11 jio_pe3i_pc
+    IP3_12 jio_pe3i_pc
+    IP3_13 jio_pe3i_pc
+    IP3_14 jio_pe3i_pc
+    IP3_15 jio_pe3i_pc
+    IP3_16 jio_pe3i_pc
+    IP3_17 jio_pe3i_pc
+    IP3_18 jio_pe3i_pc
+    M0 (ng3 rh GNDO GNDO) ne3i w=1.2u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    I5 jio_resp_pc
+    I3 jio_opdio_pc
+    IN3_1 jio_ne3i_pc
+    IN3_2 jio_ne3i_pc
+    IN3_3 jio_ne3i_pc
+    IN3_4 jio_ne3i_pc
+    IN3_5 jio_ne3i_pc
+    IN3_6 jio_ne3i_pc
+    IN3_7 jio_ne3i_pc
+    IN3_8 jio_ne3i_pc
+    IN3_9 jio_ne3i_pc
+    IN3_10 jio_ne3i_pc
+    IN3_11 jio_ne3i_pc
+    IN3_12 jio_ne3i_pc
+    IN3_13 jio_ne3i_pc
+    IN3_14 jio_ne3i_pc
+    IN3_15 jio_ne3i_pc
+    IN3_16 jio_ne3i_pc
+    IN3_17 jio_ne3i_pc
+    IN3_18 jio_ne3i_pc
+    IN3_19 jio_ne3i_pc
+    IN3_20 jio_ne3i_pc
+    IN3_21 jio_ne3i_pc
+    IN2_1 jio_ne3i_pc
+    IN2_2 jio_ne3i_pc
+    IN1 jio_ne3i_pc
+    I2 jio_tp4_pc
+    I1 jio_tsctrl_pc
+ends jio_ts4_pc
+// End of subcircuit definition.

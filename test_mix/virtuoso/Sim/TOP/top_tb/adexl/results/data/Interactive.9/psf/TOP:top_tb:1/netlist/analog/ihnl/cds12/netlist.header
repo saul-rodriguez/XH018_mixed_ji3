@@ -1,6 +1,6 @@
 
 // Library name: HV_CELLS
-// Cell name: ioh_dp3_16x70
+// Cell name: HVDD4D2PK
 // View name: schematic
 // Inherited view list: schematic
-subckt ioh_dp3_16x70
+subckt HVDD4D2PK

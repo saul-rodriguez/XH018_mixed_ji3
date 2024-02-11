@@ -1,0 +1,21 @@
+xmvlog(64): 23.09-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	23.09-s002: Started on Feb 09, 2024 at 03:36:25 EST
+xmvlog
+    -use5x
+    -SPECIFICUNIT counter_stimulus
+    -zparse /tmp/vamsZparudb697
+    -NOWARN DLNOHV
+    -work COUNTER_JI3
+    -view verilogams_sdf
+    -nostdout
+    -logfile /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.cadence/dfII/TextSupport/Logs/Parser/verilogams/COUNTER_JI3/verilogams_sdf/compile0.log
+    -messages
+    -ams
+    -cdslib /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/cds.lib
+    /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams_sdf/verilog.vams
+
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams_sdf/verilog.vams
+	module COUNTER_JI3.counter_stimulus:verilogams_sdf
+		errors: 0, warnings: 0
+	 writing out DPL output:
+TOOL:	xmvlog(64)	23.09-s002: Exiting on Feb 09, 2024 at 03:36:25 EST  (total: 00:00:00)

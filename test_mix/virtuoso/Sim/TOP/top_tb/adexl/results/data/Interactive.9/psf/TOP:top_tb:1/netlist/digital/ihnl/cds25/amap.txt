@@ -1,7 +1,4 @@
-netMap,*top_tb,*gnd!,*cds_globals.\gnd! 
-instMap,*top_tb,*I0,*I0
-instMaster,*top_tb,*I0,*TOP_top_schematic
-instMap,*top_tb,*I1,*I1
-instMaster,*top_tb,*I1,*COUNTER_JI3_counter_stimulus_verilogams
-cellMap,*top_tb,*top_tb,*TOP,*schematic
-topMap,*top_tb
+instMap,*DFRQJI3VX4,*i0,*i0
+instMaster,*DFRQJI3VX4,*i0,*VLG_PRIMITIVES_u1_fd5_functional
+netMap,*DFRQJI3VX4,*gnd!,*cds_globals.\gnd! 
+cellMap,*DFRQJI3VX4,*DFRQJI3VX4,*D_CELLS_JI3V,*functional

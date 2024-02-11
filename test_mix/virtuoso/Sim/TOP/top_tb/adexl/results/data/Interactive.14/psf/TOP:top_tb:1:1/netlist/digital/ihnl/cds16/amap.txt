@@ -1,0 +1,14 @@
+instMap,*ICPC,*I5,*I5
+instMaster,*ICPC,*I5,*IO_CELLS_JIC3V_jio_ipdio_pc_cmos_sch
+instMap,*ICPC,*I6,*I6
+instMaster,*ICPC,*I6,*IO_CELLS_JIC3V_jio_opdio_pc_cmos_sch
+instMap,*ICPC,*I4,*I4
+instMaster,*ICPC,*I4,*IO_CELLS_JIC3V_jio_ndtr_pc_cmos_sch
+instMap,*ICPC,*I3,*I3
+instMaster,*ICPC,*I3,*IO_CELLS_JIC3V_jio_bufc_pc_cmos_sch
+instMap,*ICPC,*I1,*I1
+instMaster,*ICPC,*I1,*IO_CELLS_JIC3V_jio_esd1_pc_cmos_sch
+netMap,*ICPC,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*ICPC,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*ICPC,*gnd!,*cds_globals.\gnd! 
+cellMap,*ICPC,*ICPC,*IO_CELLS_JIC3V,*cmos_sch

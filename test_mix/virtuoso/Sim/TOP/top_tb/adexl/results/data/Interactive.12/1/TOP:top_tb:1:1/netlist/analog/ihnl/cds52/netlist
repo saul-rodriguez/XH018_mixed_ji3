@@ -1,0 +1,14 @@
+    M7 (net3 net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=880.0n \
+        l=350.0n as=4.224e-13 ad=4.224e-13 ps=2.72e-06 pd=2.72e-06 \
+        nrs=0.306818 nrd=0.306818 m=(1)*(1) par1=(1)*(1)
+    M6 (inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i \
+        w=880.0n l=1.75u as=4.224e-13 ad=4.224e-13 ps=2.72e-06 pd=2.72e-06 \
+        nrs=0.306818 nrd=0.306818 m=(1)*(1) par1=(1)*(1)
+    M5 (net4 net3 inh_power_vdd3i inh_power_vdd3i) pe3i w=1.315u l=300n \
+        as=6.312e-13 ad=6.312e-13 ps=3.59e-06 pd=3.59e-06 nrs=0.205323 \
+        nrd=0.205323 m=(1)*(1) par1=(1)*(1)
+    M4 (inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i) pe3i \
+        w=1.315u l=1.71u as=6.312e-13 ad=6.312e-13 ps=3.59e-06 pd=3.59e-06 \
+        nrs=0.205323 nrd=0.205323 m=(1)*(1) par1=(1)*(1)
+ends DECAP7JI3V
+// End of subcircuit definition.

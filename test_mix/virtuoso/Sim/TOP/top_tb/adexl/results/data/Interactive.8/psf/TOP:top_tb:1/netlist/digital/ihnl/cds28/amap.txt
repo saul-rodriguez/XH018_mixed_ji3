@@ -1,0 +1,7 @@
+netMap,*top_tb,*gnd!,*cds_globals.\gnd! 
+instMap,*top_tb,*I0,*I0
+instMaster,*top_tb,*I0,*TOP_top_schematic
+instMap,*top_tb,*I1,*I1
+instMaster,*top_tb,*I1,*COUNTER_JI3_counter_stimulus_verilogams_sdf
+cellMap,*top_tb,*top_tb,*TOP,*schematic
+topMap,*top_tb

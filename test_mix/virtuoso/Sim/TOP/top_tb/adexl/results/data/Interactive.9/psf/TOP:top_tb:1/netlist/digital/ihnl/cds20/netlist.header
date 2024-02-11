@@ -1,15 +1,21 @@
-// Library - HV_CELLS, Cell - HVD4SJD1R5PKFs, View - schematic
-// LAST TIME SAVED: Feb 25 05:55:34 2015
-// NETLIST TIME: Feb  7 08:51:59 2024
+// Library - IORING, Cell - ioring, View - schematic
+// LAST TIME SAVED: Feb  7 11:24:12 2024
+// NETLIST TIME: Feb  9 05:09:21 2024
 `timescale 1ns / 1ps 
 
-`worklib HV_CELLS
+`worklib IORING
 `view schematic
 
 (* cds_ams_schematic *) 
-(* dfII_lib="HV_CELLS", dfII_cell="HVD4SJD1R5PKFs", dfII_view="schematic", worklib_name="HV_CELLS", view_name="schematic", last_save_time="Feb 25 05:55:34 2015" *)
+(* dfII_lib="IORING", dfII_cell="ioring", dfII_view="schematic", worklib_name="IORING", view_name="schematic", last_save_time="Feb  7 11:24:12 2024" *)
 
-module HVD4SJD1R5PKFs (GNDO, IGND, PAD);
+module ioring (CLK, ENABLE, GNDA, GNDD, GNDHV, GNDOHV, GNDOR, GNDORA, 
+    INL, OUT0, OUT1, OUT2, OUTHV, OUTL, PSUB, RESET, VDDA, VDDD, VDDHV, 
+    VDDOR, VDDORA, clk_core, enable_core, inl_core, out0_core, 
+    out1_core, out2_core, reset_core);
 
-inout  GNDO, IGND, PAD;
+inout  CLK, ENABLE, GNDA, GNDD, GNDHV, GNDOHV, GNDOR, GNDORA, INL, 
+    OUT0, OUT1, OUT2, OUTHV, OUTL, PSUB, RESET, VDDA, VDDD, VDDHV, 
+    VDDOR, VDDORA, clk_core, enable_core, inl_core, out0_core, 
+    out1_core, out2_core, reset_core;
 

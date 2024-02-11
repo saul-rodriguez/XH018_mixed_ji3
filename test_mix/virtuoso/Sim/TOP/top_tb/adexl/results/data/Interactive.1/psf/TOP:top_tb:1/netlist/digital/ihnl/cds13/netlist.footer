@@ -1,6 +1,0 @@
-
-ioh_dnw3_16x60 I0 ( .A(GNDO), .K(IGND), .Guard(VDD));
-
-ioh_dp3_16x70 I1 ( .A(IGND), .K(GNDO), .Sub(GNDO));
-
-endmodule

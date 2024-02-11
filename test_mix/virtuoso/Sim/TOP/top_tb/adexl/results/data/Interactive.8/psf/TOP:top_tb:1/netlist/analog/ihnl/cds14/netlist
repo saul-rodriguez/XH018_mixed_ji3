@@ -1,8 +1,6 @@
-    D1 (Gp K) dnpdd_scr area=5.36386e-10 perimeter=409.56u dbv=0.0 m=1
-    D2 (Gp Gn) dpdd_scr area=2.19633e-09 perimeter=457.16u dbv=0.0 m=1
-    D0 (A Gn) dpdnw area=1.89063e-10 perimeter=203.78u dbv=0.0 m=4 \
-        par1=(4)
-    D_Guard (Sub Gn) ddnw area=6.92224e-09 perimeter=359.17u dbv=0.0 m=1 \
-        par1=(1) xf_subext=0
-ends ioh_iscrd2_4x100
+    MPX (net17 G S B) pe3i w=15.0u l=400n as=7.2e-12 ad=7.2e-12 \
+        ps=3.096e-05 pd=3.096e-05 nrs=0.018 nrd=0.018 m=(1)*(1) \
+        par1=(1)*(1)
+    R0 (net17 D B) rdp3 l=430.0n w=15.0u m=1 par1=1
+ends ioh_pe3isab_15_04
 // End of subcircuit definition.

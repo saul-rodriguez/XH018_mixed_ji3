@@ -1,0 +1,68 @@
+    M24 (MQIB CI net162 inh_power_vdd3i) pe3i w=1.1u l=300n as=5.28e-13 \
+        ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 nrd=0.245455 \
+        m=(1)*(1) par1=(1)*(1)
+    M56 (MQI MQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=720.0n l=300n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M30 (net170 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=1.15u l=300n \
+        as=5.52e-13 ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 \
+        nrd=0.234783 m=(1)*(1) par1=(1)*(1)
+    M23 (net162 D inh_power_vdd3i inh_power_vdd3i) pe3i w=1.1u l=300n \
+        as=5.28e-13 ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 \
+        nrd=0.245455 m=(1)*(1) par1=(1)*(1)
+    M59 (net142 SQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=720.0n l=300n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M36 (net166 net142 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n \
+        l=300n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M35 (SQIB CI net166 inh_power_vdd3i) pe3i w=420.0n l=300n as=2.016e-13 \
+        ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 nrd=0.642857 \
+        m=(1)*(1) par1=(1)*(1)
+    M34 (MQIB CIB net174 inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M33 (SQIB CIB net170 inh_power_vdd3i) pe3i w=1.15u l=300n as=5.52e-13 \
+        ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 nrd=0.234783 \
+        m=(1)*(1) par1=(1)*(1)
+    M28 (net174 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    invr_3 invrji3v GT_PUW=2.82u GT_PUL=300.00n GT_PDW=1.78u \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    invr_1 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    M18 (MQIB CIB net124 inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M17 (MQI MQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M15 (net124 D inh_ground_gnd3i inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M46 (SQIB CI net132 inh_ground_gnd3i) ne3i w=720.0n l=350.0n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M19 (MQIB CI net120 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M51 (SQIB CIB net140 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M50 (net140 net142 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M49 (net142 SQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M47 (net132 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=720.0n \
+        l=350.0n as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M61 (net120 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+ends DFRQJI3VX2
+// End of subcircuit definition.

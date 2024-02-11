@@ -1,4 +1,4 @@
-Begin Netlisting Feb  7 11:24:16 2024
+Begin Netlisting Feb  9 05:12:39 2024
 INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the
 
 "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/digital/testfixture.verilog"
@@ -173,4 +173,4 @@ IO_CELLS_JIC3V              ICPC                        verilogams
 
 ---------- End of netlist configuration information   ----------
 Running netlist assembly..
-End netlisting Feb  7 11:24:24 2024
+End netlisting Feb  9 05:12:48 2024

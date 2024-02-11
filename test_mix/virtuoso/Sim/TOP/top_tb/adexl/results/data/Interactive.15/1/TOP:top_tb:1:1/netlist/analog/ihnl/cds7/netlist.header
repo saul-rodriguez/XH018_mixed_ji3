@@ -1,0 +1,6 @@
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: GNDPADPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt GNDPADPC

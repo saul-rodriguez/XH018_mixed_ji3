@@ -1,0 +1,14 @@
+
+*** Checking layout cellview 'IORING/ioring/layout' against source cellview 'IORING/ioring/schematic'. - Fri Feb  9 18:09:55 2024 ***
+
+INFO (LX-1105): Layout instance 'I43' will be ignored because there is no one-to-one schematic-to-layout correspondence for this instance.
+This instance will not be considered by any of the Layout XL update commands.
+INFO (LX-1105): Layout instance 'I8' will be ignored because there is no one-to-one schematic-to-layout correspondence for this instance.
+This instance will not be considered by any of the Layout XL update commands.
+INFO (LX-1105): Schematic instance 'I43' will be ignored because there is no one-to-one schematic-to-layout correspondence for this instance.
+This instance will not be considered by any of the Layout XL update commands.
+INFO (LX-1001): Layout instance 'I2' has no corresponding schematic instance.
+INFO (LX-1001): Layout instance 'I6' has no corresponding schematic instance.
+
+*** Check Against Source complete. ***
+

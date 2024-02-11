@@ -1,0 +1,60 @@
+    INS_1 jio_ne3is_pc
+    INS_2 jio_ne3is_pc
+    M2 (ng rh GNDOI GNDOI) ne3i w=1.2u l=400n as=5.76e-13 ad=5.76e-13 \
+        ps=3.36e-06 pd=3.36e-06 nrs=0.225 nrd=0.225 m=(1)*(1) par1=(1)*(1)
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    I3 jio_resp_pc
+    IP_1 jio_pe3i_pc
+    IP_2 jio_pe3i_pc
+    IP_3 jio_pe3i_pc
+    IP_4 jio_pe3i_pc
+    IP_5 jio_pe3i_pc
+    IP_6 jio_pe3i_pc
+    IP_7 jio_pe3i_pc
+    IP_8 jio_pe3i_pc
+    IP_9 jio_pe3i_pc
+    IP_10 jio_pe3i_pc
+    IP_11 jio_pe3i_pc
+    IP_12 jio_pe3i_pc
+    IP_13 jio_pe3i_pc
+    IP_14 jio_pe3i_pc
+    IP_15 jio_pe3i_pc
+    IP_16 jio_pe3i_pc
+    IP_17 jio_pe3i_pc
+    IP_18 jio_pe3i_pc
+    IP_19 jio_pe3i_pc
+    IP_20 jio_pe3i_pc
+    IP_21 jio_pe3i_pc
+    IP_22 jio_pe3i_pc
+    IP_23 jio_pe3i_pc
+    IP_24 jio_pe3i_pc
+    M3 (Y VDDOI VDDOI VDDOI) pe3i w=12.0u l=350.0n as=5.76e-12 ad=3.24e-12 \
+        ps=2.496e-05 pd=1.254e-05 nrs=0.0225 nrd=0.0225 m=(1)*(2) \
+        par1=(1)*(2)
+    I157 jio_anrdio_pc
+    R1 (PAD Y) rpp1 l=2.2u w=2u m=1 par1=1
+ends APR04DPC
+// End of subcircuit definition.

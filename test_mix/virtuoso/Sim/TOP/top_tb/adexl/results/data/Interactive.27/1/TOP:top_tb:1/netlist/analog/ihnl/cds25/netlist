@@ -1,0 +1,28 @@
+
+// Library name: TOP
+// Cell name: top_tb
+// View name: schematic
+// Inherited view list: schematic
+I0 top
+V9 (net16 0) vsource dc=0 type=dc
+V8 (net14 0) vsource dc=0 type=dc
+V7 (net11 0) vsource dc=0 type=dc
+V6 (net10 0) vsource dc=0 type=dc
+V5 (net6 0) vsource dc=0 type=dc
+V4 (net5 0) vsource dc=0 type=dc
+V3 (net4 0) vsource dc=0 type=dc
+V2 (net3 0) vsource dc=40 type=dc
+V1 (net2 0) vsource dc=3.3 type=dc
+V0 (net1 0) vsource dc=3.3 type=dc
+R9 (net17 net16) resistor r=0.1
+R8 (net15 net14) resistor r=0.1
+R7 (net13 net11) resistor r=0.1
+R6 (net12 net10) resistor r=0.1
+R5 (net9 net6) resistor r=0.1
+R4 (net8 net5) resistor r=0.1
+R3 (net7 net4) resistor r=0.1
+R2 (VDDHV net3) resistor r=0.1
+R1 (VDDA net2) resistor r=0.1
+R0 (VDDD net1) resistor r=0.1
+V10 (net18 0) vsource type=pulse val0=0 val1=3.3 period=100n delay=10n \
+        rise=1n fall=1n width=50n

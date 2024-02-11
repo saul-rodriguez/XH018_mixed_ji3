@@ -1,6 +1,7 @@
 SOFTINCLUDE /pkg/cadence/installs/XCELIUM2309/tools/inca/files/IEEE_vhdlams/cds.lib
 include ../../cds.lib
 define COUNTER_JI3 ../COUNTER_JI3
+define D_CELLS_JI3V ../D_CELLS_JI3V
 define IO_CELLS_JIC3V ../IO_CELLS_JIC3V
 define worklib ../worklib
 define vhdlspice_skeletons ../vhdlspice_skeletons

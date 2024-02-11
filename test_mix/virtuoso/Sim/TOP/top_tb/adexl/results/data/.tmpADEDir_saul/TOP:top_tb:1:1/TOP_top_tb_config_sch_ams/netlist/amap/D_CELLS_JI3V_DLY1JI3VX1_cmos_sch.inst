@@ -1,0 +1,13 @@
+HEADER
+"PSFversion" "1.00"
+"Av" "(FUNCTION or(mappedRoot(\".2@index\") mappedRoot(\".A\")))v"
+"Av" ".Av"
+"Av" ".\\2 v"
+"Qv" "(FUNCTION or(mappedRoot(\".1@index\") mappedRoot(\".Q\")))v"
+"Qv" ".Qv"
+"Qv" ".\\1 v"
+"gnd3iv" ".gnd3iv"
+"vdd3iv" ".vdd3iv"
+"M1n M3n" "PRIMLIB_pe3i_spectre"
+"M2n M4n" "PRIMLIB_ne3i_spectre"
+"invr_1n invr_2n" "GATES_JI3V_invrji3v_schematic"

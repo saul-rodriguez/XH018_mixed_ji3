@@ -1,0 +1,15 @@
+
+jio_ipdio_pc I5 ( .PSUB(PSUB), .DNWR(VDDRI), .PWIR(GNDRI));
+
+jio_opdio_pc I6 ( .VDN(VDDOI), .PSUB(PSUB), .NW(VDDOI), .DNLW(VDD3I), 
+    .DNW(VDDOI), .PWI(GNDOI), .LPWI(GNDI));
+
+jio_ndtr_pc I4 ( .YN(net12), .PI(PI), .PO(PO), .VDD(VDD3I), .Y(Y), 
+    .VDDR(VDDRI), .GNDR(GNDRI), .GND(GNDI));
+
+jio_bufc_pc I3 ( .A(net13), .Y(net12), .VDDR(VDDRI), .GNDR(GNDRI));
+
+jio_esd1_pc I1 ( .Y(net13), .A(PAD), .GNDO(GNDOI), .VDDR(VDDRI), 
+    .GNDR(GNDRI), .VDDO(VDDOI), .PSUB(PSUB));
+
+endmodule

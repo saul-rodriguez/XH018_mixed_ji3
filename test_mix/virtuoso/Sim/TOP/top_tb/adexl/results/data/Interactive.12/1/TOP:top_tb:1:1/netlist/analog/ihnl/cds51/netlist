@@ -1,0 +1,8 @@
+    M0 (net5 net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=830.0n l=1.48u \
+        as=3.984e-13 ad=3.984e-13 ps=2.62e-06 pd=2.62e-06 nrs=0.325301 \
+        nrd=0.325301 m=(1)*(1) par1=(1)*(1)
+    M1 (net4 net5 inh_power_vdd3i inh_power_vdd3i) pe3i w=1.36u l=1.46u \
+        as=6.528e-13 ad=6.528e-13 ps=3.68e-06 pd=3.68e-06 nrs=0.198529 \
+        nrd=0.198529 m=(1)*(1) par1=(1)*(1)
+ends DECAP5JI3V
+// End of subcircuit definition.

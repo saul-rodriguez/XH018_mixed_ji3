@@ -1,2 +1,0 @@
-netMap,*ioh_dnw3_16x60,*gnd!,*cds_globals.\gnd! 
-cellMap,*ioh_dnw3_16x60,*ioh_dnw3_16x60,*HV_CELLS,*schematic

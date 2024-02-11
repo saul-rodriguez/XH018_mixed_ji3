@@ -1,0 +1,6 @@
+netMap,*nor2ji3v,*inh_power_vdd3i_vdd3i!,*\vdd3i! 
+netMap,*nor2ji3v,*inh_ground_gnd3i_gnd3i!,*\gnd3i! 
+netMap,*nor2ji3v,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*nor2ji3v,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*nor2ji3v,*gnd!,*cds_globals.\gnd! 
+cellMap,*nor2ji3v,*nor2ji3v,*GATES_JI3V,*schematic

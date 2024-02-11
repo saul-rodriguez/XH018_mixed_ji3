@@ -5,18 +5,18 @@ Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwi
 
 Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
 
-User: saul   Host: phoenix   HostID: A0F02   PID: 18278
-Memory  available: 12.7856 GB  physical: 16.6560 GB
+User: saul   Host: phoenix   HostID: A0F02   PID: 8334
+Memory  available: 14.1545 GB  physical: 16.6560 GB
 Linux   : CentOS Linux release 7 (Core)
 CPU Type: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
 All processors running at 3600.0 MHz
         Socket: Processors
         0:       0,  1,  2,  3,  4,  5
         
-System load averages (1min, 5min, 15min) : 2.3 %, 2.0 %, 4.2 %
+System load averages (1min, 5min, 15min) : 2.2 %, 0.8 %, 0.8 %
 
 
-Simulating `./xcelium.d/AMSD/ams_spice_in/.amsspice_normal.ckt' on phoenix at 8:46:24 AM, Wed Feb 7, 2024 (process id: 18278).
+Simulating `./xcelium.d/AMSD/ams_spice_in/.amsspice_normal.ckt' on phoenix at 4:56:07 AM, Fri Feb 9, 2024 (process id: 8334).
 Current working directory: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist
 Environment variable:
     SPECTRE_DEFAULTS=
@@ -28,10 +28,10 @@ Command line:
         =log ./xcelium.d/AMSD/ams_spice_in/.amsspice_normal.ckt.log  \
         +mts -I/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/  \
         -token  \
-        0001AF26C83A239465DFBB2CC00A229E73C4B63DFD3B60CB2080FE71B870359768D3A13CC50411B6749FEA2FE10B0F887DC39431F37A3ED44FD9B63EAA3E399863C0B43FE90F319762DDE328F46E67CA30D1F12EB95960FB7190A83DEEB8537F10B0DD519E5D50FB10B0A931E55428FB7ED9C4528E5D339A7CDFB374B06461CB648AA83DC30C50FB10B0CDFE6492D955757300004225
+        0001AF26C83A239465DFBB2CC00A229E73C4B63DFD3B60CB2080FE71B870359768D3A13CC50411B6749FEA2FE10B0F887DC39431F37A3ED44FD9B63EAA3E399863C0B43FE90F319762DDE37BF16F62CB3082AC7BE90A60FB2390A83DEEB8537F10B0DD519E5D50FB10B0A931E55428FB7ED9C4528E5D339A7CDFB374B06461CB648AA83DC30C50FB10B0CDF81B89A64E757500004242
 
 Licensing Information:
-[08:46:25.512457] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
+[04:56:08.512441] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
 
 Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
 Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libphilips_I_sh.so ...
@@ -398,12 +398,12 @@ Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/
 Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/s_res.scs
 Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist/amsControlSpectre.scs
 Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist/.amsbind.scs
-Time for NDB Parsing: CPU = 180.965 ms, elapsed = 788.569 ms.
-Time accumulated: CPU = 228.284 ms, elapsed = 788.583 ms.
-Peak resident memory used = 111 Mbytes.
+Time for NDB Parsing: CPU = 172.631 ms, elapsed = 775.769 ms.
+Time accumulated: CPU = 221.363 ms, elapsed = 775.784 ms.
+Peak resident memory used = 113 Mbytes.
 
 Licensing Information:
 Lic Summary:
-[08:46:25.285513] Cdslmd servers:3000@lic08.ug.kth.se
-[08:46:25.285520] Feature usage summary:
+[04:56:08.279491] Cdslmd servers:3000@lic08.ug.kth.se
+[04:56:08.279498] Feature usage summary:
 

@@ -1,0 +1,12 @@
+cellMap,*AN21JI3VX1,*AN21JI3VX1,*D_CELLS_JI3V,*cmos_sch
+netMap,*AN21JI3VX1,*gnd3i!,*gnd3i!
+netMap,*AN21JI3VX1,*vdd3i!,*vdd3i!
+netMap,*AN21JI3VX1,*gnd!,*0
+instMap,*AN21JI3VX1,*a2no2_1,*a2no2_1
+instMaster,*AN21JI3VX1,*a2no2_1,*GATES_JI3V_a2no2ji3v_schematic,*a2no2ji3v
+netMap,*AN21JI3VX1,*inh_ground_gnd3i_gnd3i!,*inh_ground_gnd3i
+netMap,*AN21JI3VX1,*inh_power_vdd3i_vdd3i!,*inh_power_vdd3i
+portMap,*AN21JI3VX1,*A,*A
+portMap,*AN21JI3VX1,*B,*B
+portMap,*AN21JI3VX1,*C,*C
+portMap,*AN21JI3VX1,*Q,*Q

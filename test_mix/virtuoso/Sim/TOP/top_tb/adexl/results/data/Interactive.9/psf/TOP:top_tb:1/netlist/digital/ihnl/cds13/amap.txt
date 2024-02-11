@@ -1,6 +1,2 @@
-instMap,*EHVSSJI220FS,*I0,*I0
-instMaster,*EHVSSJI220FS,*I0,*HV_CELLS_ioh_dnw3_16x60_schematic
-instMap,*EHVSSJI220FS,*I1,*I1
-instMaster,*EHVSSJI220FS,*I1,*HV_CELLS_ioh_dp3_16x70_schematic
-netMap,*EHVSSJI220FS,*gnd!,*cds_globals.\gnd! 
-cellMap,*EHVSSJI220FS,*EHVSSJI220FS,*HV_CELLS,*schematic
+netMap,*ioh_iscrd2_4x100,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_iscrd2_4x100,*ioh_iscrd2_4x100,*HV_CELLS,*schematic

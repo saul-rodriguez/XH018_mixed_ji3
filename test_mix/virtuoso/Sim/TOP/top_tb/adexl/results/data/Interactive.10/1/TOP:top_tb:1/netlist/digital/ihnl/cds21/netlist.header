@@ -1,6 +1,6 @@
 // Library - INV_LP, Cell - inv, View - schematic
 // LAST TIME SAVED: Feb  4 10:15:33 2024
-// NETLIST TIME: Feb  7 11:24:19 2024
+// NETLIST TIME: Feb  9 05:12:43 2024
 `timescale 1ns / 1ps 
 
 `worklib INV_LP

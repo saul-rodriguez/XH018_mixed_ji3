@@ -1,14 +1,14 @@
-\# Program start time:     UTC 2024.02.07 12:35:05.677
-\# Local time: EST (UTC-05:00) 2024.02.07 07:35:05.677
+\# Program start time:     UTC 2024.02.09 08:50:56.508
+\# Local time: EST (UTC-05:00) 2024.02.09 03:50:56.508
 \o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 10/11/2023 09:56 (cpgbld01) $
 \o Hierarchy:		/home/saul/cadence/installs/IC618/tools.lnx86/dfII/
 \o Sub version:		sub-version  IC6.1.8-64b.500.34  (64-bit addresses)
-\# Command line:	/pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso27081 -mpshost phoenix -davinciService DaVinciService_27081_1707309303 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job0.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_27081 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 0
+\# Command line:	/pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso22965 -mpshost phoenix -davinciService DaVinciService_22965_1707468654 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job0.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_22965 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 0
 \# Host name (type):	phoenix (x86_64)
 \# Operating system:	Linux 3.10.0-1160.105.1.el7.x86_64 #1 SMP Thu Dec 7 15:39:45 UTC 2023
 \# Linux /etc/issue:	\S
 \# Linux /etc/issue:	Kernel \r on an \m
-\# X display name (WxH):	:801 (1024x868)
+\# X display name (WxH):	:4633 (1024x868)
 \# Available geometry:			TL(0:0) BR(1023:867)
 \# X server:			The X.Org Foundation
 \# Depth of Visual (Root):	24 (24)
@@ -18,11 +18,11 @@
 \# 			current id 0x0, current max 0x1ffffa (2097146)
 \# Max data seg size:	     unlimited
 \# Max process size:	     unlimited
-\# Initial sbrk value:	        628 MB
-\# Available memory:	     15,392 MB
+\# Initial sbrk value:	        624 MB
+\# Available memory:	     20,234 MB
 \# System memory:	     23,948 MB
-\# Maximum memory size:	     23,531 MB
-\# Max mem available:	     15,602 MB
+\# Maximum memory size:	     23,534 MB
+\# Max mem available:	     20,445 MB
 \# Initial memory used:	        210 MB
 \#        process size:	      1,813 MB
 \# Thread usage limits (effective/default):	maxthreads 4096/4096 maxload 6.00/6.00
@@ -30,7 +30,7 @@
 \# Window Manager:	other
 \# User Name:		saul
 \o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
-\# Process Id:		4759
+\# Process Id:		23764
 \o 
 \o COPYRIGHT (C) 1992-2023  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
 \o           (C) 1992-2023  UNIX SYSTEMS Laboratories INC.,
@@ -74,13 +74,13 @@
 \o Loading cpf.cxt 
 \o Loading cli.cxt 
 \o Loading lp.cxt 
-\o INFO (ELI-00302) Connecting to parent process (session=virtuoso27081, host=phoenix). Connection mode is ICRP. Total timeout is 180 seconds. Connection timeout is 90 seconds.
+\o INFO (ELI-00302) Connecting to parent process (session=virtuoso22965, host=phoenix). Connection mode is ICRP. Total timeout is 180 seconds. Connection timeout is 90 seconds.
 \o INFO (ELI-00303) Step 1: Connecting to parent. Time spent is 0 seconds.
-\o INFO (ELI-00304) The registration of the child 4759 within 90 seconds is being processed...
+\o INFO (ELI-00304) The registration of the child 23764 within 90 seconds is being processed...
 \o INFO (ELI-00305) The result of registration is true. Time spent is 0 seconds.
 \o INFO (ELI-00308) The connection has ended. Result is true. Total time spent is 0 seconds.
-\# [07:35:05.512417] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
-\# Memory report: using         362 MB, process size 2,094 MB at UTC 2024.02.07 12:35:07.475
+\# [03:50:56.512409] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
+\# Memory report: using         362 MB, process size 2,094 MB at UTC 2024.02.09 08:50:58.552
 \o Loading .cdsinit for the XH018 X-Fab XKit.
 \o     LOAD xh018_1143 SPECIFIC CALL-BACK ROUTINES
 \o     LOAD ALL AVAILABLE P-CELL FUNCTIONS
@@ -111,7 +111,6 @@
 \o Loading msgHandler.cxt 
 \o Loading AMSOSS.cxt 
 \o Loading AMS.cxt 
-\# Memory report: using         463 MB, process size 2,196 MB at UTC 2024.02.07 12:35:08.310
 \o  --> Finished setting the required PDK definitions
 \o  --> Setting the recommended EDA tool defaults...
 \o  --> Finished setting the recommended EDA tool defaults
@@ -123,7 +122,7 @@
 \p > 
 \# Loading perfDiag...
 \# (PerfDiag): Set GDB path to environment variable 'gdbPath' (gdb).
-\# Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 4759' to open it when Virtuoso freezes.
+\# Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 23764' to open it when Virtuoso freezes.
 \# (PerfDiag): Loading backtrace from /pkg/cadence/installs/IC618/tools/lib/64bit/cdnslibunwind.so
 \o     LOAD GENERIC "X-KIT" SKILL CONTEXT "./.xkit/setup/x_all/cadence/xenv/skill/context6/xkit.cxt" 
 \o  - Menu "XKit Utilities" installed to CIW.
@@ -136,6 +135,7 @@
 \o                              e.g.:
 \o                              setenv CUSTOM_SKILL_PATH /path/to/my/skill/LoadMySkills.il
 \o  -> END LOAD ".cdsinit" FILE
-\# Available memory:         15,090 MB at UTC 2024.02.07 12:35:15.446
-\# Memory report: Maximum memory size now 15,575 MB at UTC 2024.02.07 12:35:15.447
-\# Thread usage report: 12 active threads, active load 1.40 at UTC 2024.02.07 12:35:15.447
+\# Available memory:         19,918 MB at UTC 2024.02.09 08:51:06.946
+\# Memory report: Maximum memory size now 20,402 MB at UTC 2024.02.09 08:51:06.947
+\# Thread usage report: 12 active threads, active load 1.40 at UTC 2024.02.09 08:51:06.947
+\# Memory report: using         484 MB, process size 2,223 MB at UTC 2024.02.09 08:51:06.947

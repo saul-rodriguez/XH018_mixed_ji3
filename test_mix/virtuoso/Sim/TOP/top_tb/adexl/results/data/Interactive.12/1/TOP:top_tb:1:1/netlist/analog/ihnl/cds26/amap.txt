@@ -1,0 +1,13 @@
+cellMap,*ioh_dhpw_2x100_stack3,*ioh_dhpw_2x100_stack3,*HV_CELLS,*schematic
+netMap,*ioh_dhpw_2x100_stack3,*gnd3i!,*gnd3i!
+netMap,*ioh_dhpw_2x100_stack3,*vdd3i!,*vdd3i!
+netMap,*ioh_dhpw_2x100_stack3,*gnd!,*0
+instMap,*ioh_dhpw_2x100_stack3,*I0,*I0
+instMaster,*ioh_dhpw_2x100_stack3,*I0,*HV_CELLS_ioh_dhpw_2x100_schematic,*ioh_dhpw_2x100
+instMap,*ioh_dhpw_2x100_stack3,*I2,*I2
+instMaster,*ioh_dhpw_2x100_stack3,*I2,*HV_CELLS_ioh_dhpw_2x100_schematic,*ioh_dhpw_2x100
+instMap,*ioh_dhpw_2x100_stack3,*I1,*I1
+instMaster,*ioh_dhpw_2x100_stack3,*I1,*HV_CELLS_ioh_dhpw_2x100_schematic,*ioh_dhpw_2x100
+portMap,*ioh_dhpw_2x100_stack3,*A_l,*A_l
+portMap,*ioh_dhpw_2x100_stack3,*K_h,*K_h
+portMap,*ioh_dhpw_2x100_stack3,*Sub,*Sub

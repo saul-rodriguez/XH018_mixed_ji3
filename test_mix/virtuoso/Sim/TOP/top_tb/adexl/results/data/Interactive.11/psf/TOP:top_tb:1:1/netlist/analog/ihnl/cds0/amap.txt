@@ -1,0 +1,12 @@
+cellMap,*jio_ne3i_pc,*jio_ne3i_pc,*IO_CELLS_JIC3V,*cmos_sch
+netMap,*jio_ne3i_pc,*gnd!,*0
+instMap,*jio_ne3i_pc,*D3,*D3
+instMaster,*jio_ne3i_pc,*D3,*PRIMLIB_dn3_spectre,*dn3
+instMap,*jio_ne3i_pc,*R0,*R0
+instMaster,*jio_ne3i_pc,*R0,*PRIMLIB_rdn3_spectre,*rdn3
+instMap,*jio_ne3i_pc,*M0,*M0
+instMaster,*jio_ne3i_pc,*M0,*PRIMLIB_ne3i_spectre,*ne3i
+portMap,*jio_ne3i_pc,*B,*B
+portMap,*jio_ne3i_pc,*D,*D
+portMap,*jio_ne3i_pc,*G,*G
+portMap,*jio_ne3i_pc,*S,*S

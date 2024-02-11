@@ -1,0 +1,24 @@
+    M11 (PG1 PG GNDO PW) ne3i w=6.1u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M13 (PG2 PG net26 PW) ne3i w=3.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M21 (NG1 NG GNDO PW) ne3i w=5.5u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(2) par1=(1)*(2)
+    M14 (net26 PG GNDO PW) ne3i w=3.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M24 (NG2 NG GNDO PW) ne3i w=8u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(2) par1=(1)*(2)
+    M10 (PG1 PG VDDO NW) pe3i w=10u l=350.0n as=4.8e-12 ad=2.7e-12 \
+        ps=2.096e-05 pd=1.054e-05 nrs=0.027 nrd=0.027 m=(1)*(2) \
+        par1=(1)*(2)
+    M20 (NG1 NG VDDO NW) pe3i w=4.9u l=350.0n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M23 (NG2 NG net25 NW) pe3i w=6.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M22 (net25 NG VDDO NW) pe3i w=6.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M12 (PG2 PG VDDO NW) pe3i w=10u l=350.0n as=4.8e-12 ad=2.7e-12 \
+        ps=2.096e-05 pd=1.054e-05 nrs=0.027 nrd=0.027 m=(1)*(2) \
+        par1=(1)*(2)
+ends jio_tp4_pc
+// End of subcircuit definition.

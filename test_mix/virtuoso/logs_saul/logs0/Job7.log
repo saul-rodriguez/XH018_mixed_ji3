@@ -8,12 +8,12 @@
 
 	Library      = TOP
 	Cell         = top_tb
-	View         = config
+	View         = config_gate
 	Simulator    = ams
 	State Path   = $AXL_SETUPDB_DIR/test_states
-	State Name   = TOP:top_tb:1_none_Interactive.2
-	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.2.rdb
-	Results Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.2/1/TOP:top_tb:1
+	State Name   = TOP:top_tb:1_none_Interactive.0
+	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.0.rdb
+	Results Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.0/1/TOP:top_tb:1
 	Results Loc  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data
 	Project Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim
 	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl
@@ -28,7 +28,7 @@
 
 
 
-*Info*    Run start for Point ID (2 1) on testbench [ TOP:top_tb:1 ].
+*Info*    Run start for Point ID (0 1) on testbench [ TOP:top_tb:1 ].
 
 Resetting statistical vars
 
@@ -38,14 +38,14 @@ Setting var temperature = "27"
 Setting temp(T) = 27
 
 *Info*    Netlist Directory =
-          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.2/1/TOP:top_tb:1/netlist
+          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.0/1/TOP:top_tb:1/netlist
 
 
 *Info*    Data Directory    =
-          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.2/1/TOP:top_tb:1
+          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.0/1/TOP:top_tb:1
 
 
-*Info*    Creating Netlist for Point ID (2 1)
+*Info*    Creating Netlist for Point ID (0 1)
 
 generate netlist...
 INFO (AMS-2142): The AMS Unified Netlisting (AMS UNL) flow has been enabled.
@@ -54,9 +54,11 @@ INFO (AMS-2031): The instances bound to the views specified in the 'Netlist usin
  analog primitives using the Spectre CDF simulation information.
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
-Begin Netlisting Feb  7 08:22:57 2024
+Initializing the control file using cp:
+    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.ver /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.0/1/TOP:top_tb:1/netlist/digital/control
+Begin Netlisting Feb  9 04:08:43 2024
 INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the 
-"/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.2/1/TOP:top_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
+"/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.0/1/TOP:top_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
 simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file 
 before invoking Verilog netlister.
  
@@ -109,7 +111,6 @@ PRIMLIB                     dp3                         spectre              *St
 PRIMLIB                     rnp1                        spectre              *Stopping View*  
 PRIMLIB                     pe3i                        spectre              *Stopping View*  
 PRIMLIB                     rdp3                        spectre              *Stopping View*  
-PRIMLIB                     dnw3                        spectre              *Stopping View*  
 PRIMLIB                     dnpdd_scr                   spectre              *Stopping View*  
 PRIMLIB                     dpdd_scr                    spectre              *Stopping View*  
 PRIMLIB                     dpdnw                       spectre              *Stopping View*  
@@ -135,9 +136,8 @@ HV_CELLS                    ioh_pmbsab_15_10            schematic
 HV_CELLS                    ioh_pe3isabhv_1050gcr       schematic                             
 HV_CELLS                    ioh_pe3isab_15_04           schematic                             
 HV_CELLS                    ioh_iscrd2_4x100            schematic                             
-HV_CELLS                    EHVSSJI220FS                schematic                             
-HV_CELLS                    ioh_dp3_16x70               schematic                             
-HV_CELLS                    ioh_dnw3_16x60              schematic                             
+HV_CELLS                    HVDD4D2PK                   schematic                             
+HV_CELLS                    ioh_d2pk                    schematic                             
 HV_CELLS                    HVDD4DJ5PKFs                schematic                             
 HV_CELLS                    ioh_d5pk                    schematic                             
 HV_CELLS                    ioh_pe3isabhv_2800gcr       schematic                             
@@ -155,16 +155,13 @@ function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
 Initializing the control file using cp:
-    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.2/1/TOP:top_tb:1/netlist/analog/control
+    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.0/1/TOP:top_tb:1/netlist/analog/control
 Copying Spectre source file 'spectre.inp'
 Copying Spectre command file 'spectre.sim'
-WARNING (OSSHNL-159): The primitive, 'COUNTER_JI3/counter_stimulus/verilogams', has been updated since the last netlisting session
-in this current run directory. Therefore, re-netlisting all cell views where
-this primitive is instantiated.
-
+Loading json.cxt 
 Running netlist assembly..
-.........
-End netlisting Feb  7 08:23:06 2024
+........
+End netlisting Feb  9 04:08:51 2024
 INFO (AMS-1241): AMS UNL netlisting has completed successfully.
 To view the modules, right-click the test name on the Tests and Analyses 
 assistant pane and choose Netlist->Display menu option.
@@ -175,9 +172,9 @@ compose simulator input file...
       ...successful.
 
 *Info*    Running simulation on testbench [ TOP:top_tb:1 ] for Point
-          ID (2 1).
+          ID (0 1).
 
-Delete simulation data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.2/1/TOP:top_tb:1/psf.
+Delete simulation data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.0/1/TOP:top_tb:1/psf.
 create cds_globals...
       ...successful.
 compose simulator input file...
@@ -194,7 +191,7 @@ reading simulation data...
 *Info*    Client has finished evaluating ... 
 
 
-*Info*    Run complete for Point ID (2 1) on testbench [ TOP:top_tb:1
+*Info*    Run complete for Point ID (0 1) on testbench [ TOP:top_tb:1
           ].
 
 

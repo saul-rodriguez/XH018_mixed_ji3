@@ -1,0 +1,2 @@
+netMap,*PWRCUTDCPC,*gnd!,*cds_globals.\gnd! 
+cellMap,*PWRCUTDCPC,*PWRCUTDCPC,*IO_CELLS_JIC3V,*cmos_sch

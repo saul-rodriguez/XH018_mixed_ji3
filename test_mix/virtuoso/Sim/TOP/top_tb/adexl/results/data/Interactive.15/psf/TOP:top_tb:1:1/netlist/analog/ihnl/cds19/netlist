@@ -1,0 +1,42 @@
+    M127 (NG NGB VDDO VDDO) pe3i w=5.2u l=350.0n as=2.496e-12 ad=1.404e-12 \
+        ps=1.136e-05 pd=5.74e-06 nrs=0.0519231 nrd=0.0519231 m=(1)*(2) \
+        par1=(1)*(2)
+    M117 (PG PGB VDDO VDDO) pe3i w=5.2u l=350.0n as=2.496e-12 ad=1.404e-12 \
+        ps=1.136e-05 pd=5.74e-06 nrs=0.0519231 nrd=0.0519231 m=(1)*(2) \
+        par1=(1)*(2)
+    M01 (ENB EN VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 ad=1.0368e-12 \
+        ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 m=(1)*(1) par1=(1)*(1)
+    M22 (NGB EN net49 VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 \
+        ad=1.0368e-12 ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 \
+        m=(1)*(1) par1=(1)*(1)
+    M12 (PGB ENB VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 \
+        ad=1.0368e-12 ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 \
+        m=(1)*(1) par1=(1)*(1)
+    M21 (net49 A VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 \
+        ad=1.0368e-12 ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 \
+        m=(1)*(1) par1=(1)*(1)
+    M11 (PGB A VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 ad=1.0368e-12 \
+        ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 m=(1)*(1) par1=(1)*(1)
+    M128 (NG NGB GNDO GNDO) ne3i w=5.2u l=400n as=2.496e-12 ad=2.496e-12 \
+        ps=1.136e-05 pd=1.136e-05 nrs=0.0519231 nrd=0.0519231 m=(1)*(1) \
+        par1=(1)*(1)
+    M118 (PG PGB GNDO GNDO) ne3i w=5.2u l=400n as=2.496e-12 ad=2.496e-12 \
+        ps=1.136e-05 pd=1.136e-05 nrs=0.0519231 nrd=0.0519231 m=(1)*(1) \
+        par1=(1)*(1)
+    M02 (ENB EN GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=5.28e-13 \
+        ps=3.16e-06 pd=3.16e-06 nrs=0.245455 nrd=0.245455 m=(1)*(1) \
+        par1=(1)*(1)
+    M24 (NGB A GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+    M15 (net50 A GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+    M25 (NGB EN GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+    M14 (PGB ENB net50 GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+ends jio_tsctrl_pc
+// End of subcircuit definition.

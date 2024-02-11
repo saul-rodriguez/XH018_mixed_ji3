@@ -1,5 +1,6 @@
-    I24 HVDD4DJ5PKFs
-    I36 HVDD4D2PK
-    I33 HVD4SJD1R5PKFs
-ends ioring
+    M0 (OUT IN VS VS) ne3 w=2u l=350.0n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1) xf_subext=0
+    M1 (OUT IN VD VD) pe3 w=2u l=300n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+ends inv
 // End of subcircuit definition.

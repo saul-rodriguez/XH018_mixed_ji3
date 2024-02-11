@@ -1,0 +1,2584 @@
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_ne3i_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_ne3i_pc
+    D3 (B D) dn3 area=0.99e-11 perimeter=660.00n dbv=0.0 m=1 par1=(1) \
+        xf_subext=0
+    R0 (D net6 B) rdn3 l=3.35u w=30u m=1 par1=1 xf_subext=0
+    M0 (net6 G S B) ne3i w=30u l=400.0n as=1.44e-11 ad=1.44e-11 ps=60.96u \
+        pd=60.96u nrs=0.009 nrd=0.009 m=(1)*(1) par1=(1)*(1)
+ends jio_ne3i_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_andio_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_andio_pc
+    D3 (PSUB DNW) ddnwmv area=4.69976e-09 perimeter=274.64u dbv=0 m=1 \
+        par1=(1) xf_subext=0
+    D1 (PWI DNW) dipdnwmv area=4.16648e-09 perimeter=258.64u dbv=0 m=1 \
+        par1=(1)
+ends jio_andio_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: VDDORPADPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt VDDORPADPC
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R11 (ng GNDOI VDDORI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    I157 jio_andio_pc
+ends VDDORPADPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_pe3i_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_pe3i_pc
+    M0 (net6 G S B) pe3i w=30u l=350.0n as=1.44e-11 ad=1.44e-11 \
+        ps=6.096e-05 pd=6.096e-05 nrs=0.009 nrd=0.009 m=(1)*(1) \
+        par1=(1)*(1)
+    R1 (net6 D B) rdp3 l=2.15u w=30u m=1 par1=1
+ends jio_pe3i_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: VDDPADPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt VDDPADPC
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R0 (VDDOI pg VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    R11 (ng GNDOI VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    I157 jio_andio_pc
+    IP_1 jio_pe3i_pc
+    IP_2 jio_pe3i_pc
+    IP_3 jio_pe3i_pc
+    IP_4 jio_pe3i_pc
+    IP_5 jio_pe3i_pc
+    IP_6 jio_pe3i_pc
+    IP_7 jio_pe3i_pc
+    IP_8 jio_pe3i_pc
+    IP_9 jio_pe3i_pc
+    IP_10 jio_pe3i_pc
+    IP_11 jio_pe3i_pc
+    IP_12 jio_pe3i_pc
+    IP_13 jio_pe3i_pc
+    IP_14 jio_pe3i_pc
+    IP_15 jio_pe3i_pc
+    IP_16 jio_pe3i_pc
+    IP_17 jio_pe3i_pc
+    IP_18 jio_pe3i_pc
+    IP_19 jio_pe3i_pc
+    IP_20 jio_pe3i_pc
+    IP_21 jio_pe3i_pc
+    IP_22 jio_pe3i_pc
+    IP_23 jio_pe3i_pc
+    IP_24 jio_pe3i_pc
+    IP_25 jio_pe3i_pc
+    IP_26 jio_pe3i_pc
+    IP_27 jio_pe3i_pc
+    IP_28 jio_pe3i_pc
+    IP_29 jio_pe3i_pc
+    IP_30 jio_pe3i_pc
+    IP_31 jio_pe3i_pc
+    IP_32 jio_pe3i_pc
+ends VDDPADPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: GNDORPADPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt GNDORPADPC
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R11 (ng GNDORI VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    I157 jio_andio_pc
+ends GNDORPADPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: PSUBPADPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt PSUBPADPC
+    IP_1 jio_pe3i_pc
+    IP_2 jio_pe3i_pc
+    IP_3 jio_pe3i_pc
+    IP_4 jio_pe3i_pc
+    IP_5 jio_pe3i_pc
+    IP_6 jio_pe3i_pc
+    IP_7 jio_pe3i_pc
+    IP_8 jio_pe3i_pc
+    IP_9 jio_pe3i_pc
+    IP_10 jio_pe3i_pc
+    IP_11 jio_pe3i_pc
+    IP_12 jio_pe3i_pc
+    IP_13 jio_pe3i_pc
+    IP_14 jio_pe3i_pc
+    IP_15 jio_pe3i_pc
+    IP_16 jio_pe3i_pc
+    IP_17 jio_pe3i_pc
+    IP_18 jio_pe3i_pc
+    IP_19 jio_pe3i_pc
+    IP_20 jio_pe3i_pc
+    IP_21 jio_pe3i_pc
+    IP_22 jio_pe3i_pc
+    IP_23 jio_pe3i_pc
+    IP_24 jio_pe3i_pc
+    IP_25 jio_pe3i_pc
+    IP_26 jio_pe3i_pc
+    IP_27 jio_pe3i_pc
+    IP_28 jio_pe3i_pc
+    IP_29 jio_pe3i_pc
+    IP_30 jio_pe3i_pc
+    IP_31 jio_pe3i_pc
+    IP_32 jio_pe3i_pc
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R11 (ng PSUB VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    R0 (VDDOI pg VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    I157 jio_andio_pc
+ends PSUBPADPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: GNDPADPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt GNDPADPC
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R0 (VDDOI pg VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    R11 (ng GNDOI VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    I157 jio_andio_pc
+    IP_1 jio_pe3i_pc
+    IP_2 jio_pe3i_pc
+    IP_3 jio_pe3i_pc
+    IP_4 jio_pe3i_pc
+    IP_5 jio_pe3i_pc
+    IP_6 jio_pe3i_pc
+    IP_7 jio_pe3i_pc
+    IP_8 jio_pe3i_pc
+    IP_9 jio_pe3i_pc
+    IP_10 jio_pe3i_pc
+    IP_11 jio_pe3i_pc
+    IP_12 jio_pe3i_pc
+    IP_13 jio_pe3i_pc
+    IP_14 jio_pe3i_pc
+    IP_15 jio_pe3i_pc
+    IP_16 jio_pe3i_pc
+    IP_17 jio_pe3i_pc
+    IP_18 jio_pe3i_pc
+    IP_19 jio_pe3i_pc
+    IP_20 jio_pe3i_pc
+    IP_21 jio_pe3i_pc
+    IP_22 jio_pe3i_pc
+    IP_23 jio_pe3i_pc
+    IP_24 jio_pe3i_pc
+    IP_25 jio_pe3i_pc
+    IP_26 jio_pe3i_pc
+    IP_27 jio_pe3i_pc
+    IP_28 jio_pe3i_pc
+    IP_29 jio_pe3i_pc
+    IP_30 jio_pe3i_pc
+    IP_31 jio_pe3i_pc
+    IP_32 jio_pe3i_pc
+ends GNDPADPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_ipdio_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_ipdio_pc
+    D10 (PSUB DNWR) ddnwmv area=3.7825e-10 perimeter=80.26u dbv=0 m=1 \
+        par1=(1) xf_subext=0
+    D9 (PWIR DNWR) dipdnwmv area=1.3272e-10 perimeter=54.64u dbv=0 m=1 \
+        par1=(1)
+ends jio_ipdio_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_lviodio_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_lviodio_pc
+    D2 (LPWI DNLW) dipdnwmv area=3.2452e-10 perimeter=132.64u dbv=0 m=1 \
+        par1=(1)
+ends jio_lviodio_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_opdio_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_opdio_pc
+    I5 jio_lviodio_pc
+    D0 (PSUB DNW) ddnwmv area=5.2955e-10 perimeter=100.26u dbv=0 m=1 \
+        par1=(1) xf_subext=0
+    D1 (PWI NW) dipdnwmv area=2.1664e-10 perimeter=59.08u dbv=0 m=1 \
+        par1=(1)
+    D3 (PWI NW) dipdnwmv area=2.1664e-10 perimeter=59.08u dbv=0 m=1 \
+        par1=(1)
+    D5 (PWI DNW) dipdnwmv area=1.9592e-10 perimeter=74.64u dbv=0 m=1 \
+        par1=(1)
+    I0 jio_andio_pc
+ends jio_opdio_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_ndtr_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_ndtr_pc
+    M1 (net14 YN VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 ad=6.48e-13 \
+        ps=5.76e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 m=(1)*(2) \
+        par1=(1)*(2)
+    M3 (net19 net14 VDD VDD) pe3i w=2.4u l=350.0n as=8.16e-13 ad=6.48e-13 \
+        ps=3.88e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 m=(1)*(6) \
+        par1=(1)*(6)
+    M7 (PO PI VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 ad=1.152e-12 \
+        ps=5.76e-06 pd=5.76e-06 nrs=0.1125 nrd=0.1125 m=(1)*(1) \
+        par1=(1)*(1)
+    M9 (PO net14 VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 ad=1.152e-12 \
+        ps=5.76e-06 pd=5.76e-06 nrs=0.1125 nrd=0.1125 m=(1)*(1) \
+        par1=(1)*(1)
+    M11 (net16 net14 VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 \
+        ad=6.48e-13 ps=5.76e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 \
+        m=(1)*(2) par1=(1)*(2)
+    M5 (Y net19 VDD VDD) pe3i w=2.4u l=350.0n as=7.488e-13 ad=6.48e-13 \
+        ps=3.504e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 m=(1)*(10) \
+        par1=(1)*(10)
+    M2 (net14 YN GND GND) ne3i w=1.2u l=400n as=5.76e-13 ad=3.24e-13 \
+        ps=3.36e-06 pd=1.74e-06 nrs=0.225 nrd=0.225 m=(1)*(2) par1=(1)*(2)
+    M6 (Y net16 GND GND) ne3i w=1.68u l=400n as=5.712e-13 ad=4.536e-13 \
+        ps=2.92e-06 pd=2.22e-06 nrs=0.160714 nrd=0.160714 m=(1)*(6) \
+        par1=(1)*(6)
+    M8 (PO net14 net37 GND) ne3i w=1.68u l=400n as=8.064e-13 ad=8.064e-13 \
+        ps=4.32e-06 pd=4.32e-06 nrs=0.160714 nrd=0.160714 m=(1)*(1) \
+        par1=(1)*(1)
+    M10 (net37 PI GND GND) ne3i w=1.68u l=400n as=8.064e-13 ad=8.064e-13 \
+        ps=4.32e-06 pd=4.32e-06 nrs=0.160714 nrd=0.160714 m=(1)*(1) \
+        par1=(1)*(1)
+    M13 (net19 net14 GND GND) ne3i w=1.68u l=400n as=8.064e-13 \
+        ad=4.536e-13 ps=4.32e-06 pd=2.22e-06 nrs=0.160714 nrd=0.160714 \
+        m=(1)*(2) par1=(1)*(2)
+    M4 (net16 net14 GND GND) ne3i w=1.68u l=400n as=6.3e-13 ad=4.536e-13 \
+        ps=3.27e-06 pd=2.22e-06 nrs=0.160714 nrd=0.160714 m=(1)*(4) \
+        par1=(1)*(4)
+ends jio_ndtr_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_bufc_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_bufc_pc
+    M2 (Y A GNDR GNDR) ne3i w=2u l=400n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(3) par1=(1)*(3)
+    M1 (Y A VDDR VDDR) pe3i w=2.2u l=350.0n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(6) par1=(1)*(6)
+ends jio_bufc_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_resp_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_resp_pc
+    R0 (VDDO RH VDDO) rdp3 l=3.3u w=440.0n m=1 par1=1
+ends jio_resp_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_ne3is_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_ne3is_pc
+    D3 (B D) dn3 area=3.96e-12 perimeter=660.0n dbv=0 m=1 par1=(1) \
+        xf_subext=0
+    R4 (D net6 B) rdn3 l=1.32u w=12.0u m=1 par1=1 xf_subext=0
+    M0 (net6 G S B) ne3i w=12.0u l=400n as=5.76e-12 ad=5.76e-12 \
+        ps=2.496e-05 pd=2.496e-05 nrs=0.0225 nrd=0.0225 m=(1)*(1) \
+        par1=(1)*(1)
+ends jio_ne3is_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_esd1_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_esd1_pc
+    M3 (Y VDDO VDDO VDDO) pe3i w=12.0u l=350.0n as=5.76e-12 ad=3.24e-12 \
+        ps=2.496e-05 pd=1.254e-05 nrs=0.0225 nrd=0.0225 m=(1)*(2) \
+        par1=(1)*(2)
+    I3 jio_resp_pc
+    IP_1 jio_pe3i_pc
+    IP_2 jio_pe3i_pc
+    IP_3 jio_pe3i_pc
+    IP_4 jio_pe3i_pc
+    IP_5 jio_pe3i_pc
+    IP_6 jio_pe3i_pc
+    IP_7 jio_pe3i_pc
+    IP_8 jio_pe3i_pc
+    IP_9 jio_pe3i_pc
+    IP_10 jio_pe3i_pc
+    IP_11 jio_pe3i_pc
+    IP_12 jio_pe3i_pc
+    IP_13 jio_pe3i_pc
+    IP_14 jio_pe3i_pc
+    IP_15 jio_pe3i_pc
+    IP_16 jio_pe3i_pc
+    IP_17 jio_pe3i_pc
+    IP_18 jio_pe3i_pc
+    IP_19 jio_pe3i_pc
+    IP_20 jio_pe3i_pc
+    IP_21 jio_pe3i_pc
+    IP_22 jio_pe3i_pc
+    IP_23 jio_pe3i_pc
+    IP_24 jio_pe3i_pc
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R1 (A Y) rpp1 l=4.5u w=2.5u m=1 par1=1
+    M2 (ng rh GNDO GNDO) ne3i w=1.2u l=400n as=5.76e-13 ad=5.76e-13 \
+        ps=3.36e-06 pd=3.36e-06 nrs=0.225 nrd=0.225 m=(1)*(1) par1=(1)*(1)
+    INS_1 jio_ne3is_pc
+    INS_2 jio_ne3is_pc
+ends jio_esd1_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: ICPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt ICPC
+    I5 jio_ipdio_pc
+    I6 jio_opdio_pc
+    I4 jio_ndtr_pc
+    I3 jio_bufc_pc
+    I1 jio_esd1_pc
+ends ICPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: PWRCUTDCPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt PWRCUTDCPC
+    D4_1 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_2 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_3 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_4 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_5 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_6 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_7 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_8 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_9 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_10 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_11 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_12 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_13 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D4_14 (GNDOI1 GNDOI2) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_1 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_2 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_3 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_4 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_5 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_6 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_7 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_8 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_9 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_10 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_11 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_12 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_13 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_14 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+    D1_15 (GNDOI2 GNDOI1) dp3 area=5.91506e-11 perimeter=64.86u dbv=0 m=1 \
+        par1=(1)
+ends PWRCUTDCPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_tp4_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_tp4_pc
+    M11 (PG1 PG GNDO PW) ne3i w=6.1u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M13 (PG2 PG net26 PW) ne3i w=3.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M21 (NG1 NG GNDO PW) ne3i w=5.5u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(2) par1=(1)*(2)
+    M14 (net26 PG GNDO PW) ne3i w=3.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M24 (NG2 NG GNDO PW) ne3i w=8u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(2) par1=(1)*(2)
+    M10 (PG1 PG VDDO NW) pe3i w=10u l=350.0n as=4.8e-12 ad=2.7e-12 \
+        ps=2.096e-05 pd=1.054e-05 nrs=0.027 nrd=0.027 m=(1)*(2) \
+        par1=(1)*(2)
+    M20 (NG1 NG VDDO NW) pe3i w=4.9u l=350.0n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M23 (NG2 NG net25 NW) pe3i w=6.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M22 (net25 NG VDDO NW) pe3i w=6.7u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    M12 (PG2 PG VDDO NW) pe3i w=10u l=350.0n as=4.8e-12 ad=2.7e-12 \
+        ps=2.096e-05 pd=1.054e-05 nrs=0.027 nrd=0.027 m=(1)*(2) \
+        par1=(1)*(2)
+ends jio_tp4_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_tsctrl_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_tsctrl_pc
+    M127 (NG NGB VDDO VDDO) pe3i w=5.2u l=350.0n as=2.496e-12 ad=1.404e-12 \
+        ps=1.136e-05 pd=5.74e-06 nrs=0.0519231 nrd=0.0519231 m=(1)*(2) \
+        par1=(1)*(2)
+    M117 (PG PGB VDDO VDDO) pe3i w=5.2u l=350.0n as=2.496e-12 ad=1.404e-12 \
+        ps=1.136e-05 pd=5.74e-06 nrs=0.0519231 nrd=0.0519231 m=(1)*(2) \
+        par1=(1)*(2)
+    M01 (ENB EN VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 ad=1.0368e-12 \
+        ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 m=(1)*(1) par1=(1)*(1)
+    M22 (NGB EN net49 VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 \
+        ad=1.0368e-12 ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 \
+        m=(1)*(1) par1=(1)*(1)
+    M12 (PGB ENB VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 \
+        ad=1.0368e-12 ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 \
+        m=(1)*(1) par1=(1)*(1)
+    M21 (net49 A VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 \
+        ad=1.0368e-12 ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 \
+        m=(1)*(1) par1=(1)*(1)
+    M11 (PGB A VDD VDD) pe3i w=2.16u l=350.0n as=1.0368e-12 ad=1.0368e-12 \
+        ps=5.28e-06 pd=5.28e-06 nrs=0.125 nrd=0.125 m=(1)*(1) par1=(1)*(1)
+    M128 (NG NGB GNDO GNDO) ne3i w=5.2u l=400n as=2.496e-12 ad=2.496e-12 \
+        ps=1.136e-05 pd=1.136e-05 nrs=0.0519231 nrd=0.0519231 m=(1)*(1) \
+        par1=(1)*(1)
+    M118 (PG PGB GNDO GNDO) ne3i w=5.2u l=400n as=2.496e-12 ad=2.496e-12 \
+        ps=1.136e-05 pd=1.136e-05 nrs=0.0519231 nrd=0.0519231 m=(1)*(1) \
+        par1=(1)*(1)
+    M02 (ENB EN GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=5.28e-13 \
+        ps=3.16e-06 pd=3.16e-06 nrs=0.245455 nrd=0.245455 m=(1)*(1) \
+        par1=(1)*(1)
+    M24 (NGB A GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+    M15 (net50 A GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+    M25 (NGB EN GND GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+    M14 (PGB ENB net50 GND) ne3i w=1.1u l=400n as=5.28e-13 ad=2.97e-13 \
+        ps=3.16e-06 pd=1.64e-06 nrs=0.245455 nrd=0.245455 m=(1)*(2) \
+        par1=(1)*(2)
+ends jio_tsctrl_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_ts4_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_ts4_pc
+    IP1_1 jio_pe3i_pc
+    IP1_2 jio_pe3i_pc
+    IP1_3 jio_pe3i_pc
+    IP2_1 jio_pe3i_pc
+    IP2_2 jio_pe3i_pc
+    IP2_3 jio_pe3i_pc
+    IP3_1 jio_pe3i_pc
+    IP3_2 jio_pe3i_pc
+    IP3_3 jio_pe3i_pc
+    IP3_4 jio_pe3i_pc
+    IP3_5 jio_pe3i_pc
+    IP3_6 jio_pe3i_pc
+    IP3_7 jio_pe3i_pc
+    IP3_8 jio_pe3i_pc
+    IP3_9 jio_pe3i_pc
+    IP3_10 jio_pe3i_pc
+    IP3_11 jio_pe3i_pc
+    IP3_12 jio_pe3i_pc
+    IP3_13 jio_pe3i_pc
+    IP3_14 jio_pe3i_pc
+    IP3_15 jio_pe3i_pc
+    IP3_16 jio_pe3i_pc
+    IP3_17 jio_pe3i_pc
+    IP3_18 jio_pe3i_pc
+    M0 (ng3 rh GNDO GNDO) ne3i w=1.2u l=400n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+    I5 jio_resp_pc
+    I3 jio_opdio_pc
+    IN3_1 jio_ne3i_pc
+    IN3_2 jio_ne3i_pc
+    IN3_3 jio_ne3i_pc
+    IN3_4 jio_ne3i_pc
+    IN3_5 jio_ne3i_pc
+    IN3_6 jio_ne3i_pc
+    IN3_7 jio_ne3i_pc
+    IN3_8 jio_ne3i_pc
+    IN3_9 jio_ne3i_pc
+    IN3_10 jio_ne3i_pc
+    IN3_11 jio_ne3i_pc
+    IN3_12 jio_ne3i_pc
+    IN3_13 jio_ne3i_pc
+    IN3_14 jio_ne3i_pc
+    IN3_15 jio_ne3i_pc
+    IN3_16 jio_ne3i_pc
+    IN3_17 jio_ne3i_pc
+    IN3_18 jio_ne3i_pc
+    IN3_19 jio_ne3i_pc
+    IN3_20 jio_ne3i_pc
+    IN3_21 jio_ne3i_pc
+    IN2_1 jio_ne3i_pc
+    IN2_2 jio_ne3i_pc
+    IN1 jio_ne3i_pc
+    I2 jio_tp4_pc
+    I1 jio_tsctrl_pc
+ends jio_ts4_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: BT4PC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt BT4PC
+    I0 jio_ts4_pc
+    I5 jio_ipdio_pc
+ends BT4PC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_anrdio_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_anrdio_pc
+    D5 (PSUB DNLW) ddnwmv area=9.789e-10 perimeter=160.12u dbv=0 m=1 \
+        par1=(1) xf_subext=0
+    D0 (PSUB VDN) ddnwmv area=4.69976e-09 perimeter=274.64u dbv=0 m=1 \
+        par1=(1) xf_subext=0
+    D6 (PSUB DNW) ddnwmv area=9.8345e-10 perimeter=160.26u dbv=0 m=1 \
+        par1=(1) xf_subext=0
+    D1 (PWI VDN) dipdnwmv area=4.16648e-09 perimeter=258.64u dbv=0 m=1 \
+        par1=(1)
+    D2 (PWI NW) dipdnwmv area=2.1664e-10 perimeter=59.08u dbv=0 m=1 \
+        par1=(1)
+    D4 (PWI NW) dipdnwmv area=1.2696e-10 perimeter=47.87u dbv=0 m=1 \
+        par1=(1)
+ends jio_anrdio_pc
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: APR04DPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt APR04DPC
+    INS_1 jio_ne3is_pc
+    INS_2 jio_ne3is_pc
+    M2 (ng rh GNDOI GNDOI) ne3i w=1.2u l=400n as=5.76e-13 ad=5.76e-13 \
+        ps=3.36e-06 pd=3.36e-06 nrs=0.225 nrd=0.225 m=(1)*(1) par1=(1)*(1)
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    I3 jio_resp_pc
+    IP_1 jio_pe3i_pc
+    IP_2 jio_pe3i_pc
+    IP_3 jio_pe3i_pc
+    IP_4 jio_pe3i_pc
+    IP_5 jio_pe3i_pc
+    IP_6 jio_pe3i_pc
+    IP_7 jio_pe3i_pc
+    IP_8 jio_pe3i_pc
+    IP_9 jio_pe3i_pc
+    IP_10 jio_pe3i_pc
+    IP_11 jio_pe3i_pc
+    IP_12 jio_pe3i_pc
+    IP_13 jio_pe3i_pc
+    IP_14 jio_pe3i_pc
+    IP_15 jio_pe3i_pc
+    IP_16 jio_pe3i_pc
+    IP_17 jio_pe3i_pc
+    IP_18 jio_pe3i_pc
+    IP_19 jio_pe3i_pc
+    IP_20 jio_pe3i_pc
+    IP_21 jio_pe3i_pc
+    IP_22 jio_pe3i_pc
+    IP_23 jio_pe3i_pc
+    IP_24 jio_pe3i_pc
+    M3 (Y VDDOI VDDOI VDDOI) pe3i w=12.0u l=350.0n as=5.76e-12 ad=3.24e-12 \
+        ps=2.496e-05 pd=1.254e-05 nrs=0.0225 nrd=0.0225 m=(1)*(2) \
+        par1=(1)*(2)
+    I157 jio_anrdio_pc
+    R1 (PAD Y) rpp1 l=2.2u w=2u m=1 par1=1
+ends APR04DPC
+// End of subcircuit definition.
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: APR00DPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt APR00DPC
+    IN_1 jio_ne3i_pc
+    IN_2 jio_ne3i_pc
+    IN_3 jio_ne3i_pc
+    IN_4 jio_ne3i_pc
+    IN_5 jio_ne3i_pc
+    IN_6 jio_ne3i_pc
+    IN_7 jio_ne3i_pc
+    IN_8 jio_ne3i_pc
+    IN_9 jio_ne3i_pc
+    IN_10 jio_ne3i_pc
+    IN_11 jio_ne3i_pc
+    IN_12 jio_ne3i_pc
+    IN_13 jio_ne3i_pc
+    IN_14 jio_ne3i_pc
+    IN_15 jio_ne3i_pc
+    IN_16 jio_ne3i_pc
+    IN_17 jio_ne3i_pc
+    IN_18 jio_ne3i_pc
+    IN_19 jio_ne3i_pc
+    IN_20 jio_ne3i_pc
+    IN_21 jio_ne3i_pc
+    IN_22 jio_ne3i_pc
+    IN_23 jio_ne3i_pc
+    IN_24 jio_ne3i_pc
+    R11 (ng GNDOI VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    R0 (VDDOI pg VDDOI) rdp3 l=3.3u w=440.0n m=1 par1=1
+    I157 jio_andio_pc
+    IP_1 jio_pe3i_pc
+    IP_2 jio_pe3i_pc
+    IP_3 jio_pe3i_pc
+    IP_4 jio_pe3i_pc
+    IP_5 jio_pe3i_pc
+    IP_6 jio_pe3i_pc
+    IP_7 jio_pe3i_pc
+    IP_8 jio_pe3i_pc
+    IP_9 jio_pe3i_pc
+    IP_10 jio_pe3i_pc
+    IP_11 jio_pe3i_pc
+    IP_12 jio_pe3i_pc
+    IP_13 jio_pe3i_pc
+    IP_14 jio_pe3i_pc
+    IP_15 jio_pe3i_pc
+    IP_16 jio_pe3i_pc
+    IP_17 jio_pe3i_pc
+    IP_18 jio_pe3i_pc
+    IP_19 jio_pe3i_pc
+    IP_20 jio_pe3i_pc
+    IP_21 jio_pe3i_pc
+    IP_22 jio_pe3i_pc
+    IP_23 jio_pe3i_pc
+    IP_24 jio_pe3i_pc
+    IP_25 jio_pe3i_pc
+    IP_26 jio_pe3i_pc
+    IP_27 jio_pe3i_pc
+    IP_28 jio_pe3i_pc
+    IP_29 jio_pe3i_pc
+    IP_30 jio_pe3i_pc
+    IP_31 jio_pe3i_pc
+    IP_32 jio_pe3i_pc
+ends APR00DPC
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_dhpw_2x100
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_dhpw_2x100
+    D0 (Sub K) ddnw area=3.37852e-09 perimeter=284.4u dbv=0.0 m=1 par1=(1) \
+        xf_subext=0
+    D1 (A K) dhpw area=3.87893e-10 perimeter=207.812u dbv=0.0 m=2 par1=(2)
+ends ioh_dhpw_2x100
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_dhpw_2x100_stack3
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_dhpw_2x100_stack3
+    I0 ioh_dhpw_2x100
+    I2 ioh_dhpw_2x100
+    I1 ioh_dhpw_2x100
+ends ioh_dhpw_2x100_stack3
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsab_40_10
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsab_40_10
+    MPX (D G S B) pmb w=40.12u l=1u as=1.92576e-11 ad=1.92576e-11 \
+        ps=8.12e-05 pd=8.12e-05 nrs=0.00672981 nrd=0.00672981 m=(1)*(1) \
+        par1=(1)*(1)
+ends ioh_pmbsab_40_10
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsabhv_2000
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsabhv_2000
+    R0_1 (net20_0 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_2 (net20_1 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_3 (net20_2 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_4 (net20_3 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_5 (net20_4 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_6 (net20_5 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_7 (net20_6 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_8 (net20_7 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_9 (net20_8 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_10 (net20_9 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_11 (net20_10 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_12 (net20_11 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_13 (net20_12 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_14 (net20_13 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_15 (net20_14 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_16 (net20_15 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_17 (net20_16 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_18 (net20_17 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_19 (net20_18 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_20 (net20_19 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_21 (net20_20 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_22 (net20_21 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_23 (net20_22 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_24 (net20_23 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_25 (net20_24 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_26 (net20_25 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_27 (net20_26 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_28 (net20_27 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_29 (net20_28 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_30 (net20_29 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_31 (net20_30 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_32 (net20_31 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_33 (net20_32 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_34 (net20_33 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_35 (net20_34 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_36 (net20_35 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_37 (net20_36 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_38 (net20_37 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_39 (net20_38 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_40 (net20_39 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_41 (net20_40 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_42 (net20_41 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_43 (net20_42 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_44 (net20_43 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_45 (net20_44 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_46 (net20_45 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_47 (net20_46 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_48 (net20_47 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_49 (net20_48 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    R0_50 (net20_49 D GSB) rdp_io l=510.00n w=40u m=1 par1=1 xf_subext=0
+    D0_1 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_2 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_3 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_4 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_5 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_6 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_7 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_8 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_9 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_10 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_11 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_12 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_13 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_14 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_15 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_16 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_17 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_18 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_19 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_20 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_21 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_22 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_23 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_24 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_25 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_26 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_27 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_28 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_29 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_30 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_31 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_32 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_33 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_34 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_35 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_36 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_37 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_38 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_39 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_40 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_41 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_42 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_43 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_44 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_45 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_46 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_47 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_48 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_49 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_50 (D GSB) dphnw area=1.32132e-11 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D1 (Sub GSB) ddnw area=5.93593e-09 perimeter=334.2u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    MP_1 ioh_pmbsab_40_10
+    MP_2 ioh_pmbsab_40_10
+    MP_3 ioh_pmbsab_40_10
+    MP_4 ioh_pmbsab_40_10
+    MP_5 ioh_pmbsab_40_10
+    MP_6 ioh_pmbsab_40_10
+    MP_7 ioh_pmbsab_40_10
+    MP_8 ioh_pmbsab_40_10
+    MP_9 ioh_pmbsab_40_10
+    MP_10 ioh_pmbsab_40_10
+    MP_11 ioh_pmbsab_40_10
+    MP_12 ioh_pmbsab_40_10
+    MP_13 ioh_pmbsab_40_10
+    MP_14 ioh_pmbsab_40_10
+    MP_15 ioh_pmbsab_40_10
+    MP_16 ioh_pmbsab_40_10
+    MP_17 ioh_pmbsab_40_10
+    MP_18 ioh_pmbsab_40_10
+    MP_19 ioh_pmbsab_40_10
+    MP_20 ioh_pmbsab_40_10
+    MP_21 ioh_pmbsab_40_10
+    MP_22 ioh_pmbsab_40_10
+    MP_23 ioh_pmbsab_40_10
+    MP_24 ioh_pmbsab_40_10
+    MP_25 ioh_pmbsab_40_10
+    MP_26 ioh_pmbsab_40_10
+    MP_27 ioh_pmbsab_40_10
+    MP_28 ioh_pmbsab_40_10
+    MP_29 ioh_pmbsab_40_10
+    MP_30 ioh_pmbsab_40_10
+    MP_31 ioh_pmbsab_40_10
+    MP_32 ioh_pmbsab_40_10
+    MP_33 ioh_pmbsab_40_10
+    MP_34 ioh_pmbsab_40_10
+    MP_35 ioh_pmbsab_40_10
+    MP_36 ioh_pmbsab_40_10
+    MP_37 ioh_pmbsab_40_10
+    MP_38 ioh_pmbsab_40_10
+    MP_39 ioh_pmbsab_40_10
+    MP_40 ioh_pmbsab_40_10
+    MP_41 ioh_pmbsab_40_10
+    MP_42 ioh_pmbsab_40_10
+    MP_43 ioh_pmbsab_40_10
+    MP_44 ioh_pmbsab_40_10
+    MP_45 ioh_pmbsab_40_10
+    MP_46 ioh_pmbsab_40_10
+    MP_47 ioh_pmbsab_40_10
+    MP_48 ioh_pmbsab_40_10
+    MP_49 ioh_pmbsab_40_10
+    MP_50 ioh_pmbsab_40_10
+ends ioh_pmbsabhv_2000
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isab_40_04
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isab_40_04
+    MPX (net17 G S B) pe3i w=40u l=400n as=1.92e-11 ad=1.92e-11 \
+        ps=8.096e-05 pd=8.096e-05 nrs=0.00675 nrd=0.00675 m=(1)*(1) \
+        par1=(1)*(1)
+    R0 (net17 D B) rdp3 l=430.0n w=40u m=1 par1=1
+ends ioh_pe3isab_40_04
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isabhv_2800gcr
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isabhv_2800gcr
+    MD_1 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_2 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_3 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_4 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_5 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_6 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_7 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_8 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_9 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_10 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_11 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_12 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_13 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_14 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_15 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_16 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_17 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_18 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_19 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_20 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_21 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_22 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_23 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_24 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_25 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_26 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_27 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_28 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_29 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_30 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_31 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_32 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_33 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_34 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_35 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    D0 (Sub SB) ddnw area=5.99695e-09 perimeter=335.2u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    R0 (SB net20) rnp1 l=25.50u w=420.0n m=1 par1=1
+    MP_1 ioh_pe3isab_40_04
+    MP_2 ioh_pe3isab_40_04
+    MP_3 ioh_pe3isab_40_04
+    MP_4 ioh_pe3isab_40_04
+    MP_5 ioh_pe3isab_40_04
+    MP_6 ioh_pe3isab_40_04
+    MP_7 ioh_pe3isab_40_04
+    MP_8 ioh_pe3isab_40_04
+    MP_9 ioh_pe3isab_40_04
+    MP_10 ioh_pe3isab_40_04
+    MP_11 ioh_pe3isab_40_04
+    MP_12 ioh_pe3isab_40_04
+    MP_13 ioh_pe3isab_40_04
+    MP_14 ioh_pe3isab_40_04
+    MP_15 ioh_pe3isab_40_04
+    MP_16 ioh_pe3isab_40_04
+    MP_17 ioh_pe3isab_40_04
+    MP_18 ioh_pe3isab_40_04
+    MP_19 ioh_pe3isab_40_04
+    MP_20 ioh_pe3isab_40_04
+    MP_21 ioh_pe3isab_40_04
+    MP_22 ioh_pe3isab_40_04
+    MP_23 ioh_pe3isab_40_04
+    MP_24 ioh_pe3isab_40_04
+    MP_25 ioh_pe3isab_40_04
+    MP_26 ioh_pe3isab_40_04
+    MP_27 ioh_pe3isab_40_04
+    MP_28 ioh_pe3isab_40_04
+    MP_29 ioh_pe3isab_40_04
+    MP_30 ioh_pe3isab_40_04
+    MP_31 ioh_pe3isab_40_04
+    MP_32 ioh_pe3isab_40_04
+    MP_33 ioh_pe3isab_40_04
+    MP_34 ioh_pe3isab_40_04
+    MP_35 ioh_pe3isab_40_04
+    MP_36 ioh_pe3isab_40_04
+    MP_37 ioh_pe3isab_40_04
+    MP_38 ioh_pe3isab_40_04
+    MP_39 ioh_pe3isab_40_04
+    MP_40 ioh_pe3isab_40_04
+    MP_41 ioh_pe3isab_40_04
+    MP_42 ioh_pe3isab_40_04
+    MP_43 ioh_pe3isab_40_04
+    MP_44 ioh_pe3isab_40_04
+    MP_45 ioh_pe3isab_40_04
+    MP_46 ioh_pe3isab_40_04
+    MP_47 ioh_pe3isab_40_04
+    MP_48 ioh_pe3isab_40_04
+    MP_49 ioh_pe3isab_40_04
+    MP_50 ioh_pe3isab_40_04
+    MP_51 ioh_pe3isab_40_04
+    MP_52 ioh_pe3isab_40_04
+    MP_53 ioh_pe3isab_40_04
+    MP_54 ioh_pe3isab_40_04
+    MP_55 ioh_pe3isab_40_04
+    MP_56 ioh_pe3isab_40_04
+    MP_57 ioh_pe3isab_40_04
+    MP_58 ioh_pe3isab_40_04
+    MP_59 ioh_pe3isab_40_04
+    MP_60 ioh_pe3isab_40_04
+    MP_61 ioh_pe3isab_40_04
+    MP_62 ioh_pe3isab_40_04
+    MP_63 ioh_pe3isab_40_04
+    MP_64 ioh_pe3isab_40_04
+    MP_65 ioh_pe3isab_40_04
+    MP_66 ioh_pe3isab_40_04
+    MP_67 ioh_pe3isab_40_04
+    MP_68 ioh_pe3isab_40_04
+    MP_69 ioh_pe3isab_40_04
+    MP_70 ioh_pe3isab_40_04
+ends ioh_pe3isabhv_2800gcr
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_d5pk
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_d5pk
+    I3 ioh_pmbsabhv_2000
+    I4 ioh_pmbsabhv_2000
+    I2 ioh_pmbsabhv_2000
+    I1 ioh_pmbsabhv_2000
+    I5 ioh_pe3isabhv_2800gcr
+ends ioh_d5pk
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: HVDD4DJ5PKFs
+// View name: schematic
+// Inherited view list: schematic
+subckt HVDD4DJ5PKFs
+    I9 ioh_dhpw_2x100_stack3
+    I11 ioh_d5pk
+ends HVDD4DJ5PKFs
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_d2pk
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_d2pk
+    I1 ioh_pmbsabhv_2000
+    I5 ioh_pe3isabhv_2800gcr
+ends ioh_d2pk
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: HVDD4D2PK
+// View name: schematic
+// Inherited view list: schematic
+subckt HVDD4D2PK
+    I11 ioh_d2pk
+    D0 (GND PAD) ddnw area=3.89668e-10 perimeter=208.5u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+ends HVDD4D2PK
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_iscrd2_4x100
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_iscrd2_4x100
+    D1 (Gp K) dnpdd_scr area=5.36386e-10 perimeter=409.56u dbv=0.0 m=1
+    D2 (Gp Gn) dpdd_scr area=2.19633e-09 perimeter=457.16u dbv=0.0 m=1
+    D0 (A Gn) dpdnw area=1.89063e-10 perimeter=203.78u dbv=0.0 m=4 \
+        par1=(4)
+    D_Guard (Sub Gn) ddnw area=6.92224e-09 perimeter=359.17u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+ends ioh_iscrd2_4x100
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isab_15_04
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isab_15_04
+    MPX (net17 G S B) pe3i w=15.0u l=400n as=7.2e-12 ad=7.2e-12 \
+        ps=3.096e-05 pd=3.096e-05 nrs=0.018 nrd=0.018 m=(1)*(1) \
+        par1=(1)*(1)
+    R0 (net17 D B) rdp3 l=430.0n w=15.0u m=1 par1=1
+ends ioh_pe3isab_15_04
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pe3isabhv_1050gcr
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pe3isabhv_1050gcr
+    MD_1 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_2 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_3 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_4 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_5 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_6 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_7 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_8 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_9 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_10 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_11 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_12 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_13 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_14 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_15 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_16 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_17 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_18 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_19 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_20 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_21 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_22 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_23 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_24 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_25 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_26 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_27 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_28 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_29 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_30 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_31 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_32 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_33 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_34 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_35 (D SB) dp3 area=9.89102e-12 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    D0 (Sub SB) ddnw area=3.10026e-09 perimeter=285.2u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    R0 (SB net20) rnp1 l=25.50u w=420.0n m=1 par1=1
+    MP_1 ioh_pe3isab_15_04
+    MP_2 ioh_pe3isab_15_04
+    MP_3 ioh_pe3isab_15_04
+    MP_4 ioh_pe3isab_15_04
+    MP_5 ioh_pe3isab_15_04
+    MP_6 ioh_pe3isab_15_04
+    MP_7 ioh_pe3isab_15_04
+    MP_8 ioh_pe3isab_15_04
+    MP_9 ioh_pe3isab_15_04
+    MP_10 ioh_pe3isab_15_04
+    MP_11 ioh_pe3isab_15_04
+    MP_12 ioh_pe3isab_15_04
+    MP_13 ioh_pe3isab_15_04
+    MP_14 ioh_pe3isab_15_04
+    MP_15 ioh_pe3isab_15_04
+    MP_16 ioh_pe3isab_15_04
+    MP_17 ioh_pe3isab_15_04
+    MP_18 ioh_pe3isab_15_04
+    MP_19 ioh_pe3isab_15_04
+    MP_20 ioh_pe3isab_15_04
+    MP_21 ioh_pe3isab_15_04
+    MP_22 ioh_pe3isab_15_04
+    MP_23 ioh_pe3isab_15_04
+    MP_24 ioh_pe3isab_15_04
+    MP_25 ioh_pe3isab_15_04
+    MP_26 ioh_pe3isab_15_04
+    MP_27 ioh_pe3isab_15_04
+    MP_28 ioh_pe3isab_15_04
+    MP_29 ioh_pe3isab_15_04
+    MP_30 ioh_pe3isab_15_04
+    MP_31 ioh_pe3isab_15_04
+    MP_32 ioh_pe3isab_15_04
+    MP_33 ioh_pe3isab_15_04
+    MP_34 ioh_pe3isab_15_04
+    MP_35 ioh_pe3isab_15_04
+    MP_36 ioh_pe3isab_15_04
+    MP_37 ioh_pe3isab_15_04
+    MP_38 ioh_pe3isab_15_04
+    MP_39 ioh_pe3isab_15_04
+    MP_40 ioh_pe3isab_15_04
+    MP_41 ioh_pe3isab_15_04
+    MP_42 ioh_pe3isab_15_04
+    MP_43 ioh_pe3isab_15_04
+    MP_44 ioh_pe3isab_15_04
+    MP_45 ioh_pe3isab_15_04
+    MP_46 ioh_pe3isab_15_04
+    MP_47 ioh_pe3isab_15_04
+    MP_48 ioh_pe3isab_15_04
+    MP_49 ioh_pe3isab_15_04
+    MP_50 ioh_pe3isab_15_04
+    MP_51 ioh_pe3isab_15_04
+    MP_52 ioh_pe3isab_15_04
+    MP_53 ioh_pe3isab_15_04
+    MP_54 ioh_pe3isab_15_04
+    MP_55 ioh_pe3isab_15_04
+    MP_56 ioh_pe3isab_15_04
+    MP_57 ioh_pe3isab_15_04
+    MP_58 ioh_pe3isab_15_04
+    MP_59 ioh_pe3isab_15_04
+    MP_60 ioh_pe3isab_15_04
+    MP_61 ioh_pe3isab_15_04
+    MP_62 ioh_pe3isab_15_04
+    MP_63 ioh_pe3isab_15_04
+    MP_64 ioh_pe3isab_15_04
+    MP_65 ioh_pe3isab_15_04
+    MP_66 ioh_pe3isab_15_04
+    MP_67 ioh_pe3isab_15_04
+    MP_68 ioh_pe3isab_15_04
+    MP_69 ioh_pe3isab_15_04
+    MP_70 ioh_pe3isab_15_04
+ends ioh_pe3isabhv_1050gcr
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsab_15_10
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsab_15_10
+    MPX (D G S B) pmb w=15.12u l=1u as=7.2576e-12 ad=7.2576e-12 \
+        ps=3.12e-05 pd=3.12e-05 nrs=0.0178571 nrd=0.0178571 m=(1)*(1) \
+        par1=(1)*(1)
+ends ioh_pmbsab_15_10
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_pmbsabhv_750
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_pmbsabhv_750
+    R0_1 (net20_0 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_2 (net20_1 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_3 (net20_2 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_4 (net20_3 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_5 (net20_4 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_6 (net20_5 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_7 (net20_6 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_8 (net20_7 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_9 (net20_8 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_10 (net20_9 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_11 (net20_10 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_12 (net20_11 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_13 (net20_12 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_14 (net20_13 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_15 (net20_14 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_16 (net20_15 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_17 (net20_16 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_18 (net20_17 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_19 (net20_18 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_20 (net20_19 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_21 (net20_20 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_22 (net20_21 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_23 (net20_22 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_24 (net20_23 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_25 (net20_24 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_26 (net20_25 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_27 (net20_26 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_28 (net20_27 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_29 (net20_28 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_30 (net20_29 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_31 (net20_30 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_32 (net20_31 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_33 (net20_32 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_34 (net20_33 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_35 (net20_34 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_36 (net20_35 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_37 (net20_36 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_38 (net20_37 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_39 (net20_38 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_40 (net20_39 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_41 (net20_40 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_42 (net20_41 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_43 (net20_42 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_44 (net20_43 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_45 (net20_44 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_46 (net20_45 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_47 (net20_46 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_48 (net20_47 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_49 (net20_48 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    R0_50 (net20_49 D GSB) rdp_io l=510.00n w=15u m=1 par1=1 xf_subext=0
+    D0_1 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_2 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_3 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_4 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_5 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_6 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_7 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_8 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_9 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_10 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_11 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_12 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_13 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_14 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_15 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_16 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_17 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_18 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_19 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_20 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_21 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_22 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_23 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_24 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_25 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_26 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_27 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_28 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_29 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_30 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_31 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_32 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_33 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_34 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_35 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_36 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_37 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_38 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_39 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_40 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_41 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_42 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_43 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_44 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_45 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_46 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_47 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_48 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_49 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D0_50 (D GSB) dphnw area=4.95062e-12 perimeter=660.00n dbv=0.0 m=1 \
+        par1=(1)
+    D1 (Sub GSB) ddnw area=3.03711e-09 perimeter=284u dbv=0.0 m=1 par1=(1) \
+        xf_subext=0
+    MP_1 ioh_pmbsab_15_10
+    MP_2 ioh_pmbsab_15_10
+    MP_3 ioh_pmbsab_15_10
+    MP_4 ioh_pmbsab_15_10
+    MP_5 ioh_pmbsab_15_10
+    MP_6 ioh_pmbsab_15_10
+    MP_7 ioh_pmbsab_15_10
+    MP_8 ioh_pmbsab_15_10
+    MP_9 ioh_pmbsab_15_10
+    MP_10 ioh_pmbsab_15_10
+    MP_11 ioh_pmbsab_15_10
+    MP_12 ioh_pmbsab_15_10
+    MP_13 ioh_pmbsab_15_10
+    MP_14 ioh_pmbsab_15_10
+    MP_15 ioh_pmbsab_15_10
+    MP_16 ioh_pmbsab_15_10
+    MP_17 ioh_pmbsab_15_10
+    MP_18 ioh_pmbsab_15_10
+    MP_19 ioh_pmbsab_15_10
+    MP_20 ioh_pmbsab_15_10
+    MP_21 ioh_pmbsab_15_10
+    MP_22 ioh_pmbsab_15_10
+    MP_23 ioh_pmbsab_15_10
+    MP_24 ioh_pmbsab_15_10
+    MP_25 ioh_pmbsab_15_10
+    MP_26 ioh_pmbsab_15_10
+    MP_27 ioh_pmbsab_15_10
+    MP_28 ioh_pmbsab_15_10
+    MP_29 ioh_pmbsab_15_10
+    MP_30 ioh_pmbsab_15_10
+    MP_31 ioh_pmbsab_15_10
+    MP_32 ioh_pmbsab_15_10
+    MP_33 ioh_pmbsab_15_10
+    MP_34 ioh_pmbsab_15_10
+    MP_35 ioh_pmbsab_15_10
+    MP_36 ioh_pmbsab_15_10
+    MP_37 ioh_pmbsab_15_10
+    MP_38 ioh_pmbsab_15_10
+    MP_39 ioh_pmbsab_15_10
+    MP_40 ioh_pmbsab_15_10
+    MP_41 ioh_pmbsab_15_10
+    MP_42 ioh_pmbsab_15_10
+    MP_43 ioh_pmbsab_15_10
+    MP_44 ioh_pmbsab_15_10
+    MP_45 ioh_pmbsab_15_10
+    MP_46 ioh_pmbsab_15_10
+    MP_47 ioh_pmbsab_15_10
+    MP_48 ioh_pmbsab_15_10
+    MP_49 ioh_pmbsab_15_10
+    MP_50 ioh_pmbsab_15_10
+ends ioh_pmbsabhv_750
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: ioh_c5pk
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_c5pk
+    I5 ioh_pe3isabhv_1050gcr
+    I3 ioh_pmbsabhv_750
+    I4 ioh_pmbsabhv_750
+    I2 ioh_pmbsabhv_750
+    I1 ioh_pmbsabhv_750
+ends ioh_c5pk
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: HVD4SJD1R5PKFs
+// View name: schematic
+// Inherited view list: schematic
+subckt HVD4SJD1R5PKFs
+    I10 ioh_iscrd2_4x100
+    I9 ioh_dhpw_2x100_stack3
+    I11 ioh_c5pk
+    R4 (IGND Trig_0) rpp1s l=16.0u w=100.0000u m=1 par1=1
+ends HVD4SJD1R5PKFs
+// End of subcircuit definition.
+
+// Library name: IORING
+// Cell name: ioring
+// View name: schematic
+// Inherited view list: schematic
+subckt ioring
+    I18 VDDORPADPC
+    I1 VDDORPADPC
+    I21 VDDPADPC
+    I3 VDDPADPC
+    I20 GNDORPADPC
+    I0 GNDORPADPC
+    I4 PSUBPADPC
+    I19 GNDPADPC
+    I5 GNDPADPC
+    I11 ICPC
+    I10 ICPC
+    I9 ICPC
+    I35 PWRCUTDCPC
+    I34 PWRCUTDCPC
+    I12 PWRCUTDCPC
+    I17 BT4PC
+    I16 BT4PC
+    I15 BT4PC
+    I22 APR04DPC
+    I23 APR00DPC
+    I24 HVDD4DJ5PKFs
+    I36 HVDD4D2PK
+    I33 HVD4SJD1R5PKFs
+ends ioring
+// End of subcircuit definition.
+
+// Library name: INV_LP
+// Cell name: inv
+// View name: schematic
+// Inherited view list: schematic
+subckt inv
+    M0 (OUT IN VS VS) ne3 w=2u l=350.0n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1) xf_subext=0
+    M1 (OUT IN VD VD) pe3 w=2u l=300n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+ends inv
+// End of subcircuit definition.
+
+// Library name: INV_HV
+// Cell name: inv_hv
+// View name: schematic
+// Inherited view list: schematic
+subckt inv_hv
+    M0 (OUT IN GNDHV VSUB) nedia w=40u l=1.25u m=(1)*(1) par1=(1)*(1) \
+        extlay=0 xf_subext=0
+    R0 (VDDHV OUT VSUB) rpp1k1_3 l=103.425u w=10u m=1 par1=1
+ends inv_hv
+// End of subcircuit definition.
+
+// Library name: GATES_JI3V
+// Cell name: nand2ji3v
+// View name: schematic
+// Inherited view list: schematic
+subckt nand2ji3v
+parameters GT_PUW GT_PUL=300.00n GT_PDW GT_PDL=350.00n
+    MP1 (out a inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP2 (out b inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN1 (out a net25 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN2 (net25 b inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+ends nand2ji3v
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: NA2JI3VX0
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt NA2JI3VX0
+    nand2_1 nand2ji3v GT_PUW=700.00n GT_PUL=300.00n GT_PDW=560.0n \
+        GT_PDL=350.00n
+ends NA2JI3VX0
+// End of subcircuit definition.
+
+// Library name: GATES_JI3V
+// Cell name: invrji3v
+// View name: schematic
+// Inherited view list: schematic
+subckt invrji3v
+parameters GT_PUW GT_PUL=300.00n GT_PDW GT_PDL=350.00n
+    MP1 (out in inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN1 (out in inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+ends invrji3v
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: INJI3VX0
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt INJI3VX0
+    invr_1 invrji3v GT_PUW=940.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+ends INJI3VX0
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DLY2JI3VX1
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DLY2JI3VX1
+    M5 (net080 net039 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n l=1u \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M2 (net039 net47 net084 inh_power_vdd3i) pe3i w=420.0n l=740.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M6 (net35 net039 net080 inh_power_vdd3i) pe3i w=420.0n l=1u \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M1 (net084 net47 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n \
+        l=740.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    invr_2 invrji3v GT_PUW=1.41u GT_PUL=300.00n GT_PDW=890.00n \
+        GT_PDL=350.00n
+    invr_1 invrji3v GT_PUW=700.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    M4 (net31 net47 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=800n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M8 (net035 net039 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=1u as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M7 (net35 net039 net035 inh_ground_gnd3i) ne3i w=420.0n l=1u \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M3 (net039 net47 net31 inh_ground_gnd3i) ne3i w=420.0n l=800n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+ends DLY2JI3VX1
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: BUJI3VX2
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt BUJI3VX2
+    invr_1 invrji3v GT_PUW=1.1u GT_PUL=300.00n GT_PDW=600.00n \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=2.92u GT_PUL=300.00n GT_PDW=1.2u GT_PDL=350.00n
+ends BUJI3VX2
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DECAP5JI3V
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DECAP5JI3V
+    M0 (net5 net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=830.0n l=1.48u \
+        as=3.984e-13 ad=3.984e-13 ps=2.62e-06 pd=2.62e-06 nrs=0.325301 \
+        nrd=0.325301 m=(1)*(1) par1=(1)*(1)
+    M1 (net4 net5 inh_power_vdd3i inh_power_vdd3i) pe3i w=1.36u l=1.46u \
+        as=6.528e-13 ad=6.528e-13 ps=3.68e-06 pd=3.68e-06 nrs=0.198529 \
+        nrd=0.198529 m=(1)*(1) par1=(1)*(1)
+ends DECAP5JI3V
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DECAP7JI3V
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DECAP7JI3V
+    M7 (net3 net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=880.0n \
+        l=350.0n as=4.224e-13 ad=4.224e-13 ps=2.72e-06 pd=2.72e-06 \
+        nrs=0.306818 nrd=0.306818 m=(1)*(1) par1=(1)*(1)
+    M6 (inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i \
+        w=880.0n l=1.75u as=4.224e-13 ad=4.224e-13 ps=2.72e-06 pd=2.72e-06 \
+        nrs=0.306818 nrd=0.306818 m=(1)*(1) par1=(1)*(1)
+    M5 (net4 net3 inh_power_vdd3i inh_power_vdd3i) pe3i w=1.315u l=300n \
+        as=6.312e-13 ad=6.312e-13 ps=3.59e-06 pd=3.59e-06 nrs=0.205323 \
+        nrd=0.205323 m=(1)*(1) par1=(1)*(1)
+    M4 (inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i) pe3i \
+        w=1.315u l=1.71u as=6.312e-13 ad=6.312e-13 ps=3.59e-06 pd=3.59e-06 \
+        nrs=0.205323 nrd=0.205323 m=(1)*(1) par1=(1)*(1)
+ends DECAP7JI3V
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DECAP10JI3V
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DECAP10JI3V
+    M7 (net3 net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=880.0n \
+        l=350.0n as=4.224e-13 ad=4.224e-13 ps=2.72e-06 pd=2.72e-06 \
+        nrs=0.306818 nrd=0.306818 m=(1)*(1) par1=(1)*(1)
+    M6 (inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i \
+        w=1.76u l=1.445u as=8.448e-13 ad=8.448e-13 ps=4.48e-06 pd=4.48e-06 \
+        nrs=0.153409 nrd=0.153409 m=(1)*(1) par1=(1)*(1)
+    M5 (net4 net3 inh_power_vdd3i inh_power_vdd3i) pe3i w=1.315u l=300n \
+        as=6.312e-13 ad=6.312e-13 ps=3.59e-06 pd=3.59e-06 nrs=0.205323 \
+        nrd=0.205323 m=(1)*(1) par1=(1)*(1)
+    M4 (inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i) pe3i w=2.63u \
+        l=1.425u as=1.2624e-12 ad=1.2624e-12 ps=6.22e-06 pd=6.22e-06 \
+        nrs=0.102662 nrd=0.102662 m=(1)*(1) par1=(1)*(1)
+ends DECAP10JI3V
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DECAP15JI3V
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DECAP15JI3V
+    M7 (net3 net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=880.0n \
+        l=350.0n as=4.224e-13 ad=4.224e-13 ps=2.72e-06 pd=2.72e-06 \
+        nrs=0.306818 nrd=0.306818 m=(1)*(1) par1=(1)*(1)
+    M6 (inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i \
+        w=2.64u l=1.71u as=1.2672e-12 ad=1.2672e-12 ps=6.24e-06 \
+        pd=6.24e-06 nrs=0.102273 nrd=0.102273 m=(1)*(1) par1=(1)*(1)
+    M5 (net4 net3 inh_power_vdd3i inh_power_vdd3i) pe3i w=1.315u l=300n \
+        as=6.312e-13 ad=6.312e-13 ps=3.59e-06 pd=3.59e-06 nrs=0.205323 \
+        nrd=0.205323 m=(1)*(1) par1=(1)*(1)
+    M4 (inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i) pe3i \
+        w=3.945u l=1.7u as=1.8936e-12 ad=1.8936e-12 ps=8.85e-06 \
+        pd=8.85e-06 nrs=0.0684411 nrd=0.0684411 m=(1)*(1) par1=(1)*(1)
+ends DECAP15JI3V
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DECAP25JI3V
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DECAP25JI3V
+    M7 (net3 net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=880.0n \
+        l=350.0n as=4.224e-13 ad=4.224e-13 ps=2.72e-06 pd=2.72e-06 \
+        nrs=0.306818 nrd=0.306818 m=(1)*(1) par1=(1)*(1)
+    M6 (inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i) ne3i \
+        w=4.4u l=1.94u as=2.112e-12 ad=2.112e-12 ps=9.76e-06 pd=9.76e-06 \
+        nrs=0.0613636 nrd=0.0613636 m=(1)*(1) par1=(1)*(1)
+    M5 (net4 net3 inh_power_vdd3i inh_power_vdd3i) pe3i w=1.315u l=300n \
+        as=6.312e-13 ad=6.312e-13 ps=3.59e-06 pd=3.59e-06 nrs=0.205323 \
+        nrd=0.205323 m=(1)*(1) par1=(1)*(1)
+    M4 (inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i) pe3i \
+        w=6.575u l=1.93u as=3.156e-12 ad=3.156e-12 ps=1.411e-05 \
+        pd=1.411e-05 nrs=0.0410646 nrd=0.0410646 m=(1)*(1) par1=(1)*(1)
+ends DECAP25JI3V
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: BUJI3VX1
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt BUJI3VX1
+    invr_1 invrji3v GT_PUW=900.0n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=1.46u GT_PUL=300.00n GT_PDW=660.0n \
+        GT_PDL=350.00n
+ends BUJI3VX1
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DFRQJI3VX1
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DFRQJI3VX1
+    M24 (MQIB CI net162 inh_power_vdd3i) pe3i w=1.1u l=300n as=5.28e-13 \
+        ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 nrd=0.245455 \
+        m=(1)*(1) par1=(1)*(1)
+    M56 (MQI MQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=720.0n l=300n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M30 (net170 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=1.15u l=300n \
+        as=5.52e-13 ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 \
+        nrd=0.234783 m=(1)*(1) par1=(1)*(1)
+    M23 (net162 D inh_power_vdd3i inh_power_vdd3i) pe3i w=1.1u l=300n \
+        as=5.28e-13 ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 \
+        nrd=0.245455 m=(1)*(1) par1=(1)*(1)
+    M59 (net142 SQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=720.0n l=300n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M36 (net166 net142 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n \
+        l=300n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M35 (SQIB CI net166 inh_power_vdd3i) pe3i w=420.0n l=300n as=2.016e-13 \
+        ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 nrd=0.642857 \
+        m=(1)*(1) par1=(1)*(1)
+    M34 (MQIB CIB net174 inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M33 (SQIB CIB net170 inh_power_vdd3i) pe3i w=1.15u l=300n as=5.52e-13 \
+        ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 nrd=0.234783 \
+        m=(1)*(1) par1=(1)*(1)
+    M28 (net174 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    invr_3 invrji3v GT_PUW=1.41u GT_PUL=300.00n GT_PDW=890.00n \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    invr_1 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    M18 (MQIB CIB net124 inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M17 (MQI MQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M15 (net124 D inh_ground_gnd3i inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M46 (SQIB CI net132 inh_ground_gnd3i) ne3i w=720.0n l=350.0n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M19 (MQIB CI net120 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M51 (SQIB CIB net140 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M50 (net140 net142 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M49 (net142 SQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M47 (net132 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=720.0n \
+        l=350.0n as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M61 (net120 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+ends DFRQJI3VX1
+// End of subcircuit definition.
+
+// Library name: GATES_JI3V
+// Cell name: nor2ji3v
+// View name: schematic
+// Inherited view list: schematic
+subckt nor2ji3v
+parameters GT_PUW GT_PUL=300.00n GT_PDW GT_PDL=350.00n
+    MP1 (out a net32 inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP2 (net32 b inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN1 (out b inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN2 (out a inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+ends nor2ji3v
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: NO2JI3VX0
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt NO2JI3VX0
+    nor2_1 nor2ji3v GT_PUW=850.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+ends NO2JI3VX0
+// End of subcircuit definition.
+
+// Library name: GATES_JI3V
+// Cell name: o2na2ji3v
+// View name: schematic
+// Inherited view list: schematic
+subckt o2na2ji3v
+parameters GT_PDW GT_PDL=350.00n GT_PUW GT_PUL=300.00n
+    MN2 (net7 b inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN1 (net7 a inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN3 (out c net7 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP1 (out a net17 inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP3 (out c inh_power_vdd3i inh_power_vdd3i) pe3i w=0.7*GT_PUW l=GT_PUL \
+        as=4.8e-07*(0.7*GT_PUW) ad=4.8e-07*(0.7*GT_PUW) \
+        ps=1*2*(4.8e-07+(0.7*GT_PUW)) pd=2*(4.8e-07+(0.7*GT_PUW)) \
+        nrs=2.7e-07/(0.7*GT_PUW) nrd=2.7e-07/(0.7*GT_PUW) m=(1)*(1) \
+        par1=(1)*(1)
+    MP2 (net17 b inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+ends o2na2ji3v
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: EN2JI3VX0
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt EN2JI3VX0
+    nand2_1 nand2ji3v GT_PUW=900.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    o2na2_1 o2na2ji3v GT_PDW=420.00n GT_PDL=350.00n GT_PUW=1.3u \
+        GT_PUL=300.00n
+ends EN2JI3VX0
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DFRQJI3VX2
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DFRQJI3VX2
+    M24 (MQIB CI net162 inh_power_vdd3i) pe3i w=1.1u l=300n as=5.28e-13 \
+        ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 nrd=0.245455 \
+        m=(1)*(1) par1=(1)*(1)
+    M56 (MQI MQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=720.0n l=300n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M30 (net170 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=1.15u l=300n \
+        as=5.52e-13 ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 \
+        nrd=0.234783 m=(1)*(1) par1=(1)*(1)
+    M23 (net162 D inh_power_vdd3i inh_power_vdd3i) pe3i w=1.1u l=300n \
+        as=5.28e-13 ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 \
+        nrd=0.245455 m=(1)*(1) par1=(1)*(1)
+    M59 (net142 SQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=720.0n l=300n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M36 (net166 net142 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n \
+        l=300n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M35 (SQIB CI net166 inh_power_vdd3i) pe3i w=420.0n l=300n as=2.016e-13 \
+        ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 nrd=0.642857 \
+        m=(1)*(1) par1=(1)*(1)
+    M34 (MQIB CIB net174 inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M33 (SQIB CIB net170 inh_power_vdd3i) pe3i w=1.15u l=300n as=5.52e-13 \
+        ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 nrd=0.234783 \
+        m=(1)*(1) par1=(1)*(1)
+    M28 (net174 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    invr_3 invrji3v GT_PUW=2.82u GT_PUL=300.00n GT_PDW=1.78u \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    invr_1 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    M18 (MQIB CIB net124 inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M17 (MQI MQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M15 (net124 D inh_ground_gnd3i inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M46 (SQIB CI net132 inh_ground_gnd3i) ne3i w=720.0n l=350.0n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M19 (MQIB CI net120 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M51 (SQIB CIB net140 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M50 (net140 net142 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M49 (net142 SQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M47 (net132 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=720.0n \
+        l=350.0n as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M61 (net120 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+ends DFRQJI3VX2
+// End of subcircuit definition.
+
+// Library name: GATES_JI3V
+// Cell name: a22no2ji3v
+// View name: schematic
+// Inherited view list: schematic
+subckt a22no2ji3v
+parameters GT_PDW GT_PDL=350.00n GT_PUW GT_PUL=300.00n
+    MN1 (out a net21 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN2 (net21 b inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN3 (out c net22 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN4 (net22 d inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP1 (net11 a inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP2 (net11 b inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP4 (out d net11 inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP3 (out c net11 inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+ends a22no2ji3v
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: AN22JI3VX1
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt AN22JI3VX1
+    a22no2_1 a22no2ji3v GT_PDW=890.00n GT_PDL=350.00n GT_PUW=1.47u \
+        GT_PUL=300.000n
+ends AN22JI3VX1
+// End of subcircuit definition.
+
+// Library name: GATES_JI3V
+// Cell name: a2no2ji3v
+// View name: schematic
+// Inherited view list: schematic
+subckt a2no2ji3v
+parameters GT_PDW GT_PDL=350.00n GT_PUW GT_PUL=300.00n
+    MN2 (net41 b inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN1 (out a net41 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN3 (out c inh_ground_gnd3i inh_ground_gnd3i) ne3i w=0.75*GT_PDW \
+        l=GT_PDL as=4.8e-07*(0.75*GT_PDW) ad=4.8e-07*(0.75*GT_PDW) \
+        ps=1*2*(4.8e-07+(0.75*GT_PDW)) pd=2*(4.8e-07+(0.75*GT_PDW)) \
+        nrs=2.7e-07/(0.75*GT_PDW) nrd=2.7e-07/(0.75*GT_PDW) m=(1)*(1) \
+        par1=(1)*(1)
+    MP1 (net54 a inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP2 (net54 b inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP3 (out c net54 inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+ends a2no2ji3v
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: AN21JI3VX1
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt AN21JI3VX1
+    a2no2_1 a2no2ji3v GT_PDW=890.00n GT_PDL=350.00n GT_PUW=1.41u \
+        GT_PUL=300.00n
+ends AN21JI3VX1
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DLY1JI3VX1
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DLY1JI3VX1
+    M3 (net35 net31 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n \
+        l=750.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M1 (net31 net47 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n l=1u \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    invr_2 invrji3v GT_PUW=1.41u GT_PUL=300.00n GT_PDW=890.00n \
+        GT_PDL=350.00n
+    invr_1 invrji3v GT_PUW=670.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    M2 (net31 net47 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=800n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M4 (net35 net31 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n l=1u \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+ends DLY1JI3VX1
+// End of subcircuit definition.
+
+// Library name: GATES_JI3V
+// Cell name: o2na3ji3v
+// View name: schematic
+// Inherited view list: schematic
+subckt o2na3ji3v
+parameters GT_PDW GT_PDL=350.00n GT_PUW GT_PUL=300.00n
+    MN2 (out b net10 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN1 (out a net10 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN3 (net10 c net25 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN4 (net25 d inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP4 (out d inh_power_vdd3i inh_power_vdd3i) pe3i w=0.7*GT_PUW l=GT_PUL \
+        as=4.8e-07*(0.7*GT_PUW) ad=4.8e-07*(0.7*GT_PUW) \
+        ps=1*2*(4.8e-07+(0.7*GT_PUW)) pd=2*(4.8e-07+(0.7*GT_PUW)) \
+        nrs=2.7e-07/(0.7*GT_PUW) nrd=2.7e-07/(0.7*GT_PUW) m=(1)*(1) \
+        par1=(1)*(1)
+    MP2 (net24 b inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP1 (out a net24 inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP3 (out c inh_power_vdd3i inh_power_vdd3i) pe3i w=0.7*GT_PUW l=GT_PUL \
+        as=4.8e-07*(0.7*GT_PUW) ad=4.8e-07*(0.7*GT_PUW) \
+        ps=1*2*(4.8e-07+(0.7*GT_PUW)) pd=2*(4.8e-07+(0.7*GT_PUW)) \
+        nrs=2.7e-07/(0.7*GT_PUW) nrd=2.7e-07/(0.7*GT_PUW) m=(1)*(1) \
+        par1=(1)*(1)
+ends o2na3ji3v
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: ON211JI3VX1
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt ON211JI3VX1
+    o2na3_1 o2na3ji3v GT_PDW=900.0n GT_PDL=350.00n GT_PUW=1.38u \
+        GT_PUL=300.00n
+ends ON211JI3VX1
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: BUJI3VX16
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt BUJI3VX16
+    invr_1 invrji3v GT_PUW=8.82u GT_PUL=300.00n GT_PDW=4.45u \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=23.52u GT_PUL=300.00n GT_PDW=9.78u \
+        GT_PDL=350.00n
+ends BUJI3VX16
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: BUJI3VX0
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt BUJI3VX0
+    invr_1 invrji3v GT_PUW=900.0n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=1.12u GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+ends BUJI3VX0
+// End of subcircuit definition.
+
+// Library name: D_CELLS_JI3V
+// Cell name: DFRQJI3VX4
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DFRQJI3VX4
+    M24 (MQIB CI net162 inh_power_vdd3i) pe3i w=1.1u l=300n as=5.28e-13 \
+        ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 nrd=0.245455 \
+        m=(1)*(1) par1=(1)*(1)
+    M56 (MQI MQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=1.11u l=300n \
+        as=5.328e-13 ad=5.328e-13 ps=3.18e-06 pd=3.18e-06 nrs=0.243243 \
+        nrd=0.243243 m=(1)*(1) par1=(1)*(1)
+    M30 (net170 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=1.15u l=300n \
+        as=5.52e-13 ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 \
+        nrd=0.234783 m=(1)*(1) par1=(1)*(1)
+    M23 (net162 D inh_power_vdd3i inh_power_vdd3i) pe3i w=1.1u l=300n \
+        as=5.28e-13 ad=5.28e-13 ps=3.16e-06 pd=3.16e-06 nrs=0.245455 \
+        nrd=0.245455 m=(1)*(1) par1=(1)*(1)
+    M59 (net142 SQIB inh_power_vdd3i inh_power_vdd3i) pe3i w=1.41u l=300n \
+        as=6.768e-13 ad=6.768e-13 ps=3.78e-06 pd=3.78e-06 nrs=0.191489 \
+        nrd=0.191489 m=(1)*(1) par1=(1)*(1)
+    M36 (net166 net142 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n \
+        l=300n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M35 (SQIB CI net166 inh_power_vdd3i) pe3i w=420.0n l=300n as=2.016e-13 \
+        ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 nrd=0.642857 \
+        m=(1)*(1) par1=(1)*(1)
+    M34 (MQIB CIB net174 inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M33 (SQIB CIB net170 inh_power_vdd3i) pe3i w=1.15u l=300n as=5.52e-13 \
+        ad=5.52e-13 ps=3.26e-06 pd=3.26e-06 nrs=0.234783 nrd=0.234783 \
+        m=(1)*(1) par1=(1)*(1)
+    M28 (net174 MQI inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n l=300n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    invr_3 invrji3v GT_PUW=5.64u GT_PUL=300.00n GT_PDW=3.56u \
+        GT_PDL=350.00n
+    invr_2 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    invr_1 invrji3v GT_PUW=720.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    M18 (MQIB CIB net124 inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M17 (MQI MQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=760.0n \
+        l=350.0n as=3.648e-13 ad=3.648e-13 ps=2.48e-06 pd=2.48e-06 \
+        nrs=0.355263 nrd=0.355263 m=(1)*(1) par1=(1)*(1)
+    M15 (net124 D inh_ground_gnd3i inh_ground_gnd3i) ne3i w=700n l=350.0n \
+        as=3.36e-13 ad=3.36e-13 ps=2.36e-06 pd=2.36e-06 nrs=0.385714 \
+        nrd=0.385714 m=(1)*(1) par1=(1)*(1)
+    M46 (SQIB CI net132 inh_ground_gnd3i) ne3i w=720.0n l=350.0n \
+        as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M19 (MQIB CI net120 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M51 (SQIB CIB net140 inh_ground_gnd3i) ne3i w=420.0n l=350.0n \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M50 (net140 net142 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M49 (net142 SQIB inh_ground_gnd3i inh_ground_gnd3i) ne3i w=660.0n \
+        l=350.0n as=3.168e-13 ad=3.168e-13 ps=2.28e-06 pd=2.28e-06 \
+        nrs=0.409091 nrd=0.409091 m=(1)*(1) par1=(1)*(1)
+    M47 (net132 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=720.0n \
+        l=350.0n as=3.456e-13 ad=3.456e-13 ps=2.4e-06 pd=2.4e-06 nrs=0.375 \
+        nrd=0.375 m=(1)*(1) par1=(1)*(1)
+    M61 (net120 MQI inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=350.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+ends DFRQJI3VX4
+// End of subcircuit definition.
+
+// Library name: COUNTER_JI3
+// Cell name: counter
+// View name: schematic
+// Inherited view list: schematic
+subckt counter
+    g225__6417 NA2JI3VX0
+    g222__2346 NA2JI3VX0
+    g224__5477 NA2JI3VX0
+    g226__7410 NA2JI3VX0
+    g221__2883 NA2JI3VX0
+    g223__1666 NA2JI3VX0
+    g217__9315 NA2JI3VX0
+    g227__2398 NA2JI3VX0
+    g197__1617 NA2JI3VX0
+    g202__5122 NA2JI3VX0
+    g212__7482 NA2JI3VX0
+    g207__6131 NA2JI3VX0
+    g218 INJI3VX0
+    g213 INJI3VX0
+    g232 INJI3VX0
+    g198 INJI3VX0
+    g203 INJI3VX0
+    g208 INJI3VX0
+    FE_PHC5_n_22 DLY2JI3VX1
+    FE_PHC4_n_18 DLY2JI3VX1
+    FE_PHC3_n_14 DLY2JI3VX1
+    FE_PHC2_enable DLY2JI3VX1
+    FE_PHC1_reset DLY2JI3VX1
+    FE_PHC10_n_38 BUJI3VX2
+    FE_OFC0_out_0 BUJI3VX2
+    FILLCAP_T_1_6 DECAP5JI3V
+    FILLCAP_T_1_8 DECAP5JI3V
+    FILLCAP_T_1_10 DECAP5JI3V
+    FILLCAP_T_1_12 DECAP5JI3V
+    FILLCAP_T_1_17 DECAP5JI3V
+    FILLCAP_T_1_21 DECAP5JI3V
+    FILLCAP_T_1_24 DECAP5JI3V
+    FILLCAP_T_1_30 DECAP5JI3V
+    FILLCAP_T_1_34 DECAP5JI3V
+    FILLCAP_T_1_35 DECAP5JI3V
+    FILLCAP_T_1_38 DECAP5JI3V
+    FILLCAP_T_1_3 DECAP7JI3V
+    FILLCAP_T_1_13 DECAP7JI3V
+    FILLCAP_T_1_14 DECAP7JI3V
+    FILLCAP_T_1_15 DECAP7JI3V
+    FILLCAP_T_1_16 DECAP7JI3V
+    FILLCAP_T_1_18 DECAP7JI3V
+    FILLCAP_T_1_19 DECAP7JI3V
+    FILLCAP_T_1_20 DECAP7JI3V
+    FILLCAP_T_1_22 DECAP7JI3V
+    FILLCAP_T_1_25 DECAP7JI3V
+    FILLCAP_T_1_26 DECAP7JI3V
+    FILLCAP_T_1_27 DECAP7JI3V
+    FILLCAP_T_1_28 DECAP7JI3V
+    FILLCAP_T_1_29 DECAP7JI3V
+    FILLCAP_T_1_31 DECAP7JI3V
+    FILLCAP_T_1_32 DECAP7JI3V
+    FILLCAP_T_1_33 DECAP7JI3V
+    FILLCAP_T_1_37 DECAP7JI3V
+    FILLCAP_T_1_2 DECAP10JI3V
+    FILLCAP_T_1_4 DECAP10JI3V
+    FILLCAP_T_1_9 DECAP10JI3V
+    FILLCAP_T_1_23 DECAP10JI3V
+    FILLCAP_T_1_36 DECAP10JI3V
+    FILLCAP_T_1_5 DECAP15JI3V
+    FILLCAP_T_1_7 DECAP15JI3V
+    FILLCAP_T_1_11 DECAP15JI3V
+    FILLCAP_T_1_1 DECAP25JI3V
+    CTS_cdb_buf_00009 BUJI3VX1
+    CTS_cdb_buf_00010 BUJI3VX1
+    out_reg\[0\] DFRQJI3VX1
+    g187__2398 NO2JI3VX0
+    g219__4733 NO2JI3VX0
+    g191__5526 EN2JI3VX0
+    g220__9945 EN2JI3VX0
+    out_reg\[2\] DFRQJI3VX2
+    out_reg\[6\] DFRQJI3VX2
+    out_reg\[5\] DFRQJI3VX2
+    out_reg\[3\] DFRQJI3VX2
+    out_reg\[4\] DFRQJI3VX2
+    out_reg\[7\] DFRQJI3VX2
+    g189__6260 AN22JI3VX1
+    g209__7098 AN21JI3VX1
+    g214__5115 AN21JI3VX1
+    g190__5107 AN21JI3VX1
+    g194__8428 AN21JI3VX1
+    g204__1705 AN21JI3VX1
+    g199__3680 AN21JI3VX1
+    FE_PHC6_n_26 DLY1JI3VX1
+    FE_PHC7_n_30 DLY1JI3VX1
+    g211__1881 ON211JI3VX1
+    g216__6161 ON211JI3VX1
+    g193__4319 ON211JI3VX1
+    g196__6783 ON211JI3VX1
+    g206__8246 ON211JI3VX1
+    g201__2802 ON211JI3VX1
+    FE_PHC8_n_34 BUJI3VX16
+    FE_PHC9_n_37 BUJI3VX0
+    out_reg\[1\] DFRQJI3VX4
+ends counter
+// End of subcircuit definition.
+
+// Library name: TOP
+// Cell name: top
+// View name: schematic
+// Inherited view list: schematic
+subckt top
+    I0 ioring
+    I1 inv
+    I2 inv_hv
+    I3 counter
+ends top
+// End of subcircuit definition.
+
+// Library name: TOP
+// Cell name: top_tb
+// View name: schematic
+// Inherited view list: schematic
+I0 top
+V9 (net16 0) vsource dc=0 type=dc
+V8 (net14 0) vsource dc=0 type=dc
+V7 (net11 0) vsource dc=0 type=dc
+V6 (net10 0) vsource dc=0 type=dc
+V5 (net6 0) vsource dc=0 type=dc
+V4 (net5 0) vsource dc=0 type=dc
+V3 (net4 0) vsource dc=0 type=dc
+V2 (net3 0) vsource dc=40 type=dc
+V1 (net2 0) vsource dc=3.3 type=dc
+V0 (net1 0) vsource dc=3.3 type=dc
+R9 (net17 net16) resistor r=0.1
+R8 (net15 net14) resistor r=0.1
+R7 (net13 net11) resistor r=0.1
+R6 (net12 net10) resistor r=0.1
+R5 (net9 net6) resistor r=0.1
+R4 (net8 net5) resistor r=0.1
+R3 (net7 net4) resistor r=0.1
+R2 (VDDHV net3) resistor r=0.1
+R1 (VDDA net2) resistor r=0.1
+R0 (VDDD net1) resistor r=0.1
+V10 (in_l 0) vsource type=pulse val0=0 val1=3.3 period=100n delay=10n \
+        rise=1n fall=1n width=50n

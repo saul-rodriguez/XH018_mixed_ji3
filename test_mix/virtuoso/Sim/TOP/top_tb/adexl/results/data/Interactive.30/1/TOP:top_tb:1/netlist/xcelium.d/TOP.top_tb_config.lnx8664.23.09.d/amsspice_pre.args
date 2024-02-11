@@ -1,0 +1,29 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-ahdllibdir
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.30/sharedData/CDS/ahdl/input.ahdlSimDB
+-outdir
+./xcelium.d/AMSD/ams_spice_in
+-runmode
+-cdslib
+./xcelium.d/TOP.top_tb_config.lnx8664.23.09.d/cdsrun.lib
+-hdlvar
+./xcelium.d/TOP.top_tb_config.lnx8664.23.09.d/hdlrun.var
+-work
+worklib
+-64bit
+-amscommfile
+./xcelium.d/AMSD/ams_spice_in/amscomm.list
+-amsspice-errfile
+./xcelium.d/AMSD/ams_spice_in/amsspice_pre.log
+-dumpprim
+-simcompat_ams
+spectre
+-amsi
+./spiceModels.scs
+-amsi
+./amsControlSpectre.scs
+-modelincdir
+"/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/"

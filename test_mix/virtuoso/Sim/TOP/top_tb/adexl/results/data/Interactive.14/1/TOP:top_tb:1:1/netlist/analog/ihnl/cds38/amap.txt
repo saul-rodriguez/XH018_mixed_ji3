@@ -1,0 +1,10 @@
+cellMap,*ioh_pmbsab_15_10,*ioh_pmbsab_15_10,*HV_CELLS,*schematic
+netMap,*ioh_pmbsab_15_10,*gnd3i!,*gnd3i!
+netMap,*ioh_pmbsab_15_10,*vdd3i!,*vdd3i!
+netMap,*ioh_pmbsab_15_10,*gnd!,*0
+instMap,*ioh_pmbsab_15_10,*MPX,*MPX
+instMaster,*ioh_pmbsab_15_10,*MPX,*PRIMLIB_pmb_spectre,*pmb
+portMap,*ioh_pmbsab_15_10,*B,*B
+portMap,*ioh_pmbsab_15_10,*D,*D
+portMap,*ioh_pmbsab_15_10,*G,*G
+portMap,*ioh_pmbsab_15_10,*S,*S

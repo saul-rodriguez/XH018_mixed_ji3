@@ -1,5 +1,5 @@
 xrun(64): 23.09-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s002: Started on Feb 07, 2024 at 11:24:25 EST
+TOOL:	xrun(64)	23.09-s002: Started on Feb 09, 2024 at 05:12:49 EST
 xrun
 	-f xrunArgs
 		-UNBUFFERED
@@ -30,7 +30,7 @@ xrun
 		-spectre_args "-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/sharedData/CDS/ahdl/input.ahdlSimDB"
 		-spectre_args +logstatus
 		-simcompatible_ams spectre
-		-name TOP.top_tb:config
+		-name TOP.top_tb:config_functional
 		-amsconnrules ConnRules_3V_full_fast
 		+define+CDS_SELECT_CRS
 		+define+CONNRULES_3V_FULL_FAST
@@ -62,6 +62,8 @@ xrun
 			-makelib IORING
 			-makelib HV_CELLS
 			-endlib
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
 		./cds_globals.vams
 		-l ../psf/xrun.log
 		-spectre_args ++aps
@@ -161,11 +163,13 @@ file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1
 file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR04DPC/verilogams/verilog.vams
 	module IO_CELLS_JIC3V.APR04DPC:verilogams
 		errors: 0, warnings: 0
+xmvlog: *W,LIBNOU: Library "/home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v" given but not used.
+xmvlog: *W,LIBNOU: Library "/home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v" given but not used.
 xmvlog: *W,SPDUSD: Include directory /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/ given but not used.
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 1
+		errors: 0, warnings: 3
 xmvlog: Memory Usage - Current physical: 20.8M, Current virtual: 60.5M
-xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.1s, 35.7% cpu)
+xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.1s, 35.6% cpu)
 AMSD Universal Connect Module UCM is enabled.
 		Caching library 'COUNTER_JI3' ....... Done
 		Caching library 'HV_CELLS' ....... Done
@@ -221,10 +225,10 @@ xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: Veril
 		Interconnect:          702       -
 		Process Clocks:          1       1
 		Simulation timescale:  1ps
-	Writing initial simulation snapshot: TOP.top_tb:config
-xmelab: Memory Usage - Final: 57.8M, Peak: 225.0M, Peak virtual: 339.8M
-xmelab: CPU Usage - 0.1s system + 0.1s user = 0.2s total (0.3s, 73.5% cpu)
-Loading snapshot TOP.top_tb:config .................... Done
+	Writing initial simulation snapshot: TOP.top_tb:config_functional
+xmelab: Memory Usage - Final: 58.2M, Peak: 225.3M, Peak virtual: 339.8M
+xmelab: CPU Usage - 0.1s system + 0.1s user = 0.2s total (0.3s, 69.4% cpu)
+Loading snapshot TOP.top_tb:config_functional .................... Done
 Simulating in AMS-SIE mode...
 	Starting analog simulation engine...
 AMSD Flexible Release Matrix --- using Spectre from installation:
@@ -264,18 +268,10 @@ xcelium> probe -create -emptyok -database ams_database {top_tb.out1}
 Created probe 7
 xcelium> probe -create -emptyok -database ams_database {top_tb.out0}
 Created probe 8
-xcelium> probe -create -emptyok -database ams_database {top_tb.I0.out[2]}
-Created probe 9
 xcelium> probe -create -emptyok -database ams_database {top_tb.VDDHV}
+Created probe 9
+xcelium> probe -create -emptyok -database ams_database {top_tb.in_l}
 Created probe 10
-xcelium> probe -create -emptyok -database ams_database {top_tb.net7}
-Created probe 11
-xcelium> probe -create -emptyok -database ams_database -flow {top_tb.I0.I2.VDDHV}
-Created probe 12
-xcelium> probe -create -emptyok -database ams_database -flow {top_tb.I0.I0.I24.PAD}
-Created probe 13
-xcelium> probe -create -emptyok -database ams_database -flow {top_tb.I0.I0.I33.PAD}
-Created probe 14
 xcelium> 
 xcelium> run
 
@@ -285,19 +281,19 @@ Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwi
 
 Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
 
-User: saul   Host: phoenix   HostID: A0F02   PID: 30893
-Memory  available: 12.7081 GB  physical: 16.6560 GB
+User: saul   Host: phoenix   HostID: A0F02   PID: 13423
+Memory  available: 13.9990 GB  physical: 16.6560 GB
 Linux   : CentOS Linux release 7 (Core)
 CPU Type: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
 All processors running at 3600.0 MHz
         Socket: Processors
         0:       0,  1,  2,  3,  4,  5
         
-System load averages (1min, 5min, 15min) : 3.5 %, 1.5 %, 1.2 %
+System load averages (1min, 5min, 15min) : 0.3 %, 1.2 %, 1.0 %
 HPC is enabled
 
 
-Simulating `spiceModels.ams' on phoenix at 11:24:36 AM, Wed Feb 7, 2024 (process id: 30893).
+Simulating `spiceModels.ams' on phoenix at 5:12:59 AM, Fri Feb 9, 2024 (process id: 13423).
 Current working directory: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist
 Command line:
     /pkg/cadence/installs/SPECTRE231/tools/bin/spectre -64  \
@@ -307,12 +303,12 @@ Command line:
         /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/sharedData/CDS/ahdl/input.ahdlSimDB  \
         +logstatus ++aps -raw ../psf  \
         -I/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/  \
-        +ams_control=xcelium.d/AMSD/ams_ctrl/ams_ctrl_30588_phoenix
+        +ams_control=xcelium.d/AMSD/ams_ctrl/ams_ctrl_13130_phoenix
 Spectre Licensing Information:
-Spectre [11:24:36.512393] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
+Spectre [05:12:59.512433] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
 
 Spectre Licensing Information:
-Spectre [11:24:36.238426] Periodic Lic check successful
+Spectre [05:13:00.161123] Periodic Lic check successful
 
 Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
 Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libphilips_I_sh.so ...
@@ -688,9 +684,9 @@ Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/
 Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/amsControlSpectre.scs
 Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/.amsbind.scs
 Reading file:  /home/saul/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/configs/ams.cfg
-Time for NDB Parsing: CPU = 213.755 ms, elapsed = 679.001 ms.
-Time accumulated: CPU = 264.625 ms, elapsed = 679.004 ms.
-Peak resident memory used = 122 Mbytes.
+Time for NDB Parsing: CPU = 206.546 ms, elapsed = 345.753 ms.
+Time accumulated: CPU = 257.553 ms, elapsed = 345.755 ms.
+Peak resident memory used = 114 Mbytes.
 
 Existing shared object for module connectLib__L2E_2__module__0x10000001_behavioral is up to date.
 Installed compiled interface for connectLib__L2E_2__module__0x10000001_behavioral.
@@ -712,18 +708,18 @@ Existing shared object for module bsource_cf985e is up to date.
 Installed compiled interface for bsource_cf985e.
 Existing shared object for module bsource_rpp1k1_3mod_29a82c is up to date.
 Installed compiled interface for bsource_rpp1k1_3mod_29a82c.
-Time for Elaboration: CPU = 86.747 ms, elapsed = 116.57 ms.
-Time accumulated: CPU = 351.432 ms, elapsed = 795.633 ms.
-Peak resident memory used = 141 Mbytes.
+Time for Elaboration: CPU = 80.835 ms, elapsed = 109.056 ms.
+Time accumulated: CPU = 338.443 ms, elapsed = 454.866 ms.
+Peak resident memory used = 132 Mbytes.
 
 
 Notice from spectre during hierarchy flattening.
     The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
 
 
-Time for EDB Visiting: CPU = 76.217 ms, elapsed = 76.216 ms.
-Time accumulated: CPU = 427.752 ms, elapsed = 871.95 ms.
-Peak resident memory used = 156 Mbytes.
+Time for EDB Visiting: CPU = 83.59 ms, elapsed = 83.7471 ms.
+Time accumulated: CPU = 422.128 ms, elapsed = 538.706 ms.
+Peak resident memory used = 147 Mbytes.
 
 
 Warning from spectre during initial setup.
@@ -779,14 +775,13 @@ connectLib__Bidir_2__module__0x10000001_behavioral 6
 connectLib__E2L_2__module__0x10000001_behavioral 6     
 
 Analysis and control statement inventory:
-                 dc 1     
-               info 5     
+               info 4     
                tran 1     
 
 Output statements:
              .probe 0     
            .measure 0     
-               save 9     
+               save 4     
 
 
 Notice from spectre during initial setup.
@@ -795,15 +790,15 @@ Notice from spectre during initial setup.
     Fast APS enabled.
 
 Spectre Licensing Information:
-Spectre [11:24:37.323840] Periodic Lic check successful
+Spectre [05:13:00.181307] Periodic Lic check successful
 
 
 Notice from spectre.
     Multithreading enabled: 6 threads in the system with 6 available processors.
 
-Time for parsing: CPU = 614.179 ms, elapsed = 216.089 ms.
-Time accumulated: CPU = 1.04201 s, elapsed = 1.08812 s.
-Peak resident memory used = 170 Mbytes.
+Time for parsing: CPU = 637.555 ms, elapsed = 210.006 ms.
+Time accumulated: CPU = 1.05977 s, elapsed = 748.797 ms.
+Peak resident memory used = 161 Mbytes.
 
 ~~~~~~~~~~~~~~~~~~~~~~
 Pre-Simulation Summary
@@ -811,56 +806,18 @@ Pre-Simulation Summary
    -   (Fast APS) Multi-threading. The recommended number of threads is 8, consider adding +mt=8 on command line.
 ~~~~~~~~~~~~~~~~~~~~~~
 
-******************
-DC Analysis `dcOp'
-******************
-
-Opening the PSF file ../psf/dcOp.dc ...
-Important parameter values:
-    reltol = 1e-03
-    abstol(V) = 1 uV
-    abstol(I) = 1 pA
-    temp = 27 C
-    tnom = 27 C
-    tempeffects = all
-    gmindc = 1 pS
-    rabsshort = 1 mOhm
-Trying `homotopy = gmin'.
-
-
-Notice from spectre during DC analysis `dcOp'.
-    GminDC = 1 pS is large enough to noticeably affect the DC solution.
-        dV(top_tb.I0.I0.I33.I11.net26) = -15.5549 V
-        Use the `gmin_check' option to eliminate or expand this report.
-
-
-Maximum value achieved for any signal of each quantity: 
-V: V(top_tb.net3) = 40 V
-I: I(top_tb.I0.I2.R0.e101:bs_p1_bs_p2_flow) = 4.88 uA
-Convergence achieved in 373 iterations.
-DC simulation time: CPU = 1.27806 s, elapsed = 224.691 ms.
-Total time required for dc analysis `dcOp': CPU = 1.27962 s, elapsed = 224.962 ms, util. = 569%.
-Time accumulated: CPU = 2.33785 s, elapsed = 1.31628 s.
-Peak resident memory used = 175 Mbytes.
-
-dcOpInfo: writing operating point information to rawfile.
-
-Opening the PSF file ../psf/dcOpInfo.info ...
-
 ***********************************************
 Transient Analysis `tran': time = (0 s -> 1 us)
 ***********************************************
+Trying `homotopy = gmin' for initial conditions.
+
 
 Notice from spectre during IC analysis, during transient analysis `tran'.
     GminDC = 1 pS is large enough to noticeably affect the DC solution.
-        dV(top_tb.I0.I0.I33.I11.net26) = -15.5549 V
+        dV(top_tb.I0.I0.I33.I11.net26) = -15.5525 V
         Use the `gmin_check' option to eliminate or expand this report.
 
-DC simulation time: CPU = 60.045 ms, elapsed = 11.6658 ms.
-
-Notice from spectre during transient analysis `tran'.
-    Output compression for transient analysis is enabled.
-
+DC simulation time: CPU = 1.1583 s, elapsed = 193.932 ms.
 
 Opening the AMSSST2 file ../psf/psf.trn ...
 Important parameter values:
@@ -872,57 +829,75 @@ Important parameter values:
     ic = all
     useprevic = no
     skipdc = no
-    reltol = 10e-03
+    reltol = 1e-03
     abstol(V) = 1 uV
     abstol(I) = 1 pA
     temp = 27 C
     tnom = 27 C
     tempeffects = all
-    errpreset = liberal
-    method = trapgear2
+    errpreset = moderate
+    method = traponly
     lteratio = 3.5
     relref = sigglobal
     cmin = 0 F
     gmin = 1 pS
     rabsshort = 1 mOhm
-    compression = wildcardonly
 
 
 Output and IC/nodeset summary:
-                 save   3       (current)
-                 save   5       (voltage)
+                 save   4       (voltage)
 
-    tran: time = 25.02 ns     (2.5 %), step = 1.978 ns     (198 m%)
-    tran: time = 75.02 ns     (7.5 %), step = 4.328 ns     (433 m%)
-    tran: time = 125.5 ns    (12.6 %), step = 4.955 ns     (495 m%)
-    tran: time = 181.1 ns    (18.1 %), step = 9.199 ns     (920 m%)
-    tran: time = 234.8 ns    (23.5 %), step = 11.8 ns      (1.18 %)
-    tran: time = 275 ns      (27.5 %), step = 3.743 ns     (374 m%)
-    tran: time = 325.2 ns    (32.5 %), step = 4.763 ns     (476 m%)
-    tran: time = 387.2 ns    (38.7 %), step = 12.46 ns     (1.25 %)
-    tran: time = 428.2 ns    (42.8 %), step = 8.456 ns     (846 m%)
-    tran: time = 475 ns      (47.5 %), step = 1.634 ns     (163 m%)
-    tran: time = 528.1 ns    (52.8 %), step = 6.225 ns     (623 m%)
-    tran: time = 575.2 ns    (57.5 %), step = 6.538 ns     (654 m%)
-    tran: time = 630.9 ns    (63.1 %), step = 9.795 ns     (979 m%)
-    tran: time = 675 ns      (67.5 %), step = 4.911 ns     (491 m%)
-    tran: time = 727.3 ns    (72.7 %), step = 5.696 ns     (570 m%)
-    tran: time = 784.1 ns    (78.4 %), step = 10.92 ns     (1.09 %)
-    tran: time = 833.8 ns    (83.4 %), step = 11.26 ns     (1.13 %)
-    tran: time = 875 ns      (87.5 %), step = 2.446 ns     (245 m%)
-    tran: time = 931 ns      (93.1 %), step = 7.667 ns     (767 m%)
-    tran: time = 984.1 ns    (98.4 %), step = 10.92 ns     (1.09 %)
+
+Notice from spectre at time = 19.8155 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+Notice from spectre at time = 28.5138 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+Notice from spectre at time = 25.02 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+
+    tran: time = 25.02 ns     (2.5 %), step = 5.204 ns     (520 m%)
+
+Notice from spectre at time = 69.3831 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+Notice from spectre at time = 76.6548 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+        Further occurrences of this notice will be suppressed.
+
+    tran: time = 75.02 ns     (7.5 %), step = 5.637 ns     (564 m%)
+    tran: time = 125.2 ns    (12.5 %), step = 4.274 ns     (427 m%)
+    tran: time = 176 ns      (17.6 %), step = 6.872 ns     (687 m%)
+    tran: time = 228.5 ns    (22.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 275 ns      (27.5 %), step = 5.941 ns     (594 m%)
+    tran: time = 327.9 ns    (32.8 %), step = 4.416 ns     (442 m%)
+    tran: time = 376.5 ns    (37.6 %), step = 7.194 ns     (719 m%)
+    tran: time = 428.5 ns    (42.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 475 ns      (47.5 %), step = 5.941 ns     (594 m%)
+    tran: time = 525.2 ns    (52.5 %), step = 4.274 ns     (427 m%)
+    tran: time = 576 ns      (57.6 %), step = 6.872 ns     (687 m%)
+    tran: time = 628.5 ns    (62.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 675 ns      (67.5 %), step = 5.941 ns     (594 m%)
+    tran: time = 727.9 ns    (72.8 %), step = 4.416 ns     (442 m%)
+    tran: time = 776.5 ns    (77.6 %), step = 7.194 ns     (719 m%)
+    tran: time = 828.5 ns    (82.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 875 ns      (87.5 %), step = 5.941 ns     (594 m%)
+    tran: time = 925.2 ns    (92.5 %), step = 4.274 ns     (427 m%)
+    tran: time = 976 ns      (97.6 %), step = 6.871 ns     (687 m%)
 
 The analog simulator has reached stop time, please use `analog -stop <new stop time>' to extend the analog stop time.
 Simulation stopped via transient analysis stoptime at time 1 US
-Memory Usage - Current physical: 84.2M, Current virtual: 287.8M
-CPU Usage - 0.1s system + 0.1s user = 0.2s total (5.8% cpu)
+Memory Usage - Current physical: 80.6M, Current virtual: 284.3M
+CPU Usage - 0.1s system + 0.1s user = 0.2s total (7.6% cpu)
 xcelium> exit
-Number of accepted tran steps =             550
+Number of accepted tran steps =             879
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
 
 Maximum value achieved for any signal of each quantity: 
-V: V(top_tb.I0.I2.M0.m1:int_d) = 40.21 V
-I: I(top_tb.V2:p) = 941.2 uA
+V: V(top_tb.I0.I2.M0.m1:int_d) = 40.02 V
+I: I(top_tb.V2:p) = 925 uA
 If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -933,15 +908,15 @@ Post-Transient Simulation Summary
 
 
 During simulation, the CPU load for active processors is :
-         0 (42.4 %)      1 (45.1 %)      2 (42.4 %)      3 (41.6 %)
-         4 (41.9 %)      5 (51.4 %)     
-        Total: 264.8%
-Initial condition solution time: CPU = 60.238 ms, elapsed = 11.7018 ms.
-Intrinsic tran analysis time:    CPU = 2.87056 s, elapsed = 494.243 ms.
+         0 (59.4 %)      1 (59.5 %)      2 (59.9 %)      3 (60.1 %)
+         4 (80.0 %)      5 (58.2 %)     
+        Total: 377.0%
+Initial condition solution time: CPU = 1.15864 s, elapsed = 193.989 ms.
+Intrinsic tran analysis time:    CPU = 4.20699 s, elapsed = 720.843 ms.
 
 **** AMSD: Mixed-Signal Activity Statistics ****
-Number of A-to-D events:                     136
-  Number of A-to-D events in IEs:            136
+Number of A-to-D events:                     112
+  Number of A-to-D events in IEs:            112
 Number of D-to-A events:                      33
   Number of D-to-A events in IEs:             33
 Number of VHDL-AMS Breaks:                     0
@@ -954,14 +929,18 @@ Number of IEs with A-to-D X edge:                    0
 Number of IEs with A-to-D Z edge:                    0
 IE with max number of D-to-A edges:                 26
    top_tb.I0.\out[2]__L2E_2__logic 
-IE with max number of A-to-D edges:                 26
+IE with max number of A-to-D edges:                 25
    top_tb.I0.\out[2]__Bidir_2__logic 
 Number of reporting IEs / total IEs:             70/70
 Number of IEs with Vin/Vdd limit checked:            0
 
-Total time required for tran analysis `tran': CPU = 2.95996 s, elapsed = 511.323 ms, util. = 579%.
-Time accumulated: CPU = 5.65372 s, elapsed = 1.90016 s.
-Peak resident memory used = 200 Mbytes.
+Total time required for tran analysis `tran': CPU = 5.40553 s, elapsed = 922.046 ms, util. = 586%.
+Time accumulated: CPU = 6.52816 s, elapsed = 1.68263 s.
+Peak resident memory used = 190 Mbytes.
+
+
+Notice from spectre.
+    55 notices suppressed.
 
 finalTimeOP: writing operating point information to rawfile.
 
@@ -977,24 +956,24 @@ outputParameter: writing output parameter values to rawfile.
 Opening the PSF file ../psf/outputParameter.info ...
 Spectre Licensing Information:
 Spectre Lic Summary:
-[11:24:38.300217] Cdslmd servers:3000@lic08.ug.kth.se
-[11:24:38.300235] Feature usage summary:
-[11:24:38.300235] Virtuoso_Multi_mode_Simulation
-[11:24:38.300235] Spectre_AMS_MMSIM_Lk
+[05:13:01.281536] Cdslmd servers:3000@lic08.ug.kth.se
+[05:13:01.281554] Feature usage summary:
+[05:13:01.281554] Virtuoso_Multi_mode_Simulation
+[05:13:01.281555] Spectre_AMS_MMSIM_Lk
 
 
-Aggregate audit (11:24:38 AM, Wed Feb 7, 2024):
-Time used: CPU = 6.56 s, elapsed = 2.07 s, util. = 317%.
-Time spent in licensing: elapsed = 894 ms, percentage of total = 43.2%.
-Peak memory used = 203 Mbytes.
-Simulation started at: 11:24:36 AM, Wed Feb 7, 2024, ended at: 11:24:38 AM, Wed Feb 7, 2024, with elapsed time (wall clock): 2.07 s.
-spectre completes with 0 errors, 2 warnings, and 15 notices.
-Total License Acquisition Time : 0.894 s.
+Aggregate audit (5:13:01 AM, Fri Feb 9, 2024):
+Time used: CPU = 7.43 s, elapsed = 1.85 s, util. = 401%.
+Time spent in licensing: elapsed = 263 ms, percentage of total = 14.2%.
+Peak memory used = 194 Mbytes.
+Simulation started at: 5:12:59 AM, Fri Feb 9, 2024, ended at: 5:13:01 AM, Fri Feb 9, 2024, with elapsed time (wall clock): 1.85 s.
+spectre completes with 0 errors, 2 warnings, and 20 notices.
+Total License Acquisition Time : 0.263 s.
   xmsim  : License Acquisition Time -- 3e-06 s.
-  spectre: License Acquisition Time -- 0.894 s.
-xmsim: Memory Usage - Final: 72.2M, Peak: 85.5M, Peak virtual: 348.3M
-xmsim: CPU Usage - 1.4s system + 6.0s user = 7.4s total (4.1s, 100.0% cpu)
-TOOL:	xrun(64)	23.09-s002: Exiting on Feb 07, 2024 at 11:24:38 EST  (total: 00:00:13)
+  spectre: License Acquisition Time -- 0.263 s.
+xmsim: Memory Usage - Final: 72.1M, Peak: 81.9M, Peak virtual: 344.8M
+xmsim: CPU Usage - 1.6s system + 6.6s user = 8.1s total (2.8s, 100.0% cpu)
+TOOL:	xrun(64)	23.09-s002: Exiting on Feb 09, 2024 at 05:13:01 EST  (total: 00:00:12)
 
 
 ********* LOG ENDS **************

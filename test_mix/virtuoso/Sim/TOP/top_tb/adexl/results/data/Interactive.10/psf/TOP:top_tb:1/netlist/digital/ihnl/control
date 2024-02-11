@@ -28,17 +28,17 @@ hnlLastStopCellInfo = '(
                           ( "PRIMLIB" "nedia" "spectre" "56" "1666777074" )
                           ( "PRIMLIB" "rpp1k1_3" "spectre" "49" "1666777074" )
                           ( "COUNTER_JI3" "counter" "functional" "1707311355" "0" )
-                          ( "COUNTER_JI3" "counter_stimulus" "verilogams" "1707312159" "1707312160" )
+                          ( "COUNTER_JI3" "counter_stimulus" "verilogams" "1707467752" "1707467785" )
                           ( "analogLib" "vdc" "spectre" "33" "1697044113" )
                           ( "analogLib" "res" "spectre" "28" "1697044113" )
                           ( "analogLib" "vpulse" "spectre" "34" "1697044113" )
                        )
 hnlLastNetlistConfig = t
-hnlLastConfigFileVersion = 5
-hnlLastConfigFileTimeStamp = "1707311589"
+hnlLastConfigFileVersion = 17
+hnlLastConfigFileTimeStamp = "1707473478"
 hnlLastSupportNewConfig = t
 hnlLastConfigInfo = '( 
-( "TOP" "top_tb" "config" 5 "1707311589" )
+( "TOP" "top_tb" "config_functional" 17 "1707473478" )
 ) 
 hnlLastTopViewWasConfig = 1
 hnlLastMaxNameLength = 2000

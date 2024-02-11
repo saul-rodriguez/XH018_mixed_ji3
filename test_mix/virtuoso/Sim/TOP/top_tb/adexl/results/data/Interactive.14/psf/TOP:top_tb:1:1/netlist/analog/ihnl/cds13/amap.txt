@@ -1,0 +1,9 @@
+cellMap,*jio_resp_pc,*jio_resp_pc,*IO_CELLS_JIC3V,*cmos_sch
+netMap,*jio_resp_pc,*gnd3i!,*gnd3i!
+netMap,*jio_resp_pc,*vdd3i!,*vdd3i!
+netMap,*jio_resp_pc,*gnd!,*0
+instMap,*jio_resp_pc,*R0,*R0
+instMaster,*jio_resp_pc,*R0,*PRIMLIB_rdp3_spectre,*rdp3
+portMap,*jio_resp_pc,*GNDO,*GNDO
+portMap,*jio_resp_pc,*RH,*RH
+portMap,*jio_resp_pc,*VDDO,*VDDO

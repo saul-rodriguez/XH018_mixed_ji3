@@ -394,36 +394,24 @@ ends HVDD4DJ5PKFs
 // End of subcircuit definition.
 
 // Library name: HV_CELLS
-// Cell name: ioh_dnw3_16x60
+// Cell name: ioh_d2pk
 // View name: schematic
 // Inherited view list: schematic
-subckt ioh_dnw3_16x60
-    D0 (A Guard) dnw3 area=2.45079e-10 perimeter=462.5u dbv=0.0 m=1 \
+subckt ioh_d2pk
+    I1 ioh_pmbsabhv_2000
+    I5 ioh_pe3isabhv_2800gcr
+ends ioh_d2pk
+// End of subcircuit definition.
+
+// Library name: HV_CELLS
+// Cell name: HVDD4D2PK
+// View name: schematic
+// Inherited view list: schematic
+subckt HVDD4D2PK
+    I11 ioh_d2pk
+    D0 (GND PAD) ddnw area=3.89668e-10 perimeter=208.5u dbv=0.0 m=1 \
         par1=(1) xf_subext=0
-    D1 (A K) dnw3 area=7.94772e-11 perimeter=65.99u dbv=0.0 m=16 par1=(16) \
-        xf_subext=0
-ends ioh_dnw3_16x60
-// End of subcircuit definition.
-
-// Library name: HV_CELLS
-// Cell name: ioh_dp3_16x70
-// View name: schematic
-// Inherited view list: schematic
-subckt ioh_dp3_16x70
-    D0 (Sub K) dnw3 area=3.46921e-09 perimeter=244.1u dbv=0.0 m=1 par1=(1) \
-        xf_subext=0
-    D1 (A K) dp3 area=7.93881e-11 perimeter=75.27u dbv=0.0 m=16 par1=(16)
-ends ioh_dp3_16x70
-// End of subcircuit definition.
-
-// Library name: HV_CELLS
-// Cell name: EHVSSJI220FS
-// View name: schematic
-// Inherited view list: schematic
-subckt EHVSSJI220FS
-    I0 ioh_dnw3_16x60
-    I1 ioh_dp3_16x70
-ends EHVSSJI220FS
+ends HVDD4D2PK
 // End of subcircuit definition.
 
 // Library name: HV_CELLS
@@ -820,7 +808,7 @@ ends HVD4SJD1R5PKFs
 // Inherited view list: schematic
 subckt ioring
     I24 HVDD4DJ5PKFs
-    I29 EHVSSJI220FS
+    I36 HVDD4D2PK
     I33 HVD4SJD1R5PKFs
 ends ioring
 // End of subcircuit definition.
@@ -884,5 +872,5 @@ R3 (net7 net4) resistor r=0.1
 R2 (VDDHV net3) resistor r=0.1
 R1 (VDDA net2) resistor r=0.1
 R0 (VDDD net1) resistor r=0.1
-V10 (net18 0) vsource type=pulse val0=0 val1=3.3 period=100n delay=10n \
+V10 (in_l 0) vsource type=pulse val0=0 val1=3.3 period=100n delay=10n \
         rise=1n fall=1n width=50n

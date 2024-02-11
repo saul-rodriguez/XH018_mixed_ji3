@@ -1,0 +1,973 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  IORING
+* Top Cell Name: ioring3
+* View Name:     schematic
+* Netlisted on:  Feb 10 19:20:52 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.LDD
+*.SCALE METER
+.PARAM
+
+
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_pe3i_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_pe3i_pc B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 net6 G S B PE3I W=30u L=350.0n M=1.0 AD=1.44e-11 AS=1.44e-11 PD=6.096e-05 
++ PS=6.096e-05 NRD=0.009 NRS=0.009
+RR1 net6 D 11.4386 $SUB=B $[RDP3] $W=30u $L=2.15u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ne3i_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ne3i_pc B D G S
+*.PININFO B:B D:B G:B S:B
+DD3 B D DN3 0.99e-11 660.00n M=1
+RR0 D net6 7.72208 $SUB=B $[RDN3] $W=30u $L=3.35u M=1
+MM0 net6 G S B NE3I W=30u L=400.0n M=1.0 AD=1.44e-11 AS=1.44e-11 PD=60.96u 
++ PS=60.96u NRD=0.009 NRS=0.009
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_andio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_andio_pc DNW PSUB PWI
+*.PININFO DNW:I PSUB:I PWI:I
+DD3 PSUB DNW DDNWMV 4.69976e-09 274.64u M=1
+DD1 PWI DNW DIPDNWMV 4.16648e-09 258.64u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    PSUBPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT PSUBPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIP<1> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIN<1> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<2> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<3> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<4> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<5> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<6> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<7> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<8> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<9> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<10> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<11> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<12> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<13> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<14> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<15> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<16> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<17> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<18> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<19> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<20> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<21> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<22> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<23> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<24> PSUB GNDOI ng PSUB / jio_ne3i_pc
+RR11 ng PSUB 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 GNDOI PSUB PSUB / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    VDDPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT VDDPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN<1> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR11 ng GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDOI / jio_andio_pc
+XIP<1> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    VDDORPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT VDDORPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDORI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDORI:I
+XIN<1> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+RR11 ng GNDOI 1532.3 $SUB=VDDORI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDORI PSUB GNDOI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    GNDPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT GNDPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN<1> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR11 ng GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDOI / jio_andio_pc
+XIP<1> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    GNDORPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT GNDORPADPC GNDI GNDORI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDORI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN<1> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<2> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<3> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<4> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<5> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<6> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<7> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<8> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<9> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<10> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<11> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<12> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<13> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<14> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<15> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<16> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<17> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<18> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<19> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<20> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<21> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<22> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<23> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<24> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+RR11 ng GNDORI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDORI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ipdio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ipdio_pc DNWR PSUB PWIR
+*.PININFO DNWR:I PSUB:I PWIR:I
+DD10 PSUB DNWR DDNWMV 3.7825e-10 80.26u M=1
+DD9 PWIR DNWR DIPDNWMV 1.3272e-10 54.64u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_lviodio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_lviodio_pc DNLW LPWI PSUB
+*.PININFO DNLW:I LPWI:I PSUB:I
+DD2 LPWI DNLW DIPDNWMV 3.2452e-10 132.64u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_opdio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_opdio_pc DNLW DNW LPWI NW PSUB PWI VDN
+*.PININFO DNLW:I DNW:I LPWI:I NW:I PSUB:I PWI:I VDN:I
+XI5 DNLW LPWI PSUB / jio_lviodio_pc
+DD0 PSUB DNW DDNWMV 5.2955e-10 100.26u M=1
+DD1 PWI NW DIPDNWMV 2.1664e-10 59.08u M=1
+DD3 PWI NW DIPDNWMV 2.1664e-10 59.08u M=1
+DD5 PWI DNW DIPDNWMV 1.9592e-10 74.64u M=1
+XI0 VDN PSUB PWI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ndtr_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ndtr_pc GND GNDR PI PO VDD VDDR Y YN
+*.PININFO GND:I GNDR:I PI:I VDD:I VDDR:I YN:I PO:O Y:O
+MM1 net14 YN VDD VDD PE3I W=2.4u L=350.0n M=2.0 AD=6.48e-13 AS=1.152e-12 
++ PD=2.94e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM3 net19 net14 VDD VDD PE3I W=2.4u L=350.0n M=6.0 AD=6.48e-13 AS=8.16e-13 
++ PD=2.94e-06 PS=3.88e-06 NRD=0.1125 NRS=0.1125
+MM7 PO PI VDD VDD PE3I W=2.4u L=350.0n M=1.0 AD=1.152e-12 AS=1.152e-12 
++ PD=5.76e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM9 PO net14 VDD VDD PE3I W=2.4u L=350.0n M=1.0 AD=1.152e-12 AS=1.152e-12 
++ PD=5.76e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM11 net16 net14 VDD VDD PE3I W=2.4u L=350.0n M=2.0 AD=6.48e-13 AS=1.152e-12 
++ PD=2.94e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM5 Y net19 VDD VDD PE3I W=2.4u L=350.0n M=10.0 AD=6.48e-13 AS=7.488e-13 
++ PD=2.94e-06 PS=3.504e-06 NRD=0.1125 NRS=0.1125
+MM2 net14 YN GND GND NE3I W=1.2u L=400n M=2.0 AD=3.24e-13 AS=5.76e-13 
++ PD=1.74e-06 PS=3.36e-06 NRD=0.225 NRS=0.225
+MM6 Y net16 GND GND NE3I W=1.68u L=400n M=6.0 AD=4.536e-13 AS=5.712e-13 
++ PD=2.22e-06 PS=2.92e-06 NRD=0.160714 NRS=0.160714
+MM8 PO net14 net37 GND NE3I W=1.68u L=400n M=1.0 AD=8.064e-13 AS=8.064e-13 
++ PD=4.32e-06 PS=4.32e-06 NRD=0.160714 NRS=0.160714
+MM10 net37 PI GND GND NE3I W=1.68u L=400n M=1.0 AD=8.064e-13 AS=8.064e-13 
++ PD=4.32e-06 PS=4.32e-06 NRD=0.160714 NRS=0.160714
+MM13 net19 net14 GND GND NE3I W=1.68u L=400n M=2.0 AD=4.536e-13 AS=8.064e-13 
++ PD=2.22e-06 PS=4.32e-06 NRD=0.160714 NRS=0.160714
+MM4 net16 net14 GND GND NE3I W=1.68u L=400n M=4.0 AD=4.536e-13 AS=6.3e-13 
++ PD=2.22e-06 PS=3.27e-06 NRD=0.160714 NRS=0.160714
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_bufc_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_bufc_pc A GNDR VDDR Y
+*.PININFO A:I GNDR:I VDDR:I Y:O
+MM2 Y A GNDR GNDR NE3I W=2u L=400n M=3.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM1 Y A VDDR VDDR PE3I W=2.2u L=350.0n M=6.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_resp_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_resp_pc GNDO RH VDDO
+*.PININFO GNDO:I VDDO:I RH:O
+RR0 VDDO RH 1532.3 $SUB=VDDO $[RDP3] $W=440.0n $L=3.3u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ne3is_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ne3is_pc B D G S
+*.PININFO B:B D:B G:B S:B
+DD3 B D DN3 3.96e-12 660.0n M=1
+RR4 D net6 8.99346 $SUB=B $[RDN3] $W=12.0u $L=1.32u M=1
+MM0 net6 G S B NE3I W=12.0u L=400n M=1.0 AD=5.76e-12 AS=5.76e-12 PD=2.496e-05 
++ PS=2.496e-05 NRD=0.0225 NRS=0.0225
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_esd1_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_esd1_pc A GNDO GNDR PSUB VDDO VDDR Y
+*.PININFO A:I GNDO:I GNDR:I PSUB:I VDDO:I VDDR:I Y:O
+MM3 Y VDDO VDDO VDDO PE3I W=12.0u L=350.0n M=2.0 AD=3.24e-12 AS=5.76e-12 
++ PD=1.254e-05 PS=2.496e-05 NRD=0.0225 NRS=0.0225
+XI3 GNDO rh VDDO / jio_resp_pc
+XIP<1> VDDO A rh VDDO / jio_pe3i_pc
+XIP<2> VDDO A rh VDDO / jio_pe3i_pc
+XIP<3> VDDO A rh VDDO / jio_pe3i_pc
+XIP<4> VDDO A rh VDDO / jio_pe3i_pc
+XIP<5> VDDO A rh VDDO / jio_pe3i_pc
+XIP<6> VDDO A rh VDDO / jio_pe3i_pc
+XIP<7> VDDO A rh VDDO / jio_pe3i_pc
+XIP<8> VDDO A rh VDDO / jio_pe3i_pc
+XIP<9> VDDO A rh VDDO / jio_pe3i_pc
+XIP<10> VDDO A rh VDDO / jio_pe3i_pc
+XIP<11> VDDO A rh VDDO / jio_pe3i_pc
+XIP<12> VDDO A rh VDDO / jio_pe3i_pc
+XIP<13> VDDO A rh VDDO / jio_pe3i_pc
+XIP<14> VDDO A rh VDDO / jio_pe3i_pc
+XIP<15> VDDO A rh VDDO / jio_pe3i_pc
+XIP<16> VDDO A rh VDDO / jio_pe3i_pc
+XIP<17> VDDO A rh VDDO / jio_pe3i_pc
+XIP<18> VDDO A rh VDDO / jio_pe3i_pc
+XIP<19> VDDO A rh VDDO / jio_pe3i_pc
+XIP<20> VDDO A rh VDDO / jio_pe3i_pc
+XIP<21> VDDO A rh VDDO / jio_pe3i_pc
+XIP<22> VDDO A rh VDDO / jio_pe3i_pc
+XIP<23> VDDO A rh VDDO / jio_pe3i_pc
+XIP<24> VDDO A rh VDDO / jio_pe3i_pc
+XIN<1> GNDO A ng GNDO / jio_ne3i_pc
+XIN<2> GNDO A ng GNDO / jio_ne3i_pc
+XIN<3> GNDO A ng GNDO / jio_ne3i_pc
+XIN<4> GNDO A ng GNDO / jio_ne3i_pc
+XIN<5> GNDO A ng GNDO / jio_ne3i_pc
+XIN<6> GNDO A ng GNDO / jio_ne3i_pc
+XIN<7> GNDO A ng GNDO / jio_ne3i_pc
+XIN<8> GNDO A ng GNDO / jio_ne3i_pc
+XIN<9> GNDO A ng GNDO / jio_ne3i_pc
+XIN<10> GNDO A ng GNDO / jio_ne3i_pc
+XIN<11> GNDO A ng GNDO / jio_ne3i_pc
+XIN<12> GNDO A ng GNDO / jio_ne3i_pc
+XIN<13> GNDO A ng GNDO / jio_ne3i_pc
+XIN<14> GNDO A ng GNDO / jio_ne3i_pc
+XIN<15> GNDO A ng GNDO / jio_ne3i_pc
+XIN<16> GNDO A ng GNDO / jio_ne3i_pc
+XIN<17> GNDO A ng GNDO / jio_ne3i_pc
+XIN<18> GNDO A ng GNDO / jio_ne3i_pc
+XIN<19> GNDO A ng GNDO / jio_ne3i_pc
+XIN<20> GNDO A ng GNDO / jio_ne3i_pc
+XIN<21> GNDO A ng GNDO / jio_ne3i_pc
+XIN<22> GNDO A ng GNDO / jio_ne3i_pc
+XIN<23> GNDO A ng GNDO / jio_ne3i_pc
+XIN<24> GNDO A ng GNDO / jio_ne3i_pc
+RR1 A Y 575.123 $[RPP1] $W=2.5u $L=4.5u M=1
+MM2 ng rh GNDO GNDO NE3I W=1.2u L=400n M=1.0 AD=5.76e-13 AS=5.76e-13 
++ PD=3.36e-06 PS=3.36e-06 NRD=0.225 NRS=0.225
+XINS<1> GNDO Y GNDO GNDO / jio_ne3is_pc
+XINS<2> GNDO Y GNDO GNDO / jio_ne3is_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    ICPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT ICPC GNDI GNDOI GNDRI PAD PI PO PSUB VDD3I VDDOI VDDRI Y
+*.PININFO GNDI:I GNDOI:I GNDRI:I PAD:I PI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I 
+*.PININFO PO:O Y:O
+XI5 VDDRI PSUB GNDRI / jio_ipdio_pc
+XI6 VDD3I VDDOI GNDI VDDOI PSUB GNDOI VDDOI / jio_opdio_pc
+XI4 GNDI GNDRI PI PO VDD3I VDDRI Y net12 / jio_ndtr_pc
+XI3 net13 GNDRI VDDRI net12 / jio_bufc_pc
+XI1 PAD GNDOI GNDRI PSUB VDDOI VDDRI net13 / jio_esd1_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_tp4_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_tp4_pc GNDO NG NG1 NG2 NW PG PG1 PG2 PW VDDO
+*.PININFO GNDO:I NG:I NW:I PG:I PW:I VDDO:I NG1:O NG2:O PG1:O PG2:O
+MM11 PG1 PG GNDO PW NE3I W=6.1u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM13 PG2 PG net26 PW NE3I W=3.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM21 NG1 NG GNDO PW NE3I W=5.5u L=400n M=2.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM14 net26 PG GNDO PW NE3I W=3.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM24 NG2 NG GNDO PW NE3I W=8u L=400n M=2.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM10 PG1 PG VDDO NW PE3I W=10u L=350.0n M=2.0 AD=2.7e-12 AS=4.8e-12 
++ PD=1.054e-05 PS=2.096e-05 NRD=0.027 NRS=0.027
+MM20 NG1 NG VDDO NW PE3I W=4.9u L=350.0n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM23 NG2 NG net25 NW PE3I W=6.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM22 net25 NG VDDO NW PE3I W=6.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM12 PG2 PG VDDO NW PE3I W=10u L=350.0n M=2.0 AD=2.7e-12 AS=4.8e-12 
++ PD=1.054e-05 PS=2.096e-05 NRD=0.027 NRS=0.027
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_tsctrl_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_tsctrl_pc A EN GND GNDO NG PG VDD VDDO
+*.PININFO A:I EN:I GND:I GNDO:I VDD:I VDDO:I NG:O PG:O
+MM127 NG NGB VDDO VDDO PE3I W=5.2u L=350.0n M=2.0 AD=1.404e-12 AS=2.496e-12 
++ PD=5.74e-06 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM117 PG PGB VDDO VDDO PE3I W=5.2u L=350.0n M=2.0 AD=1.404e-12 AS=2.496e-12 
++ PD=5.74e-06 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM01 ENB EN VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM22 NGB EN net49 VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM12 PGB ENB VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM21 net49 A VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM11 PGB A VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM128 NG NGB GNDO GNDO NE3I W=5.2u L=400n M=1.0 AD=2.496e-12 AS=2.496e-12 
++ PD=1.136e-05 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM118 PG PGB GNDO GNDO NE3I W=5.2u L=400n M=1.0 AD=2.496e-12 AS=2.496e-12 
++ PD=1.136e-05 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM02 ENB EN GND GND NE3I W=1.1u L=400n M=1.0 AD=5.28e-13 AS=5.28e-13 
++ PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM24 NGB A GND GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM15 net50 A GND GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM25 NGB EN GND GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM14 PGB ENB net50 GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ts4_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ts4_pc A EN GND GNDO PAD PSUB VDD VDDO VDN
+*.PININFO A:I EN:I GND:I GNDO:I PSUB:I VDD:I VDDO:I VDN:I PAD:O
+XIP1<1> VDDO PAD pg1 VDDO / jio_pe3i_pc
+XIP1<2> VDDO PAD pg1 VDDO / jio_pe3i_pc
+XIP1<3> VDDO PAD pg1 VDDO / jio_pe3i_pc
+XIP2<1> VDDO PAD pg2 VDDO / jio_pe3i_pc
+XIP2<2> VDDO PAD pg2 VDDO / jio_pe3i_pc
+XIP2<3> VDDO PAD pg2 VDDO / jio_pe3i_pc
+XIP3<1> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<2> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<3> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<4> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<5> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<6> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<7> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<8> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<9> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<10> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<11> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<12> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<13> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<14> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<15> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<16> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<17> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<18> VDDO PAD rh VDDO / jio_pe3i_pc
+MM0 ng3 rh GNDO GNDO NE3I W=1.2u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+XI5 GNDO rh VDDO / jio_resp_pc
+XI3 VDD VDDO GND VDDO PSUB GNDO VDN / jio_opdio_pc
+XIN3<1> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<2> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<3> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<4> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<5> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<6> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<7> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<8> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<9> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<10> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<11> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<12> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<13> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<14> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<15> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<16> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<17> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<18> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<19> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<20> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<21> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN2<1> GNDO PAD ng2 GNDO / jio_ne3i_pc
+XIN2<2> GNDO PAD ng2 GNDO / jio_ne3i_pc
+XIN1 GNDO PAD ng1 GNDO / jio_ne3i_pc
+XI2 GNDO ng ng1 ng2 VDDO pg pg1 pg2 GNDO VDDO / jio_tp4_pc
+XI1 A EN GND GNDO ng pg VDD VDDO / jio_tsctrl_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    BT4PC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BT4PC A EN GNDI GNDOI GNDRI PAD PSUB VDD3I VDDOI VDDRI
+*.PININFO A:I EN:I GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I PAD:O
+XI0 A EN GNDI GNDOI PAD PSUB VDD3I VDDOI VDDOI / jio_ts4_pc
+XI5 VDDRI PSUB GNDRI / jio_ipdio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    PWRCUTDCPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT PWRCUTDCPC GNDI1 GNDI2 GNDOI1 GNDOI2 GNDRI1 GNDRI2 PSUB VDD3I1 VDD3I2 
++ VDDOI1 VDDOI2 VDDRI1 VDDRI2
+*.PININFO GNDI1:I GNDI2:I GNDOI1:I GNDOI2:I GNDRI1:I GNDRI2:I PSUB:I VDD3I1:I 
+*.PININFO VDD3I2:I VDDOI1:I VDDOI2:I VDDRI1:I VDDRI2:I
+DD4<1> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<2> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<3> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<4> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<5> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<6> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<7> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<8> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<9> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<10> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<11> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<12> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<13> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<14> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD1<1> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<2> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<3> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<4> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<5> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<6> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<7> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<8> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<9> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<10> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<11> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<12> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<13> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<14> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<15> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    CORNERESDPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT CORNERESDPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN2<1> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<2> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<3> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<4> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<5> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<6> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<7> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<8> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<9> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<10> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<11> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<12> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<13> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<14> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<15> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<16> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<17> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<18> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<19> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<20> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<21> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<22> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<23> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<24> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN1<1> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<2> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<3> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<4> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<5> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<6> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<7> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<8> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<9> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<10> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<11> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<12> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<13> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<14> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<15> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<16> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<17> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<18> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<19> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<20> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<21> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<22> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<23> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<24> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+RR2 ng2 GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR1 ng1 GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI1<1> VDDOI PSUB GNDOI / jio_andio_pc
+XI1<2> VDDOI PSUB GNDOI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    APR00DPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT APR00DPC GNDI GNDOI GNDRI PAD PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I PAD:B
+XIN<1> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI PAD ng GNDOI / jio_ne3i_pc
+RR11 ng GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDOI / jio_andio_pc
+XIP<1> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI PAD pg VDDOI / jio_pe3i_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_anrdio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_anrdio_pc DNLW DNW LPWI NW PSUB PWI VDN
+*.PININFO DNLW:I DNW:I LPWI:I NW:I PSUB:I PWI:I VDN:I
+DD5 PSUB DNLW DDNWMV 9.789e-10 160.12u M=1
+DD0 PSUB VDN DDNWMV 4.69976e-09 274.64u M=1
+DD6 PSUB DNW DDNWMV 9.8345e-10 160.26u M=1
+DD1 PWI VDN DIPDNWMV 4.16648e-09 258.64u M=1
+DD2 PWI NW DIPDNWMV 2.1664e-10 59.08u M=1
+DD4 PWI NW DIPDNWMV 1.2696e-10 47.87u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    APR04DPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT APR04DPC GNDI GNDOI GNDRI PAD PSUB VDD3I VDDOI VDDRI Y
+*.PININFO GNDI:I GNDOI:I GNDRI:I PAD:I PSUB:I VDD3I:I VDDOI:I VDDRI:I Y:O
+XINS<1> GNDOI Y GNDOI GNDOI / jio_ne3is_pc
+XINS<2> GNDOI Y GNDOI GNDOI / jio_ne3is_pc
+MM2 ng rh GNDOI GNDOI NE3I W=1.2u L=400n M=1.0 AD=5.76e-13 AS=5.76e-13 
++ PD=3.36e-06 PS=3.36e-06 NRD=0.225 NRS=0.225
+XIN<1> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XI3 GNDOI rh VDDOI / jio_resp_pc
+XIP<1> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<2> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<3> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<4> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<5> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<6> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<7> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<8> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<9> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<10> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<11> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<12> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<13> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<14> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<15> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<16> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<17> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<18> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<19> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<20> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<21> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<22> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<23> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<24> VDDOI PAD rh VDDOI / jio_pe3i_pc
+MM3 Y VDDOI VDDOI VDDOI PE3I W=12.0u L=350.0n M=2.0 AD=3.24e-12 AS=5.76e-12 
++ PD=1.254e-05 PS=2.496e-05 NRD=0.0225 NRS=0.0225
+XI157 VDD3I VDDOI GNDI VDDOI PSUB GNDOI VDDOI / jio_anrdio_pc
+RR1 PAD Y 391.392 $[RPP1] $W=2u $L=2.2u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IORING
+* Cell Name:    ioring3
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioring3 CLK ENABLE GNDA GNDD GNDOR GNDORA INL OUT0 OUT1 OUT2 OUTL PSUB 
++ RESET VDDA VDDD VDDOR VDDORA clk_core enable_core inl_core out0_core 
++ out1_core out2_core reset_core
+*.PININFO CLK:B ENABLE:B GNDA:B GNDD:B GNDOR:B GNDORA:B INL:B OUT0:B OUT1:B 
+*.PININFO OUT2:B OUTL:B PSUB:B RESET:B VDDA:B VDDD:B VDDOR:B VDDORA:B 
+*.PININFO clk_core:B enable_core:B inl_core:B out0_core:B out1_core:B 
+*.PININFO out2_core:B reset_core:B
+XI4 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / PSUBPADPC
+XI21 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / VDDPADPC
+XI3 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / VDDPADPC
+XI18 GNDA GNDORA GNDORA PSUB VDDA VDDORA / VDDORPADPC
+XI1 GNDD GNDOR GNDOR PSUB VDDD VDDOR / VDDORPADPC
+XI19 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / GNDPADPC
+XI5 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / GNDPADPC
+XI20 GNDA GNDORA PSUB VDDA VDDORA VDDORA / GNDORPADPC
+XI0 GNDD GNDOR PSUB VDDD VDDOR VDDOR / GNDORPADPC
+XI9 GNDD GNDOR GNDOR ENABLE GNDD net3 PSUB VDDD VDDOR VDDOR enable_core / ICPC
+XI10 GNDD GNDOR GNDOR CLK GNDD net2 PSUB VDDD VDDOR VDDOR clk_core / ICPC
+XI11 GNDD GNDOR GNDOR RESET GNDD net1 PSUB VDDD VDDOR VDDOR reset_core / ICPC
+XI15 out0_core GNDD GNDD GNDOR GNDOR OUT0 PSUB VDDD VDDOR VDDOR / BT4PC
+XI16 out1_core GNDD GNDD GNDOR GNDOR OUT1 PSUB VDDD VDDOR VDDOR / BT4PC
+XI17 out2_core GNDD GNDD GNDOR GNDOR OUT2 PSUB VDDD VDDOR VDDOR / BT4PC
+XI35 net9 GNDD GNDOHV GNDOR net10 GNDOR PSUB net15 VDDD net11 VDDOR net14 
++ VDDOR / PWRCUTDCPC
+XI34 GNDA net4 GNDORA GNDOHV GNDORA net5 PSUB VDDA net8 VDDORA net6 VDDORA 
++ net7 / PWRCUTDCPC
+XI12 GNDD GNDA GNDOR GNDORA GNDOR GNDORA PSUB VDDD VDDA VDDOR VDDORA VDDOR 
++ VDDORA / PWRCUTDCPC
+XI40 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / CORNERESDPC
+XI39 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / CORNERESDPC
+XI26 GNDA GNDORA GNDORA OUTL PSUB VDDA VDDORA VDDORA / APR00DPC
+XI27 GNDA GNDORA GNDORA INL PSUB VDDA VDDORA VDDORA inl_core / APR04DPC
+.ENDS
+

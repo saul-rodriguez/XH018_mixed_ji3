@@ -19,7 +19,6 @@ hnlLastStopCellInfo = '(
                           ( "PRIMLIB" "rnp1" "spectre" "40" "1666777074" )
                           ( "PRIMLIB" "pe3i" "spectre" "53" "1666777074" )
                           ( "PRIMLIB" "rdp3" "spectre" "49" "1666777074" )
-                          ( "PRIMLIB" "dnw3" "spectre" "35" "1666777074" )
                           ( "PRIMLIB" "dnpdd_scr" "spectre" "35" "1666777074" )
                           ( "PRIMLIB" "dpdd_scr" "spectre" "35" "1666777074" )
                           ( "PRIMLIB" "dpdnw" "spectre" "35" "1666777074" )
@@ -28,18 +27,36 @@ hnlLastStopCellInfo = '(
                           ( "PRIMLIB" "pe3" "spectre" "53" "1666777074" )
                           ( "PRIMLIB" "nedia" "spectre" "56" "1666777074" )
                           ( "PRIMLIB" "rpp1k1_3" "spectre" "49" "1666777074" )
-                          ( "COUNTER_JI3" "counter" "functional" "1707311355" "0" )
-                          ( "COUNTER_JI3" "counter_stimulus" "verilogams" "1707312159" "1707312160" )
+                          ( "D_CELLS_JI3V" "NA2JI3VX0" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "INJI3VX0" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "DLY2JI3VX1" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "BUJI3VX2" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "DECAP5JI3V" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "DECAP7JI3V" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "DECAP10JI3V" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "DECAP15JI3V" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "DECAP25JI3V" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "BUJI3VX1" "functional" "1707464358" "1604078298" )
+                          ( "VLG_PRIMITIVES" "u1_fd5" "functional" "1605020704" "1605075529" )
+                          ( "D_CELLS_JI3V" "NO2JI3VX0" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "EN2JI3VX0" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "AN22JI3VX1" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "AN21JI3VX1" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "DLY1JI3VX1" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "ON211JI3VX1" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "BUJI3VX16" "functional" "1707464358" "1604078298" )
+                          ( "D_CELLS_JI3V" "BUJI3VX0" "functional" "1707464358" "1604078298" )
+                          ( "COUNTER_JI3" "counter_stimulus" "verilogams_sdf" "1707467785" "1707467785" )
                           ( "analogLib" "vdc" "spectre" "33" "1697044113" )
                           ( "analogLib" "res" "spectre" "28" "1697044113" )
                           ( "analogLib" "vpulse" "spectre" "34" "1697044113" )
                        )
 hnlLastNetlistConfig = t
-hnlLastConfigFileVersion = 5
-hnlLastConfigFileTimeStamp = "1707311589"
+hnlLastConfigFileVersion = 15
+hnlLastConfigFileTimeStamp = "1707472545"
 hnlLastSupportNewConfig = t
 hnlLastConfigInfo = '( 
-( "TOP" "top_tb" "config" 5 "1707311589" )
+( "TOP" "top_tb" "config_gate" 15 "1707472545" )
 ) 
 hnlLastTopViewWasConfig = 1
 hnlLastMaxNameLength = 1024
@@ -1750,6 +1767,8 @@ hnlLastLibInfo = '(
                    ( "IORING" "1707292561" )
                    ( "INV_LP" "1707302868" )
                    ( "INV_HV" "1707118293" )
+                   ( "D_CELLS_JI3V" "1679389448" )
+                   ( "COUNTER_JI3" "1706981732" )
                    ( "TOP" "1707309583" )
                   )
 hnlLastConstants = '(

@@ -1,0 +1,23 @@
+// Library - TOP, Cell - top_tb, View - schematic
+// LAST TIME SAVED: Feb  9 02:36:37 2024
+// NETLIST TIME: Feb  9 03:15:04 2024
+`timescale 1ns / 1ps 
+
+`worklib TOP
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="TOP", dfII_cell="top_tb", dfII_view="schematic", worklib_name="TOP", view_name="schematic", last_save_time="Feb  9 02:36:37 2024" *)
+
+module top_tb ();
+
+
+top I0 ( .GNDA(net13), .GNDD(net9), .GNDHV(net17), .GNDOHV(net15), 
+    .GNDOR(net8), .GNDORA(net12), .PSUB(net7), .VDDA(VDDA), 
+    .VDDD(VDDD), .VDDHV(VDDHV), .VDDOR(VDDD), .VDDORA(VDDA), 
+    .OUTL(out_l), .OUTHV(out_h), .OUT2(out2), .OUT1(out1), .OUT0(out0), 
+    .RESET(reset), .INL(net18), .ENABLE(enable), .CLK(clk));
+
+counter_stimulus I1 ( .clk(clk), .enable(enable), .reset(reset));
+
+endmodule

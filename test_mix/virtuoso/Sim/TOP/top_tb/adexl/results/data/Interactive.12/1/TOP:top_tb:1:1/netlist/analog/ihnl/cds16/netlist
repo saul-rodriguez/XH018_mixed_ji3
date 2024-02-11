@@ -1,0 +1,7 @@
+    I5 jio_ipdio_pc
+    I6 jio_opdio_pc
+    I4 jio_ndtr_pc
+    I3 jio_bufc_pc
+    I1 jio_esd1_pc
+ends ICPC
+// End of subcircuit definition.

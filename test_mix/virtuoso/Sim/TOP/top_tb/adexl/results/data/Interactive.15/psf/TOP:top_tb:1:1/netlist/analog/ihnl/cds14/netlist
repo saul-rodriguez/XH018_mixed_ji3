@@ -1,0 +1,8 @@
+    D3 (B D) dn3 area=3.96e-12 perimeter=660.0n dbv=0 m=1 par1=(1) \
+        xf_subext=0
+    R4 (D net6 B) rdn3 l=1.32u w=12.0u m=1 par1=1 xf_subext=0
+    M0 (net6 G S B) ne3i w=12.0u l=400n as=5.76e-12 ad=5.76e-12 \
+        ps=2.496e-05 pd=2.496e-05 nrs=0.0225 nrd=0.0225 m=(1)*(1) \
+        par1=(1)*(1)
+ends jio_ne3is_pc
+// End of subcircuit definition.

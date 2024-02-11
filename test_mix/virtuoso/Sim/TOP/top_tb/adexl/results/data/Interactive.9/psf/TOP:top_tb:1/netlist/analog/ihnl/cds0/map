@@ -1,7 +1,7 @@
 ( ( nil
   version "2.1"
   mapType "incremental"
-  repList "verilogams veriloga behavioral functional module schematic spectre symbol"
+  repList "verilogams functional veriloga behavioral module schematic spectre symbol"
   stopList "symbol spectre"
   hierDelim "."
  )

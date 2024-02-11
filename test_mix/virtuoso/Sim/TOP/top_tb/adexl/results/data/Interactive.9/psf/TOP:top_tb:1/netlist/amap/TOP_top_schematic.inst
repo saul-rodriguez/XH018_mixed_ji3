@@ -66,4 +66,4 @@ HEADER
 "I0n" "IORING_ioring_schematic"
 "I1n" "INV_LP_inv_schematic"
 "I2n" "INV_HV_inv_hv_schematic"
-"I3n" "COUNTER_JI3_counter_functional"
+"I3n" "COUNTER_JI3_counter_schematic"

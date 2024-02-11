@@ -1,0 +1,63 @@
+CADENCE IHNL04120
+$model
+HV_CELLS/ioh_c5pk/schematic HV_CELLS/ioh_c5pk/schematic/schematic/TOP_top_tb_config/0 ioh_c5pk
+HV_CELLS/ioh_iscrd2_4x100/schematic HV_CELLS/ioh_iscrd2_4x100/schematic/schematic/TOP_top_tb_config/0 ioh_iscrd2_4x100
+ON211JI3VX1 ON211JI3VX1 ON211JI3VX1
+GNDORPADPC GNDORPADPC GNDORPADPC
+PSUBPADPC PSUBPADPC PSUBPADPC
+DECAP25JI3V DECAP25JI3V DECAP25JI3V
+AN21JI3VX1 AN21JI3VX1 AN21JI3VX1
+NO2JI3VX0 NO2JI3VX0 NO2JI3VX0
+DLY2JI3VX1 DLY2JI3VX1 DLY2JI3VX1
+COUNTER_JI3/counter/schematic COUNTER_JI3/counter/schematic/schematic/TOP_top_tb_config/0 counter
+BUJI3VX0 BUJI3VX0 BUJI3VX0
+INV_HV/inv_hv/schematic INV_HV/inv_hv/schematic/schematic/TOP_top_tb_config/0 inv_hv
+HV_CELLS/ioh_pe3isabhv_1050gcr/schematic HV_CELLS/ioh_pe3isabhv_1050gcr/schematic/schematic/TOP_top_tb_config/0 ioh_pe3isabhv_1050gcr
+BUJI3VX1 BUJI3VX1 BUJI3VX1
+DECAP15JI3V DECAP15JI3V DECAP15JI3V
+HV_CELLS/ioh_pmbsabhv_2000/schematic HV_CELLS/ioh_pmbsabhv_2000/schematic/schematic/TOP_top_tb_config/0 ioh_pmbsabhv_2000
+IORING/ioring/schematic IORING/ioring/schematic/schematic/TOP_top_tb_config/0 ioring
+DECAP10JI3V DECAP10JI3V DECAP10JI3V
+DLY1JI3VX1 DLY1JI3VX1 DLY1JI3VX1
+HV_CELLS/ioh_d2pk/schematic HV_CELLS/ioh_d2pk/schematic/schematic/TOP_top_tb_config/0 ioh_d2pk
+HV_CELLS/ioh_dhpw_2x100_stack3/schematic HV_CELLS/ioh_dhpw_2x100_stack3/schematic/schematic/TOP_top_tb_config/0 ioh_dhpw_2x100_stack3
+GNDPADPC GNDPADPC GNDPADPC
+HV_CELLS/ioh_pmbsabhv_750/schematic HV_CELLS/ioh_pmbsabhv_750/schematic/schematic/TOP_top_tb_config/0 ioh_pmbsabhv_750
+PWRCUTDCPC PWRCUTDCPC PWRCUTDCPC
+HV_CELLS/HVD4SJD1R5PKFs/schematic HV_CELLS/HVD4SJD1R5PKFs/schematic/schematic/TOP_top_tb_config/0 HVD4SJD1R5PKFs
+DFRQJI3VX4 DFRQJI3VX4 DFRQJI3VX4
+BUJI3VX16 BUJI3VX16 BUJI3VX16
+HV_CELLS/ioh_pe3isab_40_04/schematic HV_CELLS/ioh_pe3isab_40_04/schematic/schematic/TOP_top_tb_config/0 ioh_pe3isab_40_04
+BUJI3VX2 BUJI3VX2 BUJI3VX2
+AN22JI3VX1 AN22JI3VX1 AN22JI3VX1
+INJI3VX0 INJI3VX0 INJI3VX0
+NA2JI3VX0 NA2JI3VX0 NA2JI3VX0
+INV_LP/inv/schematic INV_LP/inv/schematic/schematic/TOP_top_tb_config/0 inv
+VDDPADPC VDDPADPC VDDPADPC
+HV_CELLS/HVDD4DJ5PKFs/schematic HV_CELLS/HVDD4DJ5PKFs/schematic/schematic/TOP_top_tb_config/0 HVDD4DJ5PKFs
+HV_CELLS/ioh_d5pk/schematic HV_CELLS/ioh_d5pk/schematic/schematic/TOP_top_tb_config/0 ioh_d5pk
+DFRQJI3VX2 DFRQJI3VX2 DFRQJI3VX2
+HV_CELLS/ioh_pe3isabhv_2800gcr/schematic HV_CELLS/ioh_pe3isabhv_2800gcr/schematic/schematic/TOP_top_tb_config/0 ioh_pe3isabhv_2800gcr
+VDDORPADPC VDDORPADPC VDDORPADPC
+APR04DPC APR04DPC APR04DPC
+DECAP5JI3V DECAP5JI3V DECAP5JI3V
+DECAP7JI3V DECAP7JI3V DECAP7JI3V
+TOP/top/schematic TOP/top/schematic/schematic/TOP_top_tb_config/0 top
+EN2JI3VX0 EN2JI3VX0 EN2JI3VX0
+ICPC ICPC ICPC
+HV_CELLS/HVDD4D2PK/schematic HV_CELLS/HVDD4D2PK/schematic/schematic/TOP_top_tb_config/0 HVDD4D2PK
+HV_CELLS/ioh_pmbsab_15_10/schematic HV_CELLS/ioh_pmbsab_15_10/schematic/schematic/TOP_top_tb_config/0 ioh_pmbsab_15_10
+TOP/top_tb/schematic TOP/top_tb/schematic/schematic/TOP_top_tb_config/1 top_tb
+HV_CELLS/ioh_pe3isab_15_04/schematic HV_CELLS/ioh_pe3isab_15_04/schematic/schematic/TOP_top_tb_config/0 ioh_pe3isab_15_04
+HV_CELLS/ioh_pmbsab_40_10/schematic HV_CELLS/ioh_pmbsab_40_10/schematic/schematic/TOP_top_tb_config/0 ioh_pmbsab_40_10
+DFRQJI3VX1 DFRQJI3VX1 DFRQJI3VX1
+APR00DPC APR00DPC APR00DPC
+HV_CELLS/ioh_dhpw_2x100/schematic HV_CELLS/ioh_dhpw_2x100/schematic/schematic/TOP_top_tb_config/0 ioh_dhpw_2x100
+BT4PC BT4PC BT4PC
+$endmodel
+$net
+gnd! cds_globals.\gnd! 
+$endnet
+$param
+temperature cds_globals.\temperature 
+$endparam

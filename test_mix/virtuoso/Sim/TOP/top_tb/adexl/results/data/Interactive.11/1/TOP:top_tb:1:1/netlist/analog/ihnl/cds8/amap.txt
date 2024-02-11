@@ -1,0 +1,9 @@
+cellMap,*jio_ipdio_pc,*jio_ipdio_pc,*IO_CELLS_JIC3V,*cmos_sch
+netMap,*jio_ipdio_pc,*gnd!,*0
+instMap,*jio_ipdio_pc,*D10,*D10
+instMaster,*jio_ipdio_pc,*D10,*PRIMLIB_ddnwmv_spectre,*ddnwmv
+instMap,*jio_ipdio_pc,*D9,*D9
+instMaster,*jio_ipdio_pc,*D9,*PRIMLIB_dipdnwmv_spectre,*dipdnwmv
+portMap,*jio_ipdio_pc,*DNWR,*DNWR
+portMap,*jio_ipdio_pc,*PSUB,*PSUB
+portMap,*jio_ipdio_pc,*PWIR,*PWIR

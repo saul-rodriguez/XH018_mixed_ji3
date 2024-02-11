@@ -1,0 +1,18 @@
+    M3 (net35 net31 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n \
+        l=750.0n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M1 (net31 net47 inh_power_vdd3i inh_power_vdd3i) pe3i w=420.0n l=1u \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    invr_2 invrji3v GT_PUW=1.41u GT_PUL=300.00n GT_PDW=890.00n \
+        GT_PDL=350.00n
+    invr_1 invrji3v GT_PUW=670.00n GT_PUL=300.00n GT_PDW=420.00n \
+        GT_PDL=350.00n
+    M2 (net31 net47 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n \
+        l=800n as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 \
+        nrs=0.642857 nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+    M4 (net35 net31 inh_ground_gnd3i inh_ground_gnd3i) ne3i w=420.0n l=1u \
+        as=2.016e-13 ad=2.016e-13 ps=1.8e-06 pd=1.8e-06 nrs=0.642857 \
+        nrd=0.642857 m=(1)*(1) par1=(1)*(1)
+ends DLY1JI3VX1
+// End of subcircuit definition.

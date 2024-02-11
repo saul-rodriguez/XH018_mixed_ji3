@@ -1,0 +1,1431 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : ioring                                       *
+* Netlisted  : Fri Feb  9 20:04:26 2024                     *
+* PVS Version: 23.10-p043 Mon Oct 2 18:09:08 PDT 2023      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MP(pmb) pmb pdiff(D) p1trm(G) pdiff(S) dnwtrm(B)
+*.DEVTMPLT 1 MN(ne3i) nemi ndiff(D) p1trm(G) ndiff(S) pwitrm(B)
+*.DEVTMPLT 2 MP(pe3i) pemi pdiff(D) p1trm(G) pdiff(S) dnwtrm(B)
+*.DEVTMPLT 3 R(rdp_io) rdp_io_g pdiff(POS) pdiff(NEG) dnwtrm(SUB)
+*.DEVTMPLT 4 R(s_res) s_res bulk(POS) bulk(NEG)
+*.DEVTMPLT 5 D(dhpw) d_dhpw pwitrm(POS) dnwtrm(NEG)
+*.DEVTMPLT 6 D(ddnw) d_ddnw bulk(POS) dnwtrm(NEG)
+*.DEVTMPLT 7 D(ddnwmv) d_ddnwmv bulk(POS) dnwtrm(NEG)
+*.DEVTMPLT 8 D(p_ddnwmv) p_ddnwmv bulk(POS) dnwtrm(NEG)
+*.DEVTMPLT 9 D(dipdnwmv) d_dipwmv pwitrm(POS) dnwtrm(NEG)
+*.DEVTMPLT 10 D(dpdd_scr) dpdd_scr pwitrm(POS) dnwtrm(NEG)
+*.DEVTMPLT 11 D(dnpdd_scr) dnpddscr pwitrm(POS) ndiff(NEG)
+*.DEVTMPLT 12 D(dphnw) d_dphnw1 pdiff(POS) dnwtrm(NEG)
+*.DEVTMPLT 13 D(dpdnw) d_dpdnw pdiff(POS) dnwtrm(NEG)
+*.DEVTMPLT 14 R(rdn3) rdnm_gi ndiff(POS) ndiff(NEG) pwitrm(SUB)
+*.DEVTMPLT 15 R(rdp3) rdpm pdiff(POS) pdiff(NEG) nwtrm(SUB)
+*.DEVTMPLT 16 R(rdp3) rdpmi pdiff(POS) pdiff(NEG) dnwtrm(SUB)
+*.DEVTMPLT 17 R(rdp3) rdpm_gi pdiff(POS) pdiff(NEG) dnwtrm(SUB)
+*.DEVTMPLT 18 D(dn3) d_dnmi1 pwitrm(POS) ndiff(NEG)
+*.DEVTMPLT 19 D(dp3) d_dpm pdiff(POS) nwtrm(NEG)
+*.DEVTMPLT 20 D(dp3) d_dpmi1 pdiff(POS) dnwtrm(NEG)
+*.DEVTMPLT 21 D(p_dp3) p_dpm pdiff(POS) nwtrm(NEG)
+*.DEVTMPLT 22 D(p_dp3) p_dpmi1 pdiff(POS) dnwtrm(NEG)
+*.DEVTMPLT 23 D(p_dnw3) p_dnwm bulk(POS) nwtrm(NEG)
+*.DEVTMPLT 24 R(rnp1) rnp1_2 p1trm(POS) p1trm(NEG)
+*.DEVTMPLT 25 R(rpp1) rpp1_2 p1trm(POS) p1trm(NEG)
+*.DEVTMPLT 26 R(rpp1s) rpp1s_2 p1trm(POS) p1trm(NEG)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_ne3isbg_pc                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_ne3isbg_pc 2 3 5 6
+*.DEVICECLIMB
+** N=9 EP=4 FDC=3
+R0 5 3 L=3.35e-06 W=3e-05 $[rdn3] $SUB=2 $X=955 $Y=1825 $dt=14
+R1 3 6 L=3.35e-06 W=3e-05 $[rdn3] $SUB=2 $X=4960 $Y=1825 $dt=14
+D2 2 3 dn3 AREA=1.98e-11 PJ=1.32e-06 perimeter=1.32e-06 $X=4300 $Y=1825 $dt=18
+.ends jio_ne3isbg_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_base_ngo_pc                                 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_base_ngo_pc 1 2 3 4
+** N=28 EP=4 FDC=63
+X1781 2 1 7 8 jio_ne3isbg_pc $T=16420 150990 1 180 $X=6100 $Y=149915
+X1782 2 1 5 6 jio_ne3isbg_pc $T=16420 184790 1 180 $X=6100 $Y=183715
+X1783 2 1 11 12 jio_ne3isbg_pc $T=25420 150990 1 180 $X=15100 $Y=149915
+X1784 2 1 9 10 jio_ne3isbg_pc $T=25420 184790 1 180 $X=15100 $Y=183715
+X1785 2 1 15 16 jio_ne3isbg_pc $T=34420 150990 1 180 $X=24100 $Y=149915
+X1786 2 1 13 14 jio_ne3isbg_pc $T=34420 184790 1 180 $X=24100 $Y=183715
+X1787 2 1 19 20 jio_ne3isbg_pc $T=35580 150990 0 0 $X=34520 $Y=149915
+X1788 2 1 17 18 jio_ne3isbg_pc $T=35580 184790 0 0 $X=34520 $Y=183715
+X1789 2 1 23 24 jio_ne3isbg_pc $T=44580 150990 0 0 $X=43520 $Y=149915
+X1790 2 1 21 22 jio_ne3isbg_pc $T=44580 184790 0 0 $X=43520 $Y=183715
+X1791 2 1 27 28 jio_ne3isbg_pc $T=53580 150990 0 0 $X=52520 $Y=149915
+X1792 2 1 25 26 jio_ne3isbg_pc $T=53580 184790 0 0 $X=52520 $Y=183715
+M0 8 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=152815 $dt=1
+M1 6 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=186615 $dt=1
+M2 2 3 7 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=152815 $dt=1
+M3 2 3 5 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=186615 $dt=1
+M4 12 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=152815 $dt=1
+M5 10 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=186615 $dt=1
+M6 2 3 11 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=152815 $dt=1
+M7 2 3 9 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=186615 $dt=1
+M8 16 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=152815 $dt=1
+M9 14 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=186615 $dt=1
+M10 2 3 15 2 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=152815 $dt=1
+M11 2 3 13 2 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=186615 $dt=1
+M12 19 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=152815 $dt=1
+M13 17 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=186615 $dt=1
+M14 2 3 20 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=152815 $dt=1
+M15 2 3 18 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=186615 $dt=1
+M16 23 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=152815 $dt=1
+M17 21 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=186615 $dt=1
+M18 2 3 24 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=152815 $dt=1
+M19 2 3 22 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=186615 $dt=1
+M20 27 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=152815 $dt=1
+M21 25 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=186615 $dt=1
+M22 2 3 28 2 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=152815 $dt=1
+M23 2 3 26 2 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=186615 $dt=1
+D24 4 1 ddnwmv AREA=4.69976e-09 PJ=0.00027464 perimeter=0.00027464 $X=2570 $Y=148485 $dt=7
+D25 2 1 dipdnwmv AREA=4.16648e-09 PJ=0.00025864 perimeter=0.00025864 $X=4570 $Y=150485 $dt=9
+D26 4 1 p_dnw3 AREA=4.54356e-09 PJ=0.00026992 perimeter=0.00026992 $X=2840 $Y=72575 $dt=23
+.ends jio_base_ngo_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: GNDORPADPC                                      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt GNDORPADPC PSUB VDDOI GNDORI VDD3I GNDI VDDRI
+** N=7 EP=6 FDC=66
+X60 VDDOI GNDORI 7 PSUB jio_base_ngo_pc $T=0 0 0 0 $X=665 $Y=72575
+R0 GNDORI 7 L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=4810 $Y=136135 $dt=15
+D1 GNDORI VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4810 $Y=135115 $dt=21
+D2 7 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4810 $Y=139435 $dt=21
+.ends GNDORPADPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_base_ptrpsfl_pc                             *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_base_ptrpsfl_pc 1 3
+** N=3 EP=2 FDC=17
+D0 3 1 p_ddnwmv AREA=4.5084e-09 PJ=0.00026872 perimeter=0.00026872 $X=2500 $Y=150035 $dt=8
+D1 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=13480 $Y=153600 $dt=22
+D2 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=13480 $Y=187400 $dt=22
+D3 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=20080 $Y=153600 $dt=22
+D4 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=20080 $Y=187400 $dt=22
+D5 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=26680 $Y=153600 $dt=22
+D6 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=26680 $Y=187400 $dt=22
+D7 1 1 p_dp3 AREA=3.4348e-11 PJ=3.018e-05 perimeter=3.018e-05 $X=33280 $Y=153600 $dt=22
+D8 1 1 p_dp3 AREA=3.4348e-11 PJ=3.018e-05 perimeter=3.018e-05 $X=33280 $Y=187400 $dt=22
+D9 1 1 p_dp3 AREA=3.4348e-11 PJ=3.018e-05 perimeter=3.018e-05 $X=35480 $Y=153600 $dt=22
+D10 1 1 p_dp3 AREA=3.4348e-11 PJ=3.018e-05 perimeter=3.018e-05 $X=35480 $Y=187400 $dt=22
+D11 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=41900 $Y=153600 $dt=22
+D12 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=41900 $Y=187400 $dt=22
+D13 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=48500 $Y=153600 $dt=22
+D14 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=48500 $Y=187400 $dt=22
+D15 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=55100 $Y=153600 $dt=22
+D16 1 1 p_dp3 AREA=3.9334e-11 PJ=5.824e-05 perimeter=5.824e-05 $X=55100 $Y=187400 $dt=22
+.ends jio_base_ptrpsfl_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_ne3isb_pc                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_ne3isb_pc 2 3 6 7
+*.DEVICECLIMB
+** N=10 EP=4 FDC=3
+R0 6 3 L=3.35e-06 W=3e-05 $[rdn3] $SUB=2 $X=955 $Y=1825 $dt=14
+R1 3 7 L=3.35e-06 W=3e-05 $[rdn3] $SUB=2 $X=4960 $Y=1825 $dt=14
+D2 2 3 dn3 AREA=1.98e-11 PJ=1.32e-06 perimeter=1.32e-06 $X=4300 $Y=1825 $dt=18
+.ends jio_ne3isb_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_base_ntr_pc                                 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_base_ntr_pc 1 2 3 4 5 6 7
+** N=31 EP=7 FDC=62
+X100 2 6 10 11 jio_ne3isb_pc $T=16420 75080 1 180 $X=6100 $Y=73130
+X101 2 6 8 9 jio_ne3isb_pc $T=16420 108880 1 180 $X=6100 $Y=106930
+X102 2 6 14 15 jio_ne3isb_pc $T=25420 75080 1 180 $X=15100 $Y=73130
+X103 2 6 12 13 jio_ne3isb_pc $T=25420 108880 1 180 $X=15100 $Y=106930
+X104 2 6 18 19 jio_ne3isb_pc $T=34420 75080 1 180 $X=24100 $Y=73130
+X105 2 6 16 17 jio_ne3isb_pc $T=34420 108880 1 180 $X=24100 $Y=106930
+X106 2 6 22 23 jio_ne3isb_pc $T=35580 75080 0 0 $X=34520 $Y=73130
+X107 2 6 20 21 jio_ne3isb_pc $T=35580 108880 0 0 $X=34520 $Y=106930
+X108 2 6 26 27 jio_ne3isb_pc $T=44580 75080 0 0 $X=43520 $Y=73130
+X109 2 6 24 25 jio_ne3isb_pc $T=44580 108880 0 0 $X=43520 $Y=106930
+X110 2 6 30 31 jio_ne3isb_pc $T=53580 75080 0 0 $X=52520 $Y=73130
+X111 2 6 28 29 jio_ne3isb_pc $T=53580 108880 0 0 $X=52520 $Y=106930
+M0 11 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=76905 $dt=1
+M1 9 4 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=110705 $dt=1
+M2 2 3 10 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=76905 $dt=1
+M3 2 3 8 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=110705 $dt=1
+M4 15 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=76905 $dt=1
+M5 13 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=110705 $dt=1
+M6 2 3 14 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=76905 $dt=1
+M7 2 3 12 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=110705 $dt=1
+M8 19 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=76905 $dt=1
+M9 17 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=110705 $dt=1
+M10 2 3 18 2 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=76905 $dt=1
+M11 2 3 16 2 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=110705 $dt=1
+M12 22 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=76905 $dt=1
+M13 20 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=110705 $dt=1
+M14 2 3 23 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=76905 $dt=1
+M15 2 3 21 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=110705 $dt=1
+M16 26 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=76905 $dt=1
+M17 24 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=110705 $dt=1
+M18 2 3 27 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=76905 $dt=1
+M19 2 3 25 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=110705 $dt=1
+M20 30 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=76905 $dt=1
+M21 28 5 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=110705 $dt=1
+M22 2 3 31 2 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=76905 $dt=1
+M23 2 5 29 2 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=110705 $dt=1
+D24 7 1 ddnwmv AREA=4.69976e-09 PJ=0.00027464 perimeter=0.00027464 $X=2570 $Y=72575 $dt=7
+D25 2 1 dipdnwmv AREA=4.16648e-09 PJ=0.00025864 perimeter=0.00025864 $X=4570 $Y=74575 $dt=9
+.ends jio_base_ntr_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: VDDORPADPC                                      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt VDDORPADPC PSUB VDDORI GNDOI VDD3I GNDI GNDRI
+** N=7 EP=6 FDC=82
+X123 VDDORI PSUB jio_base_ptrpsfl_pc $T=0 0 0 0 $X=510 $Y=137985
+X125 VDDORI GNDOI 7 7 7 VDDORI PSUB jio_base_ntr_pc $T=0 0 0 0 $X=2560 $Y=72565
+R0 7 GNDOI L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDORI $X=65085 $Y=153720 $dt=16
+D1 7 VDDORI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=152700 $dt=22
+D2 GNDOI VDDORI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=157020 $dt=22
+.ends VDDORPADPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_base_ntrc_pc                                *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_base_ntrc_pc 1 2 3 4 5
+** N=29 EP=5 FDC=62
+X100 2 4 8 9 jio_ne3isb_pc $T=16420 75080 1 180 $X=6100 $Y=73130
+X101 2 4 6 7 jio_ne3isb_pc $T=16420 108880 1 180 $X=6100 $Y=106930
+X102 2 4 12 13 jio_ne3isb_pc $T=25420 75080 1 180 $X=15100 $Y=73130
+X103 2 4 10 11 jio_ne3isb_pc $T=25420 108880 1 180 $X=15100 $Y=106930
+X104 2 4 16 17 jio_ne3isb_pc $T=34420 75080 1 180 $X=24100 $Y=73130
+X105 2 4 14 15 jio_ne3isb_pc $T=34420 108880 1 180 $X=24100 $Y=106930
+X106 2 4 20 21 jio_ne3isb_pc $T=35580 75080 0 0 $X=34520 $Y=73130
+X107 2 4 18 19 jio_ne3isb_pc $T=35580 108880 0 0 $X=34520 $Y=106930
+X108 2 4 24 25 jio_ne3isb_pc $T=44580 75080 0 0 $X=43520 $Y=73130
+X109 2 4 22 23 jio_ne3isb_pc $T=44580 108880 0 0 $X=43520 $Y=106930
+X110 2 4 28 29 jio_ne3isb_pc $T=53580 75080 0 0 $X=52520 $Y=73130
+X111 2 4 26 27 jio_ne3isb_pc $T=53580 108880 0 0 $X=52520 $Y=106930
+M0 9 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=76905 $dt=1
+M1 7 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=110705 $dt=1
+M2 2 3 8 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=76905 $dt=1
+M3 2 3 6 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=110705 $dt=1
+M4 13 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=76905 $dt=1
+M5 11 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=110705 $dt=1
+M6 2 3 12 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=76905 $dt=1
+M7 2 3 10 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=110705 $dt=1
+M8 17 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=76905 $dt=1
+M9 15 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=110705 $dt=1
+M10 2 3 16 2 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=76905 $dt=1
+M11 2 3 14 2 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=110705 $dt=1
+M12 20 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=76905 $dt=1
+M13 18 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=110705 $dt=1
+M14 2 3 21 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=76905 $dt=1
+M15 2 3 19 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=110705 $dt=1
+M16 24 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=76905 $dt=1
+M17 22 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=110705 $dt=1
+M18 2 3 25 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=76905 $dt=1
+M19 2 3 23 2 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=110705 $dt=1
+M20 28 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=76905 $dt=1
+M21 26 3 2 2 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=110705 $dt=1
+M22 2 3 29 2 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=76905 $dt=1
+M23 2 3 27 2 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=110705 $dt=1
+D24 5 1 ddnwmv AREA=4.69976e-09 PJ=0.00027464 perimeter=0.00027464 $X=2570 $Y=72575 $dt=7
+D25 2 1 dipdnwmv AREA=4.16648e-09 PJ=0.00025864 perimeter=0.00025864 $X=4570 $Y=74575 $dt=9
+.ends jio_base_ntrc_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_pe3isb_pc                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_pe3isb_pc 2 3 6 7
+*.DEVICECLIMB
+** N=10 EP=4 FDC=3
+R0 7 3 L=2.15e-06 W=3e-05 $[rdp3] $SUB=2 $X=1000 $Y=1825 $dt=17
+R1 3 6 L=2.15e-06 W=3e-05 $[rdp3] $SUB=2 $X=3805 $Y=1825 $dt=17
+D2 3 2 p_dp3 AREA=1.98e-11 PJ=1.32e-06 perimeter=1.32e-06 $X=3145 $Y=1825 $dt=22
+.ends jio_pe3isb_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_base_ptrps_pc                               *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_base_ptrps_pc 1 2 3 4
+** N=36 EP=4 FDC=81
+X151 1 2 8 7 jio_pe3isb_pc $T=14365 150990 1 180 $X=6700 $Y=149060
+X152 1 2 6 5 jio_pe3isb_pc $T=14365 184790 1 180 $X=6700 $Y=182860
+X153 1 2 12 11 jio_pe3isb_pc $T=20965 150990 1 180 $X=13300 $Y=149060
+X154 1 2 10 9 jio_pe3isb_pc $T=20965 184790 1 180 $X=13300 $Y=182860
+X155 1 2 16 15 jio_pe3isb_pc $T=27565 150990 1 180 $X=19900 $Y=149060
+X156 1 2 14 13 jio_pe3isb_pc $T=27565 184790 1 180 $X=19900 $Y=182860
+X157 1 2 20 19 jio_pe3isb_pc $T=34165 150990 1 180 $X=26500 $Y=149060
+X158 1 2 18 17 jio_pe3isb_pc $T=34165 184790 1 180 $X=26500 $Y=182860
+X159 1 2 24 23 jio_pe3isb_pc $T=35835 150990 0 0 $X=35120 $Y=149060
+X160 1 2 22 21 jio_pe3isb_pc $T=35835 184790 0 0 $X=35120 $Y=182860
+X161 1 2 28 27 jio_pe3isb_pc $T=42435 150990 0 0 $X=41720 $Y=149060
+X162 1 2 26 25 jio_pe3isb_pc $T=42435 184790 0 0 $X=41720 $Y=182860
+X163 1 2 32 31 jio_pe3isb_pc $T=49035 150990 0 0 $X=48320 $Y=149060
+X164 1 2 30 29 jio_pe3isb_pc $T=49035 184790 0 0 $X=48320 $Y=182860
+X165 1 2 36 35 jio_pe3isb_pc $T=55635 150990 0 0 $X=54920 $Y=149060
+X166 1 2 34 33 jio_pe3isb_pc $T=55635 184790 0 0 $X=54920 $Y=182860
+M0 8 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=8060 $Y=152815 $dt=2
+M1 6 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=8060 $Y=186615 $dt=2
+M2 1 3 7 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=13370 $Y=152815 $dt=2
+M3 1 3 5 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=13370 $Y=186615 $dt=2
+M4 12 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=14660 $Y=152815 $dt=2
+M5 10 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=14660 $Y=186615 $dt=2
+M6 1 3 11 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=19970 $Y=152815 $dt=2
+M7 1 3 9 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=19970 $Y=186615 $dt=2
+M8 16 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=21260 $Y=152815 $dt=2
+M9 14 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=21260 $Y=186615 $dt=2
+M10 1 3 15 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=26570 $Y=152815 $dt=2
+M11 1 3 13 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=26570 $Y=186615 $dt=2
+M12 20 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=27860 $Y=152815 $dt=2
+M13 18 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=27860 $Y=186615 $dt=2
+M14 1 3 19 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=33170 $Y=152815 $dt=2
+M15 1 3 17 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=33170 $Y=186615 $dt=2
+M16 23 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=36480 $Y=152815 $dt=2
+M17 21 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=36480 $Y=186615 $dt=2
+M18 1 3 24 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=41790 $Y=152815 $dt=2
+M19 1 3 22 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=41790 $Y=186615 $dt=2
+M20 27 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=43080 $Y=152815 $dt=2
+M21 25 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=43080 $Y=186615 $dt=2
+M22 1 3 28 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=48390 $Y=152815 $dt=2
+M23 1 3 26 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=48390 $Y=186615 $dt=2
+M24 31 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=49680 $Y=152815 $dt=2
+M25 29 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=49680 $Y=186615 $dt=2
+M26 1 3 32 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=54990 $Y=152815 $dt=2
+M27 1 3 30 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=54990 $Y=186615 $dt=2
+M28 35 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=56280 $Y=152815 $dt=2
+M29 33 3 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=56280 $Y=186615 $dt=2
+M30 1 3 36 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=61590 $Y=152815 $dt=2
+M31 1 3 34 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=61590 $Y=186615 $dt=2
+D32 4 1 p_ddnwmv AREA=4.5084e-09 PJ=0.00026872 perimeter=0.00026872 $X=2500 $Y=150035 $dt=8
+.ends jio_base_ptrps_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_basepsc_pc                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_basepsc_pc 1 2 3 4
+** N=10 EP=4 FDC=149
+X128 2 4 10 3 1 jio_base_ntrc_pc $T=0 0 0 0 $X=2560 $Y=72565
+X129 2 3 9 1 jio_base_ptrps_pc $T=0 0 0 0 $X=2500 $Y=149060
+R0 9 2 L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=2 $X=4475 $Y=153720 $dt=16
+R1 10 4 L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=2 $X=65085 $Y=153720 $dt=16
+D2 9 2 p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4475 $Y=152700 $dt=22
+D3 2 2 p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4475 $Y=157020 $dt=22
+D4 10 2 p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=152700 $dt=22
+D5 4 2 p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=157020 $dt=22
+.ends jio_basepsc_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: VDDPADPC                                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt VDDPADPC VDD3I GNDI VDDRI VDDOI GNDRI GNDOI PSUB
+** N=7 EP=7 FDC=149
+X0 PSUB VDDOI VDD3I GNDOI jio_basepsc_pc $T=0 0 0 0 $X=-320 $Y=0
+.ends VDDPADPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: PSUBPADPC                                       *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt PSUBPADPC PSUB GNDOI VDDOI VDD3I GNDI VDDRI GNDRI
+** N=33 EP=7 FDC=149
+X263 PSUB GNDOI 12 13 jio_ne3isbg_pc $T=16420 75080 1 180 $X=6100 $Y=74005
+X264 PSUB GNDOI 10 11 jio_ne3isbg_pc $T=16420 108880 1 180 $X=6100 $Y=107805
+X265 PSUB GNDOI 20 21 jio_ne3isbg_pc $T=25420 75080 1 180 $X=15100 $Y=74005
+X266 PSUB GNDOI 18 19 jio_ne3isbg_pc $T=25420 108880 1 180 $X=15100 $Y=107805
+X267 PSUB GNDOI 16 17 jio_ne3isbg_pc $T=34420 75080 1 180 $X=24100 $Y=74005
+X268 PSUB GNDOI 14 15 jio_ne3isbg_pc $T=34420 108880 1 180 $X=24100 $Y=107805
+X269 PSUB GNDOI 24 25 jio_ne3isbg_pc $T=35580 75080 0 0 $X=34520 $Y=74005
+X270 PSUB GNDOI 22 23 jio_ne3isbg_pc $T=35580 108880 0 0 $X=34520 $Y=107805
+X271 PSUB GNDOI 32 33 jio_ne3isbg_pc $T=44580 75080 0 0 $X=43520 $Y=74005
+X272 PSUB GNDOI 30 31 jio_ne3isbg_pc $T=44580 108880 0 0 $X=43520 $Y=107805
+X273 PSUB GNDOI 28 29 jio_ne3isbg_pc $T=53580 75080 0 0 $X=52520 $Y=74005
+X274 PSUB GNDOI 26 27 jio_ne3isbg_pc $T=53580 108880 0 0 $X=52520 $Y=107805
+X402 VDDOI PSUB 9 PSUB jio_base_ptrps_pc $T=0 0 0 0 $X=2500 $Y=149060
+M0 13 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=76905 $dt=1
+M1 11 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=7710 $Y=110705 $dt=1
+M2 PSUB 8 12 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=76905 $dt=1
+M3 PSUB 8 10 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=15470 $Y=110705 $dt=1
+M4 21 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=76905 $dt=1
+M5 19 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=16710 $Y=110705 $dt=1
+M6 PSUB 8 20 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=76905 $dt=1
+M7 PSUB 8 18 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=24470 $Y=110705 $dt=1
+M8 17 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=76905 $dt=1
+M9 15 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=25710 $Y=110705 $dt=1
+M10 PSUB 8 16 PSUB ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=76905 $dt=1
+M11 PSUB 8 14 PSUB ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=33470 $Y=110705 $dt=1
+M12 24 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=76905 $dt=1
+M13 22 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=36130 $Y=110705 $dt=1
+M14 PSUB 8 25 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=76905 $dt=1
+M15 PSUB 8 23 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=43890 $Y=110705 $dt=1
+M16 32 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=76905 $dt=1
+M17 30 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=45130 $Y=110705 $dt=1
+M18 PSUB 8 33 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=76905 $dt=1
+M19 PSUB 8 31 PSUB ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=52890 $Y=110705 $dt=1
+M20 28 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=76905 $dt=1
+M21 26 8 PSUB PSUB ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=54130 $Y=110705 $dt=1
+M22 PSUB 8 29 PSUB ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=76905 $dt=1
+M23 PSUB 8 27 PSUB ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=61890 $Y=110705 $dt=1
+D24 PSUB GNDOI ddnwmv AREA=4.69976e-09 PJ=0.00027464 perimeter=0.00027464 $X=2570 $Y=72575 $dt=7
+D25 PSUB GNDOI dipdnwmv AREA=4.16648e-09 PJ=0.00025864 perimeter=0.00025864 $X=4570 $Y=74575 $dt=9
+R26 9 VDDOI L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=4475 $Y=153720 $dt=16
+R27 8 PSUB L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=65085 $Y=153720 $dt=16
+D28 9 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4475 $Y=152700 $dt=22
+D29 VDDOI VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4475 $Y=157020 $dt=22
+D30 8 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=152700 $dt=22
+D31 PSUB VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=157020 $dt=22
+.ends PSUBPADPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: GNDPADPC                                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt GNDPADPC GNDI VDD3I VDDRI VDDOI GNDRI GNDOI PSUB
+** N=7 EP=7 FDC=149
+X0 PSUB VDDOI GNDI GNDOI jio_basepsc_pc $T=0 0 0 0 $X=-320 $Y=0
+.ends GNDPADPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_base_ptr_pc                                 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_base_ptr_pc 1 2 3 4 5 6 7
+** N=31 EP=7 FDC=63
+X233 1 3 9 8 jio_pe3isb_pc $T=14365 150990 1 180 $X=6700 $Y=149060
+X234 1 3 11 10 jio_pe3isb_pc $T=20965 150990 1 180 $X=13300 $Y=149060
+X235 1 3 19 18 jio_pe3isb_pc $T=27565 150990 1 180 $X=19900 $Y=149060
+X236 1 3 17 16 jio_pe3isb_pc $T=27565 184790 1 180 $X=19900 $Y=182860
+X237 1 3 15 14 jio_pe3isb_pc $T=34165 150990 1 180 $X=26500 $Y=149060
+X238 1 3 13 12 jio_pe3isb_pc $T=34165 184790 1 180 $X=26500 $Y=182860
+X239 1 3 27 26 jio_pe3isb_pc $T=35835 150990 0 0 $X=35120 $Y=149060
+X240 1 3 25 24 jio_pe3isb_pc $T=35835 184790 0 0 $X=35120 $Y=182860
+X241 1 3 23 22 jio_pe3isb_pc $T=42435 150990 0 0 $X=41720 $Y=149060
+X242 1 3 21 20 jio_pe3isb_pc $T=42435 184790 0 0 $X=41720 $Y=182860
+X243 1 3 29 28 jio_pe3isb_pc $T=49035 150990 0 0 $X=48320 $Y=149060
+X244 1 3 31 30 jio_pe3isb_pc $T=55635 150990 0 0 $X=54920 $Y=149060
+M0 9 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=8060 $Y=152815 $dt=2
+M1 1 4 8 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=13370 $Y=152815 $dt=2
+M2 11 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=14660 $Y=152815 $dt=2
+M3 1 4 10 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=19970 $Y=152815 $dt=2
+M4 19 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=21260 $Y=152815 $dt=2
+M5 17 5 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=21260 $Y=186615 $dt=2
+M6 1 4 18 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=26570 $Y=152815 $dt=2
+M7 1 5 16 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=26570 $Y=186615 $dt=2
+M8 15 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=27860 $Y=152815 $dt=2
+M9 13 5 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=27860 $Y=186615 $dt=2
+M10 1 4 14 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=33170 $Y=152815 $dt=2
+M11 1 4 12 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=33170 $Y=186615 $dt=2
+M12 26 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=36480 $Y=152815 $dt=2
+M13 24 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=36480 $Y=186615 $dt=2
+M14 1 4 27 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=41790 $Y=152815 $dt=2
+M15 1 4 25 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=41790 $Y=186615 $dt=2
+M16 22 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=43080 $Y=152815 $dt=2
+M17 20 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=43080 $Y=186615 $dt=2
+M18 1 4 23 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=48390 $Y=152815 $dt=2
+M19 1 4 21 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=48390 $Y=186615 $dt=2
+M20 28 4 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=49680 $Y=152815 $dt=2
+M21 1 6 29 1 pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=54990 $Y=152815 $dt=2
+M22 30 6 1 1 pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=56280 $Y=152815 $dt=2
+M23 1 6 31 1 pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=61590 $Y=152815 $dt=2
+D24 7 1 p_ddnwmv AREA=4.5084e-09 PJ=0.00026872 perimeter=0.00026872 $X=2500 $Y=150035 $dt=8
+D25 2 1 dipdnwmv AREA=2.1664e-10 PJ=5.908e-05 perimeter=5.908e-05 $X=4500 $Y=201395 $dt=9
+D26 2 1 dipdnwmv AREA=2.1664e-10 PJ=5.908e-05 perimeter=5.908e-05 $X=51960 $Y=201395 $dt=9
+.ends jio_base_ptr_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_baseti_pc                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_baseti_pc 1 2 3 4 5 6 7 8 9 10
++ 11 12 13 14
+** N=14 EP=14 FDC=131
+X3 2 5 13 14 12 8 1 jio_base_ntr_pc $T=0 0 0 0 $X=2560 $Y=72565
+X4 2 5 8 9 11 10 1 jio_base_ptr_pc $T=0 0 0 0 $X=2500 $Y=149060
+D0 1 2 ddnwmv AREA=5.2955e-10 PJ=0.00010026 perimeter=0.00010026 $X=2500 $Y=224395 $dt=7
+D1 1 6 ddnwmv AREA=3.7825e-10 PJ=8.026e-05 perimeter=8.026e-05 $X=42500 $Y=224395 $dt=7
+D2 1 3 p_ddnwmv AREA=9.789e-10 PJ=0.00016012 perimeter=0.00016012 $X=2500 $Y=244525 $dt=8
+D3 5 2 dipdnwmv AREA=1.9592e-10 PJ=7.464e-05 perimeter=7.464e-05 $X=4500 $Y=226395 $dt=9
+D4 4 3 dipdnwmv AREA=3.1903e-10 PJ=0.00013246 perimeter=0.00013246 $X=4500 $Y=246525 $dt=9
+D5 7 6 dipdnwmv AREA=1.3272e-10 PJ=5.464e-05 perimeter=5.464e-05 $X=44500 $Y=226395 $dt=9
+.ends jio_baseti_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ICPC                                            *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ICPC VDDOI VDD3I PSUB GNDI GNDOI VDDRI GNDRI Y PAD PO
++ PI
+** N=26 EP=11 FDC=190
+X415 PSUB VDDOI VDD3I GNDI GNDOI VDDRI GNDRI PAD 12 12
++ 12 15 15 15 jio_baseti_pc $T=0 0 0 0 $X=-320 $Y=0
+M0 15 12 GNDOI GNDOI ne3i L=4e-07 W=1.2e-06 AD=6.36e-13 AS=6.36e-13 PD=3.46e-06 PS=3.46e-06 $X=10900 $Y=214545 $dt=1
+M1 GNDI 22 14 GNDI ne3i L=4e-07 W=1.2e-06 AD=4.02e-13 AS=6.12e-13 PD=1.87e-06 PS=3.42e-06 $X=43225 $Y=248510 $dt=1
+M2 14 22 GNDI GNDI ne3i L=4e-07 W=1.2e-06 AD=6.24e-13 AS=4.02e-13 PD=3.44e-06 PS=1.87e-06 $X=44295 $Y=248510 $dt=1
+M3 16 14 GNDI GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=8.064e-13 PD=2.22e-06 PS=4.32e-06 $X=48745 $Y=248340 $dt=1
+M4 GNDI 14 16 GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=49685 $Y=248340 $dt=1
+M5 16 14 GNDI GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=50625 $Y=248340 $dt=1
+M6 GNDI 14 16 GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=51565 $Y=248340 $dt=1
+M7 17 14 GNDI GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=52505 $Y=248340 $dt=1
+M8 GNDI 14 17 GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=53445 $Y=248340 $dt=1
+M9 19 GNDOI GNDOI GNDOI ne3i L=4e-07 W=1.2e-05 AD=6e-14 AS=6.66e-12 PD=2.401e-05 PS=2.511e-05 $X=53865 $Y=203375 $dt=1
+M10 Y 16 GNDI GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=54385 $Y=248340 $dt=1
+M11 GNDI 16 Y GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=55325 $Y=248340 $dt=1
+M12 GNDRI 20 22 GNDRI ne3i L=4e-07 W=2e-06 AD=5.4e-13 AS=9.6e-13 PD=2.54e-06 PS=4.96e-06 $X=55490 $Y=228495 $dt=1
+M13 Y 16 GNDI GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=56265 $Y=248340 $dt=1
+M14 22 20 GNDRI GNDRI ne3i L=4e-07 W=2e-06 AD=5.4e-13 AS=5.4e-13 PD=2.54e-06 PS=2.54e-06 $X=56430 $Y=228495 $dt=1
+M15 GNDI 16 Y GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=57205 $Y=248340 $dt=1
+M16 GNDRI 20 22 GNDRI ne3i L=4e-07 W=2e-06 AD=9.6e-13 AS=5.4e-13 PD=4.96e-06 PS=2.54e-06 $X=57370 $Y=228495 $dt=1
+M17 GNDOI GNDOI 21 GNDOI ne3i L=4e-07 W=1.2e-05 AD=6.66e-12 AS=6e-14 PD=2.511e-05 PS=2.401e-05 $X=57565 $Y=203375 $dt=1
+M18 Y 16 GNDI GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=4.536e-13 PD=2.22e-06 PS=2.22e-06 $X=58145 $Y=248340 $dt=1
+M19 GNDI 16 Y GNDI ne3i L=4e-07 W=1.68e-06 AD=8.064e-13 AS=4.536e-13 PD=4.32e-06 PS=2.22e-06 $X=59085 $Y=248340 $dt=1
+M20 18 14 PO GNDI ne3i L=4e-07 W=1.68e-06 AD=4.536e-13 AS=8.064e-13 PD=2.22e-06 PS=4.32e-06 $X=62265 $Y=248110 $dt=1
+M21 GNDI PI 18 GNDI ne3i L=4e-07 W=1.68e-06 AD=8.064e-13 AS=4.536e-13 PD=4.32e-06 PS=2.22e-06 $X=63205 $Y=248110 $dt=1
+M22 20 VDDOI VDDOI VDDOI pe3i L=3.5e-07 W=1.2e-05 AD=6.78e-12 AS=6.24e-12 PD=1.313e-05 PS=2.504e-05 $X=22325 $Y=234735 $dt=2
+M23 VDDOI VDDOI 20 VDDOI pe3i L=3.5e-07 W=1.2e-05 AD=6.24e-12 AS=6.78e-12 PD=2.504e-05 PS=1.313e-05 $X=22325 $Y=236215 $dt=2
+M24 14 22 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=1.152e-12 PD=2.94e-06 PS=5.76e-06 $X=42235 $Y=254765 $dt=2
+M25 VDD3I 22 14 VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=1.152e-12 AS=6.48e-13 PD=5.76e-06 PS=2.94e-06 $X=43125 $Y=254765 $dt=2
+M26 16 14 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=1.152e-12 PD=2.94e-06 PS=5.76e-06 $X=45125 $Y=254765 $dt=2
+M27 VDD3I 14 16 VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=46015 $Y=254765 $dt=2
+M28 17 14 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=46905 $Y=254765 $dt=2
+M29 VDD3I 14 17 VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=47795 $Y=254765 $dt=2
+M30 17 14 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=48685 $Y=254765 $dt=2
+M31 VDD3I 14 17 VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=49575 $Y=254765 $dt=2
+M32 17 14 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=50465 $Y=254765 $dt=2
+M33 VDD3I 14 17 VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=51355 $Y=254765 $dt=2
+M34 Y 17 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=52245 $Y=254765 $dt=2
+M35 VDD3I 17 Y VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=53135 $Y=254765 $dt=2
+M36 Y 17 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=54025 $Y=254765 $dt=2
+M37 VDD3I 17 Y VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=54915 $Y=254765 $dt=2
+M38 22 20 VDDRI VDDRI pe3i L=3.5e-07 W=2.2e-06 AD=6.49e-13 AS=1.111e-12 PD=2.79e-06 PS=5.41e-06 $X=55515 $Y=234765 $dt=2
+M39 Y 17 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=55805 $Y=254765 $dt=2
+M40 VDDRI 20 22 VDDRI pe3i L=3.5e-07 W=2.2e-06 AD=6.49e-13 AS=6.49e-13 PD=2.79e-06 PS=2.79e-06 $X=56455 $Y=234765 $dt=2
+M41 VDD3I 17 Y VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=56695 $Y=254765 $dt=2
+M42 22 20 VDDRI VDDRI pe3i L=3.5e-07 W=2.2e-06 AD=6.49e-13 AS=6.49e-13 PD=2.79e-06 PS=2.79e-06 $X=57395 $Y=234765 $dt=2
+M43 Y 17 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=57585 $Y=254765 $dt=2
+M44 VDDRI 20 22 VDDRI pe3i L=3.5e-07 W=2.2e-06 AD=6.49e-13 AS=6.49e-13 PD=2.79e-06 PS=2.79e-06 $X=58335 $Y=234765 $dt=2
+M45 VDD3I 17 Y VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=58475 $Y=254765 $dt=2
+M46 22 20 VDDRI VDDRI pe3i L=3.5e-07 W=2.2e-06 AD=6.49e-13 AS=6.49e-13 PD=2.79e-06 PS=2.79e-06 $X=59275 $Y=234765 $dt=2
+M47 Y 17 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=6.48e-13 PD=2.94e-06 PS=2.94e-06 $X=59365 $Y=254765 $dt=2
+M48 VDDRI 20 22 VDDRI pe3i L=3.5e-07 W=2.2e-06 AD=1.111e-12 AS=6.49e-13 PD=5.41e-06 PS=2.79e-06 $X=60215 $Y=234765 $dt=2
+M49 VDD3I 17 Y VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=1.152e-12 AS=6.48e-13 PD=5.76e-06 PS=2.94e-06 $X=60255 $Y=254765 $dt=2
+M50 PO 14 VDD3I VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=6.48e-13 AS=1.248e-12 PD=2.94e-06 PS=5.84e-06 $X=62365 $Y=254765 $dt=2
+M51 VDD3I PI PO VDD3I pe3i L=3.5e-07 W=2.4e-06 AD=1.152e-12 AS=6.48e-13 PD=5.76e-06 PS=2.94e-06 $X=63255 $Y=254765 $dt=2
+R52 19 20 L=1.32e-06 W=1.2e-05 $[rdn3] $SUB=GNDOI $X=54270 $Y=203375 $dt=14
+R53 20 21 L=1.32e-06 W=1.2e-05 $[rdn3] $SUB=GNDOI $X=56245 $Y=203375 $dt=14
+R54 VDDOI 12 L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=3990 $Y=178955 $dt=16
+D55 GNDOI 20 dn3 AREA=7.92e-12 PJ=1.32e-06 perimeter=1.32e-06 $X=55585 $Y=203375 $dt=18
+D56 VDDOI VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=3990 $Y=177935 $dt=22
+D57 12 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=3990 $Y=182255 $dt=22
+R58 20 PAD L=4.5e-06 W=2.5e-06 $[rpp1] $X=52790 $Y=196775 $dt=25
+.ends ICPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_pcutdio_pc                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_pcutdio_pc 1 2
+** N=5 EP=2 FDC=2
+D0 2 1 dp3 AREA=5.88986e-11 PJ=6.40282e-05 perimeter=6.40282e-05 $X=2765 $Y=76075 $dt=19
+D1 1 2 dp3 AREA=5.88986e-11 PJ=6.40282e-05 perimeter=6.40282e-05 $X=37455 $Y=78455 $dt=19
+.ends jio_pcutdio_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: PWRCUTDCPC                                      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt PWRCUTDCPC GNDOI1 PSUB GNDOI2 VDD3I1 VDDOI1 GNDI1 GNDI2 VDD3I2 VDDOI2 VDDRI1
++ 11 GNDRI1 13 VDDRI2 15 GNDRI2 17
+** N=24 EP=17 FDC=31
+X80 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 0 0 0 $X=1370 $Y=75245
+X81 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 4760 0 0 $X=1370 $Y=80005
+X82 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 9520 0 0 $X=1370 $Y=84765
+X83 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 14280 0 0 $X=1370 $Y=89525
+X84 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 19040 0 0 $X=1370 $Y=94285
+X85 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 23800 0 0 $X=1370 $Y=99045
+X86 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 28560 0 0 $X=1370 $Y=103805
+X87 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 33320 0 0 $X=1370 $Y=108565
+X88 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 38080 0 0 $X=1370 $Y=113325
+X89 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 42840 0 0 $X=1370 $Y=118085
+X90 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 47600 0 0 $X=1370 $Y=122845
+X91 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 52360 0 0 $X=1370 $Y=127605
+X92 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 57120 0 0 $X=1370 $Y=132365
+X93 GNDOI1 GNDOI2 jio_pcutdio_pc $T=0 61880 0 0 $X=1370 $Y=137125
+D0 GNDOI2 GNDOI1 dp3 AREA=5.88986e-11 PJ=6.40282e-05 perimeter=6.40282e-05 $X=2765 $Y=142715 $dt=19
+D1 PSUB GNDOI1 p_dnw3 AREA=2.32916e-09 PJ=0.00020788 perimeter=0.00020788 $X=1310 $Y=74975 $dt=23
+D2 PSUB GNDOI2 p_dnw3 AREA=2.32916e-09 PJ=0.00020788 perimeter=0.00020788 $X=36000 $Y=74975 $dt=23
+.ends PWRCUTDCPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: BT4PC                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt BT4PC VDD3I VDDOI GNDOI A PSUB GNDI EN VDDRI GNDRI PAD
+** N=27 EP=10 FDC=183
+X421 PSUB VDDOI VDD3I GNDI GNDOI VDDRI GNDRI PAD 11 21
++ 22 23 19 15 jio_baseti_pc $T=0 0 0 0 $X=-320 $Y=0
+M0 15 16 GNDOI GNDOI ne3i L=4e-07 W=5.5e-06 AD=1.76e-12 AS=2.915e-12 PD=6.14e-06 PS=1.206e-05 $X=6380 $Y=203055 $dt=1
+M1 18 EN GNDI GNDI ne3i L=4e-07 W=1.1e-06 AD=5.28e-13 AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 $X=6395 $Y=248525 $dt=1
+M2 GNDOI 16 15 GNDOI ne3i L=4e-07 W=5.5e-06 AD=2.915e-12 AS=1.76e-12 PD=1.206e-05 PS=6.14e-06 $X=7420 $Y=203055 $dt=1
+M3 GNDI A 24 GNDI ne3i L=4e-07 W=1.1e-06 AD=2.97e-13 AS=5.28e-13 PD=1.64e-06 PS=3.16e-06 $X=8035 $Y=248525 $dt=1
+M4 14 17 GNDOI GNDOI ne3i L=4e-07 W=1.3e-06 AD=3.51e-13 AS=6.24e-13 PD=1.84e-06 PS=3.56e-06 $X=8915 $Y=228445 $dt=1
+M5 24 A GNDI GNDI ne3i L=4e-07 W=1.1e-06 AD=2.97e-13 AS=2.97e-13 PD=1.64e-06 PS=1.64e-06 $X=8975 $Y=248525 $dt=1
+M6 22 14 GNDOI GNDOI ne3i L=4e-07 W=6.1e-06 AD=3.233e-12 AS=3.233e-12 PD=1.326e-05 PS=1.326e-05 $X=9160 $Y=209645 $dt=1
+M7 GNDOI 17 14 GNDOI ne3i L=4e-07 W=1.3e-06 AD=3.51e-13 AS=3.51e-13 PD=1.84e-06 PS=1.84e-06 $X=9855 $Y=228445 $dt=1
+M8 17 18 24 GNDI ne3i L=4e-07 W=1.1e-06 AD=2.97e-13 AS=2.97e-13 PD=1.64e-06 PS=1.64e-06 $X=9915 $Y=248525 $dt=1
+M9 14 17 GNDOI GNDOI ne3i L=4e-07 W=1.3e-06 AD=3.51e-13 AS=3.51e-13 PD=1.84e-06 PS=1.84e-06 $X=10795 $Y=228445 $dt=1
+M10 24 18 17 GNDI ne3i L=4e-07 W=1.1e-06 AD=5.28e-13 AS=2.97e-13 PD=3.16e-06 PS=1.64e-06 $X=10855 $Y=248525 $dt=1
+M11 19 11 GNDOI GNDOI ne3i L=4e-07 W=1.2e-06 AD=6.36e-13 AS=6.36e-13 PD=3.46e-06 PS=3.46e-06 $X=10900 $Y=212165 $dt=1
+M12 GNDOI 17 14 GNDOI ne3i L=4e-07 W=1.3e-06 AD=3.51e-13 AS=3.51e-13 PD=1.84e-06 PS=1.84e-06 $X=11735 $Y=228445 $dt=1
+M13 16 20 GNDOI GNDOI ne3i L=4e-07 W=1.3e-06 AD=3.51e-13 AS=3.51e-13 PD=1.84e-06 PS=1.84e-06 $X=12675 $Y=228445 $dt=1
+M14 20 A GNDI GNDI ne3i L=4e-07 W=1.1e-06 AD=2.97e-13 AS=5.28e-13 PD=1.64e-06 PS=3.16e-06 $X=13535 $Y=248525 $dt=1
+M15 GNDOI 20 16 GNDOI ne3i L=4e-07 W=1.3e-06 AD=3.51e-13 AS=3.51e-13 PD=1.84e-06 PS=1.84e-06 $X=13615 $Y=228445 $dt=1
+M16 GNDI A 20 GNDI ne3i L=4e-07 W=1.1e-06 AD=2.97e-13 AS=2.97e-13 PD=1.64e-06 PS=1.64e-06 $X=14475 $Y=248525 $dt=1
+M17 16 20 GNDOI GNDOI ne3i L=4e-07 W=1.3e-06 AD=3.51e-13 AS=3.51e-13 PD=1.84e-06 PS=1.84e-06 $X=14555 $Y=228445 $dt=1
+M18 20 EN GNDI GNDI ne3i L=4e-07 W=1.1e-06 AD=2.97e-13 AS=2.97e-13 PD=1.64e-06 PS=1.64e-06 $X=15415 $Y=248525 $dt=1
+M19 GNDOI 20 16 GNDOI ne3i L=4e-07 W=1.3e-06 AD=6.24e-13 AS=3.51e-13 PD=3.56e-06 PS=1.84e-06 $X=15495 $Y=228445 $dt=1
+M20 GNDI EN 20 GNDI ne3i L=4e-07 W=1.1e-06 AD=5.28e-13 AS=2.97e-13 PD=3.16e-06 PS=1.64e-06 $X=16355 $Y=248525 $dt=1
+M21 25 14 21 GNDOI ne3i L=4e-07 W=3.7e-06 AD=1.961e-12 AS=1.961e-12 PD=8.46e-06 PS=8.46e-06 $X=60440 $Y=207685 $dt=1
+M22 25 14 GNDOI GNDOI ne3i L=4e-07 W=3.7e-06 AD=1.961e-12 AS=1.961e-12 PD=8.46e-06 PS=8.46e-06 $X=60440 $Y=212045 $dt=1
+M23 23 16 GNDOI GNDOI ne3i L=4e-07 W=8e-06 AD=2.56e-12 AS=4.24e-12 PD=8.64e-06 PS=1.706e-05 $X=62180 $Y=207745 $dt=1
+M24 GNDOI 16 23 GNDOI ne3i L=4e-07 W=8e-06 AD=4.24e-12 AS=2.56e-12 PD=1.706e-05 PS=8.64e-06 $X=63220 $Y=207745 $dt=1
+M25 15 16 VDDOI VDDOI pe3i L=3.5e-07 W=4.9e-06 AD=2.7195e-12 AS=2.7195e-12 PD=1.091e-05 PS=1.091e-05 $X=4595 $Y=186615 $dt=2
+M26 18 EN VDD3I VDD3I pe3i L=3.5e-07 W=2.16e-06 AD=1.0368e-12 AS=1.0368e-12 PD=5.28e-06 PS=5.28e-06 $X=7005 $Y=254785 $dt=2
+M27 22 14 VDDOI VDDOI pe3i L=3.5e-07 W=5e-06 AD=1.725e-12 AS=2.775e-12 PD=5.69e-06 PS=1.111e-05 $X=7245 $Y=186615 $dt=2
+M28 VDDOI 14 22 VDDOI pe3i L=3.5e-07 W=5e-06 AD=1.725e-12 AS=1.725e-12 PD=5.69e-06 PS=5.69e-06 $X=8285 $Y=186615 $dt=2
+M29 14 17 VDDOI VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=7.02e-13 AS=1.248e-12 PD=3.14e-06 PS=6.16e-06 $X=8635 $Y=234395 $dt=2
+M30 17 A VDD3I VDD3I pe3i L=3.5e-07 W=2.16e-06 AD=5.832e-13 AS=1.0368e-12 PD=2.7e-06 PS=5.28e-06 $X=8640 $Y=254785 $dt=2
+M31 22 14 VDDOI VDDOI pe3i L=3.5e-07 W=5e-06 AD=1.725e-12 AS=1.725e-12 PD=5.69e-06 PS=5.69e-06 $X=9325 $Y=186615 $dt=2
+M32 VDDOI 17 14 VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=7.02e-13 AS=7.02e-13 PD=3.14e-06 PS=3.14e-06 $X=9525 $Y=234395 $dt=2
+M33 VDD3I 18 17 VDD3I pe3i L=3.5e-07 W=2.16e-06 AD=1.0368e-12 AS=5.832e-13 PD=5.28e-06 PS=2.7e-06 $X=9530 $Y=254785 $dt=2
+M34 VDDOI 14 22 VDDOI pe3i L=3.5e-07 W=5e-06 AD=2.775e-12 AS=1.725e-12 PD=1.111e-05 PS=5.69e-06 $X=10365 $Y=186615 $dt=2
+M35 14 17 VDDOI VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=7.02e-13 AS=7.02e-13 PD=3.14e-06 PS=3.14e-06 $X=10415 $Y=234395 $dt=2
+M36 VDDOI 17 14 VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=7.02e-13 AS=7.02e-13 PD=3.14e-06 PS=3.14e-06 $X=11305 $Y=234395 $dt=2
+M37 16 20 VDDOI VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=7.02e-13 AS=7.02e-13 PD=3.14e-06 PS=3.14e-06 $X=12195 $Y=234395 $dt=2
+M38 VDDOI 20 16 VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=7.02e-13 AS=7.02e-13 PD=3.14e-06 PS=3.14e-06 $X=13085 $Y=234395 $dt=2
+M39 26 A VDD3I VDD3I pe3i L=3.5e-07 W=2.16e-06 AD=5.832e-13 AS=1.0368e-12 PD=2.7e-06 PS=5.28e-06 $X=13505 $Y=254785 $dt=2
+M40 16 20 VDDOI VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=7.02e-13 AS=7.02e-13 PD=3.14e-06 PS=3.14e-06 $X=13975 $Y=234395 $dt=2
+M41 20 EN 26 VDD3I pe3i L=3.5e-07 W=2.16e-06 AD=1.0368e-12 AS=5.832e-13 PD=5.28e-06 PS=2.7e-06 $X=14395 $Y=254785 $dt=2
+M42 VDDOI 20 16 VDDOI pe3i L=3.5e-07 W=2.6e-06 AD=1.248e-12 AS=7.02e-13 PD=6.16e-06 PS=3.14e-06 $X=14865 $Y=234395 $dt=2
+M43 21 14 VDDOI VDDOI pe3i L=3.5e-07 W=5e-06 AD=1.725e-12 AS=2.775e-12 PD=5.69e-06 PS=1.111e-05 $X=59215 $Y=186615 $dt=2
+M44 VDDOI 14 21 VDDOI pe3i L=3.5e-07 W=5e-06 AD=1.725e-12 AS=1.725e-12 PD=5.69e-06 PS=5.69e-06 $X=60255 $Y=186615 $dt=2
+M45 21 14 VDDOI VDDOI pe3i L=3.5e-07 W=5e-06 AD=1.725e-12 AS=1.725e-12 PD=5.69e-06 PS=5.69e-06 $X=61295 $Y=186615 $dt=2
+M46 VDDOI 14 21 VDDOI pe3i L=3.5e-07 W=5e-06 AD=2.775e-12 AS=1.725e-12 PD=1.111e-05 PS=5.69e-06 $X=62335 $Y=186615 $dt=2
+M47 27 16 23 VDDOI pe3i L=4e-07 W=6.7e-06 AD=2.144e-12 AS=3.551e-12 PD=7.34e-06 PS=1.446e-05 $X=64050 $Y=186615 $dt=2
+M48 VDDOI 16 27 VDDOI pe3i L=4e-07 W=6.7e-06 AD=3.551e-12 AS=2.144e-12 PD=1.446e-05 PS=7.34e-06 $X=65090 $Y=186615 $dt=2
+R49 11 VDDOI L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=14380 $Y=198475 $dt=16
+D50 11 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=13360 $Y=198475 $dt=22
+D51 VDDOI VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=17680 $Y=198475 $dt=22
+.ends BT4PC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: APR04DPC                                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt APR04DPC PSUB VDD3I VDDOI GNDOI GNDI PAD Y VDDRI GNDRI
+** N=37 EP=9 FDC=139
+X225 VDDOI GNDOI 11 11 11 PAD PSUB jio_base_ntr_pc $T=0 0 0 0 $X=2560 $Y=72565
+X226 VDDOI PAD 17 16 jio_pe3isb_pc $T=14365 150990 1 180 $X=6700 $Y=149060
+X227 VDDOI PAD 15 14 jio_pe3isb_pc $T=20965 150990 1 180 $X=13300 $Y=149060
+X228 VDDOI PAD 25 24 jio_pe3isb_pc $T=27565 150990 1 180 $X=19900 $Y=149060
+X229 VDDOI PAD 23 22 jio_pe3isb_pc $T=27565 184790 1 180 $X=19900 $Y=182860
+X230 VDDOI PAD 21 20 jio_pe3isb_pc $T=34165 150990 1 180 $X=26500 $Y=149060
+X231 VDDOI PAD 19 18 jio_pe3isb_pc $T=34165 184790 1 180 $X=26500 $Y=182860
+X232 VDDOI PAD 33 32 jio_pe3isb_pc $T=35835 150990 0 0 $X=35120 $Y=149060
+X233 VDDOI PAD 31 30 jio_pe3isb_pc $T=35835 184790 0 0 $X=35120 $Y=182860
+X234 VDDOI PAD 29 28 jio_pe3isb_pc $T=42435 150990 0 0 $X=41720 $Y=149060
+X235 VDDOI PAD 27 26 jio_pe3isb_pc $T=42435 184790 0 0 $X=41720 $Y=182860
+X236 VDDOI PAD 37 36 jio_pe3isb_pc $T=49035 150990 0 0 $X=48320 $Y=149060
+X237 VDDOI PAD 35 34 jio_pe3isb_pc $T=55635 150990 0 0 $X=54920 $Y=149060
+M0 11 10 GNDOI GNDOI ne3i L=4e-07 W=1.2e-06 AD=6.36e-13 AS=6.36e-13 PD=3.46e-06 PS=3.46e-06 $X=10900 $Y=212165 $dt=1
+M1 12 GNDOI GNDOI GNDOI ne3i L=4e-07 W=1.2e-05 AD=6e-14 AS=6.66e-12 PD=2.401e-05 PS=2.511e-05 $X=59470 $Y=203135 $dt=1
+M2 GNDOI GNDOI 13 GNDOI ne3i L=4e-07 W=1.2e-05 AD=6.66e-12 AS=6e-14 PD=2.511e-05 PS=2.401e-05 $X=63170 $Y=203135 $dt=1
+M3 17 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=8060 $Y=152815 $dt=2
+M4 VDDOI 10 16 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=13370 $Y=152815 $dt=2
+M5 15 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=14660 $Y=152815 $dt=2
+M6 VDDOI 10 14 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=19970 $Y=152815 $dt=2
+M7 25 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=21260 $Y=152815 $dt=2
+M8 23 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=21260 $Y=186615 $dt=2
+M9 VDDOI 10 24 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=26570 $Y=152815 $dt=2
+M10 VDDOI 10 22 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=26570 $Y=186615 $dt=2
+M11 21 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=27860 $Y=152815 $dt=2
+M12 19 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=27860 $Y=186615 $dt=2
+M13 VDDOI 10 20 VDDOI pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=33170 $Y=152815 $dt=2
+M14 VDDOI 10 18 VDDOI pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=33170 $Y=186615 $dt=2
+M15 32 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=36480 $Y=152815 $dt=2
+M16 30 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=2.04e-11 PD=6.001e-05 PS=6.136e-05 $X=36480 $Y=186615 $dt=2
+M17 VDDOI 10 33 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=41790 $Y=152815 $dt=2
+M18 VDDOI 10 31 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=41790 $Y=186615 $dt=2
+M19 28 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=43080 $Y=152815 $dt=2
+M20 26 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=43080 $Y=186615 $dt=2
+M21 VDDOI 10 29 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=48390 $Y=152815 $dt=2
+M22 VDDOI 10 27 VDDOI pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=48390 $Y=186615 $dt=2
+M23 36 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=49680 $Y=152815 $dt=2
+M24 Y VDDOI VDDOI VDDOI pe3i L=3.5e-07 W=1.2e-05 AD=6.78e-12 AS=6.24e-12 PD=1.313e-05 PS=2.504e-05 $X=51820 $Y=202785 $dt=2
+M25 VDDOI VDDOI Y VDDOI pe3i L=3.5e-07 W=1.2e-05 AD=6.24e-12 AS=6.78e-12 PD=2.504e-05 PS=1.313e-05 $X=53300 $Y=202785 $dt=2
+M26 VDDOI 10 37 VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.41e-11 AS=1.5e-13 PD=3.094e-05 PS=6.001e-05 $X=54990 $Y=152815 $dt=2
+M27 34 10 VDDOI VDDOI pe3i L=3.5e-07 W=3e-05 AD=1.5e-13 AS=1.41e-11 PD=6.001e-05 PS=3.094e-05 $X=56280 $Y=152815 $dt=2
+M28 VDDOI 10 35 VDDOI pe3i L=3.5e-07 W=3e-05 AD=2.04e-11 AS=1.5e-13 PD=6.136e-05 PS=6.001e-05 $X=61590 $Y=152815 $dt=2
+D29 PSUB VDDOI ddnwmv AREA=9.8345e-10 PJ=0.00016026 perimeter=0.00016026 $X=2500 $Y=224395 $dt=7
+D30 PSUB VDD3I ddnwmv AREA=9.789e-10 PJ=0.00016012 perimeter=0.00016012 $X=2500 $Y=244525 $dt=7
+D31 PSUB VDDOI p_ddnwmv AREA=4.5084e-09 PJ=0.00026872 perimeter=0.00026872 $X=2500 $Y=150035 $dt=8
+D32 GNDOI VDDOI dipdnwmv AREA=2.1664e-10 PJ=5.908e-05 perimeter=5.908e-05 $X=4500 $Y=201395 $dt=9
+D33 GNDOI VDDOI dipdnwmv AREA=1.2696e-10 PJ=4.787e-05 perimeter=4.787e-05 $X=57565 $Y=201395 $dt=9
+R34 12 Y L=1.32e-06 W=1.2e-05 $[rdn3] $SUB=GNDOI $X=59875 $Y=203135 $dt=14
+R35 Y 13 L=1.32e-06 W=1.2e-05 $[rdn3] $SUB=GNDOI $X=61850 $Y=203135 $dt=14
+R36 10 VDDOI L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=14380 $Y=198475 $dt=16
+D37 GNDOI Y dn3 AREA=7.92e-12 PJ=1.32e-06 perimeter=1.32e-06 $X=61190 $Y=203135 $dt=18
+D38 10 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=13360 $Y=198475 $dt=22
+D39 VDDOI VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=17680 $Y=198475 $dt=22
+R40 PAD Y L=2.2e-06 W=2e-06 $[rpp1] $X=60020 $Y=189980 $dt=25
+.ends APR04DPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: APR00DPC                                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt APR00DPC PSUB VDDOI PAD GNDOI VDD3I GNDI VDDRI GNDRI
+** N=10 EP=8 FDC=149
+X128 VDDOI GNDOI 10 10 10 PAD PSUB jio_base_ntr_pc $T=0 0 0 0 $X=2560 $Y=72565
+X129 VDDOI PAD 9 PSUB jio_base_ptrps_pc $T=0 0 0 0 $X=2500 $Y=149060
+R0 9 VDDOI L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=4475 $Y=153720 $dt=16
+R1 10 GNDOI L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=VDDOI $X=65085 $Y=153720 $dt=16
+D2 9 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4475 $Y=152700 $dt=22
+D3 VDDOI VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=4475 $Y=157020 $dt=22
+D4 10 VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=152700 $dt=22
+D5 GNDOI VDDOI p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=65085 $Y=157020 $dt=22
+.ends APR00DPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_pmbsabhv_2x40_10                            *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_pmbsabhv_2x40_10 1 2 4 5
+*.DEVICECLIMB
+** N=8 EP=4 FDC=3
+R0 4 2 L=5.1e-07 W=4e-05 $[rdp_io] $SUB=1 $X=-835 $Y=-20000 $dt=3
+R1 2 5 L=5.1e-07 W=4e-05 $[rdp_io] $SUB=1 $X=330 $Y=-20000 $dt=3
+D2 2 1 dphnw AREA=2.64e-11 PJ=1.32e-06 perimeter=1.32e-06 $X=-330 $Y=-20000 $dt=12
+.ends ioh_pmbsabhv_2x40_10
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_pmbsabhv_2000                               *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_pmbsabhv_2000 Sub GSB D
+** N=53 EP=3 FDC=126
+X0 GSB D 6 7 ioh_pmbsabhv_2x40_10 $T=-50640 0 0 0 $X=-53780 $Y=-20960
+X1 GSB D 4 5 ioh_pmbsabhv_2x40_10 $T=-46420 0 0 0 $X=-49560 $Y=-20960
+X2 GSB D 10 11 ioh_pmbsabhv_2x40_10 $T=-42200 0 0 0 $X=-45340 $Y=-20960
+X3 GSB D 8 9 ioh_pmbsabhv_2x40_10 $T=-37980 0 0 0 $X=-41120 $Y=-20960
+X4 GSB D 14 15 ioh_pmbsabhv_2x40_10 $T=-33760 0 0 0 $X=-36900 $Y=-20960
+X5 GSB D 12 13 ioh_pmbsabhv_2x40_10 $T=-29540 0 0 0 $X=-32680 $Y=-20960
+X6 GSB D 18 19 ioh_pmbsabhv_2x40_10 $T=-25320 0 0 0 $X=-28460 $Y=-20960
+X7 GSB D 16 17 ioh_pmbsabhv_2x40_10 $T=-21100 0 0 0 $X=-24240 $Y=-20960
+X8 GSB D 22 23 ioh_pmbsabhv_2x40_10 $T=-16880 0 0 0 $X=-20020 $Y=-20960
+X9 GSB D 20 21 ioh_pmbsabhv_2x40_10 $T=-12660 0 0 0 $X=-15800 $Y=-20960
+X10 GSB D 24 25 ioh_pmbsabhv_2x40_10 $T=-8440 0 0 0 $X=-11580 $Y=-20960
+X11 GSB D 28 29 ioh_pmbsabhv_2x40_10 $T=-4220 0 0 0 $X=-7360 $Y=-20960
+X12 GSB D 26 27 ioh_pmbsabhv_2x40_10 $T=0 0 0 0 $X=-3140 $Y=-20960
+X13 GSB D 32 33 ioh_pmbsabhv_2x40_10 $T=4220 0 0 0 $X=1080 $Y=-20960
+X14 GSB D 30 31 ioh_pmbsabhv_2x40_10 $T=8440 0 0 0 $X=5300 $Y=-20960
+X15 GSB D 36 37 ioh_pmbsabhv_2x40_10 $T=12660 0 0 0 $X=9520 $Y=-20960
+X16 GSB D 34 35 ioh_pmbsabhv_2x40_10 $T=16880 0 0 0 $X=13740 $Y=-20960
+X17 GSB D 40 41 ioh_pmbsabhv_2x40_10 $T=21100 0 0 0 $X=17960 $Y=-20960
+X18 GSB D 38 39 ioh_pmbsabhv_2x40_10 $T=25320 0 0 0 $X=22180 $Y=-20960
+X19 GSB D 44 45 ioh_pmbsabhv_2x40_10 $T=29540 0 0 0 $X=26400 $Y=-20960
+X20 GSB D 42 43 ioh_pmbsabhv_2x40_10 $T=33760 0 0 0 $X=30620 $Y=-20960
+X21 GSB D 48 49 ioh_pmbsabhv_2x40_10 $T=37980 0 0 0 $X=34840 $Y=-20960
+X22 GSB D 46 47 ioh_pmbsabhv_2x40_10 $T=42200 0 0 0 $X=39060 $Y=-20960
+X23 GSB D 50 51 ioh_pmbsabhv_2x40_10 $T=46420 0 0 0 $X=43280 $Y=-20960
+X24 GSB D 52 53 ioh_pmbsabhv_2x40_10 $T=50640 0 0 0 $X=47500 $Y=-20960
+M0 6 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=3.92e-11 PD=8.001e-05 PS=8.196e-05 $X=-52480 $Y=-20000 $dt=0
+M1 GSB GSB 7 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-49800 $Y=-20000 $dt=0
+M2 4 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-48260 $Y=-20000 $dt=0
+M3 GSB GSB 5 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-45580 $Y=-20000 $dt=0
+M4 10 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-44040 $Y=-20000 $dt=0
+M5 GSB GSB 11 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-41360 $Y=-20000 $dt=0
+M6 8 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-39820 $Y=-20000 $dt=0
+M7 GSB GSB 9 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-37140 $Y=-20000 $dt=0
+M8 14 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-35600 $Y=-20000 $dt=0
+M9 GSB GSB 15 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-32920 $Y=-20000 $dt=0
+M10 12 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-31380 $Y=-20000 $dt=0
+M11 GSB GSB 13 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-28700 $Y=-20000 $dt=0
+M12 18 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-27160 $Y=-20000 $dt=0
+M13 GSB GSB 19 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-24480 $Y=-20000 $dt=0
+M14 16 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-22940 $Y=-20000 $dt=0
+M15 GSB GSB 17 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-20260 $Y=-20000 $dt=0
+M16 22 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-18720 $Y=-20000 $dt=0
+M17 GSB GSB 23 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-16040 $Y=-20000 $dt=0
+M18 20 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-14500 $Y=-20000 $dt=0
+M19 GSB GSB 21 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-11820 $Y=-20000 $dt=0
+M20 24 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-10280 $Y=-20000 $dt=0
+M21 GSB GSB 25 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-7600 $Y=-20000 $dt=0
+M22 28 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-6060 $Y=-20000 $dt=0
+M23 GSB GSB 29 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=-3380 $Y=-20000 $dt=0
+M24 26 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=-1840 $Y=-20000 $dt=0
+M25 GSB GSB 27 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=840 $Y=-20000 $dt=0
+M26 32 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=2380 $Y=-20000 $dt=0
+M27 GSB GSB 33 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=5060 $Y=-20000 $dt=0
+M28 30 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=6600 $Y=-20000 $dt=0
+M29 GSB GSB 31 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=9280 $Y=-20000 $dt=0
+M30 36 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=10820 $Y=-20000 $dt=0
+M31 GSB GSB 37 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=13500 $Y=-20000 $dt=0
+M32 34 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=15040 $Y=-20000 $dt=0
+M33 GSB GSB 35 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=17720 $Y=-20000 $dt=0
+M34 40 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=19260 $Y=-20000 $dt=0
+M35 GSB GSB 41 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=21940 $Y=-20000 $dt=0
+M36 38 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=23480 $Y=-20000 $dt=0
+M37 GSB GSB 39 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=26160 $Y=-20000 $dt=0
+M38 44 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=27700 $Y=-20000 $dt=0
+M39 GSB GSB 45 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=30380 $Y=-20000 $dt=0
+M40 42 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=31920 $Y=-20000 $dt=0
+M41 GSB GSB 43 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=34600 $Y=-20000 $dt=0
+M42 48 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=36140 $Y=-20000 $dt=0
+M43 GSB GSB 49 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=38820 $Y=-20000 $dt=0
+M44 46 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=40360 $Y=-20000 $dt=0
+M45 GSB GSB 47 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=43040 $Y=-20000 $dt=0
+M46 50 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=44580 $Y=-20000 $dt=0
+M47 GSB GSB 51 GSB pmb L=1e-06 W=4e-05 AD=1.08e-11 AS=2e-13 PD=4.054e-05 PS=8.001e-05 $X=47260 $Y=-20000 $dt=0
+M48 52 GSB GSB GSB pmb L=1e-06 W=4e-05 AD=2e-13 AS=1.08e-11 PD=8.001e-05 PS=4.054e-05 $X=48800 $Y=-20000 $dt=0
+M49 GSB GSB 53 GSB pmb L=1e-06 W=4e-05 AD=3.92e-11 AS=2e-13 PD=8.196e-05 PS=8.001e-05 $X=51480 $Y=-20000 $dt=0
+D50 Sub GSB ddnw AREA=5.93551e-09 PJ=0.00033418 perimeter=0.00033418 $X=-57930 $Y=-24880 $dt=6
+.ends ioh_pmbsabhv_2000
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_pe3sab_2x40_04                              *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_pe3sab_2x40_04 1 3 5 6
+*.DEVICECLIMB
+** N=9 EP=4 FDC=3
+R0 5 3 L=4.3e-07 W=4e-05 $[rdp3] $SUB=1 $X=-755 $Y=-20000 $dt=17
+R1 3 6 L=4.3e-07 W=4e-05 $[rdp3] $SUB=1 $X=330 $Y=-20000 $dt=17
+D2 3 1 dp3 AREA=2.64e-11 PJ=1.32e-06 perimeter=1.32e-06 $X=-330 $Y=-20000 $dt=20
+.ends ioh_pe3sab_2x40_04
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_dhpw_100                                    *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_dhpw_100 K A
+*.DEVICECLIMB
+** N=3 EP=2 FDC=1
+D0 A K dhpw AREA=3.87913e-10 PJ=0.000207812 perimeter=0.000207812 $X=-1440 $Y=-50310 $dt=5
+.ends ioh_dhpw_100
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_dhpw_2x100                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_dhpw_2x100 Sub K A
+** N=3 EP=3 FDC=3
+X0 K A ioh_dhpw_100 $T=-5530 0 1 0 $X=-14660 $Y=-57800
+X1 K A ioh_dhpw_100 $T=5530 0 1 0 $X=-3600 $Y=-57800
+D0 Sub K ddnw AREA=3.37863e-09 PJ=0.000284404 perimeter=0.000284404 $X=-12340 $Y=-57800 $dt=6
+.ends ioh_dhpw_2x100
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: HVDD4DJ5PKFs                                    *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt HVDD4DJ5PKFs GNDO PAD IGND
+** N=80 EP=3 FDC=690
+X102 GNDO PAD 4 ioh_pmbsabhv_2000 $T=216580 72000 0 90 $X=185560 $Y=9400
+X103 GNDO 4 5 ioh_pmbsabhv_2000 $T=277810 72000 0 90 $X=246790 $Y=9400
+X104 GNDO 5 6 ioh_pmbsabhv_2000 $T=339040 72000 0 90 $X=308020 $Y=9400
+X105 GNDO 6 7 ioh_pmbsabhv_2000 $T=400270 72000 0 90 $X=369250 $Y=9400
+X106 7 IGND 79 80 ioh_pe3sab_2x40_04 $T=462030 20660 0 90 $X=441070 $Y=18010
+X107 7 IGND 77 78 ioh_pe3sab_2x40_04 $T=462030 23680 0 90 $X=441070 $Y=21030
+X108 7 IGND 75 76 ioh_pe3sab_2x40_04 $T=462030 26700 0 90 $X=441070 $Y=24050
+X109 7 IGND 73 74 ioh_pe3sab_2x40_04 $T=462030 29720 0 90 $X=441070 $Y=27070
+X110 7 IGND 71 72 ioh_pe3sab_2x40_04 $T=462030 32740 0 90 $X=441070 $Y=30090
+X111 7 IGND 69 70 ioh_pe3sab_2x40_04 $T=462030 35760 0 90 $X=441070 $Y=33110
+X112 7 IGND 67 68 ioh_pe3sab_2x40_04 $T=462030 38780 0 90 $X=441070 $Y=36130
+X113 7 IGND 65 66 ioh_pe3sab_2x40_04 $T=462030 41800 0 90 $X=441070 $Y=39150
+X114 7 IGND 63 64 ioh_pe3sab_2x40_04 $T=462030 44820 0 90 $X=441070 $Y=42170
+X115 7 IGND 61 62 ioh_pe3sab_2x40_04 $T=462030 47840 0 90 $X=441070 $Y=45190
+X116 7 IGND 59 60 ioh_pe3sab_2x40_04 $T=462030 50860 0 90 $X=441070 $Y=48210
+X117 7 IGND 57 58 ioh_pe3sab_2x40_04 $T=462030 53880 0 90 $X=441070 $Y=51230
+X118 7 IGND 55 56 ioh_pe3sab_2x40_04 $T=462030 56900 0 90 $X=441070 $Y=54250
+X119 7 IGND 53 54 ioh_pe3sab_2x40_04 $T=462030 59920 0 90 $X=441070 $Y=57270
+X120 7 IGND 51 52 ioh_pe3sab_2x40_04 $T=462030 62940 0 90 $X=441070 $Y=60290
+X121 7 IGND 49 50 ioh_pe3sab_2x40_04 $T=462030 65960 0 90 $X=441070 $Y=63310
+X122 7 IGND 47 48 ioh_pe3sab_2x40_04 $T=462030 68980 0 90 $X=441070 $Y=66330
+X123 7 IGND 45 46 ioh_pe3sab_2x40_04 $T=462030 72000 0 90 $X=441070 $Y=69350
+X124 7 IGND 43 44 ioh_pe3sab_2x40_04 $T=462030 75020 0 90 $X=441070 $Y=72370
+X125 7 IGND 41 42 ioh_pe3sab_2x40_04 $T=462030 78040 0 90 $X=441070 $Y=75390
+X126 7 IGND 39 40 ioh_pe3sab_2x40_04 $T=462030 81060 0 90 $X=441070 $Y=78410
+X127 7 IGND 37 38 ioh_pe3sab_2x40_04 $T=462030 84080 0 90 $X=441070 $Y=81430
+X128 7 IGND 35 36 ioh_pe3sab_2x40_04 $T=462030 87100 0 90 $X=441070 $Y=84450
+X129 7 IGND 33 34 ioh_pe3sab_2x40_04 $T=462030 90120 0 90 $X=441070 $Y=87470
+X130 7 IGND 31 32 ioh_pe3sab_2x40_04 $T=462030 93140 0 90 $X=441070 $Y=90490
+X131 7 IGND 29 30 ioh_pe3sab_2x40_04 $T=462030 96160 0 90 $X=441070 $Y=93510
+X132 7 IGND 27 28 ioh_pe3sab_2x40_04 $T=462030 99180 0 90 $X=441070 $Y=96530
+X133 7 IGND 25 26 ioh_pe3sab_2x40_04 $T=462030 102200 0 90 $X=441070 $Y=99550
+X134 7 IGND 23 24 ioh_pe3sab_2x40_04 $T=462030 105220 0 90 $X=441070 $Y=102570
+X135 7 IGND 21 22 ioh_pe3sab_2x40_04 $T=462030 108240 0 90 $X=441070 $Y=105590
+X136 7 IGND 19 20 ioh_pe3sab_2x40_04 $T=462030 111260 0 90 $X=441070 $Y=108610
+X137 7 IGND 17 18 ioh_pe3sab_2x40_04 $T=462030 114280 0 90 $X=441070 $Y=111630
+X138 7 IGND 15 16 ioh_pe3sab_2x40_04 $T=462030 117300 0 90 $X=441070 $Y=114650
+X139 7 IGND 13 14 ioh_pe3sab_2x40_04 $T=462030 120320 0 90 $X=441070 $Y=117670
+X140 7 IGND 11 12 ioh_pe3sab_2x40_04 $T=462030 123340 0 90 $X=441070 $Y=120690
+X141 GNDO PAD 9 ioh_dhpw_2x100 $T=86930 72000 0 0 $X=67600 $Y=9530
+X142 GNDO 9 10 ioh_dhpw_2x100 $T=126250 72000 0 0 $X=106920 $Y=9530
+X143 GNDO 10 IGND ioh_dhpw_2x100 $T=165570 72000 0 0 $X=146240 $Y=9530
+M0 79 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=3.64e-11 PD=8.001e-05 PS=8.182e-05 $X=442030 $Y=19500 $dt=2
+M1 7 8 80 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=21420 $dt=2
+M2 77 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=22520 $dt=2
+M3 7 8 78 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=24440 $dt=2
+M4 75 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=25540 $dt=2
+M5 7 8 76 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=27460 $dt=2
+M6 73 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=28560 $dt=2
+M7 7 8 74 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=30480 $dt=2
+M8 71 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=31580 $dt=2
+M9 7 8 72 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=33500 $dt=2
+M10 69 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=34600 $dt=2
+M11 7 8 70 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=36520 $dt=2
+M12 67 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=37620 $dt=2
+M13 7 8 68 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=39540 $dt=2
+M14 65 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=40640 $dt=2
+M15 7 8 66 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=42560 $dt=2
+M16 63 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=43660 $dt=2
+M17 7 8 64 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=45580 $dt=2
+M18 61 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=46680 $dt=2
+M19 7 8 62 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=48600 $dt=2
+M20 59 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=49700 $dt=2
+M21 7 8 60 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=51620 $dt=2
+M22 57 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=52720 $dt=2
+M23 7 8 58 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=54640 $dt=2
+M24 55 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=55740 $dt=2
+M25 7 8 56 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=57660 $dt=2
+M26 53 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=58760 $dt=2
+M27 7 8 54 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=60680 $dt=2
+M28 51 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=61780 $dt=2
+M29 7 8 52 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=63700 $dt=2
+M30 49 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=64800 $dt=2
+M31 7 8 50 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=66720 $dt=2
+M32 47 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=67820 $dt=2
+M33 7 8 48 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=69740 $dt=2
+M34 45 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=70840 $dt=2
+M35 7 8 46 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=72760 $dt=2
+M36 43 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=73860 $dt=2
+M37 7 8 44 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=75780 $dt=2
+M38 41 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=76880 $dt=2
+M39 7 8 42 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=78800 $dt=2
+M40 39 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=79900 $dt=2
+M41 7 8 40 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=81820 $dt=2
+M42 37 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=82920 $dt=2
+M43 7 8 38 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=84840 $dt=2
+M44 35 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=85940 $dt=2
+M45 7 8 36 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=87860 $dt=2
+M46 33 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=88960 $dt=2
+M47 7 8 34 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=90880 $dt=2
+M48 31 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=91980 $dt=2
+M49 7 8 32 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=93900 $dt=2
+M50 29 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=95000 $dt=2
+M51 7 8 30 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=96920 $dt=2
+M52 27 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=98020 $dt=2
+M53 7 8 28 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=99940 $dt=2
+M54 25 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=101040 $dt=2
+M55 7 8 26 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=102960 $dt=2
+M56 23 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=104060 $dt=2
+M57 7 8 24 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=105980 $dt=2
+M58 21 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=107080 $dt=2
+M59 7 8 22 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=109000 $dt=2
+M60 19 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=110100 $dt=2
+M61 7 8 20 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=112020 $dt=2
+M62 17 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=113120 $dt=2
+M63 7 8 18 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=115040 $dt=2
+M64 15 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=116140 $dt=2
+M65 7 8 16 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=118060 $dt=2
+M66 13 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=119160 $dt=2
+M67 7 8 14 7 pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=442030 $Y=121080 $dt=2
+M68 11 8 7 7 pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=442030 $Y=122180 $dt=2
+M69 7 8 12 7 pe3i L=4e-07 W=4e-05 AD=3.64e-11 AS=2e-13 PD=8.182e-05 PS=8.001e-05 $X=442030 $Y=124100 $dt=2
+D70 GNDO 7 ddnw AREA=5.99691e-09 PJ=0.00033524 perimeter=0.00033524 $X=435150 $Y=14070 $dt=6
+R71 7 8 L=2.55e-05 W=4.2e-07 $[rnp1] $X=439970 $Y=97210 $dt=24
+.ends HVDD4DJ5PKFs
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_rnp1_20k                                    *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_rnp1_20k T1 T2
+** N=3 EP=2 FDC=1
+R0 T2 T1 L=2.55e-05 W=4.2e-07 $[rnp1] $X=180 $Y=1220 $dt=24
+.ends ioh_rnp1_20k
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_pe3isabhv_2800gcr                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_pe3isabhv_2800gcr Sub SB D
+** N=74 EP=3 FDC=177
+X0 SB D 7 8 ioh_pe3sab_2x40_04 $T=-51340 0 0 0 $X=-53990 $Y=-20960
+X1 SB D 5 6 ioh_pe3sab_2x40_04 $T=-48320 0 0 0 $X=-50970 $Y=-20960
+X2 SB D 13 14 ioh_pe3sab_2x40_04 $T=-45300 0 0 0 $X=-47950 $Y=-20960
+X3 SB D 11 12 ioh_pe3sab_2x40_04 $T=-42280 0 0 0 $X=-44930 $Y=-20960
+X4 SB D 9 10 ioh_pe3sab_2x40_04 $T=-39260 0 0 0 $X=-41910 $Y=-20960
+X5 SB D 17 18 ioh_pe3sab_2x40_04 $T=-36240 0 0 0 $X=-38890 $Y=-20960
+X6 SB D 15 16 ioh_pe3sab_2x40_04 $T=-33220 0 0 0 $X=-35870 $Y=-20960
+X7 SB D 21 22 ioh_pe3sab_2x40_04 $T=-30200 0 0 0 $X=-32850 $Y=-20960
+X8 SB D 19 20 ioh_pe3sab_2x40_04 $T=-27180 0 0 0 $X=-29830 $Y=-20960
+X9 SB D 25 26 ioh_pe3sab_2x40_04 $T=-24160 0 0 0 $X=-26810 $Y=-20960
+X10 SB D 23 24 ioh_pe3sab_2x40_04 $T=-21140 0 0 0 $X=-23790 $Y=-20960
+X11 SB D 31 32 ioh_pe3sab_2x40_04 $T=-18120 0 0 0 $X=-20770 $Y=-20960
+X12 SB D 29 30 ioh_pe3sab_2x40_04 $T=-15100 0 0 0 $X=-17750 $Y=-20960
+X13 SB D 27 28 ioh_pe3sab_2x40_04 $T=-12080 0 0 0 $X=-14730 $Y=-20960
+X14 SB D 35 36 ioh_pe3sab_2x40_04 $T=-9060 0 0 0 $X=-11710 $Y=-20960
+X15 SB D 33 34 ioh_pe3sab_2x40_04 $T=-6040 0 0 0 $X=-8690 $Y=-20960
+X16 SB D 39 40 ioh_pe3sab_2x40_04 $T=-3020 0 0 0 $X=-5670 $Y=-20960
+X17 SB D 37 38 ioh_pe3sab_2x40_04 $T=0 0 0 0 $X=-2650 $Y=-20960
+X18 SB D 45 46 ioh_pe3sab_2x40_04 $T=3020 0 0 0 $X=370 $Y=-20960
+X19 SB D 43 44 ioh_pe3sab_2x40_04 $T=6040 0 0 0 $X=3390 $Y=-20960
+X20 SB D 41 42 ioh_pe3sab_2x40_04 $T=9060 0 0 0 $X=6410 $Y=-20960
+X21 SB D 49 50 ioh_pe3sab_2x40_04 $T=12080 0 0 0 $X=9430 $Y=-20960
+X22 SB D 47 48 ioh_pe3sab_2x40_04 $T=15100 0 0 0 $X=12450 $Y=-20960
+X23 SB D 53 54 ioh_pe3sab_2x40_04 $T=18120 0 0 0 $X=15470 $Y=-20960
+X24 SB D 51 52 ioh_pe3sab_2x40_04 $T=21140 0 0 0 $X=18490 $Y=-20960
+X25 SB D 59 60 ioh_pe3sab_2x40_04 $T=24160 0 0 0 $X=21510 $Y=-20960
+X26 SB D 57 58 ioh_pe3sab_2x40_04 $T=27180 0 0 0 $X=24530 $Y=-20960
+X27 SB D 55 56 ioh_pe3sab_2x40_04 $T=30200 0 0 0 $X=27550 $Y=-20960
+X28 SB D 63 64 ioh_pe3sab_2x40_04 $T=33220 0 0 0 $X=30570 $Y=-20960
+X29 SB D 61 62 ioh_pe3sab_2x40_04 $T=36240 0 0 0 $X=33590 $Y=-20960
+X30 SB D 67 68 ioh_pe3sab_2x40_04 $T=39260 0 0 0 $X=36610 $Y=-20960
+X31 SB D 65 66 ioh_pe3sab_2x40_04 $T=42280 0 0 0 $X=39630 $Y=-20960
+X32 SB D 73 74 ioh_pe3sab_2x40_04 $T=45300 0 0 0 $X=42650 $Y=-20960
+X33 SB D 71 72 ioh_pe3sab_2x40_04 $T=48320 0 0 0 $X=45670 $Y=-20960
+X34 SB D 69 70 ioh_pe3sab_2x40_04 $T=51340 0 0 0 $X=48690 $Y=-20960
+X35 SB 4 ioh_rnp1_20k $T=51930 21460 0 90 $X=23990 $Y=21420
+M0 7 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=3.64e-11 PD=8.001e-05 PS=8.182e-05 $X=-52500 $Y=-20000 $dt=2
+M1 SB 4 8 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-50580 $Y=-20000 $dt=2
+M2 5 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-49480 $Y=-20000 $dt=2
+M3 SB 4 6 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-47560 $Y=-20000 $dt=2
+M4 13 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-46460 $Y=-20000 $dt=2
+M5 SB 4 14 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-44540 $Y=-20000 $dt=2
+M6 11 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-43440 $Y=-20000 $dt=2
+M7 SB 4 12 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-41520 $Y=-20000 $dt=2
+M8 9 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-40420 $Y=-20000 $dt=2
+M9 SB 4 10 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-38500 $Y=-20000 $dt=2
+M10 17 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-37400 $Y=-20000 $dt=2
+M11 SB 4 18 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-35480 $Y=-20000 $dt=2
+M12 15 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-34380 $Y=-20000 $dt=2
+M13 SB 4 16 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-32460 $Y=-20000 $dt=2
+M14 21 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-31360 $Y=-20000 $dt=2
+M15 SB 4 22 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-29440 $Y=-20000 $dt=2
+M16 19 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-28340 $Y=-20000 $dt=2
+M17 SB 4 20 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-26420 $Y=-20000 $dt=2
+M18 25 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-25320 $Y=-20000 $dt=2
+M19 SB 4 26 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-23400 $Y=-20000 $dt=2
+M20 23 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-22300 $Y=-20000 $dt=2
+M21 SB 4 24 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-20380 $Y=-20000 $dt=2
+M22 31 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-19280 $Y=-20000 $dt=2
+M23 SB 4 32 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-17360 $Y=-20000 $dt=2
+M24 29 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-16260 $Y=-20000 $dt=2
+M25 SB 4 30 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-14340 $Y=-20000 $dt=2
+M26 27 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-13240 $Y=-20000 $dt=2
+M27 SB 4 28 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-11320 $Y=-20000 $dt=2
+M28 35 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-10220 $Y=-20000 $dt=2
+M29 SB 4 36 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-8300 $Y=-20000 $dt=2
+M30 33 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-7200 $Y=-20000 $dt=2
+M31 SB 4 34 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-5280 $Y=-20000 $dt=2
+M32 39 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-4180 $Y=-20000 $dt=2
+M33 SB 4 40 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=-2260 $Y=-20000 $dt=2
+M34 37 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=-1160 $Y=-20000 $dt=2
+M35 SB 4 38 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=760 $Y=-20000 $dt=2
+M36 45 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=1860 $Y=-20000 $dt=2
+M37 SB 4 46 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=3780 $Y=-20000 $dt=2
+M38 43 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=4880 $Y=-20000 $dt=2
+M39 SB 4 44 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=6800 $Y=-20000 $dt=2
+M40 41 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=7900 $Y=-20000 $dt=2
+M41 SB 4 42 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=9820 $Y=-20000 $dt=2
+M42 49 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=10920 $Y=-20000 $dt=2
+M43 SB 4 50 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=12840 $Y=-20000 $dt=2
+M44 47 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=13940 $Y=-20000 $dt=2
+M45 SB 4 48 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=15860 $Y=-20000 $dt=2
+M46 53 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=16960 $Y=-20000 $dt=2
+M47 SB 4 54 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=18880 $Y=-20000 $dt=2
+M48 51 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=19980 $Y=-20000 $dt=2
+M49 SB 4 52 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=21900 $Y=-20000 $dt=2
+M50 59 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=23000 $Y=-20000 $dt=2
+M51 SB 4 60 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=24920 $Y=-20000 $dt=2
+M52 57 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=26020 $Y=-20000 $dt=2
+M53 SB 4 58 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=27940 $Y=-20000 $dt=2
+M54 55 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=29040 $Y=-20000 $dt=2
+M55 SB 4 56 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=30960 $Y=-20000 $dt=2
+M56 63 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=32060 $Y=-20000 $dt=2
+M57 SB 4 64 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=33980 $Y=-20000 $dt=2
+M58 61 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=35080 $Y=-20000 $dt=2
+M59 SB 4 62 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=37000 $Y=-20000 $dt=2
+M60 67 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=38100 $Y=-20000 $dt=2
+M61 SB 4 68 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=40020 $Y=-20000 $dt=2
+M62 65 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=41120 $Y=-20000 $dt=2
+M63 SB 4 66 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=43040 $Y=-20000 $dt=2
+M64 73 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=44140 $Y=-20000 $dt=2
+M65 SB 4 74 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=46060 $Y=-20000 $dt=2
+M66 71 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=47160 $Y=-20000 $dt=2
+M67 SB 4 72 SB pe3i L=4e-07 W=4e-05 AD=1.4e-11 AS=2e-13 PD=4.07e-05 PS=8.001e-05 $X=49080 $Y=-20000 $dt=2
+M68 69 4 SB SB pe3i L=4e-07 W=4e-05 AD=2e-13 AS=1.4e-11 PD=8.001e-05 PS=4.07e-05 $X=50180 $Y=-20000 $dt=2
+M69 SB 4 70 SB pe3i L=4e-07 W=4e-05 AD=3.64e-11 AS=2e-13 PD=8.182e-05 PS=8.001e-05 $X=52100 $Y=-20000 $dt=2
+D70 Sub SB ddnw AREA=5.99691e-09 PJ=0.00033524 perimeter=0.00033524 $X=-57930 $Y=-24880 $dt=6
+.ends ioh_pe3isabhv_2800gcr
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_ddnw_2x100                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_ddnw_2x100 A K
+** N=2 EP=2 FDC=1
+D0 A K ddnw AREA=3.89696e-10 PJ=0.000208648 perimeter=0.000208648 $X=-1370 $Y=4940 $dt=6
+.ends ioh_ddnw_2x100
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: HVDD4D2PK                                       *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt HVDD4D2PK PAD GND
+** N=3 EP=2 FDC=304
+X1 GND PAD 3 ioh_pmbsabhv_2000 $T=113580 70000 0 90 $X=82560 $Y=7400
+X2 GND 3 GND ioh_pe3isabhv_2800gcr $T=175340 70000 0 90 $X=143790 $Y=7400
+X3 GND PAD ioh_ddnw_2x100 $T=75050 14500 0 0 $X=68510 $Y=14500
+.ends HVDD4D2PK
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_iscrd2_4x100                                *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_iscrd2_4x100 Gp A Gn Sub K
+** N=5 EP=5 FDC=9
+D0 Sub Gn ddnw AREA=6.92248e-09 PJ=0.000359171 perimeter=0.000359171 $X=-24750 $Y=-64100 $dt=6
+D1 Gp Gn dpdd_scr AREA=1.09818e-09 PJ=0.00022858 perimeter=0.00022858 $X=-16820 $Y=-51850 $dt=10
+D2 Gp Gn dpdd_scr AREA=1.09818e-09 PJ=0.00022858 perimeter=0.00022858 $X=6230 $Y=-51850 $dt=10
+D3 Gp K dnpdd_scr AREA=2.68193e-10 PJ=0.00020478 perimeter=0.00020478 $X=-12870 $Y=-49850 $dt=11
+D4 Gp K dnpdd_scr AREA=2.68193e-10 PJ=0.00020478 perimeter=0.00020478 $X=10180 $Y=-49850 $dt=11
+D5 A Gn dpdnw AREA=1.89e-10 PJ=0.00020378 perimeter=0.00020378 $X=-21710 $Y=-50000 $dt=13
+D6 A Gn dpdnw AREA=1.89e-10 PJ=0.00020378 perimeter=0.00020378 $X=-3230 $Y=-50000 $dt=13
+D7 A Gn dpdnw AREA=1.89e-10 PJ=0.00020378 perimeter=0.00020378 $X=1340 $Y=-50000 $dt=13
+D8 A Gn dpdnw AREA=1.89e-10 PJ=0.00020378 perimeter=0.00020378 $X=19820 $Y=-50000 $dt=13
+.ends ioh_iscrd2_4x100
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_pmbsabhv_2x15_10                            *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_pmbsabhv_2x15_10 1 2 4 5
+*.DEVICECLIMB
+** N=8 EP=4 FDC=3
+R0 4 2 L=5.1e-07 W=1.5e-05 $[rdp_io] $SUB=1 $X=-835 $Y=-7500 $dt=3
+R1 2 5 L=5.1e-07 W=1.5e-05 $[rdp_io] $SUB=1 $X=330 $Y=-7500 $dt=3
+D2 2 1 dphnw AREA=9.9e-12 PJ=1.32e-06 perimeter=1.32e-06 $X=-330 $Y=-7500 $dt=12
+.ends ioh_pmbsabhv_2x15_10
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_pmbsabhv_750                                *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_pmbsabhv_750 Sub GSB D
+** N=53 EP=3 FDC=126
+X0 GSB D 4 5 ioh_pmbsabhv_2x15_10 $T=-50640 0 0 0 $X=-53780 $Y=-8460
+X1 GSB D 8 9 ioh_pmbsabhv_2x15_10 $T=-46420 0 0 0 $X=-49560 $Y=-8460
+X2 GSB D 6 7 ioh_pmbsabhv_2x15_10 $T=-42200 0 0 0 $X=-45340 $Y=-8460
+X3 GSB D 10 11 ioh_pmbsabhv_2x15_10 $T=-37980 0 0 0 $X=-41120 $Y=-8460
+X4 GSB D 14 15 ioh_pmbsabhv_2x15_10 $T=-33760 0 0 0 $X=-36900 $Y=-8460
+X5 GSB D 12 13 ioh_pmbsabhv_2x15_10 $T=-29540 0 0 0 $X=-32680 $Y=-8460
+X6 GSB D 16 17 ioh_pmbsabhv_2x15_10 $T=-25320 0 0 0 $X=-28460 $Y=-8460
+X7 GSB D 20 21 ioh_pmbsabhv_2x15_10 $T=-21100 0 0 0 $X=-24240 $Y=-8460
+X8 GSB D 18 19 ioh_pmbsabhv_2x15_10 $T=-16880 0 0 0 $X=-20020 $Y=-8460
+X9 GSB D 22 23 ioh_pmbsabhv_2x15_10 $T=-12660 0 0 0 $X=-15800 $Y=-8460
+X10 GSB D 26 27 ioh_pmbsabhv_2x15_10 $T=-8440 0 0 0 $X=-11580 $Y=-8460
+X11 GSB D 24 25 ioh_pmbsabhv_2x15_10 $T=-4220 0 0 0 $X=-7360 $Y=-8460
+X12 GSB D 28 29 ioh_pmbsabhv_2x15_10 $T=0 0 0 0 $X=-3140 $Y=-8460
+X13 GSB D 32 33 ioh_pmbsabhv_2x15_10 $T=4220 0 0 0 $X=1080 $Y=-8460
+X14 GSB D 30 31 ioh_pmbsabhv_2x15_10 $T=8440 0 0 0 $X=5300 $Y=-8460
+X15 GSB D 34 35 ioh_pmbsabhv_2x15_10 $T=12660 0 0 0 $X=9520 $Y=-8460
+X16 GSB D 38 39 ioh_pmbsabhv_2x15_10 $T=16880 0 0 0 $X=13740 $Y=-8460
+X17 GSB D 36 37 ioh_pmbsabhv_2x15_10 $T=21100 0 0 0 $X=17960 $Y=-8460
+X18 GSB D 40 41 ioh_pmbsabhv_2x15_10 $T=25320 0 0 0 $X=22180 $Y=-8460
+X19 GSB D 44 45 ioh_pmbsabhv_2x15_10 $T=29540 0 0 0 $X=26400 $Y=-8460
+X20 GSB D 42 43 ioh_pmbsabhv_2x15_10 $T=33760 0 0 0 $X=30620 $Y=-8460
+X21 GSB D 46 47 ioh_pmbsabhv_2x15_10 $T=37980 0 0 0 $X=34840 $Y=-8460
+X22 GSB D 50 51 ioh_pmbsabhv_2x15_10 $T=42200 0 0 0 $X=39060 $Y=-8460
+X23 GSB D 48 49 ioh_pmbsabhv_2x15_10 $T=46420 0 0 0 $X=43280 $Y=-8460
+X24 GSB D 52 53 ioh_pmbsabhv_2x15_10 $T=50640 0 0 0 $X=47500 $Y=-8460
+M0 4 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=1.47e-11 PD=3.001e-05 PS=3.196e-05 $X=-52480 $Y=-7500 $dt=0
+M1 GSB GSB 5 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-49800 $Y=-7500 $dt=0
+M2 8 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-48260 $Y=-7500 $dt=0
+M3 GSB GSB 9 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-45580 $Y=-7500 $dt=0
+M4 6 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-44040 $Y=-7500 $dt=0
+M5 GSB GSB 7 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-41360 $Y=-7500 $dt=0
+M6 10 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-39820 $Y=-7500 $dt=0
+M7 GSB GSB 11 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-37140 $Y=-7500 $dt=0
+M8 14 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-35600 $Y=-7500 $dt=0
+M9 GSB GSB 15 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-32920 $Y=-7500 $dt=0
+M10 12 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-31380 $Y=-7500 $dt=0
+M11 GSB GSB 13 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-28700 $Y=-7500 $dt=0
+M12 16 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-27160 $Y=-7500 $dt=0
+M13 GSB GSB 17 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-24480 $Y=-7500 $dt=0
+M14 20 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-22940 $Y=-7500 $dt=0
+M15 GSB GSB 21 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-20260 $Y=-7500 $dt=0
+M16 18 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-18720 $Y=-7500 $dt=0
+M17 GSB GSB 19 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-16040 $Y=-7500 $dt=0
+M18 22 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-14500 $Y=-7500 $dt=0
+M19 GSB GSB 23 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-11820 $Y=-7500 $dt=0
+M20 26 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-10280 $Y=-7500 $dt=0
+M21 GSB GSB 27 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-7600 $Y=-7500 $dt=0
+M22 24 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-6060 $Y=-7500 $dt=0
+M23 GSB GSB 25 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=-3380 $Y=-7500 $dt=0
+M24 28 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=-1840 $Y=-7500 $dt=0
+M25 GSB GSB 29 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=840 $Y=-7500 $dt=0
+M26 32 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=2380 $Y=-7500 $dt=0
+M27 GSB GSB 33 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=5060 $Y=-7500 $dt=0
+M28 30 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=6600 $Y=-7500 $dt=0
+M29 GSB GSB 31 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=9280 $Y=-7500 $dt=0
+M30 34 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=10820 $Y=-7500 $dt=0
+M31 GSB GSB 35 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=13500 $Y=-7500 $dt=0
+M32 38 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=15040 $Y=-7500 $dt=0
+M33 GSB GSB 39 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=17720 $Y=-7500 $dt=0
+M34 36 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=19260 $Y=-7500 $dt=0
+M35 GSB GSB 37 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=21940 $Y=-7500 $dt=0
+M36 40 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=23480 $Y=-7500 $dt=0
+M37 GSB GSB 41 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=26160 $Y=-7500 $dt=0
+M38 44 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=27700 $Y=-7500 $dt=0
+M39 GSB GSB 45 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=30380 $Y=-7500 $dt=0
+M40 42 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=31920 $Y=-7500 $dt=0
+M41 GSB GSB 43 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=34600 $Y=-7500 $dt=0
+M42 46 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=36140 $Y=-7500 $dt=0
+M43 GSB GSB 47 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=38820 $Y=-7500 $dt=0
+M44 50 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=40360 $Y=-7500 $dt=0
+M45 GSB GSB 51 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=43040 $Y=-7500 $dt=0
+M46 48 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=44580 $Y=-7500 $dt=0
+M47 GSB GSB 49 GSB pmb L=1e-06 W=1.5e-05 AD=4.05e-12 AS=7.5e-14 PD=1.554e-05 PS=3.001e-05 $X=47260 $Y=-7500 $dt=0
+M48 52 GSB GSB GSB pmb L=1e-06 W=1.5e-05 AD=7.5e-14 AS=4.05e-12 PD=3.001e-05 PS=1.554e-05 $X=48800 $Y=-7500 $dt=0
+M49 GSB GSB 53 GSB pmb L=1e-06 W=1.5e-05 AD=1.47e-11 AS=7.5e-14 PD=3.196e-05 PS=3.001e-05 $X=51480 $Y=-7500 $dt=0
+D50 Sub GSB ddnw AREA=3.03901e-09 PJ=0.00028418 perimeter=0.00028418 $X=-57930 $Y=-12380 $dt=6
+.ends ioh_pmbsabhv_750
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioh_pe3sab_2x15_04                              *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioh_pe3sab_2x15_04 1 3 5 6
+*.DEVICECLIMB
+** N=9 EP=4 FDC=3
+R0 5 3 L=4.3e-07 W=1.5e-05 $[rdp3] $SUB=1 $X=-755 $Y=-7500 $dt=17
+R1 3 6 L=4.3e-07 W=1.5e-05 $[rdp3] $SUB=1 $X=330 $Y=-7500 $dt=17
+D2 3 1 dp3 AREA=9.9e-12 PJ=1.32e-06 perimeter=1.32e-06 $X=-330 $Y=-7500 $dt=20
+.ends ioh_pe3sab_2x15_04
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: HVD4SJD1R5PKFs                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt HVD4SJD1R5PKFs GNDO PAD IGND
+** N=81 EP=3 FDC=700
+X99 GNDO PAD 4 ioh_dhpw_2x100 $T=86930 72000 0 0 $X=67600 $Y=9530
+X100 GNDO 4 5 ioh_dhpw_2x100 $T=126250 72000 0 0 $X=106920 $Y=9530
+X101 GNDO 5 IGND ioh_dhpw_2x100 $T=165570 72000 0 0 $X=146240 $Y=9530
+X107 6 PAD PAD GNDO IGND ioh_iscrd2_4x100 $T=217270 72000 0 0 $X=185560 $Y=3230
+X108 GNDO PAD 7 ioh_pmbsabhv_750 $T=286780 72000 0 90 $X=268260 $Y=9400
+X109 GNDO 7 8 ioh_pmbsabhv_750 $T=323010 72000 0 90 $X=304490 $Y=9400
+X110 GNDO 8 9 ioh_pmbsabhv_750 $T=359240 72000 0 90 $X=340720 $Y=9400
+X111 GNDO 9 10 ioh_pmbsabhv_750 $T=395470 72000 0 90 $X=376950 $Y=9400
+X112 10 6 80 81 ioh_pe3sab_2x15_04 $T=432230 20660 0 90 $X=423770 $Y=18010
+X113 10 6 78 79 ioh_pe3sab_2x15_04 $T=432230 23680 0 90 $X=423770 $Y=21030
+X114 10 6 76 77 ioh_pe3sab_2x15_04 $T=432230 26700 0 90 $X=423770 $Y=24050
+X115 10 6 74 75 ioh_pe3sab_2x15_04 $T=432230 29720 0 90 $X=423770 $Y=27070
+X116 10 6 72 73 ioh_pe3sab_2x15_04 $T=432230 32740 0 90 $X=423770 $Y=30090
+X117 10 6 70 71 ioh_pe3sab_2x15_04 $T=432230 35760 0 90 $X=423770 $Y=33110
+X118 10 6 68 69 ioh_pe3sab_2x15_04 $T=432230 38780 0 90 $X=423770 $Y=36130
+X119 10 6 66 67 ioh_pe3sab_2x15_04 $T=432230 41800 0 90 $X=423770 $Y=39150
+X120 10 6 64 65 ioh_pe3sab_2x15_04 $T=432230 44820 0 90 $X=423770 $Y=42170
+X121 10 6 62 63 ioh_pe3sab_2x15_04 $T=432230 47840 0 90 $X=423770 $Y=45190
+X122 10 6 60 61 ioh_pe3sab_2x15_04 $T=432230 50860 0 90 $X=423770 $Y=48210
+X123 10 6 58 59 ioh_pe3sab_2x15_04 $T=432230 53880 0 90 $X=423770 $Y=51230
+X124 10 6 56 57 ioh_pe3sab_2x15_04 $T=432230 56900 0 90 $X=423770 $Y=54250
+X125 10 6 54 55 ioh_pe3sab_2x15_04 $T=432230 59920 0 90 $X=423770 $Y=57270
+X126 10 6 52 53 ioh_pe3sab_2x15_04 $T=432230 62940 0 90 $X=423770 $Y=60290
+X127 10 6 50 51 ioh_pe3sab_2x15_04 $T=432230 65960 0 90 $X=423770 $Y=63310
+X128 10 6 48 49 ioh_pe3sab_2x15_04 $T=432230 68980 0 90 $X=423770 $Y=66330
+X129 10 6 46 47 ioh_pe3sab_2x15_04 $T=432230 72000 0 90 $X=423770 $Y=69350
+X130 10 6 44 45 ioh_pe3sab_2x15_04 $T=432230 75020 0 90 $X=423770 $Y=72370
+X131 10 6 42 43 ioh_pe3sab_2x15_04 $T=432230 78040 0 90 $X=423770 $Y=75390
+X132 10 6 40 41 ioh_pe3sab_2x15_04 $T=432230 81060 0 90 $X=423770 $Y=78410
+X133 10 6 38 39 ioh_pe3sab_2x15_04 $T=432230 84080 0 90 $X=423770 $Y=81430
+X134 10 6 36 37 ioh_pe3sab_2x15_04 $T=432230 87100 0 90 $X=423770 $Y=84450
+X135 10 6 34 35 ioh_pe3sab_2x15_04 $T=432230 90120 0 90 $X=423770 $Y=87470
+X136 10 6 32 33 ioh_pe3sab_2x15_04 $T=432230 93140 0 90 $X=423770 $Y=90490
+X137 10 6 30 31 ioh_pe3sab_2x15_04 $T=432230 96160 0 90 $X=423770 $Y=93510
+X138 10 6 28 29 ioh_pe3sab_2x15_04 $T=432230 99180 0 90 $X=423770 $Y=96530
+X139 10 6 26 27 ioh_pe3sab_2x15_04 $T=432230 102200 0 90 $X=423770 $Y=99550
+X140 10 6 24 25 ioh_pe3sab_2x15_04 $T=432230 105220 0 90 $X=423770 $Y=102570
+X141 10 6 22 23 ioh_pe3sab_2x15_04 $T=432230 108240 0 90 $X=423770 $Y=105590
+X142 10 6 20 21 ioh_pe3sab_2x15_04 $T=432230 111260 0 90 $X=423770 $Y=108610
+X143 10 6 18 19 ioh_pe3sab_2x15_04 $T=432230 114280 0 90 $X=423770 $Y=111630
+X144 10 6 16 17 ioh_pe3sab_2x15_04 $T=432230 117300 0 90 $X=423770 $Y=114650
+X145 10 6 14 15 ioh_pe3sab_2x15_04 $T=432230 120320 0 90 $X=423770 $Y=117670
+X146 10 6 12 13 ioh_pe3sab_2x15_04 $T=432230 123340 0 90 $X=423770 $Y=120690
+M0 80 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=1.365e-11 PD=3.001e-05 PS=3.182e-05 $X=424730 $Y=19500 $dt=2
+M1 10 11 81 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=21420 $dt=2
+M2 78 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=22520 $dt=2
+M3 10 11 79 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=24440 $dt=2
+M4 76 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=25540 $dt=2
+M5 10 11 77 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=27460 $dt=2
+M6 74 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=28560 $dt=2
+M7 10 11 75 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=30480 $dt=2
+M8 72 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=31580 $dt=2
+M9 10 11 73 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=33500 $dt=2
+M10 70 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=34600 $dt=2
+M11 10 11 71 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=36520 $dt=2
+M12 68 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=37620 $dt=2
+M13 10 11 69 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=39540 $dt=2
+M14 66 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=40640 $dt=2
+M15 10 11 67 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=42560 $dt=2
+M16 64 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=43660 $dt=2
+M17 10 11 65 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=45580 $dt=2
+M18 62 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=46680 $dt=2
+M19 10 11 63 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=48600 $dt=2
+M20 60 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=49700 $dt=2
+M21 10 11 61 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=51620 $dt=2
+M22 58 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=52720 $dt=2
+M23 10 11 59 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=54640 $dt=2
+M24 56 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=55740 $dt=2
+M25 10 11 57 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=57660 $dt=2
+M26 54 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=58760 $dt=2
+M27 10 11 55 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=60680 $dt=2
+M28 52 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=61780 $dt=2
+M29 10 11 53 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=63700 $dt=2
+M30 50 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=64800 $dt=2
+M31 10 11 51 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=66720 $dt=2
+M32 48 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=67820 $dt=2
+M33 10 11 49 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=69740 $dt=2
+M34 46 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=70840 $dt=2
+M35 10 11 47 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=72760 $dt=2
+M36 44 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=73860 $dt=2
+M37 10 11 45 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=75780 $dt=2
+M38 42 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=76880 $dt=2
+M39 10 11 43 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=78800 $dt=2
+M40 40 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=79900 $dt=2
+M41 10 11 41 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=81820 $dt=2
+M42 38 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=82920 $dt=2
+M43 10 11 39 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=84840 $dt=2
+M44 36 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=85940 $dt=2
+M45 10 11 37 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=87860 $dt=2
+M46 34 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=88960 $dt=2
+M47 10 11 35 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=90880 $dt=2
+M48 32 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=91980 $dt=2
+M49 10 11 33 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=93900 $dt=2
+M50 30 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=95000 $dt=2
+M51 10 11 31 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=96920 $dt=2
+M52 28 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=98020 $dt=2
+M53 10 11 29 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=99940 $dt=2
+M54 26 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=101040 $dt=2
+M55 10 11 27 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=102960 $dt=2
+M56 24 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=104060 $dt=2
+M57 10 11 25 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=105980 $dt=2
+M58 22 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=107080 $dt=2
+M59 10 11 23 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=109000 $dt=2
+M60 20 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=110100 $dt=2
+M61 10 11 21 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=112020 $dt=2
+M62 18 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=113120 $dt=2
+M63 10 11 19 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=115040 $dt=2
+M64 16 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=116140 $dt=2
+M65 10 11 17 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=118060 $dt=2
+M66 14 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=119160 $dt=2
+M67 10 11 15 10 pe3i L=4e-07 W=1.5e-05 AD=5.25e-12 AS=7.5e-14 PD=1.57e-05 PS=3.001e-05 $X=424730 $Y=121080 $dt=2
+M68 12 11 10 10 pe3i L=4e-07 W=1.5e-05 AD=7.5e-14 AS=5.25e-12 PD=3.001e-05 PS=1.57e-05 $X=424730 $Y=122180 $dt=2
+M69 10 11 13 10 pe3i L=4e-07 W=1.5e-05 AD=1.365e-11 AS=7.5e-14 PD=3.182e-05 PS=3.001e-05 $X=424730 $Y=124100 $dt=2
+D70 GNDO 10 ddnw AREA=3.10041e-09 PJ=0.00028524 perimeter=0.00028524 $X=417850 $Y=14070 $dt=6
+R71 10 11 L=2.55e-05 W=4.2e-07 $[rnp1] $X=422670 $Y=97210 $dt=24
+R72 IGND 6 L=1.6e-05 W=0.0001 $[rpp1s] $X=250620 $Y=22000 $dt=26
+.ends HVD4SJD1R5PKFs
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_ne3isbc_pc                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_ne3isbc_pc 2 3 5 6
+*.DEVICECLIMB
+** N=9 EP=4 FDC=3
+R0 5 3 L=3.35e-06 W=3e-05 $[rdn3] $SUB=2 $X=955 $Y=1825 $dt=14
+R1 3 6 L=3.35e-06 W=3e-05 $[rdn3] $SUB=2 $X=4960 $Y=1825 $dt=14
+D2 2 3 dn3 AREA=1.98e-11 PJ=1.32e-06 perimeter=1.32e-06 $X=4300 $Y=1825 $dt=18
+.ends jio_ne3isbc_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: jio_crnentr_pc                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt jio_crnentr_pc 1 2 3
+** N=28 EP=3 FDC=66
+X165 3 2 7 8 jio_ne3isbc_pc $T=207490 108730 0 180 $X=197170 $Y=74825
+X166 3 2 5 6 jio_ne3isbc_pc $T=207490 142530 0 180 $X=197170 $Y=108625
+X167 3 2 11 12 jio_ne3isbc_pc $T=216490 108730 0 180 $X=206170 $Y=74825
+X168 3 2 9 10 jio_ne3isbc_pc $T=216490 142530 0 180 $X=206170 $Y=108625
+X169 3 2 15 16 jio_ne3isbc_pc $T=225490 108730 0 180 $X=215170 $Y=74825
+X170 3 2 13 14 jio_ne3isbc_pc $T=225490 142530 0 180 $X=215170 $Y=108625
+X171 3 2 19 20 jio_ne3isbc_pc $T=226650 108730 1 0 $X=225590 $Y=74825
+X172 3 2 17 18 jio_ne3isbc_pc $T=226650 142530 1 0 $X=225590 $Y=108625
+X173 3 2 23 24 jio_ne3isbc_pc $T=235650 108730 1 0 $X=234590 $Y=74825
+X174 3 2 21 22 jio_ne3isbc_pc $T=235650 142530 1 0 $X=234590 $Y=108625
+X175 3 2 27 28 jio_ne3isbc_pc $T=244650 108730 1 0 $X=243590 $Y=74825
+X176 3 2 25 26 jio_ne3isbc_pc $T=244650 142530 1 0 $X=243590 $Y=108625
+M0 8 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=198780 $Y=76905 $dt=1
+M1 6 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.89e-11 PD=6.001e-05 PS=6.126e-05 $X=198780 $Y=110705 $dt=1
+M2 3 4 7 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=206540 $Y=76905 $dt=1
+M3 3 4 5 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=206540 $Y=110705 $dt=1
+M4 12 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=207780 $Y=76905 $dt=1
+M5 10 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=207780 $Y=110705 $dt=1
+M6 3 4 11 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=215540 $Y=76905 $dt=1
+M7 3 4 9 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=215540 $Y=110705 $dt=1
+M8 16 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=216780 $Y=76905 $dt=1
+M9 14 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=216780 $Y=110705 $dt=1
+M10 3 4 15 3 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=224540 $Y=76905 $dt=1
+M11 3 4 13 3 ne3i L=4e-07 W=3e-05 AD=3.39e-11 AS=1.5e-13 PD=3.226e-05 PS=6.001e-05 $X=224540 $Y=110705 $dt=1
+M12 19 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=227200 $Y=76905 $dt=1
+M13 17 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=3.39e-11 PD=6.001e-05 PS=3.226e-05 $X=227200 $Y=110705 $dt=1
+M14 3 4 20 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=234960 $Y=76905 $dt=1
+M15 3 4 18 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=234960 $Y=110705 $dt=1
+M16 23 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=236200 $Y=76905 $dt=1
+M17 21 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=236200 $Y=110705 $dt=1
+M18 3 4 24 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=243960 $Y=76905 $dt=1
+M19 3 4 22 3 ne3i L=4e-07 W=3e-05 AD=1.26e-11 AS=1.5e-13 PD=3.084e-05 PS=6.001e-05 $X=243960 $Y=110705 $dt=1
+M20 27 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=245200 $Y=76905 $dt=1
+M21 25 4 3 3 ne3i L=4e-07 W=3e-05 AD=1.5e-13 AS=1.26e-11 PD=6.001e-05 PS=3.084e-05 $X=245200 $Y=110705 $dt=1
+M22 3 4 28 3 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=252960 $Y=76905 $dt=1
+M23 3 4 26 3 ne3i L=4e-07 W=3e-05 AD=1.89e-11 AS=1.5e-13 PD=6.126e-05 PS=6.001e-05 $X=252960 $Y=110705 $dt=1
+D24 1 2 ddnwmv AREA=4.69976e-09 PJ=0.00027464 perimeter=0.00027464 $X=193640 $Y=72575 $dt=7
+D25 3 2 dipdnwmv AREA=4.16648e-09 PJ=0.00025864 perimeter=0.00025864 $X=195640 $Y=74575 $dt=9
+R26 4 3 L=3.3e-06 W=4.4e-07 $[rdp3] $SUB=2 $X=256135 $Y=151635 $dt=15
+D27 4 2 p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=256135 $Y=150615 $dt=21
+D28 3 2 p_dp3 AREA=4.488e-13 PJ=2.48e-06 perimeter=2.48e-06 $X=256135 $Y=154935 $dt=21
+D29 1 2 p_dnw3 AREA=1.44615e-11 PJ=1.709e-05 perimeter=1.709e-05 $X=255425 $Y=150175 $dt=23
+.ends jio_crnentr_pc
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: CORNERESDPC                                     *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt CORNERESDPC PSUB GNDOI VDDOI GNDI VDD3I GNDRI VDDRI
+** N=9 EP=7 FDC=132
+X432 PSUB VDDOI GNDOI jio_crnentr_pc $T=0 0 1 90 $X=72565 $Y=191090
+X433 PSUB VDDOI GNDOI jio_crnentr_pc $T=0 0 0 0 $X=191090 $Y=72565
+.ends CORNERESDPC
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ioring                                          *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ioring CLK ENABLE GNDA GNDD GNDHV GNDOHV GNDOR GNDORA INL OUT0
++ OUT1 OUT2 OUTHV OUTL PSUB RESET VDDA VDDD VDDHV VDDOR
++ VDDORA clk_core enable_core inl_core out0_core out1_core out2_core reset_core
+** N=45 EP=28 FDC=4500
+X14 PSUB VDDORA GNDORA VDDA GNDA VDDORA GNDORPADPC $T=8110 807255 0 270 $X=8110 $Y=736935
+X15 PSUB VDDOR GNDOR VDDD GNDD VDDOR GNDORPADPC $T=8110 1647255 0 270 $X=8110 $Y=1576935
+X16 PSUB VDDORA GNDORA VDDA GNDA GNDORA VDDORPADPC $T=8110 667255 0 270 $X=8110 $Y=596935
+X17 PSUB VDDOR GNDOR VDDD GNDD GNDOR VDDORPADPC $T=8110 1507255 0 270 $X=8110 $Y=1436935
+X18 VDDA GNDA VDDORA VDDORA GNDORA GNDORA PSUB VDDPADPC $T=8110 597255 0 270 $X=8110 $Y=526935
+X19 VDDD GNDD VDDOR VDDOR GNDOR GNDOR PSUB VDDPADPC $T=8110 1437255 0 270 $X=8110 $Y=1366935
+X20 PSUB GNDOR VDDOR VDDD GNDD VDDOR GNDOR PSUBPADPC $T=8110 1367255 0 270 $X=8110 $Y=1296935
+X21 GNDA VDDA VDDORA VDDORA GNDORA GNDORA PSUB GNDPADPC $T=8110 737255 0 270 $X=8110 $Y=666935
+X22 GNDD VDDD VDDOR VDDOR GNDOR GNDOR PSUB GNDPADPC $T=8110 1577255 0 270 $X=8110 $Y=1506935
+X23 VDDOR VDDD PSUB GNDD GNDOR VDDOR GNDOR reset_core RESET 14
++ GNDD ICPC $T=8110 1157255 0 270 $X=8110 $Y=1086935
+X24 VDDOR VDDD PSUB GNDD GNDOR VDDOR GNDOR clk_core CLK 17
++ GNDD ICPC $T=8110 1227255 0 270 $X=8110 $Y=1156935
+X25 VDDOR VDDD PSUB GNDD GNDOR VDDOR GNDOR enable_core ENABLE 20
++ GNDD ICPC $T=8110 1297255 0 270 $X=8110 $Y=1226935
+X26 GNDOR PSUB GNDORA VDDD VDDOR GNDD GNDA VDDA VDDORA VDDOR
++ VDDOR GNDOR GNDOR VDDORA VDDORA GNDORA GNDORA PWRCUTDCPC $T=8110 877255 0 270 $X=79495 $Y=806935
+X27 GNDORA PSUB GNDOHV VDDA VDDORA GNDA 21 22 23 VDDORA
++ VDDORA GNDORA GNDORA 24 25 26 27 PWRCUTDCPC $T=269110 56255 0 0 $X=268790 $Y=127640
+X28 GNDOHV PSUB GNDOR 28 29 30 GNDD VDDD VDDOR 31
++ 32 33 34 VDDOR VDDOR GNDOR GNDOR PWRCUTDCPC $T=339110 2048255 0 180 $X=268790 $Y=1786935
+X29 VDDD VDDOR GNDOR out2_core PSUB GNDD GNDD VDDOR GNDOR OUT2 BT4PC $T=8110 947255 0 270 $X=8110 $Y=876935
+X30 VDDD VDDOR GNDOR out1_core PSUB GNDD GNDD VDDOR GNDOR OUT1 BT4PC $T=8110 1017255 0 270 $X=8110 $Y=946935
+X31 VDDD VDDOR GNDOR out0_core PSUB GNDD GNDD VDDOR GNDOR OUT0 BT4PC $T=8110 1087255 0 270 $X=8110 $Y=1016935
+X32 PSUB VDDA VDDORA GNDORA GNDA INL inl_core VDDORA GNDORA APR04DPC $T=8110 527255 0 270 $X=8110 $Y=456935
+X33 PSUB VDDORA OUTL GNDORA VDDA GNDA VDDORA GNDORA APR00DPC $T=8110 457255 0 270 $X=8110 $Y=386935
+X34 GNDOHV VDDHV GNDHV HVDD4DJ5PKFs $T=880020 1139485 0 90 $X=735020 $Y=1139165
+X35 GNDHV GNDOHV HVDD4D2PK $T=878020 468335 0 90 $X=738620 $Y=468335
+X36 GNDOHV OUTHV GNDHV HVD4SJD1R5PKFs $T=880020 688485 0 90 $X=735020 $Y=688165
+X37 PSUB GNDORA VDDORA GNDA VDDA GNDORA VDDORA CORNERESDPC $T=8110 56255 0 0 $X=79495 $Y=127640
+X38 PSUB GNDOR VDDOR GNDD VDDD GNDOR VDDOR CORNERESDPC $T=8110 2048255 0 270 $X=79495 $Y=1786935
+R0 PSUB GNDOHV 5 $[s_res] $X=347010 $Y=14950 $dt=4
+.ends ioring

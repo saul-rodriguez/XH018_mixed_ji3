@@ -1,0 +1,32 @@
+// Library - GATES_JI3V, Cell - nand2ji3v, View - schematic
+// LAST TIME SAVED: Mar  5 10:07:48 2018
+// NETLIST TIME: Feb  9 05:28:52 2024
+`timescale 1ns / 1ps 
+
+`worklib GATES_JI3V
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="GATES_JI3V", dfII_cell="nand2ji3v", dfII_view="schematic", worklib_name="GATES_JI3V", view_name="schematic", last_save_time="Mar  5 10:07:48 2018" *)
+
+module nand2ji3v (out, a, b);
+
+parameter GT_PUW=0;
+parameter GT_PUL=300.00n;
+parameter GT_PDW=0;
+parameter GT_PDL=350.00n;
+
+output  out;
+
+input  a, b;
+
+wire (*
+integer inh_conn_prop_name = "power_vdd3i";
+integer inh_conn_def_value = "cds_globals.\\vdd3i! ";*)
+\vdd3i! ;
+
+wire (*
+integer inh_conn_prop_name = "ground_gnd3i";
+integer inh_conn_def_value = "cds_globals.\\gnd3i! ";*)
+\gnd3i! ;
+

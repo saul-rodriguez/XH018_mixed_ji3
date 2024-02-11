@@ -1,0 +1,6 @@
+netMap,*DECAP15JI3V,*inh_power_vdd3i_vdd3i!,*\vdd3i! 
+netMap,*DECAP15JI3V,*inh_ground_gnd3i_gnd3i!,*\gnd3i! 
+netMap,*DECAP15JI3V,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*DECAP15JI3V,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*DECAP15JI3V,*gnd!,*cds_globals.\gnd! 
+cellMap,*DECAP15JI3V,*DECAP15JI3V,*D_CELLS_JI3V,*cmos_sch

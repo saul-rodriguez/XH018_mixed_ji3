@@ -1,5 +1,0 @@
-    D0 (Sub K) dnw3 area=3.46921e-09 perimeter=244.1u dbv=0.0 m=1 par1=(1) \
-        xf_subext=0
-    D1 (A K) dp3 area=7.93881e-11 perimeter=75.27u dbv=0.0 m=16 par1=(16)
-ends ioh_dp3_16x70
-// End of subcircuit definition.

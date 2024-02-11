@@ -1,0 +1,71 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "top_tb"
+  repList "verilogams behavioral module schematic spectre symbol"
+  stopList "symbol spectre"
+  globalList "gnd!"
+  hierDelim "."
+  globalHierPrefix "cds_globals."
+  prefixHierarchyWithCV "YES"
+  netlistDir "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.22/1/TOP:top_tb:1/netlist/digital"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+  slashCheck   "t"
+ )
+( net
+( "gnd!" "cds_globals.\\gnd! " )
+ )
+( model
+( "HV_CELLS/ioh_pmbsab_15_10/schematic" "ioh_pmbsab_15_10" )
+( "INV_LP/inv/schematic" "inv" )
+( "HV_CELLS/ioh_pe3isab_40_04/schematic" "ioh_pe3isab_40_04" )
+( "HV_CELLS/HVD4SJD1R5PKFs/schematic" "HVD4SJD1R5PKFs" )
+( "HV_CELLS/ioh_d2pk/schematic" "ioh_d2pk" )
+( "IORING/ioring/schematic" "ioring" )
+( "HV_CELLS/ioh_pe3isab_15_04/schematic" "ioh_pe3isab_15_04" )
+( "HV_CELLS/ioh_pe3isabhv_2800gcr/schematic" "ioh_pe3isabhv_2800gcr" )
+( "HV_CELLS/ioh_iscrd2_4x100/schematic" "ioh_iscrd2_4x100" )
+( "HV_CELLS/ioh_dhpw_2x100_stack3/schematic" "ioh_dhpw_2x100_stack3" )
+( "COUNTER_JI3/counter/schematic" "counter" )
+( "HV_CELLS/HVDD4DJ5PKFs/schematic" "HVDD4DJ5PKFs" )
+( "INV_HV/inv_hv/schematic" "inv_hv" )
+( "HV_CELLS/ioh_c5pk/schematic" "ioh_c5pk" )
+( "HV_CELLS/HVDD4D2PK/schematic" "HVDD4D2PK" )
+( "TOP/top/schematic" "top" )
+( "HV_CELLS/ioh_dhpw_2x100/schematic" "ioh_dhpw_2x100" )
+( "HV_CELLS/ioh_pmbsabhv_750/schematic" "ioh_pmbsabhv_750" )
+( "TOP/top_tb/schematic" "top_tb" )
+( "HV_CELLS/ioh_pmbsab_40_10/schematic" "ioh_pmbsab_40_10" )
+( "HV_CELLS/ioh_d5pk/schematic" "ioh_d5pk" )
+( "HV_CELLS/ioh_pmbsabhv_2000/schematic" "ioh_pmbsabhv_2000" )
+( "HV_CELLS/ioh_pe3isabhv_1050gcr/schematic" "ioh_pe3isabhv_1050gcr" )
+ )
+( "temperature" "cds_globals.\\temperature " )
+( "ioh_d2pk" "ihnl/cds8/map" )
+( "ioh_pmbsab_15_10" "ihnl/cds13/map" )
+( "ioh_pe3isabhv_1050gcr" "ihnl/cds12/map" )
+( "ioh_iscrd2_4x100" "ihnl/cds10/map" )
+( "ioh_pmbsab_40_10" "ihnl/cds2/map" )
+( "ioh_dhpw_2x100" "ihnl/cds0/map" )
+( "ioh_pe3isab_15_04" "ihnl/cds11/map" )
+( "inv_hv" "ihnl/cds19/map" )
+( "inv" "ihnl/cds18/map" )
+( "ioh_pe3isab_40_04" "ihnl/cds4/map" )
+( "ioh_dhpw_2x100_stack3" "ihnl/cds1/map" )
+( "counter" "ihnl/cds20/map" )
+( "HVD4SJD1R5PKFs" "ihnl/cds16/map" )
+( "ioh_pe3isabhv_2800gcr" "ihnl/cds5/map" )
+( "ioh_pmbsabhv_2000" "ihnl/cds3/map" )
+( "ioring" "ihnl/cds17/map" )
+( "ioh_c5pk" "ihnl/cds15/map" )
+( "HVDD4DJ5PKFs" "ihnl/cds7/map" )
+( "ioh_d5pk" "ihnl/cds6/map" )
+( "top" "ihnl/cds21/map" )
+( "HVDD4D2PK" "ihnl/cds9/map" )
+( "ioh_pmbsabhv_750" "ihnl/cds14/map" )
+( "top_tb" "ihnl/cds22/map" )
+ )

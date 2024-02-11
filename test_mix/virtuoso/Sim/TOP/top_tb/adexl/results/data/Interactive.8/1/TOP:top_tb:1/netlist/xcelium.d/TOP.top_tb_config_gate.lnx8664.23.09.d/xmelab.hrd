@@ -1,0 +1,104 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-timescale
+1ns/1ns
+-DISCIPLINE
+logic
+-DELAY_MODE
+None
+-NOVITALACCL
+-ACCESS
+r
+-AMSPARTINFO
+../psf/partition.info
+-RNM_PARTINFO
+-MODELINCDIR
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+-SPECTRE_ARGS
+"-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.8/sharedData/CDS/ahdl/input.ahdlSimDB"
+-SPECTRE_ARGS
++logstatus
+-AMSCONNRULES
+ConnRules_3V_full_fast
+
+TOP.top_tb:schematic
+
+cds_globals
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX0 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX16/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX16 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/ON211JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:ON211JI3VX1 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DLY1JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:DLY1JI3VX1 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/AN21JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:AN21JI3VX1 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/AN22JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:AN22JI3VX1 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/EN2JI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:EN2JI3VX0 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/NO2JI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:NO2JI3VX0 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/u1_fd5/functional/verilog.v lib:VLG_PRIMITIVES cell:u1_fd5 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX1 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP25JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP25JI3V view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP15JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP15JI3V view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP10JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP10JI3V view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP7JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP7JI3V view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP5JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP5JI3V view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX2/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX2 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DLY2JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:DLY2JI3VX1 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/INJI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:INJI3VX0 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/NA2JI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:NA2JI3VX0 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_buf/functional/verilog.v lib:VLG_PRIMITIVES cell:check_buf view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:DFRQJI3VX1 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX2/functional/verilog.v lib:D_CELLS_JI3V cell:DFRQJI3VX2 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX4/functional/verilog.v lib:D_CELLS_JI3V cell:DFRQJI3VX4 view:functional"
+-AMSCOMPILEFILE
+"file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams_sdf/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams_sdf"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR00DPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:APR00DPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/resistor_ams/verilogams/verilog.vams lib:VLG_PRIMITIVES cell:resistor_ams view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/PWRCUTDCPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:PWRCUTDCPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_vdd/verilogams/verilog.vams lib:VLG_PRIMITIVES cell:check_vdd view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_gnd/verilogams/verilog.vams lib:VLG_PRIMITIVES cell:check_gnd view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/GNDPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:GNDPADPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/PSUBPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:PSUBPADPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/GNDORPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:GNDORPADPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/VDDPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:VDDPADPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/VDDORPADPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:VDDORPADPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/ICPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:ICPC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/BT4PC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:BT4PC view:verilogams"
+-AMSCOMPILEFILE
+"file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR04DPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:APR04DPC view:verilogams"
+-SPECTRE_ARGS
+++aps

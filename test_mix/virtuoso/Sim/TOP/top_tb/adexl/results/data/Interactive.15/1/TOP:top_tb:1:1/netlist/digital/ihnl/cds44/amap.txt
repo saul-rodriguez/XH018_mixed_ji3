@@ -1,0 +1,4 @@
+netMap,*inv_hv,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*inv_hv,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*inv_hv,*gnd!,*cds_globals.\gnd! 
+cellMap,*inv_hv,*inv_hv,*INV_HV,*schematic

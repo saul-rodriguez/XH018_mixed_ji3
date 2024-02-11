@@ -1,10 +1,10 @@
 HEADER
 "PSFversion" "1.00"
-"design" "(\"TOP\" \"top_tb\" \"config\" \"\")"
+"design" "(\"TOP\" \"top_tb\" \"config_gate\" \"\")"
 "simulator" "ams"
 "temperature" "27"
 "host" ""
-"date" "Feb  7 08:40:48 2024"
+"date" "Feb  9 04:31:33 2024"
 "title" ""
 "analysisList" "()"
 END

@@ -1,19 +1,4 @@
-instMap,*top,*I0,*I0
-instMaster,*top,*I0,*IORING_ioring_schematic
-instMap,*top,*I1,*I1
-instMaster,*top,*I1,*INV_LP_inv_schematic
-instMap,*top,*I2,*I2
-instMaster,*top,*I2,*INV_HV_inv_hv_schematic
-instAttribute,*top,*I3,*" integer cds_net_set [0:1] = { "power_vdd3i","ground_gnd3i" }; integer power_vdd3i = "VDDD"; integer ground_gnd3i = "GNDD"; "
-instMap,*top,*I3,*I3
-instMaster,*top,*I3,*COUNTER_JI3_counter_functional
-netMap,*top,*out<0>,*out[0]
-netMap,*top,*out<1>,*out[1]
-netMap,*top,*out<2>,*out[2]
-netMap,*top,*out<7>,*out[7]
-netMap,*top,*out<6>,*out[6]
-netMap,*top,*out<5>,*out[5]
-netMap,*top,*out<4>,*out[4]
-netMap,*top,*out<3>,*out[3]
-netMap,*top,*gnd!,*cds_globals.\gnd! 
-cellMap,*top,*top,*TOP,*schematic
+instMap,*DFRQJI3VX2,*i0,*i0
+instMaster,*DFRQJI3VX2,*i0,*VLG_PRIMITIVES_u1_fd5_functional
+netMap,*DFRQJI3VX2,*gnd!,*cds_globals.\gnd! 
+cellMap,*DFRQJI3VX2,*DFRQJI3VX2,*D_CELLS_JI3V,*functional

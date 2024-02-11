@@ -1,0 +1,8 @@
+
+invrji3v #( .GT_PDL(350.00n), .GT_PUW(1.1u), .GT_PDW(600.00n), .GT_PUL(300.00n) 
+     ) invr_1 ( .out(net9), .in(A));
+
+invrji3v #( .GT_PDL(350.00n), .GT_PUW(2.92u), .GT_PDW(1.2u), .GT_PUL(300.00n) 
+     ) invr_2 ( .out(Q), .in(net9));
+
+endmodule

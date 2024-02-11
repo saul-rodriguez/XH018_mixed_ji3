@@ -1,0 +1,2 @@
+netMap,*ioh_pe3isab_40_04,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_pe3isab_40_04,*ioh_pe3isab_40_04,*HV_CELLS,*schematic

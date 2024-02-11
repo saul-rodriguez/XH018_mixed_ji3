@@ -1,9 +1,0 @@
-cellMap,*ioh_dp3_16x70,*ioh_dp3_16x70,*HV_CELLS,*schematic
-netMap,*ioh_dp3_16x70,*gnd!,*0
-instMap,*ioh_dp3_16x70,*D0,*D0
-instMaster,*ioh_dp3_16x70,*D0,*PRIMLIB_dnw3_spectre,*dnw3
-instMap,*ioh_dp3_16x70,*D1,*D1
-instMaster,*ioh_dp3_16x70,*D1,*PRIMLIB_dp3_spectre,*dp3
-portMap,*ioh_dp3_16x70,*A,*A
-portMap,*ioh_dp3_16x70,*K,*K
-portMap,*ioh_dp3_16x70,*Sub,*Sub

@@ -1,4 +1,16 @@
-( ( net
-( "gnd!" "cds_globals.\\gnd! " )
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  repList "behavioral functional schematic symbol"
+  stopList "symbol"
+  hierDelim "."
+  globalHierPrefix "cds_globals."
+  prefixHierarchyWithCV "YES"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+  slashCheck   "t"
  )
  )

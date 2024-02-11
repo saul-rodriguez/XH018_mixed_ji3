@@ -1,0 +1,11 @@
+cellMap,*ioh_dhpw_2x100,*ioh_dhpw_2x100,*HV_CELLS,*schematic
+netMap,*ioh_dhpw_2x100,*gnd3i!,*gnd3i!
+netMap,*ioh_dhpw_2x100,*vdd3i!,*vdd3i!
+netMap,*ioh_dhpw_2x100,*gnd!,*0
+instMap,*ioh_dhpw_2x100,*D0,*D0
+instMaster,*ioh_dhpw_2x100,*D0,*PRIMLIB_ddnw_spectre,*ddnw
+instMap,*ioh_dhpw_2x100,*D1,*D1
+instMaster,*ioh_dhpw_2x100,*D1,*PRIMLIB_dhpw_spectre,*dhpw
+portMap,*ioh_dhpw_2x100,*A,*A
+portMap,*ioh_dhpw_2x100,*K,*K
+portMap,*ioh_dhpw_2x100,*Sub,*Sub

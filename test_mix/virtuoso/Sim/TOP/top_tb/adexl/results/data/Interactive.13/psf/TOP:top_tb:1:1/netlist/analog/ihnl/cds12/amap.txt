@@ -1,0 +1,12 @@
+cellMap,*jio_bufc_pc,*jio_bufc_pc,*IO_CELLS_JIC3V,*cmos_sch
+netMap,*jio_bufc_pc,*gnd3i!,*gnd3i!
+netMap,*jio_bufc_pc,*vdd3i!,*vdd3i!
+netMap,*jio_bufc_pc,*gnd!,*0
+instMap,*jio_bufc_pc,*M2,*M2
+instMaster,*jio_bufc_pc,*M2,*PRIMLIB_ne3i_spectre,*ne3i
+instMap,*jio_bufc_pc,*M1,*M1
+instMaster,*jio_bufc_pc,*M1,*PRIMLIB_pe3i_spectre,*pe3i
+portMap,*jio_bufc_pc,*A,*A
+portMap,*jio_bufc_pc,*GNDR,*GNDR
+portMap,*jio_bufc_pc,*VDDR,*VDDR
+portMap,*jio_bufc_pc,*Y,*Y

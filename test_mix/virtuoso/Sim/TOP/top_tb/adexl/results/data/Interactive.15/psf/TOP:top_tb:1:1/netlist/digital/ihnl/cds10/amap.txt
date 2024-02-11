@@ -1,0 +1,8 @@
+instMap,*jio_opdio_pc,*I5,*I5
+instMaster,*jio_opdio_pc,*I5,*IO_CELLS_JIC3V_jio_lviodio_pc_cmos_sch
+instMap,*jio_opdio_pc,*I0,*I0
+instMaster,*jio_opdio_pc,*I0,*IO_CELLS_JIC3V_jio_andio_pc_cmos_sch
+netMap,*jio_opdio_pc,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*jio_opdio_pc,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*jio_opdio_pc,*gnd!,*cds_globals.\gnd! 
+cellMap,*jio_opdio_pc,*jio_opdio_pc,*IO_CELLS_JIC3V,*cmos_sch

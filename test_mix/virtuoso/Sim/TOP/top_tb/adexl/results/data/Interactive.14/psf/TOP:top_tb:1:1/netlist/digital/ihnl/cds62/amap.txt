@@ -1,0 +1,12 @@
+instMap,*DFRQJI3VX2,*invr_3,*invr_3
+instMaster,*DFRQJI3VX2,*invr_3,*GATES_JI3V_invrji3v_schematic
+instMap,*DFRQJI3VX2,*invr_2,*invr_2
+instMaster,*DFRQJI3VX2,*invr_2,*GATES_JI3V_invrji3v_schematic
+instMap,*DFRQJI3VX2,*invr_1,*invr_1
+instMaster,*DFRQJI3VX2,*invr_1,*GATES_JI3V_invrji3v_schematic
+netMap,*DFRQJI3VX2,*inh_power_vdd3i_vdd3i!,*\vdd3i! 
+netMap,*DFRQJI3VX2,*inh_ground_gnd3i_gnd3i!,*\gnd3i! 
+netMap,*DFRQJI3VX2,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*DFRQJI3VX2,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*DFRQJI3VX2,*gnd!,*cds_globals.\gnd! 
+cellMap,*DFRQJI3VX2,*DFRQJI3VX2,*D_CELLS_JI3V,*cmos_sch

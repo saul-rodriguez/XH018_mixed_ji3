@@ -2,9 +2,9 @@
 // IC subversion:  IC6.1.8-64b.500.34 
 // Xcelium version: 23.09-s002
 // Copyright(C) 2005-2009, Cadence Design Systems, Inc
-// User: saul Pid: 27081
+// User: saul Pid: 22965
 // Design library name: TOP
 // Design cell name: top_tb
-// Design view name: config
+// Design view name: config_gate
 // Solver: Spectre
 

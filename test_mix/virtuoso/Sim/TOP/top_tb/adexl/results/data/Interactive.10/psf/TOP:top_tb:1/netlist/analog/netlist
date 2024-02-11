@@ -872,5 +872,5 @@ R3 (net7 net4) resistor r=0.1
 R2 (VDDHV net3) resistor r=0.1
 R1 (VDDA net2) resistor r=0.1
 R0 (VDDD net1) resistor r=0.1
-V10 (net18 0) vsource type=pulse val0=0 val1=3.3 period=100n delay=10n \
+V10 (in_l 0) vsource type=pulse val0=0 val1=3.3 period=100n delay=10n \
         rise=1n fall=1n width=50n

@@ -1,0 +1,17 @@
+// Library - IO_CELLS_JIC3V, Cell - jio_tp4_pc, View - cmos_sch
+// LAST TIME SAVED: Nov 16 02:00:07 2021
+// NETLIST TIME: Feb  9 05:35:51 2024
+`timescale 1ns / 1ps 
+
+`worklib IO_CELLS_JIC3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="IO_CELLS_JIC3V", dfII_cell="jio_tp4_pc", dfII_view="cmos_sch", worklib_name="IO_CELLS_JIC3V", view_name="cmos_sch", last_save_time="Nov 16 02:00:07 2021" *)
+
+module jio_tp4_pc (NG1, NG2, PG1, PG2, GNDO, NG, NW, PG, PW, VDDO);
+
+output  NG1, NG2, PG1, PG2;
+
+input  GNDO, NG, NW, PG, PW, VDDO;
+

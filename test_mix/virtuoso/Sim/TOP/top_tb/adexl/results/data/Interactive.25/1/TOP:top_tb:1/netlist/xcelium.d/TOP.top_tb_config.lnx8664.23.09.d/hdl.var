@@ -1,0 +1,14 @@
+define XMSIMRC	( /pkg/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
+define AMSRC	( /pkg/cadence/installs/XCELIUM2309/tools/xcelium/files/amsrc, ~/.amsrc )
+include ./hdlrun.var
+include ./xllibs/hdl.var
+define SNAPSHOT TOP.top_tb:config
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ($LIB_MAP,  => TOP )
+DEFINE LIB_MAP ($LIB_MAP,  => INV_HV )
+DEFINE LIB_MAP ($LIB_MAP,  => INV_LP )
+DEFINE LIB_MAP ($LIB_MAP,  => IORING )
+DEFINE LIB_MAP ($LIB_MAP,  => HV_CELLS )
+DEFINE LIB_MAP ($LIB_MAP, + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT TOP.top_tb:config

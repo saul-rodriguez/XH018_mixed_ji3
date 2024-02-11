@@ -1,1 +1,1 @@
-infoDpl = `(nil simulator "ams" libName "TOP" cellName "top_tb" viewName "config" cdslib "cds.lib" extractedViewPresent nil thirdPartyExtViews nil)
+infoDpl = `(nil simulator "ams" libName "TOP" cellName "top_tb" viewName "config_functional" cdslib "cds.lib" extractedViewPresent nil thirdPartyExtViews nil)

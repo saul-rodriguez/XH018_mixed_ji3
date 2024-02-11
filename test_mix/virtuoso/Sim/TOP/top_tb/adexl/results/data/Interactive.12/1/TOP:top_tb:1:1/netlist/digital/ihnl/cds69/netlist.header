@@ -1,0 +1,27 @@
+// Library - D_CELLS_JI3V, Cell - ON211JI3VX1, View - cmos_sch
+// LAST TIME SAVED: Mar 20 08:58:30 2023
+// NETLIST TIME: Feb  9 05:27:30 2024
+`timescale 1ns / 1ps 
+
+`worklib D_CELLS_JI3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="D_CELLS_JI3V", dfII_cell="ON211JI3VX1", dfII_view="cmos_sch", worklib_name="D_CELLS_JI3V", view_name="cmos_sch", last_save_time="Mar 20 08:58:30 2023" *)
+
+module ON211JI3VX1 (Q, A, B, C, D);
+
+output  Q;
+
+input  A, B, C, D;
+
+wire (*
+integer inh_conn_prop_name = "power_vdd3i";
+integer inh_conn_def_value = "cds_globals.\\vdd3i! ";*)
+\vdd3i! ;
+
+wire (*
+integer inh_conn_prop_name = "ground_gnd3i";
+integer inh_conn_def_value = "cds_globals.\\gnd3i! ";*)
+\gnd3i! ;
+

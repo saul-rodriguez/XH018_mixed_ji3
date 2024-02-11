@@ -1,0 +1,133 @@
+// Library - IO_CELLS_JIC3V, Cell - APR00DPC, View - cmos_sch
+// LAST TIME SAVED: Nov 16 10:55:26 2021
+// NETLIST TIME: Feb  9 05:28:52 2024
+`timescale 1ns / 1ps 
+
+`worklib IO_CELLS_JIC3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="IO_CELLS_JIC3V", dfII_cell="APR00DPC", dfII_view="cmos_sch", worklib_name="IO_CELLS_JIC3V", view_name="cmos_sch", last_save_time="Nov 16 10:55:26 2021" *)
+
+module APR00DPC (PAD, GNDI, GNDOI, GNDRI, PSUB, VDD3I, VDDOI, VDDRI);
+
+inout  PAD;
+
+input  GNDI, GNDOI, GNDRI, PSUB, VDD3I, VDDOI, VDDRI;
+
+
+jio_ne3i_pc IN_1 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_2 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_3 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_4 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_5 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_6 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_7 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_8 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_9 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_10 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_11 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_12 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_13 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_14 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_15 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_16 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_17 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_18 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_19 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_20 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_21 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_22 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_23 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_ne3i_pc IN_24 ( .D(PAD), .B(GNDOI), .G(ng), .S(GNDOI));
+
+jio_andio_pc I157 ( .PSUB(PSUB), .PWI(GNDOI), .DNW(VDDOI));
+
+jio_pe3i_pc IP_1 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_2 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_3 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_4 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_5 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_6 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_7 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_8 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_9 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_10 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_11 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_12 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_13 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_14 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_15 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_16 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_17 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_18 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_19 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_20 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_21 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_22 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_23 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_24 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_25 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_26 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_27 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_28 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_29 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_30 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_31 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+jio_pe3i_pc IP_32 ( .S(VDDOI), .G(pg), .B(VDDOI), .D(PAD));
+
+endmodule

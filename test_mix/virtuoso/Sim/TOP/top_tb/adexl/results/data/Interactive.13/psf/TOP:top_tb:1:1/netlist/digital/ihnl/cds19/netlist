@@ -1,0 +1,19 @@
+// Library - IO_CELLS_JIC3V, Cell - jio_tsctrl_pc, View - cmos_sch
+// LAST TIME SAVED: Nov 16 02:00:00 2021
+// NETLIST TIME: Feb  9 05:28:52 2024
+`timescale 1ns / 1ps 
+
+`worklib IO_CELLS_JIC3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="IO_CELLS_JIC3V", dfII_cell="jio_tsctrl_pc", dfII_view="cmos_sch", worklib_name="IO_CELLS_JIC3V", view_name="cmos_sch", last_save_time="Nov 16 02:00:00 2021" *)
+
+module jio_tsctrl_pc (NG, PG, A, EN, GND, GNDO, VDD, VDDO);
+
+output  NG, PG;
+
+input  A, EN, GND, GNDO, VDD, VDDO;
+
+
+endmodule

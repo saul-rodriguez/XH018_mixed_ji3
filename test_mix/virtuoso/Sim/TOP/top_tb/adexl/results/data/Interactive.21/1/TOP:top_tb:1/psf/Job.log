@@ -1,0 +1,33 @@
+\o ERROR (ADEXL-5031): While simulating run Interactive.21, point 1, test TOP:top_tb:1, received error:
+\o Simulation Error:
+\o  ------------------------------
+\o  Simulator failed to complete the simulation.
+\o  The simulator process returned a non-zero exit code, indicating failure.
+\o The simulator could have crashed or intentionally returned to indicate an error.
+\o Check the simulator log file for more information.  Common causes:
+\o 1. Simulator may have crashed during exit even after reporting success in log file.
+\o 2. Abrupt automatic simulator termination (e.g., SIGKILL) because the simulator process has
+\o    exceeded resource limits, which can be specified in the distribution system or
+\o    by the kernel itself (e.g., the Linux OOMKiller).
+\o 3. Manual termination of the simulator process.
+\o ./runSimulation can be manually run in this directory to check the issue.
+\o 
+\o  For details open log: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.21/1/TOP:top_tb:1/psf/xrun.log for the point: (10 1)
+\o  ------------------------------
+\o 
+\o For more details, consult the job log file:
+\o /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job27.log
+\a hiSetCurrentWindow(window(5))
+\r t
+\a _axlDataViewSelect(axlDataViewForm0->axlDataViewWidget0 1 "add" "'(0 0 )" 0)
+\r t
+\a _axlDataViewSelect(axlDataViewForm0->axlDataViewWidget0 1 "add" "'(0 0 )" 1)
+\r t
+\a _axlDataViewItemClicked(axlDataViewForm0->axlDataViewWidget0 "'(0 0 )" 0)
+\r t
+\a _axlDataViewItemDoubleClicked(axlDataViewForm0->axlDataViewWidget0 "'(0 0 )" 0)
+\r t
+\a _axlDataViewItemClicked(axlDataViewForm0->axlDataViewWidget0 "'(0 0 )" 0)
+\r t
+\a hiResizeWindow(swindow(15) list(578:294 1270:769))
+\r t

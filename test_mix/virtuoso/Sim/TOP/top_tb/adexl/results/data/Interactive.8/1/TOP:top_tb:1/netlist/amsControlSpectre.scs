@@ -9,11 +9,9 @@ global 0
 simulatorOptions options temp=27 tnom=27 scale=1.0 scalem=1.0 reltol=1e-3 \
 vabstol=1e-6 iabstol=1e-12 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
 digits=5 pivrel=1e-3 checklimitdest=psf 
-dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
-dcOpInfo info what=oppoint where=rawfile
 
-tran tran stop=1u errpreset=liberal write="spectre.ic" \
-writefinal="spectre.fc" annotate=status maxiters=5 
+tran tran stop=1u write="spectre.ic" writefinal="spectre.fc" \
+annotate=status maxiters=5 
 
 finalTimeOP info what=oppoint where=rawfile
 
@@ -22,6 +20,3 @@ element info what=inst where=rawfile
 outputParameter info what=output where=rawfile 
 
 wave_out options rawfmt=sst2
-
-save top_tb.I0.I2:VDDHV top_tb.I0.I0.I24:PAD top_tb.I0.I0.I33:PAD \
-top_tb.I0.I0.I29:VDD 

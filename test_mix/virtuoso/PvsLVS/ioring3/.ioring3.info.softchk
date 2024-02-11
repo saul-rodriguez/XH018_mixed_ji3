@@ -1,0 +1,7 @@
+cell: "ioring3"
+selected net: "PSUB"
+rejected nets: "10" 
+contact layer:  "ptap"
+lower layer: "bulk"
+upper layer:  "pdiff"
+command:  "sconnect pdiff bulk -by ptap"

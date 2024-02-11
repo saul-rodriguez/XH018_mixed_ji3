@@ -1,23 +1,23 @@
 Parameters:
 	-runDir
-	/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/inv_hv
+	/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3
 	-ossdir
-	/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/inv_hv/
+	/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/
 	-cellmap
-	/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/inv_hv/lay_cellMap.txt
+	/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/lay_cellMap.txt
 	-ppid
-	22412
+	30384
 	-form
 	-viewer
 	virtuoso
 	-schview
 	schematic
 	-tag
-	GCJKFACHJGKCCJKHE
+	HAIRHAFDNFQCGDNNM
 
 
 Checking out SoftShare license Phys_Ver_Sys_Results_Mgr 23.1 Qty: 1 ... failed.
 Checking out SoftShare license Pegasus_RV 23.1 Qty: 1 ... succeeded (1s).
-starting pvsProbeServer: port= 52374
-Starting probe server on port: 52374
+starting pvsProbeServer: port= 47109
+Starting probe server on port: 47109
 Checking in SoftShare license Pegasus_RV ... succeeded (1s).

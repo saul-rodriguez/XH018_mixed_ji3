@@ -1,0 +1,17 @@
+
+/pkg/cadence/installs/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : ioring_16363.db
+ECDB dir        : ./
+Top Cell        : ioring
+CDL netlist     : svdb/ioring.net
+Layer map file  : svdb/ioring.ecdbmap
+Text map file   : svdb/ioring.ports
+Dependency map  : ioring.lmap.perc
+Lvs file        : svdb/ioring.lvsfile
+Float net file  : .ioring.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : ioring_16363

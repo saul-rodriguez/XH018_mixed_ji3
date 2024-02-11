@@ -1,0 +1,12 @@
+cellMap,*BUJI3VX1,*BUJI3VX1,*D_CELLS_JI3V,*cmos_sch
+netMap,*BUJI3VX1,*gnd3i!,*gnd3i!
+netMap,*BUJI3VX1,*vdd3i!,*vdd3i!
+netMap,*BUJI3VX1,*gnd!,*0
+instMap,*BUJI3VX1,*invr_1,*invr_1
+instMaster,*BUJI3VX1,*invr_1,*GATES_JI3V_invrji3v_schematic,*invrji3v
+instMap,*BUJI3VX1,*invr_2,*invr_2
+instMaster,*BUJI3VX1,*invr_2,*GATES_JI3V_invrji3v_schematic,*invrji3v
+netMap,*BUJI3VX1,*inh_ground_gnd3i_gnd3i!,*inh_ground_gnd3i
+netMap,*BUJI3VX1,*inh_power_vdd3i_vdd3i!,*inh_power_vdd3i
+portMap,*BUJI3VX1,*A,*A
+portMap,*BUJI3VX1,*Q,*Q

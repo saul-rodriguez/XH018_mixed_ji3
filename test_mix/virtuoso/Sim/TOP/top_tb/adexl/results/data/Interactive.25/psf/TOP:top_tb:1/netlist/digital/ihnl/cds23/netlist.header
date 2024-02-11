@@ -1,0 +1,18 @@
+// Library - COUNTER_JI3, Cell - counter, View - schematic
+// LAST TIME SAVED: Feb  3 16:10:44 2024
+// NETLIST TIME: Feb  9 03:37:47 2024
+`timescale 1ns / 1ps 
+
+`worklib COUNTER_JI3
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="COUNTER_JI3", dfII_cell="counter", dfII_view="schematic", worklib_name="COUNTER_JI3", view_name="schematic", last_save_time="Feb  3 16:10:44 2024" *)
+
+module counter (out, enable, clk, reset);
+
+
+input  clk, enable, reset;
+
+output [7:0]  out;
+

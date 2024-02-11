@@ -1,8 +1,8 @@
 HEADER
 "PSFversion" "1.00"
 "Run Generator" "drlRun rev. 1.0"
-"Run Time Stamp" "Feb  7 11:24:38 2024"
-"date" "Feb  7 11:24:38 2024"
+"Run Time Stamp" "Feb  9 05:13:02 2024"
+"date" "Feb  9 05:13:02 2024"
 "simulator" "ams"
 "netlistDir" "../netlist"
 "axlParamFlag" "true"

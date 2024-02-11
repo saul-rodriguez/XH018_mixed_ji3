@@ -1,0 +1,6 @@
+    D10 (PSUB DNWR) ddnwmv area=3.7825e-10 perimeter=80.26u dbv=0 m=1 \
+        par1=(1) xf_subext=0
+    D9 (PWIR DNWR) dipdnwmv area=1.3272e-10 perimeter=54.64u dbv=0 m=1 \
+        par1=(1)
+ends jio_ipdio_pc
+// End of subcircuit definition.

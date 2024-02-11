@@ -1,0 +1,11 @@
+cellMap,*HVDD4DJ5PKFs,*HVDD4DJ5PKFs,*HV_CELLS,*schematic
+netMap,*HVDD4DJ5PKFs,*gnd3i!,*gnd3i!
+netMap,*HVDD4DJ5PKFs,*vdd3i!,*vdd3i!
+netMap,*HVDD4DJ5PKFs,*gnd!,*0
+instMap,*HVDD4DJ5PKFs,*I9,*I9
+instMaster,*HVDD4DJ5PKFs,*I9,*HV_CELLS_ioh_dhpw_2x100_stack3_schematic,*ioh_dhpw_2x100_stack3
+instMap,*HVDD4DJ5PKFs,*I11,*I11
+instMaster,*HVDD4DJ5PKFs,*I11,*HV_CELLS_ioh_d5pk_schematic,*ioh_d5pk
+portMap,*HVDD4DJ5PKFs,*GNDO,*GNDO
+portMap,*HVDD4DJ5PKFs,*IGND,*IGND
+portMap,*HVDD4DJ5PKFs,*PAD,*PAD

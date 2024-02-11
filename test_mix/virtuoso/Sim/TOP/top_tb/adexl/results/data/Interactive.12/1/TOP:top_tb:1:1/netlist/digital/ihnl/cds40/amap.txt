@@ -1,0 +1,14 @@
+instMap,*ioh_c5pk,*I5,*I5
+instMaster,*ioh_c5pk,*I5,*HV_CELLS_ioh_pe3isabhv_1050gcr_schematic
+instMap,*ioh_c5pk,*I3,*I3
+instMaster,*ioh_c5pk,*I3,*HV_CELLS_ioh_pmbsabhv_750_schematic
+instMap,*ioh_c5pk,*I4,*I4
+instMaster,*ioh_c5pk,*I4,*HV_CELLS_ioh_pmbsabhv_750_schematic
+instMap,*ioh_c5pk,*I2,*I2
+instMaster,*ioh_c5pk,*I2,*HV_CELLS_ioh_pmbsabhv_750_schematic
+instMap,*ioh_c5pk,*I1,*I1
+instMaster,*ioh_c5pk,*I1,*HV_CELLS_ioh_pmbsabhv_750_schematic
+netMap,*ioh_c5pk,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*ioh_c5pk,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*ioh_c5pk,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_c5pk,*ioh_c5pk,*HV_CELLS,*schematic

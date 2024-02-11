@@ -1,0 +1,11 @@
+
+invrji3v #( .GT_PDL(350.00n), .GT_PUW(1.41u), .GT_PDW(890.00n), .GT_PUL(300.00n) 
+     ) invr_3 ( .out(Q), .in(SQIB));
+
+invrji3v #( .GT_PDL(350.00n), .GT_PUW(720.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
+     ) invr_2 ( .out(CI), .in(CIB));
+
+invrji3v #( .GT_PDL(350.00n), .GT_PUW(720.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
+     ) invr_1 ( .out(CIB), .in(C));
+
+endmodule

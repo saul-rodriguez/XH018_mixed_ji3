@@ -1,0 +1,16 @@
+cellMap,*BT4PC,*BT4PC,*IO_CELLS_JIC3V,*cmos_sch
+netMap,*BT4PC,*gnd!,*0
+instMap,*BT4PC,*I0,*I0
+instMaster,*BT4PC,*I0,*IO_CELLS_JIC3V_jio_ts4_pc_cmos_sch,*jio_ts4_pc
+instMap,*BT4PC,*I5,*I5
+instMaster,*BT4PC,*I5,*IO_CELLS_JIC3V_jio_ipdio_pc_cmos_sch,*jio_ipdio_pc
+portMap,*BT4PC,*A,*A
+portMap,*BT4PC,*EN,*EN
+portMap,*BT4PC,*GNDI,*GNDI
+portMap,*BT4PC,*GNDOI,*GNDOI
+portMap,*BT4PC,*GNDRI,*GNDRI
+portMap,*BT4PC,*PAD,*PAD
+portMap,*BT4PC,*PSUB,*PSUB
+portMap,*BT4PC,*VDD3I,*VDD3I
+portMap,*BT4PC,*VDDOI,*VDDOI
+portMap,*BT4PC,*VDDRI,*VDDRI

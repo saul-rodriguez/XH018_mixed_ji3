@@ -1,0 +1,6 @@
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: APR04DPC
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt APR04DPC

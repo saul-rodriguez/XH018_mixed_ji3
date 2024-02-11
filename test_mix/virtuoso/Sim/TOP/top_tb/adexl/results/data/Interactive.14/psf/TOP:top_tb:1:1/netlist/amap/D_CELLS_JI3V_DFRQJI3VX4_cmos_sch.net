@@ -1,0 +1,7 @@
+HEADER
+"PSFversion" "1.00"
+"gnd!v" "cds_globals.\\gnd! v"
+"gnd3i!v" "cds_globals.\\gnd3i! v"
+"inh_ground_gnd3i_gnd3i!v" "\\gnd3i! v"
+"inh_power_vdd3i_vdd3i!v" "\\vdd3i! v"
+"vdd3i!v" "cds_globals.\\vdd3i! v"

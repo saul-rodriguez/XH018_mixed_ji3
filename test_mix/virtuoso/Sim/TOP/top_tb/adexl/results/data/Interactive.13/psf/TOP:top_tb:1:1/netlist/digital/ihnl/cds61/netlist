@@ -1,0 +1,35 @@
+// Library - D_CELLS_JI3V, Cell - EN2JI3VX0, View - cmos_sch
+// LAST TIME SAVED: Mar 20 08:58:47 2023
+// NETLIST TIME: Feb  9 05:28:52 2024
+`timescale 1ns / 1ps 
+
+`worklib D_CELLS_JI3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="D_CELLS_JI3V", dfII_cell="EN2JI3VX0", dfII_view="cmos_sch", worklib_name="D_CELLS_JI3V", view_name="cmos_sch", last_save_time="Mar 20 08:58:47 2023" *)
+
+module EN2JI3VX0 (Q, A, B);
+
+output  Q;
+
+input  A, B;
+
+wire (*
+integer inh_conn_prop_name = "power_vdd3i";
+integer inh_conn_def_value = "cds_globals.\\vdd3i! ";*)
+\vdd3i! ;
+
+wire (*
+integer inh_conn_prop_name = "ground_gnd3i";
+integer inh_conn_def_value = "cds_globals.\\gnd3i! ";*)
+\gnd3i! ;
+
+
+nand2ji3v #( .GT_PDL(350.00n), .GT_PUW(900.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
+     ) nand2_1 ( .a(A), .b(B), .out(net4));
+
+o2na2ji3v #( .GT_PUW(1.3u), .GT_PDL(350.00n), .GT_PUL(300.00n), .GT_PDW(420.00n) 
+     ) o2na2_1 ( .out(Q), .c(net4), .b(A), .a(B));
+
+endmodule

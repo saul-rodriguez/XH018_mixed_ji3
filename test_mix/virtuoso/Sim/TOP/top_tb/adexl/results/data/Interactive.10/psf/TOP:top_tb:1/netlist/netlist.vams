@@ -2,10 +2,10 @@
 // IC subversion:  IC6.1.8-64b.500.34 
 // Xcelium version: 23.09-s002
 // Copyright(C) 2005-2009, Cadence Design Systems, Inc
-// User: saul Pid: 27081
+// User: saul Pid: 22965
 // Design library name: TOP
 // Design cell name: top_tb
-// Design view name: config
+// Design view name: config_functional
 // Solver: Spectre
 
 `include "disciplines.vams"
@@ -28,7 +28,7 @@
 // HDL file - IO_CELLS_JIC3V, APR04DPC, verilogams.
 // Library - HV_CELLS, Cell - HVDD4DJ5PKFs, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:38 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -44,7 +44,7 @@ ioh_d5pk I11 (.Sub( GNDO ), .K_h( PAD ), .A_l( IGND ));
 endmodule
 // Library - HV_CELLS, Cell - ioh_d2pk, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:50 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -61,7 +61,7 @@ ioh_pe3isabhv_2800gcr I5 (.Sub( Sub ), .SB( net12 ), .D( A_l ));
 endmodule
 // Library - HV_CELLS, Cell - HVDD4D2PK, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:34 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -79,7 +79,7 @@ ddnw #(.area(3.89668e-10), .perimeter(0.0002085), .dbv(0), .m(1), .par1(1), .xf_
 endmodule
 // Library - HV_CELLS, Cell - ioh_iscrd2_4x100, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:54 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -105,7 +105,7 @@ ddnw #(.area(6.92224e-09), .perimeter(0.00035917), .dbv(0), .m(1), .par1(1), .xf
 endmodule
 // Library - HV_CELLS, Cell - ioh_pe3isab_15_04, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:55 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -125,7 +125,7 @@ rdp3 #(.l(4.3e-07), .w(1.5e-05), .m(1), .par1(1))
 endmodule
 // Library - HV_CELLS, Cell - ioh_pe3isabhv_1050gcr, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:55 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -321,7 +321,7 @@ rnp1 #(.l(2.55e-05), .w(4.2e-07), .m(1), .par1(1))
 endmodule
 // Library - HV_CELLS, Cell - ioh_pmbsab_15_10, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:56 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -338,7 +338,7 @@ pmb #(.w(1.512e-05), .l(1e-06), .as(7.2576e-12), .ad(7.2576e-12), .ps(3.12e-05),
 endmodule
 // Library - HV_CELLS, Cell - ioh_pmbsabhv_750, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:57 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -706,7 +706,7 @@ ddnw #(.area(3.03711e-09), .perimeter(0.000284), .dbv(0), .m(1), .par1(1), .xf_s
 endmodule
 // Library - HV_CELLS, Cell - ioh_c5pk, View - schematic
 // LAST TIME SAVED: Feb 25 05:56:12 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -729,7 +729,7 @@ ioh_pmbsabhv_750 I1 (.Sub( Sub ), .D( net20 ), .GSB( K_h ));
 endmodule
 // Library - HV_CELLS, Cell - HVD4SJD1R5PKFs, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:34 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -750,7 +750,7 @@ rpp1s #(.l(1.6e-05), .w(0.0001), .m(1), .par1(1))
 endmodule
 // Library - HV_CELLS, Cell - ioh_dhpw_2x100, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:51 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -770,7 +770,7 @@ dhpw #(.area(3.87893e-10), .perimeter(0.000207812), .dbv(0), .m(2), .par1(2))
 endmodule
 // Library - HV_CELLS, Cell - ioh_dhpw_2x100_stack3, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:51 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -789,7 +789,7 @@ ioh_dhpw_2x100 I1 (.A( net20 ), .K( net14 ), .Sub( Sub ));
 endmodule
 // Library - HV_CELLS, Cell - ioh_pmbsab_40_10, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:57 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -806,7 +806,7 @@ pmb #(.w(4.012e-05), .l(1e-06), .as(1.92576e-11), .ad(1.92576e-11), .ps(8.12e-05
 endmodule
 // Library - HV_CELLS, Cell - ioh_pmbsabhv_2000, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:57 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -1174,7 +1174,7 @@ ddnw #(.area(5.93593e-09), .perimeter(0.0003342), .dbv(0), .m(1), .par1(1), .xf_
 endmodule
 // Library - HV_CELLS, Cell - ioh_pe3isab_40_04, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:55 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -1194,7 +1194,7 @@ rdp3 #(.l(4.3e-07), .w(4e-05), .m(1), .par1(1))
 endmodule
 // Library - HV_CELLS, Cell - ioh_pe3isabhv_2800gcr, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:56 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -1390,7 +1390,7 @@ rnp1 #(.l(2.55e-05), .w(4.2e-07), .m(1), .par1(1))
 endmodule
 // Library - HV_CELLS, Cell - ioh_d5pk, View - schematic
 // LAST TIME SAVED: Feb 25 05:55:49 2015
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib HV_CELLS
 `view schematic
@@ -1413,7 +1413,7 @@ ioh_pe3isabhv_2800gcr I5 (.Sub( Sub ), .SB( net18 ), .D( A_l ));
 endmodule
 // Library - IORING, Cell - ioring, View - schematic
 // LAST TIME SAVED: Feb  7 11:24:12 2024
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib IORING
 `view schematic
@@ -1464,7 +1464,7 @@ HVD4SJD1R5PKFs I33 (.IGND( GNDHV ), .GNDO( GNDOHV ), .PAD( OUTHV ));
 endmodule
 // Library - INV_LP, Cell - inv, View - schematic
 // LAST TIME SAVED: Feb  4 10:15:33 2024
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib INV_LP
 `view schematic
@@ -1484,7 +1484,7 @@ pe3 #(.w(2e-06), .l(3e-07), .as(9.6e-13), .ad(9.6e-13), .ps(4.96e-06), .pd(4.96e
 endmodule
 // Library - INV_HV, Cell - inv_hv, View - schematic
 // LAST TIME SAVED: Feb  5 02:38:24 2024
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib INV_HV
 `view schematic
@@ -1504,7 +1504,7 @@ rpp1k1_3 #(.l(0.000103425), .w(1e-05), .m(1), .par1(1))
 endmodule
 // Library - TOP, Cell - top, View - schematic
 // LAST TIME SAVED: Feb  7 07:37:55 2024
-// NETLIST TIME: Feb  7 11:24:20 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib TOP
 `view schematic
@@ -1525,8 +1525,8 @@ counter (*  integer cds_net_set [0:1] = { "power_vdd3i","ground_gnd3i" }; intege
 
 endmodule
 // Library - TOP, Cell - top_tb, View - schematic
-// LAST TIME SAVED: Feb  7 08:41:09 2024
-// NETLIST TIME: Feb  7 11:24:20 2024
+// LAST TIME SAVED: Feb  9 05:01:40 2024
+// NETLIST TIME: Feb  9 05:12:44 2024
 
 `worklib TOP
 `view schematic
@@ -1537,7 +1537,7 @@ endmodule
 module top_tb ( );
 wire clk;
 wire enable;
-wire net18;
+wire in_l;
 wire reset;
 wire out0;
 wire out1;
@@ -1554,7 +1554,7 @@ wire net15;
 wire net17;
 wire net9;
 wire net13;
-top I0 (.GNDA( net13 ), .GNDD( net9 ), .GNDHV( net17 ), .GNDOHV( net15 ), .GNDOR( net8 ), .GNDORA( net12 ), .PSUB( net7 ), .VDDA( VDDA ), .VDDD( VDDD ), .VDDHV( VDDHV ), .VDDOR( VDDD ), .VDDORA( VDDA ), .OUTL( out_l ), .OUTHV( out_h ), .OUT2( out2 ), .OUT1( out1 ), .OUT0( out0 ), .RESET( reset ), .INL( net18 ), .ENABLE( enable ), .CLK( clk ));
+top I0 (.GNDA( net13 ), .GNDD( net9 ), .GNDHV( net17 ), .GNDOHV( net15 ), .GNDOR( net8 ), .GNDORA( net12 ), .PSUB( net7 ), .VDDA( VDDA ), .VDDD( VDDD ), .VDDHV( VDDHV ), .VDDOR( VDDD ), .VDDORA( VDDA ), .OUTL( out_l ), .OUTHV( out_h ), .OUT2( out2 ), .OUT1( out1 ), .OUT0( out0 ), .RESET( reset ), .INL( in_l ), .ENABLE( enable ), .CLK( clk ));
 counter_stimulus I1 (.clk( clk ), .enable( enable ), .reset( reset ));
 vsource #(.dc(0), .type("dc")) V9 (net16, cds_globals.\gnd! );
 vsource #(.dc(0), .type("dc")) V8 (net14, cds_globals.\gnd! );
@@ -1576,7 +1576,7 @@ resistor #(.r(0.1)) R3 (net7, net4);
 resistor #(.r(0.1)) R2 (VDDHV, net3);
 resistor #(.r(0.1)) R1 (VDDA, net2);
 resistor #(.r(0.1)) R0 (VDDD, net1);
-vsource #(.type("pulse"), .val0(0), .val1(3.3), .period(1e-07), .delay(1e-08), .rise(1e-09), .fall(1e-09), .width(5e-08)) V10 (net18, cds_globals.\gnd! );
+vsource #(.type("pulse"), .val0(0), .val1(3.3), .period(1e-07), .delay(1e-08), .rise(1e-09), .fall(1e-09), .width(5e-08)) V10 (in_l, cds_globals.\gnd! );
 
 endmodule
 `noworklib

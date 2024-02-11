@@ -18,7 +18,7 @@ DLCLAP
 +EMGRLOG
 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6/1/TOP:top_tb:1/netlist/.mapi/mapirun.log
 -XLSTIME
-1707313226
+1707471069
 -XLKEEP
 -XLMODE
 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6/1/TOP:top_tb:1/netlist/.mapi/xcelium.d/run.lnx8664.23.09.d
@@ -32,4 +32,4 @@ xrun
 -XLVERSION
 "TOOL:	xrun(64)	23.09-s002"
 -XLNAME
-./.mapi/xcelium.d/run.lnx8664.23.09.d/phoenix_53a32d5d-9f46-4808-b2f1-4bec009b3337
+./.mapi/xcelium.d/run.lnx8664.23.09.d/phoenix_7f9f3970-d619-4aec-8348-79a2eb03fda5

@@ -1,12 +1,12 @@
-"hnlProcessDifferentPmAndInstTerminalRepresentation" nil
-"_dspfFullDesignInfo" nil
-"dspfBindingToCell" "bindToAll"
 "issueInfoMsgOnCellRename" nil
+"dspfBindingToCell" "bindToAll"
+"_dspfFullDesignInfo" nil
+"hnlProcessDifferentPmAndInstTerminalRepresentation" nil
 "printComments" (nil nil)
-"setTopLevelAsSubckt" nil
-"preserveSubcktTermNamesByOrder" nil
-"supportDspfMasterOption" nil
 "dspfBindingSummary" nil
-"srcFileMappingInfo" nil
+"supportDspfMasterOption" nil
+"preserveSubcktTermNamesByOrder" nil
+"setTopLevelAsSubckt" nil
 "_dspfFileToEnvOptionsMapInfo" nil
+"srcFileMappingInfo" nil
 "changedSubcktNames" nil

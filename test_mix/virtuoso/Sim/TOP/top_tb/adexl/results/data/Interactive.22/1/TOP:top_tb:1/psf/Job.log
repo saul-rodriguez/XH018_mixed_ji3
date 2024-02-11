@@ -1,0 +1,19 @@
+\o ERROR (ADEXL-5031): While simulating run Interactive.22, point 1, test TOP:top_tb:1, received error:
+\o Simulation Error:
+\o  ------------------------------
+\o  Simulator failed to complete the simulation.
+\o  The simulator process returned a non-zero exit code, indicating failure.
+\o The simulator could have crashed or intentionally returned to indicate an error.
+\o Check the simulator log file for more information.  Common causes:
+\o 1. Simulator may have crashed during exit even after reporting success in log file.
+\o 2. Abrupt automatic simulator termination (e.g., SIGKILL) because the simulator process has
+\o    exceeded resource limits, which can be specified in the distribution system or
+\o    by the kernel itself (e.g., the Linux OOMKiller).
+\o 3. Manual termination of the simulator process.
+\o ./runSimulation can be manually run in this directory to check the issue.
+\o 
+\o  For details open log: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.22/1/TOP:top_tb:1/psf/xrun.log for the point: (11 1)
+\o  ------------------------------
+\o 
+\o For more details, consult the job log file:
+\o /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job30.log

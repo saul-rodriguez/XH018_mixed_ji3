@@ -1,0 +1,5 @@
+
+nor2ji3v #( .GT_PDL(350.00n), .GT_PUW(850.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
+     ) nor2_1 ( .a(A), .b(B), .out(Q));
+
+endmodule

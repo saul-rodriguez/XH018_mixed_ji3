@@ -1,0 +1,4 @@
+netMap,*jio_ne3i_pc,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*jio_ne3i_pc,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*jio_ne3i_pc,*gnd!,*cds_globals.\gnd! 
+cellMap,*jio_ne3i_pc,*jio_ne3i_pc,*IO_CELLS_JIC3V,*cmos_sch

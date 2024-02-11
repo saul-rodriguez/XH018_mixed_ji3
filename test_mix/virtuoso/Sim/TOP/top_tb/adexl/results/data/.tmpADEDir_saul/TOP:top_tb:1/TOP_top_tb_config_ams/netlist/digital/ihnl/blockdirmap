@@ -1,4 +1,4 @@
-CADENCE IHNL041225
+CADENCE IHNL041226
 
 IO_CELLS_JIC3V ICPC verilogams nil verilogams TOP top_tb config 0 cds0
 IO_CELLS_JIC3V BT4PC verilogams nil verilogams TOP top_tb config 0 cds1
@@ -23,5 +23,6 @@ HV_CELLS HVD4SJD1R5PKFs schematic nil schematic TOP top_tb config 0 cds19
 IORING ioring schematic nil schematic TOP top_tb config 0 cds20
 INV_LP inv schematic nil schematic TOP top_tb config 0 cds21
 INV_HV inv_hv schematic nil schematic TOP top_tb config 0 cds22
-TOP top schematic nil schematic TOP top_tb config 0 cds23
-TOP top_tb schematic nil schematic TOP top_tb config 1 cds24
+COUNTER_JI3 counter schematic nil schematic TOP top_tb config 0 cds23
+TOP top schematic nil schematic TOP top_tb config 0 cds24
+TOP top_tb schematic nil schematic TOP top_tb config 1 cds25

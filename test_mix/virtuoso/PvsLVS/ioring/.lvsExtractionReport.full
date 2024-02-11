@@ -1,0 +1,211 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : ioring_lvs.sum
+ERC Summary File         : ioring.sum
+LVS Comparison Report    : ioring_lvs.sum.cls
+LVS Softchk Report       : ioring.softchk
+Layout Name              : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring/ioring.gds ("ioring")
+User Name                : saul
+Creation Time            : Fri Feb  9 20:04:24 2024
+Current directory        : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring
+PVS Version              : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_SOFTCHK nwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK dnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hvnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK ndftrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hnw -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK catdiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK anodiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pwitrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pdf -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK bulk -TYPE CONTACT   Total Result        0 (       0)
+
+Warnings and errors of connectivity for cell "PWRCUTDCPC"
+---------------------------------------------------------
+
+[WARN] Same label "VDDOI1" for multiple nets, it is assigned to net 5 :
+    [1] Net 5 on layer 50333(METTP_TEXT) at (0.500, 167.715)
+    [2] Net 5 on layer 50333(METTP_TEXT) at (0.500, 201.215)
+    [3] Net 5 on layer 50313(MET4_TEXT) at (0.500, 167.715)
+    [4] Net 5 on layer 50313(MET4_TEXT) at (0.500, 201.215)
+    [5] Net 5 on layer 50283(MET3_TEXT) at (0.500, 167.815)
+    [6] Net 5 on layer 50283(MET3_TEXT) at (0.500, 201.615)
+    [7] Net 5 on layer 50353(METL_TEXT) at (0.500, 167.590)
+    [8] Net 5 on layer 50353(METL_TEXT) at (0.500, 201.840)
+    [9] Net 11 on layer 50353(METL_TEXT) at (0.500, 238.465)
+    [10] Net 11 on layer 50333(METTP_TEXT) at (0.500, 238.610)
+    [11] Net 11 on layer 50313(MET4_TEXT) at (0.500, 238.610)
+    [12] Net 11 on layer 50283(MET3_TEXT) at (0.500, 238.610)
+
+[WARN] Same label "VDDOI2" for multiple nets, it is assigned to net 9 :
+    [1] Net 9 on layer 50333(METTP_TEXT) at (69.500, 167.715)
+    [2] Net 9 on layer 50333(METTP_TEXT) at (69.500, 201.215)
+    [3] Net 9 on layer 50313(MET4_TEXT) at (69.500, 167.715)
+    [4] Net 9 on layer 50313(MET4_TEXT) at (69.500, 201.215)
+    [5] Net 9 on layer 50283(MET3_TEXT) at (69.500, 167.815)
+    [6] Net 9 on layer 50283(MET3_TEXT) at (69.500, 201.615)
+    [7] Net 9 on layer 50353(METL_TEXT) at (69.500, 167.590)
+    [8] Net 9 on layer 50353(METL_TEXT) at (69.500, 201.840)
+    [9] Net 15 on layer 50353(METL_TEXT) at (69.500, 238.465)
+    [10] Net 15 on layer 50333(METTP_TEXT) at (69.500, 238.610)
+    [11] Net 15 on layer 50313(MET4_TEXT) at (69.500, 238.610)
+    [12] Net 15 on layer 50283(MET3_TEXT) at (69.500, 238.580)
+
+[WARN] Same label "GNDOI1" for multiple nets, it is assigned to net 1 :
+    [1] Net 1 on layer 50353(METL_TEXT) at (0.500, 91.680)
+    [2] Net 1 on layer 50353(METL_TEXT) at (0.500, 125.930)
+    [3] Net 1 on layer 50333(METTP_TEXT) at (0.500, 91.405)
+    [4] Net 1 on layer 50333(METTP_TEXT) at (0.500, 125.805)
+    [5] Net 1 on layer 50313(MET4_TEXT) at (0.500, 91.405)
+    [6] Net 1 on layer 50313(MET4_TEXT) at (0.500, 125.805)
+    [7] Net 1 on layer 50283(MET3_TEXT) at (0.500, 91.905)
+    [8] Net 1 on layer 50283(MET3_TEXT) at (0.500, 125.705)
+    [9] Net 13 on layer 50353(METL_TEXT) at (0.500, 227.465)
+    [10] Net 13 on layer 50333(METTP_TEXT) at (0.500, 226.505)
+    [11] Net 13 on layer 50313(MET4_TEXT) at (0.500, 226.505)
+    [12] Net 13 on layer 50283(MET3_TEXT) at (0.500, 227.680)
+
+[WARN] Same label "GNDOI2" for multiple nets, it is assigned to net 3 :
+    [1] Net 3 on layer 50353(METL_TEXT) at (69.500, 91.680)
+    [2] Net 3 on layer 50353(METL_TEXT) at (69.500, 125.930)
+    [3] Net 3 on layer 50333(METTP_TEXT) at (69.500, 91.405)
+    [4] Net 3 on layer 50333(METTP_TEXT) at (69.500, 125.805)
+    [5] Net 3 on layer 50313(MET4_TEXT) at (69.500, 91.405)
+    [6] Net 3 on layer 50313(MET4_TEXT) at (69.500, 125.805)
+    [7] Net 3 on layer 50283(MET3_TEXT) at (69.500, 91.905)
+    [8] Net 3 on layer 50283(MET3_TEXT) at (69.500, 125.705)
+    [9] Net 17 on layer 50353(METL_TEXT) at (69.500, 227.465)
+    [10] Net 17 on layer 50333(METTP_TEXT) at (69.500, 226.505)
+    [11] Net 17 on layer 50313(MET4_TEXT) at (69.500, 226.505)
+    [12] Net 17 on layer 50283(MET3_TEXT) at (69.500, 227.680)
+
+
+Clean cell list (added by extraction report parser )
+ for cell "ACORNERFP4"
+ for cell "APR00DPC"
+ for cell "APR04DPC"
+ for cell "BT4PC"
+ for cell "CORNERESDPC"
+ for cell "FILLER200F"
+ for cell "FILLER70PC"
+ for cell "GNDORPADPC"
+ for cell "GNDPADPC"
+ for cell "HVD4SJD1R5PKFs"
+ for cell "HVDD4D2PK"
+ for cell "HVDD4DJ5PKFs"
+ for cell "HVSSFs"
+ for cell "ICPC"
+ for cell "PSUBPADPC"
+ for cell "VDDORPADPC"
+ for cell "VDDPADPC"
+ for cell "VIA1_C_CDNS_707527059738"
+ for cell "VIA2_C_CDNS_707527059736"
+ for cell "VIA3_C_CDNS_707527059735"
+ for cell "VIATPL_C_CDNS_707527059733"
+ for cell "VIATP_C_CDNS_707527059734"
+ for cell "ioh_acor_fill"
+ for cell "ioh_acor_half"
+ for cell "ioh_base19_fs"
+ for cell "ioh_base36_fs"
+ for cell "ioh_base39_fs"
+ for cell "ioh_base40_fs"
+ for cell "ioh_base61_fs"
+ for cell "ioh_basej_pad53_inline"
+ for cell "ioh_ddnw_2x100"
+ for cell "ioh_dhpw_100"
+ for cell "ioh_dhpw_2x100"
+ for cell "ioh_iscrd2_4x10"
+ for cell "ioh_iscrd2_4x100"
+ for cell "ioh_iscrd2_e4x10"
+ for cell "ioh_pad53_62"
+ for cell "ioh_pad53_tap_inline"
+ for cell "ioh_pe3isabhv_2800gcr"
+ for cell "ioh_pe3sab_2x15_04"
+ for cell "ioh_pe3sab_2x40_04"
+ for cell "ioh_pmbsabhv_2000"
+ for cell "ioh_pmbsabhv_2x15_10"
+ for cell "ioh_pmbsabhv_2x40_10"
+ for cell "ioh_pmbsabhv_750"
+ for cell "ioh_rnp1_20k"
+ for cell "ioh_via234tp"
+ for cell "ioh_via34tp"
+ for cell "ioh_viatpl"
+ for cell "ioring"
+ for cell "jio_base_corne_half_pc"
+ for cell "jio_base_m2_pc"
+ for cell "jio_base_metal_pc"
+ for cell "jio_base_ngo_pc"
+ for cell "jio_base_ntr_pc"
+ for cell "jio_base_ntrc_pc"
+ for cell "jio_base_ptr_pc"
+ for cell "jio_base_ptrps_pc"
+ for cell "jio_base_ptrpsfl_pc"
+ for cell "jio_baseanpfl_pc"
+ for cell "jio_baseavdpfl_pc"
+ for cell "jio_basenplink_pc"
+ for cell "jio_baseps_m2_pc"
+ for cell "jio_basepsc_pc"
+ for cell "jio_basepspfl_pc"
+ for cell "jio_baseti_pc"
+ for cell "jio_conm_pc"
+ for cell "jio_crn_metal_half_pc"
+ for cell "jio_crndifpolye_pc"
+ for cell "jio_crndifpolye_r_pc"
+ for cell "jio_crnedifpoly_half_pc"
+ for cell "jio_crnentr_pc"
+ for cell "jio_crnev2link_pc"
+ for cell "jio_fildifpoly5u_pc"
+ for cell "jio_fildifpoly_ap_pc"
+ for cell "jio_fildifpoly_pc"
+ for cell "jio_fildifpolye_ap_pc"
+ for cell "jio_fildifpolye_pc"
+ for cell "jio_fildifpolypanc_pc"
+ for cell "jio_filldife1u_pc"
+ for cell "jio_fillmetal1u_pc"
+ for cell "jio_fillmetalvia2u_pc"
+ for cell "jio_fillpoly_pc"
+ for cell "jio_fillpolym1_pc"
+ for cell "jio_filpoly_ap_pc"
+ for cell "jio_gpcon_pc"
+ for cell "jio_gpcons_pc"
+ for cell "jio_ne3isb_pc"
+ for cell "jio_ne3isbc_pc"
+ for cell "jio_ne3isbg_pc"
+ for cell "jio_padp_pc"
+ for cell "jio_pcutcon_pc"
+ for cell "jio_pcutdio_pc"
+ for cell "jio_pcutficon_pc"
+ for cell "jio_pe3isb_pc"
+ for cell "jio_pwrc_difpoly5u_pc"
+ for cell "jio_resg_pc"
+ for cell "jio_via12_pc"
+ for cell "jio_via12bm_pc"
+ for cell "jio_via134tp_pc"
+ for cell "jio_via1dm_pc"
+ for cell "jio_via1dms_pc"
+ for cell "jio_via1m_pc"
+ for cell "jio_via234_pc"
+ for cell "jio_via234tp_pc"
+ for cell "jio_via34_1r_pc"
+ for cell "jio_via34tp1r_pc"
+ for cell "jio_via34tp_pc"
+ for cell "jio_viabt_pc"
+ for cell "jio_viabtp_pc"
+ for cell "jio_viatpl_pc"
+ for cell "std_pad_viabtp"
+ for cell "std_pad_viabtp_edge"
+ for cell "std_pad_viatpl_edge"

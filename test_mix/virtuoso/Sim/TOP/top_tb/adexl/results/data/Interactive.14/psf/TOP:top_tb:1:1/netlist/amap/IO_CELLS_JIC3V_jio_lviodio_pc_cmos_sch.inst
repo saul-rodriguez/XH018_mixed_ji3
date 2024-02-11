@@ -1,0 +1,12 @@
+HEADER
+"PSFversion" "1.00"
+"DNLWv" "(FUNCTION or(mappedRoot(\".1@index\") mappedRoot(\".DNLW\")))v"
+"DNLWv" ".DNLWv"
+"DNLWv" ".\\1 v"
+"LPWIv" "(FUNCTION or(mappedRoot(\".2@index\") mappedRoot(\".LPWI\")))v"
+"LPWIv" ".LPWIv"
+"LPWIv" ".\\2 v"
+"PSUBv" "(FUNCTION or(mappedRoot(\".3@index\") mappedRoot(\".PSUB\")))v"
+"PSUBv" ".PSUBv"
+"PSUBv" ".\\3 v"
+"D2n" "PRIMLIB_dipdnwmv_spectre"

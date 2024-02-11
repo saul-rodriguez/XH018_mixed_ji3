@@ -1,0 +1,8 @@
+instMap,*AN22JI3VX1,*a22no2_1,*a22no2_1
+instMaster,*AN22JI3VX1,*a22no2_1,*GATES_JI3V_a22no2ji3v_schematic
+netMap,*AN22JI3VX1,*inh_power_vdd3i_vdd3i!,*\vdd3i! 
+netMap,*AN22JI3VX1,*inh_ground_gnd3i_gnd3i!,*\gnd3i! 
+netMap,*AN22JI3VX1,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*AN22JI3VX1,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*AN22JI3VX1,*gnd!,*cds_globals.\gnd! 
+cellMap,*AN22JI3VX1,*AN22JI3VX1,*D_CELLS_JI3V,*cmos_sch

@@ -18,7 +18,8 @@ module counter_stimulus ( clk, enable, reset );
 	//$dumpvars(0,counter1);
 	
 	//counter_tb
-	//$sdf_annotate("/home/saul/projects/XH035_mixed/innovus_is/output/counter_slow.sdf",I0,,"sdf.log","MAXIMUM");
+//	$sdf_annotate("/home/saul/projects/XH018_mixed_ji3/test_mix/innovus/output/design_slow.sdf",I0,,"sdf.log","MAXIMUM");
+
 	clk = 0;
 	reset = 0;
 	enable = 0;

@@ -1,0 +1,4 @@
+netMap,*ioh_iscrd2_4x100,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*ioh_iscrd2_4x100,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*ioh_iscrd2_4x100,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_iscrd2_4x100,*ioh_iscrd2_4x100,*HV_CELLS,*schematic

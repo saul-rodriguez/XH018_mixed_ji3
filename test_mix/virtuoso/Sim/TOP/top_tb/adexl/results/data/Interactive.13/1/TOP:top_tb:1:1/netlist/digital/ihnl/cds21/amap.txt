@@ -1,0 +1,8 @@
+instMap,*BT4PC,*I0,*I0
+instMaster,*BT4PC,*I0,*IO_CELLS_JIC3V_jio_ts4_pc_cmos_sch
+instMap,*BT4PC,*I5,*I5
+instMaster,*BT4PC,*I5,*IO_CELLS_JIC3V_jio_ipdio_pc_cmos_sch
+netMap,*BT4PC,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*BT4PC,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*BT4PC,*gnd!,*cds_globals.\gnd! 
+cellMap,*BT4PC,*BT4PC,*IO_CELLS_JIC3V,*cmos_sch

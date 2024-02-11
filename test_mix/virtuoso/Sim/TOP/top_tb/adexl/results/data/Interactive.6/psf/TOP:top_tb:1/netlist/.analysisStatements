@@ -1,8 +1,6 @@
-dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
-dcOpInfo info what=oppoint where=rawfile
 
-tran tran stop=1u errpreset=liberal write="spectre.ic" \
-writefinal="spectre.fc" annotate=status maxiters=5 
+tran tran stop=1u write="spectre.ic" writefinal="spectre.fc" \
+annotate=status maxiters=5 
 
 finalTimeOP info what=oppoint where=rawfile
 

@@ -1,0 +1,6 @@
+
+// Library name: D_CELLS_JI3V
+// Cell name: DECAP5JI3V
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt DECAP5JI3V

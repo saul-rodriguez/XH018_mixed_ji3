@@ -1,4 +1,4 @@
-1707323065 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/spiceModels.scs
+1707473569 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/spiceModels.scs
 1687187618 /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/config.scs
 1687187624 /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/param.scs
 1687187618 /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/bip.scs
@@ -349,5 +349,5 @@
 1687187623 /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rmtpl.scs
 1687187624 /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/pfuse.scs
 1687187624 /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/s_res.scs
-1707323065 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/amsControlSpectre.scs
-1707323064 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/.amsbind.scs
+1707473568 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/amsControlSpectre.scs
+1707473568 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10/1/TOP:top_tb:1/netlist/.amsbind.scs

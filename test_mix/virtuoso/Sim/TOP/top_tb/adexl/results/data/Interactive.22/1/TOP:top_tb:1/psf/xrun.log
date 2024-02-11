@@ -1,0 +1,354 @@
+xrun(64): 23.09-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s002: Started on Feb 09, 2024 at 03:16:23 EST
+xrun
+	-f xrunArgs
+		-UNBUFFERED
+		-cdslib ./cds.lib
+		-errormax 50
+		-status
+		-nowarn DLNOHV
+		-nowarn DLCLAP
+		-v93
+		-incdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+		-ade
+		-timescale 1ns/1ns
+		-vtimescale 1ns/1ns
+		-discipline logic
+		-delay_mode None
+		-novitalaccl
+		-access r
+		-noparamerr
+		-amspartinfo ../psf/partition.info
+		-rnm_partinfo
+		-modelincdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+		./spiceModels.scs
+		./amsControlSpectre.scs
+		-input ./probe.tcl
+		-run
+		-exit
+		-xmsimargs "+amsrawdir ../psf"
+		-spectre_args "-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.22/sharedData/CDS/ahdl/input.ahdlSimDB"
+		-spectre_args +logstatus
+		-simcompatible_ams spectre
+		-name TOP.top_tb:config
+		-amsconnrules ConnRules_3V_full_fast
+		+define+CDS_SELECT_CRS
+		+define+CONNRULES_3V_FULL_FAST
+		-allowredefinition
+		-amsbind
+		-top TOP.top_tb:schematic
+		-top cds_globals
+		./netlist.vams
+		-f ./textInputs
+			-amscompilefile "file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams"
+			-makelib TOP
+			-makelib INV_HV
+			-makelib INV_LP
+			-makelib IORING
+			-makelib HV_CELLS
+			-endlib
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v
+		./cds_globals.vams
+		-l ../psf/xrun.log
+		-spectre_args ++aps
+file: ./netlist.vams
+	module COUNTER_JI3.counter:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dhpw_2x100:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dhpw_2x100_stack3:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_iscrd2_4x100:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isab_15_04:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isabhv_1050gcr:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsab_15_10:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsabhv_750:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_c5pk:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.HVD4SJD1R5PKFs:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsab_40_10:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsabhv_2000:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isab_40_04:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isabhv_2800gcr:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_d5pk:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.HVDD4DJ5PKFs:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_d2pk:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.HVDD4D2PK:schematic
+		errors: 0, warnings: 0
+	module IORING.ioring:schematic
+		errors: 0, warnings: 0
+	module INV_LP.inv:schematic
+		errors: 0, warnings: 0
+	module INV_HV.inv_hv:schematic
+		errors: 0, warnings: 0
+	module TOP.top:schematic
+		errors: 0, warnings: 0
+	module TOP.top_tb:schematic
+		errors: 0, warnings: 0
+file: ./cds_globals.vams
+	module worklib.cds_globals:vams
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams
+	module COUNTER_JI3.counter_stimulus:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v
+	module v1_0_0.APR00DPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.APR04DPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.BT4PC:v
+		errors: 0, warnings: 0
+	module v1_0_0.GNDORPADPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.GNDPADPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.ICPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.PWRCUTDCPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.PSUBPADPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.VDDORPADPC:v
+		errors: 0, warnings: 0
+	module v1_0_0.VDDPADPC:v
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v
+	module v2_1_0.AN21JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.AN22JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX16:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX2:v
+		errors: 0, warnings: 0
+	module v2_1_0.DFRQJI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.DFRQJI3VX2:v
+		errors: 0, warnings: 0
+	module v2_1_0.DFRQJI3VX4:v
+		errors: 0, warnings: 0
+	module v2_1_0.DLY1JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.DLY2JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.EN2JI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.INJI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.NA2JI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.NO2JI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.ON211JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP10JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP15JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP25JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP5JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP7JI3V:v
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
+	primitive VLG_PRIMITIVES.u1_fd5:v
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/ given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+xmvlog: Memory Usage - Current physical: 22.7M, Current virtual: 60.6M
+xmvlog: CPU Usage - 0.0s system + 0.1s user = 0.1s total (0.1s, 48.5% cpu)
+AMSD Universal Connect Module UCM is enabled.
+		Caching library 'COUNTER_JI3' ....... Done
+		Caching library 'HV_CELLS' ....... Done
+		Caching library 'INV_HV' ....... Done
+		Caching library 'INV_LP' ....... Done
+		Caching library 'IORING' ....... Done
+		Caching library 'TOP' ....... Done
+		Caching library 'VLG_PRIMITIVES' ....... Done
+		Caching library 'v1_0_0' ....... Done
+		Caching library 'v2_1_0' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: Verilog AMS module.
+		Caching library 'IORING' ....... Done
+		Caching library 'HV_CELLS' ....... Done
+		Caching library 'worklib' ....... Done
+		Caching library 'v2_1_0' ....... Done
+		Caching library 'v1_0_0' ....... Done
+VDDORPADPC I18 (.PSUB( PSUB ), .GNDRI( GNDORA ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDORI( VDDORA ), .GNDOI( GNDORA ));
+                    |
+xmelab: *E,CUVPOM (./netlist.vams,1582|20): Port name 'PSUB' of instance 'top_tb.I0.I0.I18' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I18 (.PSUB( PSUB ), .GNDRI( GNDORA ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDORI( VDDORA ), .GNDOI( GNDORA ));
+                                    |
+xmelab: *E,CUVPOM (./netlist.vams,1582|36): Port name 'GNDRI' of instance 'top_tb.I0.I0.I18' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I18 (.PSUB( PSUB ), .GNDRI( GNDORA ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDORI( VDDORA ), .GNDOI( GNDORA ));
+                                                      |
+xmelab: *E,CUVPOM (./netlist.vams,1582|54): Port name 'VDD3I' of instance 'top_tb.I0.I0.I18' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I18 (.PSUB( PSUB ), .GNDRI( GNDORA ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDORI( VDDORA ), .GNDOI( GNDORA ));
+                                                                     |
+xmelab: *E,CUVPOM (./netlist.vams,1582|69): Port name 'GNDI' of instance 'top_tb.I0.I0.I18' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I18 (.PSUB( PSUB ), .GNDRI( GNDORA ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDORI( VDDORA ), .GNDOI( GNDORA ));
+                                                                                      |
+xmelab: *E,CUVPOM (./netlist.vams,1582|86): Port name 'VDDORI' of instance 'top_tb.I0.I0.I18' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I18 (.PSUB( PSUB ), .GNDRI( GNDORA ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDORI( VDDORA ), .GNDOI( GNDORA ));
+                                                                                                        |
+xmelab: *E,CUVPOM (./netlist.vams,1582|104): Port name 'GNDOI' of instance 'top_tb.I0.I0.I18' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I1 (.PSUB( PSUB ), .GNDRI( GNDOR ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDORI( VDDOR ), .GNDOI( GNDOR ));
+                   |
+xmelab: *E,CUVPOM (./netlist.vams,1583|19): Port name 'PSUB' of instance 'top_tb.I0.I0.I1' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I1 (.PSUB( PSUB ), .GNDRI( GNDOR ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDORI( VDDOR ), .GNDOI( GNDOR ));
+                                   |
+xmelab: *E,CUVPOM (./netlist.vams,1583|35): Port name 'GNDRI' of instance 'top_tb.I0.I0.I1' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I1 (.PSUB( PSUB ), .GNDRI( GNDOR ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDORI( VDDOR ), .GNDOI( GNDOR ));
+                                                    |
+xmelab: *E,CUVPOM (./netlist.vams,1583|52): Port name 'VDD3I' of instance 'top_tb.I0.I0.I1' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I1 (.PSUB( PSUB ), .GNDRI( GNDOR ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDORI( VDDOR ), .GNDOI( GNDOR ));
+                                                                   |
+xmelab: *E,CUVPOM (./netlist.vams,1583|67): Port name 'GNDI' of instance 'top_tb.I0.I0.I1' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I1 (.PSUB( PSUB ), .GNDRI( GNDOR ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDORI( VDDOR ), .GNDOI( GNDOR ));
+                                                                                    |
+xmelab: *E,CUVPOM (./netlist.vams,1583|84): Port name 'VDDORI' of instance 'top_tb.I0.I0.I1' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDORPADPC I1 (.PSUB( PSUB ), .GNDRI( GNDOR ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDORI( VDDOR ), .GNDOI( GNDOR ));
+                                                                                                     |
+xmelab: *E,CUVPOM (./netlist.vams,1583|101): Port name 'GNDOI' of instance 'top_tb.I0.I0.I1' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I21 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDOR ), .GNDOI( GNDORA ), .VDDOI( VDDOR ), .GNDRI( GNDORA ));
+                  |
+xmelab: *E,CUVPOM (./netlist.vams,1584|18): Port name 'PSUB' of instance 'top_tb.I0.I0.I21' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I21 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDOR ), .GNDOI( GNDORA ), .VDDOI( VDDOR ), .GNDRI( GNDORA ));
+                                  |
+xmelab: *E,CUVPOM (./netlist.vams,1584|34): Port name 'VDD3I' of instance 'top_tb.I0.I0.I21' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I21 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDOR ), .GNDOI( GNDORA ), .VDDOI( VDDOR ), .GNDRI( GNDORA ));
+                                                 |
+xmelab: *E,CUVPOM (./netlist.vams,1584|49): Port name 'GNDI' of instance 'top_tb.I0.I0.I21' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I21 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDOR ), .GNDOI( GNDORA ), .VDDOI( VDDOR ), .GNDRI( GNDORA ));
+                                                                 |
+xmelab: *E,CUVPOM (./netlist.vams,1584|65): Port name 'VDDRI' of instance 'top_tb.I0.I0.I21' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I21 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDOR ), .GNDOI( GNDORA ), .VDDOI( VDDOR ), .GNDRI( GNDORA ));
+                                                                                  |
+xmelab: *E,CUVPOM (./netlist.vams,1584|82): Port name 'GNDOI' of instance 'top_tb.I0.I0.I21' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I21 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDOR ), .GNDOI( GNDORA ), .VDDOI( VDDOR ), .GNDRI( GNDORA ));
+                                                                                                    |
+xmelab: *E,CUVPOM (./netlist.vams,1584|100): Port name 'VDDOI' of instance 'top_tb.I0.I0.I21' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I21 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDOR ), .GNDOI( GNDORA ), .VDDOI( VDDOR ), .GNDRI( GNDORA ));
+                                                                                                                     |
+xmelab: *E,CUVPOM (./netlist.vams,1584|117): Port name 'GNDRI' of instance 'top_tb.I0.I0.I21' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I3 (.PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .VDDOI( VDDOR ), .GNDRI( GNDOR ));
+                 |
+xmelab: *E,CUVPOM (./netlist.vams,1585|17): Port name 'PSUB' of instance 'top_tb.I0.I0.I3' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I3 (.PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .VDDOI( VDDOR ), .GNDRI( GNDOR ));
+                                 |
+xmelab: *E,CUVPOM (./netlist.vams,1585|33): Port name 'VDD3I' of instance 'top_tb.I0.I0.I3' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I3 (.PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .VDDOI( VDDOR ), .GNDRI( GNDOR ));
+                                                |
+xmelab: *E,CUVPOM (./netlist.vams,1585|48): Port name 'GNDI' of instance 'top_tb.I0.I0.I3' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I3 (.PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .VDDOI( VDDOR ), .GNDRI( GNDOR ));
+                                                                |
+xmelab: *E,CUVPOM (./netlist.vams,1585|64): Port name 'VDDRI' of instance 'top_tb.I0.I0.I3' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I3 (.PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .VDDOI( VDDOR ), .GNDRI( GNDOR ));
+                                                                                 |
+xmelab: *E,CUVPOM (./netlist.vams,1585|81): Port name 'GNDOI' of instance 'top_tb.I0.I0.I3' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I3 (.PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .VDDOI( VDDOR ), .GNDRI( GNDOR ));
+                                                                                                  |
+xmelab: *E,CUVPOM (./netlist.vams,1585|98): Port name 'VDDOI' of instance 'top_tb.I0.I0.I3' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+VDDPADPC I3 (.PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .VDDOI( VDDOR ), .GNDRI( GNDOR ));
+                                                                                                                   |
+xmelab: *E,CUVPOM (./netlist.vams,1585|115): Port name 'GNDRI' of instance 'top_tb.I0.I0.I3' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I20 (.VDDOI( VDDORA ), .GNDI( GNDA ), .VDD3I( VDDA ), .GNDORI( GNDORA ), .VDDRI( VDDORA ), .PSUB( PSUB ));
+                     |
+xmelab: *E,CUVPOM (./netlist.vams,1586|21): Port name 'VDDOI' of instance 'top_tb.I0.I0.I20' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I20 (.VDDOI( VDDORA ), .GNDI( GNDA ), .VDD3I( VDDA ), .GNDORI( GNDORA ), .VDDRI( VDDORA ), .PSUB( PSUB ));
+                                      |
+xmelab: *E,CUVPOM (./netlist.vams,1586|38): Port name 'GNDI' of instance 'top_tb.I0.I0.I20' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I20 (.VDDOI( VDDORA ), .GNDI( GNDA ), .VDD3I( VDDA ), .GNDORI( GNDORA ), .VDDRI( VDDORA ), .PSUB( PSUB ));
+                                                      |
+xmelab: *E,CUVPOM (./netlist.vams,1586|54): Port name 'VDD3I' of instance 'top_tb.I0.I0.I20' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I20 (.VDDOI( VDDORA ), .GNDI( GNDA ), .VDD3I( VDDA ), .GNDORI( GNDORA ), .VDDRI( VDDORA ), .PSUB( PSUB ));
+                                                                       |
+xmelab: *E,CUVPOM (./netlist.vams,1586|71): Port name 'GNDORI' of instance 'top_tb.I0.I0.I20' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I20 (.VDDOI( VDDORA ), .GNDI( GNDA ), .VDD3I( VDDA ), .GNDORI( GNDORA ), .VDDRI( VDDORA ), .PSUB( PSUB ));
+                                                                                         |
+xmelab: *E,CUVPOM (./netlist.vams,1586|89): Port name 'VDDRI' of instance 'top_tb.I0.I0.I20' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I20 (.VDDOI( VDDORA ), .GNDI( GNDA ), .VDD3I( VDDA ), .GNDORI( GNDORA ), .VDDRI( VDDORA ), .PSUB( PSUB ));
+                                                                                                          |
+xmelab: *E,CUVPOM (./netlist.vams,1586|106): Port name 'PSUB' of instance 'top_tb.I0.I0.I20' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I0 (.VDDOI( VDDOR ), .GNDI( GNDD ), .VDD3I( VDDD ), .GNDORI( GNDOR ), .VDDRI( VDDOR ), .PSUB( PSUB ));
+                    |
+xmelab: *E,CUVPOM (./netlist.vams,1587|20): Port name 'VDDOI' of instance 'top_tb.I0.I0.I0' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I0 (.VDDOI( VDDOR ), .GNDI( GNDD ), .VDD3I( VDDD ), .GNDORI( GNDOR ), .VDDRI( VDDOR ), .PSUB( PSUB ));
+                                    |
+xmelab: *E,CUVPOM (./netlist.vams,1587|36): Port name 'GNDI' of instance 'top_tb.I0.I0.I0' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I0 (.VDDOI( VDDOR ), .GNDI( GNDD ), .VDD3I( VDDD ), .GNDORI( GNDOR ), .VDDRI( VDDOR ), .PSUB( PSUB ));
+                                                    |
+xmelab: *E,CUVPOM (./netlist.vams,1587|52): Port name 'VDD3I' of instance 'top_tb.I0.I0.I0' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I0 (.VDDOI( VDDOR ), .GNDI( GNDD ), .VDD3I( VDDD ), .GNDORI( GNDOR ), .VDDRI( VDDOR ), .PSUB( PSUB ));
+                                                                     |
+xmelab: *E,CUVPOM (./netlist.vams,1587|69): Port name 'GNDORI' of instance 'top_tb.I0.I0.I0' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I0 (.VDDOI( VDDOR ), .GNDI( GNDD ), .VDD3I( VDDD ), .GNDORI( GNDOR ), .VDDRI( VDDOR ), .PSUB( PSUB ));
+                                                                                      |
+xmelab: *E,CUVPOM (./netlist.vams,1587|86): Port name 'VDDRI' of instance 'top_tb.I0.I0.I0' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDORPADPC I0 (.VDDOI( VDDOR ), .GNDI( GNDD ), .VDD3I( VDDD ), .GNDORI( GNDOR ), .VDDRI( VDDOR ), .PSUB( PSUB ));
+                                                                                                      |
+xmelab: *E,CUVPOM (./netlist.vams,1587|102): Port name 'PSUB' of instance 'top_tb.I0.I0.I0' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+PSUBPADPC I4 (.VDDOI( VDDOR ), .PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .GNDRI( GNDOR ));
+                   |
+xmelab: *E,CUVPOM (./netlist.vams,1588|19): Port name 'VDDOI' of instance 'top_tb.I0.I0.I4' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+PSUBPADPC I4 (.VDDOI( VDDOR ), .PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .GNDRI( GNDOR ));
+                                   |
+xmelab: *E,CUVPOM (./netlist.vams,1588|35): Port name 'PSUB' of instance 'top_tb.I0.I0.I4' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+PSUBPADPC I4 (.VDDOI( VDDOR ), .PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .GNDRI( GNDOR ));
+                                                   |
+xmelab: *E,CUVPOM (./netlist.vams,1588|51): Port name 'VDD3I' of instance 'top_tb.I0.I0.I4' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+PSUBPADPC I4 (.VDDOI( VDDOR ), .PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .GNDRI( GNDOR ));
+                                                                  |
+xmelab: *E,CUVPOM (./netlist.vams,1588|66): Port name 'GNDI' of instance 'top_tb.I0.I0.I4' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+PSUBPADPC I4 (.VDDOI( VDDOR ), .PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .GNDRI( GNDOR ));
+                                                                                  |
+xmelab: *E,CUVPOM (./netlist.vams,1588|82): Port name 'VDDRI' of instance 'top_tb.I0.I0.I4' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+PSUBPADPC I4 (.VDDOI( VDDOR ), .PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .GNDRI( GNDOR ));
+                                                                                                   |
+xmelab: *E,CUVPOM (./netlist.vams,1588|99): Port name 'GNDOI' of instance 'top_tb.I0.I0.I4' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+PSUBPADPC I4 (.VDDOI( VDDOR ), .PSUB( PSUB ), .VDD3I( VDDD ), .GNDI( GNDD ), .VDDRI( VDDOR ), .GNDOI( GNDOR ), .GNDRI( GNDOR ));
+                                                                                                                    |
+xmelab: *E,CUVPOM (./netlist.vams,1588|116): Port name 'GNDRI' of instance 'top_tb.I0.I0.I4' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDPADPC I19 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDORA ), .GNDOI( GNDORA ), .VDDOI( VDDORA ), .GNDRI( GNDORA ));
+                  |
+xmelab: *E,CUVPOM (./netlist.vams,1589|18): Port name 'PSUB' of instance 'top_tb.I0.I0.I19' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDPADPC I19 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDORA ), .GNDOI( GNDORA ), .VDDOI( VDDORA ), .GNDRI( GNDORA ));
+                                  |
+xmelab: *E,CUVPOM (./netlist.vams,1589|34): Port name 'VDD3I' of instance 'top_tb.I0.I0.I19' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDPADPC I19 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDORA ), .GNDOI( GNDORA ), .VDDOI( VDDORA ), .GNDRI( GNDORA ));
+                                                 |
+xmelab: *E,CUVPOM (./netlist.vams,1589|49): Port name 'GNDI' of instance 'top_tb.I0.I0.I19' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDPADPC I19 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDORA ), .GNDOI( GNDORA ), .VDDOI( VDDORA ), .GNDRI( GNDORA ));
+                                                                 |
+xmelab: *E,CUVPOM (./netlist.vams,1589|65): Port name 'VDDRI' of instance 'top_tb.I0.I0.I19' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+GNDPADPC I19 (.PSUB( PSUB ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDRI( VDDORA ), .GNDOI( GNDORA ), .VDDOI( VDDORA ), .GNDRI( GNDORA ));
+                                                                                   |
+xmelab: *E,CUVPOM (./netlist.vams,1589|83): Port name 'GNDOI' of instance 'top_tb.I0.I0.I19' is invalid or has multiple connections and the instantiated module is defined in file '/home/saul/projects/XH018_mixed_ji3/test_mix/src/IO_CELLS_JIC3V.v'.
+xmelab: *F,MAXERR: maximum error count reached (50).
+xmelab: Memory Usage - Final: 37.4M, Peak: 37.4M, Peak virtual: 135.5M
+xmelab: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 100.0% cpu)
+xrun: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 2), exiting.
+TOOL:	xrun(64)	23.09-s002: Exiting on Feb 09, 2024 at 03:16:31 EST  (total: 00:00:08)

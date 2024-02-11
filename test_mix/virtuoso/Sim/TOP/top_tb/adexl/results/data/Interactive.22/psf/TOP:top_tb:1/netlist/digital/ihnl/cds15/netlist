@@ -1,0 +1,27 @@
+// Library - HV_CELLS, Cell - ioh_c5pk, View - schematic
+// LAST TIME SAVED: Feb 25 05:56:12 2015
+// NETLIST TIME: Feb  9 03:16:00 2024
+`timescale 1ns / 1ps 
+
+`worklib HV_CELLS
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="HV_CELLS", dfII_cell="ioh_c5pk", dfII_view="schematic", worklib_name="HV_CELLS", view_name="schematic", last_save_time="Feb 25 05:56:12 2015" *)
+
+module ioh_c5pk (A_l, K_h, Sub);
+
+inout  A_l, K_h, Sub;
+
+
+ioh_pe3isabhv_1050gcr I5 ( .Sub(Sub), .SB(net30), .D(A_l));
+
+ioh_pmbsabhv_750 I3 ( .Sub(Sub), .D(net23), .GSB(net26));
+
+ioh_pmbsabhv_750 I4 ( .Sub(Sub), .D(net30), .GSB(net23));
+
+ioh_pmbsabhv_750 I2 ( .Sub(Sub), .D(net26), .GSB(net20));
+
+ioh_pmbsabhv_750 I1 ( .Sub(Sub), .D(net20), .GSB(K_h));
+
+endmodule

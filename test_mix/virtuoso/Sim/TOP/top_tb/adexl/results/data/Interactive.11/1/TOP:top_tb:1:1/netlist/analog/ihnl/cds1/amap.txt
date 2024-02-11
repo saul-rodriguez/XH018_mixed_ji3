@@ -1,0 +1,9 @@
+cellMap,*jio_andio_pc,*jio_andio_pc,*IO_CELLS_JIC3V,*cmos_sch
+netMap,*jio_andio_pc,*gnd!,*0
+instMap,*jio_andio_pc,*D3,*D3
+instMaster,*jio_andio_pc,*D3,*PRIMLIB_ddnwmv_spectre,*ddnwmv
+instMap,*jio_andio_pc,*D1,*D1
+instMaster,*jio_andio_pc,*D1,*PRIMLIB_dipdnwmv_spectre,*dipdnwmv
+portMap,*jio_andio_pc,*DNW,*DNW
+portMap,*jio_andio_pc,*PSUB,*PSUB
+portMap,*jio_andio_pc,*PWI,*PWI

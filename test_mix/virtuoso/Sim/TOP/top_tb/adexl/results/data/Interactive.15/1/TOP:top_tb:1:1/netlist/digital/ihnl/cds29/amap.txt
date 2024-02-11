@@ -1,0 +1,4 @@
+netMap,*ioh_pe3isab_40_04,*gnd3i!,*cds_globals.\gnd3i! 
+netMap,*ioh_pe3isab_40_04,*vdd3i!,*cds_globals.\vdd3i! 
+netMap,*ioh_pe3isab_40_04,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_pe3isab_40_04,*ioh_pe3isab_40_04,*HV_CELLS,*schematic

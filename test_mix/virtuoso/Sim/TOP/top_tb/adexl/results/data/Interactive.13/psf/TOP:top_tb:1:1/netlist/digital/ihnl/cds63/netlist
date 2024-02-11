@@ -1,0 +1,34 @@
+// Library - GATES_JI3V, Cell - a22no2ji3v, View - schematic
+// LAST TIME SAVED: Jul 13 05:17:52 2022
+// NETLIST TIME: Feb  9 05:28:52 2024
+`timescale 1ns / 1ps 
+
+`worklib GATES_JI3V
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="GATES_JI3V", dfII_cell="a22no2ji3v", dfII_view="schematic", worklib_name="GATES_JI3V", view_name="schematic", last_save_time="Jul 13 05:17:52 2022" *)
+
+module a22no2ji3v (out, a, b, c, d);
+
+parameter GT_PDW=0;
+parameter GT_PDL=350.00n;
+parameter GT_PUW=0;
+parameter GT_PUL=300.00n;
+
+output  out;
+
+input  a, b, c, d;
+
+wire (*
+integer inh_conn_prop_name = "power_vdd3i";
+integer inh_conn_def_value = "cds_globals.\\vdd3i! ";*)
+\vdd3i! ;
+
+wire (*
+integer inh_conn_prop_name = "ground_gnd3i";
+integer inh_conn_def_value = "cds_globals.\\gnd3i! ";*)
+\gnd3i! ;
+
+
+endmodule

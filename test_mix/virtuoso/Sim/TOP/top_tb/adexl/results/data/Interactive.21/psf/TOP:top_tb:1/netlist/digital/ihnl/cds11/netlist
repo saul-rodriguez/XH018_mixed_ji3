@@ -1,0 +1,17 @@
+// Library - HV_CELLS, Cell - ioh_pe3isab_15_04, View - schematic
+// LAST TIME SAVED: Feb 25 05:55:55 2015
+// NETLIST TIME: Feb  9 03:15:04 2024
+`timescale 1ns / 1ps 
+
+`worklib HV_CELLS
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="HV_CELLS", dfII_cell="ioh_pe3isab_15_04", dfII_view="schematic", worklib_name="HV_CELLS", view_name="schematic", last_save_time="Feb 25 05:55:55 2015" *)
+
+module ioh_pe3isab_15_04 (B, D, G, S);
+
+inout  B, D, G, S;
+
+
+endmodule

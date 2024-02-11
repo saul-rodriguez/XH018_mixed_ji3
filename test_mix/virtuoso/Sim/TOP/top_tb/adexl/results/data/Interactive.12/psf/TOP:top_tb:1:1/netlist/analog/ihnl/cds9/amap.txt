@@ -1,0 +1,9 @@
+cellMap,*jio_lviodio_pc,*jio_lviodio_pc,*IO_CELLS_JIC3V,*cmos_sch
+netMap,*jio_lviodio_pc,*gnd3i!,*gnd3i!
+netMap,*jio_lviodio_pc,*vdd3i!,*vdd3i!
+netMap,*jio_lviodio_pc,*gnd!,*0
+instMap,*jio_lviodio_pc,*D2,*D2
+instMaster,*jio_lviodio_pc,*D2,*PRIMLIB_dipdnwmv_spectre,*dipdnwmv
+portMap,*jio_lviodio_pc,*DNLW,*DNLW
+portMap,*jio_lviodio_pc,*LPWI,*LPWI
+portMap,*jio_lviodio_pc,*PSUB,*PSUB

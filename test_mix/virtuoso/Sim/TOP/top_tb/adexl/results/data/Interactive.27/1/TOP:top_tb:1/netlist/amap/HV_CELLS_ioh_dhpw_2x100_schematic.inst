@@ -1,0 +1,13 @@
+HEADER
+"PSFversion" "1.00"
+"Av" "(FUNCTION or(mappedRoot(\".1@index\") mappedRoot(\".A\")))v"
+"Av" ".Av"
+"Av" ".\\1 v"
+"Subv" "(FUNCTION or(mappedRoot(\".3@index\") mappedRoot(\".Sub\")))v"
+"Subv" ".Subv"
+"Subv" ".\\3 v"
+"Kv" "(FUNCTION or(mappedRoot(\".2@index\") mappedRoot(\".K\")))v"
+"Kv" ".Kv"
+"Kv" ".\\2 v"
+"D0n" "PRIMLIB_ddnw_spectre"
+"D1n" "PRIMLIB_dhpw_spectre"

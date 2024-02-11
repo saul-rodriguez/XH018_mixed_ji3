@@ -1,0 +1,10 @@
+cellMap,*INJI3VX0,*INJI3VX0,*D_CELLS_JI3V,*cmos_sch
+netMap,*INJI3VX0,*gnd3i!,*gnd3i!
+netMap,*INJI3VX0,*vdd3i!,*vdd3i!
+netMap,*INJI3VX0,*gnd!,*0
+instMap,*INJI3VX0,*invr_1,*invr_1
+instMaster,*INJI3VX0,*invr_1,*GATES_JI3V_invrji3v_schematic,*invrji3v
+netMap,*INJI3VX0,*inh_ground_gnd3i_gnd3i!,*inh_ground_gnd3i
+netMap,*INJI3VX0,*inh_power_vdd3i_vdd3i!,*inh_power_vdd3i
+portMap,*INJI3VX0,*A,*A
+portMap,*INJI3VX0,*Q,*Q

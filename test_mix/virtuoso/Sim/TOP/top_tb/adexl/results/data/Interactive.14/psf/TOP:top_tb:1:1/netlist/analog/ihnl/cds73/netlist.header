@@ -1,0 +1,6 @@
+
+// Library name: COUNTER_JI3
+// Cell name: counter
+// View name: schematic
+// Inherited view list: schematic
+subckt counter

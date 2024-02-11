@@ -1,0 +1,34 @@
+CADENCE IHNL11140
+$model
+IO_CELLS_JIC3V/jio_resp_pc/cmos_sch jio_resp_pc
+IO_CELLS_JIC3V/GNDORPADPC/cmos_sch GNDORPADPC
+IO_CELLS_JIC3V/PSUBPADPC/cmos_sch PSUBPADPC
+IO_CELLS_JIC3V/jio_bufc_pc/cmos_sch jio_bufc_pc
+IO_CELLS_JIC3V/APR00DPC/cmos_sch APR00DPC
+IO_CELLS_JIC3V/BT4PC/cmos_sch BT4PC
+IO_CELLS_JIC3V/jio_ne3is_pc/cmos_sch jio_ne3is_pc
+IO_CELLS_JIC3V/VDDPADPC/cmos_sch VDDPADPC
+IO_CELLS_JIC3V/VDDORPADPC/cmos_sch VDDORPADPC
+IO_CELLS_JIC3V/jio_opdio_pc/cmos_sch jio_opdio_pc
+IO_CELLS_JIC3V/CORNERESDPC/cmos_sch CORNERESDPC
+IO_CELLS_JIC3V/jio_lviodio_pc/cmos_sch jio_lviodio_pc
+IO_CELLS_JIC3V/jio_andio_pc/cmos_sch jio_andio_pc
+IO_CELLS_JIC3V/jio_tp4_pc/cmos_sch jio_tp4_pc
+IO_CELLS_JIC3V/jio_ne3i_pc/cmos_sch jio_ne3i_pc
+IO_CELLS_JIC3V/jio_pe3i_pc/cmos_sch jio_pe3i_pc
+IO_CELLS_JIC3V/GNDPADPC/cmos_sch GNDPADPC
+IO_CELLS_JIC3V/jio_tsctrl_pc/cmos_sch jio_tsctrl_pc
+IO_CELLS_JIC3V/ICPC/cmos_sch ICPC
+IO_CELLS_JIC3V/jio_anrdio_pc/cmos_sch jio_anrdio_pc
+IO_CELLS_JIC3V/PWRCUTDCPC/cmos_sch PWRCUTDCPC
+IO_CELLS_JIC3V/jio_ipdio_pc/cmos_sch jio_ipdio_pc
+IORING/ioring3/schematic ioring3
+IO_CELLS_JIC3V/jio_esd1_pc/cmos_sch jio_esd1_pc
+IO_CELLS_JIC3V/APR04DPC/cmos_sch APR04DPC
+IO_CELLS_JIC3V/jio_ts4_pc/cmos_sch jio_ts4_pc
+IO_CELLS_JIC3V/jio_ndtr_pc/cmos_sch jio_ndtr_pc
+$endmodel
+$net
+$endnet
+$param
+$endparam

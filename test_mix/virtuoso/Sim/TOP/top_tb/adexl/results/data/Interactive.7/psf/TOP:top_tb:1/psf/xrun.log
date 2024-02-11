@@ -1,5 +1,5 @@
 xrun(64): 23.09-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s002: Started on Feb 07, 2024 at 08:46:16 EST
+TOOL:	xrun(64)	23.09-s002: Started on Feb 09, 2024 at 04:56:00 EST
 xrun
 	-f xrunArgs
 		-UNBUFFERED
@@ -30,7 +30,7 @@ xrun
 		-spectre_args "-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/sharedData/CDS/ahdl/input.ahdlSimDB"
 		-spectre_args +logstatus
 		-simcompatible_ams spectre
-		-name TOP.top_tb:config
+		-name TOP.top_tb:config_gate
 		-amsconnrules ConnRules_3V_full_fast
 		+define+CDS_SELECT_CRS
 		+define+CONNRULES_3V_FULL_FAST
@@ -40,9 +40,30 @@ xrun
 		-top cds_globals
 		./netlist.vams
 		-f ./textInputs
-			-amscompilefile "file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter/functional/verilog.v lib:COUNTER_JI3 cell:counter view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX0 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX16/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX16 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/ON211JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:ON211JI3VX1 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DLY1JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:DLY1JI3VX1 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/AN21JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:AN21JI3VX1 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/AN22JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:AN22JI3VX1 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/EN2JI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:EN2JI3VX0 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/NO2JI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:NO2JI3VX0 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/u1_fd5/functional/verilog.v lib:VLG_PRIMITIVES cell:u1_fd5 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX1 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP25JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP25JI3V view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP15JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP15JI3V view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP10JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP10JI3V view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP7JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP7JI3V view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP5JI3V/functional/verilog.v lib:D_CELLS_JI3V cell:DECAP5JI3V view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX2/functional/verilog.v lib:D_CELLS_JI3V cell:BUJI3VX2 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DLY2JI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:DLY2JI3VX1 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/INJI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:INJI3VX0 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/NA2JI3VX0/functional/verilog.v lib:D_CELLS_JI3V cell:NA2JI3VX0 view:functional"
 			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_buf/functional/verilog.v lib:VLG_PRIMITIVES cell:check_buf view:functional"
-			-amscompilefile "file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX1/functional/verilog.v lib:D_CELLS_JI3V cell:DFRQJI3VX1 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX2/functional/verilog.v lib:D_CELLS_JI3V cell:DFRQJI3VX2 view:functional"
+			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX4/functional/verilog.v lib:D_CELLS_JI3V cell:DFRQJI3VX4 view:functional"
+			-amscompilefile "file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams_sdf/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams_sdf"
 			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR00DPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:APR00DPC view:verilogams"
 			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/resistor_ams/verilogams/verilog.vams lib:VLG_PRIMITIVES cell:resistor_ams view:verilogams"
 			-amscompilefile "file:/home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/PWRCUTDCPC/verilogams/verilog.vams lib:IO_CELLS_JIC3V cell:PWRCUTDCPC view:verilogams"
@@ -62,17 +83,19 @@ xrun
 			-makelib IORING
 			-makelib HV_CELLS
 			-endlib
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
 		./cds_globals.vams
 		-l ../psf/xrun.log
 		-spectre_args ++aps
 file: ./netlist.vams
+	module COUNTER_JI3.counter:schematic
+		errors: 0, warnings: 0
 	module HV_CELLS.HVDD4DJ5PKFs:schematic
 		errors: 0, warnings: 0
-	module HV_CELLS.ioh_dnw3_16x60:schematic
+	module HV_CELLS.ioh_d2pk:schematic
 		errors: 0, warnings: 0
-	module HV_CELLS.ioh_dp3_16x70:schematic
-		errors: 0, warnings: 0
-	module HV_CELLS.EHVSSJI220FS:schematic
+	module HV_CELLS.HVDD4D2PK:schematic
 		errors: 0, warnings: 0
 	module HV_CELLS.ioh_iscrd2_4x100:schematic
 		errors: 0, warnings: 0
@@ -115,14 +138,77 @@ file: ./netlist.vams
 file: ./cds_globals.vams
 	module worklib.cds_globals:vams
 		errors: 0, warnings: 0
-file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter/functional/verilog.v
-	module COUNTER_JI3.counter:functional
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX0/functional/verilog.v
+	module D_CELLS_JI3V.BUJI3VX0:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX16/functional/verilog.v
+	module D_CELLS_JI3V.BUJI3VX16:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/ON211JI3VX1/functional/verilog.v
+	module D_CELLS_JI3V.ON211JI3VX1:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DLY1JI3VX1/functional/verilog.v
+	module D_CELLS_JI3V.DLY1JI3VX1:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/AN21JI3VX1/functional/verilog.v
+	module D_CELLS_JI3V.AN21JI3VX1:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/AN22JI3VX1/functional/verilog.v
+	module D_CELLS_JI3V.AN22JI3VX1:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/EN2JI3VX0/functional/verilog.v
+	module D_CELLS_JI3V.EN2JI3VX0:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/NO2JI3VX0/functional/verilog.v
+	module D_CELLS_JI3V.NO2JI3VX0:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/u1_fd5/functional/verilog.v
+	primitive VLG_PRIMITIVES.u1_fd5:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX1/functional/verilog.v
+	module D_CELLS_JI3V.BUJI3VX1:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP25JI3V/functional/verilog.v
+	module D_CELLS_JI3V.DECAP25JI3V:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP15JI3V/functional/verilog.v
+	module D_CELLS_JI3V.DECAP15JI3V:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP10JI3V/functional/verilog.v
+	module D_CELLS_JI3V.DECAP10JI3V:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP7JI3V/functional/verilog.v
+	module D_CELLS_JI3V.DECAP7JI3V:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DECAP5JI3V/functional/verilog.v
+	module D_CELLS_JI3V.DECAP5JI3V:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/BUJI3VX2/functional/verilog.v
+	module D_CELLS_JI3V.BUJI3VX2:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DLY2JI3VX1/functional/verilog.v
+	module D_CELLS_JI3V.DLY2JI3VX1:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/INJI3VX0/functional/verilog.v
+	module D_CELLS_JI3V.INJI3VX0:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/NA2JI3VX0/functional/verilog.v
+	module D_CELLS_JI3V.NA2JI3VX0:functional
 		errors: 0, warnings: 0
 file: /home/saul/pkg/xfab/XKIT/x_all/diglibs/VLG_PRIMITIVES/v1_2/cadence_IC61/v1_2_0/VLG_PRIMITIVES/check_buf/functional/verilog.v
 	primitive VLG_PRIMITIVES.check_buf:functional
 		errors: 0, warnings: 0
-file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams
-	module COUNTER_JI3.counter_stimulus:verilogams
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX1/functional/verilog.v
+	module D_CELLS_JI3V.DFRQJI3VX1:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX2/functional/verilog.v
+	module D_CELLS_JI3V.DFRQJI3VX2:functional
+		errors: 0, warnings: 0
+file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/cadence_IC61/v2_1_2/D_CELLS_JI3V/DFRQJI3VX4/functional/verilog.v
+	module D_CELLS_JI3V.DFRQJI3VX4:functional
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams_sdf/verilog.vams
+	module COUNTER_JI3.counter_stimulus:verilogams_sdf
 		errors: 0, warnings: 0
 file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR00DPC/verilogams/verilog.vams
 	module IO_CELLS_JIC3V.APR00DPC:verilogams
@@ -163,13 +249,16 @@ file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1
 file: /home/saul/pkg/xfab/XKIT/xh018/diglibs/IO_CELLS_JIC3V/v1_0/cadence_IC61/v1_0_0/IO_CELLS_JIC3V/APR04DPC/verilogams/verilog.vams
 	module IO_CELLS_JIC3V.APR04DPC:verilogams
 		errors: 0, warnings: 0
+xmvlog: *W,LIBNOU: Library "/home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v" given but not used.
+xmvlog: *W,LIBNOU: Library "/home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v" given but not used.
 xmvlog: *W,SPDUSD: Include directory /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/ given but not used.
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 1
-xmvlog: Memory Usage - Current physical: 20.9M, Current virtual: 60.5M
-xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.1s, 35.1% cpu)
+		errors: 0, warnings: 3
+xmvlog: Memory Usage - Current physical: 21.1M, Current virtual: 60.7M
+xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.1s, 36.8% cpu)
 AMSD Universal Connect Module UCM is enabled.
 		Caching library 'COUNTER_JI3' ....... Done
+		Caching library 'D_CELLS_JI3V' ....... Done
 		Caching library 'HV_CELLS' ....... Done
 		Caching library 'INV_HV' ....... Done
 		Caching library 'INV_LP' ....... Done
@@ -184,49 +273,90 @@ xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: Veril
 		top_tb
 		cds_globals
 	Discipline resolution Pass...
+	Reading SDF file from location "/home/saul/projects/XH018_mixed_ji3/test_mix/innovus/output/design_slow.sdf"
+	Writing compiled SDF file to "design_slow.sdf.X".
+xmsdfc: Memory Usage - Current physical: 12.3M, Current virtual: 42.2M
+xmsdfc: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 100.0% cpu)
 	Doing auto-insertion of connection elements...
 	Connect Rules applied are:
 		ConnRules_3V_full_fast
+	Annotating SDF timing data:
+		Compiled SDF file:     design_slow.sdf.X
+		Log file:              sdf.log
+		Backannotation scope:  top_tb.I0.I3
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+	Annotation completed successfully...
+	SDF statistics: 
+		 No. of Pathdelays = 152     	 No. of Disabled Pathdelays = 0        Annotated = 90.13% (137/152) 
+		 No. of Tchecks    = 32      	 No. of Disabled Tchecks    = 0        Annotated = 100.00% (32/32) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	           152	             0	               137	                 90.13
+		      $width	            16	             0	                16	                100.00
+		  $setuphold	            16	             0	                16	                100.00
 	Building instance overlay tables: .................... Done
 	Using implicit TMP libraries; associated with library TOP
 	Generating native compiled code:
+		COUNTER_JI3.counter_stimulus:verilogams_sdf <0x615fec8e>
+			streams:   2, words:  1860
 		VLG_PRIMITIVES.check_vdd:verilogams <0x70e153df>
 			streams:   1, words:   152
 		VLG_PRIMITIVES.check_gnd:verilogams <0x6cac9861>
 			streams:   1, words:   152
-		COUNTER_JI3.counter_stimulus:verilogams <0x0c96279b>
-			streams:   2, words:  1765
-		COUNTER_JI3.counter:functional <0x382ce5c4>
-			streams:   2, words:   613
-		connectLib.L2E_2:module <0x765a2092>
+		D_CELLS_JI3V.DFRQJI3VX4:functional <0x0a72eb36>
+			streams:   0, words:     0
+		D_CELLS_JI3V.ON211JI3VX1:functional <0x7bc13e6c>
+			streams:   0, words:     0
+		D_CELLS_JI3V.ON211JI3VX1:functional <0x02f2c40a>
+			streams:   0, words:     0
+		D_CELLS_JI3V.AN21JI3VX1:functional <0x7a9fe20b>
+			streams:   0, words:     0
+		D_CELLS_JI3V.AN22JI3VX1:functional <0x6b731fec>
+			streams:   0, words:     0
+		D_CELLS_JI3V.DFRQJI3VX2:functional <0x3cb9b61e>
+			streams:   0, words:     0
+		D_CELLS_JI3V.EN2JI3VX0:functional <0x2f97deb3>
+			streams:   0, words:     0
+		D_CELLS_JI3V.EN2JI3VX0:functional <0x3be09bb6>
+			streams:   0, words:     0
+		D_CELLS_JI3V.DFRQJI3VX1:functional <0x70893308>
+			streams:   0, words:     0
+		connectLib.L2E_2:module <0x00fd49c8>
 			streams:  15, words:  8739
-		connectLib.Bidir_2:module <0x5a85679d>
+		connectLib.Bidir_2:module <0x41df3656>
 			streams:  29, words: 20986
-		connectLib.E2L_2:module <0x7e9ff6a9>
+		connectLib.E2L_2:module <0x7c69a884>
 			streams:  24, words: 12794
 	Building instance specific data structures.
+xmelab: *W,TMPWUDN: Interconnect on net top_tb.I0.I3.out was removed due to it having user defined nettype.
+xmelab: *W,TMPWUDN: Interconnect on net top_tb.I0.I3.g211__1881.B was removed due to it having user defined nettype.
+xmelab: *W,TMPWUDN: Interconnect on net top_tb.I0.I3.g217__9315.B was removed due to it having user defined nettype.
+xmelab: *W,TMPWUDN: Interconnect on net top_tb.I0.I3.g225__6417.A was removed due to it having user defined nettype.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		                 Instances  Unique
-		Modules:               650      57
-		UDPs:                   12       1
-		Primitives:             33       5
-		Timing outputs:          9       4
-		Registers:             289     242
-		Scalar wires:          111       -
-		Expanded wires:          8       1
-		Vectored wires:         13       -
-		Always blocks:         148      78
-		Initial blocks:        157     121
-		Cont. assignments:      49      23
-		Pseudo assignments:     24       -
-		Interconnect:          580       -
-		Process Clocks:          1       1
-		Simulation timescale:  1ps
-	Writing initial simulation snapshot: TOP.top_tb:config
-xmelab: Memory Usage - Final: 56.8M, Peak: 224.5M, Peak virtual: 339.2M
-xmelab: CPU Usage - 0.1s system + 0.1s user = 0.2s total (0.3s, 73.3% cpu)
-Loading snapshot TOP.top_tb:config .................... Done
+		                   Instances  Unique
+		Modules:                 865      77
+		UDPs:                     20       2
+		Primitives:              103       9
+		Timing outputs:           65      11
+		Registers:               296     245
+		Scalar wires:            176       -
+		Vectored wires:           13       -
+		Always blocks:           147      77
+		Initial blocks:          157     121
+		Cont. assignments:        49      23
+		Pseudo assignments:       24       -
+		Timing checks:            48       9
+		Interconnect:            823       7
+		Delayed tcheck signals:    2       1
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: TOP.top_tb:config_gate
+xmelab: Memory Usage - Final: 59.1M, Peak: 226.3M, Peak virtual: 340.9M
+xmelab: CPU Usage - 0.1s system + 0.2s user = 0.2s total (0.3s, 73.0% cpu)
+xmelab: ANNOTATION Time - 0.0s
+Loading snapshot TOP.top_tb:config_gate .................... Done
 Simulating in AMS-SIE mode...
 	Starting analog simulation engine...
 AMSD Flexible Release Matrix --- using Spectre from installation:
@@ -266,18 +396,10 @@ xcelium> probe -create -emptyok -database ams_database {top_tb.out1}
 Created probe 7
 xcelium> probe -create -emptyok -database ams_database {top_tb.out0}
 Created probe 8
-xcelium> probe -create -emptyok -database ams_database {top_tb.I0.out[2]}
-Created probe 9
 xcelium> probe -create -emptyok -database ams_database {top_tb.VDDHV}
+Created probe 9
+xcelium> probe -create -emptyok -database ams_database {top_tb.in_l}
 Created probe 10
-xcelium> probe -create -emptyok -database ams_database {top_tb.net7}
-Created probe 11
-xcelium> probe -create -emptyok -database ams_database -flow {top_tb.I0.I2.VDDHV}
-Created probe 12
-xcelium> probe -create -emptyok -database ams_database -flow {top_tb.I0.I0.I24.PAD}
-Created probe 13
-xcelium> probe -create -emptyok -database ams_database -flow {top_tb.I0.I0.I33.PAD}
-Created probe 14
 xcelium> 
 xcelium> run
 
@@ -287,19 +409,19 @@ Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwi
 
 Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
 
-User: saul   Host: phoenix   HostID: A0F02   PID: 18454
-Memory  available: 12.7068 GB  physical: 16.6560 GB
+User: saul   Host: phoenix   HostID: A0F02   PID: 8509
+Memory  available: 14.0785 GB  physical: 16.6560 GB
 Linux   : CentOS Linux release 7 (Core)
 CPU Type: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
 All processors running at 3600.0 MHz
         Socket: Processors
         0:       0,  1,  2,  3,  4,  5
         
-System load averages (1min, 5min, 15min) : 2.3 %, 2.0 %, 4.2 %
+System load averages (1min, 5min, 15min) : 2.0 %, 0.8 %, 0.8 %
 HPC is enabled
 
 
-Simulating `spiceModels.ams' on phoenix at 8:46:28 AM, Wed Feb 7, 2024 (process id: 18454).
+Simulating `spiceModels.ams' on phoenix at 4:56:11 AM, Fri Feb 9, 2024 (process id: 8509).
 Current working directory: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist
 Command line:
     /pkg/cadence/installs/SPECTRE231/tools/bin/spectre -64  \
@@ -309,12 +431,12 @@ Command line:
         /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/sharedData/CDS/ahdl/input.ahdlSimDB  \
         +logstatus ++aps -raw ../psf  \
         -I/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/  \
-        +ams_control=xcelium.d/AMSD/ams_ctrl/ams_ctrl_18146_phoenix
+        +ams_control=xcelium.d/AMSD/ams_ctrl/ams_ctrl_8203_phoenix
 Spectre Licensing Information:
-Spectre [08:46:28.512481] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
+Spectre [04:56:11.512393] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
 
 Spectre Licensing Information:
-Spectre [08:46:28.300273] Periodic Lic check successful
+Spectre [04:56:11.233000] Periodic Lic check successful
 
 Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
 Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libphilips_I_sh.so ...
@@ -690,9 +812,9 @@ Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/
 Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist/amsControlSpectre.scs
 Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist/.amsbind.scs
 Reading file:  /home/saul/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/configs/ams.cfg
-Time for NDB Parsing: CPU = 205.722 ms, elapsed = 909.703 ms.
-Time accumulated: CPU = 248.916 ms, elapsed = 909.705 ms.
-Peak resident memory used = 111 Mbytes.
+Time for NDB Parsing: CPU = 212.024 ms, elapsed = 869.34 ms.
+Time accumulated: CPU = 254.228 ms, elapsed = 869.342 ms.
+Peak resident memory used = 114 Mbytes.
 
 Existing shared object for module connectLib__L2E_2__module__0x10000001_behavioral is up to date.
 Installed compiled interface for connectLib__L2E_2__module__0x10000001_behavioral.
@@ -714,18 +836,18 @@ Existing shared object for module bsource_cf985e is up to date.
 Installed compiled interface for bsource_cf985e.
 Existing shared object for module bsource_rpp1k1_3mod_29a82c is up to date.
 Installed compiled interface for bsource_rpp1k1_3mod_29a82c.
-Time for Elaboration: CPU = 75.827 ms, elapsed = 103.934 ms.
-Time accumulated: CPU = 324.805 ms, elapsed = 1.0137 s.
-Peak resident memory used = 129 Mbytes.
+Time for Elaboration: CPU = 92.438 ms, elapsed = 120.52 ms.
+Time accumulated: CPU = 346.722 ms, elapsed = 989.917 ms.
+Peak resident memory used = 132 Mbytes.
 
 
 Notice from spectre during hierarchy flattening.
     The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
 
 
-Time for EDB Visiting: CPU = 67.081 ms, elapsed = 67.085 ms.
-Time accumulated: CPU = 391.985 ms, elapsed = 1.08088 s.
-Peak resident memory used = 142 Mbytes.
+Time for EDB Visiting: CPU = 80.117 ms, elapsed = 80.1179 ms.
+Time accumulated: CPU = 427.04 ms, elapsed = 1.07023 s.
+Peak resident memory used = 147 Mbytes.
 
 
 Warning from spectre during initial setup.
@@ -761,51 +883,50 @@ Global user options:
 Scoped user options:
 
 Circuit inventory:
-              nodes 5247
-            bsim3v3 542   
-     bsource_b7022a 140   
+              nodes 6600
+            bsim3v3 662   
+     bsource_b7022a 210   
      bsource_cf985e 1     
      bsource_d312da 1     
-     bsource_ee103d 140   
-bsource_rdp3mod_aaacb8 280   
+     bsource_ee103d 210   
+bsource_rdp3mod_aaacb8 420   
 bsource_rpp1k1_3mod_29a82c 2     
-          capacitor 24    
+          capacitor 30    
 connectLib__L2E_2__module__0x10000001_behavioral 1     
-              diode 2121  
+              diode 2565  
            hisim_hv 1     
-          juncap200 2121  
-           resistor 4879  
+          juncap200 2565  
+           resistor 6091  
 VLG_PRIMITIVES__resistor_ams__verilogams__0x10000001_behavioral 1     
             vsource 11    
 connectLib__Bidir_2__module__0x10000001_behavioral 6     
 connectLib__E2L_2__module__0x10000001_behavioral 6     
 
 Analysis and control statement inventory:
-                 dc 1     
-               info 5     
+               info 4     
                tran 1     
 
 Output statements:
              .probe 0     
            .measure 0     
-               save 9     
+               save 4     
 
 
 Notice from spectre during initial setup.
     7 vsources are shorted because their absolute value is less than or equal to 'vabsshort'.
-    2 resistors are changed to resistance form because their value are less than 'rthresh'.
+    4 resistors are changed to resistance form because their value are less than 'rthresh'.
     Fast APS enabled.
 
 Spectre Licensing Information:
-Spectre [08:46:29.322976] Periodic Lic check successful
+Spectre [04:56:12.303371] Periodic Lic check successful
 
 
 Notice from spectre.
     Multithreading enabled: 6 threads in the system with 6 available processors.
 
-Time for parsing: CPU = 465.068 ms, elapsed = 172.569 ms.
-Time accumulated: CPU = 857.142 ms, elapsed = 1.25354 s.
-Peak resident memory used = 156 Mbytes.
+Time for parsing: CPU = 549.483 ms, elapsed = 203.018 ms.
+Time accumulated: CPU = 976.622 ms, elapsed = 1.27335 s.
+Peak resident memory used = 161 Mbytes.
 
 ~~~~~~~~~~~~~~~~~~~~~~
 Pre-Simulation Summary
@@ -813,60 +934,18 @@ Pre-Simulation Summary
    -   (Fast APS) Multi-threading. The recommended number of threads is 8, consider adding +mt=8 on command line.
 ~~~~~~~~~~~~~~~~~~~~~~
 
-******************
-DC Analysis `dcOp'
-******************
-
-Opening the PSF file ../psf/dcOp.dc ...
-Important parameter values:
-    reltol = 1e-03
-    abstol(V) = 1 uV
-    abstol(I) = 1 pA
-    temp = 27 C
-    tnom = 27 C
-    tempeffects = all
-    gmindc = 1 pS
-    rabsshort = 1 mOhm
-Trying `homotopy = gmin'.
-
-
-Notice from spectre during DC analysis `dcOp'.
-    GminDC = 1 pS is large enough to noticeably affect the DC solution.
-        dV(top_tb.I0.I0.I33.I11.net26) = -14.1187 V
-        Use the `gmin_check' option to eliminate or expand this report.
-Warning from spectre during DC analysis `dcOp'.
-    WARNING (CMI-2745): top_tb.I0.I0.I29.I0.D0.d2: Junction current density(I/Area) exceeds `imax'. This may introduce convergence issues. Reduce the junction current or increase junction area and rerun the simulation.
-
-
-Maximum value achieved for any signal of each quantity: 
-V: V(top_tb.net3) = 40 V
-I: I(top_tb.V2:p) = 37.56 A
-Convergence achieved in 397 iterations.
-DC simulation time: CPU = 1.49577 s, elapsed = 269.587 ms.
-Total time required for dc analysis `dcOp': CPU = 1.49716 s, elapsed = 269.815 ms, util. = 555%.
-Time accumulated: CPU = 2.37363 s, elapsed = 1.52661 s.
-Peak resident memory used = 160 Mbytes.
-
-dcOpInfo: writing operating point information to rawfile.
-
-Opening the PSF file ../psf/dcOpInfo.info ...
-
 ***********************************************
 Transient Analysis `tran': time = (0 s -> 1 us)
 ***********************************************
+Trying `homotopy = gmin' for initial conditions.
+
 
 Notice from spectre during IC analysis, during transient analysis `tran'.
     GminDC = 1 pS is large enough to noticeably affect the DC solution.
-        dV(top_tb.I0.I0.I33.I11.net26) = -14.1187 V
+        dV(top_tb.I0.I0.I33.I11.net26) = -15.5525 V
         Use the `gmin_check' option to eliminate or expand this report.
-Warning from spectre during IC analysis, during transient analysis `tran'.
-    WARNING (CMI-2745): top_tb.I0.I0.I29.I0.D0.d2: Junction current density(I/Area) exceeds `imax'. This may introduce convergence issues. Reduce the junction current or increase junction area and rerun the simulation.
 
-DC simulation time: CPU = 34.942 ms, elapsed = 5.94306 ms.
-
-Notice from spectre during transient analysis `tran'.
-    Output compression for transient analysis is enabled.
-
+DC simulation time: CPU = 1.6865 s, elapsed = 299.268 ms.
 
 Opening the AMSSST2 file ../psf/psf.trn ...
 Important parameter values:
@@ -878,61 +957,75 @@ Important parameter values:
     ic = all
     useprevic = no
     skipdc = no
-    reltol = 10e-03
+    reltol = 1e-03
     abstol(V) = 1 uV
     abstol(I) = 1 pA
     temp = 27 C
     tnom = 27 C
     tempeffects = all
-    errpreset = liberal
-    method = trapgear2
+    errpreset = moderate
+    method = traponly
     lteratio = 3.5
     relref = sigglobal
     cmin = 0 F
     gmin = 1 pS
     rabsshort = 1 mOhm
-    compression = wildcardonly
 
 
 Output and IC/nodeset summary:
-                 save   3       (current)
-                 save   5       (voltage)
+                 save   4       (voltage)
 
 
-Warning from spectre at time = 1 ns during transient analysis `tran'.
-    WARNING (CMI-2745): top_tb.I0.I0.I29.I0.D0.d2: Junction current density(I/Area) exceeds `imax'. This may introduce convergence issues. Reduce the junction current or increase junction area and rerun the simulation.
+Notice from spectre at time = 19.8155 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+Notice from spectre at time = 28.5138 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
 
-    tran: time = 25.02 ns     (2.5 %), step = 1.978 ns     (198 m%)
-    tran: time = 75.02 ns     (7.5 %), step = 4.328 ns     (433 m%)
-    tran: time = 125.8 ns    (12.6 %), step = 5.103 ns     (510 m%)
-    tran: time = 186.1 ns    (18.6 %), step = 11.9 ns      (1.19 %)
-    tran: time = 234.8 ns    (23.5 %), step = 11.8 ns      (1.18 %)
-    tran: time = 275 ns      (27.5 %), step = 4.236 ns     (424 m%)
-    tran: time = 325.7 ns    (32.6 %), step = 5.059 ns     (506 m%)
-    tran: time = 375.1 ns    (37.5 %), step = 6.44 ns      (644 m%)
-    tran: time = 428.2 ns    (42.8 %), step = 8.456 ns     (846 m%)
-    tran: time = 475 ns      (47.5 %), step = 1.634 ns     (163 m%)
-    tran: time = 528.4 ns    (52.8 %), step = 6.376 ns     (638 m%)
-    tran: time = 575.2 ns    (57.5 %), step = 6.538 ns     (654 m%)
-    tran: time = 630.9 ns    (63.1 %), step = 9.795 ns     (979 m%)
-    tran: time = 675 ns      (67.5 %), step = 4.911 ns     (491 m%)
-    tran: time = 732.2 ns    (73.2 %), step = 8.235 ns     (823 m%)
-    tran: time = 784.1 ns    (78.4 %), step = 10.92 ns     (1.09 %)
-    tran: time = 833.8 ns    (83.4 %), step = 11.26 ns     (1.13 %)
-    tran: time = 875 ns      (87.5 %), step = 2.445 ns     (244 m%)
-    tran: time = 931.4 ns    (93.1 %), step = 7.889 ns     (789 m%)
-    tran: time = 984.1 ns    (98.4 %), step = 10.92 ns     (1.09 %)
+    tran: time = 28.51 ns    (2.85 %), step = 8.698 ns     (870 m%)
+
+Notice from spectre at time = 45.9103 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+Notice from spectre at time = 28.64 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+Notice from spectre at time = 69.3832 ns during transient analysis `tran'.
+    Found trapezoidal ringing on node top_tb.out_l.
+        Further occurrences of this notice will be suppressed.
+
+    tran: time = 76.65 ns    (7.67 %), step = 7.272 ns     (727 m%)
+    tran: time = 128.5 ns    (12.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 178.5 ns    (17.8 %), step = 3.73 ns      (373 m%)
+    tran: time = 226.5 ns    (22.7 %), step = 6.818 ns     (682 m%)
+    tran: time = 276.1 ns    (27.6 %), step = 6.99 ns      (699 m%)
+    tran: time = 328.5 ns    (32.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 378.8 ns    (37.9 %), step = 4.277 ns     (428 m%)
+    tran: time = 426.7 ns    (42.7 %), step = 5.663 ns     (566 m%)
+    tran: time = 476.1 ns    (47.6 %), step = 6.99 ns      (699 m%)
+    tran: time = 528.5 ns    (52.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 578.5 ns    (57.8 %), step = 3.73 ns      (373 m%)
+    tran: time = 626.5 ns    (62.7 %), step = 6.819 ns     (682 m%)
+    tran: time = 676.1 ns    (67.6 %), step = 6.99 ns      (699 m%)
+    tran: time = 728.5 ns    (72.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 778.8 ns    (77.9 %), step = 4.277 ns     (428 m%)
+    tran: time = 826.7 ns    (82.7 %), step = 5.662 ns     (566 m%)
+    tran: time = 876.1 ns    (87.6 %), step = 6.99 ns      (699 m%)
+    tran: time = 928.5 ns    (92.9 %), step = 8.696 ns     (870 m%)
+    tran: time = 978.5 ns    (97.8 %), step = 3.73 ns      (373 m%)
 
 The analog simulator has reached stop time, please use `analog -stop <new stop time>' to extend the analog stop time.
 Simulation stopped via transient analysis stoptime at time 1 US
-Memory Usage - Current physical: 84.1M, Current virtual: 287.9M
-CPU Usage - 0.1s system + 0.1s user = 0.2s total (5.0% cpu)
+Memory Usage - Current physical: 81.1M, Current virtual: 284.7M
+CPU Usage - 0.0s system + 0.1s user = 0.2s total (4.3% cpu)
 xcelium> exit
-Number of accepted tran steps =             542
+Number of accepted tran steps =             855
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
 
 Maximum value achieved for any signal of each quantity: 
-V: V(top_tb.net3) = 40 V
-I: I(top_tb.V2:p) = 37.56 A
+V: V(top_tb.I0.I2.M0.m1:int_d) = 40.11 V
+I: I(top_tb.V2:p) = 924.2 uA
 If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -943,17 +1036,17 @@ Post-Transient Simulation Summary
 
 
 During simulation, the CPU load for active processors is :
-         0 (37.4 %)      1 (36.1 %)      2 (34.6 %)      3 (50.6 %)
-         4 (36.4 %)      5 (37.1 %)     
-        Total: 232.2%
-Initial condition solution time: CPU = 35.2 ms, elapsed = 5.98812 ms.
-Intrinsic tran analysis time:    CPU = 2.44893 s, elapsed = 418.064 ms.
+         0 (45.1 %)      1 (39.5 %)      2 (45.7 %)      3 (46.7 %)
+         4 (62.6 %)      5 (46.9 %)     
+        Total: 286.5%
+Initial condition solution time: CPU = 1.68684 s, elapsed = 299.325 ms.
+Intrinsic tran analysis time:    CPU = 4.3287 s, elapsed = 735.567 ms.
 
 **** AMSD: Mixed-Signal Activity Statistics ****
-Number of A-to-D events:                     136
-  Number of A-to-D events in IEs:            136
-Number of D-to-A events:                      33
-  Number of D-to-A events in IEs:             33
+Number of A-to-D events:                     110
+  Number of A-to-D events in IEs:            110
+Number of D-to-A events:                      32
+  Number of D-to-A events in IEs:             32
 Number of VHDL-AMS Breaks:                     0
 Number of direct digital accesses:               0
 
@@ -962,16 +1055,20 @@ Number of IEs with D-to-A X edge:                    1
 Number of IEs with D-to-A Z edge:                    6
 Number of IEs with A-to-D X edge:                    0
 Number of IEs with A-to-D Z edge:                    0
-IE with max number of D-to-A edges:                 26
+IE with max number of D-to-A edges:                 25
    top_tb.I0.\out[2]__L2E_2__logic 
-IE with max number of A-to-D edges:                 26
+IE with max number of A-to-D edges:                 24
    top_tb.I0.\out[2]__Bidir_2__logic 
 Number of reporting IEs / total IEs:             70/70
 Number of IEs with Vin/Vdd limit checked:            0
 
-Total time required for tran analysis `tran': CPU = 2.51407 s, elapsed = 429.553 ms, util. = 585%.
-Time accumulated: CPU = 5.22069 s, elapsed = 2.01359 s.
-Peak resident memory used = 183 Mbytes.
+Total time required for tran analysis `tran': CPU = 6.05723 s, elapsed = 1.04235 s, util. = 581%.
+Time accumulated: CPU = 7.10269 s, elapsed = 2.32857 s.
+Peak resident memory used = 190 Mbytes.
+
+
+Notice from spectre.
+    49 notices suppressed.
 
 finalTimeOP: writing operating point information to rawfile.
 
@@ -987,24 +1084,24 @@ outputParameter: writing output parameter values to rawfile.
 Opening the PSF file ../psf/outputParameter.info ...
 Spectre Licensing Information:
 Spectre Lic Summary:
-[08:46:30.230314] Cdslmd servers:3000@lic08.ug.kth.se
-[08:46:30.230329] Feature usage summary:
-[08:46:30.230330] Virtuoso_Multi_mode_Simulation
-[08:46:30.230330] Spectre_AMS_MMSIM_Lk
+[04:56:13.003659] Cdslmd servers:3000@lic08.ug.kth.se
+[04:56:13.003674] Feature usage summary:
+[04:56:13.003675] Virtuoso_Multi_mode_Simulation
+[04:56:13.003675] Spectre_AMS_MMSIM_Lk
 
 
-Aggregate audit (8:46:30 AM, Wed Feb 7, 2024):
-Time used: CPU = 6.03 s, elapsed = 2.17 s, util. = 278%.
-Time spent in licensing: elapsed = 1.33 s, percentage of total = 61.3%.
-Peak memory used = 185 Mbytes.
-Simulation started at: 8:46:28 AM, Wed Feb 7, 2024, ended at: 8:46:30 AM, Wed Feb 7, 2024, with elapsed time (wall clock): 2.17 s.
-spectre completes with 0 errors, 5 warnings, and 15 notices.
-Total License Acquisition Time : 1.33 s.
+Aggregate audit (4:56:13 AM, Fri Feb 9, 2024):
+Time used: CPU = 8 s, elapsed = 2.5 s, util. = 320%.
+Time spent in licensing: elapsed = 1.3 s, percentage of total = 52.1%.
+Peak memory used = 194 Mbytes.
+Simulation started at: 4:56:11 AM, Fri Feb 9, 2024, ended at: 4:56:13 AM, Fri Feb 9, 2024, with elapsed time (wall clock): 2.5 s.
+spectre completes with 0 errors, 2 warnings, and 20 notices.
+Total License Acquisition Time : 1.3 s.
   xmsim  : License Acquisition Time -- 3e-06 s.
-  spectre: License Acquisition Time -- 1.33 s.
-xmsim: Memory Usage - Final: 72.2M, Peak: 85.3M, Peak virtual: 348.4M
-xmsim: CPU Usage - 1.6s system + 5.2s user = 6.9s total (4.2s, 100.0% cpu)
-TOOL:	xrun(64)	23.09-s002: Exiting on Feb 07, 2024 at 08:46:30 EST  (total: 00:00:14)
+  spectre: License Acquisition Time -- 1.3 s.
+xmsim: Memory Usage - Final: 72.5M, Peak: 82.3M, Peak virtual: 345.2M
+xmsim: CPU Usage - 1.7s system + 7.0s user = 8.7s total (4.4s, 100.0% cpu)
+TOOL:	xrun(64)	23.09-s002: Exiting on Feb 09, 2024 at 04:56:13 EST  (total: 00:00:13)
 
 
 ********* LOG ENDS **************

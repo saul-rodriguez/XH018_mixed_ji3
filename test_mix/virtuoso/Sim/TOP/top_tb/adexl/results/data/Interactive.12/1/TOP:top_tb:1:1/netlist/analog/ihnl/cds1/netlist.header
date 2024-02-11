@@ -1,0 +1,6 @@
+
+// Library name: IO_CELLS_JIC3V
+// Cell name: jio_andio_pc
+// View name: cmos_sch
+// Inherited view list: cmos_sch
+subckt jio_andio_pc

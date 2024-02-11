@@ -1,0 +1,231 @@
+ioring3
+
+jio_pe3isb_pc
+	jio_via134tp_pc
+
+jio_base_ptrps_pc
+	jio_pe3isb_pc
+	jio_via234tp_pc
+
+jio_padp_pc
+	jio_viabtp_pc
+
+jio_base_metal_pc
+	jio_via34tp1r_pc
+
+jio_ne3isbg_pc
+	jio_via134tp_pc
+
+jio_basensplink_pc
+	jio_via234tp_pc
+
+jio_basepspfl_pc
+	jio_filpoly_ap_pc
+	jio_fildifpoly_ap_pc
+	jio_fildifpolye_ap_pc
+
+jio_base_ntrbg_pc
+	jio_via134tp_pc
+
+PSUBPADPC
+	jio_via134tp_pc
+	jio_resg_pc
+	jio_baseaps_pc
+	jio_base_ptrps_pc
+	jio_viabtp_pc
+	jio_padp_pc
+	jio_via34tp1r_pc
+	jio_ne3isbg_pc
+	jio_basensplink_pc
+	jio_basepspfl_pc
+	jio_base_ntrbg_pc
+
+jio_base_ntrb_pc
+	jio_viabtp_pc
+
+jio_ne3isb_pc
+	jio_via134tp_pc
+
+jio_base_ntrc_pc
+	jio_base_ntrb_pc
+	jio_ne3isb_pc
+
+jio_basepsc_pc
+	jio_via134tp_pc
+	jio_resg_pc
+	jio_baseaps_pc
+	jio_base_ptrps_pc
+	jio_padp_pc
+	jio_via34tp1r_pc
+	jio_basepspfl_pc
+	jio_base_ntrc_pc
+	jio_basenplink_pc
+
+VDDPADPC
+	jio_basepsc_pc
+
+jio_fildifpolypanc_pc
+	jio_fillpoly_pc
+
+jio_base_ptrpsfl_pc
+	jio_via234tp_pc
+	jio_fildifpolypanc_pc
+
+jio_base_ntr_pc
+	jio_base_ntrb_pc
+	jio_ne3isb_pc
+
+VDDORPADPC
+	jio_via134tp_pc
+	jio_resg_pc
+	jio_baseaps_pc
+	jio_padp_pc
+	jio_via34tp1r_pc
+	jio_basepspfl_pc
+	jio_basenplink_pc
+	jio_base_ptrpsfl_pc
+	jio_base_ntr_pc
+
+GNDPADPC
+	jio_basepsc_pc
+
+jio_base_ngo_pc
+	jio_via234tp_pc
+	jio_viabtp_pc
+	jio_ne3isbg_pc
+	jio_base_ntrbg_pc
+	jio_fildifpoly_pc
+	jio_fildifpolye_pc
+
+GNDORPADPC
+	jio_resg_pc
+	jio_padp_pc
+	jio_via34tp1r_pc
+	jio_basepspfl_pc
+	jio_base_ngo_pc
+	jio_baseps_m2g_pc
+
+jio_bufy_pc
+	jio_fillpolym1_pc
+
+jio_base_ptr_pc
+	jio_pe3isb_pc
+	jio_via234tp_pc
+
+jio_baseti_pc
+	jio_viabtp_pc
+	jio_padp_pc
+	jio_base_metal_pc
+	jio_ne3isb_pc
+	jio_basenplink_pc
+	jio_base_ptr_pc
+	jio_base_m2_pc
+
+ICPC
+	jio_resg_pc
+	jio_fillpolym1_pc
+	jio_bufy_pc
+	jio_baseti_pc
+
+BT4PC
+	jio_resg_pc
+	jio_fillpolym1_pc
+	jio_baseti_pc
+
+jio_pwrc_difpoly5u_pc
+	jio_fildifpoly_pc
+	jio_fildifpolye_pc
+
+jio_pcutficon_pc
+	jio_via234tp_pc
+	jio_via34tp1r_pc
+
+PWRCUTDCPC
+	jio_via34tp1r_pc
+	jio_pcutcon_pc
+	jio_pcutdio_pc
+	jio_pwrc_difpoly5u_pc
+	jio_pcutficon_pc
+
+jio_filldife1u_pc
+	jio_fillmetal1u_pc
+
+jio_fillmetalvia2u_pc
+	jio_via34tp1r_pc
+	jio_fillmetal1u_pc
+
+jio_fildifpoly5u_pc
+	jio_fildifpoly_pc
+	jio_fildifpolye_pc
+
+FILLER70PC
+	jio_filldife1u_pc
+	jio_fillmetalvia2u_pc
+	jio_fildifpoly5u_pc
+
+jio_ne3isbc_pc
+	jio_via134tp_pc
+
+jio_crnentr_pc
+	jio_resg_pc
+	jio_base_ntrb_pc
+	jio_ne3isbc_pc
+
+jio_crnev2link_pc
+	jio_via234tp_pc
+
+jio_crnedifpoly_half_pc
+	jio_fildifpoly_pc
+	jio_fildifpolye_pc
+
+CORNERESDPC
+	jio_crnentr_pc
+	jio_crnev2link_pc
+	jio_crn_metal_half_pc
+	jio_base_corne_half_pc
+	jio_crnedifpoly_half_pc
+
+APR00DPC
+	jio_via134tp_pc
+	jio_resg_pc
+	jio_baseaps_pc
+	jio_base_ptrps_pc
+	jio_padp_pc
+	jio_via34tp1r_pc
+	jio_basepspfl_pc
+	jio_basenplink_pc
+	jio_base_ntr_pc
+
+jio_base_ptra_pc
+	jio_pe3isb_pc
+	jio_via234tp_pc
+
+jio_baseavdpfl_pc
+	jio_fildifpoly_pc
+	jio_fildifpolye_pc
+
+APR04DPC
+	jio_resg_pc
+	jio_viabtp_pc
+	jio_padp_pc
+	jio_base_metal_pc
+	jio_ne3isb_pc
+	jio_basenplink_pc
+	jio_fillpolym1_pc
+	jio_base_ptra_pc
+	jio_baseavdpfl_pc
+
+ioring3
+	PSUBPADPC
+	VDDPADPC
+	VDDORPADPC
+	GNDPADPC
+	GNDORPADPC
+	ICPC
+	BT4PC
+	PWRCUTDCPC
+	FILLER70PC
+	CORNERESDPC
+	APR00DPC
+	APR04DPC
+

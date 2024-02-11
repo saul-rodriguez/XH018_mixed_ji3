@@ -4,4 +4,4 @@ HEADER
 "V0n V1n V2n V3n V4n V5n V6n V7n V8n V9n" "analogLib_vdc_spectre"
 "V10n" "analogLib_vpulse_spectre"
 "I0n" "TOP_top_schematic"
-"I1n" "COUNTER_JI3_counter_stimulus_verilogams"
+"I1n" "COUNTER_JI3_counter_stimulus_verilogams_sdf"

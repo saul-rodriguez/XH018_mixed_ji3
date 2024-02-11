@@ -1,0 +1,6 @@
+    M2 (Y A GNDR GNDR) ne3i w=2u l=400n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(3) par1=(1)*(3)
+    M1 (Y A VDDR VDDR) pe3i w=2.2u l=350.0n as=9.6e-13 ad=9.6e-13 \
+        ps=4.96e-06 pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(6) par1=(1)*(6)
+ends jio_bufc_pc
+// End of subcircuit definition.

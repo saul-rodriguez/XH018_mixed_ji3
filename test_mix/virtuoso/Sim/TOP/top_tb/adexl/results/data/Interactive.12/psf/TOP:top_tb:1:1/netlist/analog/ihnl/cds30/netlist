@@ -1,0 +1,110 @@
+    MD_1 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_2 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_3 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_4 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_5 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_6 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_7 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_8 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_9 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_10 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_11 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_12 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_13 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_14 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_15 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_16 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_17 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_18 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_19 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_20 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_21 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_22 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_23 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_24 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_25 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_26 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_27 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_28 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_29 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_30 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_31 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_32 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_33 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_34 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    MD_35 (D SB) dp3 area=2.64196e-11 perimeter=1.32u dbv=0.0 m=1 par1=(1)
+    D0 (Sub SB) ddnw area=5.99695e-09 perimeter=335.2u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+    R0 (SB net20) rnp1 l=25.50u w=420.0n m=1 par1=1
+    MP_1 ioh_pe3isab_40_04
+    MP_2 ioh_pe3isab_40_04
+    MP_3 ioh_pe3isab_40_04
+    MP_4 ioh_pe3isab_40_04
+    MP_5 ioh_pe3isab_40_04
+    MP_6 ioh_pe3isab_40_04
+    MP_7 ioh_pe3isab_40_04
+    MP_8 ioh_pe3isab_40_04
+    MP_9 ioh_pe3isab_40_04
+    MP_10 ioh_pe3isab_40_04
+    MP_11 ioh_pe3isab_40_04
+    MP_12 ioh_pe3isab_40_04
+    MP_13 ioh_pe3isab_40_04
+    MP_14 ioh_pe3isab_40_04
+    MP_15 ioh_pe3isab_40_04
+    MP_16 ioh_pe3isab_40_04
+    MP_17 ioh_pe3isab_40_04
+    MP_18 ioh_pe3isab_40_04
+    MP_19 ioh_pe3isab_40_04
+    MP_20 ioh_pe3isab_40_04
+    MP_21 ioh_pe3isab_40_04
+    MP_22 ioh_pe3isab_40_04
+    MP_23 ioh_pe3isab_40_04
+    MP_24 ioh_pe3isab_40_04
+    MP_25 ioh_pe3isab_40_04
+    MP_26 ioh_pe3isab_40_04
+    MP_27 ioh_pe3isab_40_04
+    MP_28 ioh_pe3isab_40_04
+    MP_29 ioh_pe3isab_40_04
+    MP_30 ioh_pe3isab_40_04
+    MP_31 ioh_pe3isab_40_04
+    MP_32 ioh_pe3isab_40_04
+    MP_33 ioh_pe3isab_40_04
+    MP_34 ioh_pe3isab_40_04
+    MP_35 ioh_pe3isab_40_04
+    MP_36 ioh_pe3isab_40_04
+    MP_37 ioh_pe3isab_40_04
+    MP_38 ioh_pe3isab_40_04
+    MP_39 ioh_pe3isab_40_04
+    MP_40 ioh_pe3isab_40_04
+    MP_41 ioh_pe3isab_40_04
+    MP_42 ioh_pe3isab_40_04
+    MP_43 ioh_pe3isab_40_04
+    MP_44 ioh_pe3isab_40_04
+    MP_45 ioh_pe3isab_40_04
+    MP_46 ioh_pe3isab_40_04
+    MP_47 ioh_pe3isab_40_04
+    MP_48 ioh_pe3isab_40_04
+    MP_49 ioh_pe3isab_40_04
+    MP_50 ioh_pe3isab_40_04
+    MP_51 ioh_pe3isab_40_04
+    MP_52 ioh_pe3isab_40_04
+    MP_53 ioh_pe3isab_40_04
+    MP_54 ioh_pe3isab_40_04
+    MP_55 ioh_pe3isab_40_04
+    MP_56 ioh_pe3isab_40_04
+    MP_57 ioh_pe3isab_40_04
+    MP_58 ioh_pe3isab_40_04
+    MP_59 ioh_pe3isab_40_04
+    MP_60 ioh_pe3isab_40_04
+    MP_61 ioh_pe3isab_40_04
+    MP_62 ioh_pe3isab_40_04
+    MP_63 ioh_pe3isab_40_04
+    MP_64 ioh_pe3isab_40_04
+    MP_65 ioh_pe3isab_40_04
+    MP_66 ioh_pe3isab_40_04
+    MP_67 ioh_pe3isab_40_04
+    MP_68 ioh_pe3isab_40_04
+    MP_69 ioh_pe3isab_40_04
+    MP_70 ioh_pe3isab_40_04
+ends ioh_pe3isabhv_2800gcr
+// End of subcircuit definition.

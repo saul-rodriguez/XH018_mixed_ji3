@@ -1,2 +1,2 @@
-netMap,*ioh_iscrd2_4x100,*gnd!,*cds_globals.\gnd! 
-cellMap,*ioh_iscrd2_4x100,*ioh_iscrd2_4x100,*HV_CELLS,*schematic
+netMap,*ioh_pe3isab_15_04,*gnd!,*cds_globals.\gnd! 
+cellMap,*ioh_pe3isab_15_04,*ioh_pe3isab_15_04,*HV_CELLS,*schematic

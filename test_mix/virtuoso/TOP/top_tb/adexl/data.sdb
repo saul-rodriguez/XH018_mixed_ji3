@@ -14,7 +14,7 @@
 		<currentmode>Single Run, Sweeps and Corners</currentmode>
 		<overwritehistory>0</overwritehistory>
 		<tests>
-			<test>TOP:top_tb:1
+			<test enabled="1">TOP:top_tb:1
 				<tool>ADE</tool>
 				<tooloptions>
 					<option>cell
@@ -27,7 +27,7 @@
 						<value>ams</value>
 					</option>
 					<option>view
-						<value>config</value>
+						<value>config_functional</value>
 					</option>
 					<option>path
 						<value>$AXL_SETUPDB_DIR/test_states</value>
@@ -44,19 +44,62 @@
 						<value>TOP</value>
 					</option>
 					<option>sim
-						<value>spectre</value>
+						<value>ams</value>
 					</option>
 					<option>view
-						<value>config</value>
+						<value>config_gate</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">TOP:top_tb:1:1
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>top_tb</value>
+					</option>
+					<option>lib
+						<value>TOP</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>sim
+						<value>ams</value>
+					</option>
+					<option>state
+						<value>TOP:top_tb:1:1_active</value>
+					</option>
+					<option>view
+						<value>config_sch</value>
+					</option>
+				</tooloptions>
+				<prerunscript>0</prerunscript>
+				<origoptions>
+					<option>cell
+						<value>top_tb</value>
+					</option>
+					<option>lib
+						<value>TOP</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>sim
+						<value>ams</value>
+					</option>
+					<option>state
+						<value>TOP:top_tb:1:1_state</value>
+					</option>
+					<option>view
+						<value>config_sch</value>
 					</option>
 				</origoptions>
 			</test>
 		</tests>
-		<vars></vars>
 		<overwritehistoryname>Interactive.0</overwritehistoryname>
 		<plottingoptions>
 			<plottingoption>plottingmode
-				<value>Replace</value>
+				<value>New Win</value>
 			</plottingoption>
 			<plottingoption>plottype
 				<value>None</value>
@@ -80,518 +123,11 @@
 				<value>no</value>
 			</plottingoption>
 		</plottingoptions>
+		<disabledtests>
+			<test>TOP:top_tb:1</test>
+		</disabledtests>
 	</active>
 	<history>History
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.1
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>TOP:top_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>TOP:top_tb:1_none_Interactive.1</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars></vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Feb 7 08:19:26 2024</timestamp>
-			<uuid>{ae6253ce-8a11-411d-8841-7e6d26341245}</uuid>
-			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.1.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.1.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_081926589</localpsfdir>
-			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.1</psfdir>
-			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.1</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.1.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.1.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.2
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>TOP:top_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>TOP:top_tb:1_none_Interactive.2</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars></vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Feb 7 08:22:55 2024</timestamp>
-			<uuid>{b11e0a43-3927-4f45-850a-a1af5097ead1}</uuid>
-			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.2.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.2.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_082255842</localpsfdir>
-			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.2</psfdir>
-			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.2</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.2.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.2.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.3
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>TOP:top_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>TOP:top_tb:1_none_Interactive.3</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars></vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Feb 7 08:28:20 2024</timestamp>
-			<uuid>{c19ea3e2-d358-4bff-b4da-e80abd89d59e}</uuid>
-			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.3.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.3.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_082820807</localpsfdir>
-			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.3</psfdir>
-			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.3</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.3.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.3.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.4
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>TOP:top_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>TOP:top_tb:1_none_Interactive.4</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars></vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Feb 7 08:30:05 2024</timestamp>
-			<uuid>{264d7452-498d-43d8-ba67-0c2bf42445c1}</uuid>
-			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.4.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.4.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_083005925</localpsfdir>
-			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.4</psfdir>
-			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.4</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.4.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.4.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.5
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>TOP:top_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>TOP:top_tb:1_none_Interactive.5</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>top_tb</value>
-							</option>
-							<option>lib
-								<value>TOP</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars></vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Feb 7 08:36:24 2024</timestamp>
-			<uuid>{6225073f-617a-4923-aa29-ee23b13a6a80}</uuid>
-			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.5.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.5.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_083624365</localpsfdir>
-			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.5</psfdir>
-			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.5</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.5.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.5.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
 		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.6
 			<checkpoint>
 				<corners>
@@ -620,7 +156,7 @@
 								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 							<option>path
 								<value>$AXL_SETUPDB_DIR/test_states</value>
@@ -637,19 +173,18 @@
 								<value>TOP</value>
 							</option>
 							<option>sim
-								<value>spectre</value>
+								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 						</origoptions>
 					</test>
 				</tests>
-				<vars></vars>
 				<overwritehistoryname>Interactive.0</overwritehistoryname>
 				<plottingoptions>
 					<plottingoption>plottingmode
-						<value>Replace</value>
+						<value>New Win</value>
 					</plottingoption>
 					<plottingoption>plottype
 						<value>None</value>
@@ -675,8 +210,8 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Feb 7 08:40:24 2024</timestamp>
-			<uuid>{7f15786c-2391-48cf-880a-8be11893ecd1}</uuid>
+			<timestamp>Feb 9 04:31:07 2024</timestamp>
+			<uuid>{dddc55e4-1425-45c4-b5c9-1b6ac707aa96}</uuid>
 			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.6.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.6.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
@@ -685,7 +220,7 @@
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_084024510</localpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_043108000</localpsfdir>
 			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.6</psfdir>
 			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.6</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
@@ -722,7 +257,7 @@
 								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 							<option>path
 								<value>$AXL_SETUPDB_DIR/test_states</value>
@@ -739,19 +274,18 @@
 								<value>TOP</value>
 							</option>
 							<option>sim
-								<value>spectre</value>
+								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 						</origoptions>
 					</test>
 				</tests>
-				<vars></vars>
 				<overwritehistoryname>Interactive.0</overwritehistoryname>
 				<plottingoptions>
 					<plottingoption>plottingmode
-						<value>Replace</value>
+						<value>New Win</value>
 					</plottingoption>
 					<plottingoption>plottype
 						<value>None</value>
@@ -777,8 +311,8 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Feb 7 08:46:05 2024</timestamp>
-			<uuid>{88fc97e2-b678-49ab-99f2-447f0639efd6}</uuid>
+			<timestamp>Feb 9 04:55:48 2024</timestamp>
+			<uuid>{e6bc06f1-441d-4cf4-b6b7-a48b095dc2e0}</uuid>
 			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.7.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.7.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
@@ -787,7 +321,7 @@
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_084605481</localpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_045548687</localpsfdir>
 			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7</psfdir>
 			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.7</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
@@ -824,7 +358,7 @@
 								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 							<option>path
 								<value>$AXL_SETUPDB_DIR/test_states</value>
@@ -841,19 +375,18 @@
 								<value>TOP</value>
 							</option>
 							<option>sim
-								<value>spectre</value>
+								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 						</origoptions>
 					</test>
 				</tests>
-				<vars></vars>
 				<overwritehistoryname>Interactive.0</overwritehistoryname>
 				<plottingoptions>
 					<plottingoption>plottingmode
-						<value>Replace</value>
+						<value>New Win</value>
 					</plottingoption>
 					<plottingoption>plottype
 						<value>None</value>
@@ -879,8 +412,8 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Feb 7 08:51:26 2024</timestamp>
-			<uuid>{f6638141-0c5e-499a-b4ad-6784d69c52df}</uuid>
+			<timestamp>Feb 9 05:08:03 2024</timestamp>
+			<uuid>{ca59e797-a845-43cf-b6c8-466d8434ae72}</uuid>
 			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.8.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.8.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
@@ -889,7 +422,7 @@
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_085126312</localpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_050803047</localpsfdir>
 			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.8</psfdir>
 			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.8</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
@@ -926,7 +459,7 @@
 								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 							<option>path
 								<value>$AXL_SETUPDB_DIR/test_states</value>
@@ -943,19 +476,18 @@
 								<value>TOP</value>
 							</option>
 							<option>sim
-								<value>spectre</value>
+								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 						</origoptions>
 					</test>
 				</tests>
-				<vars></vars>
 				<overwritehistoryname>Interactive.0</overwritehistoryname>
 				<plottingoptions>
 					<plottingoption>plottingmode
-						<value>Replace</value>
+						<value>New Win</value>
 					</plottingoption>
 					<plottingoption>plottype
 						<value>None</value>
@@ -981,8 +513,8 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Feb 7 08:51:54 2024</timestamp>
-			<uuid>{651fc788-adcb-456b-aa2e-7da44d86f3df}</uuid>
+			<timestamp>Feb 9 05:09:16 2024</timestamp>
+			<uuid>{445065a8-e64a-4ee8-94b9-0cd2b572b3cd}</uuid>
 			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.9.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.9.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
@@ -991,7 +523,7 @@
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_085154356</localpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_050916736</localpsfdir>
 			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.9</psfdir>
 			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.9</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
@@ -1028,7 +560,7 @@
 								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_functional</value>
 							</option>
 							<option>path
 								<value>$AXL_SETUPDB_DIR/test_states</value>
@@ -1045,19 +577,18 @@
 								<value>TOP</value>
 							</option>
 							<option>sim
-								<value>spectre</value>
+								<value>ams</value>
 							</option>
 							<option>view
-								<value>config</value>
+								<value>config_gate</value>
 							</option>
 						</origoptions>
 					</test>
 				</tests>
-				<vars></vars>
 				<overwritehistoryname>Interactive.0</overwritehistoryname>
 				<plottingoptions>
 					<plottingoption>plottingmode
-						<value>Replace</value>
+						<value>New Win</value>
 					</plottingoption>
 					<plottingoption>plottype
 						<value>None</value>
@@ -1083,8 +614,8 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Feb 7 11:24:14 2024</timestamp>
-			<uuid>{a9b4f12d-9842-4bb9-b428-f695b94f5b6a}</uuid>
+			<timestamp>Feb 9 05:12:37 2024</timestamp>
+			<uuid>{fc870800-a1a1-4fe9-95ef-7fbaf1a59cfa}</uuid>
 			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.10.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.10.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
@@ -1093,12 +624,746 @@
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_112414670</localpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_051237763</localpsfdir>
 			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.10</psfdir>
 			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.10</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
 			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.10.log</runlog>
 			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.10.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.11
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>TOP:top_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_functional</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1_none_Interactive.11</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_gate</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">TOP:top_tb:1:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_TOP:top_tb:1:1_state_Interactive.11</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Feb 9 05:16:08 2024</timestamp>
+			<uuid>{a01b59f2-180a-4179-81bd-306237d51bf4}</uuid>
+			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.11.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.11.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_051608296</localpsfdir>
+			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.11</psfdir>
+			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.11</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.11.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.11.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.12
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>TOP:top_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_functional</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1_none_Interactive.12</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_gate</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">TOP:top_tb:1:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_TOP:top_tb:1:1_state_Interactive.12</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Feb 9 05:26:58 2024</timestamp>
+			<uuid>{74e2b8c4-ed6a-4d7c-9b49-305dd653a5c1}</uuid>
+			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.12.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.12.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_052658594</localpsfdir>
+			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12</psfdir>
+			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.12</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.12.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.12.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.13
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">TOP:top_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_functional</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1_none_Interactive.13</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_gate</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">TOP:top_tb:1:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_TOP:top_tb:1:1_state_Interactive.13</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>TOP:top_tb:1</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Feb 9 05:28:49 2024</timestamp>
+			<uuid>{163b36b9-ffe2-4852-bc79-4b864bf3501a}</uuid>
+			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.13.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.13.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_052849739</localpsfdir>
+			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.13</psfdir>
+			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.13</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.13.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.13.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.14
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">TOP:top_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_functional</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1_none_Interactive.14</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_gate</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">TOP:top_tb:1:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_TOP:top_tb:1:1_state_Interactive.14</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>TOP:top_tb:1</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Feb 9 05:33:05 2024</timestamp>
+			<uuid>{3f27992f-1ab5-4f0d-a3c1-7e93452bfea9}</uuid>
+			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.14.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.14.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_053305517</localpsfdir>
+			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.14</psfdir>
+			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.14</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.14.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.14.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.15
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">TOP:top_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_functional</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1_none_Interactive.15</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config_gate</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">TOP:top_tb:1:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_TOP:top_tb:1:1_state_Interactive.15</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>top_tb</value>
+							</option>
+							<option>lib
+								<value>TOP</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>TOP:top_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config_sch</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>TOP:top_tb:1</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Feb 9 05:35:49 2024</timestamp>
+			<uuid>{008969c3-68d5-4bd4-8d56-8b18f7164803}</uuid>
+			<resultsname>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.15.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.15.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/phoenix_saul_053549447</localpsfdir>
+			<psfdir>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.15</psfdir>
+			<simdir>$AXL_PROJECT_DIR/TOP/top_tb/adexl/results/data/Interactive.15</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.15.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.15.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>

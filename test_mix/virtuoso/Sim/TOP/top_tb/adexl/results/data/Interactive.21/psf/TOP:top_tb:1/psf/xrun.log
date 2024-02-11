@@ -1,0 +1,190 @@
+xrun(64): 23.09-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s002: Started on Feb 09, 2024 at 03:15:26 EST
+xrun
+	-f xrunArgs
+		-UNBUFFERED
+		-cdslib ./cds.lib
+		-errormax 50
+		-status
+		-nowarn DLNOHV
+		-nowarn DLCLAP
+		-v93
+		-incdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+		-ade
+		-timescale 1ns/1ns
+		-vtimescale 1ns/1ns
+		-discipline logic
+		-delay_mode None
+		-novitalaccl
+		-access r
+		-noparamerr
+		-amspartinfo ../psf/partition.info
+		-rnm_partinfo
+		-modelincdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+		./spiceModels.scs
+		./amsControlSpectre.scs
+		-input ./probe.tcl
+		-run
+		-exit
+		-xmsimargs "+amsrawdir ../psf"
+		-spectre_args "-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.21/sharedData/CDS/ahdl/input.ahdlSimDB"
+		-spectre_args +logstatus
+		-simcompatible_ams spectre
+		-name TOP.top_tb:config
+		-amsconnrules ConnRules_3V_full_fast
+		+define+CDS_SELECT_CRS
+		+define+CONNRULES_3V_FULL_FAST
+		-allowredefinition
+		-amsbind
+		-top TOP.top_tb:schematic
+		-top cds_globals
+		./netlist.vams
+		-f ./textInputs
+			-amscompilefile "file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams"
+			-makelib TOP
+			-makelib INV_HV
+			-makelib INV_LP
+			-makelib IORING
+			-makelib HV_CELLS
+			-endlib
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
+		-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v
+		./cds_globals.vams
+		-l ../psf/xrun.log
+		-spectre_args ++aps
+file: ./netlist.vams
+	module COUNTER_JI3.counter:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dhpw_2x100:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_dhpw_2x100_stack3:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_iscrd2_4x100:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isab_15_04:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isabhv_1050gcr:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsab_15_10:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsabhv_750:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_c5pk:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.HVD4SJD1R5PKFs:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsab_40_10:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pmbsabhv_2000:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isab_40_04:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_pe3isabhv_2800gcr:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_d5pk:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.HVDD4DJ5PKFs:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.ioh_d2pk:schematic
+		errors: 0, warnings: 0
+	module HV_CELLS.HVDD4D2PK:schematic
+		errors: 0, warnings: 0
+	module IORING.ioring:schematic
+		errors: 0, warnings: 0
+	module INV_LP.inv:schematic
+		errors: 0, warnings: 0
+	module INV_HV.inv_hv:schematic
+		errors: 0, warnings: 0
+	module TOP.top:schematic
+		errors: 0, warnings: 0
+	module TOP.top_tb:schematic
+		errors: 0, warnings: 0
+file: ./cds_globals.vams
+	module worklib.cds_globals:vams
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams
+	module COUNTER_JI3.counter_stimulus:verilogams
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v
+	module v2_1_0.AN21JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.AN22JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX16:v
+		errors: 0, warnings: 0
+	module v2_1_0.BUJI3VX2:v
+		errors: 0, warnings: 0
+	module v2_1_0.DFRQJI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.DFRQJI3VX2:v
+		errors: 0, warnings: 0
+	module v2_1_0.DFRQJI3VX4:v
+		errors: 0, warnings: 0
+	module v2_1_0.DLY1JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.DLY2JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.EN2JI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.INJI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.NA2JI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.NO2JI3VX0:v
+		errors: 0, warnings: 0
+	module v2_1_0.ON211JI3VX1:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP10JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP15JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP25JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP5JI3V:v
+		errors: 0, warnings: 0
+	module v2_1_0.DECAP7JI3V:v
+		errors: 0, warnings: 0
+file: /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v
+	primitive VLG_PRIMITIVES.u1_fd5:v
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/ given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+xmvlog: Memory Usage - Current physical: 20.7M, Current virtual: 60.4M
+xmvlog: CPU Usage - 0.0s system + 0.1s user = 0.1s total (0.1s, 50.5% cpu)
+AMSD Universal Connect Module UCM is enabled.
+		Caching library 'COUNTER_JI3' ....... Done
+		Caching library 'HV_CELLS' ....... Done
+		Caching library 'INV_HV' ....... Done
+		Caching library 'INV_LP' ....... Done
+		Caching library 'IORING' ....... Done
+		Caching library 'TOP' ....... Done
+		Caching library 'VLG_PRIMITIVES' ....... Done
+		Caching library 'v2_1_0' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: Verilog AMS module.
+		Caching library 'IORING' ....... Done
+		Caching library 'HV_CELLS' ....... Done
+		Caching library 'worklib' ....... Done
+		Caching library 'v2_1_0' ....... Done
+		Caching library 'VLG_PRIMITIVES' ....... Done
+		Caching library 'TOP' ....... Done
+		Caching library 'INV_HV' ....... Done
+		Caching library 'INV_LP' ....... Done
+VDDORPADPC I18 (.PSUB( PSUB ), .GNDRI( GNDORA ), .VDD3I( VDDA ), .GNDI( GNDA ), .VDDORI( VDDORA ), .GNDOI( GNDORA ));
+             |
+xmelab: *F,OSDINF (./netlist.vams,1582|13): instance 'top_tb.I0@top<module>.I0@ioring<module>.I18' of design unit 'VDDORPADPC' is a leaf instance and is unresolved in cellview 'IORING.ioring:schematic'. Ensure that the design unit is either pre-compiled or its corresponding text file is specified for compilation. Also, check the binding for this instance in Cadence Hierarchy Editor to confirm if it is set to externalHDL or addStopPoint or if nlAction is set to 'stop' for the specified instance.
+xmelab: Memory Usage - Final: 38.2M, Peak: 38.2M, Peak virtual: 136.6M
+xmelab: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 84.9% cpu)
+xrun: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 2), exiting.
+TOOL:	xrun(64)	23.09-s002: Exiting on Feb 09, 2024 at 03:15:34 EST  (total: 00:00:08)
+
+
+********* LOG ENDS **************
+**                             **

@@ -1,0 +1,4 @@
+    I0 jio_ts4_pc
+    I5 jio_ipdio_pc
+ends BT4PC
+// End of subcircuit definition.

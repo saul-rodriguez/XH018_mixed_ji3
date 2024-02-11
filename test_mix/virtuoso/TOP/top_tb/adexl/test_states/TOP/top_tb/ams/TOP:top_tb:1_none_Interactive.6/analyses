@@ -3,7 +3,7 @@ analysis(dc fields dec) ""
 analysis(dc fields designVar) ""
 analysis(dc fields dev) ""
 analysis(dc fields deviceParam) ""
-analysis(dc fields enable) (t)
+analysis(dc fields enable) (nil)
 analysis(dc fields hysteresis) nil
 analysis(dc fields incrType) "Automatic"
 analysis(dc fields lin) ""
@@ -12,7 +12,7 @@ analysis(dc fields mod) ""
 analysis(dc fields modelParam) ""
 analysis(dc fields param) ""
 analysis(dc fields rangeType) "Start-Stop"
-analysis(dc fields saveOppoint) t
+analysis(dc fields saveOppoint) nil
 analysis(dc fields span) ""
 analysis(dc fields start) ""
 analysis(dc fields step) ""
@@ -68,7 +68,7 @@ analysis(tran fields dynparam) ""
 analysis(tran fields enable) (t)
 analysis(tran fields enableMinFreq) ""
 analysis(tran fields enablepsdstarttime) ""
-analysis(tran fields errpreset) "liberal"
+analysis(tran fields errpreset) ""
 analysis(tran fields fundFreq) ""
 analysis(tran fields noisefmax) ""
 analysis(tran fields noisefmin) ""

@@ -1,0 +1,7 @@
+
+jio_ts4_pc I0 ( .A(A), .PAD(PAD), .EN(EN), .VDDO(VDDOI), .VDD(VDD3I), 
+    .GNDO(GNDOI), .PSUB(PSUB), .VDN(VDDOI), .GND(GNDI));
+
+jio_ipdio_pc I5 ( .PSUB(PSUB), .DNWR(VDDRI), .PWIR(GNDRI));
+
+endmodule

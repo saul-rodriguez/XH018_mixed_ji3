@@ -1,0 +1,104 @@
+hnlLastStopCellInfo = '(
+                           ( "PRIMLIB" "dn3" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "rdn3" "auCdl" "49" "1666777074" )
+                          ( "PRIMLIB" "ne3i" "auCdl" "52" "1666777074" )
+                          ( "PRIMLIB" "rdp3" "auCdl" "49" "1666777074" )
+                          ( "PRIMLIB" "ddnwmv" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "dipdnwmv" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "pe3i" "auCdl" "53" "1666777074" )
+                          ( "PRIMLIB" "rpp1" "auCdl" "40" "1666777074" )
+                          ( "PRIMLIB" "dp3" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "ddnw" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "dhpw" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "rdp_io" "auCdl" "49" "1666777074" )
+                          ( "PRIMLIB" "dphnw" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "pmb" "auCdl" "50" "1666777074" )
+                          ( "PRIMLIB" "rnp1" "auCdl" "40" "1666777074" )
+                          ( "PRIMLIB" "s_res" "auCdl" "27" "1666777074" )
+                          ( "PRIMLIB" "dnpdd_scr" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "dpdd_scr" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "dpdnw" "auCdl" "35" "1666777074" )
+                          ( "PRIMLIB" "rpp1s" "auCdl" "40" "1666777074" )
+                       )
+hnlLastTopViewWasConfig = 0
+hnlLastMaxNameLength = 60
+hnlLastNamePrefix = "hnl_"
+hnlLastNetNamePrefix = "N"
+hnlLastInstNamePrefix = ""
+hnlLastModelNamePrefix = ""
+hnlLastGlobalNetPrefix = "G"
+hnlLastModulePrefix = "sub"
+hnlLastHierarchyDelimiter = "."
+hnlLastNetlistRevision = "__Revision2"
+hnlLastOptimizeCellGenerationInConfig = nil
+hnlLastMapNetFirstChar = '(
+                            "	"
+                            " "
+                            "$"
+                            ","
+                            "/"
+                            "0"
+                            "1"
+                            "2"
+                            "3"
+                            "4"
+                            "5"
+                            "6"
+                            "7"
+                            "8"
+                            "9"
+                            ":"
+                            ";"
+                            "="
+                          )
+hnlLastMapNetInName = '(
+                            "	"
+                            " "
+                            "$"
+                            ","
+                            "/"
+                            ":"
+                            ";"
+                            "="
+                          )
+hnlLastMapInstFirstChar = '(
+                            "	"
+                            " "
+                            "$"
+                            ","
+                            "/"
+                            "0"
+                            "1"
+                            "2"
+                            "3"
+                            "4"
+                            "5"
+                            "6"
+                            "7"
+                            "8"
+                            "9"
+                            ":"
+                            ";"
+                            "="
+                          )
+hnlLastMapInstInName = '(
+                            "	"
+                            " "
+                            "$"
+                            ","
+                            "/"
+                            ":"
+                            ";"
+                            "="
+                          )
+hnlLastInstNameDifferentFrom = '( )
+hnlLastModelNameDifferentFrom = '( )
+hnlLastNetNameDifferentFrom = '( )
+hnlLastTermNameDifferentFrom = '( )
+hnlLastParamNameDifferentFrom = '( )
+hnlLastLibInfo = '(
+                    ( "IO_CELLS_JIC3V" "1637138813" )
+                   ( "HV_CELLS" "1591174065" )
+                   ( "IORING" "1707292561" )
+                  )
+hnlLastDesignVars = '( )

@@ -1,0 +1,37 @@
+    M1 (net14 YN VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 ad=6.48e-13 \
+        ps=5.76e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 m=(1)*(2) \
+        par1=(1)*(2)
+    M3 (net19 net14 VDD VDD) pe3i w=2.4u l=350.0n as=8.16e-13 ad=6.48e-13 \
+        ps=3.88e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 m=(1)*(6) \
+        par1=(1)*(6)
+    M7 (PO PI VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 ad=1.152e-12 \
+        ps=5.76e-06 pd=5.76e-06 nrs=0.1125 nrd=0.1125 m=(1)*(1) \
+        par1=(1)*(1)
+    M9 (PO net14 VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 ad=1.152e-12 \
+        ps=5.76e-06 pd=5.76e-06 nrs=0.1125 nrd=0.1125 m=(1)*(1) \
+        par1=(1)*(1)
+    M11 (net16 net14 VDD VDD) pe3i w=2.4u l=350.0n as=1.152e-12 \
+        ad=6.48e-13 ps=5.76e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 \
+        m=(1)*(2) par1=(1)*(2)
+    M5 (Y net19 VDD VDD) pe3i w=2.4u l=350.0n as=7.488e-13 ad=6.48e-13 \
+        ps=3.504e-06 pd=2.94e-06 nrs=0.1125 nrd=0.1125 m=(1)*(10) \
+        par1=(1)*(10)
+    M2 (net14 YN GND GND) ne3i w=1.2u l=400n as=5.76e-13 ad=3.24e-13 \
+        ps=3.36e-06 pd=1.74e-06 nrs=0.225 nrd=0.225 m=(1)*(2) par1=(1)*(2)
+    M6 (Y net16 GND GND) ne3i w=1.68u l=400n as=5.712e-13 ad=4.536e-13 \
+        ps=2.92e-06 pd=2.22e-06 nrs=0.160714 nrd=0.160714 m=(1)*(6) \
+        par1=(1)*(6)
+    M8 (PO net14 net37 GND) ne3i w=1.68u l=400n as=8.064e-13 ad=8.064e-13 \
+        ps=4.32e-06 pd=4.32e-06 nrs=0.160714 nrd=0.160714 m=(1)*(1) \
+        par1=(1)*(1)
+    M10 (net37 PI GND GND) ne3i w=1.68u l=400n as=8.064e-13 ad=8.064e-13 \
+        ps=4.32e-06 pd=4.32e-06 nrs=0.160714 nrd=0.160714 m=(1)*(1) \
+        par1=(1)*(1)
+    M13 (net19 net14 GND GND) ne3i w=1.68u l=400n as=8.064e-13 \
+        ad=4.536e-13 ps=4.32e-06 pd=2.22e-06 nrs=0.160714 nrd=0.160714 \
+        m=(1)*(2) par1=(1)*(2)
+    M4 (net16 net14 GND GND) ne3i w=1.68u l=400n as=6.3e-13 ad=4.536e-13 \
+        ps=3.27e-06 pd=2.22e-06 nrs=0.160714 nrd=0.160714 m=(1)*(4) \
+        par1=(1)*(4)
+ends jio_ndtr_pc
+// End of subcircuit definition.

@@ -1,0 +1,36 @@
+    MN2 (out b net10 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN1 (out a net10 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN3 (net10 c net25 inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MN4 (net25 d inh_ground_gnd3i inh_ground_gnd3i) ne3i w=GT_PDW l=GT_PDL \
+        as=4.8e-07*(GT_PDW) ad=4.8e-07*(GT_PDW) ps=1*2*(4.8e-07+(GT_PDW)) \
+        pd=2*(4.8e-07+(GT_PDW)) nrs=2.7e-07/(GT_PDW) nrd=2.7e-07/(GT_PDW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP4 (out d inh_power_vdd3i inh_power_vdd3i) pe3i w=0.7*GT_PUW l=GT_PUL \
+        as=4.8e-07*(0.7*GT_PUW) ad=4.8e-07*(0.7*GT_PUW) \
+        ps=1*2*(4.8e-07+(0.7*GT_PUW)) pd=2*(4.8e-07+(0.7*GT_PUW)) \
+        nrs=2.7e-07/(0.7*GT_PUW) nrd=2.7e-07/(0.7*GT_PUW) m=(1)*(1) \
+        par1=(1)*(1)
+    MP2 (net24 b inh_power_vdd3i inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP1 (out a net24 inh_power_vdd3i) pe3i w=GT_PUW l=GT_PUL \
+        as=4.8e-07*(GT_PUW) ad=4.8e-07*(GT_PUW) ps=1*2*(4.8e-07+(GT_PUW)) \
+        pd=2*(4.8e-07+(GT_PUW)) nrs=2.7e-07/(GT_PUW) nrd=2.7e-07/(GT_PUW) \
+        m=(1)*(1) par1=(1)*(1)
+    MP3 (out c inh_power_vdd3i inh_power_vdd3i) pe3i w=0.7*GT_PUW l=GT_PUL \
+        as=4.8e-07*(0.7*GT_PUW) ad=4.8e-07*(0.7*GT_PUW) \
+        ps=1*2*(4.8e-07+(0.7*GT_PUW)) pd=2*(4.8e-07+(0.7*GT_PUW)) \
+        nrs=2.7e-07/(0.7*GT_PUW) nrd=2.7e-07/(0.7*GT_PUW) m=(1)*(1) \
+        par1=(1)*(1)
+ends o2na3ji3v
+// End of subcircuit definition.

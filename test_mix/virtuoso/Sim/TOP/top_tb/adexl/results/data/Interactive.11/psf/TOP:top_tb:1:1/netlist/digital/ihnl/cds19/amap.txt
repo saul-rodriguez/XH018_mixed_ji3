@@ -1,0 +1,2 @@
+netMap,*jio_tsctrl_pc,*gnd!,*cds_globals.\gnd! 
+cellMap,*jio_tsctrl_pc,*jio_tsctrl_pc,*IO_CELLS_JIC3V,*cmos_sch

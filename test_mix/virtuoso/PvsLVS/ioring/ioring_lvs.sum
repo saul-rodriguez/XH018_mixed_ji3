@@ -1,0 +1,95 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : ioring_lvs.sum
+ERC Summary File         : ioring.sum
+LVS Comparison Report    : ioring_lvs.sum.cls
+LVS Softchk Report       : ioring.softchk
+Layout Name              : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring/ioring.gds ("ioring")
+User Name                : saul
+Creation Time            : Fri Feb  9 20:04:24 2024
+Current directory        : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring
+PVS Version              : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_SOFTCHK nwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK dnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hvnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK ndftrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hnw -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK catdiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK anodiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pwitrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pdf -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK bulk -TYPE CONTACT   Total Result        0 (       0)
+
+Warnings and errors of connectivity for cell "PWRCUTDCPC"
+---------------------------------------------------------
+
+[WARN] Same label "VDDOI1" for multiple nets, it is assigned to net 5 :
+    [1] Net 5 on layer 50333(METTP_TEXT) at (0.500, 167.715)
+    [2] Net 5 on layer 50333(METTP_TEXT) at (0.500, 201.215)
+    [3] Net 5 on layer 50313(MET4_TEXT) at (0.500, 167.715)
+    [4] Net 5 on layer 50313(MET4_TEXT) at (0.500, 201.215)
+    [5] Net 5 on layer 50283(MET3_TEXT) at (0.500, 167.815)
+    [6] Net 5 on layer 50283(MET3_TEXT) at (0.500, 201.615)
+    [7] Net 5 on layer 50353(METL_TEXT) at (0.500, 167.590)
+    [8] Net 5 on layer 50353(METL_TEXT) at (0.500, 201.840)
+    [9] Net 11 on layer 50353(METL_TEXT) at (0.500, 238.465)
+    [10] Net 11 on layer 50333(METTP_TEXT) at (0.500, 238.610)
+    [11] Net 11 on layer 50313(MET4_TEXT) at (0.500, 238.610)
+    [12] Net 11 on layer 50283(MET3_TEXT) at (0.500, 238.610)
+
+[WARN] Same label "VDDOI2" for multiple nets, it is assigned to net 9 :
+    [1] Net 9 on layer 50333(METTP_TEXT) at (69.500, 167.715)
+    [2] Net 9 on layer 50333(METTP_TEXT) at (69.500, 201.215)
+    [3] Net 9 on layer 50313(MET4_TEXT) at (69.500, 167.715)
+    [4] Net 9 on layer 50313(MET4_TEXT) at (69.500, 201.215)
+    [5] Net 9 on layer 50283(MET3_TEXT) at (69.500, 167.815)
+    [6] Net 9 on layer 50283(MET3_TEXT) at (69.500, 201.615)
+    [7] Net 9 on layer 50353(METL_TEXT) at (69.500, 167.590)
+    [8] Net 9 on layer 50353(METL_TEXT) at (69.500, 201.840)
+    [9] Net 15 on layer 50353(METL_TEXT) at (69.500, 238.465)
+    [10] Net 15 on layer 50333(METTP_TEXT) at (69.500, 238.610)
+    [11] Net 15 on layer 50313(MET4_TEXT) at (69.500, 238.610)
+    [12] Net 15 on layer 50283(MET3_TEXT) at (69.500, 238.580)
+
+[WARN] Same label "GNDOI1" for multiple nets, it is assigned to net 1 :
+    [1] Net 1 on layer 50353(METL_TEXT) at (0.500, 91.680)
+    [2] Net 1 on layer 50353(METL_TEXT) at (0.500, 125.930)
+    [3] Net 1 on layer 50333(METTP_TEXT) at (0.500, 91.405)
+    [4] Net 1 on layer 50333(METTP_TEXT) at (0.500, 125.805)
+    [5] Net 1 on layer 50313(MET4_TEXT) at (0.500, 91.405)
+    [6] Net 1 on layer 50313(MET4_TEXT) at (0.500, 125.805)
+    [7] Net 1 on layer 50283(MET3_TEXT) at (0.500, 91.905)
+    [8] Net 1 on layer 50283(MET3_TEXT) at (0.500, 125.705)
+    [9] Net 13 on layer 50353(METL_TEXT) at (0.500, 227.465)
+    [10] Net 13 on layer 50333(METTP_TEXT) at (0.500, 226.505)
+    [11] Net 13 on layer 50313(MET4_TEXT) at (0.500, 226.505)
+    [12] Net 13 on layer 50283(MET3_TEXT) at (0.500, 227.680)
+
+[WARN] Same label "GNDOI2" for multiple nets, it is assigned to net 3 :
+    [1] Net 3 on layer 50353(METL_TEXT) at (69.500, 91.680)
+    [2] Net 3 on layer 50353(METL_TEXT) at (69.500, 125.930)
+    [3] Net 3 on layer 50333(METTP_TEXT) at (69.500, 91.405)
+    [4] Net 3 on layer 50333(METTP_TEXT) at (69.500, 125.805)
+    [5] Net 3 on layer 50313(MET4_TEXT) at (69.500, 91.405)
+    [6] Net 3 on layer 50313(MET4_TEXT) at (69.500, 125.805)
+    [7] Net 3 on layer 50283(MET3_TEXT) at (69.500, 91.905)
+    [8] Net 3 on layer 50283(MET3_TEXT) at (69.500, 125.705)
+    [9] Net 17 on layer 50353(METL_TEXT) at (69.500, 227.465)
+    [10] Net 17 on layer 50333(METTP_TEXT) at (69.500, 226.505)
+    [11] Net 17 on layer 50313(MET4_TEXT) at (69.500, 226.505)
+    [12] Net 17 on layer 50283(MET3_TEXT) at (69.500, 227.680)
+

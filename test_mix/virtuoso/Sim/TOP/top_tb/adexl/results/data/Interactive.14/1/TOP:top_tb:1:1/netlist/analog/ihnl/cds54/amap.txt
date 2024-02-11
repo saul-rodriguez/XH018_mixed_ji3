@@ -1,0 +1,14 @@
+cellMap,*DECAP15JI3V,*DECAP15JI3V,*D_CELLS_JI3V,*cmos_sch
+netMap,*DECAP15JI3V,*gnd3i!,*gnd3i!
+netMap,*DECAP15JI3V,*vdd3i!,*vdd3i!
+netMap,*DECAP15JI3V,*gnd!,*0
+instMap,*DECAP15JI3V,*M7,*M7
+instMaster,*DECAP15JI3V,*M7,*PRIMLIB_ne3i_spectre,*ne3i
+instMap,*DECAP15JI3V,*M6,*M6
+instMaster,*DECAP15JI3V,*M6,*PRIMLIB_ne3i_spectre,*ne3i
+instMap,*DECAP15JI3V,*M5,*M5
+instMaster,*DECAP15JI3V,*M5,*PRIMLIB_pe3i_spectre,*pe3i
+instMap,*DECAP15JI3V,*M4,*M4
+instMaster,*DECAP15JI3V,*M4,*PRIMLIB_pe3i_spectre,*pe3i
+netMap,*DECAP15JI3V,*inh_ground_gnd3i_gnd3i!,*inh_ground_gnd3i
+netMap,*DECAP15JI3V,*inh_power_vdd3i_vdd3i!,*inh_power_vdd3i
