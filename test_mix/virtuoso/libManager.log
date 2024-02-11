@@ -1,14 +1,15 @@
 \o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 08/30/2023 13:17 (sjfdcl1037) $
 \o Sub version:		sub-version  s342 
-\o Arguments:		-mpssession virtuoso10410 -mpshost phoenix 
+\o Arguments:		-mpssession virtuoso26966 -mpshost phoenix 
 \o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
 \o 64-bit offsets
 \o Qt version: 		5.9.1
 \o Log file is "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/libManager.log".
 \o Opening libManager window.
-\a nrResizeWindow(cdsLibManager list(925 101 743 853))
+\a nrResizeWindow(cdsLibManager list(1052 212 743 853))
 \a nrSetCurrentWindow(cdsLibManager)
 \o MPS virtuoso types registered: 68
+\a nrResizeWindow(cdsLibManager list(1052 190 743 853))
 \o changeWorkingDir("/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso") unnecessary.
 \o ddSetForcedLib("") unnecessary.
 \o MPS service: map window
@@ -17,10 +18,6 @@
 \a cdsLibManager->libLineEdit->value = "IORING"
 \a cdsLibManager->cellListBox->value = "ioring3"
 \a cdsLibManager->cellLineEdit->value = "ioring3"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
 \o MPS request: edit design
@@ -41,10 +38,19 @@
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = "layout"
-\a cdsLibManager->viewLineEdit->value = "layout"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "ioring"
+\a cdsLibManager->cellLineEdit->value = "ioring"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
 \o MPS request: edit design
-\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
 \a cdsLibManager->libListBox->value = nil
 \a cdsLibManager->libLineEdit->value = ""
 \a cdsLibManager->cellListBox->value = nil
@@ -53,19 +59,77 @@
 \a cdsLibManager->cellLineEdit->value = ""
 \a cdsLibManager->libListBox->value = "IORING"
 \a cdsLibManager->libLineEdit->value = "IORING"
-\a cdsLibManager->cellListBox->value = "ioring3"
-\a cdsLibManager->cellLineEdit->value = "ioring3"
-\a cdsLibManager->viewListBox->value = "layout"
-\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellListBox->value = "ioring"
+\a cdsLibManager->cellLineEdit->value = "ioring"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "layout"
-\a cdsLibManager->viewLineEdit->value = "layout"
-\a nrResizeWindow(cdsLibManager list(1124 421 743 853))
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\o MPS service: map window
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(1052 212 743 853))
+\a nrListItemExpand(cdsLibManager->libListBox "XFABLibs" t)
+\a nrListItemExpand(cdsLibManager->libListBox "XFABLibs/EsdLibs" t)
+\a cdsLibManager->libListBox->value = "XFABLibs/EsdLibs/HV_CELLS"
+\a cdsLibManager->libLineEdit->value = "HV_CELLS"
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->showCatsToggle->value = t
+\a cdsLibManager->QToolButton7->value = t
+\a cdsLibManager->showCategoriesAction->value = t
+\a cdsLibManager->libCatsTreeView->value = "Everything"
+\a cdsLibManager->catLineEdit->value = "Everything"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(713 190 1082 853))
+\a cdsLibManager->libCatsTreeView->value = "HV_Special_isol"
+\a cdsLibManager->catLineEdit->value = "HV_Special_isol"
+\a cdsLibManager->cellListBox->value = "HVSSO"
+\a cdsLibManager->cellLineEdit->value = "HVSSO"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a lmgrLogShowPopup("mainListPopup2" 52 34 2 "schematic")
+\a cdsLibManager->FileOpenROButton->value = t
+\o MPS request: open design readonly
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "HVSSOFl"
+\a cdsLibManager->cellLineEdit->value = "HVSSOFl"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a lmgrLogShowPopup("mainListPopup2" 67 27 2 "schematic")
+\a cdsLibManager->FileOpenROButton->value = t
+\o MPS request: open design readonly
 \a nrSetCurrentWindow(cdsLibManager)
 \a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(274 361 1082 853))
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(318 249 1082 853))
+\a nrResizeWindow(cdsLibManager list(313 175 1082 853))
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(315 134 1082 853))
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\a _lmgrCloseIconify("cdsLibManager" 1)
 \o MPS service: shutdown
 \o libManager is exiting.
 \a exit(0)

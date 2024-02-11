@@ -1,6 +1,6 @@
 cell: "ioring3"
-selected net: "PSUB"
-rejected nets: "10" 
+selected net: "GNDOHV"
+rejected nets: "PSUB" 
 contact layer:  "ptap"
 lower layer: "bulk"
 upper layer:  "pdiff"

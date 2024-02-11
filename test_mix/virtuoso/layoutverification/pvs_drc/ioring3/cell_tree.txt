@@ -1,5 +1,8 @@
 ioring3
 
+jio_baseps_m2_pc
+	jio_via134tp_pc
+
 jio_pe3isb_pc
 	jio_via134tp_pc
 
@@ -16,9 +19,6 @@ jio_base_metal_pc
 jio_ne3isbg_pc
 	jio_via134tp_pc
 
-jio_basensplink_pc
-	jio_via234tp_pc
-
 jio_basepspfl_pc
 	jio_filpoly_ap_pc
 	jio_fildifpoly_ap_pc
@@ -28,15 +28,16 @@ jio_base_ntrbg_pc
 	jio_via134tp_pc
 
 PSUBPADPC
-	jio_via134tp_pc
+	jio_baseps_m2_pc
 	jio_resg_pc
 	jio_baseaps_pc
+	jio_via234tp_pc
 	jio_base_ptrps_pc
 	jio_viabtp_pc
 	jio_padp_pc
 	jio_via34tp1r_pc
+	jio_base_metal_pc
 	jio_ne3isbg_pc
-	jio_basensplink_pc
 	jio_basepspfl_pc
 	jio_base_ntrbg_pc
 
@@ -51,12 +52,13 @@ jio_base_ntrc_pc
 	jio_ne3isb_pc
 
 jio_basepsc_pc
-	jio_via134tp_pc
+	jio_baseps_m2_pc
 	jio_resg_pc
 	jio_baseaps_pc
 	jio_base_ptrps_pc
 	jio_padp_pc
 	jio_via34tp1r_pc
+	jio_base_metal_pc
 	jio_basepspfl_pc
 	jio_base_ntrc_pc
 	jio_basenplink_pc
@@ -76,11 +78,12 @@ jio_base_ntr_pc
 	jio_ne3isb_pc
 
 VDDORPADPC
-	jio_via134tp_pc
+	jio_baseps_m2_pc
 	jio_resg_pc
 	jio_baseaps_pc
 	jio_padp_pc
 	jio_via34tp1r_pc
+	jio_base_metal_pc
 	jio_basepspfl_pc
 	jio_basenplink_pc
 	jio_base_ptrpsfl_pc
@@ -101,9 +104,9 @@ GNDORPADPC
 	jio_resg_pc
 	jio_padp_pc
 	jio_via34tp1r_pc
+	jio_base_metal_pc
 	jio_basepspfl_pc
 	jio_base_ngo_pc
-	jio_baseps_m2g_pc
 
 jio_bufy_pc
 	jio_fillpolym1_pc
@@ -113,11 +116,10 @@ jio_base_ptr_pc
 	jio_via234tp_pc
 
 jio_baseti_pc
-	jio_viabtp_pc
 	jio_padp_pc
 	jio_base_metal_pc
-	jio_ne3isb_pc
 	jio_basenplink_pc
+	jio_base_ntr_pc
 	jio_base_ptr_pc
 	jio_base_m2_pc
 
@@ -186,12 +188,13 @@ CORNERESDPC
 	jio_crnedifpoly_half_pc
 
 APR00DPC
-	jio_via134tp_pc
+	jio_baseps_m2_pc
 	jio_resg_pc
 	jio_baseaps_pc
 	jio_base_ptrps_pc
 	jio_padp_pc
 	jio_via34tp1r_pc
+	jio_base_metal_pc
 	jio_basepspfl_pc
 	jio_basenplink_pc
 	jio_base_ntr_pc
@@ -206,16 +209,77 @@ jio_baseavdpfl_pc
 
 APR04DPC
 	jio_resg_pc
-	jio_viabtp_pc
 	jio_padp_pc
 	jio_base_metal_pc
-	jio_ne3isb_pc
 	jio_basenplink_pc
+	jio_base_ntr_pc
 	jio_fillpolym1_pc
+	jio_base_m2_pc
 	jio_base_ptra_pc
 	jio_baseavdpfl_pc
 
+ioh_pad53_62
+	std_pad_viabtp_edge
+	std_pad_viabtp
+
+ioh_basej_pad53_inline
+	ioh_pad53_62
+	ioh_pad53_tap_inline
+
+ioh_dhpw_2x100
+	ioh_dhpw_100
+
+ioh_pmbsabhv_750
+	ioh_pmbsabhv_2x15_10
+
+ioh_pe3isabhv_1050gcr
+	ioh_pe3sab_2x15_04
+	ioh_rnp1_20k
+
+HVD4SJD1R5PKFs
+	ioh_base40_fs
+	ioh_base39_fs
+	ioh_base36_fs
+	ioh_basej_pad53_inline
+	ioh_iscrd2_4x10
+	ioh_iscrd2_e4x10
+	ioh_dhpw_2x100
+	ioh_pmbsabhv_750
+	ioh_pe3isabhv_1050gcr
+	ioh_base64_fs
+
+ioh_pmbsabhv_2000
+	ioh_pmbsabhv_2x40_10
+
+ioh_pe3isabhv_2800gcr
+	ioh_rnp1_20k
+	ioh_pe3sab_2x40_04
+
+HVDD4D2PK
+	ioh_pad53_62
+	ioh_ddnw_2x100
+	ioh_pmbsabhv_2000
+	ioh_pe3isabhv_2800gcr
+
+HVDD4DJ5PKFs
+	ioh_base40_fs
+	ioh_base39_fs
+	ioh_basej_pad53_inline
+	ioh_dhpw_2x100
+	ioh_base64_fs
+	ioh_pmbsabhv_2000
+	ioh_pe3isabhv_2800gcr
+	ioh_base61_fs
+
+HVSSFs
+	ioh_pad53_62
+	ioh_pad53_tap_inline
+
 ioring3
+	VIATPL_C_CDNS_707666402922
+	VIA1_C_CDNS_707666402923
+	VIATP_C_CDNS_707666402925
+	VIA3_C_CDNS_707666402926
 	PSUBPADPC
 	VDDPADPC
 	VDDORPADPC
@@ -228,4 +292,8 @@ ioring3
 	CORNERESDPC
 	APR00DPC
 	APR04DPC
+	HVD4SJD1R5PKFs
+	HVDD4D2PK
+	HVDD4DJ5PKFs
+	HVSSFs
 

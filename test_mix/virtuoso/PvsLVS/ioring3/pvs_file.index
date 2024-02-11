@@ -5,7 +5,7 @@
 "Run Directory" internal none /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3
 "Current Directory" internal none /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
 "Cadence Directory" internal none /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.cadence/
-"Job Signature" internal none IPVS_1707610849_30538
+"Job Signature" internal none IPVS_1707666447_27162
 "PVS Job Mode" internal none lvs
 "GUI Flow" internal none virtuoso6
 "GUI Preset" internal none /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/.preset.autosave
@@ -16,7 +16,7 @@
 "PVS Version" internal none 23.10-p043
 "Binary Name" internal none pvsgui
 "PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
-"PVS Job Time" internal none 1707610851
+"PVS Job Time" internal none 1707666449
 "DFII version" internal none 6.1.8.0
 "Rule File" input text /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/.config.rul
 "Rule File" input text /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/.technology.rul
@@ -70,7 +70,7 @@
 "ERC Result" internal none EMPTY
 "UI Data" internal none ENABLED
 "Lvs Replicate Devices" internal none ENABLED
-"PVS Mode Info" internal none GGMPNPLLLAKNNFAGIOGLCIFKPAOCLFHK
+"PVS Mode Info" internal none GGMPNPLLLAKNNFAGOAHGIOALPKAMILPD
 "Report MaxResults" internal none 1000
 "Binary Name" internal none pvs
 "Comparison Result" internal none MATCH
@@ -78,4 +78,4 @@
 "PVS Version" internal none 23.10-p043
 "Binary Name" internal none pvsnvn
 "PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
-"PVS Job Time" internal none 1707610861
+"PVS Job Time" internal none 1707666460

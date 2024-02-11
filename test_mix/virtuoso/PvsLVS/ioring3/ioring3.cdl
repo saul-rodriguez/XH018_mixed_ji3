@@ -4,7 +4,7 @@
 * Library Name:  IORING
 * Top Cell Name: ioring3
 * View Name:     schematic
-* Netlisted on:  Feb 10 19:20:52 2024
+* Netlisted on:  Feb 11 10:47:31 2024
 ************************************************************************
 
 *.BIPOLAR
@@ -932,18 +932,743 @@ RR1 PAD Y 391.392 $[RPP1] $W=2u $L=2.2u M=1
 .ENDS
 
 ************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_iscrd2_4x100
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_iscrd2_4x100 A Gn Gp K Sub
+*.PININFO A:B Gn:B Gp:B K:B Sub:B
+DD1 Gp K DNPDD_SCR 5.36386e-10 409.56u M=1
+DD2 Gp Gn DPDD_SCR 2.19633e-09 457.16u M=1
+DD0 A Gn DPDNW 1.89063e-10 203.78u M=4
+DD_Guard Sub Gn DDNW 6.92224e-09 359.17u M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_dhpw_2x100
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_dhpw_2x100 A K Sub
+*.PININFO A:B K:B Sub:B
+DD0 Sub K DDNW 3.37852e-09 284.4u M=1
+DD1 A K DHPW 3.87893e-10 207.812u M=2
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_dhpw_2x100_stack3
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_dhpw_2x100_stack3 A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI0 A_l net20 Sub / ioh_dhpw_2x100
+XI2 net14 K_h Sub / ioh_dhpw_2x100
+XI1 net20 net14 Sub / ioh_dhpw_2x100
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isab_15_04
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isab_15_04 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX net17 G S B PE3I W=15.0u L=400n M=1.0 AD=7.2e-12 AS=7.2e-12 PD=3.096e-05 
++ PS=3.096e-05 NRD=0.018 NRS=0.018
+RR0 net17 D 4.73896 $SUB=B $[RDP3] $W=15.0u $L=430.0n M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isabhv_1050gcr
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isabhv_1050gcr D SB Sub
+*.PININFO D:B SB:B Sub:B
+DMD<1> D SB DP3 9.89102e-12 1.32u M=1
+DMD<2> D SB DP3 9.89102e-12 1.32u M=1
+DMD<3> D SB DP3 9.89102e-12 1.32u M=1
+DMD<4> D SB DP3 9.89102e-12 1.32u M=1
+DMD<5> D SB DP3 9.89102e-12 1.32u M=1
+DMD<6> D SB DP3 9.89102e-12 1.32u M=1
+DMD<7> D SB DP3 9.89102e-12 1.32u M=1
+DMD<8> D SB DP3 9.89102e-12 1.32u M=1
+DMD<9> D SB DP3 9.89102e-12 1.32u M=1
+DMD<10> D SB DP3 9.89102e-12 1.32u M=1
+DMD<11> D SB DP3 9.89102e-12 1.32u M=1
+DMD<12> D SB DP3 9.89102e-12 1.32u M=1
+DMD<13> D SB DP3 9.89102e-12 1.32u M=1
+DMD<14> D SB DP3 9.89102e-12 1.32u M=1
+DMD<15> D SB DP3 9.89102e-12 1.32u M=1
+DMD<16> D SB DP3 9.89102e-12 1.32u M=1
+DMD<17> D SB DP3 9.89102e-12 1.32u M=1
+DMD<18> D SB DP3 9.89102e-12 1.32u M=1
+DMD<19> D SB DP3 9.89102e-12 1.32u M=1
+DMD<20> D SB DP3 9.89102e-12 1.32u M=1
+DMD<21> D SB DP3 9.89102e-12 1.32u M=1
+DMD<22> D SB DP3 9.89102e-12 1.32u M=1
+DMD<23> D SB DP3 9.89102e-12 1.32u M=1
+DMD<24> D SB DP3 9.89102e-12 1.32u M=1
+DMD<25> D SB DP3 9.89102e-12 1.32u M=1
+DMD<26> D SB DP3 9.89102e-12 1.32u M=1
+DMD<27> D SB DP3 9.89102e-12 1.32u M=1
+DMD<28> D SB DP3 9.89102e-12 1.32u M=1
+DMD<29> D SB DP3 9.89102e-12 1.32u M=1
+DMD<30> D SB DP3 9.89102e-12 1.32u M=1
+DMD<31> D SB DP3 9.89102e-12 1.32u M=1
+DMD<32> D SB DP3 9.89102e-12 1.32u M=1
+DMD<33> D SB DP3 9.89102e-12 1.32u M=1
+DMD<34> D SB DP3 9.89102e-12 1.32u M=1
+DMD<35> D SB DP3 9.89102e-12 1.32u M=1
+DD0 Sub SB DDNW 3.10026e-09 285.2u M=1
+RR0 SB net20 20035.7 $[RNP1] $W=420.0n $L=25.50u M=1
+XMP<1> SB D net20 SB / ioh_pe3isab_15_04
+XMP<2> SB D net20 SB / ioh_pe3isab_15_04
+XMP<3> SB D net20 SB / ioh_pe3isab_15_04
+XMP<4> SB D net20 SB / ioh_pe3isab_15_04
+XMP<5> SB D net20 SB / ioh_pe3isab_15_04
+XMP<6> SB D net20 SB / ioh_pe3isab_15_04
+XMP<7> SB D net20 SB / ioh_pe3isab_15_04
+XMP<8> SB D net20 SB / ioh_pe3isab_15_04
+XMP<9> SB D net20 SB / ioh_pe3isab_15_04
+XMP<10> SB D net20 SB / ioh_pe3isab_15_04
+XMP<11> SB D net20 SB / ioh_pe3isab_15_04
+XMP<12> SB D net20 SB / ioh_pe3isab_15_04
+XMP<13> SB D net20 SB / ioh_pe3isab_15_04
+XMP<14> SB D net20 SB / ioh_pe3isab_15_04
+XMP<15> SB D net20 SB / ioh_pe3isab_15_04
+XMP<16> SB D net20 SB / ioh_pe3isab_15_04
+XMP<17> SB D net20 SB / ioh_pe3isab_15_04
+XMP<18> SB D net20 SB / ioh_pe3isab_15_04
+XMP<19> SB D net20 SB / ioh_pe3isab_15_04
+XMP<20> SB D net20 SB / ioh_pe3isab_15_04
+XMP<21> SB D net20 SB / ioh_pe3isab_15_04
+XMP<22> SB D net20 SB / ioh_pe3isab_15_04
+XMP<23> SB D net20 SB / ioh_pe3isab_15_04
+XMP<24> SB D net20 SB / ioh_pe3isab_15_04
+XMP<25> SB D net20 SB / ioh_pe3isab_15_04
+XMP<26> SB D net20 SB / ioh_pe3isab_15_04
+XMP<27> SB D net20 SB / ioh_pe3isab_15_04
+XMP<28> SB D net20 SB / ioh_pe3isab_15_04
+XMP<29> SB D net20 SB / ioh_pe3isab_15_04
+XMP<30> SB D net20 SB / ioh_pe3isab_15_04
+XMP<31> SB D net20 SB / ioh_pe3isab_15_04
+XMP<32> SB D net20 SB / ioh_pe3isab_15_04
+XMP<33> SB D net20 SB / ioh_pe3isab_15_04
+XMP<34> SB D net20 SB / ioh_pe3isab_15_04
+XMP<35> SB D net20 SB / ioh_pe3isab_15_04
+XMP<36> SB D net20 SB / ioh_pe3isab_15_04
+XMP<37> SB D net20 SB / ioh_pe3isab_15_04
+XMP<38> SB D net20 SB / ioh_pe3isab_15_04
+XMP<39> SB D net20 SB / ioh_pe3isab_15_04
+XMP<40> SB D net20 SB / ioh_pe3isab_15_04
+XMP<41> SB D net20 SB / ioh_pe3isab_15_04
+XMP<42> SB D net20 SB / ioh_pe3isab_15_04
+XMP<43> SB D net20 SB / ioh_pe3isab_15_04
+XMP<44> SB D net20 SB / ioh_pe3isab_15_04
+XMP<45> SB D net20 SB / ioh_pe3isab_15_04
+XMP<46> SB D net20 SB / ioh_pe3isab_15_04
+XMP<47> SB D net20 SB / ioh_pe3isab_15_04
+XMP<48> SB D net20 SB / ioh_pe3isab_15_04
+XMP<49> SB D net20 SB / ioh_pe3isab_15_04
+XMP<50> SB D net20 SB / ioh_pe3isab_15_04
+XMP<51> SB D net20 SB / ioh_pe3isab_15_04
+XMP<52> SB D net20 SB / ioh_pe3isab_15_04
+XMP<53> SB D net20 SB / ioh_pe3isab_15_04
+XMP<54> SB D net20 SB / ioh_pe3isab_15_04
+XMP<55> SB D net20 SB / ioh_pe3isab_15_04
+XMP<56> SB D net20 SB / ioh_pe3isab_15_04
+XMP<57> SB D net20 SB / ioh_pe3isab_15_04
+XMP<58> SB D net20 SB / ioh_pe3isab_15_04
+XMP<59> SB D net20 SB / ioh_pe3isab_15_04
+XMP<60> SB D net20 SB / ioh_pe3isab_15_04
+XMP<61> SB D net20 SB / ioh_pe3isab_15_04
+XMP<62> SB D net20 SB / ioh_pe3isab_15_04
+XMP<63> SB D net20 SB / ioh_pe3isab_15_04
+XMP<64> SB D net20 SB / ioh_pe3isab_15_04
+XMP<65> SB D net20 SB / ioh_pe3isab_15_04
+XMP<66> SB D net20 SB / ioh_pe3isab_15_04
+XMP<67> SB D net20 SB / ioh_pe3isab_15_04
+XMP<68> SB D net20 SB / ioh_pe3isab_15_04
+XMP<69> SB D net20 SB / ioh_pe3isab_15_04
+XMP<70> SB D net20 SB / ioh_pe3isab_15_04
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsab_15_10
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsab_15_10 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX D G S B PMB W=15.12u L=1u M=1.0 AD=7.2576e-12 AS=7.2576e-12 PD=3.12e-05 
++ PS=3.12e-05 NRD=0.0178571 NRS=0.0178571
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsabhv_750
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsabhv_750 D GSB Sub
+*.PININFO D:B GSB:B Sub:B
+RR0<1> net20<0> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<2> net20<1> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<3> net20<2> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<4> net20<3> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<5> net20<4> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<6> net20<5> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<7> net20<6> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<8> net20<7> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<9> net20<8> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<10> net20<9> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<11> net20<10> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<12> net20<11> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<13> net20<12> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<14> net20<13> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<15> net20<14> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<16> net20<15> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<17> net20<16> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<18> net20<17> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<19> net20<18> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<20> net20<19> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<21> net20<20> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<22> net20<21> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<23> net20<22> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<24> net20<23> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<25> net20<24> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<26> net20<25> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<27> net20<26> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<28> net20<27> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<29> net20<28> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<30> net20<29> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<31> net20<30> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<32> net20<31> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<33> net20<32> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<34> net20<33> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<35> net20<34> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<36> net20<35> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<37> net20<36> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<38> net20<37> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<39> net20<38> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<40> net20<39> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<41> net20<40> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<42> net20<41> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<43> net20<42> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<44> net20<43> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<45> net20<44> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<46> net20<45> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<47> net20<46> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<48> net20<47> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<49> net20<48> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<50> net20<49> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+DD0<1> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<2> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<3> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<4> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<5> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<6> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<7> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<8> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<9> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<10> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<11> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<12> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<13> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<14> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<15> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<16> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<17> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<18> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<19> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<20> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<21> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<22> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<23> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<24> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<25> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<26> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<27> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<28> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<29> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<30> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<31> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<32> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<33> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<34> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<35> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<36> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<37> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<38> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<39> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<40> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<41> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<42> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<43> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<44> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<45> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<46> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<47> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<48> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<49> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<50> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD1 Sub GSB DDNW 3.03711e-09 284u M=1
+XMP<1> GSB net20<0> GSB GSB / ioh_pmbsab_15_10
+XMP<2> GSB net20<1> GSB GSB / ioh_pmbsab_15_10
+XMP<3> GSB net20<2> GSB GSB / ioh_pmbsab_15_10
+XMP<4> GSB net20<3> GSB GSB / ioh_pmbsab_15_10
+XMP<5> GSB net20<4> GSB GSB / ioh_pmbsab_15_10
+XMP<6> GSB net20<5> GSB GSB / ioh_pmbsab_15_10
+XMP<7> GSB net20<6> GSB GSB / ioh_pmbsab_15_10
+XMP<8> GSB net20<7> GSB GSB / ioh_pmbsab_15_10
+XMP<9> GSB net20<8> GSB GSB / ioh_pmbsab_15_10
+XMP<10> GSB net20<9> GSB GSB / ioh_pmbsab_15_10
+XMP<11> GSB net20<10> GSB GSB / ioh_pmbsab_15_10
+XMP<12> GSB net20<11> GSB GSB / ioh_pmbsab_15_10
+XMP<13> GSB net20<12> GSB GSB / ioh_pmbsab_15_10
+XMP<14> GSB net20<13> GSB GSB / ioh_pmbsab_15_10
+XMP<15> GSB net20<14> GSB GSB / ioh_pmbsab_15_10
+XMP<16> GSB net20<15> GSB GSB / ioh_pmbsab_15_10
+XMP<17> GSB net20<16> GSB GSB / ioh_pmbsab_15_10
+XMP<18> GSB net20<17> GSB GSB / ioh_pmbsab_15_10
+XMP<19> GSB net20<18> GSB GSB / ioh_pmbsab_15_10
+XMP<20> GSB net20<19> GSB GSB / ioh_pmbsab_15_10
+XMP<21> GSB net20<20> GSB GSB / ioh_pmbsab_15_10
+XMP<22> GSB net20<21> GSB GSB / ioh_pmbsab_15_10
+XMP<23> GSB net20<22> GSB GSB / ioh_pmbsab_15_10
+XMP<24> GSB net20<23> GSB GSB / ioh_pmbsab_15_10
+XMP<25> GSB net20<24> GSB GSB / ioh_pmbsab_15_10
+XMP<26> GSB net20<25> GSB GSB / ioh_pmbsab_15_10
+XMP<27> GSB net20<26> GSB GSB / ioh_pmbsab_15_10
+XMP<28> GSB net20<27> GSB GSB / ioh_pmbsab_15_10
+XMP<29> GSB net20<28> GSB GSB / ioh_pmbsab_15_10
+XMP<30> GSB net20<29> GSB GSB / ioh_pmbsab_15_10
+XMP<31> GSB net20<30> GSB GSB / ioh_pmbsab_15_10
+XMP<32> GSB net20<31> GSB GSB / ioh_pmbsab_15_10
+XMP<33> GSB net20<32> GSB GSB / ioh_pmbsab_15_10
+XMP<34> GSB net20<33> GSB GSB / ioh_pmbsab_15_10
+XMP<35> GSB net20<34> GSB GSB / ioh_pmbsab_15_10
+XMP<36> GSB net20<35> GSB GSB / ioh_pmbsab_15_10
+XMP<37> GSB net20<36> GSB GSB / ioh_pmbsab_15_10
+XMP<38> GSB net20<37> GSB GSB / ioh_pmbsab_15_10
+XMP<39> GSB net20<38> GSB GSB / ioh_pmbsab_15_10
+XMP<40> GSB net20<39> GSB GSB / ioh_pmbsab_15_10
+XMP<41> GSB net20<40> GSB GSB / ioh_pmbsab_15_10
+XMP<42> GSB net20<41> GSB GSB / ioh_pmbsab_15_10
+XMP<43> GSB net20<42> GSB GSB / ioh_pmbsab_15_10
+XMP<44> GSB net20<43> GSB GSB / ioh_pmbsab_15_10
+XMP<45> GSB net20<44> GSB GSB / ioh_pmbsab_15_10
+XMP<46> GSB net20<45> GSB GSB / ioh_pmbsab_15_10
+XMP<47> GSB net20<46> GSB GSB / ioh_pmbsab_15_10
+XMP<48> GSB net20<47> GSB GSB / ioh_pmbsab_15_10
+XMP<49> GSB net20<48> GSB GSB / ioh_pmbsab_15_10
+XMP<50> GSB net20<49> GSB GSB / ioh_pmbsab_15_10
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_c5pk
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_c5pk A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI5 A_l net30 Sub / ioh_pe3isabhv_1050gcr
+XI3 net23 net26 Sub / ioh_pmbsabhv_750
+XI4 net30 net23 Sub / ioh_pmbsabhv_750
+XI2 net26 net20 Sub / ioh_pmbsabhv_750
+XI1 net20 K_h Sub / ioh_pmbsabhv_750
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    HVD4SJD1R5PKFs
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT HVD4SJD1R5PKFs GNDO IGND PAD
+*.PININFO GNDO:B IGND:B PAD:B
+XI10 PAD PAD Trig_0 IGND GNDO / ioh_iscrd2_4x100
+XI9 IGND PAD GNDO / ioh_dhpw_2x100_stack3
+XI11 Trig_0 PAD GNDO / ioh_c5pk
+RR4 IGND Trig_0 1.008 $[RPP1S] $W=100.0000u $L=16.0u M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsab_40_10
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsab_40_10 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX D G S B PMB W=40.12u L=1u M=1.0 AD=1.92576e-11 AS=1.92576e-11 PD=8.12e-05 
++ PS=8.12e-05 NRD=0.00672981 NRS=0.00672981
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsabhv_2000
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsabhv_2000 D GSB Sub
+*.PININFO D:B GSB:B Sub:B
+RR0<1> net20<0> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<2> net20<1> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<3> net20<2> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<4> net20<3> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<5> net20<4> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<6> net20<5> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<7> net20<6> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<8> net20<7> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<9> net20<8> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<10> net20<9> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<11> net20<10> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<12> net20<11> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<13> net20<12> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<14> net20<13> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<15> net20<14> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<16> net20<15> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<17> net20<16> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<18> net20<17> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<19> net20<18> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<20> net20<19> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<21> net20<20> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<22> net20<21> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<23> net20<22> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<24> net20<23> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<25> net20<24> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<26> net20<25> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<27> net20<26> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<28> net20<27> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<29> net20<28> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<30> net20<29> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<31> net20<30> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<32> net20<31> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<33> net20<32> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<34> net20<33> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<35> net20<34> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<36> net20<35> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<37> net20<36> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<38> net20<37> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<39> net20<38> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<40> net20<39> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<41> net20<40> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<42> net20<41> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<43> net20<42> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<44> net20<43> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<45> net20<44> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<46> net20<45> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<47> net20<46> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<48> net20<47> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<49> net20<48> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<50> net20<49> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+DD0<1> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<2> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<3> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<4> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<5> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<6> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<7> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<8> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<9> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<10> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<11> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<12> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<13> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<14> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<15> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<16> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<17> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<18> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<19> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<20> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<21> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<22> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<23> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<24> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<25> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<26> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<27> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<28> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<29> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<30> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<31> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<32> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<33> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<34> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<35> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<36> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<37> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<38> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<39> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<40> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<41> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<42> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<43> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<44> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<45> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<46> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<47> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<48> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<49> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<50> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD1 Sub GSB DDNW 5.93593e-09 334.2u M=1
+XMP<1> GSB net20<0> GSB GSB / ioh_pmbsab_40_10
+XMP<2> GSB net20<1> GSB GSB / ioh_pmbsab_40_10
+XMP<3> GSB net20<2> GSB GSB / ioh_pmbsab_40_10
+XMP<4> GSB net20<3> GSB GSB / ioh_pmbsab_40_10
+XMP<5> GSB net20<4> GSB GSB / ioh_pmbsab_40_10
+XMP<6> GSB net20<5> GSB GSB / ioh_pmbsab_40_10
+XMP<7> GSB net20<6> GSB GSB / ioh_pmbsab_40_10
+XMP<8> GSB net20<7> GSB GSB / ioh_pmbsab_40_10
+XMP<9> GSB net20<8> GSB GSB / ioh_pmbsab_40_10
+XMP<10> GSB net20<9> GSB GSB / ioh_pmbsab_40_10
+XMP<11> GSB net20<10> GSB GSB / ioh_pmbsab_40_10
+XMP<12> GSB net20<11> GSB GSB / ioh_pmbsab_40_10
+XMP<13> GSB net20<12> GSB GSB / ioh_pmbsab_40_10
+XMP<14> GSB net20<13> GSB GSB / ioh_pmbsab_40_10
+XMP<15> GSB net20<14> GSB GSB / ioh_pmbsab_40_10
+XMP<16> GSB net20<15> GSB GSB / ioh_pmbsab_40_10
+XMP<17> GSB net20<16> GSB GSB / ioh_pmbsab_40_10
+XMP<18> GSB net20<17> GSB GSB / ioh_pmbsab_40_10
+XMP<19> GSB net20<18> GSB GSB / ioh_pmbsab_40_10
+XMP<20> GSB net20<19> GSB GSB / ioh_pmbsab_40_10
+XMP<21> GSB net20<20> GSB GSB / ioh_pmbsab_40_10
+XMP<22> GSB net20<21> GSB GSB / ioh_pmbsab_40_10
+XMP<23> GSB net20<22> GSB GSB / ioh_pmbsab_40_10
+XMP<24> GSB net20<23> GSB GSB / ioh_pmbsab_40_10
+XMP<25> GSB net20<24> GSB GSB / ioh_pmbsab_40_10
+XMP<26> GSB net20<25> GSB GSB / ioh_pmbsab_40_10
+XMP<27> GSB net20<26> GSB GSB / ioh_pmbsab_40_10
+XMP<28> GSB net20<27> GSB GSB / ioh_pmbsab_40_10
+XMP<29> GSB net20<28> GSB GSB / ioh_pmbsab_40_10
+XMP<30> GSB net20<29> GSB GSB / ioh_pmbsab_40_10
+XMP<31> GSB net20<30> GSB GSB / ioh_pmbsab_40_10
+XMP<32> GSB net20<31> GSB GSB / ioh_pmbsab_40_10
+XMP<33> GSB net20<32> GSB GSB / ioh_pmbsab_40_10
+XMP<34> GSB net20<33> GSB GSB / ioh_pmbsab_40_10
+XMP<35> GSB net20<34> GSB GSB / ioh_pmbsab_40_10
+XMP<36> GSB net20<35> GSB GSB / ioh_pmbsab_40_10
+XMP<37> GSB net20<36> GSB GSB / ioh_pmbsab_40_10
+XMP<38> GSB net20<37> GSB GSB / ioh_pmbsab_40_10
+XMP<39> GSB net20<38> GSB GSB / ioh_pmbsab_40_10
+XMP<40> GSB net20<39> GSB GSB / ioh_pmbsab_40_10
+XMP<41> GSB net20<40> GSB GSB / ioh_pmbsab_40_10
+XMP<42> GSB net20<41> GSB GSB / ioh_pmbsab_40_10
+XMP<43> GSB net20<42> GSB GSB / ioh_pmbsab_40_10
+XMP<44> GSB net20<43> GSB GSB / ioh_pmbsab_40_10
+XMP<45> GSB net20<44> GSB GSB / ioh_pmbsab_40_10
+XMP<46> GSB net20<45> GSB GSB / ioh_pmbsab_40_10
+XMP<47> GSB net20<46> GSB GSB / ioh_pmbsab_40_10
+XMP<48> GSB net20<47> GSB GSB / ioh_pmbsab_40_10
+XMP<49> GSB net20<48> GSB GSB / ioh_pmbsab_40_10
+XMP<50> GSB net20<49> GSB GSB / ioh_pmbsab_40_10
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isab_40_04
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isab_40_04 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX net17 G S B PE3I W=40u L=400n M=1.0 AD=1.92e-11 AS=1.92e-11 PD=8.096e-05 
++ PS=8.096e-05 NRD=0.00675 NRS=0.00675
+RR0 net17 D 1.78202 $SUB=B $[RDP3] $W=40u $L=430.0n M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isabhv_2800gcr
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isabhv_2800gcr D SB Sub
+*.PININFO D:B SB:B Sub:B
+DMD<1> D SB DP3 2.64196e-11 1.32u M=1
+DMD<2> D SB DP3 2.64196e-11 1.32u M=1
+DMD<3> D SB DP3 2.64196e-11 1.32u M=1
+DMD<4> D SB DP3 2.64196e-11 1.32u M=1
+DMD<5> D SB DP3 2.64196e-11 1.32u M=1
+DMD<6> D SB DP3 2.64196e-11 1.32u M=1
+DMD<7> D SB DP3 2.64196e-11 1.32u M=1
+DMD<8> D SB DP3 2.64196e-11 1.32u M=1
+DMD<9> D SB DP3 2.64196e-11 1.32u M=1
+DMD<10> D SB DP3 2.64196e-11 1.32u M=1
+DMD<11> D SB DP3 2.64196e-11 1.32u M=1
+DMD<12> D SB DP3 2.64196e-11 1.32u M=1
+DMD<13> D SB DP3 2.64196e-11 1.32u M=1
+DMD<14> D SB DP3 2.64196e-11 1.32u M=1
+DMD<15> D SB DP3 2.64196e-11 1.32u M=1
+DMD<16> D SB DP3 2.64196e-11 1.32u M=1
+DMD<17> D SB DP3 2.64196e-11 1.32u M=1
+DMD<18> D SB DP3 2.64196e-11 1.32u M=1
+DMD<19> D SB DP3 2.64196e-11 1.32u M=1
+DMD<20> D SB DP3 2.64196e-11 1.32u M=1
+DMD<21> D SB DP3 2.64196e-11 1.32u M=1
+DMD<22> D SB DP3 2.64196e-11 1.32u M=1
+DMD<23> D SB DP3 2.64196e-11 1.32u M=1
+DMD<24> D SB DP3 2.64196e-11 1.32u M=1
+DMD<25> D SB DP3 2.64196e-11 1.32u M=1
+DMD<26> D SB DP3 2.64196e-11 1.32u M=1
+DMD<27> D SB DP3 2.64196e-11 1.32u M=1
+DMD<28> D SB DP3 2.64196e-11 1.32u M=1
+DMD<29> D SB DP3 2.64196e-11 1.32u M=1
+DMD<30> D SB DP3 2.64196e-11 1.32u M=1
+DMD<31> D SB DP3 2.64196e-11 1.32u M=1
+DMD<32> D SB DP3 2.64196e-11 1.32u M=1
+DMD<33> D SB DP3 2.64196e-11 1.32u M=1
+DMD<34> D SB DP3 2.64196e-11 1.32u M=1
+DMD<35> D SB DP3 2.64196e-11 1.32u M=1
+DD0 Sub SB DDNW 5.99695e-09 335.2u M=1
+RR0 SB net20 20035.7 $[RNP1] $W=420.0n $L=25.50u M=1
+XMP<1> SB D net20 SB / ioh_pe3isab_40_04
+XMP<2> SB D net20 SB / ioh_pe3isab_40_04
+XMP<3> SB D net20 SB / ioh_pe3isab_40_04
+XMP<4> SB D net20 SB / ioh_pe3isab_40_04
+XMP<5> SB D net20 SB / ioh_pe3isab_40_04
+XMP<6> SB D net20 SB / ioh_pe3isab_40_04
+XMP<7> SB D net20 SB / ioh_pe3isab_40_04
+XMP<8> SB D net20 SB / ioh_pe3isab_40_04
+XMP<9> SB D net20 SB / ioh_pe3isab_40_04
+XMP<10> SB D net20 SB / ioh_pe3isab_40_04
+XMP<11> SB D net20 SB / ioh_pe3isab_40_04
+XMP<12> SB D net20 SB / ioh_pe3isab_40_04
+XMP<13> SB D net20 SB / ioh_pe3isab_40_04
+XMP<14> SB D net20 SB / ioh_pe3isab_40_04
+XMP<15> SB D net20 SB / ioh_pe3isab_40_04
+XMP<16> SB D net20 SB / ioh_pe3isab_40_04
+XMP<17> SB D net20 SB / ioh_pe3isab_40_04
+XMP<18> SB D net20 SB / ioh_pe3isab_40_04
+XMP<19> SB D net20 SB / ioh_pe3isab_40_04
+XMP<20> SB D net20 SB / ioh_pe3isab_40_04
+XMP<21> SB D net20 SB / ioh_pe3isab_40_04
+XMP<22> SB D net20 SB / ioh_pe3isab_40_04
+XMP<23> SB D net20 SB / ioh_pe3isab_40_04
+XMP<24> SB D net20 SB / ioh_pe3isab_40_04
+XMP<25> SB D net20 SB / ioh_pe3isab_40_04
+XMP<26> SB D net20 SB / ioh_pe3isab_40_04
+XMP<27> SB D net20 SB / ioh_pe3isab_40_04
+XMP<28> SB D net20 SB / ioh_pe3isab_40_04
+XMP<29> SB D net20 SB / ioh_pe3isab_40_04
+XMP<30> SB D net20 SB / ioh_pe3isab_40_04
+XMP<31> SB D net20 SB / ioh_pe3isab_40_04
+XMP<32> SB D net20 SB / ioh_pe3isab_40_04
+XMP<33> SB D net20 SB / ioh_pe3isab_40_04
+XMP<34> SB D net20 SB / ioh_pe3isab_40_04
+XMP<35> SB D net20 SB / ioh_pe3isab_40_04
+XMP<36> SB D net20 SB / ioh_pe3isab_40_04
+XMP<37> SB D net20 SB / ioh_pe3isab_40_04
+XMP<38> SB D net20 SB / ioh_pe3isab_40_04
+XMP<39> SB D net20 SB / ioh_pe3isab_40_04
+XMP<40> SB D net20 SB / ioh_pe3isab_40_04
+XMP<41> SB D net20 SB / ioh_pe3isab_40_04
+XMP<42> SB D net20 SB / ioh_pe3isab_40_04
+XMP<43> SB D net20 SB / ioh_pe3isab_40_04
+XMP<44> SB D net20 SB / ioh_pe3isab_40_04
+XMP<45> SB D net20 SB / ioh_pe3isab_40_04
+XMP<46> SB D net20 SB / ioh_pe3isab_40_04
+XMP<47> SB D net20 SB / ioh_pe3isab_40_04
+XMP<48> SB D net20 SB / ioh_pe3isab_40_04
+XMP<49> SB D net20 SB / ioh_pe3isab_40_04
+XMP<50> SB D net20 SB / ioh_pe3isab_40_04
+XMP<51> SB D net20 SB / ioh_pe3isab_40_04
+XMP<52> SB D net20 SB / ioh_pe3isab_40_04
+XMP<53> SB D net20 SB / ioh_pe3isab_40_04
+XMP<54> SB D net20 SB / ioh_pe3isab_40_04
+XMP<55> SB D net20 SB / ioh_pe3isab_40_04
+XMP<56> SB D net20 SB / ioh_pe3isab_40_04
+XMP<57> SB D net20 SB / ioh_pe3isab_40_04
+XMP<58> SB D net20 SB / ioh_pe3isab_40_04
+XMP<59> SB D net20 SB / ioh_pe3isab_40_04
+XMP<60> SB D net20 SB / ioh_pe3isab_40_04
+XMP<61> SB D net20 SB / ioh_pe3isab_40_04
+XMP<62> SB D net20 SB / ioh_pe3isab_40_04
+XMP<63> SB D net20 SB / ioh_pe3isab_40_04
+XMP<64> SB D net20 SB / ioh_pe3isab_40_04
+XMP<65> SB D net20 SB / ioh_pe3isab_40_04
+XMP<66> SB D net20 SB / ioh_pe3isab_40_04
+XMP<67> SB D net20 SB / ioh_pe3isab_40_04
+XMP<68> SB D net20 SB / ioh_pe3isab_40_04
+XMP<69> SB D net20 SB / ioh_pe3isab_40_04
+XMP<70> SB D net20 SB / ioh_pe3isab_40_04
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_d2pk
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_d2pk A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI1 net12 K_h Sub / ioh_pmbsabhv_2000
+XI5 A_l net12 Sub / ioh_pe3isabhv_2800gcr
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    HVDD4D2PK
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT HVDD4D2PK GND PAD
+*.PININFO GND:B PAD:B
+XI11 GND PAD GND / ioh_d2pk
+DD0 GND PAD DDNW 3.89668e-10 208.5u M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_d5pk
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_d5pk A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI3 net26 net29 Sub / ioh_pmbsabhv_2000
+XI4 net18 net26 Sub / ioh_pmbsabhv_2000
+XI2 net29 net23 Sub / ioh_pmbsabhv_2000
+XI1 net23 K_h Sub / ioh_pmbsabhv_2000
+XI5 A_l net18 Sub / ioh_pe3isabhv_2800gcr
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    HVDD4DJ5PKFs
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT HVDD4DJ5PKFs GNDO IGND PAD
+*.PININFO GNDO:B IGND:B PAD:B
+XI9 IGND PAD GNDO / ioh_dhpw_2x100_stack3
+XI11 IGND PAD GNDO / ioh_d5pk
+.ENDS
+
+************************************************************************
 * Library Name: IORING
 * Cell Name:    ioring3
 * View Name:    schematic
 ************************************************************************
 
-.SUBCKT ioring3 CLK ENABLE GNDA GNDD GNDOR GNDORA INL OUT0 OUT1 OUT2 OUTL PSUB 
-+ RESET VDDA VDDD VDDOR VDDORA clk_core enable_core inl_core out0_core 
-+ out1_core out2_core reset_core
-*.PININFO CLK:B ENABLE:B GNDA:B GNDD:B GNDOR:B GNDORA:B INL:B OUT0:B OUT1:B 
-*.PININFO OUT2:B OUTL:B PSUB:B RESET:B VDDA:B VDDD:B VDDOR:B VDDORA:B 
-*.PININFO clk_core:B enable_core:B inl_core:B out0_core:B out1_core:B 
-*.PININFO out2_core:B reset_core:B
+.SUBCKT ioring3 CLK ENABLE GNDA GNDD GNDHV GNDOHV GNDOR GNDORA INL OUT0 OUT1 
++ OUT2 OUTHV OUTL PSUB RESET VDDA VDDD VDDHV VDDOR VDDORA clk_core enable_core 
++ inl_core out0_core out1_core out2_core reset_core
+*.PININFO CLK:B ENABLE:B GNDA:B GNDD:B GNDHV:B GNDOHV:B GNDOR:B GNDORA:B INL:B 
+*.PININFO OUT0:B OUT1:B OUT2:B OUTHV:B OUTL:B PSUB:B RESET:B VDDA:B VDDD:B 
+*.PININFO VDDHV:B VDDOR:B VDDORA:B clk_core:B enable_core:B inl_core:B 
+*.PININFO out0_core:B out1_core:B out2_core:B reset_core:B
 XI4 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / PSUBPADPC
 XI21 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / VDDPADPC
 XI3 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / VDDPADPC
@@ -969,5 +1694,9 @@ XI40 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / CORNERESDPC
 XI39 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / CORNERESDPC
 XI26 GNDA GNDORA GNDORA OUTL PSUB VDDA VDDORA VDDORA / APR00DPC
 XI27 GNDA GNDORA GNDORA INL PSUB VDDA VDDORA VDDORA inl_core / APR04DPC
+XI33 GNDOHV GNDHV OUTHV / HVD4SJD1R5PKFs
+XI36 GNDOHV GNDHV / HVDD4D2PK
+RR0 GNDOHV PSUB 5.0 $[S_RES]
+XI28 GNDOHV GNDHV VDDHV / HVDD4DJ5PKFs
 .ENDS
 

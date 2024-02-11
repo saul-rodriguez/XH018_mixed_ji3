@@ -1,4 +1,4 @@
-CADENCE IHNL111427
+CADENCE IHNL111444
 
 IO_CELLS_JIC3V jio_pe3i_pc cmos_sch cds0
 IO_CELLS_JIC3V jio_ne3i_pc cmos_sch cds1
@@ -26,4 +26,21 @@ IO_CELLS_JIC3V CORNERESDPC cmos_sch cds22
 IO_CELLS_JIC3V APR00DPC cmos_sch cds23
 IO_CELLS_JIC3V jio_anrdio_pc cmos_sch cds24
 IO_CELLS_JIC3V APR04DPC cmos_sch cds25
-IORING ioring3 schematic cds26
+HV_CELLS ioh_iscrd2_4x100 schematic cds26
+HV_CELLS ioh_dhpw_2x100 schematic cds27
+HV_CELLS ioh_dhpw_2x100_stack3 schematic cds28
+HV_CELLS ioh_pe3isab_15_04 schematic cds29
+HV_CELLS ioh_pe3isabhv_1050gcr schematic cds30
+HV_CELLS ioh_pmbsab_15_10 schematic cds31
+HV_CELLS ioh_pmbsabhv_750 schematic cds32
+HV_CELLS ioh_c5pk schematic cds33
+HV_CELLS HVD4SJD1R5PKFs schematic cds34
+HV_CELLS ioh_pmbsab_40_10 schematic cds35
+HV_CELLS ioh_pmbsabhv_2000 schematic cds36
+HV_CELLS ioh_pe3isab_40_04 schematic cds37
+HV_CELLS ioh_pe3isabhv_2800gcr schematic cds38
+HV_CELLS ioh_d2pk schematic cds39
+HV_CELLS HVDD4D2PK schematic cds40
+HV_CELLS ioh_d5pk schematic cds41
+HV_CELLS HVDD4DJ5PKFs schematic cds42
+IORING ioring3 schematic cds43
