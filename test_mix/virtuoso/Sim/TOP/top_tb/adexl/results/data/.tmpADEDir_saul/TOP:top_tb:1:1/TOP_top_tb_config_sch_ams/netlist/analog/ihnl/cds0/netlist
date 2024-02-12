@@ -1,7 +1,6 @@
-    D3 (B D) dn3 area=0.99e-11 perimeter=660.00n dbv=0.0 m=1 par1=(1) \
-        xf_subext=0
-    R0 (D net6 B) rdn3 l=3.35u w=30u m=1 par1=1 xf_subext=0
-    M0 (net6 G S B) ne3i w=30u l=400.0n as=1.44e-11 ad=1.44e-11 ps=60.96u \
-        pd=60.96u nrs=0.009 nrd=0.009 m=(1)*(1) par1=(1)*(1)
-ends jio_ne3i_pc
+    M0 (OUT IN VS VS) ne3 w=2u l=350.0n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1) xf_subext=0
+    M1 (OUT IN VD VD) pe3 w=2u l=300n as=9.6e-13 ad=9.6e-13 ps=4.96e-06 \
+        pd=4.96e-06 nrs=0.135 nrd=0.135 m=(1)*(1) par1=(1)*(1)
+ends inv
 // End of subcircuit definition.

@@ -1,0 +1,32 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-timescale
+1ns/1ns
+-DISCIPLINE
+logic
+-DELAY_MODE
+None
+-NOVITALACCL
+-ACCESS
+r
+-AMSPARTINFO
+../psf/partition.info
+-RNM_PARTINFO
+-MODELINCDIR
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/
+-SPECTRE_ARGS
+"-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.19/sharedData/CDS/ahdl/input.ahdlSimDB"
+-SPECTRE_ARGS
++logstatus
+-AMSCONNRULES
+ConnRules_3V_full_fast
+
+TOP.top_tb:schematic
+
+cds_globals
+-AMSCOMPILEFILE
+"file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams"
+-SPECTRE_ARGS
+++aps

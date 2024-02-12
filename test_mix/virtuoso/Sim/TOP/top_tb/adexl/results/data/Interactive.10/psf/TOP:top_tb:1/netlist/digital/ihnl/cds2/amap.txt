@@ -1,4 +1,0 @@
-instMap,*APR04DPC,*R_SERIES,*R_SERIES
-instMaster,*APR04DPC,*R_SERIES,*VLG_PRIMITIVES_resistor_ams_verilogams
-netMap,*APR04DPC,*gnd!,*cds_globals.\gnd! 
-cellMap,*APR04DPC,*APR04DPC,*IO_CELLS_JIC3V,*verilogams

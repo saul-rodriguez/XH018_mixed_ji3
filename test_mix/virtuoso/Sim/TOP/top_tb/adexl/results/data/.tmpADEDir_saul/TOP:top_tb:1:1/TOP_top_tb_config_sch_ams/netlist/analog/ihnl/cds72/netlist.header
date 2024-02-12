@@ -1,6 +1,6 @@
 
-// Library name: D_CELLS_JI3V
-// Cell name: DFRQJI3VX4
-// View name: cmos_sch
-// Inherited view list: cmos_sch
-subckt DFRQJI3VX4
+// Library name: HV_CELLS
+// Cell name: ioh_d5pk
+// View name: schematic
+// Inherited view list: schematic
+subckt ioh_d5pk

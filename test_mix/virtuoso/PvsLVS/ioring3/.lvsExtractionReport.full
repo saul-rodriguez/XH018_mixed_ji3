@@ -11,7 +11,7 @@ LVS Comparison Report    : ioring3_lvs.sum.cls
 LVS Softchk Report       : ioring3.softchk
 Layout Name              : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3/ioring3.gds ("ioring3")
 User Name                : saul
-Creation Time            : Sun Feb 11 10:47:35 2024
+Creation Time            : Mon Feb 12 12:37:41 2024
 Current directory        : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/ioring3
 PVS Version              : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
 
@@ -35,10 +35,13 @@ PVS Version              : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
     LVS_SOFTCHK bulk -TYPE CONTACT   Total Result        0 (       0)
 
 Clean cell list (added by extraction report parser )
+ for cell "ACORNERFP1"
  for cell "APR00DPC"
  for cell "APR04DPC"
  for cell "BT4PC"
  for cell "CORNERESDPC"
+ for cell "FILLER100F"
+ for cell "FILLER200F"
  for cell "FILLER70PC"
  for cell "GNDORPADPC"
  for cell "GNDPADPC"
@@ -51,12 +54,13 @@ Clean cell list (added by extraction report parser )
  for cell "PWRCUTDCPC"
  for cell "VDDORPADPC"
  for cell "VDDPADPC"
- for cell "VIA1_C_CDNS_707666450361"
- for cell "VIA1_C_CDNS_707666450363"
- for cell "VIA3_C_CDNS_707666450366"
- for cell "VIATPL_C_CDNS_707666450362"
- for cell "VIATPL_C_CDNS_707666450364"
- for cell "VIATP_C_CDNS_707666450365"
+ for cell "VIA1_C_CDNS_707759456651"
+ for cell "VIA1_C_CDNS_707759456653"
+ for cell "VIA3_C_CDNS_707759456655"
+ for cell "VIATPL_C_CDNS_707759456652"
+ for cell "VIATP_C_CDNS_707759456654"
+ for cell "VIATP_C_CDNS_707759456657"
+ for cell "ioh_acor_half"
  for cell "ioh_base19_fs"
  for cell "ioh_base36_fs"
  for cell "ioh_base39_fs"
@@ -78,6 +82,7 @@ Clean cell list (added by extraction report parser )
  for cell "ioh_pmbsabhv_2x40_10"
  for cell "ioh_pmbsabhv_750"
  for cell "ioh_rnp1_20k"
+ for cell "ioh_via234tp"
  for cell "ioh_via34tp"
  for cell "ioh_viatpl"
  for cell "ioring3"

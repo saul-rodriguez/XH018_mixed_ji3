@@ -1,8 +1,102 @@
 
-invrji3v #( .GT_PDL(350.00n), .GT_PUW(1.41u), .GT_PDW(890.00n), .GT_PUL(300.00n) 
-     ) invr_2 ( .out(Q), .in(net35));
+ioh_pmbsab_40_10 MP_1 ( .D(net20[0]), .B(GSB), .G(GSB), .S(GSB));
 
-invrji3v #( .GT_PDL(350.00n), .GT_PUW(670.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
-     ) invr_1 ( .out(net47), .in(A));
+ioh_pmbsab_40_10 MP_2 ( .D(net20[1]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_3 ( .D(net20[2]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_4 ( .D(net20[3]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_5 ( .D(net20[4]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_6 ( .D(net20[5]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_7 ( .D(net20[6]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_8 ( .D(net20[7]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_9 ( .D(net20[8]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_10 ( .D(net20[9]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_11 ( .D(net20[10]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_12 ( .D(net20[11]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_13 ( .D(net20[12]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_14 ( .D(net20[13]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_15 ( .D(net20[14]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_16 ( .D(net20[15]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_17 ( .D(net20[16]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_18 ( .D(net20[17]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_19 ( .D(net20[18]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_20 ( .D(net20[19]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_21 ( .D(net20[20]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_22 ( .D(net20[21]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_23 ( .D(net20[22]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_24 ( .D(net20[23]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_25 ( .D(net20[24]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_26 ( .D(net20[25]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_27 ( .D(net20[26]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_28 ( .D(net20[27]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_29 ( .D(net20[28]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_30 ( .D(net20[29]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_31 ( .D(net20[30]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_32 ( .D(net20[31]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_33 ( .D(net20[32]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_34 ( .D(net20[33]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_35 ( .D(net20[34]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_36 ( .D(net20[35]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_37 ( .D(net20[36]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_38 ( .D(net20[37]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_39 ( .D(net20[38]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_40 ( .D(net20[39]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_41 ( .D(net20[40]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_42 ( .D(net20[41]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_43 ( .D(net20[42]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_44 ( .D(net20[43]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_45 ( .D(net20[44]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_46 ( .D(net20[45]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_47 ( .D(net20[46]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_48 ( .D(net20[47]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_49 ( .D(net20[48]), .B(GSB), .G(GSB), .S(GSB));
+
+ioh_pmbsab_40_10 MP_50 ( .D(net20[49]), .B(GSB), .G(GSB), .S(GSB));
 
 endmodule

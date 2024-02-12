@@ -1,6 +1,4 @@
-    invr_1 invrji3v GT_PUW=8.82u GT_PUL=300.00n GT_PDW=4.45u \
-        GT_PDL=350.00n
-    invr_2 invrji3v GT_PUW=23.52u GT_PUL=300.00n GT_PDW=9.78u \
-        GT_PDL=350.00n
-ends BUJI3VX16
+    I1 ioh_pmbsabhv_2000
+    I5 ioh_pe3isabhv_2800gcr
+ends ioh_d2pk
 // End of subcircuit definition.

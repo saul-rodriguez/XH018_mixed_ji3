@@ -1,5 +1,12 @@
 
-a22no2ji3v #( .GT_PUW(1.47u), .GT_PDL(350.00n), .GT_PUL(300.000n), .GT_PDW(890.00n) 
-     ) a22no2_1 ( .c(C), .d(D), .b(B), .a(A), .out(Q));
+ioh_pe3isabhv_1050gcr I5 ( .Sub(Sub), .SB(net30), .D(A_l));
+
+ioh_pmbsabhv_750 I3 ( .Sub(Sub), .D(net23), .GSB(net26));
+
+ioh_pmbsabhv_750 I4 ( .Sub(Sub), .D(net30), .GSB(net23));
+
+ioh_pmbsabhv_750 I2 ( .Sub(Sub), .D(net26), .GSB(net20));
+
+ioh_pmbsabhv_750 I1 ( .Sub(Sub), .D(net20), .GSB(K_h));
 
 endmodule

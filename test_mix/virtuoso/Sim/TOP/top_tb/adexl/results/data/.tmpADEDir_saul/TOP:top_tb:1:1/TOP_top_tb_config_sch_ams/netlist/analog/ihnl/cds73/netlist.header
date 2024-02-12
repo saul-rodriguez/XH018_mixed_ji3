@@ -1,6 +1,6 @@
 
-// Library name: COUNTER_JI3
-// Cell name: counter
+// Library name: HV_CELLS
+// Cell name: HVDD4DJ5PKFs
 // View name: schematic
 // Inherited view list: schematic
-subckt counter
+subckt HVDD4DJ5PKFs

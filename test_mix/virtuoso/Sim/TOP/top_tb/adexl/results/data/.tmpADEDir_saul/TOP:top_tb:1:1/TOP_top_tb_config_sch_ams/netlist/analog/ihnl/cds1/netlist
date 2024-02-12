@@ -1,6 +1,5 @@
-    D3 (PSUB DNW) ddnwmv area=4.69976e-09 perimeter=274.64u dbv=0 m=1 \
-        par1=(1) xf_subext=0
-    D1 (PWI DNW) dipdnwmv area=4.16648e-09 perimeter=258.64u dbv=0 m=1 \
-        par1=(1)
-ends jio_andio_pc
+    M0 (OUT IN GNDHV VSUB) nedia w=40u l=1.25u m=(1)*(1) par1=(1)*(1) \
+        extlay=0 xf_subext=0
+    R0 (VDDHV OUT VSUB) rpp1k1_3 l=103.425u w=10u m=1 par1=1
+ends inv_hv
 // End of subcircuit definition.

@@ -1,0 +1,12 @@
+HEADER
+"PSFversion" "1.00"
+"RHv" "(FUNCTION or(mappedRoot(\".1@index\") mappedRoot(\".RH\")))v"
+"RHv" ".RHv"
+"RHv" ".\\1 v"
+"GNDOv" "(FUNCTION or(mappedRoot(\".2@index\") mappedRoot(\".GNDO\")))v"
+"GNDOv" ".GNDOv"
+"GNDOv" ".\\2 v"
+"VDDOv" "(FUNCTION or(mappedRoot(\".3@index\") mappedRoot(\".VDDO\")))v"
+"VDDOv" ".VDDOv"
+"VDDOv" ".\\3 v"
+"R0n" "PRIMLIB_rdp3_spectre"

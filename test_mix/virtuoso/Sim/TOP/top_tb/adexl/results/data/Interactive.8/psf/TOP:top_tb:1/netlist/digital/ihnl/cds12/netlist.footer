@@ -1,4 +1,0 @@
-
-ioh_d2pk I11 ( .Sub(GND), .K_h(PAD), .A_l(GND));
-
-endmodule

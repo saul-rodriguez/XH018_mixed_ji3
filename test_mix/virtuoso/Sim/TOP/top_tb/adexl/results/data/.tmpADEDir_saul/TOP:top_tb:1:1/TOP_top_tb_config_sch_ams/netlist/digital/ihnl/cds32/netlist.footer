@@ -1,6 +1,2 @@
 
-ioh_dhpw_2x100_stack3 I9 ( .A_l(IGND), .Sub(GNDO), .K_h(PAD));
-
-ioh_d5pk I11 ( .Sub(GNDO), .K_h(PAD), .A_l(IGND));
-
 endmodule

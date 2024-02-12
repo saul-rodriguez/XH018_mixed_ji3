@@ -1,8 +1,6 @@
 
-invrji3v #( .GT_PDL(350.00n), .GT_PUW(8.82u), .GT_PDW(4.45u), .GT_PUL(300.00n) 
-     ) invr_1 ( .out(net9), .in(A));
+ioh_pmbsabhv_2000 I1 ( .GSB(K_h), .Sub(Sub), .D(net12));
 
-invrji3v #( .GT_PDL(350.00n), .GT_PUW(23.52u), .GT_PDW(9.78u), .GT_PUL(300.00n) 
-     ) invr_2 ( .out(Q), .in(net9));
+ioh_pe3isabhv_2800gcr I5 ( .Sub(Sub), .SB(net12), .D(A_l));
 
 endmodule

@@ -1,6 +1,2 @@
 
-ioh_pmbsabhv_2000 I1 ( .GSB(K_h), .Sub(Sub), .D(net12));
-
-ioh_pe3isabhv_2800gcr I5 ( .Sub(Sub), .SB(net12), .D(A_l));
-
 endmodule

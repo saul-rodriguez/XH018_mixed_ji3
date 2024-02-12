@@ -1,4 +1,5 @@
-    nor2_1 nor2ji3v GT_PUW=850.00n GT_PUL=300.00n GT_PDW=420.00n \
-        GT_PDL=350.00n
-ends NO2JI3VX0
+    I0 ioh_dhpw_2x100
+    I2 ioh_dhpw_2x100
+    I1 ioh_dhpw_2x100
+ends ioh_dhpw_2x100_stack3
 // End of subcircuit definition.

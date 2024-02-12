@@ -1,7 +1,6 @@
 
-// Library name: GATES_JI3V
-// Cell name: nor2ji3v
+// Library name: HV_CELLS
+// Cell name: ioh_dhpw_2x100
 // View name: schematic
 // Inherited view list: schematic
-subckt nor2ji3v
-parameters GT_PUW GT_PUL=300.00n GT_PDW GT_PDL=350.00n
+subckt ioh_dhpw_2x100

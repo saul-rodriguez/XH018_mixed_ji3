@@ -1,0 +1,42 @@
+
+-UNBUFFERED 
+-cdslib ./cds.lib 
+-errormax 50 
+-status 
+-nowarn DLNOHV 
+-nowarn DLCLAP 
+-v93 
+-incdir ${IC_INVOKE_DIR}/
+-ade 
+-timescale 1ns/1ns 
+-vtimescale 1ns/1ns 
+-discipline logic 
+-delay_mode None 
+-novitalaccl 
+-access r 
+-noparamerr 
+-amspartinfo ../psf/partition.info -rnm_partinfo 
+-modelincdir ${IC_INVOKE_DIR}/
+./spiceModels.scs 
+./amsControlSpectre.scs 
+-input ./probe.tcl 
+-run -exit 
+-xmsimargs "+amsrawdir ../psf" 
+-spectre_args "-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.18/sharedData/CDS/ahdl/input.ahdlSimDB" 
+-spectre_args +logstatus 
+ -simcompatible_ams spectre 
+-name TOP.top_tb:config_sch 
+-amsconnrules ConnRules_3V_full_fast 
++define+CDS_SELECT_CRS 
++define+CONNRULES_3V_FULL_FAST  
+-allowredefinition 
+-amsbind 
+-top TOP.top_tb:schematic 
+-top cds_globals 
+./netlist.vams 
+-f ./textInputs
+-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/D_CELLS_JI3V.v 
+-v /home/saul/projects/XH018_mixed_ji3/test_mix/src/VLG_PRIMITIVES.v 
+./cds_globals.vams 
+-l ../psf/xrun.log
+-spectre_args ++aps

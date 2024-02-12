@@ -185,3 +185,8 @@ HV_CELLS prot_hvdd4dj5pk layout prot_hvdd4dj5pk
 HV_CELLS ioh_d5pk layout ioh_d5pk
 HV_CELLS HVSSFs layout HVSSFs
 HV_CELLS ioh_base_pad53_inline layout ioh_base_pad53_inline
+HV_CELLS FILLER200F layout FILLER200F
+HV_CELLS ioh_via234tp layout ioh_via234tp
+HV_CELLS ACORNERFP1 layout ACORNERFP1
+HV_CELLS ioh_acor_half layout ioh_acor_half
+HV_CELLS FILLER100F layout FILLER100F

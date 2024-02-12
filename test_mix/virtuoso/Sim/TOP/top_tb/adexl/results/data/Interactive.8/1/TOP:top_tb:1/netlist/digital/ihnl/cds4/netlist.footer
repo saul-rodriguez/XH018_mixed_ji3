@@ -1,8 +1,0 @@
-
-ioh_dhpw_2x100 I0 ( .A(A_l), .K(net20), .Sub(Sub));
-
-ioh_dhpw_2x100 I2 ( .A(net14), .K(K_h), .Sub(Sub));
-
-ioh_dhpw_2x100 I1 ( .A(net20), .K(net14), .Sub(Sub));
-
-endmodule

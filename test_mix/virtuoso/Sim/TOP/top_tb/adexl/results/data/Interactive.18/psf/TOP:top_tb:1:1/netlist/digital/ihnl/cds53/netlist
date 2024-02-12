@@ -1,0 +1,117 @@
+// Library - IO_CELLS_JIC3V, Cell - CORNERESDPC, View - cmos_sch
+// LAST TIME SAVED: Nov 16 10:57:47 2021
+// NETLIST TIME: Feb 12 01:23:08 2024
+`timescale 1ns / 1ps 
+
+`worklib IO_CELLS_JIC3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="IO_CELLS_JIC3V", dfII_cell="CORNERESDPC", dfII_view="cmos_sch", worklib_name="IO_CELLS_JIC3V", view_name="cmos_sch", last_save_time="Nov 16 10:57:47 2021" *)
+
+module CORNERESDPC (GNDI, GNDOI, GNDRI, PSUB, VDD3I, VDDOI, VDDRI);
+
+input  GNDI, GNDOI, GNDRI, PSUB, VDD3I, VDDOI, VDDRI;
+
+
+jio_ne3i_pc IN2_1 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_2 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_3 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_4 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_5 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_6 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_7 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_8 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_9 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_10 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_11 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_12 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_13 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_14 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_15 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_16 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_17 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_18 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_19 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_20 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_21 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_22 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_23 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN2_24 ( .D(VDDOI), .B(GNDOI), .G(ng2), .S(GNDOI));
+
+jio_ne3i_pc IN1_1 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_2 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_3 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_4 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_5 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_6 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_7 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_8 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_9 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_10 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_11 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_12 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_13 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_14 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_15 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_16 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_17 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_18 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_19 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_20 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_21 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_22 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_23 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_ne3i_pc IN1_24 ( .D(VDDOI), .B(GNDOI), .G(ng1), .S(GNDOI));
+
+jio_andio_pc I1_1 ( .PWI(GNDOI), .DNW(VDDOI), .PSUB(PSUB));
+
+jio_andio_pc I1_2 ( .PWI(GNDOI), .DNW(VDDOI), .PSUB(PSUB));
+
+endmodule

@@ -3,7 +3,7 @@
 #####                                         PVS LVS COMPARISON
 #####  
 #####  Version                       :   23.10-p043
-#####  NVN Run Start                 :   Sun Feb 11 10:47:40 2024
+#####  NVN Run Start                 :   Mon Feb 12 12:37:48 2024
 #####  ERC Summary File              :   ioring3.sum
 #####  Extraction Report File        :   ioring3_lvs.sum
 #####  Comparison Report File        :   ioring3_lvs.sum.cls
@@ -22,12 +22,12 @@
 #####  
 #####  Extraction CPU Time           :   0h 0m 2s - (2s)
 #####  Extraction Exec Time          :   0h 0m 3s - (3s)
-#####  Extraction Peak Memory Usage  :   69.00MB
+#####  Extraction Peak Memory Usage  :   70.00MB
 #####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
-#####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
+#####  NVN Exec Time                 :   0h 0m 0s - (0s)                 
 #####  NVN Peak Memory Usage         :   280.52MB
 #####  LVS Total CPU Time            :   0h 0m 2s - (2s)                 
-#####  LVS Total Exec Time           :   0h 0m 4s - (4s)                 
+#####  LVS Total Exec Time           :   0h 0m 3s - (3s)                 
 #####  LVS Total Peak Memory Usage   :   280.52MB
 #####  
 ##############################################################################################################

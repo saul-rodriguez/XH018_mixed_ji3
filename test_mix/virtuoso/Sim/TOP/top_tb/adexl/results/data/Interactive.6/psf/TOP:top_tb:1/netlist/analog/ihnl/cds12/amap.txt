@@ -1,8 +1,0 @@
-cellMap,*HVDD4D2PK,*HVDD4D2PK,*HV_CELLS,*schematic
-netMap,*HVDD4D2PK,*gnd!,*0
-instMap,*HVDD4D2PK,*I11,*I11
-instMaster,*HVDD4D2PK,*I11,*HV_CELLS_ioh_d2pk_schematic,*ioh_d2pk
-instMap,*HVDD4D2PK,*D0,*D0
-instMaster,*HVDD4D2PK,*D0,*PRIMLIB_ddnw_spectre,*ddnw
-portMap,*HVDD4D2PK,*GND,*GND
-portMap,*HVDD4D2PK,*PAD,*PAD

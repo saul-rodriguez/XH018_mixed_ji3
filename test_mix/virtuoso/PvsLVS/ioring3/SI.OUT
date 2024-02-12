@@ -17,7 +17,7 @@ Finished Initializing Library .
     Generic Pcell Skill Tools: 'production' loaded.
 Loading Circuit Prospector Setup (XfCircuitProspSetup.il)
 Loading cdf.cxt 
-End netlisting Feb 11 10:47:31 2024
+End netlisting Feb 12 12:37:37 2024
 
 Running simin
 
@@ -25,8 +25,8 @@ Running runSim()...
 
 
 Running runsim with simulator: "auCdl"
-Begin simulation:    Feb 11 10:47:31 2024
+Begin simulation:    Feb 12 12:37:37 2024
 
 auCdl netlisting completed
-End simulation:      Feb 11 10:47:31 2024
+End simulation:      Feb 12 12:37:37 2024
 INFO (AUCDL-21): (Analog) CDL netlisting completed successfully.

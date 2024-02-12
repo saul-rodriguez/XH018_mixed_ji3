@@ -1,0 +1,21 @@
+// Library - IORING, Cell - ioring3, View - schematic
+// LAST TIME SAVED: Feb 12 01:23:02 2024
+// NETLIST TIME: Feb 12 01:23:41 2024
+`timescale 1ns / 1ps 
+
+`worklib IORING
+`view schematic
+
+(* cds_ams_schematic *) 
+(* dfII_lib="IORING", dfII_cell="ioring3", dfII_view="schematic", worklib_name="IORING", view_name="schematic", last_save_time="Feb 12 01:23:02 2024" *)
+
+module ioring3 (CLK, ENABLE, GNDA, GNDD, GNDHV, GNDOHV, GNDOR, GNDORA, 
+    INL, OUT0, OUT1, OUT2, OUTHV, OUTL, PSUB, RESET, VDDA, VDDD, VDDHV, 
+    VDDOR, VDDORA, clk_core, enable_core, inl_core, out0_core, 
+    out1_core, out2_core, reset_core);
+
+inout  CLK, ENABLE, GNDA, GNDD, GNDHV, GNDOHV, GNDOR, GNDORA, INL, 
+    OUT0, OUT1, OUT2, OUTHV, OUTL, PSUB, RESET, VDDA, VDDD, VDDHV, 
+    VDDOR, VDDORA, clk_core, enable_core, inl_core, out0_core, 
+    out1_core, out2_core, reset_core;
+

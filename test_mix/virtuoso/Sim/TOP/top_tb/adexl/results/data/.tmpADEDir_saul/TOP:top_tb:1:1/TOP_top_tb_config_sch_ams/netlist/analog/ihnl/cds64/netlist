@@ -1,4 +1,7 @@
-    a22no2_1 a22no2ji3v GT_PDW=890.00n GT_PDL=350.00n GT_PUW=1.47u \
-        GT_PUL=300.000n
-ends AN22JI3VX1
+    I5 ioh_pe3isabhv_1050gcr
+    I3 ioh_pmbsabhv_750
+    I4 ioh_pmbsabhv_750
+    I2 ioh_pmbsabhv_750
+    I1 ioh_pmbsabhv_750
+ends ioh_c5pk
 // End of subcircuit definition.

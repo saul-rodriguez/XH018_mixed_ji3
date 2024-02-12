@@ -1,142 +1,204 @@
 
-ioh_pe3isab_40_04 MP_1 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g225__6417 ( .B(n_6), .Q(n_1), .A(out[2]));
 
-ioh_pe3isab_40_04 MP_2 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g222__2346 ( .B(n_6), .Q(n_5), .A(out[1]));
 
-ioh_pe3isab_40_04 MP_3 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g224__5477 ( .B(n_6), .Q(n_0), .A(out[6]));
 
-ioh_pe3isab_40_04 MP_4 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g226__7410 ( .B(n_6), .Q(n_2), .A(out[5]));
 
-ioh_pe3isab_40_04 MP_5 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g221__2883 ( .B(n_6), .Q(n_7), .A(out[3]));
 
-ioh_pe3isab_40_04 MP_6 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g223__1666 ( .B(n_6), .Q(n_3), .A(out[4]));
 
-ioh_pe3isab_40_04 MP_7 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g217__9315 ( .B(out[2]), .Q(n_15), .A(n_12));
 
-ioh_pe3isab_40_04 MP_8 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g227__2398 ( .B(out[1]), .Q(n_10), .A(FE_OFN0_out_0));
 
-ioh_pe3isab_40_04 MP_9 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g197__1617 ( .B(out[6]), .Q(n_32), .A(n_29));
 
-ioh_pe3isab_40_04 MP_10 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g202__5122 ( .B(out[5]), .Q(n_28), .A(n_25));
 
-ioh_pe3isab_40_04 MP_11 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g212__7482 ( .B(out[3]), .Q(n_20), .A(n_17));
 
-ioh_pe3isab_40_04 MP_12 ( .D(D), .B(SB), .G(net20), .S(SB));
+NA2JI3VX0 g207__6131 ( .B(out[4]), .Q(n_24), .A(n_21));
 
-ioh_pe3isab_40_04 MP_13 ( .D(D), .B(SB), .G(net20), .S(SB));
+INJI3VX0 g218 ( .A(n_10), .Q(n_12));
 
-ioh_pe3isab_40_04 MP_14 ( .D(D), .B(SB), .G(net20), .S(SB));
+INJI3VX0 g213 ( .A(n_15), .Q(n_17));
 
-ioh_pe3isab_40_04 MP_15 ( .D(D), .B(SB), .G(net20), .S(SB));
+INJI3VX0 g232 ( .A(FE_PHN2_enable), .Q(n_6));
 
-ioh_pe3isab_40_04 MP_16 ( .D(D), .B(SB), .G(net20), .S(SB));
+INJI3VX0 g198 ( .A(n_28), .Q(n_29));
 
-ioh_pe3isab_40_04 MP_17 ( .D(D), .B(SB), .G(net20), .S(SB));
+INJI3VX0 g203 ( .A(n_24), .Q(n_25));
 
-ioh_pe3isab_40_04 MP_18 ( .D(D), .B(SB), .G(net20), .S(SB));
+INJI3VX0 g208 ( .A(n_20), .Q(n_21));
 
-ioh_pe3isab_40_04 MP_19 ( .D(D), .B(SB), .G(net20), .S(SB));
+DLY2JI3VX1 FE_PHC5_n_22 ( .A(n_22), .Q(FE_PHN5_n_22));
 
-ioh_pe3isab_40_04 MP_20 ( .D(D), .B(SB), .G(net20), .S(SB));
+DLY2JI3VX1 FE_PHC4_n_18 ( .A(n_18), .Q(FE_PHN4_n_18));
 
-ioh_pe3isab_40_04 MP_21 ( .D(D), .B(SB), .G(net20), .S(SB));
+DLY2JI3VX1 FE_PHC3_n_14 ( .A(n_14), .Q(FE_PHN3_n_14));
 
-ioh_pe3isab_40_04 MP_22 ( .D(D), .B(SB), .G(net20), .S(SB));
+DLY2JI3VX1 FE_PHC2_enable ( .A(enable), .Q(FE_PHN2_enable));
 
-ioh_pe3isab_40_04 MP_23 ( .D(D), .B(SB), .G(net20), .S(SB));
+DLY2JI3VX1 FE_PHC1_reset ( .A(reset), .Q(FE_PHN1_reset));
 
-ioh_pe3isab_40_04 MP_24 ( .D(D), .B(SB), .G(net20), .S(SB));
+BUJI3VX2 FE_PHC10_n_38 ( .A(n_38), .Q(FE_PHN10_n_38));
 
-ioh_pe3isab_40_04 MP_25 ( .D(D), .B(SB), .G(net20), .S(SB));
+BUJI3VX2 FE_OFC0_out_0 ( .A(FE_OFN0_out_0), .Q(out[0]));
 
-ioh_pe3isab_40_04 MP_26 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_6 ( );
 
-ioh_pe3isab_40_04 MP_27 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_8 ( );
 
-ioh_pe3isab_40_04 MP_28 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_10 ( );
 
-ioh_pe3isab_40_04 MP_29 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_12 ( );
 
-ioh_pe3isab_40_04 MP_30 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_17 ( );
 
-ioh_pe3isab_40_04 MP_31 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_21 ( );
 
-ioh_pe3isab_40_04 MP_32 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_24 ( );
 
-ioh_pe3isab_40_04 MP_33 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_30 ( );
 
-ioh_pe3isab_40_04 MP_34 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_34 ( );
 
-ioh_pe3isab_40_04 MP_35 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_35 ( );
 
-ioh_pe3isab_40_04 MP_36 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP5JI3V FILLCAP_T_1_38 ( );
 
-ioh_pe3isab_40_04 MP_37 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_3 ( );
 
-ioh_pe3isab_40_04 MP_38 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_13 ( );
 
-ioh_pe3isab_40_04 MP_39 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_14 ( );
 
-ioh_pe3isab_40_04 MP_40 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_15 ( );
 
-ioh_pe3isab_40_04 MP_41 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_16 ( );
 
-ioh_pe3isab_40_04 MP_42 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_18 ( );
 
-ioh_pe3isab_40_04 MP_43 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_19 ( );
 
-ioh_pe3isab_40_04 MP_44 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_20 ( );
 
-ioh_pe3isab_40_04 MP_45 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_22 ( );
 
-ioh_pe3isab_40_04 MP_46 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_25 ( );
 
-ioh_pe3isab_40_04 MP_47 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_26 ( );
 
-ioh_pe3isab_40_04 MP_48 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_27 ( );
 
-ioh_pe3isab_40_04 MP_49 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_28 ( );
 
-ioh_pe3isab_40_04 MP_50 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_29 ( );
 
-ioh_pe3isab_40_04 MP_51 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_31 ( );
 
-ioh_pe3isab_40_04 MP_52 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_32 ( );
 
-ioh_pe3isab_40_04 MP_53 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_33 ( );
 
-ioh_pe3isab_40_04 MP_54 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP7JI3V FILLCAP_T_1_37 ( );
 
-ioh_pe3isab_40_04 MP_55 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP10JI3V FILLCAP_T_1_2 ( );
 
-ioh_pe3isab_40_04 MP_56 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP10JI3V FILLCAP_T_1_4 ( );
 
-ioh_pe3isab_40_04 MP_57 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP10JI3V FILLCAP_T_1_9 ( );
 
-ioh_pe3isab_40_04 MP_58 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP10JI3V FILLCAP_T_1_23 ( );
 
-ioh_pe3isab_40_04 MP_59 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP10JI3V FILLCAP_T_1_36 ( );
 
-ioh_pe3isab_40_04 MP_60 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP15JI3V FILLCAP_T_1_5 ( );
 
-ioh_pe3isab_40_04 MP_61 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP15JI3V FILLCAP_T_1_7 ( );
 
-ioh_pe3isab_40_04 MP_62 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP15JI3V FILLCAP_T_1_11 ( );
 
-ioh_pe3isab_40_04 MP_63 ( .D(D), .B(SB), .G(net20), .S(SB));
+DECAP25JI3V FILLCAP_T_1_1 ( );
 
-ioh_pe3isab_40_04 MP_64 ( .D(D), .B(SB), .G(net20), .S(SB));
+BUJI3VX1 CTS_cdb_buf_00009 ( .A(CTS_2), .Q(CTS_1));
 
-ioh_pe3isab_40_04 MP_65 ( .D(D), .B(SB), .G(net20), .S(SB));
+BUJI3VX1 CTS_cdb_buf_00010 ( .A(clk), .Q(CTS_2));
 
-ioh_pe3isab_40_04 MP_66 ( .D(D), .B(SB), .G(net20), .S(SB));
+DFRQJI3VX1 \out_reg[0]  ( .Q(FE_OFN0_out_0), .D(FE_PHN3_n_14), 
+    .C(CTS_1));
 
-ioh_pe3isab_40_04 MP_67 ( .D(D), .B(SB), .G(net20), .S(SB));
+NO2JI3VX0 g187__2398 ( .B(n_36), .A(FE_PHN1_reset), .Q(n_38));
 
-ioh_pe3isab_40_04 MP_68 ( .D(D), .B(SB), .G(net20), .S(SB));
+NO2JI3VX0 g219__4733 ( .B(n_9), .A(FE_PHN1_reset), .Q(n_14));
 
-ioh_pe3isab_40_04 MP_69 ( .D(D), .B(SB), .G(net20), .S(SB));
+EN2JI3VX0 g191__5526 ( .A(out[7]), .B(n_32), .Q(n_33));
 
-ioh_pe3isab_40_04 MP_70 ( .D(D), .B(SB), .G(net20), .S(SB));
+EN2JI3VX0 g220__9945 ( .A(FE_PHN2_enable), .B(FE_OFN0_out_0), .Q(n_9));
+
+DFRQJI3VX2 \out_reg[2]  ( .Q(out[2]), .D(FE_PHN5_n_22), .C(CTS_1));
+
+DFRQJI3VX2 \out_reg[6]  ( .Q(out[6]), .D(FE_PHN9_n_37), .C(CTS_1));
+
+DFRQJI3VX2 \out_reg[5]  ( .Q(out[5]), .D(FE_PHN8_n_34), .C(CTS_1));
+
+DFRQJI3VX2 \out_reg[3]  ( .Q(out[3]), .D(FE_PHN6_n_26), .C(CTS_1));
+
+DFRQJI3VX2 \out_reg[4]  ( .Q(out[4]), .D(FE_PHN7_n_30), .C(CTS_1));
+
+DFRQJI3VX2 \out_reg[7]  ( .Q(out[7]), .D(FE_PHN10_n_38), .C(CTS_1));
+
+AN22JI3VX1 g189__6260 ( .Q(n_36), .D(n_6), .C(out[7]), .A(n_33), 
+    .B(FE_PHN2_enable));
+
+AN21JI3VX1 g209__7098 ( .Q(n_22), .C(FE_PHN1_reset), .A(n_19), 
+    .B(n_1));
+
+AN21JI3VX1 g214__5115 ( .Q(n_18), .C(FE_PHN1_reset), .A(n_13), 
+    .B(n_5));
+
+AN21JI3VX1 g190__5107 ( .Q(n_37), .C(FE_PHN1_reset), .A(n_35), 
+    .B(n_0));
+
+AN21JI3VX1 g194__8428 ( .Q(n_34), .C(FE_PHN1_reset), .A(n_31), 
+    .B(n_2));
+
+AN21JI3VX1 g204__1705 ( .Q(n_26), .C(FE_PHN1_reset), .A(n_23), 
+    .B(n_7));
+
+AN21JI3VX1 g199__3680 ( .Q(n_30), .C(FE_PHN1_reset), .A(n_27), 
+    .B(n_3));
+
+DLY1JI3VX1 FE_PHC6_n_26 ( .A(n_26), .Q(FE_PHN6_n_26));
+
+DLY1JI3VX1 FE_PHC7_n_30 ( .A(n_30), .Q(FE_PHN7_n_30));
+
+ON211JI3VX1 g211__1881 ( .D(FE_PHN2_enable), .Q(n_19), .C(n_15), 
+    .A(n_12), .B(out[2]));
+
+ON211JI3VX1 g216__6161 ( .D(FE_PHN2_enable), .Q(n_13), .C(n_10), 
+    .A(out[0]), .B(out[1]));
+
+ON211JI3VX1 g193__4319 ( .D(FE_PHN2_enable), .Q(n_35), .C(n_32), 
+    .A(n_29), .B(out[6]));
+
+ON211JI3VX1 g196__6783 ( .D(FE_PHN2_enable), .Q(n_31), .C(n_28), 
+    .A(n_25), .B(out[5]));
+
+ON211JI3VX1 g206__8246 ( .D(FE_PHN2_enable), .Q(n_23), .C(n_20), 
+    .A(n_17), .B(out[3]));
+
+ON211JI3VX1 g201__2802 ( .D(FE_PHN2_enable), .Q(n_27), .C(n_24), 
+    .A(n_21), .B(out[4]));
+
+BUJI3VX16 FE_PHC8_n_34 ( .A(n_34), .Q(FE_PHN8_n_34));
+
+BUJI3VX0 FE_PHC9_n_37 ( .A(n_37), .Q(FE_PHN9_n_37));
+
+DFRQJI3VX4 \out_reg[1]  ( .Q(out[1]), .D(FE_PHN4_n_18), .C(CTS_1));
 
 endmodule

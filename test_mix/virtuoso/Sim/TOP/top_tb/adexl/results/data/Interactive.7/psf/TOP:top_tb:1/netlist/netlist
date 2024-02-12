@@ -1,5 +1,0 @@
-cds.lib: ${AMS_CDS_LIB} 
-lib:  TOP 
-cell: top_tb 
-view: config_gate 
-topCellLib: TOP 

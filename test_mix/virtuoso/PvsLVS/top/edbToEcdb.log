@@ -1,0 +1,17 @@
+
+/pkg/cadence/installs/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : top_20241.db
+ECDB dir        : ./
+Top Cell        : top
+CDL netlist     : svdb/top.net
+Layer map file  : svdb/top.ecdbmap
+Text map file   : svdb/top.ports
+Dependency map  : top.lmap.perc
+Lvs file        : svdb/top.lvsfile
+Float net file  : .top.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : top_20241

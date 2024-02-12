@@ -2,7 +2,7 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version 6.1.8-64b 10/11/2023 09:46 (sjfhw317) $
           : sub-version  IC6.1.8-64b.500.34 
-Started at: 11-Feb-2024  10:46:42
+Started at: 12-Feb-2024  00:59:48
 User Name : saul
 Host Name : phoenix
 Directory : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
@@ -33,14 +33,14 @@ case                                    Preserve
 convertDot                              node
 convertPin                              geometryAndText
 
-INFO (XSTRM-223): 1. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707666402920.
-INFO (XSTRM-223): 2. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707666402921.
-INFO (XSTRM-223): 3. Translating stdVia TECH_XH018/VIATPL_C/layout as STRUCTURE VIATPL_C_CDNS_707666402922.
-INFO (XSTRM-223): 4. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707666402923.
-INFO (XSTRM-223): 5. Translating stdVia TECH_XH018/VIATPL_C/layout as STRUCTURE VIATPL_C_CDNS_707666402924.
-INFO (XSTRM-223): 6. Translating stdVia TECH_XH018/VIATP_C/layout as STRUCTURE VIATP_C_CDNS_707666402925.
-INFO (XSTRM-223): 7. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_707666402926.
-INFO (XSTRM-223): 8. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_707666402927.
+INFO (XSTRM-223): 1. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707717588290.
+INFO (XSTRM-223): 2. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707717588291.
+INFO (XSTRM-223): 3. Translating stdVia TECH_XH018/VIATPL_C/layout as STRUCTURE VIATPL_C_CDNS_707717588292.
+INFO (XSTRM-223): 4. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707717588293.
+INFO (XSTRM-223): 5. Translating stdVia TECH_XH018/VIATP_C/layout as STRUCTURE VIATP_C_CDNS_707717588294.
+INFO (XSTRM-223): 6. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_707717588295.
+INFO (XSTRM-223): 7. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_707717588296.
+INFO (XSTRM-223): 8. Translating stdVia TECH_XH018/VIATP_C/layout as STRUCTURE VIATP_C_CDNS_707717588297.
 INFO (XSTRM-223): 9. Translating cellView IO_CELLS_JIC3V/jio_via34tp_pc/layout as STRUCTURE jio_via34tp_pc.
 WARNING (XSTRM-35): The objects in the layer-purpose pair 'VIA4:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
 WARNING (XSTRM-35): The objects in the layer-purpose pair 'VIA5:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
@@ -242,33 +242,39 @@ INFO (XSTRM-223): 191. Translating cellView HV_CELLS/prot_hvdd4dj5pk/layout as S
 INFO (XSTRM-223): 192. Translating cellView HV_CELLS/HVDD4DJ5PKFs/layout as STRUCTURE HVDD4DJ5PKFs.
 INFO (XSTRM-223): 193. Translating cellView HV_CELLS/ioh_base_pad53_inline/layout as STRUCTURE ioh_base_pad53_inline.
 INFO (XSTRM-223): 194. Translating cellView HV_CELLS/HVSSFs/layout as STRUCTURE HVSSFs.
-INFO (XSTRM-223): 195. Translating cellView IORING/ioring3/layout as STRUCTURE ioring3.
+INFO (XSTRM-223): 195. Translating cellView HV_CELLS/ioh_via234tp/layout as STRUCTURE ioh_via234tp.
+INFO (XSTRM-223): 196. Translating cellView HV_CELLS/FILLER200F/layout as STRUCTURE FILLER200F.
+INFO (XSTRM-223): 197. Translating cellView HV_CELLS/ioh_acor_half/layout as STRUCTURE ioh_acor_half.
+INFO (XSTRM-223): 198. Translating cellView HV_CELLS/ACORNERFP1/layout as STRUCTURE ACORNERFP1.
+INFO (XSTRM-223): 199. Translating cellView HV_CELLS/FILLER100F/layout as STRUCTURE FILLER100F.
+INFO (XSTRM-223): 200. Translating cellView IORING/ioring3/layout as STRUCTURE ioring3.
 WARNING (XSTRM-154): The object map file does not contain any mapping for the OpenAccess object 'Marker' and the sub-object 'annotation'. Therefore, these objects in the design will not be translated. To enable the translation of these objects in the Stream file, provide a valid mapping in the object map file.
+WARNING (XSTRM-154): The object map file does not contain any mapping for the OpenAccess object 'Marker' and the sub-object 'warning'. Therefore, these objects in the design will not be translated. To enable the translation of these objects in the Stream file, provide a valid mapping in the object map file.
 
 Summary of Objects Translated:
-	Scalar Instances:                       330
-	Array Instances:                        3386
-	Polygons:                               1108
+	Scalar Instances:                       340
+	Array Instances:                        3522
+	Polygons:                               1126
 	Paths:                                  43
-	Rectangles:                             49404
+	Rectangles:                             49452
 	Lines:                                  0
 	Arcs:                                   0
 	Donuts:                                 0
 	Dots:                                   0
 	Ellipses:                               0
-	Boundaries:                             35
+	Boundaries:                             38
 	Area Blockages:                         0
 	Layer Blockages:                        0
 	Area Halos:                             0
 	Markers:                                0
 	Rows:                                   0
-	Standard Vias                           18
+	Standard Vias                           20
 	Custom Vias:                            0
 	CdsGen Vias:                            0
 	Pathsegs:                               20
-	Text:                                   1587
+	Text:                                   1647
 	TextDisplay:                            40
-	Cells:                                  195
+	Cells:                                  200
 
-Elapsed Time: 0.7s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 17056KB
-INFO (XSTRM-234): Translation completed. '0' error(s) and '17' warning(s) found.
+Elapsed Time: 0.7s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 17556KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '18' warning(s) found.

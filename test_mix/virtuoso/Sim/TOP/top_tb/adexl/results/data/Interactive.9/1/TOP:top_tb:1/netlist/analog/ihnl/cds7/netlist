@@ -1,6 +1,0 @@
-    MPX (net17 G S B) pe3i w=40u l=400n as=1.92e-11 ad=1.92e-11 \
-        ps=8.096e-05 pd=8.096e-05 nrs=0.00675 nrd=0.00675 m=(1)*(1) \
-        par1=(1)*(1)
-    R0 (net17 D B) rdp3 l=430.0n w=40u m=1 par1=1
-ends ioh_pe3isab_40_04
-// End of subcircuit definition.

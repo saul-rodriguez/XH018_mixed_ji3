@@ -1,5 +1,0 @@
-    I11 ioh_d2pk
-    D0 (GND PAD) ddnw area=3.89668e-10 perimeter=208.5u dbv=0.0 m=1 \
-        par1=(1) xf_subext=0
-ends HVDD4D2PK
-// End of subcircuit definition.

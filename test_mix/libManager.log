@@ -1,6 +1,6 @@
 \o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 08/30/2023 13:17 (sjfdcl1037) $
 \o Sub version:		sub-version  s342 
-\o Arguments:		-unmapped -mpssession virtuoso21982 -mpshost phoenix 
+\o Arguments:		-unmapped -mpssession virtuoso7647 -mpshost phoenix 
 \o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix
 \o 64-bit offsets
 \o Qt version: 		5.9.1
@@ -13,9 +13,9 @@
 \o MPS service: map window
 \o Library Manager customization server connected.
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(798 52 743 853))
+\a nrResizeWindow(cdsLibManager list(518 27 1082 836))
+\a nrResizeWindow(cdsLibManager list(308 65 1082 836))
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(2429 184 743 853))
 \a nrSetWindowVisibility(cdsLibManager "hide")
 \a _lmgrCloseIconify("cdsLibManager" 1)
 \o MPS service: shutdown

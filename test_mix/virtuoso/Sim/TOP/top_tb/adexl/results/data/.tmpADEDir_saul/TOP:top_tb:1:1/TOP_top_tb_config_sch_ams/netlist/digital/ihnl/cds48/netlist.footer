@@ -1,5 +1,2 @@
 
-invrji3v #( .GT_PDL(350.00n), .GT_PUW(940.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
-     ) invr_1 ( .out(Q), .in(A));
-
 endmodule

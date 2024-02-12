@@ -1,4 +1,5 @@
-    a2no2_1 a2no2ji3v GT_PDW=890.00n GT_PDL=350.00n GT_PUW=1.41u \
-        GT_PUL=300.00n
-ends AN21JI3VX1
+    MPX (D G S B) pmb w=40.12u l=1u as=1.92576e-11 ad=1.92576e-11 \
+        ps=8.12e-05 pd=8.12e-05 nrs=0.00672981 nrd=0.00672981 m=(1)*(1) \
+        par1=(1)*(1)
+ends ioh_pmbsab_40_10
 // End of subcircuit definition.

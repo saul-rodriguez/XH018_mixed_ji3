@@ -1,0 +1,369 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 10/11/2023 09:46 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.34 
+Started at: 12-Feb-2024  13:11:18
+User Name : saul
+Host Name : phoenix
+Directory : /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/top/top.gds' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
+INFO (XSTRM-217): Reading the object map file, /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 TOP
+strmFile                                /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/top/top.gds
+topCell                                 top
+view                                    layout
+runDir                                  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/top
+logFile                                 /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/top/PIPO1.LOG
+techLib                                 TECH_XH018
+hierDepth                               32
+maxVertices                             2048
+layerMap                                /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
+objectMap                                /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map
+userSkillFile                           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/PvsLVS/top/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+convertPin                              geometryAndText
+
+INFO (XSTRM-223): 1. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_707761478360.
+INFO (XSTRM-223): 2. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_707761478361.
+INFO (XSTRM-223): 3. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_707761478362.
+INFO (XSTRM-223): 4. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_707761478363.
+INFO (XSTRM-223): 5. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_707761478364.
+INFO (XSTRM-223): 6. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707761478365.
+INFO (XSTRM-223): 7. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707761478366.
+INFO (XSTRM-223): 8. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707761478367.
+INFO (XSTRM-223): 9. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_707761478368.
+INFO (XSTRM-223): 10. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_707761478369.
+INFO (XSTRM-223): 11. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_7077614783610.
+INFO (XSTRM-223): 12. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_7077614783611.
+INFO (XSTRM-223): 13. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_7077614783612.
+INFO (XSTRM-223): 14. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_7077614783613.
+INFO (XSTRM-223): 15. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783614.
+INFO (XSTRM-223): 16. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_7077614783615.
+INFO (XSTRM-223): 17. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_7077614783616.
+INFO (XSTRM-223): 18. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783617.
+INFO (XSTRM-223): 19. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783618.
+INFO (XSTRM-223): 20. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783619.
+INFO (XSTRM-223): 21. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_7077614783620.
+INFO (XSTRM-223): 22. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783621.
+INFO (XSTRM-223): 23. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783622.
+INFO (XSTRM-223): 24. Translating stdVia TECH_XH018/VIATPL_C/layout as STRUCTURE VIATPL_C_CDNS_7077614783623.
+INFO (XSTRM-223): 25. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783624.
+INFO (XSTRM-223): 26. Translating stdVia TECH_XH018/VIATP_C/layout as STRUCTURE VIATP_C_CDNS_7077614783625.
+INFO (XSTRM-223): 27. Translating stdVia TECH_XH018/VIA3_C/layout as STRUCTURE VIA3_C_CDNS_7077614783626.
+INFO (XSTRM-223): 28. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_7077614783627.
+INFO (XSTRM-223): 29. Translating stdVia TECH_XH018/VIATP_C/layout as STRUCTURE VIATP_C_CDNS_7077614783628.
+INFO (XSTRM-223): 30. Translating cellView IO_CELLS_JIC3V/jio_via34tp_pc/layout as STRUCTURE jio_via34tp_pc.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'VIA4:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'VIA5:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 31. Translating cellView IO_CELLS_JIC3V/jio_via2_pc/layout as STRUCTURE jio_via2_pc.
+INFO (XSTRM-223): 32. Translating cellView IO_CELLS_JIC3V/jio_via12_pc/layout as STRUCTURE jio_via12_pc.
+INFO (XSTRM-223): 33. Translating cellView IO_CELLS_JIC3V/jio_con_pc/layout as STRUCTURE jio_con_pc.
+INFO (XSTRM-223): 34. Translating cellView IO_CELLS_JIC3V/jio_via134tp_pc/layout as STRUCTURE jio_via134tp_pc.
+INFO (XSTRM-223): 35. Translating cellView IO_CELLS_JIC3V/jio_baseps_m2_pc/layout as STRUCTURE jio_baseps_m2_pc.
+INFO (XSTRM-223): 36. Translating cellView IO_CELLS_JIC3V/jio_resg_pc/layout as STRUCTURE jio_resg_pc.
+INFO (XSTRM-223): 37. Translating cellView IO_CELLS_JIC3V/jio_baseaps_pc/layout as STRUCTURE jio_baseaps_pc.
+INFO (XSTRM-223): 38. Translating cellView IO_CELLS_JIC3V/jio_via1_pc/layout as STRUCTURE jio_via1_pc.
+INFO (XSTRM-223): 39. Translating cellView IO_CELLS_JIC3V/jio_viabt_pc/layout as STRUCTURE jio_viabt_pc.
+INFO (XSTRM-223): 40. Translating cellView IO_CELLS_JIC3V/jio_viatp_pc/layout as STRUCTURE jio_viatp_pc.
+INFO (XSTRM-223): 41. Translating cellView IO_CELLS_JIC3V/jio_conm_pc/layout as STRUCTURE jio_conm_pc.
+INFO (XSTRM-223): 42. Translating cellView IO_CELLS_JIC3V/jio_via12bm_pc/layout as STRUCTURE jio_via12bm_pc.
+INFO (XSTRM-223): 43. Translating cellView IO_CELLS_JIC3V/jio_pe3isb_pc/layout as STRUCTURE jio_pe3isb_pc.
+INFO (XSTRM-223): 44. Translating cellView IO_CELLS_JIC3V/jio_via234tp_pc/layout as STRUCTURE jio_via234tp_pc.
+INFO (XSTRM-223): 45. Translating cellView IO_CELLS_JIC3V/jio_base_ptrps_pc/layout as STRUCTURE jio_base_ptrps_pc.
+INFO (XSTRM-223): 46. Translating cellView IO_CELLS_JIC3V/jio_viabtp_pc/layout as STRUCTURE jio_viabtp_pc.
+INFO (XSTRM-223): 47. Translating cellView PRIMLIB/std_pad_layout/layout as STRUCTURE std_pad_layout.
+INFO (XSTRM-223): 48. Translating cellView IO_CELLS_JIC3V/jio_pad_pc/layout as STRUCTURE jio_pad_pc.
+INFO (XSTRM-223): 49. Translating cellView IO_CELLS_JIC3V/jio_viatpl_pc/layout as STRUCTURE jio_viatpl_pc.
+INFO (XSTRM-223): 50. Translating cellView IO_CELLS_JIC3V/jio_padp_pc/layout as STRUCTURE jio_padp_pc.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET5:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET6:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 51. Translating cellView IO_CELLS_JIC3V/jio_via4tp_pc/layout as STRUCTURE jio_via4tp_pc.
+INFO (XSTRM-223): 52. Translating cellView IO_CELLS_JIC3V/jio_via34tp1r_pc/layout as STRUCTURE jio_via34tp1r_pc.
+INFO (XSTRM-223): 53. Translating cellView IO_CELLS_JIC3V/jio_via34_1r_pc/layout as STRUCTURE jio_via34_1r_pc.
+INFO (XSTRM-223): 54. Translating cellView IO_CELLS_JIC3V/jio_base_metal_pc/layout as STRUCTURE jio_base_metal_pc.
+INFO (XSTRM-223): 55. Translating cellView IO_CELLS_JIC3V/jio_ne3isbg_pc/layout as STRUCTURE jio_ne3isbg_pc.
+INFO (XSTRM-223): 56. Translating cellView IO_CELLS_JIC3V/jio_via1dm_pc/layout as STRUCTURE jio_via1dm_pc.
+INFO (XSTRM-223): 57. Translating cellView IO_CELLS_JIC3V/jio_basensplink_pc/layout as STRUCTURE jio_basensplink_pc.
+INFO (XSTRM-223): 58. Translating cellView IO_CELLS_JIC3V/jio_filpoly_ap_pc/layout as STRUCTURE jio_filpoly_ap_pc.
+INFO (XSTRM-223): 59. Translating cellView IO_CELLS_JIC3V/jio_fildifpoly_ap_pc/layout as STRUCTURE jio_fildifpoly_ap_pc.
+INFO (XSTRM-223): 60. Translating cellView IO_CELLS_JIC3V/jio_fildifpolye_ap_pc/layout as STRUCTURE jio_fildifpolye_ap_pc.
+INFO (XSTRM-223): 61. Translating cellView IO_CELLS_JIC3V/jio_basepspfl_pc/layout as STRUCTURE jio_basepspfl_pc.
+INFO (XSTRM-223): 62. Translating cellView IO_CELLS_JIC3V/jio_base_ntrbg_pc/layout as STRUCTURE jio_base_ntrbg_pc.
+INFO (XSTRM-223): 63. Translating cellView IO_CELLS_JIC3V/jio_basepsub_pc/layout as STRUCTURE jio_basepsub_pc.
+INFO (XSTRM-223): 64. Translating cellView IO_CELLS_JIC3V/PSUBPADPC/layout as STRUCTURE PSUBPADPC.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET5:TEXT' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET3:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET4:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET5:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET2:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET1:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'METTP:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'instance:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET6:TEXT' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'MET6:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'METTPL:pin' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 65. Translating cellView IO_CELLS_JIC3V/jio_base_ntrb_pc/layout as STRUCTURE jio_base_ntrb_pc.
+INFO (XSTRM-223): 66. Translating cellView IO_CELLS_JIC3V/jio_ne3isb_pc/layout as STRUCTURE jio_ne3isb_pc.
+INFO (XSTRM-223): 67. Translating cellView IO_CELLS_JIC3V/jio_base_ntrc_pc/layout as STRUCTURE jio_base_ntrc_pc.
+INFO (XSTRM-223): 68. Translating cellView IO_CELLS_JIC3V/jio_basenplink_pc/layout as STRUCTURE jio_basenplink_pc.
+INFO (XSTRM-223): 69. Translating cellView IO_CELLS_JIC3V/jio_basepsc_pc/layout as STRUCTURE jio_basepsc_pc.
+INFO (XSTRM-223): 70. Translating cellView IO_CELLS_JIC3V/VDDPADPC/layout as STRUCTURE VDDPADPC.
+INFO (XSTRM-223): 71. Translating cellView IO_CELLS_JIC3V/jio_fillpoly_pc/layout as STRUCTURE jio_fillpoly_pc.
+INFO (XSTRM-223): 72. Translating cellView IO_CELLS_JIC3V/jio_fildifpolypanc_pc/layout as STRUCTURE jio_fildifpolypanc_pc.
+INFO (XSTRM-223): 73. Translating cellView IO_CELLS_JIC3V/jio_base_ptrpsfl_pc/layout as STRUCTURE jio_base_ptrpsfl_pc.
+INFO (XSTRM-223): 74. Translating cellView IO_CELLS_JIC3V/jio_base_ntr_pc/layout as STRUCTURE jio_base_ntr_pc.
+INFO (XSTRM-223): 75. Translating cellView IO_CELLS_JIC3V/jio_basepsn_pc/layout as STRUCTURE jio_basepsn_pc.
+INFO (XSTRM-223): 76. Translating cellView IO_CELLS_JIC3V/jio_basepsvo_pc/layout as STRUCTURE jio_basepsvo_pc.
+INFO (XSTRM-223): 77. Translating cellView IO_CELLS_JIC3V/VDDORPADPC/layout as STRUCTURE VDDORPADPC.
+INFO (XSTRM-223): 78. Translating cellView IO_CELLS_JIC3V/GNDPADPC/layout as STRUCTURE GNDPADPC.
+INFO (XSTRM-223): 79. Translating cellView IO_CELLS_JIC3V/jio_fildifpoly_pc/layout as STRUCTURE jio_fildifpoly_pc.
+INFO (XSTRM-223): 80. Translating cellView IO_CELLS_JIC3V/jio_fildifpolye_pc/layout as STRUCTURE jio_fildifpolye_pc.
+INFO (XSTRM-223): 81. Translating cellView IO_CELLS_JIC3V/jio_base_ngo_pc/layout as STRUCTURE jio_base_ngo_pc.
+INFO (XSTRM-223): 82. Translating cellView IO_CELLS_JIC3V/jio_baseapsgo_pc/layout as STRUCTURE jio_baseapsgo_pc.
+INFO (XSTRM-223): 83. Translating cellView IO_CELLS_JIC3V/jio_basenplnkgo_pc/layout as STRUCTURE jio_basenplnkgo_pc.
+INFO (XSTRM-223): 84. Translating cellView IO_CELLS_JIC3V/jio_baseps_m2g_pc/layout as STRUCTURE jio_baseps_m2g_pc.
+INFO (XSTRM-223): 85. Translating cellView IO_CELLS_JIC3V/jio_basepsgo_pc/layout as STRUCTURE jio_basepsgo_pc.
+INFO (XSTRM-223): 86. Translating cellView IO_CELLS_JIC3V/GNDORPADPC/layout as STRUCTURE GNDORPADPC.
+INFO (XSTRM-223): 87. Translating cellView IO_CELLS_JIC3V/jio_fillpolym1_pc/layout as STRUCTURE jio_fillpolym1_pc.
+INFO (XSTRM-223): 88. Translating cellView IO_CELLS_JIC3V/jio_gphfill_pc/layout as STRUCTURE jio_gphfill_pc.
+INFO (XSTRM-223): 89. Translating cellView IO_CELLS_JIC3V/jio_metflc_pc/layout as STRUCTURE jio_metflc_pc.
+INFO (XSTRM-223): 90. Translating cellView IO_CELLS_JIC3V/jio_lvpsd_pc/layout as STRUCTURE jio_lvpsd_pc.
+INFO (XSTRM-223): 91. Translating cellView IO_CELLS_JIC3V/jio_m4_pc/layout as STRUCTURE jio_m4_pc.
+INFO (XSTRM-223): 92. Translating cellView IO_CELLS_JIC3V/jio_vialnk_pc/layout as STRUCTURE jio_vialnk_pc.
+INFO (XSTRM-223): 93. Translating cellView IO_CELLS_JIC3V/jio_via1dms_pc/layout as STRUCTURE jio_via1dms_pc.
+INFO (XSTRM-223): 94. Translating cellView IO_CELLS_JIC3V/jio_bufy_pc/layout as STRUCTURE jio_bufy_pc.
+INFO (XSTRM-223): 95. Translating cellView IO_CELLS_JIC3V/jio_bufc_lay_pc/layout as STRUCTURE jio_bufc_lay_pc.
+INFO (XSTRM-223): 96. Translating cellView IO_CELLS_JIC3V/jio_rsesd_pc/layout as STRUCTURE jio_rsesd_pc.
+INFO (XSTRM-223): 97. Translating cellView IO_CELLS_JIC3V/jio_esd2_lay_pc/layout as STRUCTURE jio_esd2_lay_pc.
+INFO (XSTRM-223): 98. Translating cellView IO_CELLS_JIC3V/jio_ic_lay_pc/layout as STRUCTURE jio_ic_lay_pc.
+INFO (XSTRM-223): 99. Translating cellView IO_CELLS_JIC3V/jio_gpcon_pc/layout as STRUCTURE jio_gpcon_pc.
+INFO (XSTRM-223): 100. Translating cellView IO_CELLS_JIC3V/jio_baseijflc_pc/layout as STRUCTURE jio_baseijflc_pc.
+INFO (XSTRM-223): 101. Translating cellView IO_CELLS_JIC3V/jio_base_ptrq_pc/layout as STRUCTURE jio_base_ptrq_pc.
+INFO (XSTRM-223): 102. Translating cellView IO_CELLS_JIC3V/jio_base_ptr_pc/layout as STRUCTURE jio_base_ptr_pc.
+INFO (XSTRM-223): 103. Translating cellView IO_CELLS_JIC3V/jio_base_m2_pc/layout as STRUCTURE jio_base_m2_pc.
+INFO (XSTRM-223): 104. Translating cellView IO_CELLS_JIC3V/jio_basea_pc/layout as STRUCTURE jio_basea_pc.
+INFO (XSTRM-223): 105. Translating cellView IO_CELLS_JIC3V/jio_baseti_pc/layout as STRUCTURE jio_baseti_pc.
+INFO (XSTRM-223): 106. Translating cellView IO_CELLS_JIC3V/jio_basei_pc/layout as STRUCTURE jio_basei_pc.
+INFO (XSTRM-223): 107. Translating cellView IO_CELLS_JIC3V/ICPC/layout as STRUCTURE ICPC.
+INFO (XSTRM-223): 108. Translating cellView IO_CELLS_JIC3V/jio_via1m_pc/layout as STRUCTURE jio_via1m_pc.
+INFO (XSTRM-223): 109. Translating cellView IO_CELLS_JIC3V/jio_tsctrl_lay_pc/layout as STRUCTURE jio_tsctrl_lay_pc.
+INFO (XSTRM-223): 110. Translating cellView IO_CELLS_JIC3V/jio_resp_lay_pc/layout as STRUCTURE jio_resp_lay_pc.
+INFO (XSTRM-223): 111. Translating cellView IO_CELLS_JIC3V/jio_p4_pc/layout as STRUCTURE jio_p4_pc.
+INFO (XSTRM-223): 112. Translating cellView IO_CELLS_JIC3V/jio_gpcons_pc/layout as STRUCTURE jio_gpcons_pc.
+INFO (XSTRM-223): 113. Translating cellView IO_CELLS_JIC3V/jio_n4_pc/layout as STRUCTURE jio_n4_pc.
+INFO (XSTRM-223): 114. Translating cellView IO_CELLS_JIC3V/jio_nng3_pc/layout as STRUCTURE jio_nng3_pc.
+INFO (XSTRM-223): 115. Translating cellView IO_CELLS_JIC3V/jio_nt4_pc/layout as STRUCTURE jio_nt4_pc.
+INFO (XSTRM-223): 116. Translating cellView IO_CELLS_JIC3V/jio_ts4_lay_pc/layout as STRUCTURE jio_ts4_lay_pc.
+INFO (XSTRM-223): 117. Translating cellView IO_CELLS_JIC3V/jio_basebt_pc/layout as STRUCTURE jio_basebt_pc.
+INFO (XSTRM-223): 118. Translating cellView IO_CELLS_JIC3V/BT4PC/layout as STRUCTURE BT4PC.
+INFO (XSTRM-223): 119. Translating cellView IO_CELLS_JIC3V/jio_pcutcon_pc/layout as STRUCTURE jio_pcutcon_pc.
+INFO (XSTRM-223): 120. Translating cellView IO_CELLS_JIC3V/jio_via3_pc/layout as STRUCTURE jio_via3_pc.
+INFO (XSTRM-223): 121. Translating cellView IO_CELLS_JIC3V/jio_pcutdio_pc/layout as STRUCTURE jio_pcutdio_pc.
+INFO (XSTRM-223): 122. Translating cellView IO_CELLS_JIC3V/jio_pcutdiob_pc/layout as STRUCTURE jio_pcutdiob_pc.
+INFO (XSTRM-223): 123. Translating cellView IO_CELLS_JIC3V/jio_pwrc_difpoly5u_pc/layout as STRUCTURE jio_pwrc_difpoly5u_pc.
+INFO (XSTRM-223): 124. Translating cellView IO_CELLS_JIC3V/jio_pcutficon_pc/layout as STRUCTURE jio_pcutficon_pc.
+INFO (XSTRM-223): 125. Translating cellView IO_CELLS_JIC3V/jio_via234_pc/layout as STRUCTURE jio_via234_pc.
+INFO (XSTRM-223): 126. Translating cellView IO_CELLS_JIC3V/PWRCUTDCPC/layout as STRUCTURE PWRCUTDCPC.
+INFO (XSTRM-223): 127. Translating cellView IO_CELLS_JIC3V/jio_fillmetal1u_pc/layout as STRUCTURE jio_fillmetal1u_pc.
+INFO (XSTRM-223): 128. Translating cellView IO_CELLS_JIC3V/jio_via34_pc/layout as STRUCTURE jio_via34_pc.
+INFO (XSTRM-223): 129. Translating cellView IO_CELLS_JIC3V/jio_filldife1u_pc/layout as STRUCTURE jio_filldife1u_pc.
+INFO (XSTRM-223): 130. Translating cellView IO_CELLS_JIC3V/jio_fillvia2u_pc/layout as STRUCTURE jio_fillvia2u_pc.
+INFO (XSTRM-223): 131. Translating cellView IO_CELLS_JIC3V/jio_fillmetalvia2u_pc/layout as STRUCTURE jio_fillmetalvia2u_pc.
+INFO (XSTRM-223): 132. Translating cellView IO_CELLS_JIC3V/jio_fildifpoly5u_pc/layout as STRUCTURE jio_fildifpoly5u_pc.
+INFO (XSTRM-223): 133. Translating cellView IO_CELLS_JIC3V/FILLER70PC/layout as STRUCTURE FILLER70PC.
+INFO (XSTRM-223): 134. Translating cellView IO_CELLS_JIC3V/jio_ne3isbc_pc/layout as STRUCTURE jio_ne3isbc_pc.
+INFO (XSTRM-223): 135. Translating cellView IO_CELLS_JIC3V/jio_crnentr_pc/layout as STRUCTURE jio_crnentr_pc.
+INFO (XSTRM-223): 136. Translating cellView IO_CELLS_JIC3V/jio_crnev2link_pc/layout as STRUCTURE jio_crnev2link_pc.
+INFO (XSTRM-223): 137. Translating cellView IO_CELLS_JIC3V/jio_crne_met2_pc/layout as STRUCTURE jio_crne_met2_pc.
+INFO (XSTRM-223): 138. Translating cellView IO_CELLS_JIC3V/jio_crnevlink_pc/layout as STRUCTURE jio_crnevlink_pc.
+INFO (XSTRM-223): 139. Translating cellView IO_CELLS_JIC3V/jio_crnvtpllink_pc/layout as STRUCTURE jio_crnvtpllink_pc.
+INFO (XSTRM-223): 140. Translating cellView IO_CELLS_JIC3V/jio_crn_metal_half_pc/layout as STRUCTURE jio_crn_metal_half_pc.
+INFO (XSTRM-223): 141. Translating cellView IO_CELLS_JIC3V/jio_crne_metal_pc/layout as STRUCTURE jio_crne_metal_pc.
+INFO (XSTRM-223): 142. Translating cellView IO_CELLS_JIC3V/jio_base_corne_half_pc/layout as STRUCTURE jio_base_corne_half_pc.
+INFO (XSTRM-223): 143. Translating cellView IO_CELLS_JIC3V/jio_crneptp_pc/layout as STRUCTURE jio_crneptp_pc.
+INFO (XSTRM-223): 144. Translating cellView IO_CELLS_JIC3V/jio_crndifpolye_pc/layout as STRUCTURE jio_crndifpolye_pc.
+INFO (XSTRM-223): 145. Translating cellView IO_CELLS_JIC3V/jio_crndifpolye_r_pc/layout as STRUCTURE jio_crndifpolye_r_pc.
+INFO (XSTRM-223): 146. Translating cellView IO_CELLS_JIC3V/jio_crnedifpoly_half_pc/layout as STRUCTURE jio_crnedifpoly_half_pc.
+INFO (XSTRM-223): 147. Translating cellView IO_CELLS_JIC3V/CORNERESDPC/layout as STRUCTURE CORNERESDPC.
+INFO (XSTRM-223): 148. Translating cellView IO_CELLS_JIC3V/jio_baseps_pc/layout as STRUCTURE jio_baseps_pc.
+INFO (XSTRM-223): 149. Translating cellView IO_CELLS_JIC3V/APR00DPC/layout as STRUCTURE APR00DPC.
+INFO (XSTRM-223): 150. Translating cellView IO_CELLS_JIC3V/jio_esda_lay_pc/layout as STRUCTURE jio_esda_lay_pc.
+INFO (XSTRM-223): 151. Translating cellView IO_CELLS_JIC3V/jio_baseaa_pc/layout as STRUCTURE jio_baseaa_pc.
+INFO (XSTRM-223): 152. Translating cellView IO_CELLS_JIC3V/jio_base_ptra_pc/layout as STRUCTURE jio_base_ptra_pc.
+INFO (XSTRM-223): 153. Translating cellView IO_CELLS_JIC3V/jio_basean_pc/layout as STRUCTURE jio_basean_pc.
+INFO (XSTRM-223): 154. Translating cellView IO_CELLS_JIC3V/jio_rsesd_apr04_pc/layout as STRUCTURE jio_rsesd_apr04_pc.
+INFO (XSTRM-223): 155. Translating cellView IO_CELLS_JIC3V/jio_baseavdpfl_pc/layout as STRUCTURE jio_baseavdpfl_pc.
+INFO (XSTRM-223): 156. Translating cellView IO_CELLS_JIC3V/jio_baseanpfl_pc/layout as STRUCTURE jio_baseanpfl_pc.
+INFO (XSTRM-223): 157. Translating cellView IO_CELLS_JIC3V/APR04DPC/layout as STRUCTURE APR04DPC.
+INFO (XSTRM-223): 158. Translating cellView HV_CELLS/ioh_via1/layout as STRUCTURE ioh_via1.
+INFO (XSTRM-223): 159. Translating cellView HV_CELLS/ioh_viatpl/layout as STRUCTURE ioh_viatpl.
+INFO (XSTRM-223): 160. Translating cellView HV_CELLS/ioh_via2/layout as STRUCTURE ioh_via2.
+INFO (XSTRM-223): 161. Translating cellView HV_CELLS/ioh_via34tp/layout as STRUCTURE ioh_via34tp.
+INFO (XSTRM-223): 162. Translating cellView HV_CELLS/ioh_base40_metal_fs/layout as STRUCTURE ioh_base40_metal_fs.
+INFO (XSTRM-223): 163. Translating cellView HV_CELLS/ioh_con/layout as STRUCTURE ioh_con.
+INFO (XSTRM-223): 164. Translating cellView HV_CELLS/ioh_base40_tap_f/layout as STRUCTURE ioh_base40_tap_f.
+INFO (XSTRM-223): 165. Translating cellView HV_CELLS/ioh_base40_fs/layout as STRUCTURE ioh_base40_fs.
+INFO (XSTRM-223): 166. Translating cellView HV_CELLS/ioh_base39_metal_fs/layout as STRUCTURE ioh_base39_metal_fs.
+INFO (XSTRM-223): 167. Translating cellView HV_CELLS/ioh_base39_tap_f/layout as STRUCTURE ioh_base39_tap_f.
+INFO (XSTRM-223): 168. Translating cellView HV_CELLS/ioh_base39_fs/layout as STRUCTURE ioh_base39_fs.
+INFO (XSTRM-223): 169. Translating cellView HV_CELLS/ioh_base19_tap_f/layout as STRUCTURE ioh_base19_tap_f.
+INFO (XSTRM-223): 170. Translating cellView HV_CELLS/ioh_base19_metal_fs/layout as STRUCTURE ioh_base19_metal_fs.
+INFO (XSTRM-223): 171. Translating cellView HV_CELLS/ioh_base19_fs/layout as STRUCTURE ioh_base19_fs.
+INFO (XSTRM-223): 172. Translating cellView HV_CELLS/ioh_base36_tap_f/layout as STRUCTURE ioh_base36_tap_f.
+INFO (XSTRM-223): 173. Translating cellView HV_CELLS/ioh_base36_metal_fs/layout as STRUCTURE ioh_base36_metal_fs.
+INFO (XSTRM-223): 174. Translating cellView HV_CELLS/ioh_base36_fs/layout as STRUCTURE ioh_base36_fs.
+INFO (XSTRM-223): 175. Translating cellView HV_CELLS/std_pad_viabtp_edge/layout as STRUCTURE std_pad_viabtp_edge.
+INFO (XSTRM-223): 176. Translating cellView HV_CELLS/std_pad_viabtp/layout as STRUCTURE std_pad_viabtp.
+INFO (XSTRM-223): 177. Translating cellView HV_CELLS/std_pad_viatpl_edge/layout as STRUCTURE std_pad_viatpl_edge.
+INFO (XSTRM-223): 178. Translating cellView HV_CELLS/std_pad_layout_53_62/layout as STRUCTURE std_pad_layout_53_62.
+INFO (XSTRM-223): 179. Translating cellView HV_CELLS/ioh_pad53_62/layout as STRUCTURE ioh_pad53_62.
+INFO (XSTRM-223): 180. Translating cellView HV_CELLS/ioh_pad53_tap_inline/layout as STRUCTURE ioh_pad53_tap_inline.
+INFO (XSTRM-223): 181. Translating cellView HV_CELLS/ioh_basej_pad53_inline/layout as STRUCTURE ioh_basej_pad53_inline.
+INFO (XSTRM-223): 182. Translating cellView HV_CELLS/ioh_iscrd2_4x10/layout as STRUCTURE ioh_iscrd2_4x10.
+INFO (XSTRM-223): 183. Translating cellView HV_CELLS/ioh_iscrd2_e4x10/layout as STRUCTURE ioh_iscrd2_e4x10.
+INFO (XSTRM-223): 184. Translating cellView HV_CELLS/ioh_iscrd2_4x100/layout as STRUCTURE ioh_iscrd2_4x100.
+INFO (XSTRM-223): 185. Translating cellView HV_CELLS/ioh_dhpw_100/layout as STRUCTURE ioh_dhpw_100.
+INFO (XSTRM-223): 186. Translating cellView HV_CELLS/ioh_dhpw_2x100/layout as STRUCTURE ioh_dhpw_2x100.
+INFO (XSTRM-223): 187. Translating cellView HV_CELLS/ioh_dhpw_2x100_stack3_lay/layout as STRUCTURE ioh_dhpw_2x100_stack3_lay.
+INFO (XSTRM-223): 188. Translating cellView HV_CELLS/ioh_pmbsabhv_2x15_10/layout as STRUCTURE ioh_pmbsabhv_2x15_10.
+INFO (XSTRM-223): 189. Translating cellView HV_CELLS/ioh_pmbsabhv_750/layout as STRUCTURE ioh_pmbsabhv_750.
+INFO (XSTRM-223): 190. Translating cellView HV_CELLS/ioh_pe3sab_2x15_04/layout as STRUCTURE ioh_pe3sab_2x15_04.
+INFO (XSTRM-223): 191. Translating cellView HV_CELLS/ioh_rnp1_20k/layout as STRUCTURE ioh_rnp1_20k.
+INFO (XSTRM-223): 192. Translating cellView HV_CELLS/ioh_pe3isabhv_1050gcr/layout as STRUCTURE ioh_pe3isabhv_1050gcr.
+INFO (XSTRM-223): 193. Translating cellView HV_CELLS/ioh_c5pk/layout as STRUCTURE ioh_c5pk.
+INFO (XSTRM-223): 194. Translating cellView HV_CELLS/ioh_rpp1s_1/layout as STRUCTURE ioh_rpp1s_1.
+INFO (XSTRM-223): 195. Translating cellView HV_CELLS/prot_hvd4sjd1r5pk/layout as STRUCTURE prot_hvd4sjd1r5pk.
+INFO (XSTRM-223): 196. Translating cellView HV_CELLS/ioh_base64_metal_fs/layout as STRUCTURE ioh_base64_metal_fs.
+INFO (XSTRM-223): 197. Translating cellView HV_CELLS/ioh_base64_tap_f/layout as STRUCTURE ioh_base64_tap_f.
+INFO (XSTRM-223): 198. Translating cellView HV_CELLS/ioh_base64_fs/layout as STRUCTURE ioh_base64_fs.
+INFO (XSTRM-223): 199. Translating cellView HV_CELLS/HVD4SJD1R5PKFs/layout as STRUCTURE HVD4SJD1R5PKFs.
+INFO (XSTRM-223): 200. Translating cellView HV_CELLS/ioh_ddnw_2x100/layout as STRUCTURE ioh_ddnw_2x100.
+INFO (XSTRM-223): 201. Translating cellView HV_CELLS/ioh_pmbsabhv_2x40_10/layout as STRUCTURE ioh_pmbsabhv_2x40_10.
+INFO (XSTRM-223): 202. Translating cellView HV_CELLS/ioh_pmbsabhv_2000/layout as STRUCTURE ioh_pmbsabhv_2000.
+INFO (XSTRM-223): 203. Translating cellView HV_CELLS/ioh_pe3sab_2x40_04/layout as STRUCTURE ioh_pe3sab_2x40_04.
+INFO (XSTRM-223): 204. Translating cellView HV_CELLS/ioh_pe3isabhv_2800gcr/layout as STRUCTURE ioh_pe3isabhv_2800gcr.
+INFO (XSTRM-223): 205. Translating cellView HV_CELLS/ioh_d2pk/layout as STRUCTURE ioh_d2pk.
+INFO (XSTRM-223): 206. Translating cellView HV_CELLS/prot_hvdd4d2pk/layout as STRUCTURE prot_hvdd4d2pk.
+INFO (XSTRM-223): 207. Translating cellView HV_CELLS/HVDD4D2PK/layout as STRUCTURE HVDD4D2PK.
+INFO (XSTRM-223): 208. Translating cellView HV_CELLS/ioh_base61_metal_fs/layout as STRUCTURE ioh_base61_metal_fs.
+INFO (XSTRM-223): 209. Translating cellView HV_CELLS/ioh_base61_tap_f/layout as STRUCTURE ioh_base61_tap_f.
+INFO (XSTRM-223): 210. Translating cellView HV_CELLS/ioh_base61_fs/layout as STRUCTURE ioh_base61_fs.
+INFO (XSTRM-223): 211. Translating cellView HV_CELLS/ioh_d5pk/layout as STRUCTURE ioh_d5pk.
+INFO (XSTRM-223): 212. Translating cellView HV_CELLS/prot_hvdd4dj5pk/layout as STRUCTURE prot_hvdd4dj5pk.
+INFO (XSTRM-223): 213. Translating cellView HV_CELLS/HVDD4DJ5PKFs/layout as STRUCTURE HVDD4DJ5PKFs.
+INFO (XSTRM-223): 214. Translating cellView HV_CELLS/ioh_base_pad53_inline/layout as STRUCTURE ioh_base_pad53_inline.
+INFO (XSTRM-223): 215. Translating cellView HV_CELLS/HVSSFs/layout as STRUCTURE HVSSFs.
+INFO (XSTRM-223): 216. Translating cellView HV_CELLS/ioh_via234tp/layout as STRUCTURE ioh_via234tp.
+INFO (XSTRM-223): 217. Translating cellView HV_CELLS/FILLER200F/layout as STRUCTURE FILLER200F.
+INFO (XSTRM-223): 218. Translating cellView HV_CELLS/ioh_acor_half/layout as STRUCTURE ioh_acor_half.
+INFO (XSTRM-223): 219. Translating cellView HV_CELLS/ACORNERFP1/layout as STRUCTURE ACORNERFP1.
+INFO (XSTRM-223): 220. Translating cellView HV_CELLS/FILLER100F/layout as STRUCTURE FILLER100F.
+INFO (XSTRM-223): 221. Translating cellView IORING/ioring3/layout as STRUCTURE ioring3.
+WARNING (XSTRM-154): The object map file does not contain any mapping for the OpenAccess object 'Marker' and the sub-object 'annotation'. Therefore, these objects in the design will not be translated. To enable the translation of these objects in the Stream file, provide a valid mapping in the object map file.
+INFO (XSTRM-223): 222. Translating stdVia TECH_XH018/P1_C/layout as STRUCTURE P1_C_CDNS_7077614783629.
+INFO (XSTRM-223): 223. Translating stdVia TECH_XH018/ND_C/layout as STRUCTURE ND_C_CDNS_7077614783630.
+INFO (XSTRM-223): 224. Translating stdVia TECH_XH018/PD_C/layout as STRUCTURE PD_C_CDNS_7077614783631.
+INFO (XSTRM-223): 225. Translating cellView PRIMLIB/ne3/layout as STRUCTURE ne3_CDNS_707761478360.
+INFO (XSTRM-223): 226. Translating cellView PRIMLIB/pe3/layout as STRUCTURE pe3_CDNS_707761478361.
+INFO (XSTRM-223): 227. Translating cellView INV_LP/inv/layout as STRUCTURE inv.
+INFO (XSTRM-223): 228. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783632.
+INFO (XSTRM-223): 229. Translating stdVia TECH_XH018/VIA2_C/layout as STRUCTURE VIA2_C_CDNS_7077614783633.
+INFO (XSTRM-223): 230. Translating cellView PRIMLIB/nedia/layout as STRUCTURE nedia_CDNS_707761478362.
+INFO (XSTRM-223): 231. Translating cellView PRIMLIB/rpp1k1_3/layout as STRUCTURE rpp1k1_3_CDNS_707761478363.
+INFO (XSTRM-223): 232. Translating cellView INV_HV/inv_hv/layout as STRUCTURE inv_hv.
+INFO (XSTRM-223): 233. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783634.
+INFO (XSTRM-223): 234. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783635.
+INFO (XSTRM-223): 235. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783636.
+INFO (XSTRM-223): 236. Translating stdVia TECH_XH018/VIA1_C/layout as STRUCTURE VIA1_C_CDNS_7077614783637.
+INFO (XSTRM-223): 237. Translating customVia TECH_XH018/VIA1_CH1_so/via as STRUCTURE VIA1_CH1_so.
+INFO (XSTRM-223): 238. Translating customVia TECH_XH018/VIA1_CV1_so/via as STRUCTURE VIA1_CV1_so.
+INFO (XSTRM-223): 239. Translating customVia TECH_XH018/VIA2_CH1_so/via as STRUCTURE VIA2_CH1_so.
+INFO (XSTRM-223): 240. Translating customVia TECH_XH018/VIA2_CH2_so/via as STRUCTURE VIA2_CH2_so.
+INFO (XSTRM-223): 241. Translating customVia TECH_XH018/VIA1_CV2_so/via as STRUCTURE VIA1_CV2_so.
+INFO (XSTRM-223): 242. Translating customVia TECH_XH018/VIA2_CV1_so/via as STRUCTURE VIA2_CV1_so.
+INFO (XSTRM-223): 243. Translating customVia TECH_XH018/VIA1_Y_so/via as STRUCTURE VIA1_Y_so.
+INFO (XSTRM-223): 244. Translating customVia TECH_XH018/VIA1_CH1_so_hd2/via as STRUCTURE VIA1_CH1_so_hd2.
+INFO (XSTRM-223): 245. Translating customVia TECH_XH018/VIA2_CV2_so/via as STRUCTURE VIA2_CV2_so.
+INFO (XSTRM-223): 246. Translating customVia TECH_XH018/VIA1_CV1_hd/via as STRUCTURE VIA1_CV1_hd.
+INFO (XSTRM-223): 247. Translating customVia TECH_XH018/VIA1_CV2_hd/via as STRUCTURE VIA1_CV2_hd.
+INFO (XSTRM-223): 248. Translating customVia TECH_XH018/VIA1_CH2_so/via as STRUCTURE VIA1_CH2_so.
+INFO (XSTRM-223): 249. Translating customVia TECH_XH018/VIA1_o/via as STRUCTURE VIA1_o.
+INFO (XSTRM-223): 250. Translating customVia TECH_XH018/VIA1_CH2_so_hd2/via as STRUCTURE VIA1_CH2_so_hd2.
+INFO (XSTRM-223): 251. Translating customVia TECH_XH018/VIA3_CH2_so/via as STRUCTURE VIA3_CH2_so.
+INFO (XSTRM-223): 252. Translating customVia TECH_XH018/VIA3_CH1_so/via as STRUCTURE VIA3_CH1_so.
+INFO (XSTRM-223): 253. Translating customVia TECH_XH018/VIA1_CH1_so2/via as STRUCTURE VIA1_CH1_so2.
+INFO (XSTRM-223): 254. Translating customVia TECH_XH018/VIA1_CH2_so2/via as STRUCTURE VIA1_CH2_so2.
+INFO (XSTRM-223): 255. Translating customVia TECH_XH018/VIA3_CV2_so/via as STRUCTURE VIA3_CV2_so.
+INFO (XSTRM-223): 256. Translating customVia TECH_XH018/VIA1_CV2w_beo/via as STRUCTURE VIA1_CV2w_beo.
+INFO (XSTRM-223): 257. Translating customVia TECH_XH018/VIA2_CV1w_beo/via as STRUCTURE VIA2_CV1w_beo.
+INFO (XSTRM-223): 258. Translating customVia TECH_XH018/VIA3_CV1_so/via as STRUCTURE VIA3_CV1_so.
+INFO (XSTRM-223): 259. Translating customVia TECH_XH018/VIA1_X_so/via as STRUCTURE VIA1_X_so.
+INFO (XSTRM-223): 260. Translating customVia TECH_XH018/VIA1_CH1_eo/via as STRUCTURE VIA1_CH1_eo.
+INFO (XSTRM-223): 261. Translating cellView D_CELLS_JI3V/BUJI3VX2/layout as STRUCTURE BUJI3VX2.
+INFO (XSTRM-223): 262. Translating cellView D_CELLS_JI3V/BUJI3VX0/layout as STRUCTURE BUJI3VX0.
+INFO (XSTRM-223): 263. Translating cellView D_CELLS_JI3V/BUJI3VX16/layout as STRUCTURE BUJI3VX16.
+INFO (XSTRM-223): 264. Translating cellView D_CELLS_JI3V/DLY1JI3VX1/layout as STRUCTURE DLY1JI3VX1.
+INFO (XSTRM-223): 265. Translating cellView D_CELLS_JI3V/DLY2JI3VX1/layout as STRUCTURE DLY2JI3VX1.
+INFO (XSTRM-223): 266. Translating cellView D_CELLS_JI3V/BUJI3VX1/layout as STRUCTURE BUJI3VX1.
+INFO (XSTRM-223): 267. Translating cellView D_CELLS_JI3V/DFRQJI3VX2/layout as STRUCTURE DFRQJI3VX2.
+INFO (XSTRM-223): 268. Translating cellView D_CELLS_JI3V/NO2JI3VX0/layout as STRUCTURE NO2JI3VX0.
+INFO (XSTRM-223): 269. Translating cellView D_CELLS_JI3V/AN21JI3VX1/layout as STRUCTURE AN21JI3VX1.
+INFO (XSTRM-223): 270. Translating cellView D_CELLS_JI3V/AN22JI3VX1/layout as STRUCTURE AN22JI3VX1.
+INFO (XSTRM-223): 271. Translating cellView D_CELLS_JI3V/ON211JI3VX1/layout as STRUCTURE ON211JI3VX1.
+INFO (XSTRM-223): 272. Translating cellView D_CELLS_JI3V/EN2JI3VX0/layout as STRUCTURE EN2JI3VX0.
+INFO (XSTRM-223): 273. Translating cellView D_CELLS_JI3V/NA2JI3VX0/layout as STRUCTURE NA2JI3VX0.
+INFO (XSTRM-223): 274. Translating cellView D_CELLS_JI3V/INJI3VX0/layout as STRUCTURE INJI3VX0.
+INFO (XSTRM-223): 275. Translating cellView D_CELLS_JI3V/DFRQJI3VX4/layout as STRUCTURE DFRQJI3VX4.
+INFO (XSTRM-223): 276. Translating cellView D_CELLS_JI3V/DFRQJI3VX1/layout as STRUCTURE DFRQJI3VX1.
+INFO (XSTRM-223): 277. Translating cellView D_CELLS_JI3V/DECAP25JI3V/layout as STRUCTURE DECAP25JI3V.
+INFO (XSTRM-223): 278. Translating cellView D_CELLS_JI3V/DECAP10JI3V/layout as STRUCTURE DECAP10JI3V.
+INFO (XSTRM-223): 279. Translating cellView D_CELLS_JI3V/DECAP7JI3V/layout as STRUCTURE DECAP7JI3V.
+INFO (XSTRM-223): 280. Translating cellView D_CELLS_JI3V/DECAP15JI3V/layout as STRUCTURE DECAP15JI3V.
+INFO (XSTRM-223): 281. Translating cellView D_CELLS_JI3V/DECAP5JI3V/layout as STRUCTURE DECAP5JI3V.
+INFO (XSTRM-223): 282. Translating cellView D_CELLS_JI3V/FEED2JI3V/layout as STRUCTURE FEED2JI3V.
+INFO (XSTRM-223): 283. Translating cellView D_CELLS_JI3V/FEED3JI3V/layout as STRUCTURE FEED3JI3V.
+INFO (XSTRM-223): 284. Translating cellView D_CELLS_JI3V/FEED5JI3V/layout as STRUCTURE FEED5JI3V.
+INFO (XSTRM-223): 285. Translating cellView D_CELLS_JI3V/FEED1JI3V/layout as STRUCTURE FEED1JI3V.
+INFO (XSTRM-223): 286. Translating cellView D_CELLS_JI3V/FEED7JI3V/layout as STRUCTURE FEED7JI3V.
+INFO (XSTRM-223): 287. Translating cellView D_CELLS_JI3V/FEED10JI3V/layout as STRUCTURE FEED10JI3V.
+INFO (XSTRM-223): 288. Translating cellView COUNTER_JI3/counter/layout as STRUCTURE counter.
+INFO (XSTRM-223): 289. Translating cellView TOP/top/layout as STRUCTURE top.
+WARNING (XSTRM-154): The object map file does not contain any mapping for the OpenAccess object 'Marker' and the sub-object 'warning'. Therefore, these objects in the design will not be translated. To enable the translation of these objects in the Stream file, provide a valid mapping in the object map file.
+
+Summary of Objects Translated:
+	Scalar Instances:                       488
+	Array Instances:                        3522
+	Polygons:                               1477
+	Paths:                                  57
+	Rectangles:                             54848
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             97
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           107
+	Custom Vias:                            248
+	CdsGen Vias:                            0
+	Pathsegs:                               540
+	Text:                                   1838
+	TextDisplay:                            52
+	Cells:                                  289
+
+Elapsed Time: 0.8s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 19892KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '18' warning(s) found.

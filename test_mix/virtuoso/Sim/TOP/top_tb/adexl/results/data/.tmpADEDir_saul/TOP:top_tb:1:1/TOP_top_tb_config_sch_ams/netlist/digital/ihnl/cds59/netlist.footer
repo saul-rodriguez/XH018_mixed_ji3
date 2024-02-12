@@ -1,5 +1,8 @@
 
-nor2ji3v #( .GT_PDL(350.00n), .GT_PUW(850.00n), .GT_PDW(420.00n), .GT_PUL(300.00n) 
-     ) nor2_1 ( .a(A), .b(B), .out(Q));
+ioh_dhpw_2x100 I0 ( .A(A_l), .K(net20), .Sub(Sub));
+
+ioh_dhpw_2x100 I2 ( .A(net14), .K(K_h), .Sub(Sub));
+
+ioh_dhpw_2x100 I1 ( .A(net20), .K(net14), .Sub(Sub));
 
 endmodule

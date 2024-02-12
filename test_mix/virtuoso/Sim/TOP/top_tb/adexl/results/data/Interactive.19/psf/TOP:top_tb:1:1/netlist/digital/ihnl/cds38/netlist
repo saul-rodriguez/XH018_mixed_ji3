@@ -1,0 +1,67 @@
+// Library - IO_CELLS_JIC3V, Cell - GNDORPADPC, View - cmos_sch
+// LAST TIME SAVED: Nov 16 11:00:05 2021
+// NETLIST TIME: Feb 12 01:23:41 2024
+`timescale 1ns / 1ps 
+
+`worklib IO_CELLS_JIC3V
+`view cmos_sch
+
+(* cds_ams_schematic *) 
+(* dfII_lib="IO_CELLS_JIC3V", dfII_cell="GNDORPADPC", dfII_view="cmos_sch", worklib_name="IO_CELLS_JIC3V", view_name="cmos_sch", last_save_time="Nov 16 11:00:05 2021" *)
+
+module GNDORPADPC (GNDI, GNDORI, PSUB, VDD3I, VDDOI, VDDRI);
+
+input  GNDI, GNDORI, PSUB, VDD3I, VDDOI, VDDRI;
+
+
+jio_ne3i_pc IN_1 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_2 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_3 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_4 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_5 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_6 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_7 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_8 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_9 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_10 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_11 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_12 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_13 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_14 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_15 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_16 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_17 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_18 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_19 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_20 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_21 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_22 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_23 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_ne3i_pc IN_24 ( .D(VDDOI), .B(GNDORI), .G(ng), .S(GNDORI));
+
+jio_andio_pc I157 ( .DNW(VDDOI), .PWI(GNDORI), .PSUB(PSUB));
+
+endmodule

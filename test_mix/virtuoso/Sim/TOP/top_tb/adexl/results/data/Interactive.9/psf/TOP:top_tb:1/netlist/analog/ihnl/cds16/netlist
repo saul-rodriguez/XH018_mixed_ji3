@@ -1,5 +1,0 @@
-    MPX (D G S B) pmb w=15.12u l=1u as=7.2576e-12 ad=7.2576e-12 \
-        ps=3.12e-05 pd=3.12e-05 nrs=0.0178571 nrd=0.0178571 m=(1)*(1) \
-        par1=(1)*(1)
-ends ioh_pmbsab_15_10
-// End of subcircuit definition.

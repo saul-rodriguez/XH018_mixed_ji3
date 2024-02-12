@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-AMSBIND
+-AMSCOMPILEFILE
+"file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams"
+-makelib
+TOP
+-makelib
+INV_HV
+-makelib
+D_CELLS_JI3V
+-makelib
+IORING
+-makelib
+INV_LP
+-makelib
+HV_CELLS
+-makelib
+IO_CELLS_JIC3V
+-makelib
+GATES_JI3V
+-endlib

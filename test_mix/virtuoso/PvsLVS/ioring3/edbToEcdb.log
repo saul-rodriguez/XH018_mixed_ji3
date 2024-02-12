@@ -3,7 +3,7 @@
 ========================================================================
 
 Delete EDB      : N
-EDB Library dir : ioring3_4043.db
+EDB Library dir : ioring3_16232.db
 ECDB dir        : ./
 Top Cell        : ioring3
 CDL netlist     : svdb/ioring3.net
@@ -14,4 +14,4 @@ Lvs file        : svdb/ioring3.lvsfile
 Float net file  : .ioring3.info.softchk
 threads         : 32
 debug           : 0
-Source Library  : ioring3_4043
+Source Library  : ioring3_16232

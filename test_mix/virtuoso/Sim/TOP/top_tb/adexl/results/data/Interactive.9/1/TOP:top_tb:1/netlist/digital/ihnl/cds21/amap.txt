@@ -1,2 +1,0 @@
-netMap,*inv,*gnd!,*cds_globals.\gnd! 
-cellMap,*inv,*inv,*INV_LP,*schematic

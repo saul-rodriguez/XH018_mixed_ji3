@@ -1,0 +1,8 @@
+\e *ERROR* (AMS-1245): AMS UNL netlisting has failed because of errors in the design.
+\e Right-click the test name on the Outputs assistant pane 
+\e and check Output Log->Netlister Log for errors.
+\e Correct your design and netlist again.
+\e *Error* Error during netlisting of design for the point ID (0 1).
+\e ""
+\e 
+\e 

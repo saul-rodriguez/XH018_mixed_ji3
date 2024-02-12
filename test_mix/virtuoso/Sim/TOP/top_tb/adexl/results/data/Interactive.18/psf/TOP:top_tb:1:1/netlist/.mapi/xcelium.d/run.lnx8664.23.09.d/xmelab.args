@@ -1,0 +1,33 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-SPECTRE_ARGS
+"-ahdllibdir /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.18/1/TOP:top_tb:1:1/netlist/.mapi/xcelium.d/AMSD/ahdlSimDB"
+-amsdlibdir
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.18/1/TOP:top_tb:1:1/netlist/.mapi/xcelium.d/AMSD
+-NOCOPYRIGHT
+-NOSTDOUT
+-NOWARN
+DLNOHV
+-NOWARN
+DLNOHV
+-NOWARN
+DLCLAP
+-V93
+-AMSCOMPILEFILE
+"file:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/COUNTER_JI3/counter_stimulus/verilogams/verilog.vams lib:COUNTER_JI3 cell:counter_stimulus view:verilogams"
+-MESSAGES
+-AMSELAB
+-DMS_ELAB_REPORT
+3
+-XLMODE
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.18/1/TOP:top_tb:1:1/netlist/.mapi/xcelium.d/run.lnx8664.23.09.d
+-RUNMODE
+-CDSLIB
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.18/1/TOP:top_tb:1:1/netlist/.mapi/xcelium.d/run.lnx8664.23.09.d/cds.lib
+-HDLVAR
+/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.18/1/TOP:top_tb:1:1/netlist/.mapi/xcelium.d/run.lnx8664.23.09.d/hdl.var
+-WORK
+worklib
+-HASXLMODE

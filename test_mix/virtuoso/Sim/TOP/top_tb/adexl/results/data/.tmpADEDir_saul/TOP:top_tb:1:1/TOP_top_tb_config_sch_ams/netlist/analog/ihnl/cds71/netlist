@@ -1,6 +1,5 @@
-    invr_1 invrji3v GT_PUW=900.0n GT_PUL=300.00n GT_PDW=420.00n \
-        GT_PDL=350.00n
-    invr_2 invrji3v GT_PUW=1.12u GT_PUL=300.00n GT_PDW=420.00n \
-        GT_PDL=350.00n
-ends BUJI3VX0
+    I11 ioh_d2pk
+    D0 (GND PAD) ddnw area=3.89668e-10 perimeter=208.5u dbv=0.0 m=1 \
+        par1=(1) xf_subext=0
+ends HVDD4D2PK
 // End of subcircuit definition.

@@ -1,4 +1,0 @@
-instMap,*DFRQJI3VX1,*i0,*i0
-instMaster,*DFRQJI3VX1,*i0,*VLG_PRIMITIVES_u1_fd5_functional
-netMap,*DFRQJI3VX1,*gnd!,*cds_globals.\gnd! 
-cellMap,*DFRQJI3VX1,*DFRQJI3VX1,*D_CELLS_JI3V,*functional

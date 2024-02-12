@@ -1,0 +1,2531 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  TOP
+* Top Cell Name: top
+* View Name:     schematic
+* Netlisted on:  Feb 12 13:11:19 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.LDD
+*.SCALE METER
+.PARAM
+
+
+
+************************************************************************
+* Library Name: INV_LP
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv IN OUT VD VS
+*.PININFO IN:B OUT:B VD:B VS:B
+MM0 OUT IN VS VS NE3 W=2u L=350.0n M=1.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM1 OUT IN VD VD PE3 W=2u L=300n M=1.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+.ENDS
+
+************************************************************************
+* Library Name: INV_HV
+* Cell Name:    inv_hv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv_hv GNDHV IN OUT VDDHV VSUB
+*.PININFO GNDHV:B IN:B OUT:B VDDHV:B VSUB:B
+MM0 OUT IN GNDHV VSUB NEDIA W=40u L=1.25u M=1.0 $LDD[NEDIA]
+RR0 VDDHV OUT 9999.84 $SUB=VSUB $[RPP1K1_3] $W=10u $L=103.425u M=1
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    nand2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2ji3v a b out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMP1 out a inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 out b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMN1 out a net25 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN2 net25 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    NA2JI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT NA2JI3VX0 A B Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xnand2_1 A B Q inh_ground_gnd3i inh_power_vdd3i / nand2ji3v GT_PDL=350.00n 
++ GT_PDW=560.0n GT_PUL=300.00n GT_PUW=700.00n
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    invrji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT invrji3v in out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO in:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMP1 out in inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMN1 out in inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    INJI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT INJI3VX0 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=940.00n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DLY2JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DLY2JI3VX1 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM5 net080 net039 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM2 net039 net47 net084 inh_power_vdd3i PE3I W=420.0n L=740.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM6 net35 net039 net080 inh_power_vdd3i PE3I W=420.0n L=1u M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM1 net084 net47 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=740.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_2 net35 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=890.00n GT_PUL=300.00n GT_PUW=1.41u
+Xinvr_1 A net47 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=700.00n
+MM4 net31 net47 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=800n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM8 net035 net039 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM7 net35 net039 net035 inh_ground_gnd3i NE3I W=420.0n L=1u M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM3 net039 net47 net31 inh_ground_gnd3i NE3I W=420.0n L=800n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX2
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX2 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=600.00n GT_PUL=300.00n GT_PUW=1.1u
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=1.2u GT_PUL=300.00n GT_PUW=2.92u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP5JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP5JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM0 net5 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=830.0n L=1.48u M=1.0 
++ AD=3.984e-13 AS=3.984e-13 PD=2.62e-06 PS=2.62e-06 NRD=0.325301 NRS=0.325301
+MM1 net4 net5 inh_power_vdd3i inh_power_vdd3i PE3I W=1.36u L=1.46u M=1.0 
++ AD=6.528e-13 AS=6.528e-13 PD=3.68e-06 PS=3.68e-06 NRD=0.198529 NRS=0.198529
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP7JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP7JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n 
++ L=1.75u M=1.0 AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 
++ NRS=0.306818
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=1.71u 
++ M=1.0 AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 
++ NRS=0.205323
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP10JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP10JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=1.76u 
++ L=1.445u M=1.0 AD=8.448e-13 AS=8.448e-13 PD=4.48e-06 PS=4.48e-06 
++ NRD=0.153409 NRS=0.153409
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=2.63u L=1.425u 
++ M=1.0 AD=1.2624e-12 AS=1.2624e-12 PD=6.22e-06 PS=6.22e-06 NRD=0.102662 
++ NRS=0.102662
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP15JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP15JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=2.64u 
++ L=1.71u M=1.0 AD=1.2672e-12 AS=1.2672e-12 PD=6.24e-06 PS=6.24e-06 
++ NRD=0.102273 NRS=0.102273
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=3.945u L=1.7u 
++ M=1.0 AD=1.8936e-12 AS=1.8936e-12 PD=8.85e-06 PS=8.85e-06 NRD=0.0684411 
++ NRS=0.0684411
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DECAP25JI3V
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DECAP25JI3V inh_ground_gnd3i inh_power_vdd3i
+*.PININFO inh_ground_gnd3i:B inh_power_vdd3i:B
+MM7 net3 net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=880.0n L=350.0n M=1.0 
++ AD=4.224e-13 AS=4.224e-13 PD=2.72e-06 PS=2.72e-06 NRD=0.306818 NRS=0.306818
+MM6 inh_ground_gnd3i net4 inh_ground_gnd3i inh_ground_gnd3i NE3I W=4.4u 
++ L=1.94u M=1.0 AD=2.112e-12 AS=2.112e-12 PD=9.76e-06 PS=9.76e-06 
++ NRD=0.0613636 NRS=0.0613636
+MM5 net4 net3 inh_power_vdd3i inh_power_vdd3i PE3I W=1.315u L=300n M=1.0 
++ AD=6.312e-13 AS=6.312e-13 PD=3.59e-06 PS=3.59e-06 NRD=0.205323 NRS=0.205323
+MM4 inh_power_vdd3i net3 inh_power_vdd3i inh_power_vdd3i PE3I W=6.575u L=1.93u 
++ M=1.0 AD=3.156e-12 AS=3.156e-12 PD=1.411e-05 PS=1.411e-05 NRD=0.0410646 
++ NRS=0.0410646
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX1 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=900.0n
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=660.0n GT_PUL=300.00n GT_PUW=1.46u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DFRQJI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DFRQJI3VX1 C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM24 MQIB CI net162 inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 AD=5.28e-13 
++ AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM56 MQI MQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM30 net170 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 
++ AD=5.52e-13 AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM23 net162 D inh_power_vdd3i inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 
++ AD=5.28e-13 AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM59 net142 SQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM36 net166 net142 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM35 SQIB CI net166 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM34 MQIB CIB net174 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM33 SQIB CIB net170 inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 AD=5.52e-13 
++ AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM28 net174 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_3 SQIB Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=890.00n GT_PUL=300.00n GT_PUW=1.41u
+Xinvr_2 CIB CI inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+Xinvr_1 C CIB inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+MM18 MQIB CIB net124 inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 AD=3.36e-13 
++ AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM17 MQI MQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM15 net124 D inh_ground_gnd3i inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 
++ AD=3.36e-13 AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM46 SQIB CI net132 inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 AD=3.456e-13 
++ AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM19 MQIB CI net120 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM51 SQIB CIB net140 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM50 net140 net142 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM49 net142 SQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM47 net132 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM61 net120 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    nor2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nor2ji3v a b out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMP1 out a net32 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 net32 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMN1 out b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN2 out a inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    NO2JI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT NO2JI3VX0 A B Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xnor2_1 A B Q inh_ground_gnd3i inh_power_vdd3i / nor2ji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=850.00n
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    o2na2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT o2na2ji3v a b c out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN2 net7 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN1 net7 a inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 out c net7 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMP1 out a net17 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c inh_power_vdd3i inh_power_vdd3i PE3I W=0.7*GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(0.7*GT_PUW) AS=4.8e-07*(0.7*GT_PUW) PD=2*(4.8e-07+(0.7*GT_PUW)) 
++ PS=2.0*(4.8e-07+(0.7*GT_PUW)) NRD=2.7e-07/(0.7*GT_PUW) 
++ NRS=2.7e-07/(0.7*GT_PUW)
+MMP2 net17 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    EN2JI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT EN2JI3VX0 A B Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xnand2_1 A B net4 inh_ground_gnd3i inh_power_vdd3i / nand2ji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=900.00n
+Xo2na2_1 B A net4 Q inh_ground_gnd3i inh_power_vdd3i / o2na2ji3v 
++ GT_PUL=300.00n GT_PUW=1.3u GT_PDL=350.00n GT_PDW=420.00n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DFRQJI3VX2
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DFRQJI3VX2 C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM24 MQIB CI net162 inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 AD=5.28e-13 
++ AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM56 MQI MQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM30 net170 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 
++ AD=5.52e-13 AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM23 net162 D inh_power_vdd3i inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 
++ AD=5.28e-13 AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM59 net142 SQIB inh_power_vdd3i inh_power_vdd3i PE3I W=720.0n L=300n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM36 net166 net142 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM35 SQIB CI net166 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM34 MQIB CIB net174 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM33 SQIB CIB net170 inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 AD=5.52e-13 
++ AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM28 net174 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_3 SQIB Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=1.78u GT_PUL=300.00n GT_PUW=2.82u
+Xinvr_2 CIB CI inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+Xinvr_1 C CIB inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+MM18 MQIB CIB net124 inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 AD=3.36e-13 
++ AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM17 MQI MQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM15 net124 D inh_ground_gnd3i inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 
++ AD=3.36e-13 AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM46 SQIB CI net132 inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 AD=3.456e-13 
++ AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM19 MQIB CI net120 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM51 SQIB CIB net140 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM50 net140 net142 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM49 net142 SQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM47 net132 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM61 net120 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    a22no2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT a22no2ji3v a b c d out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I d:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN1 out a net21 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN2 net21 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 out c net22 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN4 net22 d inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMP1 net11 a inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 net11 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP4 out d net11 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c net11 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    AN22JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT AN22JI3VX1 A B C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xa22no2_1 A B C D Q inh_ground_gnd3i inh_power_vdd3i / a22no2ji3v 
++ GT_PUL=300.000n GT_PUW=1.47u GT_PDL=350.00n GT_PDW=890.00n
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    a2no2ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT a2no2ji3v a b c out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN2 net41 b inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN1 out a net41 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 out c inh_ground_gnd3i inh_ground_gnd3i NE3I W=0.75*GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(0.75*GT_PDW) AS=4.8e-07*(0.75*GT_PDW) 
++ PD=2*(4.8e-07+(0.75*GT_PDW)) PS=2.0*(4.8e-07+(0.75*GT_PDW)) 
++ NRD=2.7e-07/(0.75*GT_PDW) NRS=2.7e-07/(0.75*GT_PDW)
+MMP1 net54 a inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP2 net54 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c net54 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    AN21JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT AN21JI3VX1 A B C Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I C:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xa2no2_1 A B C Q inh_ground_gnd3i inh_power_vdd3i / a2no2ji3v GT_PUL=300.00n 
++ GT_PUW=1.41u GT_PDL=350.00n GT_PDW=890.00n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DLY1JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DLY1JI3VX1 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM3 net35 net31 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=750.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM1 net31 net47 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_2 net35 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=890.00n GT_PUL=300.00n GT_PUW=1.41u
+Xinvr_1 A net47 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=670.00n
+MM2 net31 net47 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=800n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM4 net35 net31 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=1u M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: GATES_JI3V
+* Cell Name:    o2na3ji3v
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT o2na3ji3v a b c d out inh_ground_gnd3i inh_power_vdd3i
+*.PININFO a:I b:I c:I d:I out:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MMN2 out b net10 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN1 out a net10 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN3 net10 c net25 inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMN4 net25 d inh_ground_gnd3i inh_ground_gnd3i NE3I W=GT_PDW L=GT_PDL M=1.0 
++ AD=4.8e-07*(GT_PDW) AS=4.8e-07*(GT_PDW) PD=2*(4.8e-07+(GT_PDW)) 
++ PS=2.0*(4.8e-07+(GT_PDW)) NRD=2.7e-07/(GT_PDW) NRS=2.7e-07/(GT_PDW)
+MMP4 out d inh_power_vdd3i inh_power_vdd3i PE3I W=0.7*GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(0.7*GT_PUW) AS=4.8e-07*(0.7*GT_PUW) PD=2*(4.8e-07+(0.7*GT_PUW)) 
++ PS=2.0*(4.8e-07+(0.7*GT_PUW)) NRD=2.7e-07/(0.7*GT_PUW) 
++ NRS=2.7e-07/(0.7*GT_PUW)
+MMP2 net24 b inh_power_vdd3i inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP1 out a net24 inh_power_vdd3i PE3I W=GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(GT_PUW) AS=4.8e-07*(GT_PUW) PD=2*(4.8e-07+(GT_PUW)) 
++ PS=2.0*(4.8e-07+(GT_PUW)) NRD=2.7e-07/(GT_PUW) NRS=2.7e-07/(GT_PUW)
+MMP3 out c inh_power_vdd3i inh_power_vdd3i PE3I W=0.7*GT_PUW L=GT_PUL M=1.0 
++ AD=4.8e-07*(0.7*GT_PUW) AS=4.8e-07*(0.7*GT_PUW) PD=2*(4.8e-07+(0.7*GT_PUW)) 
++ PS=2.0*(4.8e-07+(0.7*GT_PUW)) NRD=2.7e-07/(0.7*GT_PUW) 
++ NRS=2.7e-07/(0.7*GT_PUW)
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    ON211JI3VX1
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT ON211JI3VX1 A B C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I B:I C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xo2na3_1 A B C D Q inh_ground_gnd3i inh_power_vdd3i / o2na3ji3v GT_PUL=300.00n 
++ GT_PUW=1.38u GT_PDL=350.00n GT_PDW=900.0n
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX16
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX16 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=4.45u GT_PUL=300.00n GT_PUW=8.82u
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=9.78u GT_PUL=300.00n GT_PUW=23.52u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    BUJI3VX0
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BUJI3VX0 A Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO A:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xinvr_1 A net9 inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=900.0n
+Xinvr_2 net9 Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=1.12u
+.ENDS
+
+************************************************************************
+* Library Name: D_CELLS_JI3V
+* Cell Name:    DFRQJI3VX4
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT DFRQJI3VX4 C D Q inh_ground_gnd3i inh_power_vdd3i
+*.PININFO C:I D:I Q:O inh_ground_gnd3i:B inh_power_vdd3i:B
+MM24 MQIB CI net162 inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 AD=5.28e-13 
++ AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM56 MQI MQIB inh_power_vdd3i inh_power_vdd3i PE3I W=1.11u L=300n M=1.0 
++ AD=5.328e-13 AS=5.328e-13 PD=3.18e-06 PS=3.18e-06 NRD=0.243243 NRS=0.243243
+MM30 net170 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 
++ AD=5.52e-13 AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM23 net162 D inh_power_vdd3i inh_power_vdd3i PE3I W=1.1u L=300n M=1.0 
++ AD=5.28e-13 AS=5.28e-13 PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM59 net142 SQIB inh_power_vdd3i inh_power_vdd3i PE3I W=1.41u L=300n M=1.0 
++ AD=6.768e-13 AS=6.768e-13 PD=3.78e-06 PS=3.78e-06 NRD=0.191489 NRS=0.191489
+MM36 net166 net142 inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM35 SQIB CI net166 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM34 MQIB CIB net174 inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM33 SQIB CIB net170 inh_power_vdd3i PE3I W=1.15u L=300n M=1.0 AD=5.52e-13 
++ AS=5.52e-13 PD=3.26e-06 PS=3.26e-06 NRD=0.234783 NRS=0.234783
+MM28 net174 MQI inh_power_vdd3i inh_power_vdd3i PE3I W=420.0n L=300n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+Xinvr_3 SQIB Q inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=3.56u GT_PUL=300.00n GT_PUW=5.64u
+Xinvr_2 CIB CI inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+Xinvr_1 C CIB inh_ground_gnd3i inh_power_vdd3i / invrji3v GT_PDL=350.00n 
++ GT_PDW=420.00n GT_PUL=300.00n GT_PUW=720.00n
+MM18 MQIB CIB net124 inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 AD=3.36e-13 
++ AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM17 MQI MQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=760.0n L=350.0n M=1.0 
++ AD=3.648e-13 AS=3.648e-13 PD=2.48e-06 PS=2.48e-06 NRD=0.355263 NRS=0.355263
+MM15 net124 D inh_ground_gnd3i inh_ground_gnd3i NE3I W=700n L=350.0n M=1.0 
++ AD=3.36e-13 AS=3.36e-13 PD=2.36e-06 PS=2.36e-06 NRD=0.385714 NRS=0.385714
+MM46 SQIB CI net132 inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 AD=3.456e-13 
++ AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM19 MQIB CI net120 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 AD=2.016e-13 
++ AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM51 SQIB CIB net140 inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+MM50 net140 net142 inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n 
++ M=1.0 AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 
++ NRS=0.642857
+MM49 net142 SQIB inh_ground_gnd3i inh_ground_gnd3i NE3I W=660.0n L=350.0n 
++ M=1.0 AD=3.168e-13 AS=3.168e-13 PD=2.28e-06 PS=2.28e-06 NRD=0.409091 
++ NRS=0.409091
+MM47 net132 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=720.0n L=350.0n M=1.0 
++ AD=3.456e-13 AS=3.456e-13 PD=2.4e-06 PS=2.4e-06 NRD=0.375 NRS=0.375
+MM61 net120 MQI inh_ground_gnd3i inh_ground_gnd3i NE3I W=420.0n L=350.0n M=1.0 
++ AD=2.016e-13 AS=2.016e-13 PD=1.8e-06 PS=1.8e-06 NRD=0.642857 NRS=0.642857
+.ENDS
+
+************************************************************************
+* Library Name: COUNTER_JI3
+* Cell Name:    counter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT counter clk enable out<7> out<6> out<5> out<4> out<3> out<2> out<1> 
++ out<0> reset inh_ground_gnd3i inh_power_vdd3i
+*.PININFO clk:I enable:I reset:I out<7>:O out<6>:O out<5>:O out<4>:O out<3>:O 
+*.PININFO out<2>:O out<1>:O out<0>:O inh_ground_gnd3i:B inh_power_vdd3i:B
+Xg225__6417 out<2> n_6 n_1 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg222__2346 out<1> n_6 n_5 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg224__5477 out<6> n_6 n_0 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg226__7410 out<5> n_6 n_2 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg221__2883 out<3> n_6 n_7 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg223__1666 out<4> n_6 n_3 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg217__9315 n_12 out<2> n_15 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg227__2398 FE_OFN0_out_0 out<1> n_10 inh_ground_gnd3i inh_power_vdd3i / 
++ NA2JI3VX0
+Xg197__1617 n_29 out<6> n_32 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg202__5122 n_25 out<5> n_28 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg212__7482 n_17 out<3> n_20 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg207__6131 n_21 out<4> n_24 inh_ground_gnd3i inh_power_vdd3i / NA2JI3VX0
+Xg218 n_10 n_12 inh_ground_gnd3i inh_power_vdd3i / INJI3VX0
+Xg213 n_15 n_17 inh_ground_gnd3i inh_power_vdd3i / INJI3VX0
+Xg232 FE_PHN2_enable n_6 inh_ground_gnd3i inh_power_vdd3i / INJI3VX0
+Xg198 n_28 n_29 inh_ground_gnd3i inh_power_vdd3i / INJI3VX0
+Xg203 n_24 n_25 inh_ground_gnd3i inh_power_vdd3i / INJI3VX0
+Xg208 n_20 n_21 inh_ground_gnd3i inh_power_vdd3i / INJI3VX0
+XFE_PHC5_n_22 n_22 FE_PHN5_n_22 inh_ground_gnd3i inh_power_vdd3i / DLY2JI3VX1
+XFE_PHC4_n_18 n_18 FE_PHN4_n_18 inh_ground_gnd3i inh_power_vdd3i / DLY2JI3VX1
+XFE_PHC3_n_14 n_14 FE_PHN3_n_14 inh_ground_gnd3i inh_power_vdd3i / DLY2JI3VX1
+XFE_PHC2_enable enable FE_PHN2_enable inh_ground_gnd3i inh_power_vdd3i / 
++ DLY2JI3VX1
+XFE_PHC1_reset reset FE_PHN1_reset inh_ground_gnd3i inh_power_vdd3i / 
++ DLY2JI3VX1
+XFE_PHC10_n_38 n_38 FE_PHN10_n_38 inh_ground_gnd3i inh_power_vdd3i / BUJI3VX2
+XFE_OFC0_out_0 FE_OFN0_out_0 out<0> inh_ground_gnd3i inh_power_vdd3i / BUJI3VX2
+XFILLCAP_T_1_6 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_8 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_10 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_12 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_17 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_21 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_24 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_30 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_34 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_35 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_38 inh_ground_gnd3i inh_power_vdd3i / DECAP5JI3V
+XFILLCAP_T_1_3 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_13 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_14 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_15 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_16 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_18 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_19 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_20 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_22 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_25 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_26 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_27 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_28 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_29 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_31 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_32 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_33 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_37 inh_ground_gnd3i inh_power_vdd3i / DECAP7JI3V
+XFILLCAP_T_1_2 inh_ground_gnd3i inh_power_vdd3i / DECAP10JI3V
+XFILLCAP_T_1_4 inh_ground_gnd3i inh_power_vdd3i / DECAP10JI3V
+XFILLCAP_T_1_9 inh_ground_gnd3i inh_power_vdd3i / DECAP10JI3V
+XFILLCAP_T_1_23 inh_ground_gnd3i inh_power_vdd3i / DECAP10JI3V
+XFILLCAP_T_1_36 inh_ground_gnd3i inh_power_vdd3i / DECAP10JI3V
+XFILLCAP_T_1_5 inh_ground_gnd3i inh_power_vdd3i / DECAP15JI3V
+XFILLCAP_T_1_7 inh_ground_gnd3i inh_power_vdd3i / DECAP15JI3V
+XFILLCAP_T_1_11 inh_ground_gnd3i inh_power_vdd3i / DECAP15JI3V
+XFILLCAP_T_1_1 inh_ground_gnd3i inh_power_vdd3i / DECAP25JI3V
+XCTS_cdb_buf_00009 CTS_2 CTS_1 inh_ground_gnd3i inh_power_vdd3i / BUJI3VX1
+XCTS_cdb_buf_00010 clk CTS_2 inh_ground_gnd3i inh_power_vdd3i / BUJI3VX1
+Xout_reg[0] CTS_1 FE_PHN3_n_14 FE_OFN0_out_0 inh_ground_gnd3i inh_power_vdd3i 
++ / DFRQJI3VX1
+Xg187__2398 FE_PHN1_reset n_36 n_38 inh_ground_gnd3i inh_power_vdd3i / 
++ NO2JI3VX0
+Xg219__4733 FE_PHN1_reset n_9 n_14 inh_ground_gnd3i inh_power_vdd3i / NO2JI3VX0
+Xg191__5526 out<7> n_32 n_33 inh_ground_gnd3i inh_power_vdd3i / EN2JI3VX0
+Xg220__9945 FE_PHN2_enable FE_OFN0_out_0 n_9 inh_ground_gnd3i inh_power_vdd3i 
++ / EN2JI3VX0
+Xout_reg[2] CTS_1 FE_PHN5_n_22 out<2> inh_ground_gnd3i inh_power_vdd3i / 
++ DFRQJI3VX2
+Xout_reg[6] CTS_1 FE_PHN9_n_37 out<6> inh_ground_gnd3i inh_power_vdd3i / 
++ DFRQJI3VX2
+Xout_reg[5] CTS_1 FE_PHN8_n_34 out<5> inh_ground_gnd3i inh_power_vdd3i / 
++ DFRQJI3VX2
+Xout_reg[3] CTS_1 FE_PHN6_n_26 out<3> inh_ground_gnd3i inh_power_vdd3i / 
++ DFRQJI3VX2
+Xout_reg[4] CTS_1 FE_PHN7_n_30 out<4> inh_ground_gnd3i inh_power_vdd3i / 
++ DFRQJI3VX2
+Xout_reg[7] CTS_1 FE_PHN10_n_38 out<7> inh_ground_gnd3i inh_power_vdd3i / 
++ DFRQJI3VX2
+Xg189__6260 n_33 FE_PHN2_enable out<7> n_6 n_36 inh_ground_gnd3i 
++ inh_power_vdd3i / AN22JI3VX1
+Xg209__7098 n_19 n_1 FE_PHN1_reset n_22 inh_ground_gnd3i inh_power_vdd3i / 
++ AN21JI3VX1
+Xg214__5115 n_13 n_5 FE_PHN1_reset n_18 inh_ground_gnd3i inh_power_vdd3i / 
++ AN21JI3VX1
+Xg190__5107 n_35 n_0 FE_PHN1_reset n_37 inh_ground_gnd3i inh_power_vdd3i / 
++ AN21JI3VX1
+Xg194__8428 n_31 n_2 FE_PHN1_reset n_34 inh_ground_gnd3i inh_power_vdd3i / 
++ AN21JI3VX1
+Xg204__1705 n_23 n_7 FE_PHN1_reset n_26 inh_ground_gnd3i inh_power_vdd3i / 
++ AN21JI3VX1
+Xg199__3680 n_27 n_3 FE_PHN1_reset n_30 inh_ground_gnd3i inh_power_vdd3i / 
++ AN21JI3VX1
+XFE_PHC6_n_26 n_26 FE_PHN6_n_26 inh_ground_gnd3i inh_power_vdd3i / DLY1JI3VX1
+XFE_PHC7_n_30 n_30 FE_PHN7_n_30 inh_ground_gnd3i inh_power_vdd3i / DLY1JI3VX1
+Xg211__1881 n_12 out<2> n_15 FE_PHN2_enable n_19 inh_ground_gnd3i 
++ inh_power_vdd3i / ON211JI3VX1
+Xg216__6161 out<0> out<1> n_10 FE_PHN2_enable n_13 inh_ground_gnd3i 
++ inh_power_vdd3i / ON211JI3VX1
+Xg193__4319 n_29 out<6> n_32 FE_PHN2_enable n_35 inh_ground_gnd3i 
++ inh_power_vdd3i / ON211JI3VX1
+Xg196__6783 n_25 out<5> n_28 FE_PHN2_enable n_31 inh_ground_gnd3i 
++ inh_power_vdd3i / ON211JI3VX1
+Xg206__8246 n_17 out<3> n_20 FE_PHN2_enable n_23 inh_ground_gnd3i 
++ inh_power_vdd3i / ON211JI3VX1
+Xg201__2802 n_21 out<4> n_24 FE_PHN2_enable n_27 inh_ground_gnd3i 
++ inh_power_vdd3i / ON211JI3VX1
+XFE_PHC8_n_34 n_34 FE_PHN8_n_34 inh_ground_gnd3i inh_power_vdd3i / BUJI3VX16
+XFE_PHC9_n_37 n_37 FE_PHN9_n_37 inh_ground_gnd3i inh_power_vdd3i / BUJI3VX0
+Xout_reg[1] CTS_1 FE_PHN4_n_18 out<1> inh_ground_gnd3i inh_power_vdd3i / 
++ DFRQJI3VX4
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_pe3i_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_pe3i_pc B D G S
+*.PININFO B:B D:B G:B S:B
+MM0 net6 G S B PE3I W=30u L=350.0n M=1.0 AD=1.44e-11 AS=1.44e-11 PD=6.096e-05 
++ PS=6.096e-05 NRD=0.009 NRS=0.009
+RR1 net6 D 11.4386 $SUB=B $[RDP3] $W=30u $L=2.15u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ne3i_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ne3i_pc B D G S
+*.PININFO B:B D:B G:B S:B
+DD3 B D DN3 0.99e-11 660.00n M=1
+RR0 D net6 7.72208 $SUB=B $[RDN3] $W=30u $L=3.35u M=1
+MM0 net6 G S B NE3I W=30u L=400.0n M=1.0 AD=1.44e-11 AS=1.44e-11 PD=60.96u 
++ PS=60.96u NRD=0.009 NRS=0.009
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_andio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_andio_pc DNW PSUB PWI
+*.PININFO DNW:I PSUB:I PWI:I
+DD3 PSUB DNW DDNWMV 4.69976e-09 274.64u M=1
+DD1 PWI DNW DIPDNWMV 4.16648e-09 258.64u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    PSUBPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT PSUBPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIP<1> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI PSUB pg VDDOI / jio_pe3i_pc
+XIN<1> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<2> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<3> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<4> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<5> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<6> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<7> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<8> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<9> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<10> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<11> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<12> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<13> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<14> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<15> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<16> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<17> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<18> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<19> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<20> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<21> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<22> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<23> PSUB GNDOI ng PSUB / jio_ne3i_pc
+XIN<24> PSUB GNDOI ng PSUB / jio_ne3i_pc
+RR11 ng PSUB 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 GNDOI PSUB PSUB / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    VDDPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT VDDPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN<1> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI VDD3I ng GNDOI / jio_ne3i_pc
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR11 ng GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDOI / jio_andio_pc
+XIP<1> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI VDD3I pg VDDOI / jio_pe3i_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    VDDORPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT VDDORPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDORI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDORI:I
+XIN<1> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI VDDORI ng GNDOI / jio_ne3i_pc
+RR11 ng GNDOI 1532.3 $SUB=VDDORI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDORI PSUB GNDOI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    GNDPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT GNDPADPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN<1> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI GNDI ng GNDOI / jio_ne3i_pc
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR11 ng GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDOI / jio_andio_pc
+XIP<1> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI GNDI pg VDDOI / jio_pe3i_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    GNDORPADPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT GNDORPADPC GNDI GNDORI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDORI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN<1> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<2> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<3> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<4> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<5> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<6> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<7> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<8> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<9> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<10> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<11> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<12> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<13> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<14> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<15> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<16> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<17> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<18> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<19> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<20> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<21> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<22> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<23> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+XIN<24> GNDORI VDDOI ng GNDORI / jio_ne3i_pc
+RR11 ng GNDORI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDORI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ipdio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ipdio_pc DNWR PSUB PWIR
+*.PININFO DNWR:I PSUB:I PWIR:I
+DD10 PSUB DNWR DDNWMV 3.7825e-10 80.26u M=1
+DD9 PWIR DNWR DIPDNWMV 1.3272e-10 54.64u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_lviodio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_lviodio_pc DNLW LPWI PSUB
+*.PININFO DNLW:I LPWI:I PSUB:I
+DD2 LPWI DNLW DIPDNWMV 3.2452e-10 132.64u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_opdio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_opdio_pc DNLW DNW LPWI NW PSUB PWI VDN
+*.PININFO DNLW:I DNW:I LPWI:I NW:I PSUB:I PWI:I VDN:I
+XI5 DNLW LPWI PSUB / jio_lviodio_pc
+DD0 PSUB DNW DDNWMV 5.2955e-10 100.26u M=1
+DD1 PWI NW DIPDNWMV 2.1664e-10 59.08u M=1
+DD3 PWI NW DIPDNWMV 2.1664e-10 59.08u M=1
+DD5 PWI DNW DIPDNWMV 1.9592e-10 74.64u M=1
+XI0 VDN PSUB PWI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ndtr_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ndtr_pc GND GNDR PI PO VDD VDDR Y YN
+*.PININFO GND:I GNDR:I PI:I VDD:I VDDR:I YN:I PO:O Y:O
+MM1 net14 YN VDD VDD PE3I W=2.4u L=350.0n M=2.0 AD=6.48e-13 AS=1.152e-12 
++ PD=2.94e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM3 net19 net14 VDD VDD PE3I W=2.4u L=350.0n M=6.0 AD=6.48e-13 AS=8.16e-13 
++ PD=2.94e-06 PS=3.88e-06 NRD=0.1125 NRS=0.1125
+MM7 PO PI VDD VDD PE3I W=2.4u L=350.0n M=1.0 AD=1.152e-12 AS=1.152e-12 
++ PD=5.76e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM9 PO net14 VDD VDD PE3I W=2.4u L=350.0n M=1.0 AD=1.152e-12 AS=1.152e-12 
++ PD=5.76e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM11 net16 net14 VDD VDD PE3I W=2.4u L=350.0n M=2.0 AD=6.48e-13 AS=1.152e-12 
++ PD=2.94e-06 PS=5.76e-06 NRD=0.1125 NRS=0.1125
+MM5 Y net19 VDD VDD PE3I W=2.4u L=350.0n M=10.0 AD=6.48e-13 AS=7.488e-13 
++ PD=2.94e-06 PS=3.504e-06 NRD=0.1125 NRS=0.1125
+MM2 net14 YN GND GND NE3I W=1.2u L=400n M=2.0 AD=3.24e-13 AS=5.76e-13 
++ PD=1.74e-06 PS=3.36e-06 NRD=0.225 NRS=0.225
+MM6 Y net16 GND GND NE3I W=1.68u L=400n M=6.0 AD=4.536e-13 AS=5.712e-13 
++ PD=2.22e-06 PS=2.92e-06 NRD=0.160714 NRS=0.160714
+MM8 PO net14 net37 GND NE3I W=1.68u L=400n M=1.0 AD=8.064e-13 AS=8.064e-13 
++ PD=4.32e-06 PS=4.32e-06 NRD=0.160714 NRS=0.160714
+MM10 net37 PI GND GND NE3I W=1.68u L=400n M=1.0 AD=8.064e-13 AS=8.064e-13 
++ PD=4.32e-06 PS=4.32e-06 NRD=0.160714 NRS=0.160714
+MM13 net19 net14 GND GND NE3I W=1.68u L=400n M=2.0 AD=4.536e-13 AS=8.064e-13 
++ PD=2.22e-06 PS=4.32e-06 NRD=0.160714 NRS=0.160714
+MM4 net16 net14 GND GND NE3I W=1.68u L=400n M=4.0 AD=4.536e-13 AS=6.3e-13 
++ PD=2.22e-06 PS=3.27e-06 NRD=0.160714 NRS=0.160714
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_bufc_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_bufc_pc A GNDR VDDR Y
+*.PININFO A:I GNDR:I VDDR:I Y:O
+MM2 Y A GNDR GNDR NE3I W=2u L=400n M=3.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM1 Y A VDDR VDDR PE3I W=2.2u L=350.0n M=6.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_resp_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_resp_pc GNDO RH VDDO
+*.PININFO GNDO:I VDDO:I RH:O
+RR0 VDDO RH 1532.3 $SUB=VDDO $[RDP3] $W=440.0n $L=3.3u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ne3is_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ne3is_pc B D G S
+*.PININFO B:B D:B G:B S:B
+DD3 B D DN3 3.96e-12 660.0n M=1
+RR4 D net6 8.99346 $SUB=B $[RDN3] $W=12.0u $L=1.32u M=1
+MM0 net6 G S B NE3I W=12.0u L=400n M=1.0 AD=5.76e-12 AS=5.76e-12 PD=2.496e-05 
++ PS=2.496e-05 NRD=0.0225 NRS=0.0225
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_esd1_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_esd1_pc A GNDO GNDR PSUB VDDO VDDR Y
+*.PININFO A:I GNDO:I GNDR:I PSUB:I VDDO:I VDDR:I Y:O
+MM3 Y VDDO VDDO VDDO PE3I W=12.0u L=350.0n M=2.0 AD=3.24e-12 AS=5.76e-12 
++ PD=1.254e-05 PS=2.496e-05 NRD=0.0225 NRS=0.0225
+XI3 GNDO rh VDDO / jio_resp_pc
+XIP<1> VDDO A rh VDDO / jio_pe3i_pc
+XIP<2> VDDO A rh VDDO / jio_pe3i_pc
+XIP<3> VDDO A rh VDDO / jio_pe3i_pc
+XIP<4> VDDO A rh VDDO / jio_pe3i_pc
+XIP<5> VDDO A rh VDDO / jio_pe3i_pc
+XIP<6> VDDO A rh VDDO / jio_pe3i_pc
+XIP<7> VDDO A rh VDDO / jio_pe3i_pc
+XIP<8> VDDO A rh VDDO / jio_pe3i_pc
+XIP<9> VDDO A rh VDDO / jio_pe3i_pc
+XIP<10> VDDO A rh VDDO / jio_pe3i_pc
+XIP<11> VDDO A rh VDDO / jio_pe3i_pc
+XIP<12> VDDO A rh VDDO / jio_pe3i_pc
+XIP<13> VDDO A rh VDDO / jio_pe3i_pc
+XIP<14> VDDO A rh VDDO / jio_pe3i_pc
+XIP<15> VDDO A rh VDDO / jio_pe3i_pc
+XIP<16> VDDO A rh VDDO / jio_pe3i_pc
+XIP<17> VDDO A rh VDDO / jio_pe3i_pc
+XIP<18> VDDO A rh VDDO / jio_pe3i_pc
+XIP<19> VDDO A rh VDDO / jio_pe3i_pc
+XIP<20> VDDO A rh VDDO / jio_pe3i_pc
+XIP<21> VDDO A rh VDDO / jio_pe3i_pc
+XIP<22> VDDO A rh VDDO / jio_pe3i_pc
+XIP<23> VDDO A rh VDDO / jio_pe3i_pc
+XIP<24> VDDO A rh VDDO / jio_pe3i_pc
+XIN<1> GNDO A ng GNDO / jio_ne3i_pc
+XIN<2> GNDO A ng GNDO / jio_ne3i_pc
+XIN<3> GNDO A ng GNDO / jio_ne3i_pc
+XIN<4> GNDO A ng GNDO / jio_ne3i_pc
+XIN<5> GNDO A ng GNDO / jio_ne3i_pc
+XIN<6> GNDO A ng GNDO / jio_ne3i_pc
+XIN<7> GNDO A ng GNDO / jio_ne3i_pc
+XIN<8> GNDO A ng GNDO / jio_ne3i_pc
+XIN<9> GNDO A ng GNDO / jio_ne3i_pc
+XIN<10> GNDO A ng GNDO / jio_ne3i_pc
+XIN<11> GNDO A ng GNDO / jio_ne3i_pc
+XIN<12> GNDO A ng GNDO / jio_ne3i_pc
+XIN<13> GNDO A ng GNDO / jio_ne3i_pc
+XIN<14> GNDO A ng GNDO / jio_ne3i_pc
+XIN<15> GNDO A ng GNDO / jio_ne3i_pc
+XIN<16> GNDO A ng GNDO / jio_ne3i_pc
+XIN<17> GNDO A ng GNDO / jio_ne3i_pc
+XIN<18> GNDO A ng GNDO / jio_ne3i_pc
+XIN<19> GNDO A ng GNDO / jio_ne3i_pc
+XIN<20> GNDO A ng GNDO / jio_ne3i_pc
+XIN<21> GNDO A ng GNDO / jio_ne3i_pc
+XIN<22> GNDO A ng GNDO / jio_ne3i_pc
+XIN<23> GNDO A ng GNDO / jio_ne3i_pc
+XIN<24> GNDO A ng GNDO / jio_ne3i_pc
+RR1 A Y 575.123 $[RPP1] $W=2.5u $L=4.5u M=1
+MM2 ng rh GNDO GNDO NE3I W=1.2u L=400n M=1.0 AD=5.76e-13 AS=5.76e-13 
++ PD=3.36e-06 PS=3.36e-06 NRD=0.225 NRS=0.225
+XINS<1> GNDO Y GNDO GNDO / jio_ne3is_pc
+XINS<2> GNDO Y GNDO GNDO / jio_ne3is_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    ICPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT ICPC GNDI GNDOI GNDRI PAD PI PO PSUB VDD3I VDDOI VDDRI Y
+*.PININFO GNDI:I GNDOI:I GNDRI:I PAD:I PI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I 
+*.PININFO PO:O Y:O
+XI5 VDDRI PSUB GNDRI / jio_ipdio_pc
+XI6 VDD3I VDDOI GNDI VDDOI PSUB GNDOI VDDOI / jio_opdio_pc
+XI4 GNDI GNDRI PI PO VDD3I VDDRI Y net12 / jio_ndtr_pc
+XI3 net13 GNDRI VDDRI net12 / jio_bufc_pc
+XI1 PAD GNDOI GNDRI PSUB VDDOI VDDRI net13 / jio_esd1_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_tp4_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_tp4_pc GNDO NG NG1 NG2 NW PG PG1 PG2 PW VDDO
+*.PININFO GNDO:I NG:I NW:I PG:I PW:I VDDO:I NG1:O NG2:O PG1:O PG2:O
+MM11 PG1 PG GNDO PW NE3I W=6.1u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM13 PG2 PG net26 PW NE3I W=3.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM21 NG1 NG GNDO PW NE3I W=5.5u L=400n M=2.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM14 net26 PG GNDO PW NE3I W=3.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM24 NG2 NG GNDO PW NE3I W=8u L=400n M=2.0 AD=9.6e-13 AS=9.6e-13 PD=4.96e-06 
++ PS=4.96e-06 NRD=0.135 NRS=0.135
+MM10 PG1 PG VDDO NW PE3I W=10u L=350.0n M=2.0 AD=2.7e-12 AS=4.8e-12 
++ PD=1.054e-05 PS=2.096e-05 NRD=0.027 NRS=0.027
+MM20 NG1 NG VDDO NW PE3I W=4.9u L=350.0n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM23 NG2 NG net25 NW PE3I W=6.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM22 net25 NG VDDO NW PE3I W=6.7u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+MM12 PG2 PG VDDO NW PE3I W=10u L=350.0n M=2.0 AD=2.7e-12 AS=4.8e-12 
++ PD=1.054e-05 PS=2.096e-05 NRD=0.027 NRS=0.027
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_tsctrl_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_tsctrl_pc A EN GND GNDO NG PG VDD VDDO
+*.PININFO A:I EN:I GND:I GNDO:I VDD:I VDDO:I NG:O PG:O
+MM127 NG NGB VDDO VDDO PE3I W=5.2u L=350.0n M=2.0 AD=1.404e-12 AS=2.496e-12 
++ PD=5.74e-06 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM117 PG PGB VDDO VDDO PE3I W=5.2u L=350.0n M=2.0 AD=1.404e-12 AS=2.496e-12 
++ PD=5.74e-06 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM01 ENB EN VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM22 NGB EN net49 VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM12 PGB ENB VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM21 net49 A VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM11 PGB A VDD VDD PE3I W=2.16u L=350.0n M=1.0 AD=1.0368e-12 AS=1.0368e-12 
++ PD=5.28e-06 PS=5.28e-06 NRD=0.125 NRS=0.125
+MM128 NG NGB GNDO GNDO NE3I W=5.2u L=400n M=1.0 AD=2.496e-12 AS=2.496e-12 
++ PD=1.136e-05 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM118 PG PGB GNDO GNDO NE3I W=5.2u L=400n M=1.0 AD=2.496e-12 AS=2.496e-12 
++ PD=1.136e-05 PS=1.136e-05 NRD=0.0519231 NRS=0.0519231
+MM02 ENB EN GND GND NE3I W=1.1u L=400n M=1.0 AD=5.28e-13 AS=5.28e-13 
++ PD=3.16e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM24 NGB A GND GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM15 net50 A GND GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM25 NGB EN GND GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+MM14 PGB ENB net50 GND NE3I W=1.1u L=400n M=2.0 AD=2.97e-13 AS=5.28e-13 
++ PD=1.64e-06 PS=3.16e-06 NRD=0.245455 NRS=0.245455
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_ts4_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_ts4_pc A EN GND GNDO PAD PSUB VDD VDDO VDN
+*.PININFO A:I EN:I GND:I GNDO:I PSUB:I VDD:I VDDO:I VDN:I PAD:O
+XIP1<1> VDDO PAD pg1 VDDO / jio_pe3i_pc
+XIP1<2> VDDO PAD pg1 VDDO / jio_pe3i_pc
+XIP1<3> VDDO PAD pg1 VDDO / jio_pe3i_pc
+XIP2<1> VDDO PAD pg2 VDDO / jio_pe3i_pc
+XIP2<2> VDDO PAD pg2 VDDO / jio_pe3i_pc
+XIP2<3> VDDO PAD pg2 VDDO / jio_pe3i_pc
+XIP3<1> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<2> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<3> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<4> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<5> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<6> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<7> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<8> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<9> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<10> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<11> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<12> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<13> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<14> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<15> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<16> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<17> VDDO PAD rh VDDO / jio_pe3i_pc
+XIP3<18> VDDO PAD rh VDDO / jio_pe3i_pc
+MM0 ng3 rh GNDO GNDO NE3I W=1.2u L=400n M=1.0 AD=9.6e-13 AS=9.6e-13 
++ PD=4.96e-06 PS=4.96e-06 NRD=0.135 NRS=0.135
+XI5 GNDO rh VDDO / jio_resp_pc
+XI3 VDD VDDO GND VDDO PSUB GNDO VDN / jio_opdio_pc
+XIN3<1> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<2> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<3> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<4> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<5> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<6> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<7> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<8> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<9> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<10> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<11> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<12> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<13> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<14> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<15> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<16> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<17> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<18> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<19> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<20> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN3<21> GNDO PAD ng3 GNDO / jio_ne3i_pc
+XIN2<1> GNDO PAD ng2 GNDO / jio_ne3i_pc
+XIN2<2> GNDO PAD ng2 GNDO / jio_ne3i_pc
+XIN1 GNDO PAD ng1 GNDO / jio_ne3i_pc
+XI2 GNDO ng ng1 ng2 VDDO pg pg1 pg2 GNDO VDDO / jio_tp4_pc
+XI1 A EN GND GNDO ng pg VDD VDDO / jio_tsctrl_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    BT4PC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT BT4PC A EN GNDI GNDOI GNDRI PAD PSUB VDD3I VDDOI VDDRI
+*.PININFO A:I EN:I GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I PAD:O
+XI0 A EN GNDI GNDOI PAD PSUB VDD3I VDDOI VDDOI / jio_ts4_pc
+XI5 VDDRI PSUB GNDRI / jio_ipdio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    PWRCUTDCPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT PWRCUTDCPC GNDI1 GNDI2 GNDOI1 GNDOI2 GNDRI1 GNDRI2 PSUB VDD3I1 VDD3I2 
++ VDDOI1 VDDOI2 VDDRI1 VDDRI2
+*.PININFO GNDI1:I GNDI2:I GNDOI1:I GNDOI2:I GNDRI1:I GNDRI2:I PSUB:I VDD3I1:I 
+*.PININFO VDD3I2:I VDDOI1:I VDDOI2:I VDDRI1:I VDDRI2:I
+DD4<1> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<2> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<3> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<4> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<5> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<6> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<7> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<8> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<9> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<10> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<11> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<12> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<13> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD4<14> GNDOI1 GNDOI2 DP3 5.91506e-11 64.86u M=1
+DD1<1> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<2> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<3> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<4> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<5> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<6> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<7> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<8> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<9> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<10> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<11> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<12> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<13> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<14> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+DD1<15> GNDOI2 GNDOI1 DP3 5.91506e-11 64.86u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    CORNERESDPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT CORNERESDPC GNDI GNDOI GNDRI PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I
+XIN2<1> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<2> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<3> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<4> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<5> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<6> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<7> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<8> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<9> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<10> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<11> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<12> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<13> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<14> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<15> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<16> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<17> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<18> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<19> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<20> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<21> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<22> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<23> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN2<24> GNDOI VDDOI ng2 GNDOI / jio_ne3i_pc
+XIN1<1> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<2> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<3> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<4> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<5> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<6> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<7> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<8> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<9> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<10> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<11> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<12> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<13> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<14> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<15> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<16> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<17> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<18> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<19> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<20> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<21> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<22> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<23> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+XIN1<24> GNDOI VDDOI ng1 GNDOI / jio_ne3i_pc
+RR2 ng2 GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR1 ng1 GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI1<1> VDDOI PSUB GNDOI / jio_andio_pc
+XI1<2> VDDOI PSUB GNDOI / jio_andio_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    APR00DPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT APR00DPC GNDI GNDOI GNDRI PAD PSUB VDD3I VDDOI VDDRI
+*.PININFO GNDI:I GNDOI:I GNDRI:I PSUB:I VDD3I:I VDDOI:I VDDRI:I PAD:B
+XIN<1> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI PAD ng GNDOI / jio_ne3i_pc
+RR11 ng GNDOI 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+RR0 VDDOI pg 1532.3 $SUB=VDDOI $[RDP3] $W=440.0n $L=3.3u M=1
+XI157 VDDOI PSUB GNDOI / jio_andio_pc
+XIP<1> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<2> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<3> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<4> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<5> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<6> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<7> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<8> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<9> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<10> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<11> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<12> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<13> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<14> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<15> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<16> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<17> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<18> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<19> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<20> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<21> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<22> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<23> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<24> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<25> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<26> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<27> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<28> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<29> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<30> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<31> VDDOI PAD pg VDDOI / jio_pe3i_pc
+XIP<32> VDDOI PAD pg VDDOI / jio_pe3i_pc
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    jio_anrdio_pc
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT jio_anrdio_pc DNLW DNW LPWI NW PSUB PWI VDN
+*.PININFO DNLW:I DNW:I LPWI:I NW:I PSUB:I PWI:I VDN:I
+DD5 PSUB DNLW DDNWMV 9.789e-10 160.12u M=1
+DD0 PSUB VDN DDNWMV 4.69976e-09 274.64u M=1
+DD6 PSUB DNW DDNWMV 9.8345e-10 160.26u M=1
+DD1 PWI VDN DIPDNWMV 4.16648e-09 258.64u M=1
+DD2 PWI NW DIPDNWMV 2.1664e-10 59.08u M=1
+DD4 PWI NW DIPDNWMV 1.2696e-10 47.87u M=1
+.ENDS
+
+************************************************************************
+* Library Name: IO_CELLS_JIC3V
+* Cell Name:    APR04DPC
+* View Name:    cmos_sch
+************************************************************************
+
+.SUBCKT APR04DPC GNDI GNDOI GNDRI PAD PSUB VDD3I VDDOI VDDRI Y
+*.PININFO GNDI:I GNDOI:I GNDRI:I PAD:I PSUB:I VDD3I:I VDDOI:I VDDRI:I Y:O
+XINS<1> GNDOI Y GNDOI GNDOI / jio_ne3is_pc
+XINS<2> GNDOI Y GNDOI GNDOI / jio_ne3is_pc
+MM2 ng rh GNDOI GNDOI NE3I W=1.2u L=400n M=1.0 AD=5.76e-13 AS=5.76e-13 
++ PD=3.36e-06 PS=3.36e-06 NRD=0.225 NRS=0.225
+XIN<1> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<2> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<3> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<4> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<5> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<6> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<7> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<8> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<9> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<10> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<11> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<12> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<13> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<14> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<15> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<16> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<17> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<18> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<19> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<20> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<21> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<22> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<23> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XIN<24> GNDOI PAD ng GNDOI / jio_ne3i_pc
+XI3 GNDOI rh VDDOI / jio_resp_pc
+XIP<1> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<2> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<3> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<4> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<5> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<6> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<7> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<8> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<9> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<10> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<11> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<12> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<13> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<14> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<15> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<16> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<17> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<18> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<19> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<20> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<21> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<22> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<23> VDDOI PAD rh VDDOI / jio_pe3i_pc
+XIP<24> VDDOI PAD rh VDDOI / jio_pe3i_pc
+MM3 Y VDDOI VDDOI VDDOI PE3I W=12.0u L=350.0n M=2.0 AD=3.24e-12 AS=5.76e-12 
++ PD=1.254e-05 PS=2.496e-05 NRD=0.0225 NRS=0.0225
+XI157 VDD3I VDDOI GNDI VDDOI PSUB GNDOI VDDOI / jio_anrdio_pc
+RR1 PAD Y 391.392 $[RPP1] $W=2u $L=2.2u M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_iscrd2_4x100
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_iscrd2_4x100 A Gn Gp K Sub
+*.PININFO A:B Gn:B Gp:B K:B Sub:B
+DD1 Gp K DNPDD_SCR 5.36386e-10 409.56u M=1
+DD2 Gp Gn DPDD_SCR 2.19633e-09 457.16u M=1
+DD0 A Gn DPDNW 1.89063e-10 203.78u M=4
+DD_Guard Sub Gn DDNW 6.92224e-09 359.17u M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_dhpw_2x100
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_dhpw_2x100 A K Sub
+*.PININFO A:B K:B Sub:B
+DD0 Sub K DDNW 3.37852e-09 284.4u M=1
+DD1 A K DHPW 3.87893e-10 207.812u M=2
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_dhpw_2x100_stack3
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_dhpw_2x100_stack3 A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI0 A_l net20 Sub / ioh_dhpw_2x100
+XI2 net14 K_h Sub / ioh_dhpw_2x100
+XI1 net20 net14 Sub / ioh_dhpw_2x100
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isab_15_04
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isab_15_04 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX net17 G S B PE3I W=15.0u L=400n M=1.0 AD=7.2e-12 AS=7.2e-12 PD=3.096e-05 
++ PS=3.096e-05 NRD=0.018 NRS=0.018
+RR0 net17 D 4.73896 $SUB=B $[RDP3] $W=15.0u $L=430.0n M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isabhv_1050gcr
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isabhv_1050gcr D SB Sub
+*.PININFO D:B SB:B Sub:B
+DMD<1> D SB DP3 9.89102e-12 1.32u M=1
+DMD<2> D SB DP3 9.89102e-12 1.32u M=1
+DMD<3> D SB DP3 9.89102e-12 1.32u M=1
+DMD<4> D SB DP3 9.89102e-12 1.32u M=1
+DMD<5> D SB DP3 9.89102e-12 1.32u M=1
+DMD<6> D SB DP3 9.89102e-12 1.32u M=1
+DMD<7> D SB DP3 9.89102e-12 1.32u M=1
+DMD<8> D SB DP3 9.89102e-12 1.32u M=1
+DMD<9> D SB DP3 9.89102e-12 1.32u M=1
+DMD<10> D SB DP3 9.89102e-12 1.32u M=1
+DMD<11> D SB DP3 9.89102e-12 1.32u M=1
+DMD<12> D SB DP3 9.89102e-12 1.32u M=1
+DMD<13> D SB DP3 9.89102e-12 1.32u M=1
+DMD<14> D SB DP3 9.89102e-12 1.32u M=1
+DMD<15> D SB DP3 9.89102e-12 1.32u M=1
+DMD<16> D SB DP3 9.89102e-12 1.32u M=1
+DMD<17> D SB DP3 9.89102e-12 1.32u M=1
+DMD<18> D SB DP3 9.89102e-12 1.32u M=1
+DMD<19> D SB DP3 9.89102e-12 1.32u M=1
+DMD<20> D SB DP3 9.89102e-12 1.32u M=1
+DMD<21> D SB DP3 9.89102e-12 1.32u M=1
+DMD<22> D SB DP3 9.89102e-12 1.32u M=1
+DMD<23> D SB DP3 9.89102e-12 1.32u M=1
+DMD<24> D SB DP3 9.89102e-12 1.32u M=1
+DMD<25> D SB DP3 9.89102e-12 1.32u M=1
+DMD<26> D SB DP3 9.89102e-12 1.32u M=1
+DMD<27> D SB DP3 9.89102e-12 1.32u M=1
+DMD<28> D SB DP3 9.89102e-12 1.32u M=1
+DMD<29> D SB DP3 9.89102e-12 1.32u M=1
+DMD<30> D SB DP3 9.89102e-12 1.32u M=1
+DMD<31> D SB DP3 9.89102e-12 1.32u M=1
+DMD<32> D SB DP3 9.89102e-12 1.32u M=1
+DMD<33> D SB DP3 9.89102e-12 1.32u M=1
+DMD<34> D SB DP3 9.89102e-12 1.32u M=1
+DMD<35> D SB DP3 9.89102e-12 1.32u M=1
+DD0 Sub SB DDNW 3.10026e-09 285.2u M=1
+RR0 SB net20 20035.7 $[RNP1] $W=420.0n $L=25.50u M=1
+XMP<1> SB D net20 SB / ioh_pe3isab_15_04
+XMP<2> SB D net20 SB / ioh_pe3isab_15_04
+XMP<3> SB D net20 SB / ioh_pe3isab_15_04
+XMP<4> SB D net20 SB / ioh_pe3isab_15_04
+XMP<5> SB D net20 SB / ioh_pe3isab_15_04
+XMP<6> SB D net20 SB / ioh_pe3isab_15_04
+XMP<7> SB D net20 SB / ioh_pe3isab_15_04
+XMP<8> SB D net20 SB / ioh_pe3isab_15_04
+XMP<9> SB D net20 SB / ioh_pe3isab_15_04
+XMP<10> SB D net20 SB / ioh_pe3isab_15_04
+XMP<11> SB D net20 SB / ioh_pe3isab_15_04
+XMP<12> SB D net20 SB / ioh_pe3isab_15_04
+XMP<13> SB D net20 SB / ioh_pe3isab_15_04
+XMP<14> SB D net20 SB / ioh_pe3isab_15_04
+XMP<15> SB D net20 SB / ioh_pe3isab_15_04
+XMP<16> SB D net20 SB / ioh_pe3isab_15_04
+XMP<17> SB D net20 SB / ioh_pe3isab_15_04
+XMP<18> SB D net20 SB / ioh_pe3isab_15_04
+XMP<19> SB D net20 SB / ioh_pe3isab_15_04
+XMP<20> SB D net20 SB / ioh_pe3isab_15_04
+XMP<21> SB D net20 SB / ioh_pe3isab_15_04
+XMP<22> SB D net20 SB / ioh_pe3isab_15_04
+XMP<23> SB D net20 SB / ioh_pe3isab_15_04
+XMP<24> SB D net20 SB / ioh_pe3isab_15_04
+XMP<25> SB D net20 SB / ioh_pe3isab_15_04
+XMP<26> SB D net20 SB / ioh_pe3isab_15_04
+XMP<27> SB D net20 SB / ioh_pe3isab_15_04
+XMP<28> SB D net20 SB / ioh_pe3isab_15_04
+XMP<29> SB D net20 SB / ioh_pe3isab_15_04
+XMP<30> SB D net20 SB / ioh_pe3isab_15_04
+XMP<31> SB D net20 SB / ioh_pe3isab_15_04
+XMP<32> SB D net20 SB / ioh_pe3isab_15_04
+XMP<33> SB D net20 SB / ioh_pe3isab_15_04
+XMP<34> SB D net20 SB / ioh_pe3isab_15_04
+XMP<35> SB D net20 SB / ioh_pe3isab_15_04
+XMP<36> SB D net20 SB / ioh_pe3isab_15_04
+XMP<37> SB D net20 SB / ioh_pe3isab_15_04
+XMP<38> SB D net20 SB / ioh_pe3isab_15_04
+XMP<39> SB D net20 SB / ioh_pe3isab_15_04
+XMP<40> SB D net20 SB / ioh_pe3isab_15_04
+XMP<41> SB D net20 SB / ioh_pe3isab_15_04
+XMP<42> SB D net20 SB / ioh_pe3isab_15_04
+XMP<43> SB D net20 SB / ioh_pe3isab_15_04
+XMP<44> SB D net20 SB / ioh_pe3isab_15_04
+XMP<45> SB D net20 SB / ioh_pe3isab_15_04
+XMP<46> SB D net20 SB / ioh_pe3isab_15_04
+XMP<47> SB D net20 SB / ioh_pe3isab_15_04
+XMP<48> SB D net20 SB / ioh_pe3isab_15_04
+XMP<49> SB D net20 SB / ioh_pe3isab_15_04
+XMP<50> SB D net20 SB / ioh_pe3isab_15_04
+XMP<51> SB D net20 SB / ioh_pe3isab_15_04
+XMP<52> SB D net20 SB / ioh_pe3isab_15_04
+XMP<53> SB D net20 SB / ioh_pe3isab_15_04
+XMP<54> SB D net20 SB / ioh_pe3isab_15_04
+XMP<55> SB D net20 SB / ioh_pe3isab_15_04
+XMP<56> SB D net20 SB / ioh_pe3isab_15_04
+XMP<57> SB D net20 SB / ioh_pe3isab_15_04
+XMP<58> SB D net20 SB / ioh_pe3isab_15_04
+XMP<59> SB D net20 SB / ioh_pe3isab_15_04
+XMP<60> SB D net20 SB / ioh_pe3isab_15_04
+XMP<61> SB D net20 SB / ioh_pe3isab_15_04
+XMP<62> SB D net20 SB / ioh_pe3isab_15_04
+XMP<63> SB D net20 SB / ioh_pe3isab_15_04
+XMP<64> SB D net20 SB / ioh_pe3isab_15_04
+XMP<65> SB D net20 SB / ioh_pe3isab_15_04
+XMP<66> SB D net20 SB / ioh_pe3isab_15_04
+XMP<67> SB D net20 SB / ioh_pe3isab_15_04
+XMP<68> SB D net20 SB / ioh_pe3isab_15_04
+XMP<69> SB D net20 SB / ioh_pe3isab_15_04
+XMP<70> SB D net20 SB / ioh_pe3isab_15_04
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsab_15_10
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsab_15_10 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX D G S B PMB W=15.12u L=1u M=1.0 AD=7.2576e-12 AS=7.2576e-12 PD=3.12e-05 
++ PS=3.12e-05 NRD=0.0178571 NRS=0.0178571
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsabhv_750
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsabhv_750 D GSB Sub
+*.PININFO D:B GSB:B Sub:B
+RR0<1> net20<0> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<2> net20<1> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<3> net20<2> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<4> net20<3> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<5> net20<4> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<6> net20<5> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<7> net20<6> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<8> net20<7> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<9> net20<8> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<10> net20<9> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<11> net20<10> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<12> net20<11> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<13> net20<12> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<14> net20<13> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<15> net20<14> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<16> net20<15> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<17> net20<16> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<18> net20<17> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<19> net20<18> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<20> net20<19> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<21> net20<20> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<22> net20<21> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<23> net20<22> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<24> net20<23> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<25> net20<24> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<26> net20<25> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<27> net20<26> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<28> net20<27> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<29> net20<28> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<30> net20<29> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<31> net20<30> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<32> net20<31> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<33> net20<32> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<34> net20<33> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<35> net20<34> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<36> net20<35> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<37> net20<36> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<38> net20<37> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<39> net20<38> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<40> net20<39> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<41> net20<40> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<42> net20<41> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<43> net20<42> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<44> net20<43> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<45> net20<44> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<46> net20<45> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<47> net20<46> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<48> net20<47> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<49> net20<48> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+RR0<50> net20<49> D 4.60227 $SUB=GSB $[RDP_IO] $W=15u $L=510.00n M=1
+DD0<1> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<2> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<3> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<4> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<5> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<6> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<7> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<8> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<9> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<10> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<11> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<12> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<13> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<14> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<15> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<16> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<17> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<18> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<19> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<20> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<21> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<22> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<23> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<24> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<25> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<26> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<27> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<28> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<29> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<30> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<31> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<32> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<33> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<34> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<35> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<36> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<37> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<38> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<39> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<40> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<41> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<42> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<43> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<44> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<45> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<46> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<47> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<48> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<49> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD0<50> D GSB DPHNW 4.95062e-12 660.00n M=1
+DD1 Sub GSB DDNW 3.03711e-09 284u M=1
+XMP<1> GSB net20<0> GSB GSB / ioh_pmbsab_15_10
+XMP<2> GSB net20<1> GSB GSB / ioh_pmbsab_15_10
+XMP<3> GSB net20<2> GSB GSB / ioh_pmbsab_15_10
+XMP<4> GSB net20<3> GSB GSB / ioh_pmbsab_15_10
+XMP<5> GSB net20<4> GSB GSB / ioh_pmbsab_15_10
+XMP<6> GSB net20<5> GSB GSB / ioh_pmbsab_15_10
+XMP<7> GSB net20<6> GSB GSB / ioh_pmbsab_15_10
+XMP<8> GSB net20<7> GSB GSB / ioh_pmbsab_15_10
+XMP<9> GSB net20<8> GSB GSB / ioh_pmbsab_15_10
+XMP<10> GSB net20<9> GSB GSB / ioh_pmbsab_15_10
+XMP<11> GSB net20<10> GSB GSB / ioh_pmbsab_15_10
+XMP<12> GSB net20<11> GSB GSB / ioh_pmbsab_15_10
+XMP<13> GSB net20<12> GSB GSB / ioh_pmbsab_15_10
+XMP<14> GSB net20<13> GSB GSB / ioh_pmbsab_15_10
+XMP<15> GSB net20<14> GSB GSB / ioh_pmbsab_15_10
+XMP<16> GSB net20<15> GSB GSB / ioh_pmbsab_15_10
+XMP<17> GSB net20<16> GSB GSB / ioh_pmbsab_15_10
+XMP<18> GSB net20<17> GSB GSB / ioh_pmbsab_15_10
+XMP<19> GSB net20<18> GSB GSB / ioh_pmbsab_15_10
+XMP<20> GSB net20<19> GSB GSB / ioh_pmbsab_15_10
+XMP<21> GSB net20<20> GSB GSB / ioh_pmbsab_15_10
+XMP<22> GSB net20<21> GSB GSB / ioh_pmbsab_15_10
+XMP<23> GSB net20<22> GSB GSB / ioh_pmbsab_15_10
+XMP<24> GSB net20<23> GSB GSB / ioh_pmbsab_15_10
+XMP<25> GSB net20<24> GSB GSB / ioh_pmbsab_15_10
+XMP<26> GSB net20<25> GSB GSB / ioh_pmbsab_15_10
+XMP<27> GSB net20<26> GSB GSB / ioh_pmbsab_15_10
+XMP<28> GSB net20<27> GSB GSB / ioh_pmbsab_15_10
+XMP<29> GSB net20<28> GSB GSB / ioh_pmbsab_15_10
+XMP<30> GSB net20<29> GSB GSB / ioh_pmbsab_15_10
+XMP<31> GSB net20<30> GSB GSB / ioh_pmbsab_15_10
+XMP<32> GSB net20<31> GSB GSB / ioh_pmbsab_15_10
+XMP<33> GSB net20<32> GSB GSB / ioh_pmbsab_15_10
+XMP<34> GSB net20<33> GSB GSB / ioh_pmbsab_15_10
+XMP<35> GSB net20<34> GSB GSB / ioh_pmbsab_15_10
+XMP<36> GSB net20<35> GSB GSB / ioh_pmbsab_15_10
+XMP<37> GSB net20<36> GSB GSB / ioh_pmbsab_15_10
+XMP<38> GSB net20<37> GSB GSB / ioh_pmbsab_15_10
+XMP<39> GSB net20<38> GSB GSB / ioh_pmbsab_15_10
+XMP<40> GSB net20<39> GSB GSB / ioh_pmbsab_15_10
+XMP<41> GSB net20<40> GSB GSB / ioh_pmbsab_15_10
+XMP<42> GSB net20<41> GSB GSB / ioh_pmbsab_15_10
+XMP<43> GSB net20<42> GSB GSB / ioh_pmbsab_15_10
+XMP<44> GSB net20<43> GSB GSB / ioh_pmbsab_15_10
+XMP<45> GSB net20<44> GSB GSB / ioh_pmbsab_15_10
+XMP<46> GSB net20<45> GSB GSB / ioh_pmbsab_15_10
+XMP<47> GSB net20<46> GSB GSB / ioh_pmbsab_15_10
+XMP<48> GSB net20<47> GSB GSB / ioh_pmbsab_15_10
+XMP<49> GSB net20<48> GSB GSB / ioh_pmbsab_15_10
+XMP<50> GSB net20<49> GSB GSB / ioh_pmbsab_15_10
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_c5pk
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_c5pk A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI5 A_l net30 Sub / ioh_pe3isabhv_1050gcr
+XI3 net23 net26 Sub / ioh_pmbsabhv_750
+XI4 net30 net23 Sub / ioh_pmbsabhv_750
+XI2 net26 net20 Sub / ioh_pmbsabhv_750
+XI1 net20 K_h Sub / ioh_pmbsabhv_750
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    HVD4SJD1R5PKFs
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT HVD4SJD1R5PKFs GNDO IGND PAD
+*.PININFO GNDO:B IGND:B PAD:B
+XI10 PAD PAD Trig_0 IGND GNDO / ioh_iscrd2_4x100
+XI9 IGND PAD GNDO / ioh_dhpw_2x100_stack3
+XI11 Trig_0 PAD GNDO / ioh_c5pk
+RR4 IGND Trig_0 1.008 $[RPP1S] $W=100.0000u $L=16.0u M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsab_40_10
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsab_40_10 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX D G S B PMB W=40.12u L=1u M=1.0 AD=1.92576e-11 AS=1.92576e-11 PD=8.12e-05 
++ PS=8.12e-05 NRD=0.00672981 NRS=0.00672981
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pmbsabhv_2000
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pmbsabhv_2000 D GSB Sub
+*.PININFO D:B GSB:B Sub:B
+RR0<1> net20<0> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<2> net20<1> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<3> net20<2> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<4> net20<3> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<5> net20<4> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<6> net20<5> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<7> net20<6> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<8> net20<7> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<9> net20<8> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<10> net20<9> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<11> net20<10> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<12> net20<11> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<13> net20<12> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<14> net20<13> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<15> net20<14> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<16> net20<15> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<17> net20<16> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<18> net20<17> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<19> net20<18> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<20> net20<19> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<21> net20<20> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<22> net20<21> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<23> net20<22> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<24> net20<23> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<25> net20<24> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<26> net20<25> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<27> net20<26> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<28> net20<27> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<29> net20<28> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<30> net20<29> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<31> net20<30> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<32> net20<31> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<33> net20<32> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<34> net20<33> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<35> net20<34> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<36> net20<35> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<37> net20<36> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<38> net20<37> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<39> net20<38> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<40> net20<39> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<41> net20<40> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<42> net20<41> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<43> net20<42> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<44> net20<43> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<45> net20<44> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<46> net20<45> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<47> net20<46> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<48> net20<47> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<49> net20<48> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+RR0<50> net20<49> D 1.71867 $SUB=GSB $[RDP_IO] $W=40u $L=510.00n M=1
+DD0<1> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<2> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<3> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<4> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<5> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<6> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<7> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<8> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<9> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<10> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<11> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<12> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<13> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<14> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<15> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<16> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<17> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<18> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<19> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<20> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<21> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<22> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<23> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<24> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<25> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<26> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<27> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<28> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<29> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<30> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<31> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<32> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<33> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<34> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<35> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<36> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<37> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<38> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<39> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<40> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<41> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<42> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<43> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<44> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<45> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<46> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<47> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<48> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<49> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD0<50> D GSB DPHNW 1.32132e-11 660.00n M=1
+DD1 Sub GSB DDNW 5.93593e-09 334.2u M=1
+XMP<1> GSB net20<0> GSB GSB / ioh_pmbsab_40_10
+XMP<2> GSB net20<1> GSB GSB / ioh_pmbsab_40_10
+XMP<3> GSB net20<2> GSB GSB / ioh_pmbsab_40_10
+XMP<4> GSB net20<3> GSB GSB / ioh_pmbsab_40_10
+XMP<5> GSB net20<4> GSB GSB / ioh_pmbsab_40_10
+XMP<6> GSB net20<5> GSB GSB / ioh_pmbsab_40_10
+XMP<7> GSB net20<6> GSB GSB / ioh_pmbsab_40_10
+XMP<8> GSB net20<7> GSB GSB / ioh_pmbsab_40_10
+XMP<9> GSB net20<8> GSB GSB / ioh_pmbsab_40_10
+XMP<10> GSB net20<9> GSB GSB / ioh_pmbsab_40_10
+XMP<11> GSB net20<10> GSB GSB / ioh_pmbsab_40_10
+XMP<12> GSB net20<11> GSB GSB / ioh_pmbsab_40_10
+XMP<13> GSB net20<12> GSB GSB / ioh_pmbsab_40_10
+XMP<14> GSB net20<13> GSB GSB / ioh_pmbsab_40_10
+XMP<15> GSB net20<14> GSB GSB / ioh_pmbsab_40_10
+XMP<16> GSB net20<15> GSB GSB / ioh_pmbsab_40_10
+XMP<17> GSB net20<16> GSB GSB / ioh_pmbsab_40_10
+XMP<18> GSB net20<17> GSB GSB / ioh_pmbsab_40_10
+XMP<19> GSB net20<18> GSB GSB / ioh_pmbsab_40_10
+XMP<20> GSB net20<19> GSB GSB / ioh_pmbsab_40_10
+XMP<21> GSB net20<20> GSB GSB / ioh_pmbsab_40_10
+XMP<22> GSB net20<21> GSB GSB / ioh_pmbsab_40_10
+XMP<23> GSB net20<22> GSB GSB / ioh_pmbsab_40_10
+XMP<24> GSB net20<23> GSB GSB / ioh_pmbsab_40_10
+XMP<25> GSB net20<24> GSB GSB / ioh_pmbsab_40_10
+XMP<26> GSB net20<25> GSB GSB / ioh_pmbsab_40_10
+XMP<27> GSB net20<26> GSB GSB / ioh_pmbsab_40_10
+XMP<28> GSB net20<27> GSB GSB / ioh_pmbsab_40_10
+XMP<29> GSB net20<28> GSB GSB / ioh_pmbsab_40_10
+XMP<30> GSB net20<29> GSB GSB / ioh_pmbsab_40_10
+XMP<31> GSB net20<30> GSB GSB / ioh_pmbsab_40_10
+XMP<32> GSB net20<31> GSB GSB / ioh_pmbsab_40_10
+XMP<33> GSB net20<32> GSB GSB / ioh_pmbsab_40_10
+XMP<34> GSB net20<33> GSB GSB / ioh_pmbsab_40_10
+XMP<35> GSB net20<34> GSB GSB / ioh_pmbsab_40_10
+XMP<36> GSB net20<35> GSB GSB / ioh_pmbsab_40_10
+XMP<37> GSB net20<36> GSB GSB / ioh_pmbsab_40_10
+XMP<38> GSB net20<37> GSB GSB / ioh_pmbsab_40_10
+XMP<39> GSB net20<38> GSB GSB / ioh_pmbsab_40_10
+XMP<40> GSB net20<39> GSB GSB / ioh_pmbsab_40_10
+XMP<41> GSB net20<40> GSB GSB / ioh_pmbsab_40_10
+XMP<42> GSB net20<41> GSB GSB / ioh_pmbsab_40_10
+XMP<43> GSB net20<42> GSB GSB / ioh_pmbsab_40_10
+XMP<44> GSB net20<43> GSB GSB / ioh_pmbsab_40_10
+XMP<45> GSB net20<44> GSB GSB / ioh_pmbsab_40_10
+XMP<46> GSB net20<45> GSB GSB / ioh_pmbsab_40_10
+XMP<47> GSB net20<46> GSB GSB / ioh_pmbsab_40_10
+XMP<48> GSB net20<47> GSB GSB / ioh_pmbsab_40_10
+XMP<49> GSB net20<48> GSB GSB / ioh_pmbsab_40_10
+XMP<50> GSB net20<49> GSB GSB / ioh_pmbsab_40_10
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isab_40_04
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isab_40_04 B D G S
+*.PININFO B:B D:B G:B S:B
+MMPX net17 G S B PE3I W=40u L=400n M=1.0 AD=1.92e-11 AS=1.92e-11 PD=8.096e-05 
++ PS=8.096e-05 NRD=0.00675 NRS=0.00675
+RR0 net17 D 1.78202 $SUB=B $[RDP3] $W=40u $L=430.0n M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_pe3isabhv_2800gcr
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_pe3isabhv_2800gcr D SB Sub
+*.PININFO D:B SB:B Sub:B
+DMD<1> D SB DP3 2.64196e-11 1.32u M=1
+DMD<2> D SB DP3 2.64196e-11 1.32u M=1
+DMD<3> D SB DP3 2.64196e-11 1.32u M=1
+DMD<4> D SB DP3 2.64196e-11 1.32u M=1
+DMD<5> D SB DP3 2.64196e-11 1.32u M=1
+DMD<6> D SB DP3 2.64196e-11 1.32u M=1
+DMD<7> D SB DP3 2.64196e-11 1.32u M=1
+DMD<8> D SB DP3 2.64196e-11 1.32u M=1
+DMD<9> D SB DP3 2.64196e-11 1.32u M=1
+DMD<10> D SB DP3 2.64196e-11 1.32u M=1
+DMD<11> D SB DP3 2.64196e-11 1.32u M=1
+DMD<12> D SB DP3 2.64196e-11 1.32u M=1
+DMD<13> D SB DP3 2.64196e-11 1.32u M=1
+DMD<14> D SB DP3 2.64196e-11 1.32u M=1
+DMD<15> D SB DP3 2.64196e-11 1.32u M=1
+DMD<16> D SB DP3 2.64196e-11 1.32u M=1
+DMD<17> D SB DP3 2.64196e-11 1.32u M=1
+DMD<18> D SB DP3 2.64196e-11 1.32u M=1
+DMD<19> D SB DP3 2.64196e-11 1.32u M=1
+DMD<20> D SB DP3 2.64196e-11 1.32u M=1
+DMD<21> D SB DP3 2.64196e-11 1.32u M=1
+DMD<22> D SB DP3 2.64196e-11 1.32u M=1
+DMD<23> D SB DP3 2.64196e-11 1.32u M=1
+DMD<24> D SB DP3 2.64196e-11 1.32u M=1
+DMD<25> D SB DP3 2.64196e-11 1.32u M=1
+DMD<26> D SB DP3 2.64196e-11 1.32u M=1
+DMD<27> D SB DP3 2.64196e-11 1.32u M=1
+DMD<28> D SB DP3 2.64196e-11 1.32u M=1
+DMD<29> D SB DP3 2.64196e-11 1.32u M=1
+DMD<30> D SB DP3 2.64196e-11 1.32u M=1
+DMD<31> D SB DP3 2.64196e-11 1.32u M=1
+DMD<32> D SB DP3 2.64196e-11 1.32u M=1
+DMD<33> D SB DP3 2.64196e-11 1.32u M=1
+DMD<34> D SB DP3 2.64196e-11 1.32u M=1
+DMD<35> D SB DP3 2.64196e-11 1.32u M=1
+DD0 Sub SB DDNW 5.99695e-09 335.2u M=1
+RR0 SB net20 20035.7 $[RNP1] $W=420.0n $L=25.50u M=1
+XMP<1> SB D net20 SB / ioh_pe3isab_40_04
+XMP<2> SB D net20 SB / ioh_pe3isab_40_04
+XMP<3> SB D net20 SB / ioh_pe3isab_40_04
+XMP<4> SB D net20 SB / ioh_pe3isab_40_04
+XMP<5> SB D net20 SB / ioh_pe3isab_40_04
+XMP<6> SB D net20 SB / ioh_pe3isab_40_04
+XMP<7> SB D net20 SB / ioh_pe3isab_40_04
+XMP<8> SB D net20 SB / ioh_pe3isab_40_04
+XMP<9> SB D net20 SB / ioh_pe3isab_40_04
+XMP<10> SB D net20 SB / ioh_pe3isab_40_04
+XMP<11> SB D net20 SB / ioh_pe3isab_40_04
+XMP<12> SB D net20 SB / ioh_pe3isab_40_04
+XMP<13> SB D net20 SB / ioh_pe3isab_40_04
+XMP<14> SB D net20 SB / ioh_pe3isab_40_04
+XMP<15> SB D net20 SB / ioh_pe3isab_40_04
+XMP<16> SB D net20 SB / ioh_pe3isab_40_04
+XMP<17> SB D net20 SB / ioh_pe3isab_40_04
+XMP<18> SB D net20 SB / ioh_pe3isab_40_04
+XMP<19> SB D net20 SB / ioh_pe3isab_40_04
+XMP<20> SB D net20 SB / ioh_pe3isab_40_04
+XMP<21> SB D net20 SB / ioh_pe3isab_40_04
+XMP<22> SB D net20 SB / ioh_pe3isab_40_04
+XMP<23> SB D net20 SB / ioh_pe3isab_40_04
+XMP<24> SB D net20 SB / ioh_pe3isab_40_04
+XMP<25> SB D net20 SB / ioh_pe3isab_40_04
+XMP<26> SB D net20 SB / ioh_pe3isab_40_04
+XMP<27> SB D net20 SB / ioh_pe3isab_40_04
+XMP<28> SB D net20 SB / ioh_pe3isab_40_04
+XMP<29> SB D net20 SB / ioh_pe3isab_40_04
+XMP<30> SB D net20 SB / ioh_pe3isab_40_04
+XMP<31> SB D net20 SB / ioh_pe3isab_40_04
+XMP<32> SB D net20 SB / ioh_pe3isab_40_04
+XMP<33> SB D net20 SB / ioh_pe3isab_40_04
+XMP<34> SB D net20 SB / ioh_pe3isab_40_04
+XMP<35> SB D net20 SB / ioh_pe3isab_40_04
+XMP<36> SB D net20 SB / ioh_pe3isab_40_04
+XMP<37> SB D net20 SB / ioh_pe3isab_40_04
+XMP<38> SB D net20 SB / ioh_pe3isab_40_04
+XMP<39> SB D net20 SB / ioh_pe3isab_40_04
+XMP<40> SB D net20 SB / ioh_pe3isab_40_04
+XMP<41> SB D net20 SB / ioh_pe3isab_40_04
+XMP<42> SB D net20 SB / ioh_pe3isab_40_04
+XMP<43> SB D net20 SB / ioh_pe3isab_40_04
+XMP<44> SB D net20 SB / ioh_pe3isab_40_04
+XMP<45> SB D net20 SB / ioh_pe3isab_40_04
+XMP<46> SB D net20 SB / ioh_pe3isab_40_04
+XMP<47> SB D net20 SB / ioh_pe3isab_40_04
+XMP<48> SB D net20 SB / ioh_pe3isab_40_04
+XMP<49> SB D net20 SB / ioh_pe3isab_40_04
+XMP<50> SB D net20 SB / ioh_pe3isab_40_04
+XMP<51> SB D net20 SB / ioh_pe3isab_40_04
+XMP<52> SB D net20 SB / ioh_pe3isab_40_04
+XMP<53> SB D net20 SB / ioh_pe3isab_40_04
+XMP<54> SB D net20 SB / ioh_pe3isab_40_04
+XMP<55> SB D net20 SB / ioh_pe3isab_40_04
+XMP<56> SB D net20 SB / ioh_pe3isab_40_04
+XMP<57> SB D net20 SB / ioh_pe3isab_40_04
+XMP<58> SB D net20 SB / ioh_pe3isab_40_04
+XMP<59> SB D net20 SB / ioh_pe3isab_40_04
+XMP<60> SB D net20 SB / ioh_pe3isab_40_04
+XMP<61> SB D net20 SB / ioh_pe3isab_40_04
+XMP<62> SB D net20 SB / ioh_pe3isab_40_04
+XMP<63> SB D net20 SB / ioh_pe3isab_40_04
+XMP<64> SB D net20 SB / ioh_pe3isab_40_04
+XMP<65> SB D net20 SB / ioh_pe3isab_40_04
+XMP<66> SB D net20 SB / ioh_pe3isab_40_04
+XMP<67> SB D net20 SB / ioh_pe3isab_40_04
+XMP<68> SB D net20 SB / ioh_pe3isab_40_04
+XMP<69> SB D net20 SB / ioh_pe3isab_40_04
+XMP<70> SB D net20 SB / ioh_pe3isab_40_04
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_d2pk
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_d2pk A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI1 net12 K_h Sub / ioh_pmbsabhv_2000
+XI5 A_l net12 Sub / ioh_pe3isabhv_2800gcr
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    HVDD4D2PK
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT HVDD4D2PK GND PAD
+*.PININFO GND:B PAD:B
+XI11 GND PAD GND / ioh_d2pk
+DD0 GND PAD DDNW 3.89668e-10 208.5u M=1
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    ioh_d5pk
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioh_d5pk A_l K_h Sub
+*.PININFO A_l:B K_h:B Sub:B
+XI3 net26 net29 Sub / ioh_pmbsabhv_2000
+XI4 net18 net26 Sub / ioh_pmbsabhv_2000
+XI2 net29 net23 Sub / ioh_pmbsabhv_2000
+XI1 net23 K_h Sub / ioh_pmbsabhv_2000
+XI5 A_l net18 Sub / ioh_pe3isabhv_2800gcr
+.ENDS
+
+************************************************************************
+* Library Name: HV_CELLS
+* Cell Name:    HVDD4DJ5PKFs
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT HVDD4DJ5PKFs GNDO IGND PAD
+*.PININFO GNDO:B IGND:B PAD:B
+XI9 IGND PAD GNDO / ioh_dhpw_2x100_stack3
+XI11 IGND PAD GNDO / ioh_d5pk
+.ENDS
+
+************************************************************************
+* Library Name: IORING
+* Cell Name:    ioring3
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ioring3 CLK ENABLE GNDA GNDD GNDHV GNDOHV GNDOR GNDORA INL OUT0 OUT1 
++ OUT2 OUTHV OUTL PSUB RESET VDDA VDDD VDDHV VDDOR VDDORA clk_core enable_core 
++ inl_core out0_core out1_core out2_core reset_core
+*.PININFO CLK:B ENABLE:B GNDA:B GNDD:B GNDHV:B GNDOHV:B GNDOR:B GNDORA:B INL:B 
+*.PININFO OUT0:B OUT1:B OUT2:B OUTHV:B OUTL:B PSUB:B RESET:B VDDA:B VDDD:B 
+*.PININFO VDDHV:B VDDOR:B VDDORA:B clk_core:B enable_core:B inl_core:B 
+*.PININFO out0_core:B out1_core:B out2_core:B reset_core:B
+XI4 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / PSUBPADPC
+XI21 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / VDDPADPC
+XI3 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / VDDPADPC
+XI18 GNDA GNDORA GNDORA PSUB VDDA VDDORA / VDDORPADPC
+XI1 GNDD GNDOR GNDOR PSUB VDDD VDDOR / VDDORPADPC
+XI19 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / GNDPADPC
+XI5 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / GNDPADPC
+XI20 GNDA GNDORA PSUB VDDA VDDORA VDDORA / GNDORPADPC
+XI0 GNDD GNDOR PSUB VDDD VDDOR VDDOR / GNDORPADPC
+XI9 GNDD GNDOR GNDOR ENABLE GNDD net3 PSUB VDDD VDDOR VDDOR enable_core / ICPC
+XI10 GNDD GNDOR GNDOR CLK GNDD net2 PSUB VDDD VDDOR VDDOR clk_core / ICPC
+XI11 GNDD GNDOR GNDOR RESET GNDD net1 PSUB VDDD VDDOR VDDOR reset_core / ICPC
+XI15 out0_core GNDD GNDD GNDOR GNDOR OUT0 PSUB VDDD VDDOR VDDOR / BT4PC
+XI16 out1_core GNDD GNDD GNDOR GNDOR OUT1 PSUB VDDD VDDOR VDDOR / BT4PC
+XI17 out2_core GNDD GNDD GNDOR GNDOR OUT2 PSUB VDDD VDDOR VDDOR / BT4PC
+XI35 net9 GNDD GNDOHV GNDOR net10 GNDOR PSUB net15 VDDD net11 VDDOR net14 
++ VDDOR / PWRCUTDCPC
+XI34 GNDA net4 GNDORA GNDOHV GNDORA net5 PSUB VDDA net8 VDDORA net6 VDDORA 
++ net7 / PWRCUTDCPC
+XI12 GNDD GNDA GNDOR GNDORA GNDOR GNDORA PSUB VDDD VDDA VDDOR VDDORA VDDOR 
++ VDDORA / PWRCUTDCPC
+XI40 GNDA GNDORA GNDORA PSUB VDDA VDDORA VDDORA / CORNERESDPC
+XI39 GNDD GNDOR GNDOR PSUB VDDD VDDOR VDDOR / CORNERESDPC
+XI26 GNDA GNDORA GNDORA OUTL PSUB VDDA VDDORA VDDORA / APR00DPC
+XI27 GNDA GNDORA GNDORA INL PSUB VDDA VDDORA VDDORA inl_core / APR04DPC
+XI33 GNDOHV GNDHV OUTHV / HVD4SJD1R5PKFs
+XI36 GNDOHV GNDHV / HVDD4D2PK
+XI28 GNDOHV GNDHV VDDHV / HVDD4DJ5PKFs
+.ENDS
+
+************************************************************************
+* Library Name: TOP
+* Cell Name:    top
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT top CLK ENABLE GNDA GNDD GNDHV GNDOHV GNDOR GNDORA INL OUT0 OUT1 OUT2 
++ OUTHV OUTL PSUB RESET VDDA VDDD VDDHV VDDOR VDDORA
+*.PININFO CLK:B ENABLE:B GNDA:B GNDD:B GNDHV:B GNDOHV:B GNDOR:B GNDORA:B INL:B 
+*.PININFO OUT0:B OUT1:B OUT2:B OUTHV:B OUTL:B PSUB:B RESET:B VDDA:B VDDD:B 
+*.PININFO VDDHV:B VDDOR:B VDDORA:B
+RR1 GNDA PSUB 5.0 $[S_RES]
+RR0 PSUB GNDOHV 5.0 $[S_RES]
+XI1 inl_c OUTL VDDA GNDA / inv
+XI2 GNDHV out<2> OUTHV VDDHV GNDOHV / inv_hv
+XI3 clk_c enable_c out<7> out<6> out<5> out<4> out<3> out<2> out<1> out<0> 
++ reset_c GNDD VDDD / counter
+XI0 CLK ENABLE GNDA GNDD GNDHV GNDOHV GNDOR GNDORA INL OUT0 OUT1 OUT2 OUTHV 
++ OUTL PSUB RESET VDDA VDDD VDDHV VDDOR VDDORA clk_c enable_c inl_c out<0> 
++ out<1> out<2> reset_c / ioring3
+.ENDS
+
