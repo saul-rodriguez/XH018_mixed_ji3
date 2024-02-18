@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Feb 17 05:55:35 2024
+// Design library name: CHARACTERIZATION
+// Design cell name: GMID_NMOS_L
+// Design view name: schematic
+simulator lang=spectre
+global 0

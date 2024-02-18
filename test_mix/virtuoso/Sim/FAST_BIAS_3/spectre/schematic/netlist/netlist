@@ -1,0 +1,44 @@
+
+// Library name: CHARACTERIZATION
+// Cell name: BIAS_NMOS_3
+// View name: schematic
+subckt BIAS_NMOS_3
+parameters IDS VDS WF L NF
+    I0 (0 D) isource dc=IDS type=dc
+    V1 (net6 0) vsource dc=VDS type=dc
+    E0 (G 0 D net6) vcvs gain=1000
+    M0 (D G 0 0) ne3 w=WF l=L as=(int(((NF)-1)/2.0 )*5.4e-07+((int((NF)/2.0)-(NF)/2.0<-0.1)?1:2)*4.8e-07)*(WF)/(NF) \
+         ad=(int((NF)/2.0 )*5.4e-07+(((int((NF)/2.0)-(NF)/2.0<-0.1)?1:0)*4.8e-07))*(WF)/(NF) \
+         ps=(int(((NF)-1)/2.0 )*2*(5.4e-07+(WF))+((int((NF)/2)-(NF)/2.0<-0.1)?1:2)*2*(4.8e-07+(WF)))/(NF) \
+         pd=(int((NF)/2.0 )*2*(5.4e-07+(WF))+((int((NF)/2.0)-(NF)/2.0<-0.1)?1:0)*2*(4.8e-07+(WF)))/(NF) \
+         nrs=2.7e-07/(WF) nrd=2.7e-07/(WF) m=(1)*(NF) par1=(1)*(NF) \
+        xf_subext=0
+ends BIAS_NMOS_3
+// End of subcircuit definition.
+
+// Library name: CHARACTERIZATION
+// Cell name: BIAS_PMOS_3
+// View name: schematic
+subckt BIAS_PMOS_3
+parameters WF L NF IDS VDS
+    M0 (D G S S) pe3 w=WF l=L as=(int(((NF)-1)/2.0 )*5.4e-07+((int((NF)/2.0)-(NF)/2.0<-0.1)?1:2)*4.8e-07)*(WF)/(NF) \
+         ad=(int((NF)/2.0 )*5.4e-07+(((int((NF)/2.0)-(NF)/2.0<-0.1)?1:0)*4.8e-07))*(WF)/(NF) \
+         ps=(int(((NF)-1)/2.0 )*2*(5.4e-07+(WF))+((int((NF)/2)-(NF)/2.0<-0.1)?1:2)*2*(4.8e-07+(WF)))/(NF) \
+         pd=(int((NF)/2.0 )*2*(5.4e-07+(WF))+((int((NF)/2.0)-(NF)/2.0<-0.1)?1:0)*2*(4.8e-07+(WF)))/(NF) \
+         nrs=2.7e-07/(WF) nrd=2.7e-07/(WF) m=(1)*(NF) par1=(1)*(NF)
+    E0 (S G net5 D) vcvs gain=1000
+    I0 (D S) isource dc=IDS type=dc
+    V0 (S 0) vsource dc=1.8 type=dc
+    V1 (S net5) vsource dc=VDS type=dc
+ends BIAS_PMOS_3
+// End of subcircuit definition.
+
+// Library name: CHARACTERIZATION
+// Cell name: FAST_BIAS_3
+// View name: schematic
+I2 BIAS_NMOS_3 IDS=IDS3 VDS=VDS3 WF=WF3 L=L3 NF=NF3
+I1 BIAS_NMOS_3 IDS=IDS2 VDS=VDS2 WF=WF2 L=L2 NF=NF2
+I0 BIAS_NMOS_3 IDS=IDS1 VDS=VDS1 WF=WF1 L=L1 NF=NF1
+I5 BIAS_PMOS_3 WF=WF6 L=L6 NF=NF6 IDS=IDS4 VDS=VDS6
+I4 BIAS_PMOS_3 WF=WF5 L=L5 NF=NF5 IDS=IDS5 VDS=VDS5
+I3 BIAS_PMOS_3 WF=WF4 L=L4 NF=NF4 IDS=IDS4 VDS=VDS4

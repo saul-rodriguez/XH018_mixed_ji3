@@ -1,0 +1,15 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Sun Feb 18 11:03:10 2024 
+Best design point: 2
+Design specs: 
+	CHARACTERIZATION:DC_BIAS_NMOS:1	corner	Nominal - 
+Design parameters: 
+	VDS		1
+	VGS		100m
+
+Ocean.27
+Number of points completed: 19
+Number of simulation errors: 0
+Ocean.27 completed. 
+Current time: Sun Feb 18 11:03:29 2024 

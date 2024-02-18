@@ -1,0 +1,1 @@
+{"hierarchy":{"top_level":1,"1":{"insts":{"V1":3,"E0":4,"I0":2,"M0":5}}},"modelMap":{"vsource":[3],"isource":[2],"vcvs":[4],"nedia":[5]},"cellviews":[["CHARACTERIZATION","BIAS_NMOS_HV","schematic"],["analogLib","idc","spectre"],["analogLib","vdc","spectre"],["analogLib","vcvs","spectre"],["PRIMLIB","nedia","spectre"]]}

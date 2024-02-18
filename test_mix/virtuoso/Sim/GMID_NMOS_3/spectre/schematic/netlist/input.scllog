@@ -1,0 +1,9 @@
+Spectre (R) Circuit Simulator
+Version 23.1.0.305.isr3 64bit -- 13 Nov 2023
+Simulating `input.scs' on phoenix at 6:22:30 AM, Sat Feb 17, 2024 (process id: 25667).
+H = mpsImport( "spectre" "ipi" "v0.0" ?session "spectre14_15372_12" )
+H->sclSetResultDir( "../../../../../../../../../Sim/GMID_NMOS_3/spectre/schematic/psf" )
+H->sclRun( "all" )
+H->sclEcho( "@-@" )
+sclCkt0xfae2000 = H->sclGetCircuit(  "" )
+H->sclQuit(  )

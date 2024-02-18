@@ -1,0 +1,18 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "DC_BIAS_NMOS"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.26/7/CHARACTERIZATION:DC_BIAS_NMOS:1/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "CHARACTERIZATION/DC_BIAS_NMOS/schematic" "DC_BIAS_NMOS" )
+ )
+( "DC_BIAS_NMOS" "ihnl/cds0/map" )
+ )

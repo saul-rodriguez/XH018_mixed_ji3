@@ -1,4 +1,4 @@
-# File Created by saul at Mon Feb  5 01:40:59 2024
+# File Created by saul at Sat Feb 17 04:03:22 2024
 # assisted by CdsLibEditor
 # ------------------------------------------------------------------------------
 # XKIT library definition files
@@ -30,3 +30,4 @@ DEFINE INV_HV /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/INV_HV
 DEFINE IORING /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/IORING
 DEFINE ALL_TESTS /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/ALL_TESTS
 DEFINE TOP /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP
+DEFINE CHARACTERIZATION ./CHARACTERIZATION

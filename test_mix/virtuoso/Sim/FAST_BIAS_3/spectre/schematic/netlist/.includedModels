@@ -1,0 +1,3 @@
+simulator lang=spectre
+include "ne3.scs"
+include "pe3.scs"

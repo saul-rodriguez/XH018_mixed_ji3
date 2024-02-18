@@ -1,26 +1,26 @@
 \o Program:		@(#)$CDS: cdsLibEditor version 6.1.8 - CAT37 08/30/2023 13:18 (sjfdcl1037) $
 \o Sub version:		sub-version  s342 
-\o Arguments:		-cdslib /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/cds.lib -mpssession virtuoso22412 -mpshost phoenix -mpsversion 6.18 
+\o Arguments:		-cdslib /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/cds.lib -mpssession virtuoso15372 -mpshost phoenix -mpsversion 6.18 
 \o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
 \o 64-bit offsets
 \a nrSetWindowVisibility(cdsLibEditor "show")
 \o Qt version: 		5.9.1
+\a nrResizeWindow(cdsLibEditor list(0 -37 500 400))
 \a nrSetCurrentWindow(cdsLibEditor)
 \a nrListItemAction(cdsLibEditor->mainTable 0 0)
 \o Active cell: 0 0 "analogLib"
-\a nrResizeWindow(cdsLibEditor list(1970 50 500 400))
+\a nrResizeWindow(cdsLibEditor list(0 27 500 400))
 \a nrSetCurrentWindow(cdsLibEditor)
-\a nrResizeWindow(cdsLibEditor list(1970 50 1055 400))
-\a nrListItemAction(cdsLibEditor->mainTable 64 1)
-\o Active cell: 64 1 "/home/saul/projects/mytests/test_mix/virtuoso/COUNTER_JI3"
-\a nrListItemRename(cdsLibEditor->mainTable, 64 1 "./COUNTER_JI3")
-\a nrListItemAction(cdsLibEditor->mainTable 65 0)
-\o Active cell: 65 0 "INV_LP"
-\a nrListItemAction(cdsLibEditor->mainTable 65 1)
-\o Active cell: 65 1 "/home/saul/projects/mytests/test_mix/virtuoso/INV_LP"
-\a nrListItemRename(cdsLibEditor->mainTable, 65 1 "./INV_LP")
-\a nrListItemAction(cdsLibEditor->mainTable 66 0)
-\o Active cell: 66 0 ""
+\a nrResizeWindow(cdsLibEditor list(401 35 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 70 0)
+\o Active cell: 70 0 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrResizeWindow(cdsLibEditor list(401 35 500 485))
+\a nrListItemRename(cdsLibEditor->mainTable, 70 0 "CHARACTERIZATION")
+\a nrListItemAction(cdsLibEditor->mainTable 70 1)
+\o Active cell: 70 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 70 1 "./CHARACTERIZATION")
+\a nrListItemAction(cdsLibEditor->mainTable 71 0)
+\o Active cell: 71 0 ""
 \a cdsLibEditor->fileSaveButton->value = t
-\a cdsLibEditor->fileExitButton->value = t
 \a exit(0)

@@ -1,0 +1,577 @@
+HEADER
+"PSFversion" "1.00"
+"Run Generator" "drlRun rev. 1.0"
+"Run Time Stamp" "Feb 18 12:35:07 2024"
+"date" "Feb 18 12:35:07 2024"
+"simulator" "spectre"
+"netlistDir" "../netlist"
+"axlParamFlag" "true"
+ "externalSweepVariableCount" 1
+TYPE
+"runObject" STRUCT(
+"logName" ARRAY( * ) STRING *
+"parent" STRING *
+"sweepVariable" ARRAY( * ) STRING *
+) PROP( "key" "runObject" )
+VALUE
+"Root" "runObject" (
+("")
+""
+("VGS")
+)
+"VGS=0.0" "runObject" (
+(
+"../../../1/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../1/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 1
+"netlistDir" "../../../1/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../1/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 0.000000e+00
+)
+
+"VGS=0.5" "runObject" (
+(
+"../../../2/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../2/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 2
+"netlistDir" "../../../2/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../2/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 5.000000e-01
+)
+
+"VGS=1.0" "runObject" (
+(
+"../../../3/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../3/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 3
+"netlistDir" "../../../3/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../3/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.000000e+00
+)
+
+"VGS=1.5" "runObject" (
+(
+"../../../4/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../4/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 4
+"netlistDir" "../../../4/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../4/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.500000e+00
+)
+
+"VGS=2.0" "runObject" (
+(
+"../../../5/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../5/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 5
+"netlistDir" "../../../5/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../5/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 2.000000e+00
+)
+
+"VGS=2.5" "runObject" (
+(
+"../../../6/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../6/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 6
+"netlistDir" "../../../6/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../6/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 2.500000e+00
+)
+
+"VGS=3.0" "runObject" (
+(
+"../../../7/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../7/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 7
+"netlistDir" "../../../7/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../7/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 3.000000e+00
+)
+
+"VGS=3.5" "runObject" (
+(
+"../../../8/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../8/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 8
+"netlistDir" "../../../8/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../8/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 3.500000e+00
+)
+
+"VGS=4.0" "runObject" (
+(
+"../../../9/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../9/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 9
+"netlistDir" "../../../9/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../9/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 4.000000e+00
+)
+
+"VGS=4.5" "runObject" (
+(
+"../../../10/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../10/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 10
+"netlistDir" "../../../10/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../10/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 4.500000e+00
+)
+
+"VGS=5.0" "runObject" (
+(
+"../../../11/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../11/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 11
+"netlistDir" "../../../11/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../11/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 5.000000e+00
+)
+
+"VGS=5.5" "runObject" (
+(
+"../../../12/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../12/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 12
+"netlistDir" "../../../12/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../12/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 5.500000e+00
+)
+
+"VGS=6.0" "runObject" (
+(
+"../../../13/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../13/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 13
+"netlistDir" "../../../13/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../13/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 6.000000e+00
+)
+
+"VGS=6.5" "runObject" (
+(
+"../../../14/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../14/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 14
+"netlistDir" "../../../14/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../14/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 6.500000e+00
+)
+
+"VGS=7.0" "runObject" (
+(
+"../../../15/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../15/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 15
+"netlistDir" "../../../15/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../15/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 7.000000e+00
+)
+
+"VGS=7.5" "runObject" (
+(
+"../../../16/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../16/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 16
+"netlistDir" "../../../16/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../16/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 7.500000e+00
+)
+
+"VGS=8.0" "runObject" (
+(
+"../../../17/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../17/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 17
+"netlistDir" "../../../17/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../17/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 8.000000e+00
+)
+
+"VGS=8.5" "runObject" (
+(
+"../../../18/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../18/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 18
+"netlistDir" "../../../18/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../18/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 8.500000e+00
+)
+
+"VGS=9.0" "runObject" (
+(
+"../../../19/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../19/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 19
+"netlistDir" "../../../19/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../19/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 9.000000e+00
+)
+
+"VGS=9.5" "runObject" (
+(
+"../../../20/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../20/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 20
+"netlistDir" "../../../20/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../20/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 9.500000e+00
+)
+
+"VGS=10.0" "runObject" (
+(
+"../../../21/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../21/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 21
+"netlistDir" "../../../21/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../21/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.000000e+01
+)
+
+"VGS=10.5" "runObject" (
+(
+"../../../22/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../22/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 22
+"netlistDir" "../../../22/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../22/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.050000e+01
+)
+
+"VGS=11.0" "runObject" (
+(
+"../../../23/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../23/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 23
+"netlistDir" "../../../23/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../23/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.100000e+01
+)
+
+"VGS=11.5" "runObject" (
+(
+"../../../24/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../24/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 24
+"netlistDir" "../../../24/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../24/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.150000e+01
+)
+
+"VGS=12.0" "runObject" (
+(
+"../../../25/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../25/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 25
+"netlistDir" "../../../25/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../25/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.200000e+01
+)
+
+"VGS=12.5" "runObject" (
+(
+"../../../26/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../26/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 26
+"netlistDir" "../../../26/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../26/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.250000e+01
+)
+
+"VGS=13.0" "runObject" (
+(
+"../../../27/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../27/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 27
+"netlistDir" "../../../27/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../27/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.300000e+01
+)
+
+"VGS=13.5" "runObject" (
+(
+"../../../28/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../28/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 28
+"netlistDir" "../../../28/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../28/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.350000e+01
+)
+
+"VGS=14.0" "runObject" (
+(
+"../../../29/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../29/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 29
+"netlistDir" "../../../29/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../29/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.400000e+01
+)
+
+"VGS=14.5" "runObject" (
+(
+"../../../30/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../30/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 30
+"netlistDir" "../../../30/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../30/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.450000e+01
+)
+
+"VGS=15.0" "runObject" (
+(
+"../../../31/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../31/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 31
+"netlistDir" "../../../31/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../31/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.500000e+01
+)
+
+"VGS=15.5" "runObject" (
+(
+"../../../32/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../32/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 32
+"netlistDir" "../../../32/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../32/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.550000e+01
+)
+
+"VGS=16.0" "runObject" (
+(
+"../../../33/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../33/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 33
+"netlistDir" "../../../33/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../33/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.600000e+01
+)
+
+"VGS=16.5" "runObject" (
+(
+"../../../34/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../34/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 34
+"netlistDir" "../../../34/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../34/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.650000e+01
+)
+
+"VGS=17.0" "runObject" (
+(
+"../../../35/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../35/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 35
+"netlistDir" "../../../35/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../35/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.700000e+01
+)
+
+"VGS=17.5" "runObject" (
+(
+"../../../36/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../36/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 36
+"netlistDir" "../../../36/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../36/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.750000e+01
+)
+
+"VGS=18.0" "runObject" (
+(
+"../../../37/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/logFile"
+"../../../37/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 37
+"netlistDir" "../../../37/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist"
+"dataDir" "../../../37/CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+ "VGS" 1.800000e+01
+)
+
+END

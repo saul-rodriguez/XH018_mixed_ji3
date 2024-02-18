@@ -1,0 +1,11 @@
+CADENCE IHNL11140
+$model
+CHARACTERIZATION/DC_BIAS_NMOS/schematic DC_BIAS_NMOS
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+VGS VGS
+VDS VDS
+$endparam

@@ -1,0 +1,637 @@
+HEADER
+"PSFversion" "1.00"
+"Run Generator" "drlRun rev. 1.0"
+"Run Time Stamp" "Feb 17 09:53:40 2024"
+"date" "Feb 17 09:53:40 2024"
+"simulator" "spectre"
+"netlistDir" "../netlist"
+"axlParamFlag" "true"
+ "externalSweepVariableCount" 1
+TYPE
+"runObject" STRUCT(
+"logName" ARRAY( * ) STRING *
+"parent" STRING *
+"sweepVariable" ARRAY( * ) STRING *
+) PROP( "key" "runObject" )
+VALUE
+"Root" "runObject" (
+("")
+""
+("IDS")
+)
+"IDS=1e-06" "runObject" (
+(
+"../../../1/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../1/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 1
+"netlistDir" "../../../1/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../1/CHARACTERIZATION:FT:1"
+ "IDS" 1.000000e-06
+)
+
+"IDS=1.258925412e-06" "runObject" (
+(
+"../../../2/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../2/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 2
+"netlistDir" "../../../2/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../2/CHARACTERIZATION:FT:1"
+ "IDS" 1.258925e-06
+)
+
+"IDS=1.584893192e-06" "runObject" (
+(
+"../../../3/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../3/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 3
+"netlistDir" "../../../3/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../3/CHARACTERIZATION:FT:1"
+ "IDS" 1.584893e-06
+)
+
+"IDS=1.995262315e-06" "runObject" (
+(
+"../../../4/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../4/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 4
+"netlistDir" "../../../4/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../4/CHARACTERIZATION:FT:1"
+ "IDS" 1.995262e-06
+)
+
+"IDS=2.511886432e-06" "runObject" (
+(
+"../../../5/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../5/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 5
+"netlistDir" "../../../5/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../5/CHARACTERIZATION:FT:1"
+ "IDS" 2.511886e-06
+)
+
+"IDS=3.16227766e-06" "runObject" (
+(
+"../../../6/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../6/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 6
+"netlistDir" "../../../6/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../6/CHARACTERIZATION:FT:1"
+ "IDS" 3.162278e-06
+)
+
+"IDS=3.981071706e-06" "runObject" (
+(
+"../../../7/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../7/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 7
+"netlistDir" "../../../7/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../7/CHARACTERIZATION:FT:1"
+ "IDS" 3.981072e-06
+)
+
+"IDS=5.011872336e-06" "runObject" (
+(
+"../../../8/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../8/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 8
+"netlistDir" "../../../8/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../8/CHARACTERIZATION:FT:1"
+ "IDS" 5.011872e-06
+)
+
+"IDS=6.309573445e-06" "runObject" (
+(
+"../../../9/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../9/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 9
+"netlistDir" "../../../9/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../9/CHARACTERIZATION:FT:1"
+ "IDS" 6.309573e-06
+)
+
+"IDS=7.943282346999999e-06" "runObject" (
+(
+"../../../10/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../10/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 10
+"netlistDir" "../../../10/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../10/CHARACTERIZATION:FT:1"
+ "IDS" 7.943282e-06
+)
+
+"IDS=9.999999999999999e-06" "runObject" (
+(
+"../../../11/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../11/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 11
+"netlistDir" "../../../11/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../11/CHARACTERIZATION:FT:1"
+ "IDS" 1.000000e-05
+)
+
+"IDS=1.258925412e-05" "runObject" (
+(
+"../../../12/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../12/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 12
+"netlistDir" "../../../12/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../12/CHARACTERIZATION:FT:1"
+ "IDS" 1.258925e-05
+)
+
+"IDS=1.584893192e-05" "runObject" (
+(
+"../../../13/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../13/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 13
+"netlistDir" "../../../13/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../13/CHARACTERIZATION:FT:1"
+ "IDS" 1.584893e-05
+)
+
+"IDS=1.995262315e-05" "runObject" (
+(
+"../../../14/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../14/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 14
+"netlistDir" "../../../14/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../14/CHARACTERIZATION:FT:1"
+ "IDS" 1.995262e-05
+)
+
+"IDS=2.511886432e-05" "runObject" (
+(
+"../../../15/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../15/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 15
+"netlistDir" "../../../15/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../15/CHARACTERIZATION:FT:1"
+ "IDS" 2.511886e-05
+)
+
+"IDS=3.16227766e-05" "runObject" (
+(
+"../../../16/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../16/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 16
+"netlistDir" "../../../16/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../16/CHARACTERIZATION:FT:1"
+ "IDS" 3.162278e-05
+)
+
+"IDS=3.981071706e-05" "runObject" (
+(
+"../../../17/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../17/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 17
+"netlistDir" "../../../17/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../17/CHARACTERIZATION:FT:1"
+ "IDS" 3.981072e-05
+)
+
+"IDS=5.011872336e-05" "runObject" (
+(
+"../../../18/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../18/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 18
+"netlistDir" "../../../18/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../18/CHARACTERIZATION:FT:1"
+ "IDS" 5.011872e-05
+)
+
+"IDS=6.309573444999999e-05" "runObject" (
+(
+"../../../19/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../19/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 19
+"netlistDir" "../../../19/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../19/CHARACTERIZATION:FT:1"
+ "IDS" 6.309573e-05
+)
+
+"IDS=7.943282347e-05" "runObject" (
+(
+"../../../20/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../20/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 20
+"netlistDir" "../../../20/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../20/CHARACTERIZATION:FT:1"
+ "IDS" 7.943282e-05
+)
+
+"IDS=9.999999999999999e-05" "runObject" (
+(
+"../../../21/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../21/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 21
+"netlistDir" "../../../21/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../21/CHARACTERIZATION:FT:1"
+ "IDS" 1.000000e-04
+)
+
+"IDS=0.0001258925412" "runObject" (
+(
+"../../../22/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../22/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 22
+"netlistDir" "../../../22/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../22/CHARACTERIZATION:FT:1"
+ "IDS" 1.258925e-04
+)
+
+"IDS=0.0001584893192" "runObject" (
+(
+"../../../23/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../23/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 23
+"netlistDir" "../../../23/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../23/CHARACTERIZATION:FT:1"
+ "IDS" 1.584893e-04
+)
+
+"IDS=0.0001995262315" "runObject" (
+(
+"../../../24/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../24/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 24
+"netlistDir" "../../../24/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../24/CHARACTERIZATION:FT:1"
+ "IDS" 1.995262e-04
+)
+
+"IDS=0.0002511886432" "runObject" (
+(
+"../../../25/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../25/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 25
+"netlistDir" "../../../25/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../25/CHARACTERIZATION:FT:1"
+ "IDS" 2.511886e-04
+)
+
+"IDS=0.000316227766" "runObject" (
+(
+"../../../26/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../26/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 26
+"netlistDir" "../../../26/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../26/CHARACTERIZATION:FT:1"
+ "IDS" 3.162278e-04
+)
+
+"IDS=0.0003981071706" "runObject" (
+(
+"../../../27/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../27/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 27
+"netlistDir" "../../../27/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../27/CHARACTERIZATION:FT:1"
+ "IDS" 3.981072e-04
+)
+
+"IDS=0.0005011872336" "runObject" (
+(
+"../../../28/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../28/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 28
+"netlistDir" "../../../28/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../28/CHARACTERIZATION:FT:1"
+ "IDS" 5.011872e-04
+)
+
+"IDS=0.0006309573444999999" "runObject" (
+(
+"../../../29/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../29/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 29
+"netlistDir" "../../../29/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../29/CHARACTERIZATION:FT:1"
+ "IDS" 6.309573e-04
+)
+
+"IDS=0.0007943282347000001" "runObject" (
+(
+"../../../30/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../30/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 30
+"netlistDir" "../../../30/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../30/CHARACTERIZATION:FT:1"
+ "IDS" 7.943282e-04
+)
+
+"IDS=0.001" "runObject" (
+(
+"../../../31/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../31/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 31
+"netlistDir" "../../../31/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../31/CHARACTERIZATION:FT:1"
+ "IDS" 1.000000e-03
+)
+
+"IDS=0.001258925412" "runObject" (
+(
+"../../../32/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../32/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 32
+"netlistDir" "../../../32/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../32/CHARACTERIZATION:FT:1"
+ "IDS" 1.258925e-03
+)
+
+"IDS=0.001584893192" "runObject" (
+(
+"../../../33/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../33/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 33
+"netlistDir" "../../../33/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../33/CHARACTERIZATION:FT:1"
+ "IDS" 1.584893e-03
+)
+
+"IDS=0.001995262315" "runObject" (
+(
+"../../../34/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../34/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 34
+"netlistDir" "../../../34/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../34/CHARACTERIZATION:FT:1"
+ "IDS" 1.995262e-03
+)
+
+"IDS=0.002511886432" "runObject" (
+(
+"../../../35/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../35/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 35
+"netlistDir" "../../../35/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../35/CHARACTERIZATION:FT:1"
+ "IDS" 2.511886e-03
+)
+
+"IDS=0.00316227766" "runObject" (
+(
+"../../../36/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../36/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 36
+"netlistDir" "../../../36/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../36/CHARACTERIZATION:FT:1"
+ "IDS" 3.162278e-03
+)
+
+"IDS=0.003981071706" "runObject" (
+(
+"../../../37/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../37/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 37
+"netlistDir" "../../../37/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../37/CHARACTERIZATION:FT:1"
+ "IDS" 3.981072e-03
+)
+
+"IDS=0.005011872336" "runObject" (
+(
+"../../../38/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../38/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 38
+"netlistDir" "../../../38/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../38/CHARACTERIZATION:FT:1"
+ "IDS" 5.011872e-03
+)
+
+"IDS=0.006309573445" "runObject" (
+(
+"../../../39/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../39/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 39
+"netlistDir" "../../../39/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../39/CHARACTERIZATION:FT:1"
+ "IDS" 6.309573e-03
+)
+
+"IDS=0.007943282347000001" "runObject" (
+(
+"../../../40/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../40/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 40
+"netlistDir" "../../../40/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../40/CHARACTERIZATION:FT:1"
+ "IDS" 7.943282e-03
+)
+
+"IDS=0.01" "runObject" (
+(
+"../../../41/CHARACTERIZATION:FT:1/psf/logFile"
+"../../../41/CHARACTERIZATION:FT:1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"#maeCorner" "nom"
+ "#pointID" 41
+"netlistDir" "../../../41/CHARACTERIZATION:FT:1/netlist"
+"dataDir" "../../../41/CHARACTERIZATION:FT:1"
+ "IDS" 1.000000e-02
+)
+
+END

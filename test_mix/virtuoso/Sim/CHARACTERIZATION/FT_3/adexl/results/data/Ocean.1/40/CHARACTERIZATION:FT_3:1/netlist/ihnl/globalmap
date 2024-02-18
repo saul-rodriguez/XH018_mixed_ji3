@@ -1,0 +1,15 @@
+CADENCE IHNL11140
+$model
+CHARACTERIZATION/FT_3/schematic FT_3
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+L L
+WF WF
+temperature temperature
+NF NF
+IDS IDS
+VDS VDS
+$endparam

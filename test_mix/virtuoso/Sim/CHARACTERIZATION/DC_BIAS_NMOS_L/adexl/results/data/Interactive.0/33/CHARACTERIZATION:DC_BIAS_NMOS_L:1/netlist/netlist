@@ -1,0 +1,12 @@
+
+// Library name: CHARACTERIZATION
+// Cell name: DC_BIAS_NMOS_L
+// View name: schematic
+V1 (net3 0) vsource dc=VDS type=dc
+V0 (net2 0) vsource dc=VGS type=dc
+M0 (net3 net2 0 0) nel w=WF1 l=L1 as=(int(((NF1)-1)/2.0 )*5.4e-07+((int((NF1)/2.0)-(NF1)/2.0<-0.1)?1:2)*4.8e-07)*(WF1)/(NF1) \
+         ad=(int((NF1)/2.0 )*5.4e-07+(((int((NF1)/2.0)-(NF1)/2.0<-0.1)?1:0)*4.8e-07))*(WF1)/(NF1) \
+         ps=(int(((NF1)-1)/2.0 )*2*(5.4e-07+(WF1))+((int((NF1)/2)-(NF1)/2.0<-0.1)?1:2)*2*(4.8e-07+(WF1)))/(NF1) \
+         pd=(int((NF1)/2.0 )*2*(5.4e-07+(WF1))+((int((NF1)/2.0)-(NF1)/2.0<-0.1)?1:0)*2*(4.8e-07+(WF1)))/(NF1) \
+         nrs=2.7e-07/(WF1) nrd=2.7e-07/(WF1) m=(1)*(NF1) par1=(1)*(NF1) \
+        xf_subext=0

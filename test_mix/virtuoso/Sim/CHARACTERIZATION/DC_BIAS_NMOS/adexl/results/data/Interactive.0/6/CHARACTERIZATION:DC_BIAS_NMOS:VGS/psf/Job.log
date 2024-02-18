@@ -1,0 +1,90 @@
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 6) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:VGS ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var VDS = "0.5"
+\o Setting var VGS = "1"
+\o Setting var temperature = "27"
+\o Setting temp(T) = 27
+\o 
+\o *Info*    Netlist Directory =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/6/CHARACTERIZATION:DC_BIAS_NMOS:VGS/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/6/CHARACTERIZATION:DC_BIAS_NMOS:VGS
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (0 6)
+\o 
+\o generate netlist...
+\o function ansCdlCompPrim redefined
+\o function ansCdlCompPrim redefined
+\o Begin Incremental Netlisting Feb 18 11:06:07 2024
+\o End netlisting Feb 18 11:06:07 2024
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:VGS ] for Point ID (0 6).
+\o 
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/6/CHARACTERIZATION:DC_BIAS_NMOS:VGS/psf.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\o simulate...
+\o To view the simulator output, right-click on the test name, result 
+\o name, or any value in the "Results" tab of the Outputs section and 
+\o choose "Output Log" menu option.
+\o INFO (ADE-3067): Errors encountered during simulation. For more information, right-click
+\o         on a test name in the 'Results' tab of the Outputs pane and choose 'Output Log'
+\o         to view the simulation run log.
+\o 
+\o *Error*   Error ID  = 5011
+\o *Error*   Error Msg = Simulator failed to complete the simulation.
+\o 
+\o           Error found by spectre during circuit read-in.
+\o Error found
+\o           by spectre during circuit read-in.
+\o ERROR (SFE-868):
+\o           "input.scs" 10: Cannot open the input file
+\o           '/pkg/xfab/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs' because either the fil
+\o e name or the directory specified is invalid. Ensure that the specified file exists and the path to the file is valid. Alternatively, use the -I <path
+\o > command-line option to specify the path to the file and rerun the simulation.
+\o ERROR (SFE-868): "input.scs" 11: Cannot open the input file '/pkg/xfab/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs' because either the file
+\o  name or the directory specified is invalid. Ensure that the specified file exists and the path to the file is valid. Alternatively, use the -I <path>
+\o  command-line option to specify the path to the file and rerun the simulation.
+\o ERROR (SFE-868): "input.scs" 12: Cannot open the input file '/pkg/xfab/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs' because either the file n
+\o ame or the directory specified is invalid. Ensure that the specified file exists and the path to the file is valid. Alternatively, use the -I <path> c
+\o ommand-line option to specify the path to the file and rerun the simulation.
+\o ERROR (SFE-868): "input.scs" 13: Cannot open the input file '/pkg/xfab/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs' because either the file n
+\o ame or the directory specified is invalid. Ensure that the specified file exists and the path to the file is valid. Alternatively, use the -I <path> c
+\o ommand-line option to specify the path to the file and rerun the simulation.
+\o ERROR (SFE-868): "input.scs" 14: Cannot open the input file '/pkg/xfab/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs' because either the file n
+\o ame or the directory specified is invalid. Ensure that the specified file exists and the path to the file is valid. Alternatively, use the -I <path> c
+\o ommand-line option to specify the path to the file and rerun the simulation.
+\o ERROR (SFE-868): "input.scs" 15: Cannot open the input file '/pkg/xfab/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs' because either the file n
+\o ame or the directory specified is invalid. Ensure that the specified file exists and the path to the file is valid. Alternatively, use the -I <path> c
+\o ommand-line option to specify the path to the file and rerun the simulation.
+\o ERROR (SFE-868): "input.scs" 16: Cannot open the input file '/pkg/xfab/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs' because either the file
+\o  name or the directory specified is invalid. Ensure that the specified file exists and the path to the file is valid. Alternatively, use the -I <path>
+\o  command-line option to specify the path to the file and rerun the
+\o            simulation.
+\o 
+\o 
+\o 
+\o 
+\o 

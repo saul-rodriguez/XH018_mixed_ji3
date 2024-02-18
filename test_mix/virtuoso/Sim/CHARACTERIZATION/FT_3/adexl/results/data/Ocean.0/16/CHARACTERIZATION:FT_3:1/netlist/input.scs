@@ -1,0 +1,48 @@
+// Generated for: spectre
+// Design Netlist Generated on: Feb 17 07:35:35 2024
+// Design library name: CHARACTERIZATION
+// Design cell name: FT_3
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters temperature=27 WF=10u VDS=1 NF=1 L=0.35u IDS=31.6227766u
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/config.scs" section=default
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/param.scs" section=3s
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/bip.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/cap.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/dio.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/mos.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/photo.scs" section=tm
+include "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/res.scs" section=tm
+
+// Library name: CHARACTERIZATION
+// Cell name: FT_3
+// View name: schematic
+V1 (net10 0) vsource dc=VDS type=dc
+I0 (0 D) isource dc=IDS type=dc
+E0 (net11 0 net5 net10) vcvs gain=1000
+R1 (G net11) resistor r=10M
+R0 (D net5) resistor r=10M
+C1 (net7 D) capacitor c=1
+C0 (net5 0) capacitor c=1
+IPRB0 (0 net7) iprobe
+I3 (0 G) isource mag=1 type=sine
+M0 (D G 0 0) ne3 w=WF l=L as=(int(((NF)-1)/2.0 )*5.4e-07+((int((NF)/2.0)-(NF)/2.0<-0.1)?1:2)*4.8e-07)*(WF)/(NF) \
+         ad=(int((NF)/2.0 )*5.4e-07+(((int((NF)/2.0)-(NF)/2.0<-0.1)?1:0)*4.8e-07))*(WF)/(NF) \
+         ps=(int(((NF)-1)/2.0 )*2*(5.4e-07+(WF))+((int((NF)/2)-(NF)/2.0<-0.1)?1:2)*2*(4.8e-07+(WF)))/(NF) \
+         pd=(int((NF)/2.0 )*2*(5.4e-07+(WF))+((int((NF)/2.0)-(NF)/2.0<-0.1)?1:0)*2*(4.8e-07+(WF)))/(NF) \
+         nrs=2.7e-07/(WF) nrd=2.7e-07/(WF) m=(1)*(NF) par1=(1)*(NF) \
+        xf_subext=0
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+ac ac start=0.1 stop=100G dec=20 annotate=status 
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save M0:1 
+saveOptions options save=allpub

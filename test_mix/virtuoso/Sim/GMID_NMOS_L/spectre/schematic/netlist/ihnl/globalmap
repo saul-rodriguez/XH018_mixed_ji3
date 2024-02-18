@@ -1,0 +1,15 @@
+CADENCE IHNL11140
+$model
+CHARACTERIZATION/GMID_NMOS_L/schematic GMID_NMOS_L
+CHARACTERIZATION/BIAS_NMOS_L/schematic BIAS_NMOS_L
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+L1 L1
+WF1 WF1
+NF1 NF1
+VDS1 VDS1
+IDS1 IDS1
+$endparam

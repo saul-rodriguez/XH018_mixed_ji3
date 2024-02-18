@@ -1,0 +1,28 @@
+HEADER
+"PSFversion" "1.00"
+"Run Generator" "drlRun rev. 1.0"
+"Run Time Stamp" "Feb 18 12:49:05 2024"
+"simulator" "spectre"
+"date" "Feb 18 12:49:05 2024"
+ "externalSweepVariableCount" 0
+"#maeTestName" "CHARACTERIZATION:DC_BIAS_NMOS_L:1"
+"#maeHistoryName" "Ocean.7"
+"#maeCorner" "nom"
+ "#maeDesignPoint" 11
+"netlistDir" "../netlist"
+TYPE
+"runObject" STRUCT(
+"logName" ARRAY( * ) STRING *
+"parent" STRING *
+"sweepVariable" ARRAY( * ) STRING *
+) PROP( "key" "runObject" )
+VALUE
+"Run1" "runObject" (
+(
+"logFile"
+"artistLogFile"
+)
+""
+()
+)
+END

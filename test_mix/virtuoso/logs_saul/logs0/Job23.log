@@ -1,231 +1,230 @@
-*Info*    Exporting services from client ... 
-
-*Info*    Client has finished starting ... 
-
-
-
-*Info*    Configuring the session ...
-
-	Library      = TOP
-	Cell         = top_tb
-	View         = config_gate
-	Simulator    = ams
-	State Path   = $AXL_SETUPDB_DIR/test_states
-	State Name   = TOP:top_tb:1_none_Interactive.7
-	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.7.rdb
-	Results Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1
-	Results Loc  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data
-	Project Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim
-	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl
-	File Encoding = 0
-
-
-
-*Info*    The auto suspension is disabled.
-
-
-
-
-
-
-*Info*    Run start for Point ID (7 1) on testbench [ TOP:top_tb:1 ].
-
-Resetting statistical vars
-
-*Info*    Setting parameter values ...
-
-Setting var temperature = "27"
-Setting temp(T) = 27
-
-*Info*    Netlist Directory =
-          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist
-
-
-*Info*    Data Directory    =
-          /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1
-
-
-*Info*    Creating Netlist for Point ID (7 1)
-
-generate netlist...
-INFO (AMS-2142): The AMS Unified Netlisting (AMS UNL) flow has been enabled.
-INFO (AMS-2031): The instances bound to the views specified in the 'Netlist using spectre CDF simInfo'
- field in the Netlister form (Simulation->Options->Netlister) will be netlisted as
- analog primitives using the Spectre CDF simulation information.
-function ansCdlCompPrim redefined
-function ansCdlCompPrim redefined
-Initializing the control file using cp:
-    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.ver /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist/digital/control
-Begin Netlisting Feb  9 04:55:50 2024
-INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the 
-"/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
-simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file 
-before invoking Verilog netlister.
- 
-INFO (VLOGNET-62): Database internal net names will be printed for floating instance ports. To prevent 
-them from being printed, set simVerilogProcessNullPorts = t either in CIW or 
-the .simrc file.
- 
-INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist Configuration list. 
-If you want to print only those cellviews that need to be re-netlisted in the 
-list, set simVerilogIncrementalNetlistConfigList = t either in CIW or the 
-.simrc file.
- 
-INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to "z". To get inout 
-pins with initial state of "0", set hnlVerilogIOInitStimulusStr = "0" 
-either in CIW or the .simrc file.
- 
-Registering text portions of design: This might take some time.. 
-Done.
-INFO (AMS-2150): Generating the 'changedVarsSummary' file in the 'netlist' directory. This file prints the values of the netlister control variables, which are different from their default values. To disable the file creation, type 'envSetVal("ams.netlisterOpts" "print_control_vars" 'boolean nil )' in the '.cdsinit' file.
-INFO (VLOGNET-117): Re-netlisting the entire design.
-
-INFO (VLOGNET-118): Using connection by name (explicit connections) for all stopping and 
-non-stopping cells.
- 
-INFO (VLOGNET-169): Module port ordering for lib 'COUNTER_JI3', cell 'counter', view 'schematic' will be
- done using the user specified port order as follows:
-
- => ("out<7:0>" "enable" "clk" "reset")
-
-WARNING (VLOGNET-110): The cell 'TOP/top_tb/schematic' has no ports. Make sure that this was the intended 
-design.
- 
-INFO (VLOGNET-126): ---------- Beginning netlist configuration information ----------
-
-
-
-LIB NAME                    CELL NAME                   VIEW NAME            NOTE             
----------                   ---------                   ---------            ----             
-
-IO_CELLS_JIC3V              VDDORPADPC                  verilogams           *Stopping View*  
-IO_CELLS_JIC3V              VDDPADPC                    verilogams           *Stopping View*  
-IO_CELLS_JIC3V              GNDORPADPC                  verilogams           *Stopping View*  
-IO_CELLS_JIC3V              PSUBPADPC                   verilogams           *Stopping View*  
-IO_CELLS_JIC3V              GNDPADPC                    verilogams           *Stopping View*  
-VLG_PRIMITIVES              check_gnd                   verilogams           *Stopping View*  
-VLG_PRIMITIVES              check_buf                   functional           *Stopping View*  
-VLG_PRIMITIVES              check_vdd                   verilogams           *Stopping View*  
-IO_CELLS_JIC3V              PWRCUTDCPC                  verilogams           *Stopping View*  
-VLG_PRIMITIVES              resistor_ams                verilogams           *Stopping View*  
-IO_CELLS_JIC3V              APR00DPC                    verilogams           *Stopping View*  
-PRIMLIB                     ddnw                        spectre              *Stopping View*  
-PRIMLIB                     dhpw                        spectre              *Stopping View*  
-PRIMLIB                     rdp_io                      spectre              *Stopping View*  
-PRIMLIB                     dphnw                       spectre              *Stopping View*  
-PRIMLIB                     pmb                         spectre              *Stopping View*  
-PRIMLIB                     dp3                         spectre              *Stopping View*  
-PRIMLIB                     rnp1                        spectre              *Stopping View*  
-PRIMLIB                     pe3i                        spectre              *Stopping View*  
-PRIMLIB                     rdp3                        spectre              *Stopping View*  
-PRIMLIB                     dnpdd_scr                   spectre              *Stopping View*  
-PRIMLIB                     dpdd_scr                    spectre              *Stopping View*  
-PRIMLIB                     dpdnw                       spectre              *Stopping View*  
-PRIMLIB                     rpp1s                       spectre              *Stopping View*  
-PRIMLIB                     ne3                         spectre              *Stopping View*  
-PRIMLIB                     pe3                         spectre              *Stopping View*  
-PRIMLIB                     nedia                       spectre              *Stopping View*  
-PRIMLIB                     rpp1k1_3                    spectre              *Stopping View*  
-D_CELLS_JI3V                NA2JI3VX0                   functional           *Stopping View*  
-D_CELLS_JI3V                INJI3VX0                    functional           *Stopping View*  
-D_CELLS_JI3V                DLY2JI3VX1                  functional           *Stopping View*  
-D_CELLS_JI3V                BUJI3VX2                    functional           *Stopping View*  
-D_CELLS_JI3V                DECAP5JI3V                  functional           *Stopping View*  
-D_CELLS_JI3V                DECAP7JI3V                  functional           *Stopping View*  
-D_CELLS_JI3V                DECAP10JI3V                 functional           *Stopping View*  
-D_CELLS_JI3V                DECAP15JI3V                 functional           *Stopping View*  
-D_CELLS_JI3V                DECAP25JI3V                 functional           *Stopping View*  
-D_CELLS_JI3V                BUJI3VX1                    functional           *Stopping View*  
-VLG_PRIMITIVES              u1_fd5                      functional           *Stopping View*  
-D_CELLS_JI3V                NO2JI3VX0                   functional           *Stopping View*  
-D_CELLS_JI3V                EN2JI3VX0                   functional           *Stopping View*  
-D_CELLS_JI3V                AN22JI3VX1                  functional           *Stopping View*  
-D_CELLS_JI3V                AN21JI3VX1                  functional           *Stopping View*  
-D_CELLS_JI3V                DLY1JI3VX1                  functional           *Stopping View*  
-D_CELLS_JI3V                ON211JI3VX1                 functional           *Stopping View*  
-D_CELLS_JI3V                BUJI3VX16                   functional           *Stopping View*  
-D_CELLS_JI3V                BUJI3VX0                    functional           *Stopping View*  
-COUNTER_JI3                 counter_stimulus            verilogams_sdf       *Stopping View*  
-analogLib                   vdc                         spectre              *Stopping View*  
-analogLib                   res                         spectre              *Stopping View*  
-analogLib                   vpulse                      spectre              *Stopping View*  
-TOP                         top_tb                      schematic                             
-TOP                         top                         schematic                             
-COUNTER_JI3                 counter                     schematic                             
-D_CELLS_JI3V                DFRQJI3VX4                  functional                            
-D_CELLS_JI3V                DFRQJI3VX2                  functional                            
-D_CELLS_JI3V                DFRQJI3VX1                  functional                            
-INV_HV                      inv_hv                      schematic                             
-INV_LP                      inv                         schematic                             
-IORING                      ioring                      schematic                             
-HV_CELLS                    HVD4SJD1R5PKFs              schematic                             
-HV_CELLS                    ioh_c5pk                    schematic                             
-HV_CELLS                    ioh_pmbsabhv_750            schematic                             
-HV_CELLS                    ioh_pmbsab_15_10            schematic                             
-HV_CELLS                    ioh_pe3isabhv_1050gcr       schematic                             
-HV_CELLS                    ioh_pe3isab_15_04           schematic                             
-HV_CELLS                    ioh_iscrd2_4x100            schematic                             
-HV_CELLS                    HVDD4D2PK                   schematic                             
-HV_CELLS                    ioh_d2pk                    schematic                             
-HV_CELLS                    HVDD4DJ5PKFs                schematic                             
-HV_CELLS                    ioh_d5pk                    schematic                             
-HV_CELLS                    ioh_pe3isabhv_2800gcr       schematic                             
-HV_CELLS                    ioh_pe3isab_40_04           schematic                             
-HV_CELLS                    ioh_pmbsabhv_2000           schematic                             
-HV_CELLS                    ioh_pmbsab_40_10            schematic                             
-HV_CELLS                    ioh_dhpw_2x100_stack3       schematic                             
-HV_CELLS                    ioh_dhpw_2x100              schematic                             
-IO_CELLS_JIC3V              APR04DPC                    verilogams                            
-IO_CELLS_JIC3V              BT4PC                       verilogams                            
-IO_CELLS_JIC3V              ICPC                        verilogams                            
-
----------- End of netlist configuration information   ----------
-function ansCdlCompPrim redefined
-function ansCdlCompPrim redefined
-function ansCdlCompPrim redefined
-Initializing the control file using cp:
-    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/netlist/analog/control
-Copying Spectre source file 'spectre.inp'
-Copying Spectre command file 'spectre.sim'
-Running netlist assembly..
-.........
-End netlisting Feb  9 04:55:59 2024
-INFO (AMS-1241): AMS UNL netlisting has completed successfully.
-To view the modules, right-click the test name on the Tests and Analyses 
-assistant pane and choose Netlist->Display menu option.
-      ...successful.
-create cds_globals...
-      ...successful.
-compose simulator input file...
-      ...successful.
-
-*Info*    Running simulation on testbench [ TOP:top_tb:1 ] for Point
-          ID (7 1).
-
-Delete simulation data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.7/1/TOP:top_tb:1/psf.
-create cds_globals...
-      ...successful.
-compose simulator input file...
-      ...successful.
-validating simulator hierarchy...
-      ...successful.
-running...
-To check for output from compilation, elaboration and simulation run, 
-right-click on the test name, result name, or any value in the "Results" 
-tab of the Outputs section and choose "Output Log" menu option.
-INFO (ADE-3071): Simulation completed successfully.
-reading simulation data...
-      ...successful.
-*Info*    Client has finished evaluating ... 
-
-
-*Info*    Run complete for Point ID (7 1) on testbench [ TOP:top_tb:1
-          ].
-
-
-
-
-
-Simulation design variables differ from those on the cellView,
-they have been saved in the file "/tmp/saved-design-variables".
-To save future changes, copy variables to cellView before exiting.
+\# Program start time:     UTC 2024.02.18 15:35:01.599
+\# Local time: EST (UTC-05:00) 2024.02.18 10:35:01.599
+\o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 10/11/2023 09:56 (cpgbld01) $
+\o Hierarchy:		/home/saul/cadence/installs/IC618/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.8-64b.500.34  (64-bit addresses)
+\# Command line:	/pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso27198 -mpshost phoenix -davinciService DaVinciService_27198_1708270441 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job23.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_27198 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 23
+\# Host name (type):	phoenix (x86_64)
+\# Operating system:	Linux 3.10.0-1160.105.1.el7.x86_64 #1 SMP Thu Dec 7 15:39:45 UTC 2023
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	:808 (1024x868)
+\# Available geometry:			TL(0:0) BR(1023:867)
+\# X server:			The X.Org Foundation
+\# Depth of Visual (Root):	24 (24)
+\# Number of Planes Used:	24
+\# X version:		11.0 (vendor release 12004000)
+\# X resource pool:	base 0x400000, mask 0x1fffff (2097151), shift 0
+\# 			current id 0x0, current max 0x1ffffa (2097146)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        638 MB
+\# Available memory:	     18,088 MB
+\# System memory:	     23,948 MB
+\# Maximum memory size:	     23,521 MB
+\# Max mem available:	     18,298 MB
+\# Initial memory used:	        210 MB
+\#        process size:	      1,813 MB
+\# Thread usage limits (effective/default):	maxthreads 4096/4096 maxload 6.00/6.00
+\# Qt version:		5.9.1
+\# Window Manager:	other
+\# User Name:		saul
+\o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
+\# Process Id:		1063
+\o 
+\o COPYRIGHT (C) 1992-2023  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           (C) 1992-2023  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading pvsui.cxt
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\o Loading socket.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading amps.cxt 
+\o Loading adexlCore.cxt 
+\o Loading adexl.cxt 
+\o *Info*    Exporting services from client ... 
+\o 
+\o Loading adexlDM.cxt 
+\o Loading cpf.cxt 
+\o Loading cli.cxt 
+\o Loading lp.cxt 
+\# Memory report: using         347 MB, process size 2,072 MB at UTC 2024.02.18 15:35:13.293
+\o INFO (ELI-00302) Connecting to parent process (session=virtuoso27198, host=phoenix). Connection mode is ICRP. Total timeout is 180 seconds. Connection timeout is 90 seconds.
+\o INFO (ELI-00303) Step 1: Connecting to parent. Time spent is 0 seconds.
+\o INFO (ELI-00304) The registration of the child 1063 within 90 seconds is being processed...
+\o INFO (ELI-00305) The result of registration is true. Time spent is 1 seconds.
+\o INFO (ELI-00308) The connection has ended. Result is true. Total time spent is 2 seconds.
+\# [10:35:03.512353] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
+\# Available memory:         15,188 MB at UTC 2024.02.18 15:35:15.322
+\# Memory report: Maximum memory size now 15,550 MB at UTC 2024.02.18 15:35:15.322
+\# Thread usage report: 11 active threads, active load 1.40 at UTC 2024.02.18 15:35:15.322
+\o Loading .cdsinit for the XH018 X-Fab XKit.
+\o     LOAD xh018_1143 SPECIFIC CALL-BACK ROUTINES
+\o     LOAD ALL AVAILABLE P-CELL FUNCTIONS
+\o ** Info: PDK loadpath is "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/PDK/IC61/v9_0_4"
+\o Loading XfSktTools.cxt
+\o Loading XfMenu.cxt
+\o Loading XfTechXh018.cxt
+\o Loading XfPcellCore.cxt
+\o function ansiSpicePrintProperties_subcircuit redefined
+\o Loading XfSkillExt.cxt
+\o Initializing library.
+\o Finished Initializing Library .
+\o     Generic PcellKit: 'production' loaded.
+\o     Generic Pcell Skill Tools: 'production' loaded.
+\o Loading Circuit Prospector Setup (XfCircuitProspSetup.il)
+\o     LOAD THE ENVIRONMENT FILE
+\o  --> Setting the required PDK definitions...
+\o     GDSII LAYER MAPPING FILE = "./.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable"
+\o     GDSII OBJECT MAPPING FILE = "./.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmOutObjects.map"
+\o Use model setup from PDK...
+\o Loading spectrei.cxt 
+\o Loading devCheck.cxt 
+\o Loading relXpert.cxt 
+\o Loading vdsil.cxt 
+\o Loading hspiceD.cxt 
+\o Loading spectreinl.cxt 
+\o Loading UltraSim.cxt 
+\o Loading msgHandler.cxt 
+\o Loading AMSOSS.cxt 
+\o Loading AMS.cxt 
+\# Memory report: using         462 MB, process size 2,194 MB at UTC 2024.02.18 15:35:16.304
+\o  --> Finished setting the required PDK definitions
+\o  --> Setting the recommended EDA tool defaults...
+\o  --> Finished setting the recommended EDA tool defaults
+\o     LOAD DEFAULT BINDKEYS
+\o Loading viva.cxt 
+\o  --> AssuraTools Setup not available
+\o *Info*    Client has finished starting ... 
+\o 
+\p > 
+\# Loading perfDiag...
+\# (PerfDiag): Set GDB path to environment variable 'gdbPath' (gdb).
+\# Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 1063' to open it when Virtuoso freezes.
+\# (PerfDiag): Loading backtrace from /pkg/cadence/installs/IC618/tools/lib/64bit/cdnslibunwind.so
+\o Loading vqp.cxt 
+\o Loading hdlPkg.cxt 
+\o Loading simui.cxt 
+\o 
+\o 
+\o *Info*    Configuring the session ...
+\o 
+\o 	Library      = CHARACTERIZATION
+\o 	Cell         = DC_BIAS_NMOS
+\o 	View         = schematic
+\o 	Netlist  	  = nil
+\o 	Simulator    = spectre
+\o 	State Path   = $AXL_SETUPDB_DIR/test_states
+\o 	State Name   = CHARACTERIZATION:DC_BIAS_NMOS:1_CHARACTERIZATION:DC_BIAS_NMOS:1_Feb_18_10_34_56_2024_Ocean.16
+\o 	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.16.rdb
+\o 	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/CHARACTERIZATION/DC_BIAS_NMOS/adexl
+\o 
+\o 
+\o 
+\o *Info*    The auto suspension is disabled.
+\o 
+\o     LOAD GENERIC "X-KIT" SKILL CONTEXT "./.xkit/setup/x_all/cadence/xenv/skill/context6/xkit.cxt" 
+\o  - Menu "XKit Utilities" installed to CIW.
+\o     LOAD ".cdsinit_personal" FILE FROM THE WORKING DIRECTORY.
+\o     INFO: To customize this setup, please use the following environment variables:
+\o           CUSTOM_SCRIPT_PATH - should point to the master shell or perl script
+\o                              e.g.:
+\o                              setenv CUSTOM_SCRIPT_PATH /path/to/my/script/LoadMyScripts.csh
+\o           CUSTOM_SKILL_PATH - should point to your master skill load file
+\o                              e.g.:
+\o                              setenv CUSTOM_SKILL_PATH /path/to/my/skill/LoadMySkills.il
+\o  -> END LOAD ".cdsinit" FILE
+\o Loading monte.cxt 
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 14) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var VDS = "1"
+\o Setting var VGS = "1.3"
+\o Setting var temperature = "27"
+\o Setting temp(T) = 27
+\o 
+\o *Info*    Netlist Directory =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.16/14/CHARACTERIZATION:DC_BIAS_NMOS:1/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.16/14/CHARACTERIZATION:DC_BIAS_NMOS:1
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (0 14)
+\o 
+\o generate netlist...
+\o Loading hnlInit.cxt 
+\o Loading seCore.cxt 
+\o function ansCdlCompPrim redefined
+\o function ansCdlCompPrim redefined
+\# [10:35:16.445531] Periodic Lic check successful
+\# [10:35:16.445537] Feature usage summary:
+\o Begin Incremental Netlisting Feb 18 10:35:16 2024
+\o End netlisting Feb 18 10:35:16 2024
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ] for Point ID (0 14).
+\o 
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.16/14/CHARACTERIZATION:DC_BIAS_NMOS:1/psf.
+\o simulate...
+\# Memory report: using         601 MB, process size 2,390 MB at UTC 2024.02.18 15:35:18.075
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\o *Info*    Client has finished evaluating ... 
+\o 
+\o 
+\o *Info*    Run complete for Point ID (0 14) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
+\o 
+\o 
+\o 
+\o 
+\o 
+\# Lic Summary:
+\# [10:35:20.326049] Cdslmd servers:3000@lic08.ug.kth.se
+\# [10:35:20.326057] Feature usage summary:
+\# Memory report: on exit            604 MB, process size 2,393 MB at UTC 2024.02.18 15:35:20.326
+\# Memory report: peak usage         604 MB, process size 2,393 MB

@@ -1,0 +1,20 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "GMID_NMOS_L"
+  repList "spectre veriloga ahdl cmos_sch schematic"
+  stopList "spectre veriloga ahdl"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/GMID_NMOS_L/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "CHARACTERIZATION/BIAS_NMOS_L/schematic" "BIAS_NMOS_L" )
+( "CHARACTERIZATION/GMID_NMOS_L/schematic" "GMID_NMOS_L" )
+ )
+( "GMID_NMOS_L" "ihnl/cds1/map" )
+( "BIAS_NMOS_L" "ihnl/cds0/map" )
+ )

@@ -1,14 +1,14 @@
-\# Program start time:     UTC 2024.02.09 09:06:09.681
-\# Local time: EST (UTC-05:00) 2024.02.09 04:06:09.681
+\# Program start time:     UTC 2024.02.18 15:34:05.539
+\# Local time: EST (UTC-05:00) 2024.02.18 10:34:05.539
 \o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 10/11/2023 09:56 (cpgbld01) $
 \o Hierarchy:		/home/saul/cadence/installs/IC618/tools.lnx86/dfII/
 \o Sub version:		sub-version  IC6.1.8-64b.500.34  (64-bit addresses)
-\# Command line:	/pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso22965 -mpshost phoenix -davinciService DaVinciService_22965_1707468654 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job6.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_22965 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 6
+\# Command line:	/pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso27198 -mpshost phoenix -davinciService DaVinciService_27198_1708270441 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job6.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_27198 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 6
 \# Host name (type):	phoenix (x86_64)
 \# Operating system:	Linux 3.10.0-1160.105.1.el7.x86_64 #1 SMP Thu Dec 7 15:39:45 UTC 2023
 \# Linux /etc/issue:	\S
 \# Linux /etc/issue:	Kernel \r on an \m
-\# X display name (WxH):	:1004 (1024x868)
+\# X display name (WxH):	:1288 (1024x868)
 \# Available geometry:			TL(0:0) BR(1023:867)
 \# X server:			The X.Org Foundation
 \# Depth of Visual (Root):	24 (24)
@@ -18,11 +18,11 @@
 \# 			current id 0x0, current max 0x1ffffa (2097146)
 \# Max data seg size:	     unlimited
 \# Max process size:	     unlimited
-\# Initial sbrk value:	        645 MB
-\# Available memory:	     20,138 MB
+\# Initial sbrk value:	        631 MB
+\# Available memory:	     18,293 MB
 \# System memory:	     23,948 MB
-\# Maximum memory size:	     23,514 MB
-\# Max mem available:	     20,348 MB
+\# Maximum memory size:	     23,528 MB
+\# Max mem available:	     18,503 MB
 \# Initial memory used:	        210 MB
 \#        process size:	      1,813 MB
 \# Thread usage limits (effective/default):	maxthreads 4096/4096 maxload 6.00/6.00
@@ -30,7 +30,7 @@
 \# Window Manager:	other
 \# User Name:		saul
 \o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
-\# Process Id:		27631
+\# Process Id:		29053
 \o 
 \o COPYRIGHT (C) 1992-2023  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
 \o           (C) 1992-2023  UNIX SYSTEMS Laboratories INC.,
@@ -72,15 +72,15 @@
 \o 
 \o Loading adexlDM.cxt 
 \o Loading cpf.cxt 
+\# Memory report: using         343 MB, process size 2,068 MB at UTC 2024.02.18 15:34:16.024
 \o Loading cli.cxt 
 \o Loading lp.cxt 
-\o INFO (ELI-00302) Connecting to parent process (session=virtuoso22965, host=phoenix). Connection mode is ICRP. Total timeout is 180 seconds. Connection timeout is 90 seconds.
+\o INFO (ELI-00302) Connecting to parent process (session=virtuoso27198, host=phoenix). Connection mode is ICRP. Total timeout is 180 seconds. Connection timeout is 90 seconds.
 \o INFO (ELI-00303) Step 1: Connecting to parent. Time spent is 0 seconds.
-\o INFO (ELI-00304) The registration of the child 27631 within 90 seconds is being processed...
-\o INFO (ELI-00305) The result of registration is true. Time spent is 0 seconds.
-\o INFO (ELI-00308) The connection has ended. Result is true. Total time spent is 0 seconds.
-\# [04:06:09.512409] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
-\# Memory report: using         362 MB, process size 2,094 MB at UTC 2024.02.09 09:06:11.549
+\o INFO (ELI-00304) The registration of the child 29053 within 90 seconds is being processed...
+\o INFO (ELI-00305) The result of registration is true. Time spent is 1 seconds.
+\o INFO (ELI-00308) The connection has ended. Result is true. Total time spent is 1 seconds.
+\# [10:34:06.512369] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
 \o Loading .cdsinit for the XH018 X-Fab XKit.
 \o     LOAD xh018_1143 SPECIFIC CALL-BACK ROUTINES
 \o     LOAD ALL AVAILABLE P-CELL FUNCTIONS
@@ -122,8 +122,33 @@
 \p > 
 \# Loading perfDiag...
 \# (PerfDiag): Set GDB path to environment variable 'gdbPath' (gdb).
-\# Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 27631' to open it when Virtuoso freezes.
+\# Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 29053' to open it when Virtuoso freezes.
 \# (PerfDiag): Loading backtrace from /pkg/cadence/installs/IC618/tools/lib/64bit/cdnslibunwind.so
+\o Loading vqp.cxt 
+\o Loading hdlPkg.cxt 
+\o Loading simui.cxt 
+\o 
+\o 
+\o *Info*    Configuring the session ...
+\o 
+\o 	Library      = CHARACTERIZATION
+\o 	Cell         = DC_BIAS_NMOS
+\o 	View         = schematic
+\o 	Netlist  	  = nil
+\o 	Simulator    = spectre
+\o 	State Path   = $AXL_SETUPDB_DIR/test_states
+\o 	State Name   = CHARACTERIZATION:DC_BIAS_NMOS:1_CHARACTERIZATION:DC_BIAS_NMOS:1_Feb_18_10_34_01_2024_Ocean.15
+\o 	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15.rdb
+\o 	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/CHARACTERIZATION/DC_BIAS_NMOS/adexl
+\o 
+\o 
+\# Available memory:         16,154 MB at UTC 2024.02.18 15:34:18.106
+\# Memory report: Maximum memory size now 16,632 MB at UTC 2024.02.18 15:34:18.106
+\# Thread usage report: 12 active threads, active load 1.40 at UTC 2024.02.18 15:34:18.106
+\# Memory report: using         478 MB, process size 2,217 MB at UTC 2024.02.18 15:34:18.106
+\o 
+\o *Info*    The auto suspension is disabled.
+\o 
 \o     LOAD GENERIC "X-KIT" SKILL CONTEXT "./.xkit/setup/x_all/cadence/xenv/skill/context6/xkit.cxt" 
 \o  - Menu "XKit Utilities" installed to CIW.
 \o     LOAD ".cdsinit_personal" FILE FROM THE WORKING DIRECTORY.
@@ -135,13 +160,133 @@
 \o                              e.g.:
 \o                              setenv CUSTOM_SKILL_PATH /path/to/my/skill/LoadMySkills.il
 \o  -> END LOAD ".cdsinit" FILE
-\# Available memory:         19,879 MB at UTC 2024.02.09 09:06:19.947
-\# Memory report: Maximum memory size now 20,364 MB at UTC 2024.02.09 09:06:19.947
-\# Thread usage report: 12 active threads, active load 1.40 at UTC 2024.02.09 09:06:19.948
-\# Memory report: using         484 MB, process size 2,223 MB at UTC 2024.02.09 09:06:19.948
-\o Job 6 timed out after no activity in 300 seconds.
-\o Loading simui.cxt 
-\o 
-\o *Info*    Received signal SIGTERM.
+\o Loading monte.cxt 
 \o 
 \o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 1) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var VDS = "1"
+\o Setting var VGS = "0"
+\o Setting var temperature = "27"
+\o Setting temp(T) = 27
+\o 
+\o *Info*    Netlist Directory =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15/1/CHARACTERIZATION:DC_BIAS_NMOS:1/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15/1/CHARACTERIZATION:DC_BIAS_NMOS:1
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (0 1)
+\o 
+\o generate netlist...
+\o Loading hnlInit.cxt 
+\o Loading seCore.cxt 
+\o function ansCdlCompPrim redefined
+\o function ansCdlCompPrim redefined
+\# [10:34:18.295714] Periodic Lic check successful
+\# [10:34:18.295715] Feature usage summary:
+\o Initializing the control file using cp:
+\o     cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15/1/CHARACTERIZATION:DC_BIAS_NMOS:1/netlist/control
+\o Copying Spectre source file 'spectre.inp'
+\o Copying Spectre command file 'spectre.sim'
+\o Begin Incremental Netlisting Feb 18 10:34:18 2024
+\o Loading json.cxt 
+\o End netlisting Feb 18 10:34:18 2024
+\o 
+\o Netlisting Statistics:
+\o 	Number of components:    3
+\o 
+\o 	Elapsed time:          0.0s
+\o Errors: 0	Warnings: 0
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ] for Point ID (0 1).
+\o 
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15/1/CHARACTERIZATION:DC_BIAS_NMOS:1/psf.
+\# Memory report: using         583 MB, process size 2,321 MB at UTC 2024.02.18 15:34:19.163
+\o simulate...
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\o *Info*    Client has finished evaluating ... 
+\o 
+\o 
+\o *Info*    Run complete for Point ID (0 1) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
+\o 
+\o 
+\o 
+\o 
+\o 
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 11) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var VGS = "1"
+\o 
+\o *Info*    Netlist Directory =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15/11/CHARACTERIZATION:DC_BIAS_NMOS:1/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15/11/CHARACTERIZATION:DC_BIAS_NMOS:1
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (0 11)
+\o 
+\o generate netlist...
+\o function ansCdlCompPrim redefined
+\o function ansCdlCompPrim redefined
+\o Begin Incremental Netlisting Feb 18 10:34:21 2024
+\o End netlisting Feb 18 10:34:21 2024
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ] for Point ID (0 11).
+\o 
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.15/11/CHARACTERIZATION:DC_BIAS_NMOS:1/psf.
+\o simulate...
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\o *Info*    Client has finished evaluating ... 
+\o 
+\o 
+\o *Info*    Run complete for Point ID (0 11) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
+\o 
+\o 
+\o 
+\o 
+\o 
+\# Lic Summary:
+\# [10:34:25.374843] Cdslmd servers:3000@lic08.ug.kth.se
+\# [10:34:25.374848] Feature usage summary:
+\# Memory report: on exit            607 MB, process size 2,396 MB at UTC 2024.02.18 15:34:25.374
+\# Memory report: peak usage         607 MB, process size 2,396 MB

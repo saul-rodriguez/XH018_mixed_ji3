@@ -1,0 +1,501 @@
+HEADER
+"PSFversion" "1.00"
+"Run Generator" "drlRun rev. 1.0"
+"Run Time Stamp" "Feb 18 11:12:28 2024"
+"date" "Feb 18 11:12:28 2024"
+"simulator" "spectre"
+"netlistDir" "../netlist"
+TYPE
+"runObject" STRUCT(
+"logName" ARRAY( * ) STRING *
+"parent" STRING *
+"sweepVariable" ARRAY( * ) STRING *
+) PROP( "key" "runObject" )
+VALUE
+"Root" "runObject" (
+("")
+""
+("VDS")
+)
+"VDS=0/psf" "runObject" (
+(
+"../VDS=0/psf/logFile"
+"../VDS=0/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0"
+ "VDS" 0.000000e+00
+)
+
+"VDS=0.05/psf" "runObject" (
+(
+"../VDS=0.05/psf/logFile"
+"../VDS=0.05/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.05"
+ "VDS" 5.000000e-02
+)
+
+"VDS=0.1/psf" "runObject" (
+(
+"../VDS=0.1/psf/logFile"
+"../VDS=0.1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.1"
+ "VDS" 1.000000e-01
+)
+
+"VDS=0.15/psf" "runObject" (
+(
+"../VDS=0.15/psf/logFile"
+"../VDS=0.15/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.15"
+ "VDS" 1.500000e-01
+)
+
+"VDS=0.2/psf" "runObject" (
+(
+"../VDS=0.2/psf/logFile"
+"../VDS=0.2/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.2"
+ "VDS" 2.000000e-01
+)
+
+"VDS=0.25/psf" "runObject" (
+(
+"../VDS=0.25/psf/logFile"
+"../VDS=0.25/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.25"
+ "VDS" 2.500000e-01
+)
+
+"VDS=0.3/psf" "runObject" (
+(
+"../VDS=0.3/psf/logFile"
+"../VDS=0.3/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.3"
+ "VDS" 3.000000e-01
+)
+
+"VDS=0.35/psf" "runObject" (
+(
+"../VDS=0.35/psf/logFile"
+"../VDS=0.35/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.35"
+ "VDS" 3.500000e-01
+)
+
+"VDS=0.4/psf" "runObject" (
+(
+"../VDS=0.4/psf/logFile"
+"../VDS=0.4/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.4"
+ "VDS" 4.000000e-01
+)
+
+"VDS=0.45/psf" "runObject" (
+(
+"../VDS=0.45/psf/logFile"
+"../VDS=0.45/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.45"
+ "VDS" 4.500000e-01
+)
+
+"VDS=0.5/psf" "runObject" (
+(
+"../VDS=0.5/psf/logFile"
+"../VDS=0.5/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.5"
+ "VDS" 5.000000e-01
+)
+
+"VDS=0.55/psf" "runObject" (
+(
+"../VDS=0.55/psf/logFile"
+"../VDS=0.55/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.55"
+ "VDS" 5.500000e-01
+)
+
+"VDS=0.6/psf" "runObject" (
+(
+"../VDS=0.6/psf/logFile"
+"../VDS=0.6/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.6"
+ "VDS" 6.000000e-01
+)
+
+"VDS=0.65/psf" "runObject" (
+(
+"../VDS=0.65/psf/logFile"
+"../VDS=0.65/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.65"
+ "VDS" 6.500000e-01
+)
+
+"VDS=0.7/psf" "runObject" (
+(
+"../VDS=0.7/psf/logFile"
+"../VDS=0.7/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.7"
+ "VDS" 7.000000e-01
+)
+
+"VDS=0.75/psf" "runObject" (
+(
+"../VDS=0.75/psf/logFile"
+"../VDS=0.75/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.75"
+ "VDS" 7.500000e-01
+)
+
+"VDS=0.8/psf" "runObject" (
+(
+"../VDS=0.8/psf/logFile"
+"../VDS=0.8/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.8"
+ "VDS" 8.000000e-01
+)
+
+"VDS=0.85/psf" "runObject" (
+(
+"../VDS=0.85/psf/logFile"
+"../VDS=0.85/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.85"
+ "VDS" 8.500000e-01
+)
+
+"VDS=0.9/psf" "runObject" (
+(
+"../VDS=0.9/psf/logFile"
+"../VDS=0.9/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.9"
+ "VDS" 9.000000e-01
+)
+
+"VDS=0.95/psf" "runObject" (
+(
+"../VDS=0.95/psf/logFile"
+"../VDS=0.95/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=0.95"
+ "VDS" 9.500000e-01
+)
+
+"VDS=1/psf" "runObject" (
+(
+"../VDS=1/psf/logFile"
+"../VDS=1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1"
+ "VDS" 1.000000e+00
+)
+
+"VDS=1.05/psf" "runObject" (
+(
+"../VDS=1.05/psf/logFile"
+"../VDS=1.05/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.05"
+ "VDS" 1.050000e+00
+)
+
+"VDS=1.1/psf" "runObject" (
+(
+"../VDS=1.1/psf/logFile"
+"../VDS=1.1/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.1"
+ "VDS" 1.100000e+00
+)
+
+"VDS=1.15/psf" "runObject" (
+(
+"../VDS=1.15/psf/logFile"
+"../VDS=1.15/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.15"
+ "VDS" 1.150000e+00
+)
+
+"VDS=1.2/psf" "runObject" (
+(
+"../VDS=1.2/psf/logFile"
+"../VDS=1.2/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.2"
+ "VDS" 1.200000e+00
+)
+
+"VDS=1.25/psf" "runObject" (
+(
+"../VDS=1.25/psf/logFile"
+"../VDS=1.25/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.25"
+ "VDS" 1.250000e+00
+)
+
+"VDS=1.3/psf" "runObject" (
+(
+"../VDS=1.3/psf/logFile"
+"../VDS=1.3/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.3"
+ "VDS" 1.300000e+00
+)
+
+"VDS=1.35/psf" "runObject" (
+(
+"../VDS=1.35/psf/logFile"
+"../VDS=1.35/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.35"
+ "VDS" 1.350000e+00
+)
+
+"VDS=1.4/psf" "runObject" (
+(
+"../VDS=1.4/psf/logFile"
+"../VDS=1.4/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.4"
+ "VDS" 1.400000e+00
+)
+
+"VDS=1.45/psf" "runObject" (
+(
+"../VDS=1.45/psf/logFile"
+"../VDS=1.45/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.45"
+ "VDS" 1.450000e+00
+)
+
+"VDS=1.5/psf" "runObject" (
+(
+"../VDS=1.5/psf/logFile"
+"../VDS=1.5/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.5"
+ "VDS" 1.500000e+00
+)
+
+"VDS=1.55/psf" "runObject" (
+(
+"../VDS=1.55/psf/logFile"
+"../VDS=1.55/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.55"
+ "VDS" 1.550000e+00
+)
+
+"VDS=1.6/psf" "runObject" (
+(
+"../VDS=1.6/psf/logFile"
+"../VDS=1.6/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.6"
+ "VDS" 1.600000e+00
+)
+
+"VDS=1.65/psf" "runObject" (
+(
+"../VDS=1.65/psf/logFile"
+"../VDS=1.65/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.65"
+ "VDS" 1.650000e+00
+)
+
+"VDS=1.7/psf" "runObject" (
+(
+"../VDS=1.7/psf/logFile"
+"../VDS=1.7/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.7"
+ "VDS" 1.700000e+00
+)
+
+"VDS=1.75/psf" "runObject" (
+(
+"../VDS=1.75/psf/logFile"
+"../VDS=1.75/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.75"
+ "VDS" 1.750000e+00
+)
+
+"VDS=1.8/psf" "runObject" (
+(
+"../VDS=1.8/psf/logFile"
+"../VDS=1.8/psf/artistLogFile"
+)
+"Root"
+()
+) PROP(
+"netlistDir" "../netlist"
+"dataDir" "../VDS=1.8"
+ "VDS" 1.800000e+00
+)
+
+END

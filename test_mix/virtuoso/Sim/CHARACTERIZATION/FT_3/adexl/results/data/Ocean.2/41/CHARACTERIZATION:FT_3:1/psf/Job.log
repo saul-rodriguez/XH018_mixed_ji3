@@ -1,0 +1,80 @@
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 41) on testbench [
+\o           CHARACTERIZATION:FT_3:1 ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var IDS = "10m"
+\o 
+\o *Info*    Netlist Directory =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/FT_3/adexl/results/data/Ocean.2/41/CHARACTERIZATION:FT_3:1/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/FT_3/adexl/results/data/Ocean.2/41/CHARACTERIZATION:FT_3:1
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (0 41)
+\o 
+\o generate netlist...
+\o function ansCdlCompPrim redefined
+\o function ansCdlCompPrim redefined
+\o Begin Incremental Netlisting Feb 17 09:49:48 2024
+\o End netlisting Feb 17 09:49:48 2024
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [ CHARACTERIZATION:FT_3:1 ]
+\o           for Point ID (0 41).
+\o 
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/FT_3/adexl/results/data/Ocean.2/41/CHARACTERIZATION:FT_3:1/psf.
+\o simulate...
+\o reading simulation data...
+\o       ...successful.
+\o 
+\o *Error*   Error ID  = 5011
+\o *Error*   Error Msg = Simulator failed to complete the simulation.
+\o 
+\o           Error found by spectre during DC analysis, during AC
+\o           analysis `ac'.
+\o Error found by spectre during DC analysis,
+\o           during AC analysis `ac'.
+\o ERROR (SPECTRE-16385): There were
+\o           13 attempts to find the DC solution. In some of those
+\o           attempts, a signal exceeded the blowup limit of its
+\o           quantity. 
+\o The last signal that failed is V(net11) =
+\o           -1.50979 GV, for which the quantity is `V' and the blowup
+\o           limit is (1 GV). It is possible that the circuit h
+\o as no DC
+\o           solution. If you really want signals this large, set the
+\o           `blowup' parameter of this quantity to a larger
+\o           value.
+\o ERROR (SPECTRE-16080): Cannot print DC solution
+\o           because DC did not converge. Resolve the convergence issue
+\o           and rerun the simulation.
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Client has finished evaluating ... 
+\o 
+\o 
+\o *Info*    Run complete for Point ID (0 41) on testbench [
+\o           CHARACTERIZATION:FT_3:1 ].
+\o 
+\o 
+\o 
+\o 
+\o 

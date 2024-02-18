@@ -1,0 +1,57 @@
+
+Spectre (R) Circuit Simulator
+Version 23.1.0.305.isr3 64bit -- 13 Nov 2023
+Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: saul   Host: phoenix   HostID: A0F02   PID: 27869
+Memory  available: 13.6624 GB  physical: 16.6560 GB
+Linux   : CentOS Linux release 7 (Core)
+CPU Type: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+All processors running at 3600.0 MHz
+        Socket: Processors
+        0:       0,  1,  2,  3,  4,  5
+        
+System load averages (1min, 5min, 15min) : 13.2 %, 14.2 %, 11.3 %
+HPC is enabled
+
+
+Simulating `input.scs' on phoenix at 11:06:23 AM, Sun Feb 18, 2024 (process id: 27869).
+Current working directory: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/14/CHARACTERIZATION:DC_BIAS_NMOS:VGS/netlist
+Command line:
+    /pkg/cadence/installs/SPECTRE231/tools/bin/spectre -64 input.scs  \
+        +escchars +log ../psf/spectre.out -format psfxl -raw ../psf  \
+        ++aps +mt +lqtimeout 900 -maxw 5 -maxn 5 -env ade -ahdllibdir  \
+        /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/sharedData/Job183/ahdl/input.ahdlSimDB  \
+        +logstatus
+
+
+Spectre received SIGHUP sent from PID: 27866 with UID: 1000.
+Process hierarchy of PID 27866 :
+    PID        COMMAND
+    27866      /pkg/cadence/installs/IC618/tools/bin/64bit/cdsServIpc -c 40105 -n 34 -r 0 -x cd /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/14/CHARACTERIZATION:DC_BIAS_NMOS:VGS/netlist ; ./runSimulation 
+    25929      /pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso27198 -mpshost phoenix -davinciService DaVinciService_27198_1708270441 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job183.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_27198 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 183 
+    25865      /bin/sh /pkg/cadence/installs/IC618/share/bin/cdsXvfb-run -a -s -screen 0 1024x868x24 /pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso27198 -mpshost phoenix -davinciService DaVinciService_27198_1708270441 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job183.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_27198 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 183 
+    25864      /bin/sh /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.cmddir0/runICRP183 
+    25863      /pkg/cadence/installs/IC618/tools/bin/64bit/cdsServIpc -c 58104 -n 196 -r 10 -x /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.cmddir0/runICRP183 
+    27198      /pkg/cadence/installs/IC618/tools/dfII/bin/64bit/virtuoso 
+    27124      bash 
+    27082      xterm 
+    27033      -bash 
+    27032      sshd: saul@pts/3     
+    27014      sshd: saul [priv]    
+    1360       /usr/sbin/sshd -D 
+About to end simulation, please wait for a moment...
+
+Error found by spectre.
+    ERROR (SPECTRE-25): 
+        Message from ADE: Simulation stopped because you selected the 'Stop Simulation' command in ADE.runICRP183 
+
+
+Aggregate audit (11:06:23 AM, Sun Feb 18, 2024):
+Time used: CPU = 81.9 ms, elapsed = 109 ms, util. = 74.9%.
+Peak memory used = 81.7 Mbytes.
+Simulation started at: 11:06:23 AM, Sun Feb 18, 2024, ended at: 11:06:23 AM, Sun Feb 18, 2024, with elapsed time (wall clock): 109 ms.
+spectre completes with 1 error, 0 warnings, and 0 notices.
+spectre terminated prematurely due to fatal error.

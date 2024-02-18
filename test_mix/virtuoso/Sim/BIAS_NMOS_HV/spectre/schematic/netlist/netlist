@@ -1,0 +1,9 @@
+
+// Library name: CHARACTERIZATION
+// Cell name: BIAS_NMOS_HV
+// View name: schematic
+I0 (0 D) isource dc=IDS type=dc
+V1 (net6 0) vsource dc=VDS type=dc
+E0 (G 0 D net6) vcvs gain=1000
+M0 (D G 0 0) nedia w=WF l=1.25u m=(1)*(NF) par1=(1)*(NF) extlay=0 \
+        xf_subext=0

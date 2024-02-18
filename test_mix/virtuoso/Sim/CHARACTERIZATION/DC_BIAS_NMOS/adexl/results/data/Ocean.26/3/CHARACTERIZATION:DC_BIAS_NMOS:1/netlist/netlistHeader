@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Design Netlist Generated on: Feb 18 11:01:17 2024
+// Design library name: CHARACTERIZATION
+// Design cell name: DC_BIAS_NMOS
+// Design view name: schematic
+simulator lang=spectre
+global 0

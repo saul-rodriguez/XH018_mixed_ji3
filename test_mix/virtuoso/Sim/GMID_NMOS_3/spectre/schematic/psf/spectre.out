@@ -1,0 +1,655 @@
+
+Spectre (R) Circuit Simulator
+Version 23.1.0.305.isr3 64bit -- 13 Nov 2023
+Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: saul   Host: phoenix   HostID: A0F02   PID: 25274
+Memory  available: 14.1655 GB  physical: 16.6560 GB
+Linux   : CentOS Linux release 7 (Core)
+CPU Type: 11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz
+All processors running at 3600.0 MHz
+        Socket: Processors
+        0:       0,  1,  2,  3,  4,  5
+        
+System load averages (1min, 5min, 15min) : 1.5 %, 1.0 %, 1.0 %
+HPC is enabled
+
+
+Simulating `input.scs' on phoenix at 6:17:02 AM, Sat Feb 17, 2024 (process id: 25274).
+Current working directory: /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/GMID_NMOS_3/spectre/schematic/netlist
+Command line:
+    /pkg/cadence/installs/SPECTRE231/tools/bin/spectre -64 input.scs  \
+        +escchars +log ../psf/spectre.out -format psfxl -raw ../psf  \
+        +aps +mt +lqtimeout 900 -maxw 5 -maxn 5 -env ade
+
+Licensing Information:
+[06:17:02.512385] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
+
+Licensing Information:
+[06:17:02.180083] Periodic Lic check successful
+
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libphilips_I_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /pkg/cadence/installs/SPECTRE231/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+Reading file:  /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/GMID_NMOS_3/spectre/schematic/netlist/input.scs
+Reading link:  /pkg/cadence
+Reading file:  /home/saul/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/config.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/param.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/bip.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/tm_bip.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpva.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpvb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpvc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpva3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpvb3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpvc3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnva.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvb_npn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvb_pnp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvc_npn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvc_pnp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpvhscr.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpvascr.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpvhbscr.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvba.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvba_npn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvba_pnp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvca.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvca_npn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnvca_pnp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpv_pa.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpv_pb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpv_pc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpv_pd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpv_pe.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpv_pf.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpl_pa.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpl_pb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpl_pc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpl_pd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpl_pe.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qpl_pf.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnl_pa.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnl_pb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnl_pc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnl_pd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnl_pe.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/bip/qnl_pf.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/cap.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/tm_cap.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csandwt3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csandwt4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csandwt5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf2p.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf3p.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csft4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csft5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csft6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf3a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf4a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csf5a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csft4a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csft5a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/csft6a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cif3a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cif4a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cif5a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cift4a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cift5a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cift6a.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmm3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmm4t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmm4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmm5t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmm6t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cdmm4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cdmm4t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/ctmm5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/ctmm5t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmmh3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmmh4t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmmh4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmmh5t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cmmh6t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cdmmh4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cdmmh4t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/ctmmh5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/ctmmh5t.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvc_pmos.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvci.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvci_nmos.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvci_m.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvc3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvc3_pmos.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvc3i.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvc3i_nmos.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/mosvc3i_m.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cpod.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cpod_i.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cpodhv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cpodhv_i.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cp1sub.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cp1suba.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/cp1subp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/tag_25v.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/cap/tag_60v.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/dio.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/tm_dio.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dn3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dnn3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dp3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dnw3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/ddnwmv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpdnwmv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dipdnwmv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/ddnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpdnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dipdnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dnhpw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dnhpwa.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dphnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dphnwa.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dhpw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dhnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dndf.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpdwhn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dwhn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpwhn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpndf.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpdddnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/ddpldnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dn3dpl.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dbn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpol.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dnpdd_scr.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpdd_scr.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dsb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dsba.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dsba_qp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dnp20.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dpp20.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dn3sci.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/dio/dscidnwmv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/mos.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/tm_mos.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nei.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nei_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nei_m_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pei.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pei_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pei_m_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nel.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/neli.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/neli_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/neli_m_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pel.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pel_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/peli.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/peli_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/peli_m_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nn3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3i.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3i_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3i_m_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3i.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3i_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3i_m_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3ln.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3ln_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lni.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lni_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lni_m_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3_mos1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3i.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3i_mos1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3i_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3i_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nd3i_m_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nelna.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nelnai.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nelnai_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nelnai_m_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3lna.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3lnai.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3lnai_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ne3lnai_m_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lna.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lna_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lnai.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lnai_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pe3lnai_m_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmma.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/jf_nmma.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmma_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmma.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/jf_pmma.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmma_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nedi.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nedi_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nedia.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nedia_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ped2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ped2_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ped.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/ped_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhv_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhv_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhhv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhhv_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhhv_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmmc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmmc_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmmc_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmmd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmmd_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmmd_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmc_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nmc_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nma.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nma_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/phv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/phv_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/phv_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/phhv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/phhv_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/phhv_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmc_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmc_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmmc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmmc_mos2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmmc_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pma.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pma_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pmb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nesvt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nesvti.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nesvti_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nesvti_m_6.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pesvt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pesvt_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pesvti.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pesvti_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/pesvti_m_5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhvd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhvd_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhhvd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/mos/nhhvd_bjt.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/photo.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/tm_pho.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphoa.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dpho.va
+Reading link:  /pkg/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/ahdl/constants.h
+Reading file:  /home/saul/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/ahdl/constants.vams
+Reading link:  /pkg/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/ahdl/discipline.h
+Reading file:  /home/saul/cadence/installs/SPECTRE231/tools.lnx86/spectre/etc/ahdl/disciplines.vams
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphob.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphoc.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/iphoto_uv.va
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphoc_cat.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphoc0.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphoc0_cat.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphocfp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphocfp_cat.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphod.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphod_an1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphod_an2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphod0.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphod0_an1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphod0_an2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphodfp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphodfp_an1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dphodfp_an2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspada0.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/ispad.va
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/iphoto_apd_trig.va
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapb_jun.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapb_trig.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapb0.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapb0_jun.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspb.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/ispad_trig.va
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspb_jun.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspb_trig.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspb0.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspb0_jun.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspbfep.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapda.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/iphoto_apd.va
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapda_cat.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dapda0.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspada.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/photo/dspada_cat.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/res.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/tm_res.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdn_esd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdp_io.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdp_esd.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnw.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnw_scr.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdn3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdp3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnw3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnw3_scr.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rdnwmv.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnp1_3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rpp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rpp1_3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rpp1s.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rpp1s_3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnp1h.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rnp1h_3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rpp1k1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rpp1k1_3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rctdn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rctdp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rctp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsildn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsildp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsilnp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsilpp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsbdn.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsbdp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsbdn3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsbdp3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsbnp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsbpp1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rsbpp1k1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rm1.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rm2.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rm3.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rm4.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rm5.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rmtp.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/rmtpl.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/pfuse.scs
+Reading file:  /home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/models/res/s_res.scs
+Time for NDB Parsing: CPU = 213.869 ms, elapsed = 680.941 ms.
+Time accumulated: CPU = 267.093 ms, elapsed = 680.944 ms.
+Peak resident memory used = 114 Mbytes.
+
+Time for Elaboration: CPU = 13.834 ms, elapsed = 13.7649 ms.
+Time accumulated: CPU = 281.024 ms, elapsed = 694.806 ms.
+Peak resident memory used = 121 Mbytes.
+
+
+Notice from spectre during hierarchy flattening.
+    The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+Time for EDB Visiting: CPU = 911 us, elapsed = 910.997 us.
+Time accumulated: CPU = 282.084 ms, elapsed = 695.865 ms.
+Peak resident memory used = 122 Mbytes.
+
+
+Warning from spectre during initial setup.
+    WARNING (SPECTRE-8282): In save statement, `I0.M0:id' is not found and skipped. `I0.M0' is not a valid instance.
+    WARNING (SPECTRE-8282): In save statement, `I0.M0:gm' is not found and skipped. `I0.M0' is not a valid instance.
+Notice from spectre during initial setup.
+    Multithreading is disabled due to the size of the design being too small.
+
+
+Global user options:
+         psfversion = 1.4.0
+            vabstol = 1e-06
+            iabstol = 1e-12
+               temp = 27
+               gmin = 1e-12
+             rforce = 1
+           maxnotes = 5
+           maxwarns = 5
+             digits = 5
+               cols = 80
+             pivrel = 0.001
+           sensfile = ../psf/sens.output
+     checklimitdest = psf
+               save = allpub
+             reltol = 0.001
+               tnom = 27
+             scalem = 1
+              scale = 1
+
+Scoped user options:
+
+Circuit inventory:
+              nodes 3
+            bsim3v3 1     
+            isource 1     
+               vcvs 1     
+            vsource 1     
+
+Analysis and control statement inventory:
+                 dc 2     
+               info 7     
+
+Output statements:
+             .probe 0     
+           .measure 0     
+               save 1     
+
+
+Notice from spectre during initial setup.
+    APS enabled.
+
+Time for parsing: CPU = 3.28 ms, elapsed = 13.6089 ms.
+Time accumulated: CPU = 285.476 ms, elapsed = 709.587 ms.
+Peak resident memory used = 124 Mbytes.
+
+~~~~~~~~~~~~~~~~~~~~~~
+Pre-Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~
+   -   (APS) Multi-threading. The recommended number of threads is 1, consider adding +mt=1 on command line.
+~~~~~~~~~~~~~~~~~~~~~~
+
+******************
+DC Analysis `dcOp'
+******************
+
+Opening the PSF file ../psf/dcOp.dc ...
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 1 pS
+    rabsshort = 1 mOhm
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I0.D) = 1.001 V
+I: I(I0.V1:p) = 0 A
+Convergence achieved in 6 iterations.
+DC simulation time: CPU = 1.469 ms, elapsed = 3.90005 ms.
+Total time required for dc analysis `dcOp': CPU = 1.51 ms, elapsed = 3.93987 ms, util. = 38.3%.
+Time accumulated: CPU = 289.635 ms, elapsed = 716.177 ms.
+Peak resident memory used = 126 Mbytes.
+
+dcOpInfo: writing operating point information to rawfile.
+
+Opening the PSF file ../psf/dcOpInfo.info ...
+
+******************************************
+DC Analysis `dc': IDS1 = (10e-09 -> 1e-03)
+******************************************
+
+Opening the PSF file ../psf/dc.dc ...
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 1 pS
+    rabsshort = 1 mOhm
+    dc: IDS1 = 14.13e-09      (3 %), step = 1.536e-09       (1 %)
+    dc: IDS1 = 15.85e-09      (4 %), step = 1.724e-09       (1 %)
+    dc: IDS1 = 17.78e-09      (5 %), step = 1.934e-09       (1 %)
+    dc: IDS1 = 19.95e-09      (6 %), step = 2.17e-09        (1 %)
+    dc: IDS1 = 22.39e-09      (7 %), step = 2.435e-09       (1 %)
+    dc: IDS1 = 25.12e-09      (8 %), step = 2.732e-09       (1 %)
+    dc: IDS1 = 28.18e-09      (9 %), step = 3.065e-09       (1 %)
+    dc: IDS1 = 31.62e-09     (10 %), step = 3.439e-09       (1 %)
+    dc: IDS1 = 35.48e-09     (11 %), step = 3.859e-09       (1 %)
+    dc: IDS1 = 39.81e-09     (12 %), step = 4.329e-09       (1 %)
+    dc: IDS1 = 44.67e-09     (13 %), step = 4.858e-09       (1 %)
+    dc: IDS1 = 50.12e-09     (14 %), step = 5.45e-09        (1 %)
+    dc: IDS1 = 56.23e-09     (15 %), step = 6.115e-09       (1 %)
+    dc: IDS1 = 63.1e-09      (16 %), step = 6.862e-09       (1 %)
+    dc: IDS1 = 70.79e-09     (17 %), step = 7.699e-09       (1 %)
+    dc: IDS1 = 79.43e-09     (18 %), step = 8.638e-09       (1 %)
+    dc: IDS1 = 89.13e-09     (19 %), step = 9.692e-09       (1 %)
+    dc: IDS1 = 100e-09       (20 %), step = 10.87e-09       (1 %)
+    dc: IDS1 = 112.2e-09     (21 %), step = 12.2e-09        (1 %)
+    dc: IDS1 = 125.9e-09     (22 %), step = 13.69e-09       (1 %)
+    dc: IDS1 = 141.3e-09     (23 %), step = 15.36e-09       (1 %)
+    dc: IDS1 = 158.5e-09     (24 %), step = 17.24e-09       (1 %)
+    dc: IDS1 = 177.8e-09     (25 %), step = 19.34e-09       (1 %)
+    dc: IDS1 = 199.5e-09     (26 %), step = 21.7e-09        (1 %)
+    dc: IDS1 = 223.9e-09     (27 %), step = 24.35e-09       (1 %)
+    dc: IDS1 = 251.2e-09     (28 %), step = 27.32e-09       (1 %)
+    dc: IDS1 = 281.8e-09     (29 %), step = 30.65e-09       (1 %)
+    dc: IDS1 = 316.2e-09     (30 %), step = 34.39e-09       (1 %)
+    dc: IDS1 = 354.8e-09     (31 %), step = 38.59e-09       (1 %)
+    dc: IDS1 = 398.1e-09     (32 %), step = 43.29e-09       (1 %)
+    dc: IDS1 = 446.7e-09     (33 %), step = 48.58e-09       (1 %)
+    dc: IDS1 = 501.2e-09     (34 %), step = 54.5e-09        (1 %)
+    dc: IDS1 = 562.3e-09     (35 %), step = 61.15e-09       (1 %)
+    dc: IDS1 = 631e-09       (36 %), step = 68.62e-09       (1 %)
+    dc: IDS1 = 707.9e-09     (37 %), step = 76.99e-09       (1 %)
+    dc: IDS1 = 794.3e-09     (38 %), step = 86.38e-09       (1 %)
+    dc: IDS1 = 891.3e-09     (39 %), step = 96.92e-09       (1 %)
+    dc: IDS1 = 1e-06         (40 %), step = 108.7e-09       (1 %)
+    dc: IDS1 = 1.122e-06     (41 %), step = 122e-09         (1 %)
+    dc: IDS1 = 1.259e-06     (42 %), step = 136.9e-09       (1 %)
+    dc: IDS1 = 1.413e-06     (43 %), step = 153.6e-09       (1 %)
+    dc: IDS1 = 1.585e-06     (44 %), step = 172.4e-09       (1 %)
+    dc: IDS1 = 1.778e-06     (45 %), step = 193.4e-09       (1 %)
+    dc: IDS1 = 1.995e-06     (46 %), step = 217e-09         (1 %)
+    dc: IDS1 = 2.239e-06     (47 %), step = 243.5e-09       (1 %)
+    dc: IDS1 = 2.512e-06     (48 %), step = 273.2e-09       (1 %)
+    dc: IDS1 = 2.818e-06     (49 %), step = 306.5e-09       (1 %)
+    dc: IDS1 = 3.162e-06     (50 %), step = 343.9e-09       (1 %)
+    dc: IDS1 = 3.548e-06     (51 %), step = 385.9e-09       (1 %)
+    dc: IDS1 = 3.981e-06     (52 %), step = 432.9e-09       (1 %)
+    dc: IDS1 = 4.467e-06     (53 %), step = 485.8e-09       (1 %)
+    dc: IDS1 = 5.012e-06     (54 %), step = 545e-09         (1 %)
+    dc: IDS1 = 5.623e-06     (55 %), step = 611.5e-09       (1 %)
+    dc: IDS1 = 6.31e-06      (56 %), step = 686.2e-09       (1 %)
+    dc: IDS1 = 7.079e-06     (57 %), step = 769.9e-09       (1 %)
+    dc: IDS1 = 7.943e-06     (58 %), step = 863.8e-09       (1 %)
+    dc: IDS1 = 8.913e-06     (59 %), step = 969.2e-09       (1 %)
+    dc: IDS1 = 10e-06        (60 %), step = 1.087e-06       (1 %)
+    dc: IDS1 = 11.22e-06     (61 %), step = 1.22e-06        (1 %)
+    dc: IDS1 = 12.59e-06     (62 %), step = 1.369e-06       (1 %)
+    dc: IDS1 = 14.13e-06     (63 %), step = 1.536e-06       (1 %)
+    dc: IDS1 = 15.85e-06     (64 %), step = 1.724e-06       (1 %)
+    dc: IDS1 = 17.78e-06     (65 %), step = 1.934e-06       (1 %)
+    dc: IDS1 = 19.95e-06     (66 %), step = 2.17e-06        (1 %)
+    dc: IDS1 = 22.39e-06     (67 %), step = 2.435e-06       (1 %)
+    dc: IDS1 = 25.12e-06     (68 %), step = 2.732e-06       (1 %)
+    dc: IDS1 = 28.18e-06     (69 %), step = 3.065e-06       (1 %)
+    dc: IDS1 = 31.62e-06     (70 %), step = 3.439e-06       (1 %)
+    dc: IDS1 = 35.48e-06     (71 %), step = 3.859e-06       (1 %)
+    dc: IDS1 = 39.81e-06     (72 %), step = 4.329e-06       (1 %)
+    dc: IDS1 = 44.67e-06     (73 %), step = 4.858e-06       (1 %)
+    dc: IDS1 = 50.12e-06     (74 %), step = 5.45e-06        (1 %)
+    dc: IDS1 = 56.23e-06     (75 %), step = 6.115e-06       (1 %)
+    dc: IDS1 = 63.1e-06      (76 %), step = 6.862e-06       (1 %)
+    dc: IDS1 = 70.79e-06     (77 %), step = 7.699e-06       (1 %)
+    dc: IDS1 = 79.43e-06     (78 %), step = 8.638e-06       (1 %)
+    dc: IDS1 = 89.13e-06     (79 %), step = 9.692e-06       (1 %)
+    dc: IDS1 = 100e-06       (80 %), step = 10.87e-06       (1 %)
+    dc: IDS1 = 112.2e-06     (81 %), step = 12.2e-06        (1 %)
+    dc: IDS1 = 125.9e-06     (82 %), step = 13.69e-06       (1 %)
+    dc: IDS1 = 141.3e-06     (83 %), step = 15.36e-06       (1 %)
+    dc: IDS1 = 158.5e-06     (84 %), step = 17.24e-06       (1 %)
+    dc: IDS1 = 177.8e-06     (85 %), step = 19.34e-06       (1 %)
+    dc: IDS1 = 199.5e-06     (86 %), step = 21.7e-06        (1 %)
+    dc: IDS1 = 223.9e-06     (87 %), step = 24.35e-06       (1 %)
+    dc: IDS1 = 251.2e-06     (88 %), step = 27.32e-06       (1 %)
+    dc: IDS1 = 281.8e-06     (89 %), step = 30.65e-06       (1 %)
+    dc: IDS1 = 316.2e-06     (90 %), step = 34.39e-06       (1 %)
+    dc: IDS1 = 354.8e-06     (91 %), step = 38.59e-06       (1 %)
+    dc: IDS1 = 398.1e-06     (92 %), step = 43.29e-06       (1 %)
+    dc: IDS1 = 446.7e-06     (93 %), step = 48.58e-06       (1 %)
+    dc: IDS1 = 501.2e-06     (94 %), step = 54.5e-06        (1 %)
+    dc: IDS1 = 562.3e-06     (95 %), step = 61.15e-06       (1 %)
+    dc: IDS1 = 631e-06       (96 %), step = 68.62e-06       (1 %)
+    dc: IDS1 = 707.9e-06     (97 %), step = 76.99e-06       (1 %)
+    dc: IDS1 = 794.3e-06     (98 %), step = 86.38e-06       (1 %)
+    dc: IDS1 = 891.3e-06     (99 %), step = 96.92e-06       (1 %)
+    dc: IDS1 = 1e-03        (100 %), step = 108.7e-06       (1 %)
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I0.G) = 1.427 V
+I: I(I0.V1:p) = 0 A
+DC simulation time: CPU = 23.696 ms, elapsed = 25.7759 ms.
+
+Notice from spectre at IDS1 = 1e-03 during DC analysis `dc'.
+    The value of parameter 'IDS1' has been reset to the original value 1e-06.
+
+Total time required for dc analysis `dc': CPU = 23.714 ms, elapsed = 25.794 ms, util. = 91.9%.
+Time accumulated: CPU = 314.681 ms, elapsed = 745.623 ms.
+Peak resident memory used = 127 Mbytes.
+
+modelParameter: writing model parameter values to rawfile.
+
+Opening the PSF file ../psf/modelParameter.info ...
+element: writing instance parameter values to rawfile.
+
+Opening the PSF file ../psf/element.info ...
+outputParameter: writing output parameter values to rawfile.
+
+Opening the PSF file ../psf/outputParameter.info ...
+designParamVals: writing netlist parameters to rawfile.
+
+Opening the PSFASCII file ../psf/designParamVals.info ...
+primitives: writing primitives to rawfile.
+
+Opening the PSFASCII file ../psf/primitives.info.primitives ...
+subckts: writing subcircuits to rawfile.
+
+Opening the PSFASCII file ../psf/subckts.info.subckts ...
+Licensing Information:
+Lic Summary:
+[06:17:02.423737] Cdslmd servers:3000@lic08.ug.kth.se
+[06:17:02.423753] Feature usage summary:
+[06:17:02.423754] Virtuoso_Multi_mode_Simulation
+
+
+Aggregate audit (6:17:02 AM, Sat Feb 17, 2024):
+Time used: CPU = 325 ms, elapsed = 779 ms, util. = 41.8%.
+Time spent in licensing: elapsed = 779 ms, percentage of total = 100%.
+Peak memory used = 128 Mbytes.
+Simulation started at: 6:17:02 AM, Sat Feb 17, 2024, ended at: 6:17:02 AM, Sat Feb 17, 2024, with elapsed time (wall clock): 779 ms.
+spectre completes with 0 errors, 2 warnings, and 5 notices.

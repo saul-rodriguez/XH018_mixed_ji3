@@ -1,0 +1,18 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Sun Feb 18 11:56:44 2024 
+Best design point: 2
+Design specs: 
+	CHARACTERIZATION:DC_BIAS_NMOS_L:1	corner	Nominal - 
+Design parameters: 
+	L1		1u
+	NF1		1
+	VDS		50m
+	VGS		1
+	WF1		10u
+
+Interactive.8
+Number of points completed: 67
+Number of simulation errors: 0
+Interactive.8 completed. 
+Current time: Sun Feb 18 11:57:01 2024 

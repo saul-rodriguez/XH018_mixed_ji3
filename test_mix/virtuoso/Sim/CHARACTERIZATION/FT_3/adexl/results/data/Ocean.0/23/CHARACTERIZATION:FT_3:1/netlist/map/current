@@ -1,0 +1,18 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "FT_3"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/FT_3/adexl/results/data/Ocean.0/23/CHARACTERIZATION:FT_3:1/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "CHARACTERIZATION/FT_3/schematic" "FT_3" )
+ )
+( "FT_3" "ihnl/cds0/map" )
+ )

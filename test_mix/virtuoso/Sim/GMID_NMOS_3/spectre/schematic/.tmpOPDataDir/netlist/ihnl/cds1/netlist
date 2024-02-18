@@ -1,0 +1,5 @@
+
+// Library name: CHARACTERIZATION
+// Cell name: GMID_NMOS_3
+// View name: schematic
+I0 BIAS_NMOS_3 IDS=IDS1 VDS=VDS1 WF=WF1 L=L1 NF=NF1

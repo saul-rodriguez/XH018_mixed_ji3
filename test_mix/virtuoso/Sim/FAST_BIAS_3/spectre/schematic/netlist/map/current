@@ -1,0 +1,22 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "FAST_BIAS_3"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd!"
+  hierDelim "."
+  netlistDir "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/FAST_BIAS_3/spectre/schematic/netlist"
+ )
+( net
+( "gnd!" "0" )
+ )
+( model
+( "CHARACTERIZATION/FAST_BIAS_3/schematic" "FAST_BIAS_3" )
+( "CHARACTERIZATION/BIAS_NMOS_3/schematic" "BIAS_NMOS_3" )
+( "CHARACTERIZATION/BIAS_PMOS_3/schematic" "BIAS_PMOS_3" )
+ )
+( "BIAS_PMOS_3" "ihnl/cds1/map" )
+( "BIAS_NMOS_3" "ihnl/cds0/map" )
+( "FAST_BIAS_3" "ihnl/cds2/map" )
+ )

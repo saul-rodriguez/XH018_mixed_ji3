@@ -1,14 +1,14 @@
-\# Program start time:     UTC 2024.02.09 10:27:00.869
-\# Local time: EST (UTC-05:00) 2024.02.09 05:27:00.869
+\# Program start time:     UTC 2024.02.18 15:39:20.036
+\# Local time: EST (UTC-05:00) 2024.02.18 10:39:20.036
 \o Program:		@(#)$CDS: virtuoso version 6.1.8-64b 10/11/2023 09:56 (cpgbld01) $
 \o Hierarchy:		/home/saul/cadence/installs/IC618/tools.lnx86/dfII/
 \o Sub version:		sub-version  IC6.1.8-64b.500.34  (64-bit addresses)
-\# Command line:	/pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso22965 -mpshost phoenix -davinciService DaVinciService_22965_1707468654 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job33.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_22965 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 33
+\# Command line:	/pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso27198 -mpshost phoenix -davinciService DaVinciService_27198_1708270441 -log /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/logs_saul/logs0/Job33.log -licenseLockFileName /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/.tmp_saul/.phoenix_27198 -interactiveA -interactiveE -interactiveRTT -nostdin -nographE -axlChildIdFlag 33
 \# Host name (type):	phoenix (x86_64)
 \# Operating system:	Linux 3.10.0-1160.105.1.el7.x86_64 #1 SMP Thu Dec 7 15:39:45 UTC 2023
 \# Linux /etc/issue:	\S
 \# Linux /etc/issue:	Kernel \r on an \m
-\# X display name (WxH):	:2622 (1024x868)
+\# X display name (WxH):	:4219 (1024x868)
 \# Available geometry:			TL(0:0) BR(1023:867)
 \# X server:			The X.Org Foundation
 \# Depth of Visual (Root):	24 (24)
@@ -19,10 +19,10 @@
 \# Max data seg size:	     unlimited
 \# Max process size:	     unlimited
 \# Initial sbrk value:	        633 MB
-\# Available memory:	     19,672 MB
+\# Available memory:	     18,130 MB
 \# System memory:	     23,948 MB
 \# Maximum memory size:	     23,526 MB
-\# Max mem available:	     19,883 MB
+\# Max mem available:	     18,340 MB
 \# Initial memory used:	        210 MB
 \#        process size:	      1,813 MB
 \# Thread usage limits (effective/default):	maxthreads 4096/4096 maxload 6.00/6.00
@@ -30,7 +30,7 @@
 \# Window Manager:	other
 \# User Name:		saul
 \o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
-\# Process Id:		17673
+\# Process Id:		5564
 \o 
 \o COPYRIGHT (C) 1992-2023  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
 \o           (C) 1992-2023  UNIX SYSTEMS Laboratories INC.,
@@ -61,6 +61,7 @@
 \o Loading asimenv.cxt 
 \o Loading dal.cxt 
 \o Loading awv.cxt 
+\# Memory report: using         314 MB, process size 1,924 MB at UTC 2024.02.18 15:39:30.092
 \o Loading socket.cxt 
 \o Loading par.cxt 
 \o Loading alvs.cxt 
@@ -74,13 +75,12 @@
 \o Loading cpf.cxt 
 \o Loading cli.cxt 
 \o Loading lp.cxt 
-\o INFO (ELI-00302) Connecting to parent process (session=virtuoso22965, host=phoenix). Connection mode is ICRP. Total timeout is 180 seconds. Connection timeout is 90 seconds.
+\o INFO (ELI-00302) Connecting to parent process (session=virtuoso27198, host=phoenix). Connection mode is ICRP. Total timeout is 180 seconds. Connection timeout is 90 seconds.
 \o INFO (ELI-00303) Step 1: Connecting to parent. Time spent is 0 seconds.
-\o INFO (ELI-00304) The registration of the child 17673 within 90 seconds is being processed...
-\o INFO (ELI-00305) The result of registration is true. Time spent is 0 seconds.
-\o INFO (ELI-00308) The connection has ended. Result is true. Total time spent is 0 seconds.
-\# [05:27:00.512369] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
-\# Memory report: using         362 MB, process size 2,094 MB at UTC 2024.02.09 10:27:02.647
+\o INFO (ELI-00304) The registration of the child 5564 within 90 seconds is being processed...
+\o INFO (ELI-00305) The result of registration is true. Time spent is 1 seconds.
+\o INFO (ELI-00308) The connection has ended. Result is true. Total time spent is 1 seconds.
+\# [10:39:21.512385] Configured Lic search path (22.01-s002): 3000@lic08.ug.kth.se
 \o Loading .cdsinit for the XH018 X-Fab XKit.
 \o     LOAD xh018_1143 SPECIFIC CALL-BACK ROUTINES
 \o     LOAD ALL AVAILABLE P-CELL FUNCTIONS
@@ -111,6 +111,10 @@
 \o Loading msgHandler.cxt 
 \o Loading AMSOSS.cxt 
 \o Loading AMS.cxt 
+\# Available memory:         15,640 MB at UTC 2024.02.18 15:39:33.076
+\# Memory report: Maximum memory size now 16,102 MB at UTC 2024.02.18 15:39:33.076
+\# Thread usage report: 11 active threads, active load 1.40 at UTC 2024.02.18 15:39:33.076
+\# Memory report: using         462 MB, process size 2,194 MB at UTC 2024.02.18 15:39:33.076
 \o  --> Finished setting the required PDK definitions
 \o  --> Setting the recommended EDA tool defaults...
 \o  --> Finished setting the recommended EDA tool defaults
@@ -122,32 +126,26 @@
 \p > 
 \# Loading perfDiag...
 \# (PerfDiag): Set GDB path to environment variable 'gdbPath' (gdb).
-\# Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 17673' to open it when Virtuoso freezes.
+\# Performance Diagnostic tool is installed. You can access PerfDiag from CIW Tools or use the shell command 'cdsPerfDiag -p 5564' to open it when Virtuoso freezes.
 \# (PerfDiag): Loading backtrace from /pkg/cadence/installs/IC618/tools/lib/64bit/cdnslibunwind.so
 \o Loading vqp.cxt 
 \o Loading hdlPkg.cxt 
+\o Loading simui.cxt 
 \o 
 \o 
 \o *Info*    Configuring the session ...
 \o 
-\o Loading simui.cxt 
-\o 	Library      = TOP
-\o 	Cell         = top_tb
-\o 	View         = config_functional
-\o 	Simulator    = ams
+\o 	Library      = CHARACTERIZATION
+\o 	Cell         = DC_BIAS_NMOS
+\o 	View         = schematic
+\o 	Netlist  	  = nil
+\o 	Simulator    = spectre
 \o 	State Path   = $AXL_SETUPDB_DIR/test_states
-\o 	State Name   = TOP:top_tb:1_none_Interactive.12
-\o 	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.12.rdb
-\o 	Results Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1
-\o 	Results Loc  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data
-\o 	Project Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim
-\o 	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl
-\o 	File Encoding = 0
+\o 	State Name   = CHARACTERIZATION:DC_BIAS_NMOS:1_CHARACTERIZATION:DC_BIAS_NMOS:1_Feb_18_10_39_15_2024_Ocean.17
+\o 	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.17.rdb
+\o 	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/CHARACTERIZATION/DC_BIAS_NMOS/adexl
 \o 
 \o 
-\o WARNING (AMS-1058): The rule 'ConnRules_inhconn_full_fast_gnd' has been specified twice for the library 'xfab_connectLib' in the connectRules.il file. Therefore, the second occurrence of this rule has been ignored.
-\o 
-\# Memory report: using         482 MB, process size 2,221 MB at UTC 2024.02.09 10:27:04.177
 \o 
 \o *Info*    The auto suspension is disabled.
 \o 
@@ -168,714 +166,119 @@
 \o 
 \o 
 \o 
-\o *Info*    Run start for Point ID (4 1) on testbench [ TOP:top_tb:1 ].
+\o *Info*    Run start for Point ID (0 4) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
 \o 
 \o Resetting statistical vars
 \o 
 \o *Info*    Setting parameter values ...
 \o 
+\o Setting var VDS = "1"
+\o Setting var VGS = "0.3"
 \o Setting var temperature = "27"
 \o Setting temp(T) = 27
 \o 
 \o *Info*    Netlist Directory =
-\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1/netlist
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.17/4/CHARACTERIZATION:DC_BIAS_NMOS:1/netlist
 \o 
 \o 
 \o *Info*    Data Directory    =
-\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.17/4/CHARACTERIZATION:DC_BIAS_NMOS:1
 \o 
 \o 
-\o *Info*    Creating Netlist for Point ID (4 1)
+\o *Info*    Creating Netlist for Point ID (0 4)
 \o 
 \o generate netlist...
-\o INFO (AMS-2142): The AMS Unified Netlisting (AMS UNL) flow has been enabled.
-\w *WARNING* (AMS-2187): Support for the 'Connect Rule/Connect Module Based Setup' option in the Interface Element (IE) Setup form will be removed in a future release. Cadence recommends that you switch to use the 'Interface Element/IE-card Based Setup (OSS/UNL)' option in this form.
-\o Loading seCore.cxt 
-\o INFO (AMS-2031): The instances bound to the views specified in the 'Netlist using spectre CDF simInfo'
-\o  field in the Netlister form (Simulation->Options->Netlister) will be netlisted as
-\o  analog primitives using the Spectre CDF simulation information.
-\o function ansCdlCompPrim redefined
-\o Loading verilogI.cxt 
-\# [05:27:05.083648] Periodic Lic check successful
-\# [05:27:05.083650] Feature usage summary:
-\o Begin Netlisting Feb  9 05:27:05 2024
-\o INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the 
-\o "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
-\o simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file 
-\o before invoking Verilog netlister.
-\o  
-\o INFO (VLOGNET-62): Database internal net names will be printed for floating instance ports. To prevent 
-\o them from being printed, set simVerilogProcessNullPorts = t either in CIW or 
-\o the .simrc file.
-\o  
-\o INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist Configuration list. 
-\o If you want to print only those cellviews that need to be re-netlisted in the 
-\o list, set simVerilogIncrementalNetlistConfigList = t either in CIW or the 
-\o .simrc file.
-\o  
-\o INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to "z". To get inout 
-\o pins with initial state of "0", set hnlVerilogIOInitStimulusStr = "0" 
-\o either in CIW or the .simrc file.
-\o  
-\# Memory report: using         674 MB, process size 2,413 MB at UTC 2024.02.09 10:27:07.780
-\o INFO (AMS-2150): Generating the 'changedVarsSummary' file in the 'netlist' directory. This file prints the values of the netlister control variables, which are different from their default values. To disable the file creation, type 'envSetVal("ams.netlisterOpts" "print_control_vars" 'boolean nil )' in the '.cdsinit' file.
-\o INFO (VLOGNET-117): Re-netlisting the entire design.
-\o 
-\o INFO (VLOGNET-118): Using connection by name (explicit connections) for all stopping and 
-\o non-stopping cells.
-\o  
-\o Loading digitalSim.cxt 
-\o WARNING (VLOGNET-110): The cell 'TOP/top_tb/schematic' has no ports. Make sure that this was the intended 
-\o design.
-\o  
-\o INFO (VLOGNET-126): ---------- Beginning netlist configuration information ----------
-\o 
-\o 
-\o 
-\o LIB NAME                    CELL NAME                   VIEW NAME            NOTE             
-\o ---------                   ---------                   ---------            ----             
-\o 
-\o IO_CELLS_JIC3V              VDDORPADPC                  verilogams           *Stopping View*  
-\o IO_CELLS_JIC3V              VDDPADPC                    verilogams           *Stopping View*  
-\o IO_CELLS_JIC3V              GNDORPADPC                  verilogams           *Stopping View*  
-\o IO_CELLS_JIC3V              PSUBPADPC                   verilogams           *Stopping View*  
-\o IO_CELLS_JIC3V              GNDPADPC                    verilogams           *Stopping View*  
-\o VLG_PRIMITIVES              check_gnd                   verilogams           *Stopping View*  
-\o VLG_PRIMITIVES              check_buf                   functional           *Stopping View*  
-\o VLG_PRIMITIVES              check_vdd                   verilogams           *Stopping View*  
-\o IO_CELLS_JIC3V              PWRCUTDCPC                  verilogams           *Stopping View*  
-\o VLG_PRIMITIVES              resistor_ams                verilogams           *Stopping View*  
-\o IO_CELLS_JIC3V              APR00DPC                    verilogams           *Stopping View*  
-\o PRIMLIB                     ddnw                        spectre              *Stopping View*  
-\o PRIMLIB                     dhpw                        spectre              *Stopping View*  
-\o PRIMLIB                     rdp_io                      spectre              *Stopping View*  
-\o PRIMLIB                     dphnw                       spectre              *Stopping View*  
-\o PRIMLIB                     pmb                         spectre              *Stopping View*  
-\o PRIMLIB                     dp3                         spectre              *Stopping View*  
-\o PRIMLIB                     rnp1                        spectre              *Stopping View*  
-\o PRIMLIB                     pe3i                        spectre              *Stopping View*  
-\o PRIMLIB                     rdp3                        spectre              *Stopping View*  
-\o PRIMLIB                     dnpdd_scr                   spectre              *Stopping View*  
-\o PRIMLIB                     dpdd_scr                    spectre              *Stopping View*  
-\o PRIMLIB                     dpdnw                       spectre              *Stopping View*  
-\o PRIMLIB                     rpp1s                       spectre              *Stopping View*  
-\o PRIMLIB                     ne3                         spectre              *Stopping View*  
-\o PRIMLIB                     pe3                         spectre              *Stopping View*  
-\o PRIMLIB                     nedia                       spectre              *Stopping View*  
-\o PRIMLIB                     rpp1k1_3                    spectre              *Stopping View*  
-\o COUNTER_JI3                 counter                     functional           *Stopping View*  
-\o COUNTER_JI3                 counter_stimulus            verilogams           *Stopping View*  
-\o analogLib                   vdc                         spectre              *Stopping View*  
-\o analogLib                   res                         spectre              *Stopping View*  
-\o analogLib                   vpulse                      spectre              *Stopping View*  
-\o TOP                         top_tb                      schematic                             
-\o TOP                         top                         schematic                             
-\o INV_HV                      inv_hv                      schematic                             
-\o INV_LP                      inv                         schematic                             
-\o IORING                      ioring                      schematic                             
-\o HV_CELLS                    HVD4SJD1R5PKFs              schematic                             
-\o HV_CELLS                    ioh_c5pk                    schematic                             
-\o HV_CELLS                    ioh_pmbsabhv_750            schematic                             
-\o HV_CELLS                    ioh_pmbsab_15_10            schematic                             
-\o HV_CELLS                    ioh_pe3isabhv_1050gcr       schematic                             
-\o HV_CELLS                    ioh_pe3isab_15_04           schematic                             
-\o HV_CELLS                    ioh_iscrd2_4x100            schematic                             
-\o HV_CELLS                    HVDD4D2PK                   schematic                             
-\o HV_CELLS                    ioh_d2pk                    schematic                             
-\o HV_CELLS                    HVDD4DJ5PKFs                schematic                             
-\o HV_CELLS                    ioh_d5pk                    schematic                             
-\o HV_CELLS                    ioh_pe3isabhv_2800gcr       schematic                             
-\o HV_CELLS                    ioh_pe3isab_40_04           schematic                             
-\o HV_CELLS                    ioh_pmbsabhv_2000           schematic                             
-\o HV_CELLS                    ioh_pmbsab_40_10            schematic                             
-\o HV_CELLS                    ioh_dhpw_2x100_stack3       schematic                             
-\o HV_CELLS                    ioh_dhpw_2x100              schematic                             
-\o IO_CELLS_JIC3V              APR04DPC                    verilogams                            
-\o IO_CELLS_JIC3V              BT4PC                       verilogams                            
-\o IO_CELLS_JIC3V              ICPC                        verilogams                            
-\o 
-\o ---------- End of netlist configuration information   ----------
-\o function ansCdlCompPrim redefined
 \o Loading hnlInit.cxt 
+\o Loading seCore.cxt 
 \o function ansCdlCompPrim redefined
 \o function ansCdlCompPrim redefined
-\o Initializing the control file using cp:
-\o     cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1/netlist/analog/control
-\o Copying Spectre source file 'spectre.inp'
-\o Copying Spectre command file 'spectre.sim'
-\o Running netlist assembly..
-\o .......
-\# Available memory:         19,349 MB at UTC 2024.02.09 10:27:13.408
-\# Memory report: Maximum memory size now 20,091 MB at UTC 2024.02.09 10:27:13.408
-\# Thread usage report: 12 active threads, active load 1.40 at UTC 2024.02.09 10:27:13.408
-\o End netlisting Feb  9 05:27:13 2024
-\o INFO (AMS-1241): AMS UNL netlisting has completed successfully.
-\o To view the modules, right-click the test name on the Tests and Analyses 
-\o assistant pane and choose Netlist->Display menu option.
-\o       ...successful.
-\o create cds_globals...
-\o Loading cdf.cxt 
+\# [10:39:34.028289] Periodic Lic check successful
+\# [10:39:34.028291] Feature usage summary:
+\o Begin Incremental Netlisting Feb 18 10:39:34 2024
+\o End netlisting Feb 18 10:39:34 2024
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
 \o       ...successful.
 \o compose simulator input file...
 \o       ...successful.
 \o 
-\o *Info*    Running simulation on testbench [ TOP:top_tb:1 ] for Point
-\o           ID (4 1).
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ] for Point ID (0 4).
 \o 
-\o Delete simulation data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1/psf.
-\o create cds_globals...
-\o       ...successful.
-\o compose simulator input file...
-\o       ...successful.
-\o validating simulator hierarchy...
-\o       ...successful.
-\o running...
-\o To check for output from compilation, elaboration and simulation run, 
-\o right-click on the test name, result name, or any value in the "Results" 
-\o tab of the Outputs section and choose "Output Log" menu option.
-\o Loading paraplot.cxt 
-\# Memory report: using         786 MB, process size 2,575 MB at UTC 2024.02.09 10:27:22.947
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.17/4/CHARACTERIZATION:DC_BIAS_NMOS:1/psf.
+\o simulate...
+\# Memory report: using         601 MB, process size 2,390 MB at UTC 2024.02.18 15:39:36.098
 \o INFO (ADE-3071): Simulation completed successfully.
 \o reading simulation data...
 \o       ...successful.
 \o *Info*    Client has finished evaluating ... 
 \o 
 \o 
-\o *Info*    Run complete for Point ID (4 1) on testbench [ TOP:top_tb:1
-\o           ].
-\o 
-\o 
-\o 
-\o 
-\o 
-\o Simulation design variables differ from those on the cellView,
-\o they have been saved in the file "/tmp/saved-design-variables".
-\o To save future changes, copy variables to cellView before exiting.
-\o 
-\o 
-\o *Info*    Configuring the session ...
-\o 
-\o 	Library      = TOP
-\o 	Cell         = top_tb
-\o 	View         = config_sch
-\o 	Simulator    = ams
-\o 	State Path   = $AXL_SETUPDB_DIR/test_states
-\o 	State Name   = TOP:top_tb:1:1_TOP:top_tb:1:1_state_Interactive.12
-\o 	Results DB   = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl/results/data/Interactive.12.rdb
-\o 	Results Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1:1
-\o 	Results Loc  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data
-\o 	Project Dir  = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim
-\o 	Setup DB loc = /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/TOP/top_tb/adexl
-\o 	File Encoding = 0
-\o 
-\o 
-\o 
-\o *Info*    The auto suspension is disabled.
+\o *Info*    Run complete for Point ID (0 4) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
 \o 
 \o 
 \o 
 \o 
 \o 
 \o 
-\o *Info*    Run start for Point ID (4 1) on testbench [ TOP:top_tb:1:1
-\o           ].
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 18) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
 \o 
 \o Resetting statistical vars
 \o 
 \o *Info*    Setting parameter values ...
 \o 
-\o Setting var temperature = "27"
-\o Setting temp(T) = 27
+\o Setting var VGS = "1.7"
 \o 
 \o *Info*    Netlist Directory =
-\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1:1/netlist
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.17/18/CHARACTERIZATION:DC_BIAS_NMOS:1/netlist
 \o 
 \o 
 \o *Info*    Data Directory    =
-\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1:1
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.17/18/CHARACTERIZATION:DC_BIAS_NMOS:1
 \o 
 \o 
-\o *Info*    Creating Netlist for Point ID (4 1)
+\o *Info*    Creating Netlist for Point ID (0 18)
 \o 
 \o generate netlist...
-\o INFO (AMS-2142): The AMS Unified Netlisting (AMS UNL) flow has been enabled.
-\w *WARNING* (AMS-2187): Support for the 'Connect Rule/Connect Module Based Setup' option in the Interface Element (IE) Setup form will be removed in a future release. Cadence recommends that you switch to use the 'Interface Element/IE-card Based Setup (OSS/UNL)' option in this form.
-\o INFO (AMS-2031): The instances bound to the views specified in the 'Netlist using spectre CDF simInfo'
-\o  field in the Netlister form (Simulation->Options->Netlister) will be netlisted as
-\o  analog primitives using the Spectre CDF simulation information.
 \o function ansCdlCompPrim redefined
 \o function ansCdlCompPrim redefined
-\o Initializing the control file using cp:
-\o     cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.ver /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1:1/netlist/digital/control
-\o Begin Netlisting Feb  9 05:27:29 2024
-\o INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the 
-\o "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
-\o simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file 
-\o before invoking Verilog netlister.
-\o  
-\o INFO (VLOGNET-62): Database internal net names will be printed for floating instance ports. To prevent 
-\o them from being printed, set simVerilogProcessNullPorts = t either in CIW or 
-\o the .simrc file.
-\o  
-\o INFO (VLOGNET-64): All cellviews in the design will be printed in the Netlist Configuration list. 
-\o If you want to print only those cellviews that need to be re-netlisted in the 
-\o list, set simVerilogIncrementalNetlistConfigList = t either in CIW or the 
-\o .simrc file.
-\o  
-\o INFO (VLOGNET-68): The initial state of stimulus of all inout pins is set to "z". To get inout 
-\o pins with initial state of "0", set hnlVerilogIOInitStimulusStr = "0" 
-\o either in CIW or the .simrc file.
-\o  
-\o INFO (AMS-2150): Generating the 'changedVarsSummary' file in the 'netlist' directory. This file prints the values of the netlister control variables, which are different from their default values. To disable the file creation, type 'envSetVal("ams.netlisterOpts" "print_control_vars" 'boolean nil )' in the '.cdsinit' file.
-\o INFO (VLOGNET-117): Re-netlisting the entire design.
+\o Begin Incremental Netlisting Feb 18 10:39:36 2024
+\o End netlisting Feb 18 10:39:36 2024
 \o 
-\o INFO (VLOGNET-118): Using connection by name (explicit connections) for all stopping and 
-\o non-stopping cells.
-\o  
-\o WARNING (VLOGNET-110): The cell 'D_CELLS_JI3V/DECAP5JI3V/cmos_sch' has no ports. Make sure that this was the intended 
-\o design.
-\o  
-\o WARNING (VLOGNET-110): The cell 'D_CELLS_JI3V/DECAP7JI3V/cmos_sch' has no ports. Make sure that this was the intended 
-\o design.
-\o  
-\o WARNING (VLOGNET-110): The cell 'D_CELLS_JI3V/DECAP10JI3V/cmos_sch' has no ports. Make sure that this was the intended 
-\o design.
-\o  
-\o WARNING (VLOGNET-110): The cell 'D_CELLS_JI3V/DECAP15JI3V/cmos_sch' has no ports. Make sure that this was the intended 
-\o design.
-\o  
-\o WARNING (VLOGNET-110): The cell 'D_CELLS_JI3V/DECAP25JI3V/cmos_sch' has no ports. Make sure that this was the intended 
-\o design.
-\o  
-\o INFO (VLOGNET-169): Module port ordering for lib 'COUNTER_JI3', cell 'counter', view 'schematic' will be
-\o  done using the user specified port order as follows:
-\o 
-\o  => ("out<7:0>" "enable" "clk" "reset")
-\o 
-\o WARNING (VLOGNET-110): The cell 'TOP/top_tb/schematic' has no ports. Make sure that this was the intended 
-\o design.
-\o  
-\o INFO (VLOGNET-126): ---------- Beginning netlist configuration information ----------
-\o 
-\o 
-\o 
-\o LIB NAME                    CELL NAME                   VIEW NAME            NOTE             
-\o ---------                   ---------                   ---------            ----             
-\o 
-\o PRIMLIB                     dn3                         spectre              *Stopping View*  
-\o PRIMLIB                     rdn3                        spectre              *Stopping View*  
-\o PRIMLIB                     ne3i                        spectre              *Stopping View*  
-\o PRIMLIB                     rdp3                        spectre              *Stopping View*  
-\o PRIMLIB                     ddnwmv                      spectre              *Stopping View*  
-\o PRIMLIB                     dipdnwmv                    spectre              *Stopping View*  
-\o PRIMLIB                     pe3i                        spectre              *Stopping View*  
-\o PRIMLIB                     rpp1                        spectre              *Stopping View*  
-\o PRIMLIB                     dp3                         spectre              *Stopping View*  
-\o PRIMLIB                     ddnw                        spectre              *Stopping View*  
-\o PRIMLIB                     dhpw                        spectre              *Stopping View*  
-\o PRIMLIB                     rdp_io                      spectre              *Stopping View*  
-\o PRIMLIB                     dphnw                       spectre              *Stopping View*  
-\o PRIMLIB                     pmb                         spectre              *Stopping View*  
-\o PRIMLIB                     rnp1                        spectre              *Stopping View*  
-\o PRIMLIB                     dnpdd_scr                   spectre              *Stopping View*  
-\o PRIMLIB                     dpdd_scr                    spectre              *Stopping View*  
-\o PRIMLIB                     dpdnw                       spectre              *Stopping View*  
-\o PRIMLIB                     rpp1s                       spectre              *Stopping View*  
-\o PRIMLIB                     ne3                         spectre              *Stopping View*  
-\o PRIMLIB                     pe3                         spectre              *Stopping View*  
-\o PRIMLIB                     nedia                       spectre              *Stopping View*  
-\o PRIMLIB                     rpp1k1_3                    spectre              *Stopping View*  
-\o COUNTER_JI3                 counter_stimulus            verilogams           *Stopping View*  
-\o analogLib                   vdc                         spectre              *Stopping View*  
-\o analogLib                   res                         spectre              *Stopping View*  
-\o analogLib                   vpulse                      spectre              *Stopping View*  
-\o TOP                         top_tb                      schematic                             
-\o TOP                         top                         schematic                             
-\o COUNTER_JI3                 counter                     schematic                             
-\o D_CELLS_JI3V                DFRQJI3VX4                  cmos_sch                              
-\o D_CELLS_JI3V                BUJI3VX0                    cmos_sch                              
-\o D_CELLS_JI3V                BUJI3VX16                   cmos_sch                              
-\o D_CELLS_JI3V                ON211JI3VX1                 cmos_sch                              
-\o GATES_JI3V                  o2na3ji3v                   schematic                             
-\o D_CELLS_JI3V                DLY1JI3VX1                  cmos_sch                              
-\o D_CELLS_JI3V                AN21JI3VX1                  cmos_sch                              
-\o GATES_JI3V                  a2no2ji3v                   schematic                             
-\o D_CELLS_JI3V                AN22JI3VX1                  cmos_sch                              
-\o GATES_JI3V                  a22no2ji3v                  schematic                             
-\o D_CELLS_JI3V                DFRQJI3VX2                  cmos_sch                              
-\o D_CELLS_JI3V                EN2JI3VX0                   cmos_sch                              
-\o GATES_JI3V                  o2na2ji3v                   schematic                             
-\o D_CELLS_JI3V                NO2JI3VX0                   cmos_sch                              
-\o GATES_JI3V                  nor2ji3v                    schematic                             
-\o D_CELLS_JI3V                DFRQJI3VX1                  cmos_sch                              
-\o D_CELLS_JI3V                BUJI3VX1                    cmos_sch                              
-\o D_CELLS_JI3V                DECAP25JI3V                 cmos_sch                              
-\o D_CELLS_JI3V                DECAP15JI3V                 cmos_sch                              
-\o D_CELLS_JI3V                DECAP10JI3V                 cmos_sch                              
-\o D_CELLS_JI3V                DECAP7JI3V                  cmos_sch                              
-\o D_CELLS_JI3V                DECAP5JI3V                  cmos_sch                              
-\o D_CELLS_JI3V                BUJI3VX2                    cmos_sch                              
-\o D_CELLS_JI3V                DLY2JI3VX1                  cmos_sch                              
-\o D_CELLS_JI3V                INJI3VX0                    cmos_sch                              
-\o GATES_JI3V                  invrji3v                    schematic                             
-\o D_CELLS_JI3V                NA2JI3VX0                   cmos_sch                              
-\o GATES_JI3V                  nand2ji3v                   schematic                             
-\o INV_HV                      inv_hv                      schematic                             
-\o INV_LP                      inv                         schematic                             
-\o IORING                      ioring                      schematic                             
-\o HV_CELLS                    HVD4SJD1R5PKFs              schematic                             
-\o HV_CELLS                    ioh_c5pk                    schematic                             
-\o HV_CELLS                    ioh_pmbsabhv_750            schematic                             
-\o HV_CELLS                    ioh_pmbsab_15_10            schematic                             
-\o HV_CELLS                    ioh_pe3isabhv_1050gcr       schematic                             
-\o HV_CELLS                    ioh_pe3isab_15_04           schematic                             
-\o HV_CELLS                    ioh_iscrd2_4x100            schematic                             
-\o HV_CELLS                    HVDD4D2PK                   schematic                             
-\o HV_CELLS                    ioh_d2pk                    schematic                             
-\o HV_CELLS                    HVDD4DJ5PKFs                schematic                             
-\o HV_CELLS                    ioh_d5pk                    schematic                             
-\o HV_CELLS                    ioh_pe3isabhv_2800gcr       schematic                             
-\o HV_CELLS                    ioh_pe3isab_40_04           schematic                             
-\o HV_CELLS                    ioh_pmbsabhv_2000           schematic                             
-\o HV_CELLS                    ioh_pmbsab_40_10            schematic                             
-\o HV_CELLS                    ioh_dhpw_2x100_stack3       schematic                             
-\o HV_CELLS                    ioh_dhpw_2x100              schematic                             
-\o IO_CELLS_JIC3V              APR00DPC                    cmos_sch                              
-\o IO_CELLS_JIC3V              APR04DPC                    cmos_sch                              
-\o IO_CELLS_JIC3V              jio_anrdio_pc               cmos_sch                              
-\o IO_CELLS_JIC3V              BT4PC                       cmos_sch                              
-\o IO_CELLS_JIC3V              jio_ts4_pc                  cmos_sch                              
-\o IO_CELLS_JIC3V              jio_tsctrl_pc               cmos_sch                              
-\o IO_CELLS_JIC3V              jio_tp4_pc                  cmos_sch                              
-\o IO_CELLS_JIC3V              PWRCUTDCPC                  cmos_sch                              
-\o IO_CELLS_JIC3V              ICPC                        cmos_sch                              
-\o IO_CELLS_JIC3V              jio_esd1_pc                 cmos_sch                              
-\o IO_CELLS_JIC3V              jio_ne3is_pc                cmos_sch                              
-\o IO_CELLS_JIC3V              jio_resp_pc                 cmos_sch                              
-\o IO_CELLS_JIC3V              jio_bufc_pc                 cmos_sch                              
-\o IO_CELLS_JIC3V              jio_ndtr_pc                 cmos_sch                              
-\o IO_CELLS_JIC3V              jio_opdio_pc                cmos_sch                              
-\o IO_CELLS_JIC3V              jio_lviodio_pc              cmos_sch                              
-\o IO_CELLS_JIC3V              jio_ipdio_pc                cmos_sch                              
-\o IO_CELLS_JIC3V              GNDPADPC                    cmos_sch                              
-\o IO_CELLS_JIC3V              PSUBPADPC                   cmos_sch                              
-\o IO_CELLS_JIC3V              GNDORPADPC                  cmos_sch                              
-\o IO_CELLS_JIC3V              VDDPADPC                    cmos_sch                              
-\o IO_CELLS_JIC3V              jio_pe3i_pc                 cmos_sch                              
-\o IO_CELLS_JIC3V              VDDORPADPC                  cmos_sch                              
-\o IO_CELLS_JIC3V              jio_andio_pc                cmos_sch                              
-\o IO_CELLS_JIC3V              jio_ne3i_pc                 cmos_sch                              
-\o 
-\o ---------- End of netlist configuration information   ----------
-\o function ansCdlCompPrim redefined
-\o function ansCdlCompPrim redefined
-\o function ansCdlCompPrim redefined
-\o Initializing the control file using cp:
-\o     cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1:1/netlist/analog/control
-\o Copying Spectre source file 'spectre.inp'
-\o Copying Spectre command file 'spectre.sim'
-\o Netlist Warning: The netlisting procedure specified for (GATES_JI3V nand2ji3v schematic) is 
-\o obsolete. You can convert your library with the 
-\o Tools - Conversion Tool Box menu on the CIW. 
-\o 
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "NA2JI3VX0" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "INJI3VX0" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DLY2JI3VX1" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "BUJI3VX2" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DECAP5JI3V" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DECAP7JI3V" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DECAP10JI3V" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DECAP15JI3V" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DECAP25JI3V" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "BUJI3VX1" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DFRQJI3VX1" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "NO2JI3VX0" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "EN2JI3VX0" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DFRQJI3VX2" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "AN22JI3VX1" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "AN21JI3VX1" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DLY1JI3VX1" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "ON211JI3VX1" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "BUJI3VX16" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "BUJI3VX0" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o WARNING (ADE-6001): The number of terminals specified in CDF termOrder are more
-\o            than the actual number of terminals in the cellview cell-view "D_CELLS_JI3V" "DFRQJI3VX4" "cmos_sch"
-\o WARNING (ADE-6004): Mismatch was found between the terminals in the cellView and those on the
-\o            termOrder property on the CDF. Because of the mismatch, the CDF termOrder will
-\o            be ignored. The terminals in the cellView will be netlisted in the alphabetical
-\o            order of their names. Eliminate the mismatch if you want the CDF termOrder
-\o            property to be used for netlisting.
-\o            To edit CDF of a cell, 
-\o            i) Open CIW->Tools->CDF->Edit.
-\o            ii) Select Library Name & Cell Name.
-\o            iii) Click on the Edit button in the simulation information section of the
-\o                 Edit CDF window.
-\o Loading json.cxt 
-\o Running netlist assembly..
-\o .......
-\o End netlisting Feb  9 05:27:36 2024
-\o INFO (AMS-1241): AMS UNL netlisting has completed successfully.
-\o To view the modules, right-click the test name on the Tests and Analyses 
-\o assistant pane and choose Netlist->Display menu option.
-\o       ...successful.
-\o create cds_globals...
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
 \o       ...successful.
 \o compose simulator input file...
 \o       ...successful.
 \o 
-\o *Info*    Running simulation on testbench [ TOP:top_tb:1:1 ] for
-\o           Point ID (4 1).
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ] for Point ID (0 18).
 \o 
-\o Delete simulation data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/TOP/top_tb/adexl/results/data/Interactive.12/1/TOP:top_tb:1:1/psf.
-\o create cds_globals...
-\o       ...successful.
-\o compose simulator input file...
-\o       ...successful.
-\o validating simulator hierarchy...
-\o       ...successful.
-\o running...
-\o To check for output from compilation, elaboration and simulation run, 
-\o right-click on the test name, result name, or any value in the "Results" 
-\o tab of the Outputs section and choose "Output Log" menu option.
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Ocean.17/18/CHARACTERIZATION:DC_BIAS_NMOS:1/psf.
+\o simulate...
 \o INFO (ADE-3071): Simulation completed successfully.
 \o reading simulation data...
 \o       ...successful.
 \o *Info*    Client has finished evaluating ... 
 \o 
 \o 
-\o *Info*    Run complete for Point ID (4 1) on testbench [
-\o           TOP:top_tb:1:1 ].
+\o *Info*    Run complete for Point ID (0 18) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:1 ].
 \o 
 \o 
 \o 
 \o 
 \o 
-\o Job 33 timed out after no activity in 300 seconds.
-\o Simulation design variables differ from those on the cellView,
-\o they have been saved in the file "/tmp/saved-design-variables".
-\o To save future changes, copy variables to cellView before exiting.
 \# Lic Summary:
-\# [05:33:09.437011] Cdslmd servers:3000@lic08.ug.kth.se
-\# [05:33:09.437043] Feature usage summary:
-\# Memory report: on exit            806 MB, process size 2,600 MB at UTC 2024.02.09 10:33:09.961
-\# Memory report: peak usage         806 MB, process size 2,600 MB
+\# [10:39:39.273553] Cdslmd servers:3000@lic08.ug.kth.se
+\# [10:39:39.273562] Feature usage summary:
+\# Memory report: on exit            607 MB, process size 2,396 MB at UTC 2024.02.18 15:39:39.273
+\# Memory report: peak usage         607 MB, process size 2,396 MB

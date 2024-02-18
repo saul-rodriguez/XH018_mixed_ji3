@@ -1,0 +1,18 @@
+CADENCE IHNL11140
+$model
+CHARACTERIZATION/DC_BIAS_NMOS_3/schematic DC_BIAS_NMOS_3
+$endmodel
+$net
+gnd! 0
+$endnet
+$param
+L1 L1
+L L
+VGS VGS
+WF1 WF1
+WF WF
+temperature temperature
+NF1 NF1
+NF NF
+VDS VDS
+$endparam

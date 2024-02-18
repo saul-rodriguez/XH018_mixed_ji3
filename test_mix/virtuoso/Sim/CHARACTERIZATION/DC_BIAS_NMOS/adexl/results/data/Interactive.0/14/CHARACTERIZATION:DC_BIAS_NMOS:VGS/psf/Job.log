@@ -1,0 +1,75 @@
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 14) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:VGS ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var VDS = "1.3"
+\o Setting var VGS = "1"
+\o Setting var temperature = "27"
+\o Setting temp(T) = 27
+\o 
+\o *Info*    Netlist Directory =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/14/CHARACTERIZATION:DC_BIAS_NMOS:VGS/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/14/CHARACTERIZATION:DC_BIAS_NMOS:VGS
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (0 14)
+\o 
+\o generate netlist...
+\o function ansCdlCompPrim redefined
+\o function ansCdlCompPrim redefined
+\o Begin Incremental Netlisting Feb 18 11:06:22 2024
+\o End netlisting Feb 18 11:06:22 2024
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:VGS ] for Point ID (0 14).
+\o 
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS/adexl/results/data/Interactive.0/14/CHARACTERIZATION:DC_BIAS_NMOS:VGS/psf.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\o simulate...
+\o To view the simulator output, right-click on the test name, result 
+\o name, or any value in the "Results" tab of the Outputs section and 
+\o choose "Output Log" menu option.
+\o *Info*    Current simulation for points ((0 14)).
+\o *Info*    (ADE-3072): Simulation stopped because you selected the
+\o           'Stop Simulation' command in ADE.
+\o 
+\o INFO (ADE-3067): Errors encountered during simulation. For more information, right-click
+\o         on a test name in the 'Results' tab of the Outputs pane and choose 'Output Log'
+\o         to view the simulation run log.
+\o *Info*    Client has finished evaluating ... 
+\o 
+\e *Error* deriv: can't handle deriv(nil)
+\e 
+\e 
+\o ERROR (ADE-2709): Evaluation of output 'gm' returned 'nil' for point:'14' test:'CHARACTERIZATION:DC_BIAS_NMOS:VGS'
+\o 	Expression:'deriv(IDC("/M0/D"))'.
+\o Ensure that the definition of output is correct.
+\o 
+\o 
+\o *Info*    Run complete for Point ID (0 14) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS:VGS ].
+\o 
+\o 
+\o 
+\o 
+\o 

@@ -1,98 +1,71 @@
 \o Program:		@(#)$CDS: libManager version 6.1.8 - CAT37 08/30/2023 13:17 (sjfdcl1037) $
 \o Sub version:		sub-version  s342 
-\o Arguments:		-mpssession virtuoso13004 -mpshost phoenix 
+\o Arguments:		-mpssession virtuoso14765 -mpshost phoenix 
 \o Working Directory:	phoenix:/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso
 \o 64-bit offsets
-\o MPS virtuoso types registered: 68
-\o changeWorkingDir("/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso") unnecessary.
-\o ddSetForcedLib("") unnecessary.
-\a nrSetWindowVisibility(cdsLibManager "show")
-\o MPS service: map window
-\a nrResizeWindow(cdsLibManager list(309 27 1082 836))
 \o Qt version: 		5.9.1
 \o Log file is "/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/libManager.log".
 \o Opening libManager window.
+\a nrResizeWindow(cdsLibManager list(72 144 1082 836))
+\a nrSetCurrentWindow(cdsLibManager)
+\o MPS virtuoso types registered: 68
+\o changeWorkingDir("/home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o MPS service: map window
 \o Library Manager customization server connected.
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->libListBox->value = "TOP"
-\a cdsLibManager->libLineEdit->value = "TOP"
-\a cdsLibManager->cellListBox->value = "top"
-\a cdsLibManager->cellLineEdit->value = "top"
+\a cdsLibManager->libListBox->value = "ALL_TESTS"
+\a cdsLibManager->libLineEdit->value = "ALL_TESTS"
+\a cdsLibManager->libListBox->value = "CHARACTERIZATION"
+\a cdsLibManager->libLineEdit->value = "CHARACTERIZATION"
+\a cdsLibManager->cellListBox->value = "BIAS_NMOS_HV"
+\a cdsLibManager->cellLineEdit->value = "BIAS_NMOS_HV"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a lmgrLogShowPopup("mainListPopup2" 48 27 2 "symbol")
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a lmgrLogShowPopup("mainListPopup2" 54 23 2 "schematic")
-\a cdsLibManager->FileOpenButton->value = t
-\o MPS request: edit design
-\a cdsLibManager->libListBox->value = nil
-\a cdsLibManager->libLineEdit->value = ""
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->libListBox->value = "TOP"
-\a cdsLibManager->libLineEdit->value = "TOP"
-\a cdsLibManager->cellListBox->value = "top"
-\a cdsLibManager->cellLineEdit->value = "top"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->libListBox->value = nil
-\a cdsLibManager->libLineEdit->value = ""
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->libListBox->value = "TOP"
-\a cdsLibManager->libLineEdit->value = "TOP"
-\a cdsLibManager->cellListBox->value = "top"
-\a cdsLibManager->cellLineEdit->value = "top"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->libListBox->value = "IORING"
-\a cdsLibManager->libLineEdit->value = "IORING"
-\a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->cellListBox->value = "ioring3"
-\a cdsLibManager->cellLineEdit->value = "ioring3"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = "layout"
-\a cdsLibManager->viewLineEdit->value = "layout"
 \o MPS request: edit design
 \a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "CHARACTERIZATION"
+\a cdsLibManager->libLineEdit->value = "CHARACTERIZATION"
+\a cdsLibManager->cellListBox->value = "BIAS_NMOS_HV"
+\a cdsLibManager->cellLineEdit->value = "BIAS_NMOS_HV"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(46 532 1082 836))
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "CHARACTERIZATION"
+\a cdsLibManager->libLineEdit->value = "CHARACTERIZATION"
+\a cdsLibManager->cellListBox->value = "BIAS_NMOS_HV"
+\a cdsLibManager->cellLineEdit->value = "BIAS_NMOS_HV"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
 \a nrSetCurrentWindow(cdsLibManager)
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(811 145 1082 836))
-\a nrSetWindowVisibility(cdsLibManager "hide")
-\a nrSetWindowVisibility(cdsLibManager "show")
-\a nrSetWindowVisibility(cdsLibManager "hide")
-\a nrSetWindowVisibility(cdsLibManager "show")
-\a nrSetWindowVisibility(cdsLibManager "hide")
-\a nrSetWindowVisibility(cdsLibManager "show")
+\a nrResizeWindow(cdsLibManager list(420 279 1082 836))
 \a nrSetCurrentWindow(cdsLibManager)
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(175 145 1082 836))
-\a nrResizeWindow(cdsLibManager list(773 149 1082 836))
-\a nrResizeWindow(cdsLibManager list(799 46 1082 836))
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(558 92 1082 836))
-\a nrSetWindowVisibility(cdsLibManager "hide")
-\a nrSetWindowVisibility(cdsLibManager "show")
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetWindowVisibility(cdsLibManager "hide")
-\a nrSetWindowVisibility(cdsLibManager "show")
-\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(116 498 1082 836))
 \o MPS service: shutdown
 \o libManager is exiting.
 \a exit(0)

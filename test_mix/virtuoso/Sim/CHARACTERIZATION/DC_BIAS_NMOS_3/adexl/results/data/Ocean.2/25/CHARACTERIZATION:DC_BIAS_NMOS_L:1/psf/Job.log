@@ -1,0 +1,66 @@
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (0 25) on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS_L:1 ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var L = "180e-9"
+\o Setting var NF = "1"
+\o Setting var VDS = "1"
+\o Setting var VGS = "1.2"
+\o Setting var WF = "10e-6"
+\o Setting var temperature = "27"
+\o Setting temp(T) = 27
+\o 
+\o *Info*    Netlist Directory =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS_3/adexl/results/data/Ocean.2/25/CHARACTERIZATION:DC_BIAS_NMOS_L:1/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS_3/adexl/results/data/Ocean.2/25/CHARACTERIZATION:DC_BIAS_NMOS_L:1
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (0 25)
+\o 
+\o generate netlist...
+\o function ansCdlCompPrim redefined
+\o function ansCdlCompPrim redefined
+\o Begin Incremental Netlisting Feb 18 12:23:13 2024
+\o End netlisting Feb 18 12:23:13 2024
+\o 
+\o 	The netlist is up to date.
+\o 	Time taken to compare the design with netlist:   0.0s
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [
+\o           CHARACTERIZATION:DC_BIAS_NMOS_L:1 ] for Point ID (0 25).
+\o 
+\o Delete psf data in /home/saul/projects/XH018_mixed_ji3/test_mix/virtuoso/Sim/CHARACTERIZATION/DC_BIAS_NMOS_3/adexl/results/data/Ocean.2/25/CHARACTERIZATION:DC_BIAS_NMOS_L:1/psf.
+\o simulate...
+\o 
+\o *Error*   Error ID  = 5011
+\o *Error*   Error Msg = Simulator failed to complete the simulation.
+\o 
+\o           Error found by spectre during initial setup.
+\o Error found by
+\o           spectre during initial setup.
+\o ERROR (CMI-2440):
+\o           "/home/saul/pkg/xfab/XKIT/xh018/cadence/v9_0/spectre/v9_0_2/lpmos/./models/mos/ne3.scs" 32: M0.m1:  The length, width, or area of th
+\o e instance does not fit the given lmax-lmin, wmax-wmin, or areamax-areamin range for any model in the `M0.ne3mod' group. The unscaled values for these
+\o  instance parameters are w=1.000000e-05 and l=1.800000e-07 with scale=1.000000e+00. Ensure that the width and length values are in the bounds set by L
+\o max=2.000100e-04, Lmin=3.480000e-07, Wmax=2.000100e-04 and Wmin=2.090000e-07. Alternatively, you can choose the nearest model by setting the value of 
+\o `soft_bin' option to
+\o            `allmodels'.
+\o 
+\o 
+\o 
+\o 
+\o 

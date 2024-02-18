@@ -1,0 +1,6 @@
+# ALIAS_TABLE_V01
+# Created at: Sun Feb 18 12:06:13 2024
+#
+# aliasSignalName, realSignalName(data)
+#
+"M0:d", "M0:1"

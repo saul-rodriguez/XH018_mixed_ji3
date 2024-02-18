@@ -1,0 +1,1 @@
+parameters temperature=27 WF=10e-6 VGS=0.9 VDS=1 NF=10 L=1e-6
