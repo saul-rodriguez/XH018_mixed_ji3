@@ -1,7 +1,0 @@
-// Generated for: spectre
-// Design Netlist Generated on: Feb 17 09:47:08 2024
-// Design library name: CHARACTERIZATION
-// Design cell name: FT
-// Design view name: schematic
-simulator lang=spectre
-global 0
